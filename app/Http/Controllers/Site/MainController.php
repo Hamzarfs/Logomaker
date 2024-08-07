@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Site;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Order;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Stripe\Charge;
@@ -159,7 +160,8 @@ class MainController extends \App\Http\Controllers\Controller
         }
 
         $categories = Category::orderBy('id', 'DESC')->get();
-        return view('site.new-logo', compact('categories', 'products', 'category', 'categoryObj', 'cmsData', 'faqData'));
+        $favourites = auth()->user()->favourites->toArray();
+        return view('site.new-logo', compact('categories', 'products', 'category', 'categoryObj', 'cmsData', 'faqData', 'favourites'));
     }
 
     public function preview()
