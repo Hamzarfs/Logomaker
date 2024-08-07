@@ -51,6 +51,7 @@ Route::middleware(['role:user', 'auth'])->group(function () {
     Route::prefix('favourite')->name('favourite.')->group(function() {
         Route::post('', [FavouriteController::class, 'add'])->name('add');
         Route::delete('{favourite}', [FavouriteController::class, 'remove'])->name('remove');
+        Route::get('', [FavouriteController::class, 'index'])->name('index');
     });
 });
 
