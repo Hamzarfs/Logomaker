@@ -32,4 +32,11 @@ class FavouriteController extends Controller
         }
         return response()->json(['success' => true]);
     }
+
+    function index() {
+        $favourites = auth()->user()->favourites()->with('product.category')->paginate(10);
+        return view('site.favourites', [
+            'favourites' => $favourites
+        ]);
+    }
 }
