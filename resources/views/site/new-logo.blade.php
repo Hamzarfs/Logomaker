@@ -1,0 +1,474 @@
+@extends('site.common')
+
+@section('title', 'Categories')
+
+@section('content')
+
+    <style>
+        .category-top-section {
+            padding: 60px 0;
+            background-color: #080A2D;
+        }
+
+        .category-top-section h1 {
+            margin-bottom: 20px;
+        }
+
+        .category-top-section .cta-form {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .category-top-section .cta-form input {
+            margin-right: 10px;
+            max-width: 300px;
+        }
+
+        .images-container {
+            position: relative;
+            text-align: center;
+        }
+
+        .images-container img {
+            position: absolute;
+        }
+
+        .images-container .background-image {
+            position: relative;
+            z-index: 1;
+            max-width: 100%;
+        }
+
+        .images-container .left-image-1 {
+            top: 80px;
+            left: 0;
+            z-index: 2;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .images-container .left-image-2 {
+            top: 300px;
+            left: 80px;
+            z-index: 2;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .images-container .right-image {
+            top: 180px;
+            left: 380px;
+            z-index: 4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .category-top-textblock {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .as-seen-on-section img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .absolute-img-01 img,
+        .absolute-img-02 img,
+        .absolute-img-03 img {
+            max-width: 100%;
+            max-height: 155px;
+            border-radius: 15px;
+            z-index: 999;
+        }
+
+        @media (max-width: 768px) {
+            .category-top-section h1 {
+                font-size: 2.5em;
+            }
+
+            .category-top-section .cta-form {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .category-top-section .cta-form input {
+                margin-bottom: 10px;
+            }
+
+            .images-container {
+                display: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .category-top-section h1 {
+                font-size: 2em;
+            }
+        }
+
+        .custom-section {
+            padding: 30px 0;
+        }
+
+        .custom-section .custom-content {
+            animation: fadeIn 1.5s;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .custom-section img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .custom-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .custom-content-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .custom-logo-wrapper {
+            background-color: #DBE1FF;
+            padding: 50px 0;
+        }
+
+        .custom-logo-section {
+            background: linear-gradient(135deg, #DBE1FF, #A3BFF7);
+            text-align: center;
+            padding: 50px 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        .custom-logo-section h2 {
+            font-weight: 800;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .custom-logo-section .form-inline {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .custom-logo-section .custom-form-control {
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+
+        .custom-logo-section .custom-btn-generate {
+            border-radius: 20px;
+            padding: 5px 20px;
+            color: #fff;
+            background-color: #646BD9;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 24px;
+            text-align: center;
+            border-color: #646BD9;
+        }
+
+        .custom-logo-section .custom-btn-generate:hover {
+            background-color: #646BD9;
+            border-color: #646BD9;
+        }
+
+        .custom-section-title {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .custom-section-title h2 {
+            color: #000;
+            font-weight: 800;
+            font-size: 2rem;
+            animation: fadeIn 2s ease-in-out;
+            margin-bottom: 0;
+            /* Remove bottom margin if not needed */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <!-- Top Section Start -->
+    <section class="category-top-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 style="color:#fff; font-weight:700;">Free <span class="logo-design-color">Logo
+                            Maker</span><br>Design
+                        Your Logo in Minutes</h2>
+                    <p style="color:#fff;">Utilize our advanced logo creator tool to design a professional logo for your
+                        business or company. Try it now!</p>
+                    <!-- <h1>Create Accounting Logos & CPA Logos Instantly</h1> -->
+                    {{-- <form class="cta-form" method="post" action="{{ url('/store-session-data') }}">
+                        <input type="text" name="company_name" class="form-control" placeholder="Enter your company name"
+                            maxlength="30">
+                        <button type="submit" class="btn btn-primary">Get a Logo</button>
+                    </form> --}}
+                    <form id="companyForm" method="POST" action="{{ url('/store-session-data-logo') }}">
+                        @csrf
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="companyName11" name="company"
+                                placeholder="Enter your company name" aria-label="Enter your company name">
+                            <input type="submit" class="custom-button-banner" value="Get Started">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="images-container">
+                        <img src="{{ asset('images/lg-logo-gallery-blank.png') }}" class="background-image">
+                        <span class="loader-item absolute-img-01">
+                            <img src="{{ asset('images/text-in-pastel-flower-shape-8918ld.png') }}" class="left-image-1">
+                        </span>
+                        <span class="loader-item absolute-img-01">
+                            <img src="{{ asset('images/letter-h-incorporated-with-rounded-square-5234ld.png') }}"
+                                class="left-image-2">
+                        </span>
+                        <span class="loader-item absolute-img-01">
+                            <img src="{{ asset('images/vintage-law-scale-3135ld.png') }}" class="right-image">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="category-top-textblock">
+        <div class="container">
+            <h2 style="font-weight:700;">{{ $categoryObj['heading'] ?? '' }}</h2>
+            <p>{{ $categoryObj['content'] ?? '' }}</p>
+        </div>
+    </section>
+
+    <div class="banner-section" style="background-color: #dbe1ff; padding-bottom: 100px;">
+        <div class="container portfolio-section">
+            <h2 class="portfolio-heading">Our Logo Templates Cater to Every Industry</h2>
+            <p class="main-description-online">
+                Explore our diverse range of logo templates designed to suit all industries, from medical
+                logos to food logos, sports logos to fashion logos. RFS Logo Design ensures you find the
+                perfect match for your business identity and branding needs.
+            </p>
+
+
+            <div class="row">
+                @foreach ($products as $product)
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <a href="" class="card-container-link" data-image="{{ $product->image }}"
+                            data-id="{{ $product->id }}" data-placeholder="{{ $product->placeholder_value }}">
+                            <div class="card-container">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="{{ asset("category-image/$product->image") }}"
+                                            class="img-fluid portfolio-image" alt="{{ $product->name }}">
+                                        <div class="text-placeholder"
+                                            data-placeholder-value="{{ $product->placeholder_value }}"></div>
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="category-name">{{ $categoryObj['name'] ?? '' }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
+
+                {!! $products->links() !!}
+
+            </div>
+
+            <h1 class="studioTitle">Discover Versatile Logo Designs in Our Design Engine</h1>
+        </div>
+    </div>
+
+    <!-- Top Section End -->
+
+    <div class="container">
+        <div class="container custom-section-title">
+            <h2>Make a {{ $categoryObj['name'] }} Logo for Free</h2>
+        </div>
+
+        <div class="row custom-section">
+            <div class="col-md-7 custom-image-container">
+                <img src="{{ asset('images/select1.png') }}" alt="Placeholder Image">
+            </div>
+            <div class="col-md-5 custom-content-container">
+                <div class="custom-content">
+                    <h2 style="font-weight:700;">{{ $cmsData[0]['title'] ?? '' }}</h2>
+                    {!! $cmsData[0]['content'] ?? '' !!}
+                </div>
+            </div>
+        </div>
+
+        <div class="row custom-section">
+            <div class="col-md-5 custom-content-container">
+                <div class="custom-content">
+                    <h2 style="font-weight:700;">{{ $cmsData[1]['title'] ?? '' }}</h2>
+                    {!! $cmsData[1]['content'] ?? '' !!}
+                </div>
+            </div>
+            <div class="col-md-7 custom-image-container">
+                <img src="{{ asset('images/Personalization.png') }}" alt="Placeholder Image">
+            </div>
+        </div>
+
+        <div class="row custom-section">
+            <div class="col-md-7 custom-image-container">
+                <img src="{{ asset('images/Start Branding.png') }}" alt="Placeholder Image">
+            </div>
+            <div class="col-md-5 custom-content-container">
+                <div class="custom-content">
+                    <h2 style="font-weight:700;">{{ $cmsData[2]['title'] ?? '' }}</h2>
+                    {!! $cmsData[2]['content'] ?? '' !!}
+                </div>
+            </div>
+        </div>
+
+        <div class="container custom-logo-section">
+            <h2>Start Making Custom Attorney & Law Firm Logos Now!</h2>
+            <form class="form-inline">
+                <input type="text" class="form-control custom-form-control" placeholder="Search">
+                <button type="submit" class="btn custom-btn-generate">Generate Logo</button>
+            </form>
+        </div>
+
+        <div class="container custom-section-title">
+            <h2>Memorable {{ $categoryObj['name'] ?? '' }} Logo Elements</h2>
+        </div>
+
+        <div class="row custom-section">
+            <div class="col-md-5 custom-content-container">
+                <div class="custom-content">
+                    <h2>{{ $cmsData[3]['title'] ?? '' }}</h2>
+                    {!! $cmsData[3]['content'] ?? '' !!}
+                </div>
+            </div>
+            <div class="col-md-7 custom-image-container">
+                <img src="{{ asset('images/Logo Symbol.png') }}" alt="Placeholder Image">
+            </div>
+        </div>
+
+        <div class="row custom-section">
+            <div class="col-md-7 custom-image-container">
+                <img src="{{ asset('images/Color Choices.png') }}" alt="Placeholder Image">
+            </div>
+            <div class="col-md-5 custom-content-container">
+                <div class="custom-content">
+                    <h2 style="font-weight:700;">{{ $cmsData[4]['title'] ?? '' }}</h2>
+                    {!! $cmsData[4]['content'] ?? '' !!}
+                </div>
+            </div>
+        </div>
+
+        <div class="row custom-section">
+            <div class="col-md-5 custom-content-container">
+                <div class="custom-content">
+                    <h2 style="font-weight:700;">{{ $cmsData[5]['title'] ?? '' }}</h2>
+                    {!! $cmsData[5]['content'] ?? '' !!}
+                </div>
+            </div>
+            <div class="col-md-7 custom-image-container">
+                <img src="{{ asset('images/Fonts.png') }}" alt="Placeholder Image">
+            </div>
+        </div>
+
+        <div class="row custom-section">
+            <div class="col-md-7 custom-image-container">
+                <img src="{{ asset('images/Logo Styles.png') }}" alt="Placeholder Image">
+            </div>
+            <div class="col-md-5 custom-content-container">
+                <div class="custom-content">
+                    <h2 style="font-weight:700;">{{ $cmsData[6]['title'] ?? '' }}</h2>
+                    {!! $cmsData[6]['content'] ?? '' !!}
+                </div>
+            </div>
+        </div>
+
+        <div class="container custom-logo-section">
+            <h2>Start Making Custom {{ $categoryObj['name'] ?? '' }} Logos Now!</h2>
+            <form class="form-inline">
+                <input type="text" class="form-control custom-form-control" placeholder="Search">
+                <button type="submit" class="btn custom-btn-generate">Generate Logo</button>
+            </form>
+        </div>
+    </div>
+
+    <div class= "faqs" style= "background: #f6f9ff; margin-top:50px;">
+        <div class="container faq-section">
+            <h2 class="text-center mb-4">Frequently Asked Questions About Childcare Logos</h2>
+            <div id="accordion">
+
+                @foreach ($faqData as $i => $faq)
+                    <div class="card">
+                        <div class="card-header" id="heading{{ $i + 1 }}">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse"
+                                    data-target="#collapse{{ $i + 1 }}" aria-expanded="true"
+                                    aria-controls="collapseOne">
+                                    <span class="faq-question">{{ $faq['title'] }}</span>
+
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapse{{ $i + 1 }}" class="collapse"
+                            aria-labelledby="heading{{ $i + 1 }}" data-parent="#accordion">
+                            <div class="card-body">{{ $faq['content'] }}</div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+    <!-- -------------------End FAQs --------------- -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $('#companyForm').on('submit', function(event) {
+            @auth
+                const companyName = $('#companyName11').val().trim();
+                if (!companyName) {
+                    event.preventDefault();
+                    alert("Please enter your company name.");
+                }
+            @else
+                event.preventDefault()
+                location.assign("{{ route('login') }}")
+            @endauth
+        })
+    </script>
+@endsection

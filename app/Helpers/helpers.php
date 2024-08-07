@@ -1,0 +1,34 @@
+<?php
+
+if (!function_exists('transformArray')) {
+    function transformArray($array)
+    {
+        $result = [];
+        $temp = [];
+
+        foreach ($array as $item) {
+            // Split the key to get the section number and type (title or content)
+            preg_match('/(section|faq)-(\d+)-(title|content)/', $item['key'], $matches);
+
+            if (!empty($matches)) {
+                $sectionNumber = $matches[2];
+                $type = $matches[3];
+
+                // Initialize the section if it does not exist
+                if (!isset($temp[$sectionNumber])) {
+                    $temp[$sectionNumber] = ['title' => '', 'content' => ''];
+                }
+
+                // Assign the value to the appropriate key
+                $temp[$sectionNumber][$type] = $item['value'];
+            }
+        }
+
+        // Convert associative array to indexed array
+        foreach ($temp as $section) {
+            $result[] = $section;
+        }
+
+        return $result;
+    }
+}

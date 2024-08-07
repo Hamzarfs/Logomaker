@@ -1,0 +1,33 @@
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00aeef;
+      }
+
+      .cls-2 {
+        fill: #fff200;
+      }
+
+      .cls-3 {
+        fill: #231f20;
+      }
+
+      .cls-4 {
+        fill: #ec008c;
+      }
+
+      .cls-5 {
+        fill: #ededee;
+      }
+    </style>
+  </defs>
+  <title>1-16</title>
+  <g>
+    <polygon class="cls-1" points="150.9 4.3 185.6 98.1 150.9 138.4 114.4 100.6 150.9 4.3"/>
+    <polygon class="cls-2" points="150.9 278.3 185.6 184.5 150.9 144.2 114.4 181.9 150.9 278.3"/>
+    <polygon class="cls-3" points="287 142.2 193.2 176.8 152.9 142.2 190.7 105.7 287 142.2"/>
+    <polygon class="cls-4" points="13 142.2 106.8 176.8 147.1 142.2 109.3 105.7 13 142.2"/>
+    <ellipse class="cls-5" cx="152.5" cy="292.6" rx="50.1" ry="3.1"/>
+  </g>
+</svg>
