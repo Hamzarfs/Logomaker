@@ -160,13 +160,12 @@ class MainController extends \App\Http\Controllers\Controller
         }
 
         $categories = Category::orderBy('id', 'DESC')->get();
-        $favourites = auth()->user()->favourites->toArray();
+        $favourites = auth()->user()?->favourites->toArray();
         return view('site.new-logo', compact('categories', 'products', 'category', 'categoryObj', 'cmsData', 'faqData', 'favourites'));
     }
 
     public function preview()
     {
-
         $userId = auth()->user()?->id;
         $image = session('image');
         $product = Product::where('image', $image)->first();
@@ -178,13 +177,11 @@ class MainController extends \App\Http\Controllers\Controller
         $hasOrder = Order::where('product_id', $productId)
             ->where('user_id',  $userId)
             ->exists();
-
         return view('site/preview', compact('hasOrder'));
     }
 
     public function packages()
     {
-
         return view('site/packages');
     }
 
