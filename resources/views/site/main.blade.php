@@ -5,10 +5,6 @@
 
 @section('content')
 
-
-
-
-
     <!----------------------------------------- Start Banner Section ------------------------------->
 
     <div class="container-fluid position-relative" style="background-color:#080a2d; padding-bottom: 100px;">
@@ -157,7 +153,7 @@
                             $product = $category->products->first(); // Get the first product
                         @endphp
                         <div class="col-lg-4 col-md-6 mb-4">
-                            <a href="#" class="card-container-link" data-image="{{ $product->image }}"
+                            <a href="{{ route('logos', $category->slug) }}" class="card-container-link" data-image="{{ $product->image }}"
                                 data-id="{{ $product->id }}" data-placeholder="{{ $product->placeholder_value }}">
                                 <div class="card-container">
                                     <div class="card-inner">
@@ -432,27 +428,22 @@
     </script>
 
 
-    <script>
-        document.querySelectorAll('.card-container-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                    @auth
-                    e.preventDefault();
-                    let image = this.getAttribute('data-image');
-                    let id = this.dataset.id
-                    let company = document.getElementById('businessName').value;
-                    let urlBase = "{{ url('/') }}";
+    {{-- <script>
+        // document.querySelectorAll('.card-container-link').forEach(link => {
+        //     link.addEventListener('click', function(e) {
+        //         e.preventDefault();
+        //         let image = this.getAttribute('data-image');
+        //         let id = this.dataset.id
+        //         let company = document.getElementById('businessName').value;
+        //         let urlBase = "{{ url('/') }}";
 
-                    let url = urlBase +
-                        `/store-session-data-image?image=${encodeURIComponent(image)}&company=${encodeURIComponent(company)}&product-id=${encodeURIComponent(id)}`;
+        //         let url = urlBase +
+        //             `/store-session-data-image?image=${encodeURIComponent(image)}&company=${encodeURIComponent(company)}&product-id=${encodeURIComponent(id)}`;
 
-                    window.location.href = url;
-                @else
-                    event.preventDefault()
-                    $('#login-modal').modal('show')
-                @endauth
-            });
-        });
-    </script>
+        //         window.location.href = url;
+        //     });
+        // });
+    </script> --}}
 
 
 
@@ -462,34 +453,30 @@
     <script>
         $(document).ready(function() {
             $('#companyForm').on('submit', function(event) {
-                    const companyName = $('#companyName11').val().trim();
-                    if (!companyName) {
-                        event.preventDefault();
-                        alert("Please enter your company name.");
-                    }
-             
+                const companyName = $('#companyName11').val().trim();
+                if (!companyName) {
+                    event.preventDefault();
+                    alert("Please enter your company name.");
+                }
             })
-        // @if (request()->query('login'))
-        //     $('#login-modal').modal('show')
-        // @endif
-        // $('.login-link').click(function() {
-        //     $('#login-modal').modal('show')
-        // })
-        // $('#companyForm').on('submit', function(event) {
-        //     event.preventDefault();
-        //     const companyName = $('#companyName').val().trim();
-        //     if (companyName) {
-        //         const nextUrl = `color?companyName=${encodeURIComponent(companyName)}`;
-        //         window.location.href = nextUrl;
-        //     } else {
-        //         alert("Please enter your company name.");
-        //     }
-        // });
+            // @if (request()->query('login'))
+            //     $('#login-modal').modal('show')
+            // @endif
+            // $('.login-link').click(function() {
+            //     $('#login-modal').modal('show')
+            // })
+            // $('#companyForm').on('submit', function(event) {
+            //     event.preventDefault();
+            //     const companyName = $('#companyName').val().trim();
+            //     if (companyName) {
+            //         const nextUrl = `color?companyName=${encodeURIComponent(companyName)}`;
+            //         window.location.href = nextUrl;
+            //     } else {
+            //         alert("Please enter your company name.");
+            //     }
+            // });
         });
     </script>
-
-
-
 
     <!-- Other scripts or libraries -->
 

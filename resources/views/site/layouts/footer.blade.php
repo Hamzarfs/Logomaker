@@ -81,9 +81,9 @@
     </div>
 </footer>
 
-@guest
-    {{-- Login Modal --}}
-    {{-- <div class="modal fade" id="login-modal" tabindex="-1">
+{{-- @guest
+    Login Modal
+    <div class="modal fade" id="login-modal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -125,10 +125,10 @@
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
 
-    {{-- Register Modal --}}
-    {{-- <div class="modal fade" id="register-modal" tabindex="-1">
+    Register Modal
+    <div class="modal fade" id="register-modal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -175,51 +175,51 @@
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
 
-    {{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        // $('#login-modal #register-btn').click(function() {
-        //     $('#login-modal').modal('hide')
-        //     $('#register-modal').modal('show')
-        // })
-        // $('#register-modal #login-btn').click(function() {
-        //     $('#register-modal').modal('hide')
-        //     $('#login-modal').modal('show')
-        // })
+        $('#login-modal #register-btn').click(function() {
+            $('#login-modal').modal('hide')
+            $('#register-modal').modal('show')
+        })
+        $('#register-modal #login-btn').click(function() {
+            $('#register-modal').modal('hide')
+            $('#login-modal').modal('show')
+        })
 
-        // @if ($errors->any())
-        //     @php
-        //         $text = '';
-        //         foreach($errors->getBag('default')->messages() as $field => $msgs):
-        //             $text .= "<b>" .ucwords($field). ": </b><br/>";
-        //             foreach($msgs as $i => $msg):
-        //                 $text .= "$msg<br/>";
-        //             endforeach;
-        //             $text .= "<br/>";
-        //         endforeach;
-        //     @endphp
+        @if ($errors->any())
+            @php
+                $text = '';
+                foreach($errors->getBag('default')->messages() as $field => $msgs):
+                    $text .= "<b>" .ucwords($field). ": </b><br/>";
+                    foreach($msgs as $i => $msg):
+                        $text .= "$msg<br/>";
+                    endforeach;
+                    $text .= "<br/>";
+                endforeach;
+            @endphp
 
-        //     swal.fire({
-        //         icon: 'error',
-        //         title: 'Error',
-        //         html: "{!! $text !!}",
-        //         customClass: {
-        //             htmlContainer: 'text-start',
-        //         },
-        //     })
-        // @endif
+            swal.fire({
+                icon: 'error',
+                title: 'Error',
+                html: "{!! $text !!}",
+                customClass: {
+                    htmlContainer: 'text-start',
+                },
+            })
+        @endif
 
 
         @guest
             $('.footer .logo-ideas-link').click(function() {
-                // event.preventDefault()
-                // location.assign("{{ route('login') }}")
-                // $('#login-modal').modal('show')
+                event.preventDefault()
+                location.assign("{{ route('login') }}")
+                $('#login-modal').modal('show')
             })
         @endguest
     </script>
-@endguest
+@endguest --}}
 
 <!------------ End Footer Section ------------>

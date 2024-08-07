@@ -216,6 +216,13 @@
                 transform: translateY(0);
             }
         }
+
+        .fav-icon {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            font-size: 25px;
+        }
     </style>
 
     <!-- Top Section Start -->
@@ -294,6 +301,19 @@
                                     </div>
                                     <div class="card-back">
                                         <div class="category-name">{{ $categoryObj['name'] ?? '' }}</div>
+                                        @auth
+                                            @php
+                                                $i = array_search(
+                                                    $product->id,
+                                                    array_column($favourites, 'product_id'),
+                                                );
+                                            @endphp
+                                            <div class="fav-icon {{ $i !== false ? 'text-success' : 'text-danger' }}"
+                                                data-product-id="{{ $product->id }}"
+                                                @if ($i !== false) data-favourite-id="{{ $favourites[$i]['id'] }}" @endif>
+                                                <i class="fa fa-heart" aria-hidden="true"></i>
+                                            </div>
+                                        @endauth
                                     </div>
                                 </div>
                             </div>
@@ -453,19 +473,93 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="{{ asset('js/ajaxSetup.js') }}"></script>
 
     <script>
         $('#companyForm').on('submit', function(event) {
-            // @auth
-            //     const companyName = $('#companyName11').val().trim();
-            //     if (!companyName) {
-            //         event.preventDefault();
-            //         alert("Please enter your company name.");
-            //     }
-            // @else
-            //     event.preventDefault()
-            //     location.assign("{{ route('login') }}")
-            // @endauth
+            const companyName = $('#companyName11').val().trim();
+            if (!companyName) {
+                event.preventDefault();
+                alert("Please enter your company name.");
+            }
+
+            {{-- 
+            @auth
+            @else
+                event.preventDefault()
+                location.assign("{{ route('login') }}")
+            @endauth 
+            --}}
+        })
+
+        $('.card-container-link').on('click', function() {
+            event.preventDefault()
+            if (event.target.classList.contains('fa-heart')) {
+                const favIconEl = $(this).find('.fav-icon')
+                if (favIconEl.hasClass('text-danger')) {
+                    const productId = favIconEl.attr('data-product-id')
+                    $.ajax({
+                        url: "{{ route('favourite.add') }}",
+                        method: 'POST',
+                        data: {
+                            productId,
+                        },
+                        success: function(response) {
+                            if (response.success) {
+                                swal.fire({
+                                    icon: 'success',
+                                    title: 'Success',
+                                    text: "Logo added to favourites!"
+                                })
+                                favIconEl.removeClass('text-danger')
+                                favIconEl.addClass('text-success')
+                                favIconEl.attr('data-favourite-id', response.favourite_id)
+                            } else {
+                                swal.fire({
+                                    icon: 'error',
+                                    title: 'Error',
+                                    text: "Unexpected error. Please try again later!!"
+                                })
+                            }
+                        },
+                    })
+                } else {
+                    const favId = favIconEl.attr('data-favourite-id')
+                    $.ajax({
+                        url: "{{ route('favourite.remove', 11111) }}".replace('11111', favId),
+                        method: 'DELETE',
+                        success: function(response) {
+                            if (response.success) {
+                                swal.fire({
+                                    icon: 'success',
+                                    title: 'Success',
+                                    text: "Logo removed from favourites!"
+                                })
+                                favIconEl.removeClass('text-success')
+                                favIconEl.addClass('text-danger')
+                            } else {
+                                swal.fire({
+                                    icon: 'error',
+                                    title: 'Error',
+                                    text: "Unexpected error. Please try again later!!"
+                                })
+                            }
+                        },
+                    })
+                }
+            } else {
+                let image = this.getAttribute('data-image');
+                let id = this.dataset.id
+                let company = "{{ session()->get('company') }}";
+                let urlBase = "{{ url('/') }}";
+
+                let url = urlBase +
+                    `/store-session-data-image?image=${encodeURIComponent(image)}&company=${encodeURIComponent(company)}&product-id=${encodeURIComponent(id)}`;
+
+                window.location.href = url;
+            }
         })
     </script>
 @endsection
