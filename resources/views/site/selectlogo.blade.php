@@ -4,6 +4,24 @@
 
 @section('content')
     <style>
+        @font-face { font-family: 'lazy_people'; src: url('fonts/Atop-R99O3.ttf') format('truetype'); }
+        @font-face { font-family: 'Remon Demo'; src: url('fonts/Remon Demo.ttf') format('truetype'); }
+        @font-face { font-family: 'Stifly'; src: url('fonts/Stifly.ttf') format('truetype'); }
+        @font-face { font-family: 'Brandes-Regular'; src: url('fonts/Brandes-Regular.otf') format('truetype'); }
+        @font-face { font-family: 'Rohgaz-DemoVersion-Regular'; src: url('fonts/Rohgaz-DemoVersion-Regular.ttf') format('truetype'); }
+        @font-face { font-family: 'Forest Trophy Textured'; src: url('fonts/Forest Trophy Textured.otf') format('truetype'); }        
+        @font-face { font-family: 'AestheticWonderDEMO-Bold'; src: url('fonts/AestheticWonderDEMO-Bold.ttf') format('truetype'); }
+        @font-face { font-family: 'NerveBrushRegular'; src: url('fonts/NerveBrushRegular.otf') format('truetype'); }
+        @font-face { font-family: 'Stander DEMO'; src: url('fonts/Stander DEMO.otf') format('truetype'); }
+        @font-face { font-family: 'Dasport  DEMO'; src: url('fonts/Dasport  DEMO.otf') format('truetype'); }
+        @font-face { font-family: 'Light Sport DEMO'; src: url('fonts/Light Sport DEMO.otf') format('truetype'); }
+
+        
+
+
+
+
+        
         .logo-gallery {
             display: flex;
             flex-wrap: wrap;
@@ -35,10 +53,7 @@
 
         .logo-item:hover .select-btn {
             display: block;
-        }
-
-        .filter-buttons button.active {
-            background-color: #0d6efd;
+        }lazy_people
             color: white;
         }
 
@@ -67,7 +82,7 @@
 
     <!-- Input Fields and Update Button -->
     <div class="container-fluid w-100 p-1 mb-5" style="background: rgb(145, 142, 142)">
-        <form id="loogForm" method="POST" action="{{ url('/store-session-data-logo') }}">
+        <form id="loogForm" method="POST"Forest Trophy Textured.otf action="{{ url('/store-session-data-logo') }}">
             @csrf
             <div class="container">
                 <div class="row my-4">
@@ -91,10 +106,11 @@
         <!-- Gallery -->
         <div class="row logo-gallery">
     @php
-       $fonts = ['Arial', 'Verdana', 'Times New Roman', 'Georgia', 'Courier New']; // List of fonts
-       $colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33A1']; 
+       $fonts = [ 'lazy_people', 'Remon Demo', 'Stifly', 'Brandes-Regular','Rohgaz-DemoVersion-Regular','Forest Trophy Textured','AestheticWonderDEMO-Bold','NerveBrushRegular','Stander DEMO','Dasport  DEMO','Light Sport DEMO']; // List of fonts
+       $colors = ['#900C3F', '#36454F', '#343434', '#191970', '#581845']; 
     @endphp
 
+ 
     @foreach ($products as $index => $product)
     @php
         $font = $fonts[$index % count($fonts)]; // Select font based on index
@@ -104,7 +120,7 @@
         <div class="card-container">
             <img src="{{ 'category-image/' . $product->image }}" class="img-fluid portfolio-image"
                 alt="{{ $product->name }}">
-            <div class="text-placeholder" style="font-family: {{ $font }}; color: {{ $color }}; font-size:50px; font-weight:700; margin-top:-30px">{{ session('company') }} </div>
+            <div class="text-placeholder" style="font-family: {{ $font }}; color:{{$color}}; font-size:50px; font-weight:500; margin-top:-30px">{{ session('company') }} </div>
             <a href="{{ url('/store-session-data-image?image=' . $product->image . '&product-id=' . $product->id) }}"
                 class="hover-button select-btn" data-product-id="{{ $product->id }}">Select </a>
         </div>
