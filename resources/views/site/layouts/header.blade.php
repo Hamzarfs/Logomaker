@@ -96,7 +96,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ asset('images/Logo.png') }}" alt="Logo" class="logo">
+                <img src="{{ asset('images/Footer logo.png') }}" alt="Logo" class="logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -136,6 +136,9 @@
                             </div>
                         @endguest
                     </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#" style="color:#fff;"><i class="bi bi-heart"></i></a>
+                        </li>
                     <li class="nav-item">
                         <a class="nav-link search-icon" href="javascript:void(0);" style="color:#fff;">
                             <i class="fas fa-search"></i>

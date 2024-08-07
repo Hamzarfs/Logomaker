@@ -77,13 +77,13 @@ a {
 .container-fluid {
   position: relative;
   padding-bottom: 0;
-  overflow: hidden;
+  /* xoverflow: hidden; */
 }
 
 .wave {
   position: absolute;
   bottom: 0;
-  width: 200%;
+  width: 90%;
   height: 100px;
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 28" preserveAspectRatio="none"><path d="M0,20 C30,40 70,0 100,20 L120,30 L0,30 Z" fill="%23646bd9"/></svg>') repeat-x;
   background-size: cover;
@@ -301,7 +301,6 @@ a {
   .heroTitle1 {
     font-size: 40px;
     line-height: 1.3em;
-    font-weight: 700;
     /* margin-bottom: 10px; */
   }
  
@@ -368,17 +367,10 @@ a {
     position: relative;
     cursor: pointer;
   }
-
-  .plan-section .card:click {
-    background-color: #8489D9; /* Color when active */
-}
-
-
-
   .plan-section .card.active {
     flex: 1 0 50%;
     z-index: 1;
-    transform: scale(5s);
+    transform: scale(1.05);
   }
   .plan-section .card h5 {
     margin-bottom: 15px;
@@ -428,65 +420,76 @@ a {
   
  
   
-  /* Start Hire Section */
-
-.hire-call-now-btn {
-  width: 194px;
-  height: 50px;
-  border-radius: 5px;
-  color: #fff;
-  background-color: #646BD9;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 24px;
-  text-align: center;
-  border-color: #646BD9;
-}
-
-.hire-section-bg {
-  background-color: #F5F5F5;
-}
-
-.hire-section {
-  padding: 40px 0;
-  overflow: hidden; /* Hide any overflow content */
-  max-height: 500px; /* Set a maximum height if needed */
-}
-
-.hire-section .left-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left; /* Left align text */
-}
-
-.hire-section .left-column h2 {
-  margin-bottom: 10px;
-  margin-bottom: 20px;
-  font-weight: 700; /* Set font weight to 700 */
-}
-
-.hire-section .left-column p {
-  /* margin-bottom: 20px; */
-  font-weight: 700; /* Set font weight to 700 */
-}
-
-.hire-section .right-column {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hire-section .hire-section-logo {
-  height: auto; /* Ensure the image scales proportionally */
-  width: auto; /* Ensure the image scales proportionally */
-  object-fit: cover;
-  border-radius: 8px;
-  max-height: 100%; /* Restrict the image height to the container's height */
-}
-
-/* End Hire Section */
-
+  
+  
+  
+   /* Start Hire Section */
+  
+  
+   .hire-call-now-btn {
+    width: 194px;
+    height: 50px;
+    border-radius: 5px;
+    color: #fff;
+    background-color:#646BD9;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    border-color: #646BD9;
+  
+  
+  }
+  
+   .hire-section-bg {
+    background-color: #F5F5F5;
+  }
+  
+  /* .hire-section {
+    padding: 40px 0;
+  } */
+  
+  .hire-section {
+    padding: 40px 0;
+    overflow: hidden; /* Hide any overflow content */
+    max-height: 500px; /* Set a maximum height if needed */
+  }
+  
+  .hire-section .left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hire-section .left-column h2 {
+    margin-bottom: 10px;
+  }
+  .hire-section .left-column p {
+    margin-bottom: 20px;
+  }
+  
+  .hire-section .right-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* .hire-section .hire-section-logo {
+    height: 500px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  } */
+  
+  .hire-section .hire-section-logo {
+    height: auto; /* Ensure the image scales proportionally */
+    width: auto; /* Ensure the image scales proportionally */
+    object-fit: cover;
+    border-radius: 8px;
+    max-height: 100%; /* Restrict the image height to the container's height */
+  }
+  
+  
+  
+   /* End Hire Section */
   
   
   
@@ -571,7 +574,7 @@ a {
   
   
   
-    /* <-----start portfolio----> */
+    /* <-----portfolio----> */
     .portfolio-heading {
       text-align: center;
       font-weight: 700;
@@ -580,15 +583,14 @@ a {
     .studioTitle {
       text-align: center;
       font-weight: 700;
-      color: #080a2d;
+      color: #6a70d6;
       font-size: 28px;
     }
     .portfolio-image {
       margin: 5px;
   }
   
-/* <----- end portfolio----> */
-
+  
   
   
   
@@ -767,15 +769,17 @@ font-weight: 700 !important;
   }
   
 
-/*-------------Start About us-------------*/
+
+/*-------------Strat About us-------------*/
 .about-us-section {
-  background-color: #080a2d;
-  padding-bottom: 50px;
-  padding-top: 50px;
+  background-color: #080a2d; /* Changed background color to white */
+  padding-bottom:50px;
+  padding-top:50px;
 }
 
-h1, h2 {
+h1 {
   font-weight: bold;
+  font-size: 24px;
 }
 
 .custom-button-online {
@@ -802,117 +806,48 @@ h1, h2 {
   height: auto;
 }
 
+ 
 
 /* Custom CSS for justified text */
 .text-justify {
   text-align: justify;
 }
 
+/*-------------End About us-------------*/
 
 
 /* <!-------------Strat Our Mission $ Our vision--------- */
-.vision-section {
-  background-color: #6c73db; /* Pink background color */
-  padding: 60px 0; /* Top and bottom padding */
-}
-.vision-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
-}
-.vision-content .image {
-  flex: 1;
-  padding: 20px;
-}
-.vision-content .image img {
-  max-width: 100%;
-  border-radius: 10px; /* Rounded corners for the image */
-}
-.vision-content .text {
-  flex: 1;
-  padding: 20px;
-}
-.vision-content .text h2 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #ffffff; /* Dark color for heading */
-  margin-bottom: 20px;
-}
-.vision-content .text p {
-  font-size: 16px;
-  color: #ffffff; /* Dark color for text */
-  line-height: 1.6;
-}
 
-.mission-section {
-  background-color: #ffffff; /* Light grey background color */
-  padding: 30px 0; /* Top and bottom padding */
-}
-.mission-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
-}
-.mission-content .image {
-  flex: 1;
-  padding: 20px;
-}
-.mission-content .image img {
-  max-width: 100%;
-  border-radius: 10px; /* Rounded corners for the image */
-}
-.mission-content .text {
-  flex: 1;
-  padding: 20px;
-}
-.mission-content .text h2 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #333; /* Dark color for heading */
-  margin-bottom: 20px;
-}
-.mission-content .text p {
-  font-size: 16px;
-  color: #333; /* Dark color for text */
-  line-height: 1.6;
-}
+.mission-vision-section {
+      background-color: #fff; /* Light grey background for the section */
+  }
+  .mission-vision-content {
+      padding: 30px;
+      text-align: center;
+      margin: 0 auto;
+  }
+  .mission-vision-content img {
+      max-width: 100px; /* Adjust logo size */
+      height: auto;
+      margin-bottom: 20px;
+  }
+  .mission-vision-content h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      font-size: 24px;
+      margin-bottom: 20px;
+  }
+  .mission-vision-content p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #666;
+  }
 
-.work-section {
-  background-color: #e9ecef; /* Light grey background color */
-  padding: 60px 0; /* Top and bottom padding */
-}
-.work-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
-}
-.work-content .image {
-  flex: 1;
-  padding: 20px;
-}
-.work-content .image img {
-  max-width: 100%;
-  border-radius: 10px; /* Rounded corners for the image */
-}
-.work-content .text {
-  flex: 1;
-  padding: 20px;
-}
-.work-content .text h2 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #333; /* Dark color for heading */
-  margin-bottom: 20px;
-}
-.work-content .text p {
-  font-size: 16px;
-  color: #333; /* Dark color for text */
-  line-height: 1.6;
-}
+
 /*-----------start Why Choose RFS Logo Design? ------------------ */
+
+
   .choose-us-section {
       padding: 60px 0;
   }
@@ -938,96 +873,7 @@ h1, h2 {
       color: #666;
   }
 
-  .why-choose-section {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-  }
-  .why-choose-heading {
-    font-weight: 800;
-    color: #512f90;
-  }
-  .why-choose-list {
-    list-style: none;
-    padding-left: 0;
-  }
-  .why-choose-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  .why-choose-list li i {
-    font-size: 24px;
-    margin-right: 10px;
-    color: #512F90;
-  }
-  .about-button-online {
-    color: #fff;
-    background-color: #6c73db;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-bottom: 15px;
-}
-
-.about-button-online:hover {
-  background-color: #575fcf;
-  color: #fff;
-  text-decoration: none;
-  transform: scale(1.05);
-}
-
-/* Mobile Responsive Styles */
-@media (max-width: 991px) {
-  .vision-section, .mission-section, .work-section {
-      padding: 30px 0; /* Reduce padding for smaller screens */
-  }
-
-  .vision-content, .mission-content, .work-content {
-      flex-direction: column;
-      text-align: center;
-  }
-
-  .vision-content .image, .mission-content .image, .work-content .image {
-      padding: 0;
-  }
-
-  .vision-content .text, .mission-content .text, .work-content .text {
-      padding: 20px;
-  }
-
-  .choose-us-content h2 {
-      font-size: 28px;
-  }
-
-  .choose-us-content p {
-      font-size: 14px;
-  }
-
-  .about-button-online {
-      width: auto;
-      padding: 12px 24px;
-  }
-}
-
-@media (max-width: 576px) {
-  .choose-us-content h2 {
-      font-size: 24px;
-  }
-
-  .choose-us-content p {
-      font-size: 12px;
-  }
-
-  .about-button-online {
-      width: auto;
-      padding: 10px 20px;
-  }
-}
-/*---------------------------------End About us-----------------------------*/
-
+/*-----------End Why Choose RFS Logo Design? ------------------ */
 
 
 /* /------------------------------------------Start California---------------------------------------/ */
@@ -1093,7 +939,7 @@ h1, h2 {
 .logo-slider-section {
   padding: 40px 0;
   overflow: hidden;
-  background-color: #1372d1; /* Light background color */
+  background-color: #F8F9FA; /* Light background color */
 }
 .logo-slider {
   display: flex;
@@ -1443,9 +1289,9 @@ h1, h2 {
       display: none; /* Hide the image on small screens */
   }
   
-    /* .hire-call-now-btn {
+    .hire-call-now-btn {
       align-self: center; 
-    } */
+    }
   
     .hire-section .hire-section-logo {
       height: 350px;

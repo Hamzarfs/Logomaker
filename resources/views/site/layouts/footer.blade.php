@@ -6,12 +6,11 @@
         <div class="row py-5">
             <div class="col-md-4">
                 <a href="{{ url('/') }}">
-                    <img src="{{ asset('images/Footer logo.png') }}" alt="Logo" class="footer-logo mb-4"></a>
-                <p class="footer-description">
-                    We are a SaaS company that offers graphic design maker tools for startups, small business owners,
-                    website designers, and online entrepreneurs. We make branding accessible and affordable. Try our
-                    tools today!
-                </p>
+                    <img src="images/Footer logo.png" alt="Logo" class="footer-logo mb-4"></a>
+                    <p class="footer-description" style="text-align:justify; font-size: 12px;">
+                    At RFS Logo Design, we turn logo dreams into reality for clients worldwide. 
+                    With a knack for creating stunning, sophisticated logos at budget-friendly 
+                    prices, we cater to every industry. Get in touch with us today!</p>
                 <div class="social-icons">
                     <a href="#"><i class="bi bi-whatsapp"></i></a>
                     <a href="#"><i class="bi bi-instagram"></i></a>
@@ -28,6 +27,8 @@
                     <li><a href="{{ url('/frequently-asked-question') }}">FAQ</a></li>
                     <li><a href="{{ url('contact-us') }}">Contact Us</a></li>
                     <li><a href="{{ url('site-map') }}">Sitemap</a></li>
+                    <li><a href="{{ url('printing') }}">Printing</a></li>
+
                 </ul>
             </div>
 
@@ -49,7 +50,7 @@
         </div>
 
             <div class="col-md-2">
-                <h5>Our Top Locations</h5>
+                <h5>Top Locations</h5>
                 <ul class="list-unstyled">
                     <li><a href="{{ url('/logo-design-california') }}">California Logo Design</a></li>
                     <li><a href="{{ url('/logo-design-florida') }}">Florida Logo Design</a></li>
