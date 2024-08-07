@@ -34,7 +34,7 @@
                 </div>
             </div>
         </div>
-        <div class="wave"></div>
+        {{-- <div class="wave"></div> --}}
     </div>
 
     <!----------------------------------------- End Banner Section ------------------------------->
@@ -157,7 +157,7 @@
                             $product = $category->products->first(); // Get the first product
                         @endphp
                         <div class="col-lg-4 col-md-6 mb-4">
-                            <a href="{{ url('/logos/'. $category->slug)}}" class="card-container-link" data-image="{{ $product->image }}"
+                            <a href="#" class="card-container-link" data-image="{{ $product->image }}"
                                 data-id="{{ $product->id }}" data-placeholder="{{ $product->placeholder_value }}">
                                 <div class="card-container">
                                     <div class="card-inner">
@@ -433,7 +433,7 @@
 
 
     <script>
-       /* document.querySelectorAll('.card-container-link').forEach(link => {
+        document.querySelectorAll('.card-container-link').forEach(link => {
             link.addEventListener('click', function(e) {
                     @auth
                     e.preventDefault();
@@ -451,7 +451,7 @@
                     $('#login-modal').modal('show')
                 @endauth
             });
-        });*/
+        });
     </script>
 
 
@@ -462,26 +462,19 @@
     <script>
         $(document).ready(function() {
             $('#companyForm').on('submit', function(event) {
-                    @auth
                     const companyName = $('#companyName11').val().trim();
                     if (!companyName) {
                         event.preventDefault();
                         alert("Please enter your company name.");
                     }
-                @else
-                    event.preventDefault()
-                    $('#login-modal').modal('show')
-                @endauth
+             
             })
-
-        @if (request()->query('login'))
-            $('#login-modal').modal('show')
-        @endif
-
-        $('.login-link').click(function() {
-            $('#login-modal').modal('show')
-        })
-
+        // @if (request()->query('login'))
+        //     $('#login-modal').modal('show')
+        // @endif
+        // $('.login-link').click(function() {
+        //     $('#login-modal').modal('show')
+        // })
         // $('#companyForm').on('submit', function(event) {
         //     event.preventDefault();
         //     const companyName = $('#companyName').val().trim();
@@ -494,7 +487,6 @@
         // });
         });
     </script>
-
 
 
 

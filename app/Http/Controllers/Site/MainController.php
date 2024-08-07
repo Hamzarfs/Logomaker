@@ -51,7 +51,6 @@ class MainController extends \App\Http\Controllers\Controller
 
     public function selectCategory()
     {
-        
         $categories = Category::orderBy('id', 'DESC')->get();
         return view('site/selectcategory', compact('categories'));
     }
@@ -316,6 +315,19 @@ class MainController extends \App\Http\Controllers\Controller
         ]);
 
         // $this->sessionService->clearSessionData();
+    }
 
+    public function orders() {
+        $userWithOrders = transformArrayToObject(auth()->user()->load('orders.product')->toArray());
+        return view('site.orders', [
+            'user' => $userWithOrders
+        ]);
+    }
+
+    function accountDetails() {
+        $user = auth()->user();
+        return view('site.account-details', [
+            'user' => $user
+        ]);
     }
 }

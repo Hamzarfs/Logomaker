@@ -1,75 +1,52 @@
-<x-guest-layout>
-    @section('title')
-        {{ 'Log in' }}
-    @endsection
-    <div class="login-box">
-        <!-- /.login-logo -->
-        <div class="card card-outline card-primary">
-            <div class="card-header text-center">
-                <a href="/" class="h1"><b>{{ config('app.name') }}</a>
-            </div>
-            <div class="card-body">
-                <p class="login-box-msg">Sign in to start your session</p>
+@extends('site.common')
 
-                <form action="{{ route('login') }}" method="POST">
+@section('title', 'Login')
+
+@section('content')
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-6">
+                <form action="{{ route('login') }}" method="post">
                     @csrf
-                    <div class="input-group mb-3">
-                        <input id="email" class="form-control" type="email" name="email" value="{{ old('email') }}"
-                            required autofocus autocomplete="username">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-envelope"></span>
+                    <div class="card my-5">
+                        <h3 class="card-header">
+                            Login
+
+                            <span class="float-right">
+                                <a href="{{ route('register') }}" class="text-decoration-underline">Register</a>
+                            </span>
+                        </h3>
+                        <div class="px-5 py-3">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email"
+                                    placeholder="name@example.com" value="{{ old('email')  }}" required>
+                                @error('email')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
-                        </div>
-                        <x-input-error :messages="$errors->get('email')" class="mt-2" />
-                    </div>
-                    <div class="input-group mb-3">
-                        <input id="password" class="form-control" type="password" name="password" required
-                            autocomplete="current-password">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
+    
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" name="password" id="password"
+                                    placeholder="***********" required>
                             </div>
-                        </div>
-                        <x-input-error :messages="$errors->get('password')" class="mt-2" />
-                    </div>
-                    <div class="row">
-                        <div class="col-8">
-                            <div class="icheck-primary">
-                                <input type="checkbox" name="remember" id="remember" @checked(old('remember', false))>
-                                <label for="remember">
-                                    Remember Me
+    
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" name="remember" id="remember">
+                                <label class="form-check-label" for="remember">
+                                    Remember me
                                 </label>
                             </div>
                         </div>
-                        <!-- /.col -->
-                        <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-lg btn-primary rounded-0">Login</button>
                         </div>
-                        <!-- /.col -->
                     </div>
                 </form>
-                <!-- <div class="social-auth-links text-center mb-3">
-                    <p>- OR -</p>
-                    <a href="{{ route('facebook.login') }}" class="btn btn-block btn-primary">
-                        <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-                    </a>
-                    <a href="{{ route('google.login') }}" class="btn btn-block btn-danger">
-                        <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-                    </a>
-                    <a href="{{ route('github.login') }}" class="btn btn-block btn-dark">
-                        <i class="fab fa-github mr-2"></i> Sign in using Github
-                    </a>
-                </div> -->
-                <p class="mb-1">
-                    <a href="{{ route('password.request') }}">I forgot my password</a>
-                </p>
-                <p class="mb-0">
-                    <a href="{{ route('register') }}" class="text-center">Register a new Account</a>
-                </p>
             </div>
-            <!-- /.card-body -->
         </div>
-        <!-- /.card -->
     </div>
-</x-guest-layout>
+@endsection

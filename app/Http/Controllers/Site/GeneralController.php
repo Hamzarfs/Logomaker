@@ -16,6 +16,7 @@ class GeneralController extends \App\Http\Controllers\Controller
 
     public function aboutUs()
     {
+        
         return view('site/aboutus');
     }
 

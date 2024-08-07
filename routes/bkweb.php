@@ -42,20 +42,15 @@ Route::middleware(['role:user', 'auth'])->group(function () {
     Route::post('checkPaymentStatus', [MainController::class, 'checkPaymentStatus'])->name('checkPaymentStatus');
     Route::get('checkPaymentStatus', [MainController::class, 'checkPaymentStatusView'])->name('checkPaymentStatusView');
     Route::post('orderComplete', [MainController::class, 'orderComplete'])->name('orderComplete');
+    Route::get('/select-color', [MainController::class, 'selectColor'])->name('select-color');
+    Route::get('/select-font', [MainController::class, 'selectFont'])->name('select-font');
+    Route::get('/select-category', [MainController::class, 'selectCategory'])->name('select-category');
+    Route::get('/select-logo', [MainController::class, 'selectlogo'])->name('select-logo');
+    Route::get('/logos/{category}', [MainController::class, 'selectLogoCategory'])->name('logos');
     Route::get('/preview', [MainController::class, 'preview'])->name('preview');
     Route::get('/maker', [MainController::class, 'maker'])->name('maker');
     Route::post('saveLogo', [MainController::class, 'saveLogo'])->name('saveLogo');
-    Route::get('user-orders', [MainController::class, 'orders'])->name('orders');
-    Route::get('account-details', [MainController::class, 'accountDetails'])->name('accountDetails');
 });
-
-
-Route::get('/select-color', [MainController::class, 'selectColor'])->name('select-color');
-Route::get('/select-font', [MainController::class, 'selectFont'])->name('select-font');
-Route::get('/select-category', [MainController::class, 'selectCategory'])->name('select-category');
-Route::get('/select-logo', [MainController::class, 'selectlogo'])->name('select-logo');
-Route::get('/logos/{category}', [MainController::class, 'selectLogoCategory'])->name('logos');
-
 
 Route::post('/store-session-data', [SessionDataController::class, 'storeSessionData']);
 Route::post('/store-session-data-logo', [SessionDataController::class, 'storeSessionDataLogo']);

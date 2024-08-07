@@ -23,14 +23,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        view()->composer(['site.layouts.header', 'site.layouts.footer'], function ($view) {
+            view()->composer('site.layouts.header', function ($view) {
             $categories = Category::where('is_top', true)->get();
             $view->with('categories', $categories);
-        });
-        // view()->composer('site.layouts.footer', function ($view) {
-        //     $categories = Category::where('is_top', true)->get();
-        //     $view->with('categories', $categories);
-        // });
-        Paginator::useBootstrapFive();
+            });
+            view()->composer('site.layouts.footer', function ($view) {
+                $categories = Category::where('is_top', true)->get();
+                $view->with('categories', $categories);
+                });
+            Paginator::useBootstrapFive();
     }
 }

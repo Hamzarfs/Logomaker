@@ -1,67 +1,78 @@
-<x-guest-layout>
-@section('title')
-    {{'Register'}}
-@endsection
-    <div class="register-box">
-        <div class="card card-outline card-primary">
-            <div class="card-header text-center">
-                <a href="/" class="h1"><b>{{ config('app.name') }}</a>
-            </div>
-            <div class="card-body">
-                <p class="login-box-msg">Register a new membership</p>
+@extends('site.common')
 
-                <form action="{{ route('register') }}" method="POST">
+@section('title', 'Register')
+
+@section('content')
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-6">
+                <form action="{{ route('register') }}" method="post">
                     @csrf
-                    <div class="input-group mb-3">
-                        <input id="name" class="form-control" type="text" name="name" value="{{ old('name') }}"
-                            required autofocus autocomplete="name" placeholder="Enter name">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-user"></span>
+                    <div class="card my-5">
+                        <h3 class="card-header">
+                            Register
+
+                            <span class="float-right">
+                                <a href="{{ route('login') }}" class="text-decoration-underline">Login</a>
+                            </span>
+                        </h3>
+                        <div class="px-5 py-3">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name" value="{{ old('name') }}"
+                                    placeholder="name@example.com" required>
+                                @error('name')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" value="{{ old('email') }}"
+                                    placeholder="name@example.com" required>
+                                @error('email')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone number</label>
+                                <input type="tel" class="form-control @error('phone') is-invalid @enderror" name="phone" id="phone" value="{{ old('phone') }}"
+                                    placeholder="+1 123 456 7890" required>
+                                @error('phone')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="password"
+                                    placeholder="***********" required>
+                                @error('password')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="password_confirmation" class="form-label">Re enter password</label>
+                                <input type="password" class="form-control" name="password_confirmation"
+                                    id="password_confirmation" placeholder="***********" required>
                             </div>
                         </div>
-                        <x-input-error :messages="$errors->get('name')" class="text-danger" />
-                    </div>
-                    <div class="input-group mb-3">
-                        <input id="email" class="form-control" type="email" name="email" value="{{ old('email') }}"
-                            required autocomplete="username" placeholder="Enter email address">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-envelope"></span>
-                            </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-lg btn-primary rounded-0">Register</button>
                         </div>
-                        <x-input-error :messages="$errors->get('email')" class="text-danger" />
-                    </div>
-                    <div class="input-group mb-3">
-                        <input id="password" class="form-control" type="password" name="password" required
-                            autocomplete="new-password" placeholder="Enter password">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
-                        <x-input-error :messages="$errors->get('password')" class="text-danger" />
-                    </div>
-                    <div class="input-group mb-3">
-                        <input id="password_confirmation" class="form-control" type="password"
-                            name="password_confirmation" required autocomplete="new-password" placeholder="Re enter password">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
-                        <x-input-error :messages="$errors->get('password_confirmation')" class="text-danger" />
-                    </div>
-                    <div class="row">
-                        <!-- /.col -->
-                        <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Register</button>
-                        </div>
-                        <!-- /.col -->
                     </div>
                 </form>
             </div>
-            <!-- /.form-box -->
-        </div><!-- /.card -->
+        </div>
     </div>
-</x-guest-layout>
+@endsection

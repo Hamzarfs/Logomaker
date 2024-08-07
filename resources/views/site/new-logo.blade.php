@@ -237,7 +237,7 @@
                             maxlength="30">
                         <button type="submit" class="btn btn-primary">Get a Logo</button>
                     </form> --}}
-                    <form id="companyForm" method="POST" action="{{ url('/store-session-data-logo') }}">
+                    <form id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
                         @csrf
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" id="companyName11" name="company"

@@ -6,7 +6,7 @@
         <div class="row py-5">
             <div class="col-md-4">
                 <a href="{{ url('/') }}">
-                    <img src="{{ asset('images/Footer logo.png') }}" alt="Logo" class="footer-logo mb-4"></a>
+                    <img src="images/Footer logo.png" alt="Logo" class="footer-logo mb-4"></a>
                 <p class="footer-description">
                     We are a SaaS company that offers graphic design maker tools for startups, small business owners,
                     website designers, and online entrepreneurs. We make branding accessible and affordable. Try our
@@ -83,7 +83,7 @@
 
 @guest
     {{-- Login Modal --}}
-    {{-- <div class="modal fade" id="login-modal" tabindex="-1">
+    <div class="modal fade" id="login-modal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -125,10 +125,10 @@
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
 
     {{-- Register Modal --}}
-    {{-- <div class="modal fade" id="register-modal" tabindex="-1">
+    <div class="modal fade" id="register-modal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -175,48 +175,47 @@
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
 
-    {{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        // $('#login-modal #register-btn').click(function() {
-        //     $('#login-modal').modal('hide')
-        //     $('#register-modal').modal('show')
-        // })
-        // $('#register-modal #login-btn').click(function() {
-        //     $('#register-modal').modal('hide')
-        //     $('#login-modal').modal('show')
-        // })
+        $('#login-modal #register-btn').click(function() {
+            $('#login-modal').modal('hide')
+            $('#register-modal').modal('show')
+        })
+        $('#register-modal #login-btn').click(function() {
+            $('#register-modal').modal('hide')
+            $('#login-modal').modal('show')
+        })
 
-        // @if ($errors->any())
-        //     @php
-        //         $text = '';
-        //         foreach($errors->getBag('default')->messages() as $field => $msgs):
-        //             $text .= "<b>" .ucwords($field). ": </b><br/>";
-        //             foreach($msgs as $i => $msg):
-        //                 $text .= "$msg<br/>";
-        //             endforeach;
-        //             $text .= "<br/>";
-        //         endforeach;
-        //     @endphp
+        @if ($errors->any())
+            @php
+                $text = '';
+                foreach($errors->getBag('default')->messages() as $field => $msgs):
+                    $text .= "<b>" .ucwords($field). ": </b><br/>";
+                    foreach($msgs as $i => $msg):
+                        $text .= "$msg<br/>";
+                    endforeach;
+                    $text .= "<br/>";
+                endforeach;
+            @endphp
 
-        //     swal.fire({
-        //         icon: 'error',
-        //         title: 'Error',
-        //         html: "{!! $text !!}",
-        //         customClass: {
-        //             htmlContainer: 'text-start',
-        //         },
-        //     })
-        // @endif
+            swal.fire({
+                icon: 'error',
+                title: 'Error',
+                html: "{!! $text !!}",
+                customClass: {
+                    htmlContainer: 'text-start',
+                },
+            })
+        @endif
 
 
         @guest
             $('.footer .logo-ideas-link').click(function() {
-                // event.preventDefault()
-                // location.assign("{{ route('login') }}")
-                // $('#login-modal').modal('show')
+                event.preventDefault()
+                $('#login-modal').modal('show')
             })
         @endguest
     </script>

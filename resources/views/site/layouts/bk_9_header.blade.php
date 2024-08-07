@@ -7,8 +7,7 @@
         left: 0;
         width: 100%;
         background-color: #E0E6F8;
-        z-index: -11;
-        /* Lower z-index to ensure the dropdown menu is above */
+        z-index: -11; /* Lower z-index to ensure the dropdown menu is above */
         padding: 20px;
         border: 1px solid #ddd;
     }
@@ -37,18 +36,14 @@
 
     /* Add custom styles for the new dropdown menu */
     .navbar .dropdown-menu {
-        position: absolute;
-        /* Ensure the dropdown is positioned absolutely */
+        position: absolute; /* Ensure the dropdown is positioned absolutely */
         background-color: #ffffff;
         border: none;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
         margin-top: 0.5rem;
-        min-width: 200px;
-        /* Ensure the dropdown menu has enough width */
-        right: 0;
-        /* Align the dropdown menu to the right */
-        z-index: 1050;
-        /* Ensure the dropdown is above other elements */
+        min-width: 200px; /* Ensure the dropdown menu has enough width */
+        right: 0; /* Align the dropdown menu to the right */
+        z-index: 1050; /* Ensure the dropdown is above other elements */
     }
 
     .navbar .dropdown-menu .dropdown-item {
@@ -76,17 +71,15 @@
 
     /* Additional styles to ensure the dropdown is above other content */
     .navbar .dropdown {
-        position: relative;
-        /* Ensure the dropdown menu is positioned relative to the parent */
+        position: relative; /* Ensure the dropdown menu is positioned relative to the parent */
     }
 
     .container-fluid {
-        position: relative;
-        /* Ensure the container doesn't interfere with the dropdown */
+        position: relative; /* Ensure the container doesn't interfere with the dropdown */
 
     }
 
-    .dropdown-menu-right {
+    .dropdown-menu-right{
         position: relative;
         z-index: 21050;
     }
@@ -96,7 +89,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ asset('images/Logo.png') }}" alt="Logo" class="logo">
+                <img src="{{ url('/images/Footer logo.png') }}" alt="Logo" class="logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -118,16 +111,16 @@
                             <a class="nav-link" href="{{ route('login') }}" style="color:#fff;">Login</a>
                         @else
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#fff;">
+                               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#fff;">
                                 <i class="fas fa-user"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
 
-                                <a class="dropdown-item" href="{{ route('orders') }}">My Orders</a>
-                                {{-- <a class="dropdown-item" href="">My Favorites</a> --}}
-                                <a class="dropdown-item" href="{{ route('accountDetails') }}">Account Details</a>
+                                <a class="dropdown-item" href="">My Orders</a>
+                                <a class="dropdown-item" href="">My Favorites</a>
+                                <a class="dropdown-item" href="">Account Details</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     Logout
                                 </a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -164,18 +157,18 @@
                     @if ($index % 10 == 0)
                         @if ($index != 0)
                             </ul>
-                        </div>
-                        @endif
-                <div class="col-md-2">
+            </div>
+            @endif
+            <div class="col-md-2">
                 <ul class="list-unstyled">
                     @endif
                     <li><a href="{{ url('/logos/' . $category->slug) }}"
                             class="header-cat-links">{{ $category->name }}</a></li>
-                @endforeach
+                    @endforeach
                     @if (count($categories) % 10 != 0)
-                        </ul>
-                    </div>
-                    @endif
+                </ul>
+            </div>
+            @endif
         </div>
     </div>
 </div>
@@ -185,7 +178,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-{{-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> --}}
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <script>
     // $(document).ready(function() {
     //     $('.search-icon').on('click', function() {
@@ -202,25 +195,26 @@
 
 
     $(document).ready(function() {
-        // Toggle the mega menu on search icon click
-        $('.search-icon').on('click', function(event) {
-            event.stopPropagation(); // Prevent click from bubbling up to document
-            $('.mega-menu').slideToggle();
-        });
-
-        // Hide the mega menu when clicking outside
-        $(document).on('click', function(event) {
-            if (!$(event.target).closest('.mega-menu').length && !$(event.target).closest(
-                    '.search-icon').length) {
-                // $('.mega-menu').slideUp();
-            }
-        });
-
-        // Prevent the mega menu from closing when clicking inside it
-        $('.mega-menu').on('click', function(event) {
-            event.stopPropagation(); // Prevent click from bubbling up to document
-        });
+    // Toggle the mega menu on search icon click
+    $('.search-icon').on('click', function(event) {
+        event.stopPropagation(); // Prevent click from bubbling up to document
+        $('.mega-menu').slideToggle();
     });
+
+    // Hide the mega menu when clicking outside
+    $(document).on('click', function(event) {
+        if (!$(event.target).closest('.mega-menu').length && !$(event.target).closest('.search-icon').length) {
+            // $('.mega-menu').slideUp();
+        }
+    });
+
+    // Prevent the mega menu from closing when clicking inside it
+    $('.mega-menu').on('click', function(event) {
+        event.stopPropagation(); // Prevent click from bubbling up to document
+    });
+});
+
+
 </script>
 
 <script>

@@ -32,3 +32,10 @@ if (!function_exists('transformArray')) {
         return $result;
     }
 }
+
+if(!function_exists('transformArrayToObject')) {
+    function transformArrayToObject(array $array) : object
+    {
+        return json_decode(json_encode($array));
+    }
+}

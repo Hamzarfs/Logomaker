@@ -38,11 +38,14 @@ class ProfileController extends Controller
         if ($request->user()->isDirty('email')) {
             $request->user()->email_verified_at = null;
         }
-        User::where('id', $request->user()->id)->update(['mode'=>$request->mode]);
+        if($request->has('mode')) {
+            User::where('id', $request->user()->id)->update(['mode'=>$request->mode]);
+        }
 
         $request->user()->save();
 
-        return Redirect::route('admin.profile.edit')->with('status', 'profile-updated');
+        return Redirect::back()->with('status', 'profile-updated');
+        // return Redirect::route('admin.profile.edit')->with('status', 'profile-updated');
     }
 
     /**
