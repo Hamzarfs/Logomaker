@@ -134,7 +134,7 @@ class MainController extends \App\Http\Controllers\Controller
     }
     public function selectLogoCategory($category)
     {
-
+ 
         // Check if a category ID is available
         if ($category) {
             $categoryObj = Category::where('slug', $category)->firstOrFail();

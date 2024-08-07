@@ -70,7 +70,7 @@
         }
 
         .as-seen-on-section img {
-            max-width: 100%;
+            max-width: 100new-logo%;
             height: auto;
             border: 1px solid #ddd;
             border-radius: 4px;
@@ -103,10 +103,7 @@
                 display: none;
             }
         }
-
-        @media (max-width: 576px) {
-            .category-top-section h1 {
-                font-size: 2em;
+        new-logo2em;
             }
         }
 
@@ -187,7 +184,7 @@
             line-height: 24px;
             text-align: center;
             border-color: #646BD9;
-        }
+        }new-logo
 
         .custom-logo-section .custom-btn-generate:hover {
             background-color: #646BD9;
@@ -205,7 +202,7 @@
             font-size: 2rem;
             animation: fadeIn 2s ease-in-out;
             margin-bottom: 0;
-            /* Remove bottom margin if not needed */
+            /* Remove bottom margin inew-logof not needed */
         }
 
         @keyframes fadeIn {
@@ -459,16 +456,16 @@
 
     <script>
         $('#companyForm').on('submit', function(event) {
-            @auth
-                const companyName = $('#companyName11').val().trim();
-                if (!companyName) {
-                    event.preventDefault();
-                    alert("Please enter your company name.");
-                }
-            @else
-                event.preventDefault()
-                location.assign("{{ route('login') }}")
-            @endauth
+            // @auth
+            //     const companyName = $('#companyName11').val().trim();
+            //     if (!companyName) {
+            //         event.preventDefault();
+            //         alert("Please enter your company name.");
+            //     }
+            // @else
+            //     event.preventDefault()
+            //     location.assign("{{ route('login') }}")
+            // @endauth
         })
     </script>
 @endsection

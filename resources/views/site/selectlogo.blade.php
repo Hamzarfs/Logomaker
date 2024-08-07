@@ -90,18 +90,26 @@
     <div class="container">
         <!-- Gallery -->
         <div class="row logo-gallery">
+    @php
+       $fonts = ['Arial', 'Verdana', 'Times New Roman', 'Georgia', 'Courier New']; // List of fonts
+       $colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33A1']; 
+    @endphp
 
-            @foreach ($products as $product)
-                <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
-                    <div class="card-container">
-                        <img src="{{ 'category-image/' . $product->image }}" class="img-fluid portfolio-image"
-                            alt="{{ $product->name }}">
-                        <div class="text-placeholder">{{ session('company') }} </div>
-                        <a href="{{ url('/store-session-data-image?image=' . $product->image . '&product-id=' . $product->id) }}"
-                            class="hover-button select-btn" data-product-id="{{ $product->id }}">Select </a>
-                    </div>
-                </div>
-            @endforeach
+    @foreach ($products as $index => $product)
+    @php
+        $font = $fonts[$index % count($fonts)]; // Select font based on index
+        $color = $colors[$index % count($colors)];
+    @endphp
+    <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}" >
+        <div class="card-container">
+            <img src="{{ 'category-image/' . $product->image }}" class="img-fluid portfolio-image"
+                alt="{{ $product->name }}">
+            <div class="text-placeholder" style="font-family: {{ $font }}; color: {{ $color }}; font-size:50px; font-weight:700; margin-top:-30px">{{ session('company') }} </div>
+            <a href="{{ url('/store-session-data-image?image=' . $product->image . '&product-id=' . $product->id) }}"
+                class="hover-button select-btn" data-product-id="{{ $product->id }}">Select </a>
+        </div>
+    </div>
+@endforeach
         </div>
         <!-- Pagination Links -->
         @if ($products->hasPages())
