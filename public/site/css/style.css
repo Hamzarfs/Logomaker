@@ -3,7 +3,7 @@ a {
     color: #ffffff;
     ;
   }
-   
+
   /* .card-container {
     background-color: white;
     border: 1px solid #ddd;
@@ -13,17 +13,17 @@ a {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 250px; 
+    height: 250px;
     position: relative;
-    justify-content: center; 
-    overflow: hidden; 
+    justify-content: center;
+    overflow: hidden;
 }
 
 .card-container img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 .text-placeholder {
@@ -204,9 +204,9 @@ a {
 }
 
 /* Card Container Styling */
-   
+
    /* Start Header and Banner Section */
-  
+
    body {
     font-family: 'Poppins', sans-serif;
   }
@@ -226,27 +226,27 @@ a {
   .navbar-nav .nav-link:hover {
     color: #646BD9; /* Optional: Add a hover color if desired */
   }
-   
+
   .banner-section {
       background-color: #080a2d;
-      
+
   }
-  
+
   h1 {
       font-family: 'Montserrat', sans-serif;
       font-weight: bold;
   }
-  
+
   p, .form-control, .btn {
       font-family: 'Poppins', sans-serif;
   }
-  
+
   .btn {
       font-family: 'Montserrat', sans-serif;
       font-weight: bold;
   }
-  
-  
+
+
   /* -----------------Start print -------------------- */
 .print-material-section {
   padding: 20px 0;
@@ -291,7 +291,7 @@ a {
   margin-bottom: 0;
 }
 /* -------------------End print -------------------- */
-  
+
    /* End Header and Banner Section */
    .heroSection1 {
     text-align: center;
@@ -304,7 +304,7 @@ a {
     font-weight: 700;
     /* margin-bottom: 10px; */
   }
- 
+
   .form-control {
       height: 50px !important; /* Adjust input height */
       margin-right: 10px;
@@ -327,19 +327,19 @@ a {
     border-color: #474065;
     color: #f8f9fa;
   }
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
    /* Start Image Box Sections */
-   
-   
-   
-  
+
+
+
+
    .plan-section {
     padding: 40px 0;
     background-color: #6868d1;
@@ -363,7 +363,7 @@ a {
     border-radius: 10px;
     padding: 20px;
     margin: 0 10px;
-  
+
     transition: all 0.3s ease-in-out;
     position: relative;
     cursor: pointer;
@@ -403,8 +403,8 @@ a {
     text-transform: uppercase;
     font-weight: bold;
   }
-  
-  
+
+
   .plan-btn {
     width: 194px;
     height: 50px;
@@ -416,7 +416,7 @@ a {
     line-height: 24px;
     text-align: center;
     border-color: #646BD9;
-  
+
   }
   @media (min-width: 768px) {
     .plan-section .card {
@@ -424,6 +424,7 @@ a {
     }
   }
    /* End Plan Section */
+<<<<<<< HEAD
   
   
  
@@ -490,10 +491,89 @@ a {
   
   
   
+=======
+
+
+
+
+
+
+
+   /* Start Hire Section */
+
+
+   .hire-call-now-btn {
+    width: 194px;
+    height: 50px;
+    border-radius: 5px;
+    color: #fff;
+    background-color:#646BD9;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    border-color: #646BD9;
+
+
+  }
+
+   .hire-section-bg {
+    background-color: #F5F5F5;
+  }
+
+  /* .hire-section {
+    padding: 40px 0;
+  } */
+
+  .hire-section {
+    padding: 40px 0;
+    overflow: hidden; /* Hide any overflow content */
+    max-height: 500px; /* Set a maximum height if needed */
+  }
+
+  .hire-section .left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hire-section .left-column h2 {
+    margin-bottom: 10px;
+  }
+  .hire-section .left-column p {
+    margin-bottom: 20px;
+  }
+
+  .hire-section .right-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* .hire-section .hire-section-logo {
+    height: 500px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  } */
+
+  .hire-section .hire-section-logo {
+    height: auto; /* Ensure the image scales proportionally */
+    width: auto; /* Ensure the image scales proportionally */
+    object-fit: cover;
+    border-radius: 8px;
+    max-height: 100%; /* Restrict the image height to the container's height */
+  }
+
+
+
+   /* End Hire Section */
+
+
+
+>>>>>>> hamza
   /* <!---- section online logo------> */
-  
-  
-  
+
+
+
   .maim-heading-online  {
       font-size: 24px;
       font-weight: 700;
@@ -512,7 +592,7 @@ a {
       line-height: 1.3em;
       margin-bottom: 50px;
       text-align: center;
-    
+
     }
     .description-online{
       font-size: 16px;
@@ -529,7 +609,7 @@ a {
     .image-online {
       margin-bottom: 50px;
       width: 99%;
-    
+
     }
 
 
@@ -546,8 +626,8 @@ a {
       border-color: #646BD9;
       margin-bottom: 60px;
         }
-     
-    
+
+
 
 
     .custom-button-online {
@@ -561,17 +641,25 @@ a {
       text-align: center;
       border-color: #646BD9;
       margin-bottom: 60px;
-    
+
     }
     .custom-button-online:hover {
       background-color: #646BD9;
       border-color: #646BD9;
     }
+<<<<<<< HEAD
    
   
   
   
     /* <-----start portfolio----> */
+=======
+
+
+
+
+    /* <-----portfolio----> */
+>>>>>>> hamza
     .portfolio-heading {
       text-align: center;
       font-weight: 700;
@@ -586,6 +674,7 @@ a {
     .portfolio-image {
       margin: 5px;
   }
+<<<<<<< HEAD
   
 /* <----- end portfolio----> */
 
@@ -596,12 +685,16 @@ a {
   
   
   
+=======
+
+
+>>>>>>> hamza
    /*1M Happy Customers Counting */
-  
+
    .checked {
     color: green;
    }
-  
+
    .owl-item {
     width: 350px;
     background-color: #fff;
@@ -615,7 +708,7 @@ a {
     text-align: center;
     box-sizing: border-box;
   }
-  
+
   .logoReveiwImage {
     width: 100%;
     background: #646bd9;
@@ -626,7 +719,7 @@ a {
     padding: 20px 0;
     margin-bottom: 15px;
   }
-  
+
   .circle-white {
     background: #fff;
     width: 125px;
@@ -636,19 +729,19 @@ a {
     justify-content: center;
     align-items: center;
   }
-  
+
   .circle-white img {
     max-width: 100%;
     height: auto;
     border-radius: 50%;
   }
-  
+
   .logoReveiwText {
     background-color: #fff;
     border-radius: 8px;
     width: 100%;
   }
-  
+
   .logoReveiwText p {
     color: #333;
     font-size: 1rem;
@@ -657,97 +750,97 @@ a {
     padding: 0px 10px;
     margin-top: 5px;
   }
-  
+
   .logoReveiwText strong {
     display: block;
     font-weight: bold;
   }
-  
+
   .logoReveiwText img.mb-3 {
     display: block;
     margin: 0 auto 10px;
   }
-  
+
   .row.equal {
     display: flex;
     flex-wrap: wrap;
   }
-  
+
   .row.equal > [class*='col-'] {
     display: flex;
     flex-direction: column;
   }
-  
+
   .owl-item-div {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  
+
   .testimonials-section {
     padding: 20px 0;
     text-align: center;
   }
-  
+
   .testimonials-section h2 {
     margin-bottom: 40px;
     font-size: 40px;
     color: #333;
   }
-  
-  
-  
-  
+
+
+
+
   /* 1M Happy Customers Counting */
-  
-  
-  
-  
+
+
+
+
   /* Start Footer Section */
-  
+
   .footer {
     background-color: #666BC0;
   }
-  
+
   .footer-logo {
     max-width: 200px;
   }
-  
+
   .footer-description {
     font-size: 14px;
     margin-bottom: 15px;
   }
-  
+
   .social-icons a {
     color: #fff;
     margin-right: 10px;
     font-size: 20px;
     text-decoration: none;
   }
-  
+
   .footer h5 {
     margin-bottom: 15px;
     font-size: 20px;
 font-weight: 700 !important;
-      
+
   }
-  
+
   .footer ul {
     padding: 0;
     list-style: none;
   }
-  
+
   .footer ul li {
     margin-bottom: 0px;
   }
-  
+
   .footer ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 12px;
   }
-  
+
   .footer ul li a:hover {
     text-decoration: none;
   }
@@ -761,11 +854,11 @@ font-weight: 700 !important;
     text-decoration: none;
 
 }
-  
+
   .border-top {
     border-top: 1px solid #fff;
   }
-  
+
 
 /*-------------Start About us-------------*/
 .about-us-section {
@@ -802,6 +895,10 @@ h1, h2 {
   height: auto;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> hamza
 
 /* Custom CSS for justified text */
 .text-justify {
@@ -1196,7 +1293,7 @@ height: auto;
   padding: 10px;
   border-left: 3px solid #646BD9;
 }
- 
+
 /* -------------------Start Clients Have to Say ------------- */
 .reviews-section {
   padding: 50px 0;
@@ -1390,46 +1487,46 @@ h1, h2 {
 
 
 
-  
+
   @media (max-width: 768px) {
     .footer ul li {
         margin-bottom: 5px;
     }
-  
+
     .footer ul li a {
         font-size: 12px;
     }
-  
+
     .footer-description {
         font-size: 12px;
     }
-  
+
     .social-icons a {
         font-size: 16px;
     }
-  
+
     .footer .row {
         text-align: center;
     }
-  
+
     .footer .row .col-md-4 {
         margin-bottom: 20px;
     }
   }
-  
+
   /* End Footer Section */
-  
-  
-  
+
+
+
   @media (max-width: 768px) {
     .navbar .navbar-brand img {
         height: 40px;
     }
-    
+
     h1 {
         font-size: 1.5rem;
     }
-   
+
     .img.img-fluid {
         margin-top: 100px;
     }
@@ -1442,11 +1539,19 @@ h1, h2 {
     .center-image-online {
       display: none; /* Hide the image on small screens */
   }
+<<<<<<< HEAD
   
     /* .hire-call-now-btn {
       align-self: center; 
     } */
   
+=======
+
+    .hire-call-now-btn {
+      align-self: center;
+    }
+
+>>>>>>> hamza
     .hire-section .hire-section-logo {
       height: 350px;
       width: auto;
@@ -1454,12 +1559,11 @@ h1, h2 {
       border-radius: 8px;
   }
   }
-  
+
   @media (max-width: 991.98px) {
     .col-lg-6 .banner-left {
         margin-bottom: 50px;
     }
   }
-  
-  
-  
+
+

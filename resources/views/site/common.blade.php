@@ -8,9 +8,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     @isset($categoryObj->meta_title)
-        <title>{{ $categoryObj->meta_title }}</title>    
+        <title>{{ $categoryObj->meta_title }}</title>
     @else
-        <title>@yield('title') | {{ env('APP_NAME') }}</title>    
+        <title>@yield('title') | {{ env('APP_NAME') }}</title>
     @endisset
 
     @isset($categoryObj->meta_desc)
@@ -27,6 +27,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('site/css/style.css') }}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <!-- Add your CSS links here -->
 
     {{-- @stack('headerStyles') --}}
@@ -46,6 +50,21 @@
 
         
         </style>
+
+    <!-- Brevo Conversations {literal} -->
+<script>
+    (function(d, w, c) {
+        w.BrevoConversationsID = '65eb4c58149bb809250724f4';
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'BrevoConversations');
+  </script>
+  <!-- /Brevo Conversations {/literal} -->
 </head>
 
 <body>
