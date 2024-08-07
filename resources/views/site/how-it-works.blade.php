@@ -39,7 +39,7 @@
         .img-fluid {
             max-width: 100%;
             height: auto;
-            padding: 10px;
+            /* padding: 10px; */
             /* Adjusted padding top, bottom, left, right */
         }
 

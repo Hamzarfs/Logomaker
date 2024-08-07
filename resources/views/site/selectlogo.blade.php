@@ -53,7 +53,16 @@
 
         .logo-item:hover .select-btn {
             display: block;
-        }lazy_people
+        }
+        .lazy_people{
+            text-decoration: none;
+            color: #fff;
+
+
+        }
+
+        .filter-buttons button.active {
+            background-color: #0d6efd;
             color: white;
         }
 
@@ -74,15 +83,15 @@
         <!-- Heading -->
         <div class="row mt-5">
             <div class="col text-center">
-                <h1>Free Logo Maker</h1>
+                <h2 style= " font-size:54px; font-weight:700;">Free Logo Maker</h1>
                 <p>Online logo creator design in minutes!</p>
             </div>
         </div>
     </div>
 
     <!-- Input Fields and Update Button -->
-    <div class="container-fluid w-100 p-1 mb-5" style="background: rgb(145, 142, 142)">
-        <form id="loogForm" method="POST"Forest Trophy Textured.otf action="{{ url('/store-session-data-logo') }}">
+    <div class="container-fluid w-100 p-1 mb-5" style="background: #E7EAFB">
+        <form id="loogForm" method="POST" action="{{ url('/store-session-data-logo') }}">
             @csrf
             <div class="container">
                 <div class="row my-4">
@@ -96,7 +105,7 @@
                         <input type="hidden" id="industryId1" name="category" value="{{ session('category') }}">
                     </div>
                     <div class="col-md-4">
-                        <button class="btn btn-primary w-100" id="updateButton">Update</button>
+                        <button class="btn btn-primary w-100" style = "background-color:#6c73db; border-color:#6c73db; "id="updateButton">Update</button>
                     </div>
                 </div>
             </div>

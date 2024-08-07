@@ -8,9 +8,11 @@
                 <a href="{{ url('/') }}">
                     <img src="images/Footer logo.png" alt="Logo" class="footer-logo mb-4"></a>
                 <p class="footer-description">
-                    We are a SaaS company that offers graphic design maker tools for startups, small business owners,
-                    website designers, and online entrepreneurs. We make branding accessible and affordable. Try our
-                    tools today!
+                We transform your brand with our innovative custom logo design services. As a premier 
+                graphic design company, we specialize in crafting unique and memorable logos tailored 
+                to your vision and goals. Perfect for startups, businesses, and companies, our complete 
+                branding solutions and logo maker will help you stand out from the competition.
+
                 </p>
                 <div class="social-icons">
                     <a href="#"><i class="bi bi-whatsapp"></i></a>
