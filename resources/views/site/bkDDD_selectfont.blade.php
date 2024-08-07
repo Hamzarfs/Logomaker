@@ -1,33 +1,25 @@
+<!-- resources/views/site/main.blade.php -->
 @extends('site.common')
 
 @section('title', 'Welcome')
 
 @section('content')
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Moon+Dance&family=New+Rocker&family=Pacifico&family=Sancreek&family=Notable&family=Yesteryear&family=Zilla+Slab&family=Vidaloka&display=swap" rel="stylesheet">
+
 <style>
 body {
     font-family: Arial, sans-serif;
 }
 
-.mt-5 {
-    font-family: Poppins;
-    font-size: 54px;
-    font-weight: 700;
-    text-align: left;
-}
-.nav-item {
-    margin-right: 5px;
-    font-weight: 700;
-    color: black;
-}
 .main-section {
     background-color: #E9EDFF;
     padding: 20px;
     margin-bottom: 20px;
 }
+
 #text-section {
     margin-top: 20px;
 }
+
 .font-item {
     display: flex;
     align-items: center;
@@ -41,22 +33,28 @@ body {
     background-color: white;
     transition: box-shadow 0.9s ease; /* Smooth transition for box-shadow */
 }
+
 .font-item:hover {
     box-shadow: 0 4px 8px rgba(46, 46, 46, 0.1); /* Box shadow on hover */
     border: 2px solid rgb(0, 0, 0);
+
 }
+
 .font-sample {
     font-size: 1.5em;
 }
+
 .selected {
-    background-color: #6A70D6 !important;
+    background-color: #6a70d6 !important;
     color: white;
 }
+
 footer {
     background-color: white;
     padding: 20px 0;
     text-align: center;
 }
+
 .btn-back {
     background: none;
     border: none;
@@ -66,23 +64,27 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
 .btn-back i {
     margin-right: 5px;
 }
+
 .btn-skip {
     width: 10%;
 }
+
 .button-container {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
-</style>
 
-<!----------------------------------------- Banner Section ------------------------------->
-<form id="fontForm" method="POST" action="{{ url('/store-session-data') }}">
-    @csrf
-    <input type="hidden" name="font" id="selectedFont"> <!-- Hidden field for the selected font -->
+   </style>
+    <!----------------------------------------- Banner Section ------------------------------->
+    <form id="fontForm" method="POST" action="{{ url('/store-session-data') }}">
+        @csrf
+        
+        <input type="hidden" name="font" id="selectedFont"> <!-- Hidden field for the selected font -->
 
     <div class="main-section">
         <div class="container">
@@ -137,53 +139,76 @@ footer {
                     </div>
                 </div>
             </div>
+            <div id="text-section" class="p-3 border">
+                <p>This is the text whose font will change based on your selection.</p>
+            </div>
         </div>
     </div>
+    </form>
+        <!----------------------------------------- footer ------------------------------->
 
-    <!-- Row 5: Footer -->
-    <div class="row">
-        <div class="col text-center button-container">
-            <a href="{{ url('/') }}"> <button type="button" class="btn btn-secondary mx-2">Back</button></a>
-            <button type="submit" class="custom-button-online" disabled>Next</button>
+    <footer class="container">
+        <div class="button-container">
+            <button class="btn-back" id="backButton">
+            <a href="http://127.0.0.1:8000/color">
+            <a href="{{ url('/select-color') }}"> <button class="btn btn-secondary mx-2">Back</button></a>
+           </button>
+            <button class="btn btn-secondary btn-skip" id="nextButton" disabled>Next</button>
         </div>
-    </div>
-</form>
+    </footer>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-$(document).ready(function() {
-    // Disable the Next button initially
-    $('.custom-button-online').prop('disabled', true).css('background-color', 'grey');
+        <!-----------------------------------------End footer ------------------------------->
 
-    let selectedFont = '';
 
-    // Handle font selection
-    $('.font-item').on('click', function() {
-        // If the font is not already selected
-        if (!$(this).hasClass('selected')) {
-            // Unselect any previously selected font
-            $('.font-item').removeClass('selected');
+    <!-- Bootstrap JS and dependencies -->
+     
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-            // Mark the current font as selected
-            $(this).addClass('selected');
-            selectedFont = $(this).data('font');
-
-            // Enable the Next button
-            $('.custom-button-online').prop('disabled', false).css('background-color', '#646BD9');
-        }
+    <script>
+    document.querySelectorAll('.font-item').forEach(function(item) {
+        item.addEventListener('click', function() {
+            var selectedFont = this.getAttribute('data-font');
+            document.getElementById('nextButton').style.backgroundColor = '#5540d9';
+            document.getElementById('nextButton').disabled = false;
+            // Remove 'selected' class from all font items
+            document.querySelectorAll('.font-item').forEach(function(item) {
+                item.classList.remove('selected');
+            });
+            // Add 'selected' class to the clicked font item
+            this.classList.add('selected');
+        });
     });
 
-    // Handle form submission
-    $('#fontForm').on('submit', function(event) {
-        if (selectedFont) {
-            // Update the hidden input field with the selected font
-            $('#selectedFont').val(selectedFont);
-        } else {
-            alert("Please select a font.");
-            event.preventDefault(); // Prevent form submission if no font is selected
-        }
+    // document.getElementById('nextButton').addEventListener('click', function() {
+    //     var selectedFont = document.querySelector('.font-item.selected').getAttribute('data-font');
+    //     const urlParams = new URLSearchParams(window.location.search);
+     
+    //     const nextUrl = `next-page.html?font=${encodeURIComponent(selectedFont)}`;
+    //     window.location.href = nextUrl;
+    // });
+
+    document.getElementById('nextButton').addEventListener('click', function(event) {
+            event.preventDefault();
+
+            // Get the selected font
+            var selectedFont = document.querySelector('.font-item.selected')?.getAttribute('data-font');
+
+            if (selectedFont) {
+                // Create a hidden input field for the selected font
+                document.getElementById('selectedFont').value = selectedFont;
+
+                // Submit the form to the storeSessionData route
+                document.getElementById('fontForm').submit();
+            } else {
+                alert("Please select a font.");
+            }
+        });
+
+    document.getElementById('backButton').addEventListener('click', function() {
+        window.history.back();
     });
-});
-</script>
+    </script>
+
 @endsection

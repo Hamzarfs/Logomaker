@@ -69,7 +69,7 @@ class MainController extends \App\Http\Controllers\Controller
                 ->paginate(10);
         } else {
             // Handle the case where no category ID is available (optional)
-            $products = Product::orderBy('id', 'DESC')->get();
+            $products = Product::orderBy('id', 'DESC')->paginate(10);
         }
         $categories = Category::orderBy('id', 'ASC')->get();
         return view('site/selectlogo', compact('categories', 'products'));

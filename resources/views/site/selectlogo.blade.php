@@ -92,7 +92,7 @@
         <div class="row logo-gallery">
 
             @foreach ($products as $product)
-                <div class="col-md-6 logo-item" data-category="{{ $product->category_id }}">
+                <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
                     <div class="card-container">
                         <img src="{{ 'category-image/' . $product->image }}" class="img-fluid portfolio-image"
                             alt="{{ $product->name }}">
@@ -104,7 +104,9 @@
             @endforeach
         </div>
         <!-- Pagination Links -->
-        {{ $products->links() }}
+        @if ($products->hasPages())
+            {{ $products->links() }}
+        @endif
     </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
