@@ -5,12 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
+
 
     @isset($categoryObj->meta_title)
-        <title>{{ $categoryObj->meta_title }}</title>    
+        <title>{{ $categoryObj->meta_title }}</title>
     @else
-        <title>@yield('title') | {{ env('APP_NAME') }}</title>    
+        <title>@yield('title') | {{ env('APP_NAME') }}</title>
     @endisset
 
     @isset($categoryObj->meta_desc)
@@ -30,6 +30,22 @@
     <!-- Add your CSS links here -->
 
     {{-- @stack('headerStyles') --}}
+
+
+    <!-- Brevo Conversations {literal} -->
+<script>
+    (function(d, w, c) {
+        w.BrevoConversationsID = '65eb4c58149bb809250724f4';
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'BrevoConversations');
+  </script>
+  <!-- /Brevo Conversations {/literal} -->
 </head>
 
 <body>
