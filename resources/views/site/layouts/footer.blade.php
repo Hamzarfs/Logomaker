@@ -6,7 +6,7 @@
         <div class="row py-5">
             <div class="col-md-4">
                 <a href="{{ url('/') }}">
-                    <img src="images/Footer logo.png" alt="Logo" class="footer-logo mb-4"></a>
+                    <img src="images/Footer logo.png" alt="Logo" class="footer-logo mb-6"></a>
                     <p class="footer-description" style="text-align:justify; font-size: 12px;">
                     At RFS Logo Design, we turn logo dreams into reality for clients worldwide. 
                     With a knack for creating stunning, sophisticated logos at budget-friendly 
@@ -27,28 +27,10 @@
                     <li><a href="{{ url('/frequently-asked-question') }}">FAQ</a></li>
                     <li><a href="{{ url('contact-us') }}">Contact Us</a></li>
                     <li><a href="{{ url('site-map') }}">Sitemap</a></li>
-                    <li><a href="{{ url('printing') }}">Printing</a></li>
-
                 </ul>
             </div>
 
- 
-          <!-- Logo Ideas Section -->
-            @foreach ($categories as $index => $category)
-                @if ($index % 10 == 0)
-                    @if ($index != 0)
-                        </ul>
-                    </div>
-                    @endif
-                    <div class="col-md-2">
-                        <h5>Logo Ideas</h5>
-                        <ul class="list-unstyled">
-                @endif
-                <li><a href="{{ url('/logos/'. $category->slug)}}" class="logo-ideas-link">{{ $category->name }}</a></li>
-            @endforeach
-            </ul>
-        </div>
-
+           
             <div class="col-md-2">
                 <h5>Top Locations</h5>
                 <ul class="list-unstyled">
@@ -64,7 +46,35 @@
                     <li><a href="{{ url('/logo-design-virginia') }}">Virginia Logo Design</a></li>
                 </ul>
             </div>
+
+
+            <div class="col-md-2">
+                <h5>Other Services</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{{ url('printing') }}">Printing</a></li>
+
+                </ul>
+            </div>
+
       
+
+
+
+<!-- Logo Ideas Section -->
+<div class="col-md-2">
+    <h5>Logo Ideas</h5>
+    <ul class="list-unstyled">
+        @foreach ($categories as $index => $category)
+            @if ($index < 10)
+                <li><a href="{{ url('/logos/'. $category->slug)}}" class="logo-ideas-link">{{ $category->name }}</a></li>
+            @else
+                @break
+            @endif
+        @endforeach
+    </ul>
+</div>
+
+            
         
           </div>
 
