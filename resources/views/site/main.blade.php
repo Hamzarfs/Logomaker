@@ -120,6 +120,7 @@
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" id="companyName11" name="company"
                                 placeholder="Enter your company name" aria-label="Enter your company name">
+                                <input type="hidden" name="flow" value="home" >
                             <input type="submit" class="custom-button-banner" value="Get Started">
                         </div>
                     </form>
@@ -157,7 +158,7 @@
                 <a href="{{ url('/select-logo') }}"><button class="custom-button-online">Explore Logo</button></a>
                 <img src="images/Logo Pics.png" class="image-online">
             </div>
-            <div class="col-md-2 center-image-online">
+            <div class="col-md-2 center-image-online">elect-category
                 <img src="images/Line points.png">
             </div>
             <div class="col-md-5">
