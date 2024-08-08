@@ -324,7 +324,7 @@
                             <label for="font-family" class="font-label">Font Family</label>
                             <select id="font-family" class="form-control">
                                 <!-- Add your font options here -->
-                                <option value="Roboto" style="font-family: '{{ session()->get('font') }};'">{{ session()->get('font') }}</option>
+                                <option value="{{ session()->get('font') }}" style="font-family: '{{ session()->get('font') }};'">{{ session()->get('font') }}</option>
                                 
                                 
                                 <option value="Roboto" style="font-family: 'Roboto';">Roboto</option>
