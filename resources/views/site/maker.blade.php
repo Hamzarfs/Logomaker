@@ -325,9 +325,9 @@
                             <select id="font-family" class="form-control">
                                 <!-- Add your font options here -->
                                 <option value="{{ session()->get('font') }}" style="font-family: '{{ session()->get('font') }};'">{{ session()->get('font') }}</option>
+                                <option value="lazyp-eople" style="font-family: 'Roboto';">Roboto</option>
                                 
-                                
-                                <option value="Roboto" style="font-family: 'Roboto';">Roboto</option>
+                                <!-- <option value="Roboto" style="font-family: 'Roboto';">Roboto</option>
                                 <option value="Lato" style="font-family: 'Lato';">Lato</option>
                                 <option value="Montserrat" style="font-family: 'Montserrat';">Montserrat</option>
                                 <option value="Poppins" style="font-family: 'Poppins';">Poppins</option>
@@ -375,7 +375,7 @@
                                 </option>
                                 <option value="Open Sans" style="font-family: 'Open Sans';">Open Sans</option>
                                 <option value="Lato" style="font-family: 'Lato';">Lato</option>
-                                <option value="Exo 2" style="font-family: 'Exo 2';">Exo 2</option>
+                                <option value="Exo 2" style="font-family: 'Exo 2';">Exo 2</option> -->
                             </select>
 
                             <button id="add-text" class="btn"><i class="fas fa-plus"></i> Add Text</button>

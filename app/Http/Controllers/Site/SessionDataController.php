@@ -14,7 +14,7 @@ class SessionDataController extends \App\Http\Controllers\Controller
            
             $company = $request->input('company');
             Session::put('company', $company);
-            return redirect()->route('select-logo');
+            return redirect()->route('select-color');
         }
 
 
@@ -47,11 +47,12 @@ class SessionDataController extends \App\Http\Controllers\Controller
 
     public function storeSessionDataLogo(Request $request)
     {
+        
         if ($request->has('company')) {
             $company = $request->input('company');
             Session::put('company', $company);
-             
         }
+
         if ($request->has('category')) {
             $font = $request->input('category');
             Session::put('category', $font);
@@ -70,9 +71,9 @@ class SessionDataController extends \App\Http\Controllers\Controller
             Session::put('company', $company);
         }
 
-        if ($request->has('font')) {
-            $font = $request->input('font');
-            Session::put('font', $font);
+        if ($request->has('company')) {
+            $company = $request->input('company');
+            Session::put('company', $company);
           
         }
 
@@ -85,7 +86,6 @@ class SessionDataController extends \App\Http\Controllers\Controller
             $productId = $request->query('product-id');
             Session::put('product-id', $productId);
         }
-
 
         return redirect()->route('preview');
     }
