@@ -1,16 +1,54 @@
 {{-- @dd($favourites->links()) --}}
 @extends('site.common')
 
-@section('title', 'Favourites')
+@section('title', 'My Favourites')
 
 @section('content')
 
     <style>
+        .logo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .logo-item {
+            width: 33%;
+            margin-bottom: 20px;
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .select-btn {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .logo-item:hover .select-btn,
+        .logo-item:hover .fav-icon {
+            display: block;
+        }
+
         .fav-icon {
             position: absolute;
             right: 20px;
             top: 10px;
             font-size: 25px;
+            display: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .logo-item {
+                width: 100%;
+                height: auto;
+                /* Adjust height as needed */
+            }
         }
     </style>
 
@@ -18,81 +56,59 @@
         <div class="text-center mb-5">
             <h1>Favourites</h1>
         </div>
-        <div class="row">
+
+        <div class="row logo-gallery">
             @foreach ($favourites as $favourite)
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <a href="" class="card-container-link" data-image="{{ $favourite->product->image }}"
-                        data-id="{{ $favourite->product->id }}"
-                        data-placeholder="{{ $favourite->product->placeholder_value }}">
-                        <div class="card-container">
-                            <div class="card-inner">
-                                <div class="card-front">
-                                    <img src="{{ asset("category-image/{$favourite->product->image}") }}"
-                                        class="img-fluid portfolio-image" alt="{{ $favourite->product->name }}">
-                                    <div class="text-placeholder"
-                                        data-placeholder-value="{{ $favourite->product->placeholder_value }}">
-                                    </div>
-                                </div>
-                                <div class="card-back">
-                                    <div class="category-name">{{ $favourite->product->category->name ?? '' }}</div>
-                                    <div class="fav-icon text-success" data-product-id="{{ $favourite->product->id }}"
-                                        data-favourite-id="{{ $favourite->id }}">
-                                        <i class="fa fa-heart" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-md-4 logo-item" data-category="{{ $favourite->product->category_id }}">
+                    <div class="card-container">
+                        <img src="{{ asset("category-image/{$favourite->product->image}") }}" class="img-fluid portfolio-image"
+                            alt="{{ $favourite->product->name }}">
+                        <a href="{{ url('/store-session-data-image?image=' . $favourite->product->image . '&product-id=' . $favourite->product->id) }}"
+                            class="hover-button select-btn" data-product-id="{{ $favourite->product->id }}">Select </a>
+                        <div class="fav-icon text-success" data-product-id="{{ $favourite->product->id }}"
+                            data-favourite-id="{{ $favourite->id }}">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
                         </div>
-                    </a>
+                    </div>
                 </div>
             @endforeach
-
-            {!! $favourites->links() !!}
         </div>
+
+        {!! $favourites->links() !!}
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ asset('js/ajaxSetup.js') }}"></script>
-    
+
     <script>
-        $('.card-container-link').on('click', function() {
-            event.preventDefault()
-            if (event.target.classList.contains('fa-heart')) {
-                const favIconEl = $(this).find('.fav-icon')
+        $('.fav-icon').click(function() {
+            const favIconEl = $(this)
                 const favId = favIconEl.attr('data-favourite-id')
-                    $.ajax({
-                        url: "{{ route('favourite.remove', 11111) }}".replace('11111', favId),
-                        method: 'DELETE',
-                        success: function(response) {
-                            if (response.success) {
-                                swal.fire({
-                                    icon: 'success',
-                                    title: 'Success',
-                                    text: "Logo removed from favourites!",
-                                    timer: 3000,
-                                    timerProgressBar: true
-                                }).then(() => {
-                                    location.reload()
-                                })
-                            } else {
-                                swal.fire({
-                                    icon: 'error',
-                                    title: 'Error',
-                                    text: "Unexpected error. Please try again later!!"
-                                })
-                            }
-                        },
-                    })
-            } else {
-                let image = this.getAttribute('data-image');
-                let id = this.dataset.id
-                let company = "{{ session()->get('company') }}";
-                let urlBase = "{{ url('/') }}";
-
-                let url = urlBase +
-                    `/store-session-data-image?image=${encodeURIComponent(image)}&company=${encodeURIComponent(company)}&product-id=${encodeURIComponent(id)}`;
-
-                window.location.href = url;
-            }
+                $.ajax({
+                    url: "{{ route('favourite.remove', 11111) }}".replace('11111', favId),
+                    method: 'DELETE',
+                    success: function(response) {
+                        if (response.success) {
+                            swal.fire({
+                                icon: 'success',
+                                title: 'Success',
+                                text: "Logo removed from favourites!",
+                                timer: 1500,
+                                timerProgressBar: true
+                            }).then(() => {
+                                location.reload()
+                            })
+                        } else {
+                            swal.fire({
+                                icon: 'error',
+                                title: 'Error',
+                                text: "Unexpected error. Please try again later!!"
+                            })
+                        }
+                    },
+                })
         })
+
     </script>
 @endsection

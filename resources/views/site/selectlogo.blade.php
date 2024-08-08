@@ -4,28 +4,65 @@
 
 @section('content')
     <style>
-        @font-face { font-family: 'lazy_people'; src: url('fonts/Atop-R99O3.ttf') format('truetype'); }
-        @font-face { font-family: 'Remon Demo'; src: url('fonts/Remon Demo.ttf') format('truetype'); }
-        @font-face { font-family: 'Stifly'; src: url('fonts/Stifly.ttf') format('truetype'); }
-        @font-face { font-family: 'Brandes-Regular'; src: url('fonts/Brandes-Regular.otf') format('truetype'); }
-        @font-face { font-family: 'Rohgaz-DemoVersion-Regular'; src: url('fonts/Rohgaz-DemoVersion-Regular.ttf') format('truetype'); }
-        @font-face { font-family: 'Forest Trophy Textured'; src: url('fonts/Forest Trophy Textured.otf') format('truetype'); }        
-        @font-face { font-family: 'AestheticWonderDEMO-Bold'; src: url('fonts/AestheticWonderDEMO-Bold.ttf') format('truetype'); }
-        @font-face { font-family: 'NerveBrushRegular'; src: url('fonts/NerveBrushRegular.otf') format('truetype'); }
-        @font-face { font-family: 'Stander DEMO'; src: url('fonts/Stander DEMO.otf') format('truetype'); }
-        @font-face { font-family: 'Dasport  DEMO'; src: url('fonts/Dasport  DEMO.otf') format('truetype'); }
-        @font-face { font-family: 'Light Sport DEMO'; src: url('fonts/Light Sport DEMO.otf') format('truetype'); }
+        @font-face {
+            font-family: 'lazy_people';
+            src: url('fonts/Atop-R99O3.ttf') format('truetype');
+        }
 
-        
+        @font-face {
+            font-family: 'Remon Demo';
+            src: url('fonts/Remon Demo.ttf') format('truetype');
+        }
 
+        @font-face {
+            font-family: 'Stifly';
+            src: url('fonts/Stifly.ttf') format('truetype');
+        }
 
+        @font-face {
+            font-family: 'Brandes-Regular';
+            src: url('fonts/Brandes-Regular.otf') format('truetype');
+        }
 
+        @font-face {
+            font-family: 'Rohgaz-DemoVersion-Regular';
+            src: url('fonts/Rohgaz-DemoVersion-Regular.ttf') format('truetype');
+        }
 
-        
+        @font-face {
+            font-family: 'Forest Trophy Textured';
+            src: url('fonts/Forest Trophy Textured.otf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'AestheticWonderDEMO-Bold';
+            src: url('fonts/AestheticWonderDEMO-Bold.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'NerveBrushRegular';
+            src: url('fonts/NerveBrushRegular.otf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Stander DEMO';
+            src: url('fonts/Stander DEMO.otf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Dasport  DEMO';
+            src: url('fonts/Dasport  DEMO.otf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Light Sport DEMO';
+            src: url('fonts/Light Sport DEMO.otf') format('truetype');
+        }
+
         .logo-gallery {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: center;
         }
 
         .logo-item {
@@ -37,11 +74,11 @@
         }
 
         /* .logo-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        } */
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    object-fit: cover;
+                                                    object-position: center;
+                                                } */
         .select-btn {
             display: none;
             position: absolute;
@@ -51,10 +88,12 @@
             z-index: 10;
         }
 
-        .logo-item:hover .select-btn {
+        .logo-item:hover .select-btn,
+        .logo-item:hover .fav-icon {
             display: block;
         }
-        .lazy_people{
+
+        .lazy_people {
             text-decoration: none;
             color: #fff;
 
@@ -77,6 +116,15 @@
         button#updateButton {
             height: 50px !important;
         }
+
+        .fav-icon {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            font-size: 25px;
+            display: none;
+            cursor: pointer;
+        }
     </style>
 
     <div class="container">
@@ -84,7 +132,7 @@
         <div class="row mt-5">
             <div class="col text-center">
                 <h2 style= " font-size:54px; font-weight:700;">Free Logo Maker</h1>
-                <p>Online logo creator design in minutes!</p>
+                    <p>Online logo creator design in minutes!</p>
             </div>
         </div>
     </div>
@@ -105,45 +153,75 @@
                         <input type="hidden" id="industryId1" name="category" value="{{ session('category') }}">
                     </div>
                     <div class="col-md-4">
-                        <button class="btn btn-primary w-100" style = "background-color:#6c73db; border-color:#6c73db; "id="updateButton">Update</button>
+                        <button class="btn btn-primary w-100"
+                            style = "background-color:#6c73db; border-color:#6c73db; "id="updateButton">Update</button>
                     </div>
                 </div>
             </div>
         </form>
     </div>
+
     <div class="container">
         <!-- Gallery -->
         <div class="row logo-gallery">
-    @php
-       $fonts = [ 'lazy_people', 'Remon Demo', 'Stifly', 'Brandes-Regular','Rohgaz-DemoVersion-Regular','Forest Trophy Textured','AestheticWonderDEMO-Bold','NerveBrushRegular','Stander DEMO','Dasport  DEMO','Light Sport DEMO']; // List of fonts
-       $colors = ['#900C3F', '#36454F', '#343434', '#191970', '#581845']; 
-    @endphp
+            @php
+                $fonts = [
+                    'lazy_people',
+                    'Remon Demo',
+                    'Stifly',
+                    'Brandes-Regular',
+                    'Rohgaz-DemoVersion-Regular',
+                    'Forest Trophy Textured',
+                    'AestheticWonderDEMO-Bold',
+                    'NerveBrushRegular',
+                    'Stander DEMO',
+                    'Dasport  DEMO',
+                    'Light Sport DEMO',
+                ]; // List of fonts
+                $colors = ['#900C3F', '#36454F', '#343434', '#191970', '#581845'];
+            @endphp
 
- 
-    @foreach ($products as $index => $product)
-    @php
-        $font = $fonts[$index % count($fonts)]; // Select font based on index
-        $color = $colors[$index % count($colors)];
-    @endphp
-    <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}" >
-        <div class="card-container">
-            <img src="{{ 'category-image/' . $product->image }}" class="img-fluid portfolio-image"
-                alt="{{ $product->name }}">
-            <div class="text-placeholder" style="font-family: {{ $font }}; color:{{$color}}; font-size:50px; font-weight:500; margin-top:-30px">{{ session('company') }} </div>
-            <a href="{{ url('/store-session-data-image?image=' . $product->image . '&product-id=' . $product->id) }}"
-                class="hover-button select-btn" data-product-id="{{ $product->id }}">Select </a>
-        </div>
-    </div>
-@endforeach
+
+            @foreach ($products as $index => $product)
+                @php
+                    $font = $fonts[$index % count($fonts)]; // Select font based on index
+                    $color = $colors[$index % count($colors)];
+                @endphp
+                <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
+                    <div class="card-container">
+                        <img src="{{ asset("category-image/$product->image") }}" class="img-fluid portfolio-image"
+                            alt="{{ $product->name }}">
+                        <div class="text-placeholder"
+                            style="font-family: {{ $font }}; color:{{ $color }}; font-size:50px; font-weight:500; margin-top:-30px">
+                            {{ session('company') }} </div>
+                        <a href="{{ url('/store-session-data-image?image=' . $product->image . '&product-id=' . $product->id) }}"
+                            class="hover-button select-btn" data-product-id="{{ $product->id }}">Select </a>
+                        @auth
+                            @php
+                                $i = array_search($product->id, array_column($favourites, 'product_id'));
+                            @endphp
+                            <div class="fav-icon {{ $i !== false ? 'text-success' : 'text-danger' }}"
+                                data-product-id="{{ $product->id }}"
+                                @if ($i !== false) data-favourite-id="{{ $favourites[$i]['id'] }}" @endif>
+                                <i class="fa fa-heart" aria-hidden="true"></i>
+                            </div>
+                        @endauth
+                    </div>
+                </div>
+            @endforeach
         </div>
         <!-- Pagination Links -->
-        @if ($products->hasPages())
+        {!! $products->links() !!}
+        {{-- @if ($products->hasPages())
             {{ $products->links() }}
-        @endif
+        @endif --}}
     </div>
-    </div>
+
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('js/ajaxSetup.js') }}"></script>
     <script>
         $(document).ready(function() {
             var categories = @json($categories); // Convert PHP categories array to JavaScript
@@ -223,5 +301,60 @@
                 });
             });
         });
+
+        $('.fav-icon').click(function() {
+            const favIconEl = $(this)
+            if (favIconEl.hasClass('text-danger')) {
+                const productId = favIconEl.attr('data-product-id')
+                $.ajax({
+                    url: "{{ route('favourite.add') }}",
+                    method: 'POST',
+                    data: {
+                        productId,
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            swal.fire({
+                                icon: 'success',
+                                title: 'Success',
+                                text: "Logo added to favourites!"
+                            })
+                            favIconEl.removeClass('text-danger')
+                            favIconEl.addClass('text-success')
+                            favIconEl.attr('data-favourite-id', response.favourite_id)
+                        } else {
+                            swal.fire({
+                                icon: 'error',
+                                title: 'Error',
+                                text: "Unexpected error. Please try again later!!"
+                            })
+                        }
+                    },
+                })
+            } else {
+                const favId = favIconEl.attr('data-favourite-id')
+                $.ajax({
+                    url: "{{ route('favourite.remove', 11111) }}".replace('11111', favId),
+                    method: 'DELETE',
+                    success: function(response) {
+                        if (response.success) {
+                            swal.fire({
+                                icon: 'success',
+                                title: 'Success',
+                                text: "Logo removed from favourites!"
+                            })
+                            favIconEl.removeClass('text-success')
+                            favIconEl.addClass('text-danger')
+                        } else {
+                            swal.fire({
+                                icon: 'error',
+                                title: 'Error',
+                                text: "Unexpected error. Please try again later!!"
+                            })
+                        }
+                    },
+                })
+            }
+        })
     </script>
 @endsection

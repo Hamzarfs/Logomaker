@@ -125,7 +125,6 @@
                                     <i class="fas fa-user"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-
                                     <a class="dropdown-item" href="{{ route('orders') }}">My Orders</a>
                                     <a class="dropdown-item" href="{{ route('favourite.index') }}">My Favorites</a>
                                     <a class="dropdown-item" href="{{ route('accountDetails') }}">Account Details</a>
@@ -137,14 +136,12 @@
                                         @csrf
                                     </form>
                                 </div>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('favourite.index') }}" style="color:#fff;"><i class="bi bi-heart"></i></a>
+                                </li>
                             @endrole
-
-
                         @endguest
                     </li>
-                    <li class="nav-item">
-                            <a class="nav-link" href="#" style="color:#fff;"><i class="bi bi-heart"></i></a>
-                        </li>
                     <li class="nav-item">
                         <a class="nav-link search-icon" href="javascript:void(0);" style="color:#fff;">
                             <i class="fas fa-search"></i>
@@ -175,16 +172,20 @@
                             </ul>
                         </div>
                         @endif
-                <div class="col-md-2">
-                <ul class="list-unstyled">
+                        <div class="col-md-2">
+                            <ul class="list-unstyled">
                     @endif
-                    <li><a href="{{ url('/logos/' . $category->slug) }}"
-                            class="header-cat-links">{{ $category->name }}</a></li>
+                    <li>
+                        <a href="{{ url('/logos/' . $category->slug) }}" class="header-cat-links">
+                            {{ $category->name }}
+                        </a>
+                    </li>
                 @endforeach
-                    @if (count($categories) % 10 != 0)
-                        </ul>
-                    </div>
-                    @endif
+                @if (count($categories) % 10 != 0)
+                            </ul>
+                        </div>
+                @endif
+            </div>
         </div>
     </div>
 </div>
