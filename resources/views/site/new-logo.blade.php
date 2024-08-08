@@ -274,6 +274,7 @@
                     {{-- <form class="cta-form" method="post" action="{{ url('/store-session-data') }}">
                         <input type="text" name="company_name" class="form-control" placeholder="Enter your company name"
                             maxlength="30">
+                           
                         <button type="submit" class="btn btn-primary">Get a Logo</button>
                     </form> --}}
                     <form id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
@@ -281,6 +282,7 @@
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" id="companyName11" name="company"
                                 placeholder="Enter your company name" aria-label="Enter your company name">
+                                <input type="hidden" name="flow" value="category" >
                             <input type="submit" class="custom-button-banner" value="Get Started">
                         </div>
                     </form>

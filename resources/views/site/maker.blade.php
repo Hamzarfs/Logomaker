@@ -702,9 +702,9 @@ $(document).ready(function () {
 
                 // Create the textbox with the session company value
                 var sampleText1 = new fabric.Textbox(company, {
-                    left: canvas.width / 2 - 57, // Position the text
-                    top: canvas.height / 2 + 120, // Position the text
-                    fontSize: 50,
+                    left: canvas.width / 2.5 - 57, // Position the text
+                    top: canvas.height / 1.8 + 120, // Position the text
+                    fontSize: 80,
                     fill: '#000000',
                     fontFamily: "{{ session('font') }}",
                     textAlign: 'center',
