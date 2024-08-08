@@ -4,58 +4,7 @@ a {
     ;
   }
 
-  /* .card-container {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: 250px;
-    position: relative;
-    justify-content: center;
-    overflow: hidden;
-}
 
-.card-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    margin-bottom: 10px;
-}
-
-.text-placeholder {
-  font-family: 'Roboto', sans-serif;
-    text-align: center;
-    font-size: 25px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-
-
-
-.hover-button {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-}
-
-.card-container:hover .hover-button {
-    display: block;
-} */
-
-
-/* Card Container Styling */
 
 .animated-heading {
     font-family: 'Poppins', sans-serif;
@@ -77,6 +26,7 @@ a {
 .container-fluid {
   position: relative;
   padding-bottom: 0;
+
   /* overflow: hidden; */
 }
 
@@ -209,6 +159,7 @@ a {
 
    body {
     font-family: 'Poppins', sans-serif;
+    background-color: #fffdf6 !important;
   }
   .navbar {
     padding: 1rem 0;
@@ -328,53 +279,94 @@ a {
     color: #f8f9fa;
   }
 
-
-
-
-
-
-
-
-   /* Start Image Box Sections */
-
-
-
-
-   .plan-section {
-    padding: 40px 0;
-    background-color: #6868d1;
-    color: white;
-    text-align: center;
-  }
-  .plan-section .heading {
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  .plan-section .card-price-container {
-    color: white;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-  }
-  .plan-section .card {
-    color: white;
-    background-color: #8489D9;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 0 10px;
-
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .plan-section .card:click {
-    background-color: #8489D9; /* Color when active */
+   
+  /* Start Image Box Sections */
+.plan-section {
+  padding: 40px 0;
+  background-color: #152441;
+  color: white;
+  text-align: center;
 }
 
+.plan-section .heading {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
 
+.plan-section .card-price-container {
+  color: white;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
 
+.plan-section .card {
+  color: #152441;
+  background-color: #f6faff;
+
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 10px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  cursor: pointer;
+}
+
+.plan-section .card.active {
+  color: white;
+  background-color: #3e4f6f; /* Color when active */
+  flex: 1 0 50%;
+  z-index: 1;
+  transform: scale(1.05);
+  transition: transform 1.05s ease-in-out, background-color 1.05s ease-in-out;
+
+}
+
+.plan-section .card h5 {
+  margin-bottom: 15px;
+}
+
+.plan-section .card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.plan-section .card ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.plan-section .card ul li i {
+  margin-right: 10px;
+}
+
+.plan-section .card .btn {
+  background-color: #ffffff;
+  color: #6868d1;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.plan-btn {
+  width: 194px;
+  height: 50px;
+  border-radius: 5px;
+  color: #050404;
+  background-color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  border-color: #646BD9;
+}
+
+@media (min-width: 768px) {
+  .plan-section .card {
+    width: 33%;
   .plan-section .card.active {
     flex: 1 0 50%;
     z-index: 1;
@@ -403,7 +395,7 @@ a {
     text-transform: uppercase;
     font-weight: bold;
   }
-
+  }
 
   .plan-btn {
     width: 194px;
@@ -423,7 +415,124 @@ a {
       width: 33%;
     }
   }
-   /* End Plan Section */
+}
+/* End Plan Section */
+  
+  
+
+  /* Start Hire Section */
+
+.hire-call-now-btn {
+  width: 194px;
+  height: 50px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #646BD9;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  border-color: #646BD9;
+}
+
+.hire-section-bg {
+  background-color: #F5F5F5;
+}
+
+.hire-section {
+  padding: 40px 0;
+  overflow: hidden; /* Hide any overflow content */
+  max-height: 500px; /* Set a maximum height if needed */
+}
+
+.hire-section .left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left; /* Left align text */
+}
+
+.hire-section .left-column h2 {
+  margin-bottom: 10px;
+  margin-bottom: 20px;
+  font-weight: 700; /* Set font weight to 700 */
+}
+
+.hire-section .left-column p {
+  margin-bottom: 0px;
+  font-weight: 700; /* Set font weight to 700 */
+}
+
+.hire-section .right-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hire-section .hire-section-logo {
+  height: auto; /* Ensure the image scales proportionally */
+  width: auto; /* Ensure the image scales proportionally */
+  object-fit: cover;
+  border-radius: 8px;
+  max-height: 100%; /* Restrict the image height to the container's height */
+}
+
+/* End Hire Section */
+
+  
+
+
+
+
+.why-logo-design-section {
+  margin-top: 50px; /* Top margin */
+  margin-bottom: 50px; /* Bottom margin */
+}
+
+.why-logo-design-heading {
+  font-size: 32px;
+  color: #010935; /* Dark blue */
+  text-align: center; /* Center-align the heading */
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.why-logo-design-description {
+  font-size: 16px;
+  color: #495057; /* Darker grey */
+  text-align: center; /* Center-align the description */
+  margin-bottom: 30px;
+}
+
+.icon-box {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+  text-align: center; /* Center-align text and images */
+}
+
+.icon-box-image {
+  max-width: 80px; /* Adjust size as needed */
+  margin-bottom: 15px;
+}
+
+.icon-box-heading {
+  font-size: 20px;
+  color: #010935; /* Dark blue */
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.icon-box-description {
+  font-size: 16px;
+  color: #495057; /* Darker grey */
+}
+.icon-box:hover {
+  transform: translateY(-10px);
+}
 
 
 
@@ -431,7 +540,9 @@ a {
 
 
 
-   /* Start Hire Section */
+
+
+/* Start Hire Section */
 
 
    .hire-call-now-btn {
@@ -470,9 +581,6 @@ a {
   }
   .hire-section .left-column h2 {
     margin-bottom: 10px;
-  }
-  .hire-section .left-column p {
-    margin-bottom: 20px;
   }
 
   .hire-section .right-column {
@@ -579,9 +687,7 @@ a {
       border-color: #646BD9;
     }
 
-
-
-
+  
     /* <-----start portfolio----> */
 
 
@@ -602,16 +708,8 @@ a {
     .portfolio-image {
       margin: 5px;
   }
-
+  
 /* <----- end portfolio----> */
-
-
-
-
-
-
-
-
 
 
    /*1M Happy Customers Counting */
@@ -725,7 +823,7 @@ a {
   /* Start Footer Section */
 
   .footer {
-    background-color: #666BC0;
+    background-color: #080a2d;
   }
 
   .footer-logo {
@@ -936,7 +1034,6 @@ h1, h2 {
       padding: 60px 0;
   }
   .choose-us-content {
-      background-color: #fff; /* White background for the content */
       border-radius: 8px;
       text-align: center;
       margin: 0 auto;
@@ -959,7 +1056,6 @@ h1, h2 {
 
   .why-choose-section {
     padding: 40px 20px;
-    background-color: #f9f9f9;
   }
   .why-choose-heading {
     font-weight: 800;
@@ -1112,7 +1208,6 @@ h1, h2 {
 .logo-slider-section {
   padding: 40px 0;
   overflow: hidden;
-  background-color: #1372d1; /* Light background color */
 }
 .logo-slider {
   display: flex;
@@ -1180,6 +1275,7 @@ height: auto;
 .filter-button-group button:hover {
   background-color: #646BD9;
   color: white;
+  
 }
 .load-more {
   display: none;
@@ -1461,6 +1557,11 @@ h1, h2 {
     .center-image-online {
       display: none; /* Hide the image on small screens */
   }
+  
+    /* .hire-call-now-btn {
+      align-self: center; 
+    } */
+  
 
     .hire-call-now-btn {
       align-self: center;

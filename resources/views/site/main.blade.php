@@ -5,14 +5,115 @@
 
 @section('content')
 
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"> --}}
+
+    <style>
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: auto;
+}
+        #testimonial-section {
+            background-color: #f9f9f9;
+        }
+
+        .testimonial-card {
+            background-color: #ffffff;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .testimonial-card.active {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial-avatar {
+            background-color: #5068A9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top-left-radius: .25rem;
+            border-bottom-left-radius: .25rem;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .testimonial-avatar img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .testimonial-content {
+            padding: 20px;
+        }
+
+        .testimonial-content h5 {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .star {
+            width: 24px;
+            height: 24px;
+            background-color: #00b67a;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            margin-right: 5px;
+        }
+
+        .owl-nav button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: none;
+            outline: none;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .owl-nav button.owl-prev {
+            left: -25px;
+        }
+
+        .owl-nav button.owl-next {
+            right: -25px;
+        }
+
+        .owl-nav button:focus {
+            outline: none;
+        }
+        @media only screen and (max-width: 767px) {
+    .owl-carousel .owl-item img {
+
+        display: block;
+        width: auto;
+    }
+}
+    </style>
+
     <!----------------------------------------- Start Banner Section ------------------------------->
 
     <div class="container-fluid position-relative overflow-hidden" style="background-color:#080a2d; padding-bottom: 100px;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 banner-left order-lg-1">
-                <h2 style="font-weight:700; color:#fff;">Free <span class="logo-design-color">Logo Maker</span> Tailored for Every Industry - Design Your Logo in Minutes</h2>
-                    <p style="color:#fff;">Unleash your creativity and watch your logo come to life effortlessly. Get in touch with us now!</p>
+                    <h2 style="font-weight:700; color:#fff;">Free <span class="logo-design-color">Logo Maker</span> Tailored
+                        for Every Industry - Design Your Logo in Minutes</h2>
+                    <p style="color:#fff;">Unleash your creativity and watch your logo come to life effortlessly. Get in
+                        touch with us now!</p>
 
                     <form id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
                         @csrf
@@ -40,18 +141,18 @@
     <div class="container my-5">
         <h1 class="maim-heading-online">Steps to Craft Your Perfect Logo Design Online</h1>
         <p class="main-description-online">
-        Use our top-notch logo maker to browse templates, tweak colors, fonts, and icons, and 
-        create a logo that’s as unique as your brand. Download and showcase your custom design 
-        on your website, business cards, and social media with ease!
+            Use our top-notch logo maker to browse templates, tweak colors, fonts, and icons, and
+            create a logo that’s as unique as your brand. Download and showcase your custom design
+            on your website, business cards, and social media with ease!
         </p>
         <div class="row">
             <div class="col-md-5">
                 <h2 class="heading-online">Step 1: Dive into Our Free Logo Maker</h2>
                 <p class="description-online">
-                Kick off your logo journey with our powerful tool. Browse our vast gallery 
-                of templates, visualize design concepts, and select the one that perfectly 
-                captures your brand's identity. Create a unique and professional logo with 
-                minimal effort on your part and watch your idea come to life.
+                    Kick off your logo journey with our powerful tool. Browse our vast gallery
+                    of templates, visualize design concepts, and select the one that perfectly
+                    captures your brand's identity. Create a unique and professional logo with
+                    minimal effort on your part and watch your idea come to life.
                 </p>
                 <a href="{{ url('/select-logo') }}"><button class="custom-button-online">Explore Logo</button></a>
                 <img src="images/Logo Pics.png" class="image-online">
@@ -63,9 +164,9 @@
                 <img src="images/Gif-Home.gif" class="image-online">
                 <h2 class="heading-online">Step 2: Customize Your Logo Design</h2>
                 <p class="description-online">
-                Let our logo maker’s drag-and-drop editor do the heavy lifting. Adjust 
-                colors, fonts, icons, and taglines to fit your brand’s vibe. Our user-friendly 
-                tools make it a breeze for anyone to design a standout, professional logo!
+                    Let our logo maker’s drag-and-drop editor do the heavy lifting. Adjust
+                    colors, fonts, icons, and taglines to fit your brand’s vibe. Our user-friendly
+                    tools make it a breeze for anyone to design a standout, professional logo!
                 </p>
                 <a href="{{ url('/select-logo') }}"><button class="custom-button-online">Try Design Studio</button></a>
             </div>
@@ -74,10 +175,10 @@
                     <div class="col-md-5">
                         <h2 class="heading-online">Step 3. Download Your Logo</h2>
                         <p class="description-online">
-                        After perfecting your design, use our logo generator to download 
-                        high-resolution files for all your branding needs. Whether for digital 
-                        media or print, ensure your logo shines consistently across your website, 
-                        social media, business cards, and brochures!
+                            After perfecting your design, use our logo generator to download
+                            high-resolution files for all your branding needs. Whether for digital
+                            media or print, ensure your logo shines consistently across your website,
+                            social media, business cards, and brochures!
                         </p>
                         <a href="{{ url('/select-logo') }}"><button class="custom-button-online">Get Started</button></a>
                     </div>
@@ -98,7 +199,7 @@
 
 
     <!-- <------------------Make A logo------------------>
-
+<!-- 
     <section class="heroSection1">
         <div class="container">
             <div class="row">
@@ -114,25 +215,22 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- <------------------End Make A logo---------------->
-
-
-
 
 
 
     <!-- ---------------------start porfolio -------------------->
 
 
-    <div class="banner-section" style="background-color: #dbe1ff; padding-bottom: 100px;">
+    <div class="banner-section" style="background-color: #f2f6fe; padding-bottom: 100px;">
         <div class="container portfolio-section">
             <h2 class="portfolio-heading">We Have Logos For Everyone</h2>
             <p class="main-description-online">
-            Explore our logo builder’s vast template collection, from medical 
-            to fashion, sports to food. RFS Logo Design helps you find the perfect 
-            logo to match your business identity and branding needs.
+                Explore our logo builder’s vast template collection, from medical
+                to fashion, sports to food. RFS Logo Design helps you find the perfect
+                logo to match your business identity and branding needs.
             </p>
 
 
@@ -143,8 +241,9 @@
                             $product = $category->products->first(); // Get the first product
                         @endphp
                         <div class="col-lg-4 col-md-6 mb-4">
-                            <a href="{{ route('logos', $category->slug) }}" class="card-container-link" data-image="{{ $product->image }}"
-                                data-id="{{ $product->id }}" data-placeholder="{{ $product->placeholder_value }}">
+                            <a href="{{ route('logos', $category->slug) }}" class="card-container-link"
+                                data-image="{{ $product->image }}" data-id="{{ $product->id }}"
+                                data-placeholder="{{ $product->placeholder_value }}">
                                 <div class="card-container">
                                     <div class="card-inner">
                                         <div class="card-front">
@@ -190,6 +289,82 @@
     </div>
 
     <!-----------------End  Portfolio ----------------------->
+    <!------------------start No.1 Choice for Businesses ------------->
+
+
+    <section class="why-logo-design-section">
+    <div class="container">
+        <!-- Heading -->
+        <h2 class="why-logo-design-heading">Why RFS LOGO DESIGN is the No.1 Choice for Businesses</h2>
+        
+        <!-- Description -->
+        <p class="why-logo-design-description">We are the number one website for DIY logo creator software because customers love our tool and service. From top notch quality logo designs to prompt customer service, we make sure you get the branding your company deserve in the least possible time.</p>
+        
+        <!-- Row with 3 Columns -->
+        <div class="row">
+            <!-- Column 1 -->
+            <div class="col-md-4">
+                <div class="icon-box business-needs">
+                    <img src="{{url('images/success.gif')}}" alt="Business Needs Icon" class="icon-box-image">
+                    <h3 class="icon-box-heading">We Understand Business Needs</h3>
+                    <p class="icon-box-description">With over 20+ years in the industry, we are pretty sure we understand what kind of branding small businesses and startups need. You will find all the necessarily brand designs that you'll need to launch a new business starting with a company logo.</p>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-md-4">
+                <div class="icon-box premium-quality">
+                    <img src= "{{url('images/best-quality.gif')}}"  alt="Premium Quality Icon" class="icon-box-image">
+                    <h3 class="icon-box-heading">Premium Quality Graphic Design</h3>
+                    <p class="icon-box-description">We only work with expert graphic and logo designer which is why you will always get professional and quality designs from LogoDesign.net. All our logos, social media, stationery, website, etc. are guaranteed to make your brand shine out!</p>
+                </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="col-md-4">
+                <div class="icon-box custom-designers">
+                    <img src="{{url('images/logo-design.gif')}}"  alt="Custom Designers Icon" class="icon-box-image">
+                    <h3 class="icon-box-heading">Work with Custom Designers</h3>
+                    <p class="icon-box-description">Not all customers like DIY logo maker tools which is why we also have the option of custom logo design. Work with experienced and professional graphic designers or logo designers one-on-one or via crowdsourcing, just contact us!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Row with 3 Columns -->
+        <div class="row">
+            <!-- Column 1 -->
+            <div class="col-md-4">
+                <div class="icon-box dedicated-support">
+                    <img src="{{url('images/support.gif')}}"  alt="Dedicated Support Icon" class="icon-box-image">
+                    <h3 class="icon-box-heading">Dedicated Support 24/7</h3>
+                    <p class="icon-box-description">Our support team can get you started with our logo maker free for try out or design a company logo by a logo designer. We can even help guide you how to build an awesome brand from scratch. Just contact us with call, chat or email!</p>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-md-4">
+                <div class="icon-box digital-media-design">
+                    <img src="{{url('images/digital-art.gif')}}" alt="Digital Media Design Icon" class="icon-box-image">
+                    <h3 class="icon-box-heading">Ready for Digital Media Design</h3>
+                    <p class="icon-box-description">All our graphic designs are ready for integration and use on all types of digital media whether it is a social media, website design, or app design. You can download your business logo from the logo creator for use instantly!</p>
+                </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="col-md-4">
+                <div class="icon-box brand-kit">
+                    <img src="{{url('images/startup.gif')}}" alt="Brand Kit Icon" class="icon-box-image">
+                    <h3 class="icon-box-heading">Brand Kit for Startups</h3>
+                    <p class="icon-box-description">If you are looking for affordable logo designs and brand designs to make up for your brand kit, then LogoDesign.net offers just the tools to jumpstart your brand. Just start using our logo maker, and download it today!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!------------------end No.1 Choice for Businesses ------------->
+
 
     <!------------Start Image Box Section ------------->
 
@@ -214,31 +389,32 @@
                         focus on stylized text; lettermark logos use initials or abbreviations; abstract logos represent
                         ideas in a unique, non-literal way; and
                         pictorial logos illustrate the business with a visual icon.</p>
-                    <a href="#" style= "color:#646bd9;">Connect with an expert</a>
+                    <!-- <a href="#" style= "color:#646bd9;">Connect with an expert</a> -->
                 </div>
                 <!-- Second Column -->
                 <div class="col-md-4 image-column mb-3 mb-md-0">
                     <img src="images/Imagebox2_color.png" alt="Logo colors">
                     <h2>Logo colors</h2>
                     <p style="text-align: justify;">
-                    Colors are key to your brand’s identity, each evoking distinct 
-                    emotions. Red bursts with energy and passion, while blue signals 
-                    trust and professionalism. Use our logo maker tool to pick the perfect 
-                    palette that captures your brand’s essence and connects with your audience.
+                        Colors are key to your brand’s identity, each evoking distinct
+                        emotions. Red bursts with energy and passion, while blue signals
+                        trust and professionalism. Use our logo maker tool to pick the perfect
+                        palette that captures your brand’s essence and connects with your audience.
                     </p>
-                    <a href="#" style= "color:#646bd9;">Connect with an expert</a>
+                    <!-- <a href="#" style= "color:#646bd9;">Connect with an expert</a> -->
                 </div>
                 <!-- Third Column -->
                 <div class="col-md-4 image-column">
                     <img src="images/Imagebox3_font.png" alt="Logo fonts">
                     <h2>Logo fonts</h2>
-                    <p style="text-align: justify;">Choosing the right font is crucial for your brand logo, as it reflects your brand’s personality and message. Here are some ideas for you.<br>
-                    <b>Serif Fonts:</b> Exude tradition and reliability.<br>
-                    <b>Sans-Serif Fonts:</b> Suggest modernity and simplicity.<br>
-                    <b>Script Fonts:</b> Add a touch of elegance.<br>
-                    <b>Display Fonts:</b> Command attention and stand out.
+                    <p style="text-align: justify;">Choosing the right font is crucial for your brand logo, as it reflects
+                        your brand’s personality and message. Here are some ideas for you.<br>
+                        <b>Serif Fonts:</b> Exude tradition and reliability.<br>
+                        <b>Sans-Serif Fonts:</b> Suggest modernity and simplicity.<br>
+                        <b>Script Fonts:</b> Add a touch of elegance.<br>
+                        <b>Display Fonts:</b> Command attention and stand out.
                     </p>
-                    <a href="#" style= "color:#646bd9;">Connect with an expert</a>
+                    <!-- <a href="#" style= "color:#646bd9;">Connect with an expert</a> -->
                 </div>
             </div>
         </div>
@@ -301,15 +477,19 @@
             <div class="col-md-6 left-column">
                 <p>Share Your Unique Vision With Our</p>
                 <h2>Custom Logo Designer</h2>
+            <a class="toll_icon" href="tel:+15516665255" style="color: white;">
                 <button class="hire-call-now-btn">Call Now</button>
+            </a>
+
+
+
             </div>
             <!-- Right Column -->
             <div class="col-md-6 right-column">
                 <img src="images/hire-section-logos.png" class="hire-section-logo" alt="Logo">
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
@@ -322,84 +502,143 @@
     <!-- <-----------------Start 1M Happy Customers Counting---------------->
 
 
-    <section class="testimonials-section">
+    <section id="testimonial-section" class="pt-5 pb-5">
         <div class="container">
-            <h2><strong>1M Happy Customers Counting</strong></h2>
-            <div class="row equal justify-content-center">
-                <div class="col-md-4">
-                    <div class="owl-item">
-                        <div class="owl-item-div">
-                            <div class="logoReveiwImage">
-                                <div class="circle-white">
-                                    <img width="113" height="122" class="lazy"
-                                        data-src="/images/testimonials-logo-04.png"
-                                        src="images/Logo Flora care Lawn Care Services llc-01-300x300 1.png"
-                                        alt="">
-                                </div>
-                            </div>
-                            <div class="logoReveiwText">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <p>Very helpful crew, I’m very picky with my designs and I was helped greatly with compliant
-                                    people, I am very satisfied.</p>
-                                <p><strong>Kyle Bacon.</strong></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="owl-item">
-                        <div class="owl-item-div">
-                            <div class="logoReveiwImage">
-                                <div class="circle-white">
-                                    <img width="113" height="122" class="lazy"
-                                        data-src="/images/testimonials-logo-05.png" src="images/Untitled design.png"
-                                        alt="">
-                                </div>
-                            </div>
-                            <div class="logoReveiwText">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <p>Brian Edwin provided me with excellent service. Anytime I asked him for any edits, he did
-                                    it promptly. I was very happy with the logos and invoices he created for me. 5 Star
-                                    Service. Thank you, Brian.</p>
-                                <p><strong>Madelyn Weingarden.</strong></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="owl-item">
-                        <div class="owl-item-div">
-                            <div class="logoReveiwImage">
-                                <div class="circle-white">
-                                    <img width="113" height="122" class="lazy"
-                                        data-src="/images/testimonials-logo-06.png" src="images/image 14.png"
-                                        alt="">
-                                </div>
-                            </div>
-                            <div class="logoReveiwText">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <p>LOVEEE MY LOGO! Done exactly how I visioned it! I’ll be back for my website!</p>
-                                <p><strong>Archelle Jenkins.</strong></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <h2 class="text-center mb-5">1M+ Happy Customers and Counting</h2>
+            <div class="owl-carousel owl-theme">
+                <!-- Reviews will be inserted here dynamically -->
             </div>
         </div>
     </section>
+
+    <!-- -------------------start FAQs --------------- -->
+
+
+    <div class="container faq-section">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div id="accordion">
+            <!-- <-Question 1 -->
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne">
+                            <span class="faq-question">How can I effectively utilize a logo maker to create a unique
+                                logo design?</span>
+
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        A logo maker is software that offers a selection of pre-made logo design templates from a
+                        database. Here’s how you can create a logo using one:
+
+                        Choose a Template: Browse and select a design template from the gallery that best suits your
+                        business or style.
+
+                        Customize Your Design: Customize the font, colors, and add your company name or tagline. Many
+                        logo makers also offer advanced tools to apply effects like gradients, shadows, and more.
+
+                        Download Your Logo: After customizing, pay a nominal fee to download high-resolution files
+                        instantly. Some platforms offer free downloads with credit attribution.
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                            <span class="faq-question">Can I use my logo for trademark and copyrights?</span>
+
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        Ownership: Logos created using templates are owned by the RFS Logo Design. Exclusive rights can
+                        be purchased separately.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
+                            <span class="faq-question">What are the distinctions between using a logo maker and opting
+                                for custom logo design services?</span>
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        Logo Maker: Uses pre-made templates for customization. You can adjust fonts, colors, and effects
+                        without needing design skills. The design is not exclusive to you.
+                        Custom Design: Involves working with a dedicated designer who creates a unique logo based on
+                        your specific requirements. This design is exclusive to your brand.
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                            aria-expanded="false" aria-controls="collapseFour">
+                            <span class="faq-question">Is it possible to personalize my logo design using your logo
+                                maker tool?</span>
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        Absolutely! With our logo maker, you have the flexibility to customize fonts, colors, text, and
+                        your company name. Additionally, you can enhance
+                        your logo with advanced features like strokes, reflections, shadows, and more, all without
+                        needing any design expertise. These tools empower you
+                        to generate countless unique design variations from a single logo template.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                            aria-expanded="false" aria-controls="collapseFive">
+                            <span class="faq-question">Are the logo design files suitable for printing business
+                                cards?</span>
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                        File Availability: Once customized, download high-resolution files suitable for printing
+                        business cards, stationery, banners, and digital platforms.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- -------------------End FAQs --------------- -->
+
+
 
 
     <!-- <-----------------End 1M Happy Customers Counting---------------->
@@ -436,7 +675,9 @@
 
 
     <!-- jQuery library -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> --}}
 
     <script>
         $(document).ready(function() {
@@ -463,7 +704,11 @@
             //         alert("Please enter your company name.");
             //     }
             // });
+
+
         });
+
+        
     </script>
 
     <!-- Other scripts or libraries -->

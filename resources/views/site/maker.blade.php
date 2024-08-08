@@ -321,11 +321,22 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="font-family" class="font-label">Font Family</label>
+                            <label for="font-family" class="font-label">Font Family  </label>
                             <select id="font-family" class="form-control">
                                 <!-- Add your font options here -->
-                                <option value="{{ session()->get('font') }}" style="font-family: '{{ session()->get('font') }};'">{{ session()->get('font') }}</option>
-                                <option value="lazyp-eople" style="font-family: 'Roboto';">Roboto</option>
+                                <!-- <option value="{{ session()->get('font') }}" style="font-family: '{{ session()->get('font') }};'">{{ session()->get('font') }}</option> -->
+                                <option value="lazyp-eople" {{ session()->get('font') == "lazyp-eople" ? "selected" : "" }} style="font-family: 'lazyp-eople';">Lazy People</option>
+                                <option value="Remon-Demo" {{  session()->get('font') == "Remon-Demo" ? "selected" : "" }}  style="font-family: 'Remon-Demo';">Remon Demo</option>
+
+                                <option value="Stifly" {{ session()->get('font') == "Stifly" ? "selected" : "" }}  style="font-family: 'Stifly';">Stifly</option>
+                                <option value="Brandes-Regular" {{ session()->get('font') == "Brandes-Regular" ? "selected" : "" }}  style="font-family: 'Brandes-Regular';">Brandes Regular</option>
+                                <option value="Rohgaz-Demo-VersionRegular" {{ session()->get('font') == "Rohgaz-Demo-VersionRegular" ? "selected" : "" }}  style="font-family: 'Rohgaz-Demo-VersionRegular';">Rohgaz Demo VersionRegular</option>
+                                <option value="Forest-Trophy-Textured"  {{ session()->get('font') == "Forest-Trophy-Textured" ? "selected" : "" }} style="font-family: 'Forest-Trophy-Textured';">Forest Trophy Textured</option>
+                                <option value="Aesthetic-Wonder-DEMOBold" {{ session()->get('font') == "Aesthetic-Wonder-DEMOBold" ? "selected" : "" }}  style="font-family: 'Aesthetic-Wonder-DEMOBold';">Aesthetic Wonder DEMOBold</option>
+                                <option value="Nerve-Brush-Regular"  {{ session()->get('font') == "Nerve-Brush-Regular" ? "selected" : "" }} style="Nerve-Brush-Regular: 'lazyp-eople';">Nerve Brush Regular</option>
+                                <option value="Stander-DEMO" {{ session()->get('font') == "Stander-DEMO" ? "selected" : "" }}  style="font-family: 'Stander-DEMO';">Stander DEMO</option>
+                                <option value="Dasport-DEMO" {{ session()->get('font') == "Dasport-DEMO" ? "selected" : "" }}  style="font-family: 'Dasport-DEMO';">Dasport DEMO</option>
+                                <option value="LightSport-DEMO" {{ session()->get('font') == "LightSport-DEMO" ? "selected" : "" }}  style="font-family: 'LightSport-DEMO';">LightSport DEMO</option>
                                 
                                 <!-- <option value="Roboto" style="font-family: 'Roboto';">Roboto</option>
                                 <option value="Lato" style="font-family: 'Lato';">Lato</option>
@@ -435,6 +446,7 @@
 
 var canvas
 $(document).ready(function () {
+
     canvas = new fabric.Canvas('logo-canvas');
 
 

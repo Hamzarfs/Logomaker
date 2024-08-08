@@ -71,9 +71,9 @@ class SessionDataController extends \App\Http\Controllers\Controller
             Session::put('company', $company);
         }
 
-        if ($request->has('company')) {
-            $company = $request->input('company');
-            Session::put('company', $company);
+        if ($request->has('font')) {
+            $company = $request->input('font');
+            Session::put('font', $company);
           
         }
 

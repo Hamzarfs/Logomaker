@@ -842,7 +842,7 @@
                 font-size: 35px;
             }
 
-            .fourth-section h3 {
+            .fourth-section h3 {session('font') 
                 font-size: 20px;
             }
 
@@ -910,7 +910,7 @@
 
         /*********************** Responsive End *************************/
     </style>
-
+ 
     <!-- Heading -->
     <div class="heading py-3">
         <div class="text-center">
@@ -947,7 +947,7 @@
         <div class="container text-center">
             <h3>Set up your online presence</h3>
             <h2>WEBSITE & HOSTING</h2>
-
+            
             <div class="mockup-wrapper mt-md-4">
                 <div class="logo-wrapper-1">
                     <img class="logo-mockup" alt="logo">
