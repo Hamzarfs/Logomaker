@@ -77,13 +77,13 @@ a {
 .container-fluid {
   position: relative;
   padding-bottom: 0;
-  overflow: hidden;
+
 }
 
 .wave {
   position: absolute;
   bottom: 0;
-  width: 200%;
+  width: 90%;
   height: 100px;
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 28" preserveAspectRatio="none"><path d="M0,20 C30,40 70,0 100,20 L120,30 L0,30 Z" fill="%23646bd9"/></svg>') repeat-x;
   background-size: cover;
@@ -424,74 +424,6 @@ a {
     }
   }
    /* End Plan Section */
-<<<<<<< HEAD
-  
-  
- 
-  
-  /* Start Hire Section */
-
-.hire-call-now-btn {
-  width: 194px;
-  height: 50px;
-  border-radius: 5px;
-  color: #fff;
-  background-color: #646BD9;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 24px;
-  text-align: center;
-  border-color: #646BD9;
-}
-
-.hire-section-bg {
-  background-color: #F5F5F5;
-}
-
-.hire-section {
-  padding: 40px 0;
-  overflow: hidden; /* Hide any overflow content */
-  max-height: 500px; /* Set a maximum height if needed */
-}
-
-.hire-section .left-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left; /* Left align text */
-}
-
-.hire-section .left-column h2 {
-  margin-bottom: 10px;
-  margin-bottom: 20px;
-  font-weight: 700; /* Set font weight to 700 */
-}
-
-.hire-section .left-column p {
-  /* margin-bottom: 20px; */
-  font-weight: 700; /* Set font weight to 700 */
-}
-
-.hire-section .right-column {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hire-section .hire-section-logo {
-  height: auto; /* Ensure the image scales proportionally */
-  width: auto; /* Ensure the image scales proportionally */
-  object-fit: cover;
-  border-radius: 8px;
-  max-height: 100%; /* Restrict the image height to the container's height */
-}
-
-/* End Hire Section */
-
-  
-  
-  
-=======
 
 
 
@@ -569,7 +501,6 @@ a {
 
 
 
->>>>>>> hamza
   /* <!---- section online logo------> */
 
 
@@ -647,19 +578,16 @@ a {
       background-color: #646BD9;
       border-color: #646BD9;
     }
-<<<<<<< HEAD
-   
-  
-  
-  
+
+
+
+
     /* <-----start portfolio----> */
-=======
 
 
 
 
     /* <-----portfolio----> */
->>>>>>> hamza
     .portfolio-heading {
       text-align: center;
       font-weight: 700;
@@ -674,21 +602,18 @@ a {
     .portfolio-image {
       margin: 5px;
   }
-<<<<<<< HEAD
-  
+
 /* <----- end portfolio----> */
 
-  
-  
-  
-  
-  
-  
-  
-=======
 
 
->>>>>>> hamza
+
+
+
+
+
+
+
    /*1M Happy Customers Counting */
 
    .checked {
@@ -895,10 +820,7 @@ h1, h2 {
   height: auto;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> hamza
 
 /* Custom CSS for justified text */
 .text-justify {
@@ -1539,19 +1461,11 @@ h1, h2 {
     .center-image-online {
       display: none; /* Hide the image on small screens */
   }
-<<<<<<< HEAD
-  
-    /* .hire-call-now-btn {
-      align-self: center; 
-    } */
-  
-=======
 
     .hire-call-now-btn {
       align-self: center;
     }
 
->>>>>>> hamza
     .hire-section .hire-section-logo {
       height: 350px;
       width: auto;
