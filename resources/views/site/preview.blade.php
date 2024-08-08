@@ -85,25 +85,25 @@
         .first-section .mockup-wrapper .logo-wrapper-1 {
             position: absolute;
             bottom: 210px;
-            left: 217px;
+            left: 125px;
         }
 
         .first-section .mockup-wrapper .logo-wrapper-2 {
             position: absolute;
-            bottom: 258px;
-            left: 352px;
+            bottom: 260px;
+            left: 260px;
         }
 
         .first-section .mockup-wrapper .logo-wrapper-3 {
             position: absolute;
             bottom: 440px;
-            left: 357px;
+            left: 270px;
         }
 
         .first-section .mockup-wrapper .logo-wrapper-4 {
             position: absolute;
-            bottom: 256px;
-            right: 645px;
+            bottom: 255px;
+            right: 550px;
         }
 
         .purple-bg {
@@ -137,8 +137,8 @@
 
         .second-section .mockup-wrapper .logo-wrapper {
             position: absolute;
-            top: 161px;
-            left: 620px;
+            top: 150px;
+            left: 525px;
             rotate: -25deg;
         }
 
@@ -173,8 +173,8 @@
 
         .third-section .mockup-wrapper .logo-wrapper {
             position: absolute;
-            top: 169px;
-            left: 575px;
+            top: 165px;
+            left: 490px;
             rotate: -20deg;
         }
 
@@ -209,8 +209,8 @@
 
         .fourth-section .mockup-wrapper .logo-wrapper {
             position: absolute;
-            top: 122px;
-            left: 523px;
+            top: 115px;
+            left: 425px;
             rotate: -38deg;
         }
 
@@ -247,26 +247,26 @@
         .fifth-section .mockup-wrapper .logo-wrapper-1 {
             position: absolute;
             top: 55px;
-            left: 490px;
+            left: 400px;
             rotate: 90deg;
         }
 
         .fifth-section .mockup-wrapper .logo-wrapper-2 {
             position: absolute;
             top: 50px;
-            left: 571px;
+            left: 480px;
         }
 
         .fifth-section .mockup-wrapper .logo-wrapper-3 {
             position: absolute;
-            bottom: 249px;
-            right: 440px;
+            bottom: 260px;
+            right: 345px;
         }
 
         .fifth-section .mockup-wrapper .logo-wrapper-4 {
             position: absolute;
-            bottom: 143px;
-            right: 478px;
+            bottom: 145px;
+            right: 380px;
         }
 
         .sixth-section .mockup-wrapper {
@@ -289,14 +289,14 @@
 
         .sixth-section .mockup-wrapper .logo-mockup {
             position: absolute;
-            width: 140px;
-            height: 120px;
+            width: 190px;
+            height: 180px;
         }
 
         .sixth-section .mockup-wrapper .logo-wrapper {
             position: absolute;
-            bottom: 215px;
-            left: 575px;
+            bottom: 270px;
+            left: 470px;
         }
 
         /*********************** Responsive Start ***********************/
@@ -353,7 +353,7 @@
             }
 
             .sixth-section .mockup-wrapper .logo-wrapper {
-                left: 486px;
+                /* left: 486px; */
             }
         }
 
@@ -409,17 +409,12 @@
             }
 
             .sixth-section .mockup-wrapper .logo-wrapper {
-                left: 398px;
+                left: 380px;
             }
         }
 
         /* For screen 768px to 991px */
         @media (max-width: 991.98px) {
-            /* .preview-section .logo-mockup {
-                                            width: 200px;
-                                            height: 200px;
-                                        } */
-
             .first-section .mockup-wrapper {
                 height: 368px;
             }
@@ -490,7 +485,7 @@
             }
 
             .sixth-section .mockup-wrapper .logo-wrapper {
-                left: 275px;
+                left: 260px;
             }
         }
 
@@ -606,7 +601,7 @@
             }
 
             .sixth-section .mockup-wrapper .logo-wrapper {
-                left: 185px;
+                left: 170px;
             }
         }
 
@@ -756,8 +751,8 @@
             }
 
             .sixth-section .mockup-wrapper .logo-wrapper {
-                left: 160px;
-                bottom: 225px;
+                left: 145px;
+                bottom: 265px;
             }
         }
 
@@ -908,7 +903,7 @@
             }
 
             .sixth-section .mockup-wrapper .logo-wrapper {
-                left: 100px;
+                left: 80px;
             }
 
         }
@@ -1031,7 +1026,7 @@
         </div>
     </div>
 
-    <div class="sixth-section pt-4 pt-md-5">
+    <div class="sixth-section py-4 py-md-5">
         <div class="container text-center">
             <h3>Get more buzz for your startup</h3>
             <h2>SOCIAL MEDIA DESIGNS</h2>

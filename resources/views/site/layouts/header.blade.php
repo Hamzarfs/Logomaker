@@ -90,6 +90,28 @@
         position: relative;
         z-index: 21050;
     }
+
+    .navbar-light .navbar-toggler-icon {
+        background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>")
+    }
+
+    .navbar .dropdown-menu {
+        width: 200px;
+    }
+
+    /* For screen 1200px to 1399px */
+    @media (max-width: 1399.98px) {
+        .dropdown-menu.dropdown-menu-right.show {
+            left: -60px;
+        }
+    }
+
+    /* For screen 768px to 991px */
+    @media (max-width: 991.98px) {
+        .dropdown-menu.dropdown-menu-right.show {
+            left: 0px;
+        }
+    }
 </style>
 
 <div class="container-fluid" style="background-color: #080A2D;">
@@ -98,7 +120,7 @@
             <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="{{ asset('images/Footer logo.png') }}" alt="Logo" class="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <button class="navbar-toggler w-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -136,11 +158,12 @@
                                         @csrf
                                     </form>
                                 </div>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('favourite.index') }}" style="color:#fff;"><i class="bi bi-heart"></i></a>
-                                </li>
-                            @endrole
-                        @endguest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('favourite.index') }}" style="color:#fff;"><i
+                                        class="bi bi-heart"></i></a>
+                            </li>
+                        @endrole
+                    @endguest
                     </li>
                     <li class="nav-item">
                         <a class="nav-link search-icon" href="javascript:void(0);" style="color:#fff;">
@@ -170,24 +193,24 @@
                     @if ($index % 10 == 0)
                         @if ($index != 0)
                             </ul>
-                        </div>
-                        @endif
-                        <div class="col-md-2">
-                            <ul class="list-unstyled">
+            </div>
+            @endif
+            <div class="col-md-2">
+                <ul class="list-unstyled">
                     @endif
                     <li>
                         <a href="{{ url('/logos/' . $category->slug) }}" class="header-cat-links">
                             {{ $category->name }}
                         </a>
                     </li>
-                @endforeach
-                @if (count($categories) % 10 != 0)
-                            </ul>
-                        </div>
-                @endif
+                    @endforeach
+                    @if (count($categories) % 10 != 0)
+                </ul>
             </div>
+            @endif
         </div>
     </div>
+</div>
 </div>
 </div>
 </div>
