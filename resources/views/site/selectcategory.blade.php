@@ -45,9 +45,9 @@
         @csrf
         <div class="container category-section">
             <div class="row mb-3">
-                <label for="industry" class="form-label">Select Your Industry</label>
-                <input type="text" id="industry" class="form-control" placeholder="Enter Your Industry">
-                <input type="hidden" id="industryId" name="category"> <!-- Hidden field to store selected category ID -->
+                <label for="industry1" class="form-label">Select Your Industry</label>
+                <input type="text" id="industry1" class="form-control" placeholder="Enter Your Industry">
+                <input type="hidden" id="industryId1" name="category"> <!-- Hidden field to store selected category ID -->
             </div>
             <div class="row mb-3">
                 <label for="business" class="form-label">Tell us about your business to help us understand your branding
@@ -73,7 +73,7 @@
         $(document).ready(function() {
             // Prepare an array of categories for the autocomplete widget
             var categories = @json($categories);
-
+            
             // Extract the category names and ids for the autocomplete
             var availableTags = categories.map(function(category) {
                 return {
@@ -83,11 +83,11 @@
             });
 
             // Initialize the autocomplete widget
-            $('#industry').autocomplete({
+            $('#industry1').autocomplete({
                 source: availableTags,
                 select: function(event, ui) {
-                    $('#industry').val(ui.item.label);
-                    $('#industryId').val(ui.item.value); // Store the selected category ID
+                    $('#industry1').val(ui.item.label);
+                    $('#industryId1').val(ui.item.value); // Store the selected category ID
                     return false;
                 }
             });

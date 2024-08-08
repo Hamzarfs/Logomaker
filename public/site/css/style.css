@@ -77,11 +77,7 @@ a {
 .container-fluid {
   position: relative;
   padding-bottom: 0;
-<<<<<<< HEAD
-
-=======
   /* overflow: hidden; */
->>>>>>> suraqa
 }
 
 .wave {
@@ -1484,4 +1480,9 @@ h1, h2 {
     }
   }
 
+
+  .ui-autocomplete {
+    height: 400px;
+    overflow: hidden scroll;
+  }
 
