@@ -649,7 +649,7 @@
                 <div class="checkout-section p-3 h-100">
                     <h3 class="checkout-title">Checkout</h3>
                     <p class="checkout-subtitle mb-2">{{ session()->get('package-name') }}</p>
-                    <a href="#" class="change-package">Change Package</a>
+                    <a href="{{ url('/packages') }}" class="change-package">Change Package</a>
                     <h4 class="order-total my-3">$<span id="totalPrice">{{ session()->get('price') }}</span> USD</h4>
 
                     <!-- Checkboxes for additional options -->

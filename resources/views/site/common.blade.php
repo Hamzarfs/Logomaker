@@ -5,12 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     @isset($categoryObj->meta_title)
-        <title>{{ $categoryObj->meta_title }}</title>    
+        <title>{{ $categoryObj->meta_title }}</title>
     @else
-        <title>@yield('title') | {{ env('APP_NAME') }}</title>    
+        <title>@yield('title') | {{ env('APP_NAME') }}</title>
     @endisset
 
     @isset($categoryObj->meta_desc)
@@ -27,9 +27,44 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('site/css/style.css') }}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <!-- Add your CSS links here -->
 
     {{-- @stack('headerStyles') --}}
+
+    <style>
+        @font-face { font-family: 'lazy_people'; src: url('fonts/Atop-R99O3.ttf') format('truetype'); }
+        @font-face { font-family: 'Remon Demo'; src: url('fonts/Remon Demo.ttf') format('truetype'); }
+        @font-face { font-family: 'Stifly'; src: url('fonts/Stifly.ttf') format('truetype'); }
+        @font-face { font-family: 'Brandes-Regular'; src: url('fonts/Brandes-Regular.otf') format('truetype'); }
+        @font-face { font-family: 'Rohgaz-DemoVersion-Regular'; src: url('fonts/Rohgaz-DemoVersion-Regular.ttf') format('truetype'); }
+        @font-face { font-family: 'Forest Trophy Textured'; src: url('fonts/Forest Trophy Textured.otf') format('truetype'); }        
+        @font-face { font-family: 'AestheticWonderDEMO-Bold'; src: url('fonts/AestheticWonderDEMO-Bold.ttf') format('truetype'); }
+        @font-face { font-family: 'NerveBrushRegular'; src: url('fonts/NerveBrushRegular.otf') format('truetype'); }
+        @font-face { font-family: 'Stander DEMO'; src: url('fonts/Stander DEMO.otf') format('truetype'); }
+        @font-face { font-family: 'Dasport  DEMO'; src: url('fonts/Dasport  DEMO.otf') format('truetype'); }
+        @font-face { font-family: 'Light Sport DEMO'; src: url('fonts/Light Sport DEMO.otf') format('truetype'); }
+
+        
+        </style>
+
+    <!-- Brevo Conversations {literal} -->
+<script>
+    (function(d, w, c) {
+        w.BrevoConversationsID = '65eb4c58149bb809250724f4';
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'BrevoConversations');
+  </script>
+  <!-- /Brevo Conversations {/literal} -->
 </head>
 
 <body>

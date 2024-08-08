@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Site;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Order;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Stripe\Charge;
@@ -134,7 +135,7 @@ class MainController extends \App\Http\Controllers\Controller
     }
     public function selectLogoCategory($category)
     {
-
+ 
         // Check if a category ID is available
         if ($category) {
             $categoryObj = Category::where('slug', $category)->firstOrFail();
@@ -159,12 +160,12 @@ class MainController extends \App\Http\Controllers\Controller
         }
 
         $categories = Category::orderBy('id', 'DESC')->get();
-        return view('site.new-logo', compact('categories', 'products', 'category', 'categoryObj', 'cmsData', 'faqData'));
+        $favourites = auth()->user()?->favourites->toArray();
+        return view('site.new-logo', compact('categories', 'products', 'category', 'categoryObj', 'cmsData', 'faqData', 'favourites'));
     }
 
     public function preview()
     {
-
         $userId = auth()->user()?->id;
         $image = session('image');
         $product = Product::where('image', $image)->first();
@@ -176,13 +177,11 @@ class MainController extends \App\Http\Controllers\Controller
         $hasOrder = Order::where('product_id', $productId)
             ->where('user_id',  $userId)
             ->exists();
-
         return view('site/preview', compact('hasOrder'));
     }
 
     public function packages()
     {
-
         return view('site/packages');
     }
 

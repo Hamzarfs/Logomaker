@@ -95,7 +95,7 @@
         footer {
             background-color: white;
             padding: 20px 0;
-            text-align: center;
+
         }
 
         .btn-back {
@@ -280,6 +280,7 @@
             background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
             background-size: 20px 20px;
             background-repeat: repeat;
+            z-index: 10;
         }
     </style>
     <!----------------------------------------- Banner Section ------------------------------->

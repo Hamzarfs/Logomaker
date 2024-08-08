@@ -4,6 +4,24 @@
 
 @section('content')
     <style>
+        @font-face { font-family: 'lazy_people'; src: url('fonts/Atop-R99O3.ttf') format('truetype'); }
+        @font-face { font-family: 'Remon Demo'; src: url('fonts/Remon Demo.ttf') format('truetype'); }
+        @font-face { font-family: 'Stifly'; src: url('fonts/Stifly.ttf') format('truetype'); }
+        @font-face { font-family: 'Brandes-Regular'; src: url('fonts/Brandes-Regular.otf') format('truetype'); }
+        @font-face { font-family: 'Rohgaz-DemoVersion-Regular'; src: url('fonts/Rohgaz-DemoVersion-Regular.ttf') format('truetype'); }
+        @font-face { font-family: 'Forest Trophy Textured'; src: url('fonts/Forest Trophy Textured.otf') format('truetype'); }        
+        @font-face { font-family: 'AestheticWonderDEMO-Bold'; src: url('fonts/AestheticWonderDEMO-Bold.ttf') format('truetype'); }
+        @font-face { font-family: 'NerveBrushRegular'; src: url('fonts/NerveBrushRegular.otf') format('truetype'); }
+        @font-face { font-family: 'Stander DEMO'; src: url('fonts/Stander DEMO.otf') format('truetype'); }
+        @font-face { font-family: 'Dasport  DEMO'; src: url('fonts/Dasport  DEMO.otf') format('truetype'); }
+        @font-face { font-family: 'Light Sport DEMO'; src: url('fonts/Light Sport DEMO.otf') format('truetype'); }
+
+        
+
+
+
+
+        
         .logo-gallery {
             display: flex;
             flex-wrap: wrap;
@@ -35,6 +53,8 @@
 
         .logo-item:hover .select-btn {
             display: block;
+        }
+        .lazy_people{
             text-decoration: none;
             color: #fff;
 
@@ -94,18 +114,27 @@
     <div class="container">
         <!-- Gallery -->
         <div class="row logo-gallery">
+    @php
+       $fonts = [ 'lazy_people', 'Remon Demo', 'Stifly', 'Brandes-Regular','Rohgaz-DemoVersion-Regular','Forest Trophy Textured','AestheticWonderDEMO-Bold','NerveBrushRegular','Stander DEMO','Dasport  DEMO','Light Sport DEMO']; // List of fonts
+       $colors = ['#900C3F', '#36454F', '#343434', '#191970', '#581845']; 
+    @endphp
 
-            @foreach ($products as $product)
-                <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
-                    <div class="card-container">
-                        <img src="{{ 'category-image/' . $product->image }}" class="img-fluid portfolio-image"
-                            alt="{{ $product->name }}">
-                        <div class="text-placeholder">{{ session('company') }} </div>
-                        <a href="{{ url('/store-session-data-image?image=' . $product->image . '&product-id=' . $product->id) }}"
-                            class="hover-button select-btn" data-product-id="{{ $product->id }}">Select </a>
-                    </div>
-                </div>
-            @endforeach
+ 
+    @foreach ($products as $index => $product)
+    @php
+        $font = $fonts[$index % count($fonts)]; // Select font based on index
+        $color = $colors[$index % count($colors)];
+    @endphp
+    <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}" >
+        <div class="card-container">
+            <img src="{{ 'category-image/' . $product->image }}" class="img-fluid portfolio-image"
+                alt="{{ $product->name }}">
+            <div class="text-placeholder" style="font-family: {{ $font }}; color:{{$color}}; font-size:50px; font-weight:500; margin-top:-30px">{{ session('company') }} </div>
+            <a href="{{ url('/store-session-data-image?image=' . $product->image . '&product-id=' . $product->id) }}"
+                class="hover-button select-btn" data-product-id="{{ $product->id }}">Select </a>
+        </div>
+    </div>
+@endforeach
         </div>
         <!-- Pagination Links -->
         @if ($products->hasPages())

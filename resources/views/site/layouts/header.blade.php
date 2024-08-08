@@ -117,23 +117,29 @@
                         @guest
                             <a class="nav-link" href="{{ route('login') }}" style="color:#fff;">Login</a>
                         @else
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#fff;">
-                                <i class="fas fa-user"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-
-                                <a class="dropdown-item" href="{{ route('orders') }}">My Orders</a>
-                                {{-- <a class="dropdown-item" href="">My Favorites</a> --}}
-                                <a class="dropdown-item" href="{{ route('accountDetails') }}">Account Details</a>
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    Logout
+                            @role('admin')
+                                <a class="nav-link" href="{{ route('admin.dashboard') }}" style="color:#fff;">Dashboard</a>
+                            @else
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#fff;">
+                                    <i class="fas fa-user"></i>
                                 </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+
+                                    <a class="dropdown-item" href="{{ route('orders') }}">My Orders</a>
+                                    <a class="dropdown-item" href="{{ route('favourite.index') }}">My Favorites</a>
+                                    <a class="dropdown-item" href="{{ route('accountDetails') }}">Account Details</a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        Logout
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            @endrole
+
+
                         @endguest
                     </li>
                     <li class="nav-item">

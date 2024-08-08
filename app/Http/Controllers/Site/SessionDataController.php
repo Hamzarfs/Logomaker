@@ -9,10 +9,12 @@ class SessionDataController extends \App\Http\Controllers\Controller
 {
     public function storeSessionData(Request $request)
     {
+  
           if ($request->has('company')) {
+           
             $company = $request->input('company');
             Session::put('company', $company);
-            return redirect()->route('select-color');
+            return redirect()->route('select-logo');
         }
 
 
