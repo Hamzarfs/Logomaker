@@ -99,7 +99,7 @@
     .owl-carousel .owl-item img {
 
         display: block;
-        width: 30%;
+        width: auto;
     }
 }
     </style>
