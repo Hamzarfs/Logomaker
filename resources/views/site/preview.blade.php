@@ -147,7 +147,7 @@
             color: white;
         }
 
-        .third-section h3 {
+        .third-section h3 {preview
             font-size: 30px;
             font-weight: 700
         }
@@ -192,7 +192,7 @@
         }
 
         .fourth-section h3 {
-            font-size: 30px;
+            font-size: 30px;preview
             font-weight: 700
         }
 
@@ -1101,29 +1101,29 @@
                         // Add text elements
                         var company = "{{ session('company') }}"; // Get session company value
                         var sampleText1 = new fabric.Textbox(company, {
-                            left: canvas.width / 2 - 10,
+                            left: canvas.width / 2.5 - 10,
                             top: canvas.height / 2 + 150,
-                            fontSize: 30,
+                            fontSize: 50,
                             fill: '#000000',
-                            fontFamily: 'Arial',
-                            textAlign: 'center',
+                            fontFamily: "{{ session('font') }}",
+                             textAlign: 'left',
                             selectable: false,
                             evented: false
                         });
                         canvas.add(sampleText1);
 
-                        var sampleText2 = new fabric.Textbox('Slogan Here', {
-                            left: canvas.width / 2 - 20,
-                            top: canvas.height / 2 + 190,
-                            fontSize: 14,
-                            width: 80,
-                            fill: '#000000',
-                            fontFamily: 'Arial',
-                            textAlign: 'center',
-                            selectable: false,
-                            evented: false
-                        });
-                        canvas.add(sampleText2);
+                        // var sampleText2 = new fabric.Textbox('Slogan Here', {
+                        //     left: canvas.width / 2 - 20,
+                        //     top: canvas.height / 2 + 190,
+                        //     fontSize: 14,
+                        //     width: 80,
+                        //     fill: '#000000',
+                        //     fontFamily: 'Arial',
+                        //     textAlign: 'center',
+                        //     selectable: false,
+                        //     evented: false
+                        // });
+                        // canvas.add(sampleText2);
 
                         const dataUrl = canvas.toDataURL()
                         sessionStorage.setItem('logoDataUrl', dataUrl)

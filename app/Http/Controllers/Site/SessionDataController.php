@@ -70,9 +70,9 @@ class SessionDataController extends \App\Http\Controllers\Controller
             Session::put('company', $company);
         }
 
-        if ($request->has('company')) {
-            $company = $request->input('company');
-            Session::put('company', $company);
+        if ($request->has('font')) {
+            $font = $request->input('font');
+            Session::put('font', $font);
           
         }
 
@@ -85,6 +85,7 @@ class SessionDataController extends \App\Http\Controllers\Controller
             $productId = $request->query('product-id');
             Session::put('product-id', $productId);
         }
+
 
         return redirect()->route('preview');
     }
