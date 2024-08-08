@@ -20,7 +20,6 @@ class SessionDataController extends \App\Http\Controllers\Controller
             }else if ($request->has('flow') && $request->input('flow')=="category") {
                 return redirect()->route('select-logo');
             }
-            die("AAAAAAAA".$request->input('flow'));
         }
 
 
