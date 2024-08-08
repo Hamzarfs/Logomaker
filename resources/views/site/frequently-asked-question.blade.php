@@ -21,7 +21,7 @@
 
 
     <!-- ------------------Start FAQs --------------- -->
-    <div class="container-fluid position-relative" style="background-color:#080a2d; padding-bottom: 100px;">
+    <div class="container-fluid position-relative overflow-hidden" style="background-color:#080a2d; padding-bottom: 100px;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 banner-left order-lg-1">
