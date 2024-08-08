@@ -1062,7 +1062,7 @@ $(document).ready(function () {
             var layer = canvas.getObjects()[index];
             if (layer) {
                 $(this).val(layer.fill || '#000000');
-            }nan
+            }
         });
     });
 
