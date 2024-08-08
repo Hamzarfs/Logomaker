@@ -1,6 +1,40 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <style>
+
+
+
+.topnavbar {
+  background-color: #f2f6fe;
+  padding: 5px 0;
+}
+
+.topnavbar .btn {
+  margin: 0 5px;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.topnavbar .phone-btn {
+
+  color: #000;
+  text-decoration: none;
+
+}
+
+.topnavbar .chat-btn {
+  color: #000;
+  border: none;
+  text-decoration: none;
+
+}
+
+/* .topnavbar .chat-btn:hover {
+  background-color: #0056b3;
+} */
+
+
     .mega-menu {
         display: none;
         top: 60px;
@@ -92,6 +126,19 @@
     }
 </style>
 
+<div class="container-fluid topnavbar">
+    <div class="container">
+    <div class="row">
+      <div class="col-md-6"></div>
+      <div class="col-md-6 text-right">
+        <a  href="tel:+15516665255" ; class="phone-btn">+1 (551) 666-5255  |</a>
+        <a href="tel:+15516665255" class="chat-btn">Live Chat with Expert</a>
+      </div>
+    </div>
+</div>
+  </div>
+
+
 <div class="container-fluid" style="background-color: #080A2D;">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
@@ -106,6 +153,9 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/') }}" style="color:#fff;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/select-logo') }}" style="color:#fff;">Logo Maker</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('about-us') }}" style="color:#fff;">About Us</a>
@@ -159,7 +209,7 @@
                         action="{{ url('/store-session-data') }}">
                         @csrf
                         <input type="text" id="industry" class="form-control mr-sm-2" type="search"
-                            placeholder="e.g. cafe, dental, tech" aria-label="Search">
+                            placeholder="arts, beauty, cleaning etc" aria-label="Search">
                         <input type="hidden" id="industryId" name="category">
                         <button class="custom-button-banner my-2 my-sm-0 " id="nextButton">Search</button>
                     </form>
