@@ -1582,3 +1582,8 @@ h1, h2 {
   }
 
 
+  .ui-autocomplete {
+    height: 400px;
+    overflow: hidden scroll;
+  }
+
