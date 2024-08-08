@@ -328,7 +328,6 @@
                                 
                                 
                                 <option value="Roboto" style="font-family: 'Roboto';">Roboto</option>
-                                <option value="Open Sans" style="font-family: 'Open Sans';">Open Sans</option>
                                 <option value="Lato" style="font-family: 'Lato';">Lato</option>
                                 <option value="Montserrat" style="font-family: 'Montserrat';">Montserrat</option>
                                 <option value="Poppins" style="font-family: 'Poppins';">Poppins</option>

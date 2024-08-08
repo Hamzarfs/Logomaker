@@ -77,7 +77,11 @@ a {
 .container-fluid {
   position: relative;
   padding-bottom: 0;
+<<<<<<< HEAD
 
+=======
+  /* overflow: hidden; */
+>>>>>>> suraqa
 }
 
 .wave {

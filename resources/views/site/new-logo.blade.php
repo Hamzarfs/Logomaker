@@ -1,6 +1,6 @@
 @extends('site.common')
 
-@section('title', 'Categories')
+@section('title', 'Category ' . $categoryObj['name'] ?? '')
 
 @section('content')
 
@@ -103,9 +103,6 @@
                 display: none;
             }
         }
-        new-logo2em;
-            }
-        }
 
         .custom-section {
             padding: 30px 0;
@@ -184,9 +181,9 @@
             line-height: 24px;
             text-align: center;
             border-color: #646BD9;
-        }new-logo
+        }
 
-        .custom-logo-section .custom-btn-generate:hover {
+        new-logo .custom-logo-section .custom-btn-generate:hover {
             background-color: #646BD9;
             border-color: #646BD9;
         }
@@ -217,11 +214,49 @@
             }
         }
 
+        .logo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .logo-item {
+            width: 33%;
+            margin-bottom: 20px;
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .select-btn {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .logo-item:hover .select-btn,
+        .logo-item:hover .fav-icon {
+            display: block;
+        }
+
         .fav-icon {
             position: absolute;
             right: 20px;
             top: 10px;
             font-size: 25px;
+            display: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .logo-item {
+                width: 100%;
+                height: auto;
+                /* Adjust height as needed */
+            }
         }
     </style>
 
@@ -278,15 +313,39 @@
 
     <div class="banner-section" style="background-color: #dbe1ff; padding-bottom: 100px;">
         <div class="container portfolio-section">
-            <h2 class="portfolio-heading">Our Logo Templates Cater to Every Industry</h2>
-            <p class="main-description-online">
+            <h2 class="portfolio-heading text-center">Our Logo Templates Cater to Every Industry</h2>
+            <p class="main-description-online text-center">
                 Explore our diverse range of logo templates designed to suit all industries, from medical
                 logos to food logos, sports logos to fashion logos. RFS Logo Design ensures you find the
                 perfect match for your business identity and branding needs.
             </p>
 
 
-            <div class="row">
+            <div class="row logo-gallery">
+                @foreach ($products as $product)
+                    <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
+                        <div class="card-container">
+                            <img src="{{ asset("category-image/$product->image") }}" class="img-fluid portfolio-image"
+                                alt="{{ $product->name }}">
+                            <a href="{{ url('/store-session-data-image?image=' . $product->image . '&product-id=' . $product->id) }}"
+                                class="hover-button select-btn" data-product-id="{{ $product->id }}">Select </a>
+                            @auth
+                                @php
+                                    $i = array_search($product->id, array_column($favourites, 'product_id'));
+                                @endphp
+                                <div class="fav-icon {{ $i !== false ? 'text-success' : 'text-danger' }}"
+                                    data-product-id="{{ $product->id }}"
+                                    @if ($i !== false) data-favourite-id="{{ $favourites[$i]['id'] }}" @endif>
+                                    <i class="fa fa-heart" aria-hidden="true"></i>
+                                </div>
+                            @endauth
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+
+            {{-- <div class="row">
                 @foreach ($products as $product)
                     <div class="col-lg-4 col-md-6 mb-4">
                         <a href="" class="card-container-link" data-image="{{ $product->image }}"
@@ -323,7 +382,7 @@
 
                 {!! $products->links() !!}
 
-            </div>
+            </div> --}}
 
             <h1 class="studioTitle">Discover Versatile Logo Designs in Our Design Engine</h1>
         </div>
@@ -494,71 +553,58 @@
             --}}
         })
 
-        $('.card-container-link').on('click', function() {
-            event.preventDefault()
-            if (event.target.classList.contains('fa-heart')) {
-                const favIconEl = $(this).find('.fav-icon')
-                if (favIconEl.hasClass('text-danger')) {
-                    const productId = favIconEl.attr('data-product-id')
-                    $.ajax({
-                        url: "{{ route('favourite.add') }}",
-                        method: 'POST',
-                        data: {
-                            productId,
-                        },
-                        success: function(response) {
-                            if (response.success) {
-                                swal.fire({
-                                    icon: 'success',
-                                    title: 'Success',
-                                    text: "Logo added to favourites!"
-                                })
-                                favIconEl.removeClass('text-danger')
-                                favIconEl.addClass('text-success')
-                                favIconEl.attr('data-favourite-id', response.favourite_id)
-                            } else {
-                                swal.fire({
-                                    icon: 'error',
-                                    title: 'Error',
-                                    text: "Unexpected error. Please try again later!!"
-                                })
-                            }
-                        },
-                    })
-                } else {
-                    const favId = favIconEl.attr('data-favourite-id')
-                    $.ajax({
-                        url: "{{ route('favourite.remove', 11111) }}".replace('11111', favId),
-                        method: 'DELETE',
-                        success: function(response) {
-                            if (response.success) {
-                                swal.fire({
-                                    icon: 'success',
-                                    title: 'Success',
-                                    text: "Logo removed from favourites!"
-                                })
-                                favIconEl.removeClass('text-success')
-                                favIconEl.addClass('text-danger')
-                            } else {
-                                swal.fire({
-                                    icon: 'error',
-                                    title: 'Error',
-                                    text: "Unexpected error. Please try again later!!"
-                                })
-                            }
-                        },
-                    })
-                }
+        $('.fav-icon').click(function() {
+            const favIconEl = $(this)
+            if (favIconEl.hasClass('text-danger')) {
+                const productId = favIconEl.attr('data-product-id')
+                $.ajax({
+                    url: "{{ route('favourite.add') }}",
+                    method: 'POST',
+                    data: {
+                        productId,
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            swal.fire({
+                                icon: 'success',
+                                title: 'Success',
+                                text: "Logo added to favourites!"
+                            })
+                            favIconEl.removeClass('text-danger')
+                            favIconEl.addClass('text-success')
+                            favIconEl.attr('data-favourite-id', response.favourite_id)
+                        } else {
+                            swal.fire({
+                                icon: 'error',
+                                title: 'Error',
+                                text: "Unexpected error. Please try again later!!"
+                            })
+                        }
+                    },
+                })
             } else {
-                let image = this.getAttribute('data-image');
-                let id = this.dataset.id
-                let company = "{{ session()->get('company') }}";
-                let urlBase = "{{ url('/') }}";
-
-                let url = urlBase +
-                    `/store-session-data-image?image=${encodeURIComponent(image)}&company=${encodeURIComponent(company)}&product-id=${encodeURIComponent(id)}`;
-
-                window.location.href = url;
+                const favId = favIconEl.attr('data-favourite-id')
+                $.ajax({
+                    url: "{{ route('favourite.remove', 11111) }}".replace('11111', favId),
+                    method: 'DELETE',
+                    success: function(response) {
+                        if (response.success) {
+                            swal.fire({
+                                icon: 'success',
+                                title: 'Success',
+                                text: "Logo removed from favourites!"
+                            })
+                            favIconEl.removeClass('text-success')
+                            favIconEl.addClass('text-danger')
+                        } else {
+                            swal.fire({
+                                icon: 'error',
+                                title: 'Error',
+                                text: "Unexpected error. Please try again later!!"
+                            })
+                        }
+                    },
+                })
             }
         })
     </script>

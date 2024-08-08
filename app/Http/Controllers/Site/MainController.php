@@ -67,13 +67,14 @@ class MainController extends \App\Http\Controllers\Controller
             // Fetch products where `category_id` matches the single category ID
             $products = Product::where('category_id', '=', $category)
                 ->orderBy('id', 'DESC')
-                ->paginate(10);
+                ->paginate(12);
         } else {
             // Handle the case where no category ID is available (optional)
-            $products = Product::orderBy('id', 'DESC')->paginate(10);
+            $products = Product::orderBy('id', 'DESC')->paginate(12);
         }
         $categories = Category::orderBy('id', 'ASC')->get();
-        return view('site/selectlogo', compact('categories', 'products'));
+        $favourites = auth()->user()?->favourites->toArray();
+        return view('site/selectlogo', compact('categories', 'products', 'favourites'));
     }
 
 

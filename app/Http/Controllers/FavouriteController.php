@@ -34,7 +34,7 @@ class FavouriteController extends Controller
     }
 
     function index() {
-        $favourites = auth()->user()->favourites()->with('product.category')->paginate(10);
+        $favourites = auth()->user()->favourites()->with('product.category')->paginate(12);
         return view('site.favourites', [
             'favourites' => $favourites
         ]);

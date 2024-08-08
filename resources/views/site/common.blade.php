@@ -36,17 +36,17 @@
     {{-- @stack('headerStyles') --}}
 
     <style>
-        @font-face { font-family: 'lazypeople'; src: url('fonts/Atop-R99O3.ttf') format('truetype'); }
-        @font-face { font-family: 'RemonDemo'; src: url('fonts/Remon Demo.ttf') format('truetype'); }
+        @font-face { font-family: 'lazyp-eople'; src: url('fonts/Atop-R99O3.ttf') format('truetype'); }
+        @font-face { font-family: 'Remon-Demo'; src: url('fonts/Remon Demo.ttf') format('truetype'); }
         @font-face { font-family: 'Stifly'; src: url('fonts/Stifly.ttf') format('truetype'); }
-        @font-face { font-family: 'BrandesRegular'; src: url('fonts/Brandes-Regular.otf') format('truetype'); }
-        @font-face { font-family: 'RohgazDemoVersionRegular'; src: url('fonts/Rohgaz-DemoVersion-Regular.ttf') format('truetype'); }
-        @font-face { font-family: 'ForestTrophyTextured'; src: url('fonts/Forest Trophy Textured.otf') format('truetype'); }        
-        @font-face { font-family: 'AestheticWonderDEMOBold'; src: url('fonts/AestheticWonderDEMO-Bold.ttf') format('truetype'); }
-        @font-face { font-family: 'NerveBrushRegular'; src: url('fonts/NerveBrushRegular.otf') format('truetype'); }
-        @font-face { font-family: 'StanderDEMO'; src: url('fonts/Stander DEMO.otf') format('truetype'); }
-        @font-face { font-family: 'DasportDEMO'; src: url('fonts/Dasport  DEMO.otf') format('truetype'); }
-        @font-face { font-family: 'LightSportDEMO'; src: url('fonts/Light Sport DEMO.otf') format('truetype'); }
+        @font-face { font-family: 'Brandes-Regular'; src: url('fonts/Brandes-Regular.otf') format('truetype'); }
+        @font-face { font-family: 'Rohgaz-Demo-VersionRegular'; src: url('fonts/Rohgaz-DemoVersion-Regular.ttf') format('truetype'); }
+        @font-face { font-family: 'Forest-Trophy-Textured'; src: url('fonts/Forest Trophy Textured.otf') format('truetype'); }        
+        @font-face { font-family: 'Aesthetic-Wonder-DEMOBold'; src: url('fonts/AestheticWonderDEMO-Bold.ttf') format('truetype'); }
+        @font-face { font-family: 'Nerve-Brush-Regular'; src: url('fonts/NerveBrushRegular.otf') format('truetype'); }
+        @font-face { font-family: 'Stander-DEMO'; src: url('fonts/Stander DEMO.otf') format('truetype'); }
+        @font-face { font-family: 'Dasport-DEMO'; src: url('fonts/Dasport  DEMO.otf') format('truetype'); }
+        @font-face { font-family: 'LightSport-DEMO'; src: url('fonts/Light Sport DEMO.otf') format('truetype'); }
 
         
         </style>
