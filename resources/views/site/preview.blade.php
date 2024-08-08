@@ -147,7 +147,7 @@
             color: white;
         }
 
-        .third-section h3 {preview
+        .third-section h3 {
             font-size: 30px;
             font-weight: 700
         }
@@ -192,7 +192,7 @@
         }
 
         .fourth-section h3 {
-            font-size: 30px;preview
+            font-size: 30px;
             font-weight: 700
         }
 
@@ -842,7 +842,7 @@
                 font-size: 35px;
             }
 
-            .fourth-section h3 {session('font') 
+            .fourth-section h3 {
                 font-size: 20px;
             }
 
@@ -910,7 +910,7 @@
 
         /*********************** Responsive End *************************/
     </style>
- 
+
     <!-- Heading -->
     <div class="heading py-3">
         <div class="text-center">
@@ -947,7 +947,7 @@
         <div class="container text-center">
             <h3>Set up your online presence</h3>
             <h2>WEBSITE & HOSTING</h2>
-            
+
             <div class="mockup-wrapper mt-md-4">
                 <div class="logo-wrapper-1">
                     <img class="logo-mockup" alt="logo">
@@ -1101,11 +1101,12 @@
                             fontSize: 50,
                             fill: '#000000',
                             fontFamily: "{{ session('font') }}",
-                             textAlign: 'left',
+                            textAlign: 'left',
                             selectable: false,
                             evented: false
                         });
                         canvas.add(sampleText1);
+                        // canvas.renderAll()
 
                         // var sampleText2 = new fabric.Textbox('Slogan Here', {
                         //     left: canvas.width / 2 - 20,
@@ -1133,7 +1134,7 @@
                             this.src = dataUrl
                         })
 
-                        // canvas.renderAll();
+                        canvas.renderAll();
                     },
                     error: function(xhr, status, error) {
                         console.error("Error loading SVG:", status, error);
@@ -1144,6 +1145,26 @@
             loadCarSVG();
 
             // load image
+
+            // dataURL = canvas.toDataURL({
+            //     format: 'png',
+            //     quality: 1
+            // });
+
+            @auth
+                $.ajax({
+                    url: "{{ route('saveLogo') }}",
+                    method: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': "{{ csrf_token() }}",
+                    },
+                    data: {
+                        userId: {{ auth()->id() }},
+                        productId: {{ session()->get('product-id') }},
+                        logoString: sessionStorage.getItem('logoDataUrl'),
+                    },
+                })
+            @endauth
         });
 
         @if ($hasOrder)
@@ -1154,24 +1175,24 @@
                     quality: 1
                 });
 
-                @auth
-                    $.ajax({
-                        url: "{{ route('saveLogo') }}",
-                        method: 'POST',
-                        headers: {
-                            'X-CSRF-TOKEN': "{{ csrf_token() }}",
-                        },
-                        data: {
-                            userId: {{ auth()->id() }},
-                            productId: {{ session()->get('product-id') }},
-                            logoString: dataURL,
-                        },
-                    })
-                @endauth
+                // @auth
+                //     $.ajax({
+                //         url: "{{ route('saveLogo') }}",
+                //         method: 'POST',
+                //         headers: {
+                //             'X-CSRF-TOKEN': "{{ csrf_token() }}",
+                //         },
+                //         data: {
+                //             userId: {{ auth()->id() }},
+                //             productId: {{ session()->get('product-id') }},
+                //             logoString: dataURL,
+                //         },
+                //     })
+                // @endauth
 
-                var link = document.createElement('a'); 
-                link.href = dataURL; 
-                link.download = 'logo.png'; 
+                var link = document.createElement('a');
+                link.href = dataURL;
+                link.download = 'logo.png';
                 link.click();
             });
         @endif

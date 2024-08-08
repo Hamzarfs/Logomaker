@@ -49,9 +49,9 @@
                     .then(() => {
                         location.replace("{{ route('thankyou') }}")
                         // $('.action-btns').removeClass('d-none')
-                        setTimeout(() => {
-                            location.replace("{{ route('maker') }}")
-                        }, (10 * 1000));
+                        // setTimeout(() => {
+                        //     location.replace("{{ route('maker') }}")
+                        // }, (10 * 1000));
                     })
 
                 document.getElementById('thankyou-page').classList.remove('d-none');
