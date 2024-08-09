@@ -102,6 +102,53 @@
         width: auto;
     }
 }
+
+.logotype-card {
+    border: none;
+    background-color: #f0f8ff; /* Light background color for the cards */
+    transition: box-shadow 0.3s ease;
+    border-radius: 15px; /* Rounded corners */
+    padding-top: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.logotype-card img {
+    /* padding: 20px;
+    border-radius: 15px 15px 0 0;
+    width: 160px;
+    align-self: center; */
+
+    height: 120px;
+    width: auto;
+    margin-bottom: 20px;
+
+
+}
+
+.logotype-card .card-body {
+    padding: 15px;
+}
+
+.logotype-card .card-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #5a5a5a;
+}
+
+.logotype-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Box shadow on hover */
+}
+
+
+
+
     </style>
 
     <!----------------------------------------- Start Banner Section ------------------------------->
@@ -200,7 +247,7 @@
 
 
     <!-- <------------------Make A logo------------------>
-<!-- 
+<!--
     <section class="heroSection1">
         <div class="container">
             <div class="row">
@@ -297,10 +344,10 @@
     <div class="container">
         <!-- Heading -->
         <h2 class="why-logo-design-heading">Why RFS LOGO DESIGN is the No.1 Choice for Businesses</h2>
-        
+
         <!-- Description -->
         <p class="why-logo-design-description">We are the number one website for DIY logo creator software because customers love our tool and service. From top notch quality logo designs to prompt customer service, we make sure you get the branding your company deserve in the least possible time.</p>
-        
+
         <!-- Row with 3 Columns -->
         <div class="row">
             <!-- Column 1 -->
@@ -500,7 +547,7 @@
 
 
 
-    <!-- <-----------------Start 1M Happy Customers Counting---------------->
+    <!-- <-----------------Start Testimonial Section---------------->
 
 
     <section id="testimonial-section" class="pt-5 pb-5">
@@ -511,6 +558,49 @@
             </div>
         </div>
     </section>
+ {{----------------- End Testiomonial Section --}}
+
+
+    {{-- Start 4 logo type --}}
+
+    <div class="container my-5">
+        <div class="row text-center logotypescard d-flex ">
+            <div class="col-md-3">
+                <div class="card logotype-card">
+                    <img src="{{url('images/logo-category-illustration-logo.png')}}" class="card-img-top" alt="Illustration Logo">
+                    <div class="card-body">
+                        <p class="card-text">ILLUSTRATION LOGO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card logotype-card">
+                    <img src="{{url('images/logo-category-nature-logo.png')}}" class="card-img-top" alt="Nature Logo">
+                    <div class="card-body">
+                        <p class="card-text">NATURE LOGO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card logotype-card">
+                    <img src="{{url('images/logo-category-abstract-logo.png')}}" class="card-img-top" alt="Abstract Logo">
+                    <div class="card-body">
+                        <p class="card-text">ABSTRACT LOGO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card logotype-card">
+                    <img src="{{url('images/logo-category-minimal-logo.png')}}" class="card-img-top" alt="Minimal Logo">
+                    <div class="card-body">
+                        <p class="card-text">MINIMAL LOGO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ {{-- End logo type  --}}
 
     <!-- -------------------start FAQs --------------- -->
 
@@ -709,7 +799,7 @@
 
         });
 
-        
+
     </script>
 
     <!-- Other scripts or libraries -->
