@@ -207,11 +207,11 @@
                 });
 
                 // Manually trigger the changed event to highlight the first active item
-                owl.trigger('changed.owl.carousel', {
-                    item: {
-                        index: 0
-                    }
-                });
+                // owl.trigger('changed.owl.carousel', {
+                //     item: {
+                //         index: 0
+                //     }
+                // });
             }
         })
 

@@ -85,25 +85,25 @@
         .first-section .mockup-wrapper .logo-wrapper-1 {
             position: absolute;
             bottom: 210px;
-            left: 217px;
+            left: 125px;
         }
 
         .first-section .mockup-wrapper .logo-wrapper-2 {
             position: absolute;
-            bottom: 258px;
-            left: 352px;
+            bottom: 260px;
+            left: 260px;
         }
 
         .first-section .mockup-wrapper .logo-wrapper-3 {
             position: absolute;
             bottom: 440px;
-            left: 357px;
+            left: 270px;
         }
 
         .first-section .mockup-wrapper .logo-wrapper-4 {
             position: absolute;
-            bottom: 256px;
-            right: 645px;
+            bottom: 255px;
+            right: 550px;
         }
 
         .purple-bg {
@@ -137,8 +137,8 @@
 
         .second-section .mockup-wrapper .logo-wrapper {
             position: absolute;
-            top: 161px;
-            left: 620px;
+            top: 150px;
+            left: 525px;
             rotate: -25deg;
         }
 
@@ -147,7 +147,7 @@
             color: white;
         }
 
-        .third-section h3 {preview
+        .third-section h3 {
             font-size: 30px;
             font-weight: 700
         }
@@ -173,8 +173,8 @@
 
         .third-section .mockup-wrapper .logo-wrapper {
             position: absolute;
-            top: 169px;
-            left: 575px;
+            top: 165px;
+            left: 490px;
             rotate: -20deg;
         }
 
@@ -192,7 +192,7 @@
         }
 
         .fourth-section h3 {
-            font-size: 30px;preview
+            font-size: 30px;
             font-weight: 700
         }
 
@@ -209,8 +209,8 @@
 
         .fourth-section .mockup-wrapper .logo-wrapper {
             position: absolute;
-            top: 122px;
-            left: 523px;
+            top: 115px;
+            left: 425px;
             rotate: -38deg;
         }
 
@@ -247,26 +247,26 @@
         .fifth-section .mockup-wrapper .logo-wrapper-1 {
             position: absolute;
             top: 55px;
-            left: 490px;
+            left: 400px;
             rotate: 90deg;
         }
 
         .fifth-section .mockup-wrapper .logo-wrapper-2 {
             position: absolute;
             top: 50px;
-            left: 571px;
+            left: 480px;
         }
 
         .fifth-section .mockup-wrapper .logo-wrapper-3 {
             position: absolute;
-            bottom: 249px;
-            right: 440px;
+            bottom: 260px;
+            right: 345px;
         }
 
         .fifth-section .mockup-wrapper .logo-wrapper-4 {
             position: absolute;
-            bottom: 143px;
-            right: 478px;
+            bottom: 145px;
+            right: 380px;
         }
 
         .sixth-section .mockup-wrapper {
@@ -289,14 +289,14 @@
 
         .sixth-section .mockup-wrapper .logo-mockup {
             position: absolute;
-            width: 140px;
-            height: 120px;
+            width: 190px;
+            height: 180px;
         }
 
         .sixth-section .mockup-wrapper .logo-wrapper {
             position: absolute;
-            bottom: 215px;
-            left: 575px;
+            bottom: 270px;
+            left: 470px;
         }
 
         /*********************** Responsive Start ***********************/
@@ -353,7 +353,7 @@
             }
 
             .sixth-section .mockup-wrapper .logo-wrapper {
-                left: 486px;
+                /* left: 486px; */
             }
         }
 
@@ -409,17 +409,12 @@
             }
 
             .sixth-section .mockup-wrapper .logo-wrapper {
-                left: 398px;
+                left: 380px;
             }
         }
 
         /* For screen 768px to 991px */
         @media (max-width: 991.98px) {
-            /* .preview-section .logo-mockup {
-                                            width: 200px;
-                                            height: 200px;
-                                        } */
-
             .first-section .mockup-wrapper {
                 height: 368px;
             }
@@ -490,7 +485,7 @@
             }
 
             .sixth-section .mockup-wrapper .logo-wrapper {
-                left: 275px;
+                left: 260px;
             }
         }
 
@@ -606,7 +601,7 @@
             }
 
             .sixth-section .mockup-wrapper .logo-wrapper {
-                left: 185px;
+                left: 170px;
             }
         }
 
@@ -756,8 +751,8 @@
             }
 
             .sixth-section .mockup-wrapper .logo-wrapper {
-                left: 160px;
-                bottom: 225px;
+                left: 145px;
+                bottom: 265px;
             }
         }
 
@@ -847,7 +842,7 @@
                 font-size: 35px;
             }
 
-            .fourth-section h3 {session('font') 
+            .fourth-section h3 {
                 font-size: 20px;
             }
 
@@ -908,14 +903,14 @@
             }
 
             .sixth-section .mockup-wrapper .logo-wrapper {
-                left: 100px;
+                left: 80px;
             }
 
         }
 
         /*********************** Responsive End *************************/
     </style>
- 
+
     <!-- Heading -->
     <div class="heading py-3">
         <div class="text-center">
@@ -936,7 +931,18 @@
             <a href="{{ route('maker') }}" class="btn btn-lg customize me-1">
                 <i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp; Customize
             </a>
-            @guest
+            @if ($hasOrder)
+                <button id="save-logo" class="btn btn-lg btn-success ms-1">Look Perfect</button>
+            @else
+                <a href="{{ route('packages') }}" class="btn btn-lg btn-success ms-1">Look Perfect</a>
+            @endif
+
+            {{-- @auth
+            @else
+                <a href="{{ route('login') }}" class="btn btn-lg btn-success ms-1" id="updateButton">Look Perfect</a>
+            @endauth --}}
+            
+            {{-- @guest
                 <a href="{{ route('login') }}" class="btn btn-lg btn-success ms-1" id="updateButton">Look Perfect</a>
             @else
                 @if ($hasOrder)
@@ -944,7 +950,7 @@
                 @else
                     <a href="{{ route('packages') }}" class="btn btn-lg btn-success ms-1">Look Perfect</a>
                 @endif
-            @endguest
+            @endguest --}}
         </div>
     </div>
 
@@ -952,7 +958,7 @@
         <div class="container text-center">
             <h3>Set up your online presence</h3>
             <h2>WEBSITE & HOSTING</h2>
-            
+
             <div class="mockup-wrapper mt-md-4">
                 <div class="logo-wrapper-1">
                     <img class="logo-mockup" alt="logo">
@@ -1031,7 +1037,7 @@
         </div>
     </div>
 
-    <div class="sixth-section pt-4 pt-md-5">
+    <div class="sixth-section py-4 py-md-5">
         <div class="container text-center">
             <h3>Get more buzz for your startup</h3>
             <h2>SOCIAL MEDIA DESIGNS</h2>
@@ -1106,11 +1112,12 @@
                             fontSize: 50,
                             fill: '#000000',
                             fontFamily: "{{ session('font') }}",
-                             textAlign: 'left',
+                            textAlign: 'left',
                             selectable: false,
                             evented: false
                         });
                         canvas.add(sampleText1);
+                        // canvas.renderAll()
 
                         // var sampleText2 = new fabric.Textbox('Slogan Here', {
                         //     left: canvas.width / 2 - 20,
@@ -1138,7 +1145,7 @@
                             this.src = dataUrl
                         })
 
-                        // canvas.renderAll();
+                        canvas.renderAll();
                     },
                     error: function(xhr, status, error) {
                         console.error("Error loading SVG:", status, error);
@@ -1149,6 +1156,26 @@
             loadCarSVG();
 
             // load image
+
+            // dataURL = canvas.toDataURL({
+            //     format: 'png',
+            //     quality: 1
+            // });
+
+            @auth
+            $.ajax({
+                url: "{{ route('saveLogo') }}",
+                method: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': "{{ csrf_token() }}",
+                },
+                data: {
+                    userId: {{ auth()->id() }},
+                    productId: {{ session()->get('product-id') }},
+                    logoString: sessionStorage.getItem('logoDataUrl'),
+                },
+            })
+        @endauth
         });
 
         @if ($hasOrder)
@@ -1159,24 +1186,24 @@
                     quality: 1
                 });
 
-                @auth
-                    $.ajax({
-                        url: "{{ route('saveLogo') }}",
-                        method: 'POST',
-                        headers: {
-                            'X-CSRF-TOKEN': "{{ csrf_token() }}",
-                        },
-                        data: {
-                            userId: {{ auth()->id() }},
-                            productId: {{ session()->get('product-id') }},
-                            logoString: dataURL,
-                        },
-                    })
-                @endauth
+                // @auth
+                //     $.ajax({
+                //         url: "{{ route('saveLogo') }}",
+                //         method: 'POST',
+                //         headers: {
+                //             'X-CSRF-TOKEN': "{{ csrf_token() }}",
+                //         },
+                //         data: {
+                //             userId: {{ auth()->id() }},
+                //             productId: {{ session()->get('product-id') }},
+                //             logoString: dataURL,
+                //         },
+                //     })
+                // @endauth
 
-                var link = document.createElement('a'); 
-                link.href = dataURL; 
-                link.download = 'logo.png'; 
+                var link = document.createElement('a');
+                link.href = dataURL;
+                link.download = 'logo.png';
                 link.click();
             });
         @endif

@@ -55,6 +55,7 @@
         background-color: #0d6efd;
         color: white;
     }
+}
 </style>
 
 <div class="container">

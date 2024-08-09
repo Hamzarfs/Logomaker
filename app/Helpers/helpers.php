@@ -33,8 +33,24 @@ if (!function_exists('transformArray')) {
     }
 }
 
-if(!function_exists('transformArrayToObject')) {
-    function transformArrayToObject(array $array) : object
+if (!function_exists('transformHeadingsArray')) {
+    function transformHeadingsArray($array)
+    {
+        $headings = [];
+
+        foreach ($array as $item) {
+            // Check if the key matches the pattern "heading-X"
+            if (preg_match('/^heading-\d+$/', $item['key'])) {
+                $headings[] = $item['value'];
+            }
+        }
+
+        return $headings;
+    }
+}
+
+if (!function_exists('transformArrayToObject')) {
+    function transformArrayToObject(array $array): object
     {
         return json_decode(json_encode($array));
     }

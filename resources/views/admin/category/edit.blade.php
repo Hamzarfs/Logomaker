@@ -61,7 +61,7 @@
                         </div>
                         <div class="card-body">
                             <div class="faq-container">
-                                @forelse ((old('faq') ?? $faqData) as $i => $faq)
+                                @forelse ((old('faq', $faqData)) as $i => $faq)
                                     <div class="faq-item">
                                         @if (!$loop->first)
                                             <hr class="border-{{ auth()->user()->mode === 'dark' ? 'light' : 'dark' }}">
@@ -114,7 +114,38 @@
                             <h3 class="card-title">Category Content</h3>
                         </div>
                         <div class="card-body">
-                            @forelse (old('section') ?? $cmsData as $i => $cms)
+                            @forelse (old('headingg', $headingsData) as $i => $heading)
+                                <div class="form-group">
+                                    <label for="heading-{{ $i + 1 }}">Section {{ $i + 1 }}
+                                        heading</label>
+                                    <input type="text" class="form-control" id="heading-{{ $i }}"
+                                        name="headingg[]" required value="{{ $heading }}">
+                                    <x-error>headingg[{{ $i - 1 }}]</x-error>
+                                </div>
+
+                                @if (!$loop->last)
+                                    <hr class="border-{{ auth()->user()->mode === 'dark' ? 'light' : 'dark' }}">
+                                @endif
+
+                            @empty
+                                @foreach (range(1, 2) as $i)
+                                    <div class="form-group">
+                                        <label for="heading-{{ $i }}">Section {{ $i }}
+                                            heading</label>
+                                        <input type="text" class="form-control" id="heading-{{ $i }}"
+                                            name="headingg[]" required>
+                                        <x-error>headingg[{{ $i - 1 }}]</x-error>
+                                    </div>
+
+                                    @if (!$loop->last)
+                                        <hr class="border-{{ auth()->user()->mode === 'dark' ? 'light' : 'dark' }}">
+                                    @endif
+                                @endforeach
+                            @endforelse
+
+                            <hr class="border-{{ auth()->user()->mode === 'dark' ? 'light' : 'dark' }}">
+
+                            @forelse (old('section', $cmsData) as $i => $cms)
                                 <div class="form-group">
                                     <label for="section-{{ $i + 1 }}-title">Section {{ $i + 1 }}
                                         title</label>

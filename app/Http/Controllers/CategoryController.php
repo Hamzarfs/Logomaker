@@ -48,6 +48,9 @@ class CategoryController extends Controller
             'section.*' => 'required|array',
             'section.*.title' => 'required|string',
             'section.*.content' => 'required|string',
+
+            'headingg' => 'required|array',
+            'headingg.*' => 'required|string',
         ]);
 
         $baseSlug = Str::slug($request->name);
@@ -72,8 +75,9 @@ class CategoryController extends Controller
 
         $sectionsData = $request->input('section');
         $faqsData = $request->input('faq');
+        $headingsData = $request->input('headingg');
 
-        DB::transaction(function () use ($sectionsData, $faqsData, $category) {
+        DB::transaction(function () use ($sectionsData, $faqsData, $category, $headingsData) {
             foreach ($sectionsData as $i => $value) {
                 foreach ($value as $key => $v) {
                     $category->contents()->create([
@@ -91,6 +95,13 @@ class CategoryController extends Controller
                     ]);
                 }
             }
+
+            foreach ($headingsData as $i => $value) {
+                $category->contents()->create([
+                    'key' => sprintf("heading-%d", $i + 1),
+                    'value' => $value,
+                ]);
+            }
         });
 
         return redirect()->route('admin.category.index')->with('success', 'Category created successfully.');
@@ -101,7 +112,8 @@ class CategoryController extends Controller
         $data = Category::where('id', decrypt($category))->with('contents')->first();
         $cmsData = $data->cmsData();
         $faqData = $data->faqData();
-        return view('admin.category.edit', compact('data', 'cmsData', 'faqData'));
+        $headingsData = $data->headings();
+        return view('admin.category.edit', compact('data', 'cmsData', 'faqData', 'headingsData'));
     }
 
     /**
@@ -136,6 +148,9 @@ class CategoryController extends Controller
             'section.*' => 'required|array',
             'section.*.title' => 'required|string',
             'section.*.content' => 'required|string',
+
+            'headingg' => 'required|array',
+            'headingg.*' => 'required|string',
         ]);
 
         $baseSlug = Str::slug($request->name);
@@ -161,8 +176,9 @@ class CategoryController extends Controller
 
         $sectionsData = $request->input('section');
         $faqsData = $request->input('faq');
+        $headingsData = $request->input('headingg');
 
-        DB::transaction(function () use ($sectionsData, $faqsData, $category) {
+        DB::transaction(function () use ($sectionsData, $faqsData, $category, $headingsData) {
             foreach ($sectionsData as $i => $value) {
                 foreach ($value as $key => $v) {
                     $category->contents()->create([
@@ -179,6 +195,12 @@ class CategoryController extends Controller
                         'value' => $v,
                     ]);
                 }
+            }
+            foreach ($headingsData as $i => $value) {
+                $category->contents()->create([
+                    'key' => sprintf("heading-%d", $i + 1),
+                    'value' => $value,
+                ]);
             }
         });
 

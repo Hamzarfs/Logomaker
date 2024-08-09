@@ -86,6 +86,19 @@
                             <h3 class="card-title">Category Content</h3>
                         </div>
                         <div class="card-body">
+                            @foreach (range(1, 2) as $i)
+                                <div class="form-group">
+                                    <label for="heading-{{ $i }}">Section {{ $i }} heading</label>
+                                    <input type="text" class="form-control" id="heading-{{ $i }}"
+                                        name="headingg[]" required>
+                                    <x-error>headingg[{{ $i - 1 }}]</x-error>
+                                </div>
+
+                                @if (!$loop->last)
+                                    <hr class="border-{{ auth()->user()->mode === 'dark' ? 'light' : 'dark' }}">
+                                @endif
+                            @endforeach
+                            <hr class="border-{{ auth()->user()->mode === 'dark' ? 'light' : 'dark' }}">
                             @foreach (range(1, 7) as $i)
                                 <div class="form-group">
                                     <label for="section-{{ $i }}-title">Section {{ $i }}
@@ -95,8 +108,7 @@
                                     <x-error>section-{{ $i }}-title</x-error>
                                 </div>
                                 <label>Section {{ $i }} content</label>
-                                <textarea id="section-{{ $i }}-content" name="section[{{ $i - 1 }}][content]">
-                                </textarea>
+                                <textarea id="section-{{ $i }}-content" name="section[{{ $i - 1 }}][content]"></textarea>
                                 @if (!$loop->last)
                                     <hr class="border-{{ auth()->user()->mode === 'dark' ? 'light' : 'dark' }}">
                                 @endif

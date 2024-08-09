@@ -136,11 +136,10 @@ class MainController extends \App\Http\Controllers\Controller
     }
     public function selectLogoCategory($category)
     {
- 
+        
         // Check if a category ID is available
         if ($category) {
             $categoryObj = Category::where('slug', $category)->firstOrFail();
-
             // Fetch products where `category_id` matches the single category ID
             // $products = Product::where('slug', '=', $category)
             //                    ->orderBy('id', 'DESC')
@@ -151,9 +150,9 @@ class MainController extends \App\Http\Controllers\Controller
             })
                 ->orderBy('id', 'DESC')
                 ->paginate(20);
-
             $cmsData = $categoryObj->cmsData();
             $faqData = $categoryObj->faqData();
+            $headingsData = $categoryObj->headings();
             $categoryObj = $categoryObj->toArray();
         } else {
             // Handle the case where no category ID is available (optional)
@@ -162,18 +161,18 @@ class MainController extends \App\Http\Controllers\Controller
 
         $categories = Category::orderBy('id', 'DESC')->get();
         $favourites = auth()->user()?->favourites->toArray();
-        return view('site.new-logo', compact('categories', 'products', 'category', 'categoryObj', 'cmsData', 'faqData', 'favourites'));
+        return view('site.new-logo', compact('categories', 'products', 'category', 'categoryObj', 'cmsData', 'faqData', 'favourites', 'headingsData'));
     }
 
     public function preview()
     {
         $userId = auth()->user()?->id;
         $image = session('image');
-        $product = Product::where('image', $image)->first();
+        $productId = Product::where('image', $image)->value('id');
 
-        if ($product) {
-            $productId = $product->id;
-        }
+        // if ($product) {
+        //     $productId = $product->id;
+        // }
         // die($productId."AAAAAA".auth()->user()->id );
         $hasOrder = Order::where('product_id', $productId)
             ->where('user_id',  $userId)
@@ -243,6 +242,16 @@ class MainController extends \App\Http\Controllers\Controller
     {
         $data = $request->all();
         $this->logoService->saveLogo($data['logoString'], $data['userId'], $data['productId']);
+        
+        if(!Order::where([
+            'user_id' => $data['userId'],
+            'product_id' => $data['productId']
+        ])->exists()) {
+            Order::create([
+                'user_id' => $data['userId'],
+                'product_id' => $data['productId']
+            ]);
+        }
         // $this->sessionService->clearSessionData();
     }
 
