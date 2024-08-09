@@ -33,8 +33,10 @@ class RegisteredUserController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
-            'phone' => ['required', 'numeric'],
+            'phone' => ['required', 'regex:/^(\+44\s?7\d{3}|\+44\s?\d{2}\s?\d{4}|\+44\s?\d{3}\s?\d{3}|\+44\s?\d{4}\s?\d{2}|\+44\s?\d{5})\s?\d{3}\s?\d{3}$/'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        ], [
+            'phone.regex' => 'Phone number must be a valid UK number (+44 20 7123 4567)'
         ]);
 
         $user = User::create([
