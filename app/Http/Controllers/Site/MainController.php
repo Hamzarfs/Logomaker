@@ -317,13 +317,15 @@ class MainController extends \App\Http\Controllers\Controller
 
         $this->logoService->saveLogo($logoString, $userId, $productId);
 
-        Order::create([
+        Order::updateOrCreate([
             'user_id' => $userId,
             'product_id' => $productId,
+        ], [
             'amount' => session()->get('price'),
+            'status' => 'paid',
         ]);
 
-        // $this->sessionService->clearSessionData();
+        $this->sessionService->clearSessionData();
     }
 
     public function orders()

@@ -4,8 +4,16 @@
 
 @section('content')
 
-    <div>
+    <style>
+        footer.footer {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 
+    <div>
+        <h1>Checking status. Please Wait!!</h1>
     </div>
 
 
@@ -31,8 +39,8 @@
             const session = await response.json();
 
             if (session.status == 'open') {
+                alert('Payment failed! Redirecting to the checkout page.')
                 location.replace("{{ route('declined') }}")
-                // alert('Payment failed! Redirecting to the checkout page.')
                 // location.replace("{{ route('checkout') }}")
             } else if (session.status == 'complete') {
                 const response = await fetch("{{ route('orderComplete') }}", {
