@@ -3,6 +3,30 @@
 @section('title', 'Orders')
 
 @section('content')
+
+    <style>
+        footer.footer {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .thumbnail {
+            width: 70px;
+            height: 70px;
+        }
+
+        table.table tr td,
+        table.table tr th {
+            vertical-align: middle;
+        }
+
+        .table thead th {
+            border-top: none;
+        }
+
+    </style>
+
     <div class="container">
         <div class="my-5 py-5">
             @if (count($user->orders))
@@ -10,13 +34,15 @@
                     <div class="card-header">
                         <h3 class="card-title">Orders</h3>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body px-0 pt-0">
                         <table class="table table-striped" id="ordersTable">
                             <thead>
                                 <tr>
                                     <th>#</th>
+                                    <th>Logo</th>
                                     <th>User</th>
                                     <th>Product</th>
+                                    <th>Date</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -24,8 +50,12 @@
                                 @forelse ($user->orders as $o)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
+                                        <td>
+                                            <img src="{{ asset("orders/{$user->id}_{$o->product->id}.png") }}" alt="Logo thumbnail" class="thumbnail">
+                                        </td>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $o->product->name }}</td>
+                                        <td>{{ date('m-d-Y', strtotime($o->created_at)) }}</td>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <button class="btn btn-primary preview-btn me-2"

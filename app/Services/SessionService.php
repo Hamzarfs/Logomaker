@@ -14,7 +14,8 @@ class SessionService
             'image',
             'product-id',
             'price',
-            'package-name'
+            'package-name',
+            'imgDataURL',
         ]);
     }
 }

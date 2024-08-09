@@ -25,8 +25,7 @@ class MainController extends \App\Http\Controllers\Controller
         public SessionService $sessionService,
         public EmailService $emailService,
         public LogoService $logoService,
-    ) {
-    }
+    ) {}
     public function index()
     {
         $categories = Category::where('is_top', 1)
@@ -136,7 +135,7 @@ class MainController extends \App\Http\Controllers\Controller
     }
     public function selectLogoCategory($category)
     {
-        
+
         // Check if a category ID is available
         if ($category) {
             $categoryObj = Category::where('slug', $category)->firstOrFail();
@@ -241,18 +240,19 @@ class MainController extends \App\Http\Controllers\Controller
     public function saveLogo(Request $request)
     {
         $data = $request->all();
-        $this->logoService->saveLogo($data['logoString'], $data['userId'], $data['productId']);
-        
-        if(!Order::where([
+        $this->logoService->saveLogo(session()->get('imgDataURL'), $data['userId'], $data['productId']);
+
+        Order::updateOrCreate([
             'user_id' => $data['userId'],
             'product_id' => $data['productId']
-        ])->exists()) {
-            Order::create([
-                'user_id' => $data['userId'],
-                'product_id' => $data['productId']
-            ]);
-        }
+        ]);
+
         // $this->sessionService->clearSessionData();
+    }
+
+    function putImgStringIntoSession(Request $request)
+    {
+        session()->put('imgDataURL', $request->dataURL);
     }
 
     public function initializeCharge(Request $request)
@@ -326,14 +326,16 @@ class MainController extends \App\Http\Controllers\Controller
         // $this->sessionService->clearSessionData();
     }
 
-    public function orders() {
-        $userWithOrders = transformArrayToObject(auth()->user()->load('orders.product')->toArray());
+    public function orders()
+    {
+        $userWithOrders = transformArrayToObject(auth()->user()->load(['orders' => fn($query) => $query->with('product')->where('status', 'paid')])->toArray());
         return view('site.orders', [
             'user' => $userWithOrders
         ]);
     }
 
-    function accountDetails() {
+    function accountDetails()
+    {
         $user = auth()->user();
         return view('site.account-details', [
             'user' => $user

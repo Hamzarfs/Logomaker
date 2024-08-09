@@ -424,9 +424,12 @@
             document.getElementById('dynamicHeading').innerText = text;
         }
     </script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ asset('js/ajaxSetup.js') }}"></script>
+
     <script>
         document.querySelectorAll('.btn.packages-button-online').forEach(button => {
             button.addEventListener('click', function(event) {
@@ -436,11 +439,21 @@
                 var name = this.dataset.name
                 // Correctly set the URL with only the price parameter
                 let urlBase = "{{ url('/') }}";
-                var newUrl = urlBase + href.split('?')[0] + '?price=' + encodeURIComponent(price) +
-                    "&name=" + encodeURIComponent(name);
+                var newUrl = urlBase + href.split('?')[0] + '?price=' + encodeURIComponent(price) + "&name=" + encodeURIComponent(name);
                 window.location.href = newUrl; // Redirects to the checkout page with the price parameter
             });
         });
+
+        $(function() {
+            $.ajax({
+                url: "{{ route('saveLogo') }}",
+                method: 'POST',
+                data: {
+                    userId: {{ auth()->id() }},
+                    productId: {{ session()->get('product-id') }},
+                },
+            })
+        })
     </script>
 
 
