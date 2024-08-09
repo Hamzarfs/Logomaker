@@ -31,7 +31,7 @@ class SocialiteController extends Controller
     {
         $user = Socialite::driver('google')->user();
         $this->_registerOrLoginUser($user);
-        return redirect()->route('homepage');
+        return redirect()->intended(RouteServiceProvider::HOME);
     }
     
     public function redirectToFaceBook()
