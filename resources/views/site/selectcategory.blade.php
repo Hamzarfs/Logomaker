@@ -24,6 +24,14 @@
 
 @section('content')
 
+    <style>
+        footer.footer {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet">
     <style>
@@ -73,7 +81,7 @@
         $(document).ready(function() {
             // Prepare an array of categories for the autocomplete widget
             var categories = @json($categories);
-            
+
             // Extract the category names and ids for the autocomplete
             var availableTags = categories.map(function(category) {
                 return {

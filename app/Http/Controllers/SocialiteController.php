@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
@@ -30,7 +31,7 @@ class SocialiteController extends Controller
     {
         $user = Socialite::driver('google')->user();
         $this->_registerOrLoginUser($user);
-        return redirect()->route('admin.dashboard');
+        return redirect()->route('homepage');
     }
     
     public function redirectToFaceBook()
@@ -54,7 +55,7 @@ class SocialiteController extends Controller
                 'email' => $data->email,
                 'provider_id' => $data->id,
                 'avatar' => $data->avatar,
-            ]);
+            ])->assignRole('user');
         }
         Auth::login($user);
     }

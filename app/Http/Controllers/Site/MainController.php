@@ -243,6 +243,16 @@ class MainController extends \App\Http\Controllers\Controller
     {
         $data = $request->all();
         $this->logoService->saveLogo($data['logoString'], $data['userId'], $data['productId']);
+        
+        if(!Order::where([
+            'user_id' => $data['userId'],
+            'product_id' => $data['productId']
+        ])->exists()) {
+            Order::create([
+                'user_id' => $data['userId'],
+                'product_id' => $data['productId']
+            ]);
+        }
         // $this->sessionService->clearSessionData();
     }
 
