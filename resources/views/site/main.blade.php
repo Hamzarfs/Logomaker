@@ -391,12 +391,11 @@ form#companyForm {
     <section class="why-logo-design-section">
         <div class="container">
             <!-- Heading -->
-            <h2 class="why-logo-design-heading">Why RFS LOGO DESIGN is the No.1 Choice for Businesses</h2>
+            <h2 class="why-logo-design-heading">Why RFS Is Your Go-To Logo Designer
+            </h2>
 
             <!-- Description -->
-            <p class="why-logo-design-description">We are the number one website for DIY logo creator software because
-                customers love our tool and service. From top notch quality logo designs to prompt customer service, we make
-                sure you get the branding your company deserve in the least possible time.</p>
+            <p class="why-logo-design-description">Our team of concept-driven logo designers is passionate about crafting visually stunning and professional logos that truly elevate your brand and leave a lasting impression. Here is why RFS is the perfect choice for you:</p>
 
             <!-- Row with 3 Columns -->
             <div class="row">
@@ -404,11 +403,9 @@ form#companyForm {
                 <div class="col-md-4">
                     <div class="icon-box business-needs">
                         <img src="{{ url('images/success.gif') }}" alt="Business Needs Icon" class="icon-box-image">
-                        <h3 class="icon-box-heading">We Understand Business Needs</h3>
-                        <p class="icon-box-description">With over 20+ years in the industry, we are pretty sure we
-                            understand what kind of branding small businesses and startups need. You will find all the
-                            necessarily brand designs that you'll need to launch a new business starting with a company
-                            logo.</p>
+                        <h3 class="icon-box-heading">Bringing Ideas To Life</h3>
+                        <p class="icon-box-description">At RFS, we get your vision. We are all about teamwork to craft logo designs that truly capture your business’s identity and values. With decades of experience, we turn your ideas into powerful brand symbols. Whether you are launching or revamping, our logo design services are here to give your business a standout boost.
+                        </p>
                     </div>
                 </div>
 
@@ -417,10 +414,9 @@ form#companyForm {
                     <div class="icon-box premium-quality">
                         <img src= "{{ url('images/best-quality.gif') }}" alt="Premium Quality Icon"
                             class="icon-box-image">
-                        <h3 class="icon-box-heading">Premium Quality Graphic Design</h3>
-                        <p class="icon-box-description">We only work with expert graphic and logo designer which is why you
-                            will always get professional and quality designs from LogoDesign.net. All our logos, social
-                            media, stationery, website, etc. are guaranteed to make your brand shine out!</p>
+                        <h3 class="icon-box-heading">Conducting Insightful Research</h3>
+                        <p class="icon-box-description">We mix your ideas with what your audience craves. Our custom logo design service fuses your brand vision with smart, research-driven elements to create a logo that catches your eyes and engages prospects. Get the best logo design company on your side to make your brand irresistible!
+                        </p>
                     </div>
                 </div>
 
@@ -429,10 +425,9 @@ form#companyForm {
                     <div class="icon-box custom-designers">
                         <img src="{{ url('images/logo-design.gif') }}" alt="Custom Designers Icon"
                             class="icon-box-image">
-                        <h3 class="icon-box-heading">Work with Custom Designers</h3>
-                        <p class="icon-box-description">Not all customers like DIY logo maker tools which is why we also
-                            have the option of custom logo design. Work with experienced and professional graphic designers
-                            or logo designers one-on-one or via crowdsourcing, just contact us!</p>
+                        <h3 class="icon-box-heading">Crafting Value</h3>
+                        <p class="icon-box-description">We infuse real value into every logo. Our meticulous design process starts with diving deep into your brand’s needs, enabling our top-notch designers to craft a logo packed with persuasive elements and audience appeal. Get ready to see your brand soar to new heights.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -443,10 +438,8 @@ form#companyForm {
                 <div class="col-md-4">
                     <div class="icon-box dedicated-support">
                         <img src="{{ url('images/support.gif') }}" alt="Dedicated Support Icon" class="icon-box-image">
-                        <h3 class="icon-box-heading">Dedicated Support 24/7</h3>
-                        <p class="icon-box-description">Our support team can get you started with our logo maker free for
-                            try out or design a company logo by a logo designer. We can even help guide you how to build an
-                            awesome brand from scratch. Just contact us with call, chat or email!</p>
+                        <h3 class="icon-box-heading">Unique Design Solutions</h3>
+                        <p class="icon-box-description">Explore our diverse graphic design solutions! Our portfolio showcases top-tier work across various industries, from eye-catching logos to complete branding and promotion services. Whether you need standout designs for your mobile app, website, or social media, we have got you covered. </p>
                     </div>
                 </div>
 
@@ -455,10 +448,8 @@ form#companyForm {
                     <div class="icon-box digital-media-design">
                         <img src="{{ url('images/digital-art.gif') }}" alt="Digital Media Design Icon"
                             class="icon-box-image">
-                        <h3 class="icon-box-heading">Ready for Digital Media Design</h3>
-                        <p class="icon-box-description">All our graphic designs are ready for integration and use on all
-                            types of digital media whether it is a social media, website design, or app design. You can
-                            download your business logo from the logo creator for use instantly!</p>
+                        <h3 class="icon-box-heading">At Your Service 24/7</h3>
+                        <p class="icon-box-description">Get the support you deserve with our dedicated, 24/7 expert team. We are here to tackle your queries and offer proactive advice. At RFS, exceptional customer service is our priority, ensuring your branding journey is as smooth and successful as possible.</p>
                     </div>
                 </div>
 
@@ -466,10 +457,8 @@ form#companyForm {
                 <div class="col-md-4">
                     <div class="icon-box brand-kit">
                         <img src="{{ url('images/startup.gif') }}" alt="Brand Kit Icon" class="icon-box-image">
-                        <h3 class="icon-box-heading">Brand Kit for Startups</h3>
-                        <p class="icon-box-description">If you are looking for affordable logo designs and brand designs to
-                            make up for your brand kit, then LogoDesign.net offers just the tools to jumpstart your brand.
-                            Just start using our logo maker, and download it today!</p>
+                        <h3 class="icon-box-heading">Impactful Branding For Growth</h3>
+                        <p class="icon-box-description">We stick to the best practices in logo design and branding to take your brand to new heights. With our tried-and-true design process, deep expertise, and top-tier designers, we will set your enterprise on the path to exponential growth. Join us now for branding that makes an impact!</p>
                     </div>
                 </div>
             </div>
