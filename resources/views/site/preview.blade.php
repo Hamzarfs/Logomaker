@@ -1059,6 +1059,7 @@
     </script>
     <script>
         var canvas = new fabric.Canvas('logo-canvas');
+        // var dataURL
 
         $(document).ready(function() {
             canvas.setWidth(505);
@@ -1144,31 +1145,56 @@
                     },
                     error: function(xhr, status, error) {
                         console.error("Error loading SVG:", status, error);
+                    },
+                    complete: function() {
+                        const dataURL = sessionStorage.getItem('logoDataUrl')
+                        $.ajax({
+                            url: "{{ route('putImgStringIntoSession') }}",
+                            method: 'POST',
+                            data: { dataURL },
+                            success: function() {
+                                @auth
+                                    $.ajax({
+                                        url: "{{ route('saveLogo') }}",
+                                        method: 'POST',
+                                        data: {
+                                            userId: {{ auth()->id() }},
+                                            productId: {{ session()->get('product-id') }},
+                                            // logoString: sessionStorage.getItem('logoDataUrl'),
+                                        },
+                                    })
+                                @endauth
+                            },
+                        })
                     }
                 });
             }
 
             loadCarSVG();
 
-            $.ajax({
-                url: "{{ route('putImgStringIntoSession') }}",
-                method: 'POST',
-                data: {
-                    dataURL: sessionStorage.getItem('logoDataUrl'),
-                },
-            })
+            // var dataURL = sessionStorage.getItem('logoDataUrl')
 
-            @auth
-                $.ajax({
-                    url: "{{ route('saveLogo') }}",
-                    method: 'POST',
-                    data: {
-                        userId: {{ auth()->id() }},
-                        productId: {{ session()->get('product-id') }},
-                        // logoString: sessionStorage.getItem('logoDataUrl'),
-                    },
-                })
-            @endauth
+            // console.log(sessionStorage.getItem('logoDataUrl'));
+            
+
+            // $.ajax({
+            //     url: "{{ route('putImgStringIntoSession') }}",
+            //     method: 'POST',
+            //     data: { dataURL },
+            //     success: function() {
+            //         @auth
+            //             $.ajax({
+            //                 url: "{{ route('saveLogo') }}",
+            //                 method: 'POST',
+            //                 data: {
+            //                     userId: {{ auth()->id() }},
+            //                     productId: {{ session()->get('product-id') }},
+            //                     // logoString: sessionStorage.getItem('logoDataUrl'),
+            //                 },
+            //             })
+            //         @endauth
+            //     },
+            // })
         });
 
         @if ($hasOrder)

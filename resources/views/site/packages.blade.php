@@ -439,20 +439,40 @@
                 var name = this.dataset.name
                 // Correctly set the URL with only the price parameter
                 let urlBase = "{{ url('/') }}";
-                var newUrl = urlBase + href.split('?')[0] + '?price=' + encodeURIComponent(price) + "&name=" + encodeURIComponent(name);
+                var newUrl = urlBase + href.split('?')[0] + '?price=' + encodeURIComponent(price) +
+                    "&name=" + encodeURIComponent(name);
                 window.location.href = newUrl; // Redirects to the checkout page with the price parameter
             });
         });
 
         $(function() {
+            let dataURL = sessionStorage.getItem('logoDataUrl')
+
             $.ajax({
-                url: "{{ route('saveLogo') }}",
+                url: "{{ route('putImgStringIntoSession') }}",
                 method: 'POST',
-                data: {
-                    userId: {{ auth()->id() }},
-                    productId: {{ session()->get('product-id') }},
+                data: { dataURL },
+                success: function() {
+                    $.ajax({
+                        url: "{{ route('saveLogo') }}",
+                        method: 'POST',
+                        data: {
+                            userId: {{ auth()->id() }},
+                            productId: {{ session()->get('product-id') }},
+                        },
+                    })
                 },
             })
+
+
+            // $.ajax({
+            //     url: "{{ route('saveLogo') }}",
+            //     method: 'POST',
+            //     data: {
+            //         userId: {{ auth()->id() }},
+            //         productId: {{ session()->get('product-id') }},
+            //     },
+            // })
         })
     </script>
 
