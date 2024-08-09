@@ -386,7 +386,7 @@
 
             </div> --}}
 
-            <h1 class="studioTitle">Discover Versatile Logo Designs in Our Design Engine</h1>
+            <h2 class="studioTitle">Discover Versatile Logo Designs in Our Design Engine</h2>
         </div>
     </div>
 
@@ -448,7 +448,7 @@
         <div class="row custom-section">
             <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
-                    <h2>{{ $cmsData[3]['title'] ?? '' }}</h2>
+                <h2 style="font-weight:700;">{{ $cmsData[3]['title'] ?? '' }}</h2>
                     {!! $cmsData[3]['content'] ?? '' !!}
                 </div>
             </div>
