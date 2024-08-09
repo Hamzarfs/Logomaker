@@ -158,7 +158,7 @@
                 <a href="{{ url('/select-logo') }}"><button class="custom-button-online">Explore Logo</button></a>
                 <img src="images/Logo Pics.png" class="image-online">
             </div>
-            <div class="col-md-2 center-image-online">elect-category
+            <div class="col-md-2 center-image-online"> 
                 <img src="images/Line points.png">
             </div>
             <div class="col-md-5">
