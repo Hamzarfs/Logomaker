@@ -16,6 +16,29 @@
     display: block;
     width: auto;
 }
+
+.homepage-category-list {
+        text-align: center;
+        padding: 50px 0;
+    }
+    .category-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .category-buttons button {
+        background-color: #d3e3fc;
+        border: none;
+        color: #333;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 20px;
+        font-size: 14px;
+        transition: background-color 0.3s;
+    }
+    .category-buttons button:hover {
+        background-color: #b0c7ec;
+    }
         #testimonial-section {
             background-color: #f9f9f9;
         }
@@ -102,6 +125,36 @@
         width: auto;
     }
 }
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: white; /* White background */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666BC0; /* Purple scrollbar */
+    border-radius: 8px; /* Rounded corners */
+    position: relative;
+}
+
+::-webkit-scrollbar-thumb::before {
+    content: 'VIP';
+    position: absolute;
+    top: 50%;
+    right: -50px;
+    transform: rotate(270deg) translateY(-50%);
+    transform-origin: center;
+    background-color: red; /* Red VIP tag background */
+    color: white; /* White text color */
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+/* End Custom scrollbar styles  */
 
 .logotype-card {
     border: none;
@@ -601,6 +654,68 @@
 
  {{-- End logo type  --}}
 
+
+
+{{-- Start Category List Section --}}
+
+
+
+<div class="container homepage-category-list">
+    <h2>Try Free Logo Maker for Every Business</h2>
+    <p>Explore company logos made easy with our free logo maker tool for all types of professionals and industries.</p>
+    <div class="category-buttons">
+        <button>Accounting & CPA Logos</button>
+        <button>Advertising Logos</button>
+        <button>Agriculture Logos</button>
+        <button>Alphabets Logos</button>
+        <button>Animal & Pet Logos</button>
+        <button>Arts Logos</button>
+        <button>Auto & Transportation Logos</button>
+        <button>Beauty Logos</button>
+        <button>Childcare Logos</button>
+        <button>Cleaning Logos</button>
+        <button>Communication & Media Logos</button>
+        <button>Community & Foundation Logos</button>
+        <button>Consulting Logos</button>
+        <button>Dating & Matchmaking Logos</button>
+        <button>Employment & HR Logos</button>
+        <button>Engineering & Energy Logos</button>
+        <button>Entertainment & Music Logos</button>
+        <button>Games & Gambling Logos</button>
+        <button>Home Improvement Logos</button>
+        <button>Information Technology Logos</button>
+        <button>Insurance Logos</button>
+        <button>Internet Logos</button>
+        <button>Investment & Finance Logos</button>
+        <button>Jewelry & Gemstones Logos</button>
+        <button>Landscape Logos</button>
+        <button>Marketing Logos</button>
+        <button>Medical & Pharmacy Logos</button>
+        <button>Photography Logos</button>
+        <button>Printing & Publishing Logos</button>
+        <button>Religion & Spirituality Logos</button>
+        <button>Research & Development Logos</button>
+        <button>Security Logos</button>
+        <button>Spa & Massage Logos</button>
+        <button>Sports & Fitness Logos</button>
+        <button>Storage Logos</button>
+        <button>Text Logos</button>
+        <button>Trade & Logistics Logos</button>
+        <button>Travel & Hotel Logos</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+{{-- End Category list section --}}
+
+
+
+
     <!-- -------------------start FAQs --------------- -->
 
 
@@ -800,6 +915,8 @@
 
 
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Other scripts or libraries -->
 
