@@ -200,8 +200,8 @@
         <div class="row custom-logo-page-section">
             <div class="col-md-6 d-flex align-items-center">
                 <div class="custom-logo-page-content">
-                    <h2 class="custom-logo-page-heading">Customizable Logo Designs in Minutes</h2>
-                    <p>Only sterling quality designs straight from our professional logo designers’ studio.</p>
+                    <h2 class="custom-logo-page-heading">Customizable Logo Designs In Minutes</h2>
+                    <p>Let our logo designs turn your ideas into professional magic!</p>
                     <button class="custom-logo-page-button">Get Started</button>
                 </div>
             </div>
@@ -493,22 +493,21 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="premium-logos-heading">Same Premium Logos but Faster</h2>
+                        <h2 class="premium-logos-heading">Same Premium Logos, Now Faster!</h2>
                         <p class="premium-logos-description">
-                            We have been designing premium logos since 2001. Thousands of clients trust us with their
-                            brand identities because we deliver what we promise. Now we bring the same quality premium
-                            logos by human graphic designers, to you in our advance logo studio that lets you get
-                            customizable logo designs in minutes.
+                        Since 2001, we have delivered top-notch designs to thousands of clients. 
+                        With our free logo services, get high-quality, customizable logos in minutes 
+                        straight from our expert designers!
                         </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <h3 class="custom-logo-heading">Simple and Fast Customizable Logo Design Process</h3>
+                        <h3 class="custom-logo-heading">Let Us Create A Custom Logo For Free With Ease!</h3>
                         <p class="custom-logo-description">
-                            We understand the rush to launch your business startup, and that’s why customizable logos
-                            make sense. Getting a professional logo design from our advance studio isn’t hard, just
-                            follow these steps.
+                        We know you are eager to launch your business, so our simple and speedy customizable 
+                        logo design process is here to help. Below are a few simple steps we follow and 
+                        produce a professional logo worthy of your brand in no time at all. 
                         </p>
                     </div>
                 </div>
@@ -553,12 +552,12 @@
 
             <!-- New section added here -->
             <div class="mt-5">
-                <h3 class="custom-heading">Affordable Logos, Same Great Designs</h3>
-                <p>We open up custom logo designing opportunities that are easy on the pocket. Especially for startups
-                    and small businesses searching for premium logos who can’t afford the hefty price of hiring a logo
-                    designer. You get the same professional custom logo design style, at a fraction of the cost. And the
-                    best part is, these customizable logos have been designed by expert logo designers from around the
-                    world!</p>
+                <h3 class="custom-heading">We Craft Affordable Logo Designs To Boost Creativity</h3>
+                <p>Allow us to create logo designs online for free with top-notch quality! We offer 
+                affordable, professional logos perfect for startups and small businesses. Get the 
+                same expert design style without the hefty price tag, thanks to our global team of 
+                skilled logo designers.
+                </p>
                 <a href="#" class="custom-button-online">Get Started</a>
             </div>
         </div>
@@ -567,7 +566,7 @@
 
         <section class="container py-5">
             <div class="text-center mb-4">
-                <h2>Need Help Picking a Professional Logo Design? Ask Our Expert</h2>
+                <h2>Need help choosing a professional logo design? Consult with our expert!</h2>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-4 mb-3 text-center">

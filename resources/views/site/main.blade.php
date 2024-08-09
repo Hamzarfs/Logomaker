@@ -16,10 +16,6 @@
     display: block;
     width: auto;
 }
-        #testimonial-section {
-            background-color: #f9f9f9;
-        }
-
         .testimonial-card {
             background-color: #ffffff;
             border: none;
@@ -200,7 +196,7 @@
 
     <!-- <------------------Make A logo------------------>
 <!-- 
-    <section class="heroSection1">
+<section class="heroSection1">
         <div class="container">
             <div class="row">
                 <div class="col-12 mb-4">
