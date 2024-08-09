@@ -514,6 +514,72 @@
             </div>
         </section>
 
+        </div>
+        
+        <div class="banner-section" style="background-color: #f2f6fe; padding-bottom: 100px;">
+        <div class="container portfolio-section">
+            <h2 class="portfolio-heading">We Have Logos For Everyone</h2>
+            <p class="main-description-online">
+                Explore our logo builder’s vast template collection, from medical
+                to fashion, sports to food. RFS Logo Design helps you find the perfect
+                logo to match your business identity and branding needs.
+            </p>
+
+
+            <div class="row">
+                @foreach ($categories as $category)
+                    @if ($category->products->isNotEmpty())
+                        @php
+                            $product = $category->products->first(); // Get the first product
+                        @endphp
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <a href="{{ route('logos', $category->slug) }}" class="card-container-link"
+                                data-image="{{ $product->image }}" data-id="{{ $product->id }}"
+                                data-placeholder="{{ $product->placeholder_value }}">
+                                <div class="card-container">
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <img src="category-image/{{ $product->image }}"
+                                                class="img-fluid portfolio-image" alt="{{ $product->name }}">
+                                            <div class="text-placeholder"
+                                                data-placeholder-value="{{ $product->placeholder_value }}"></div>
+
+                                        </div>
+                                        <div class="card-back">
+                                            <div class="category-name">{{ $category->name }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    @endif
+                @endforeach
+            </div>
+
+
+            {{-- <div class="row">
+                @foreach ($products as $product)
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card-container">
+                            <img src="category-image/{{ $product->image }}" class="img-fluid portfolio-image">
+                            <div class="text-placeholder"></div>
+                            <a href="{{ url('/store-session-data-image?image=' . $product->image) }}"
+                                class="hover-button select-btn" data-product-id="{{ $product->id }}">Select </a>
+                        </div>
+                    </div>
+                @endforeach
+            </div> --}}
+
+
+
+
+
+
+            <h1 class="studioTitle">Uncover Versatile Logo Designs With Our Powerful Design Engine!</h1>
+        </div>
+    </div>
+
 
         <div class="container py-5 text-center custom-logo-process">
             <h2>Simple and Fast Customizable Logo Design Process</h2>
