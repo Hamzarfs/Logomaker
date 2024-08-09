@@ -102,9 +102,9 @@
     </div>
 
     <script>
-        setTimeout(() => {
-            location.replace("{{ route('maker') }}")
-        }, (10 * 1000));
+        // setTimeout(() => {
+        //     location.replace("{{ route('maker') }}")
+        // }, (10 * 1000));
         // initialize();
 
         // async function initialize() {

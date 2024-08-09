@@ -85,16 +85,16 @@
             position: absolute;
             width: 180px;
             height: 130px;
-            top: 57px;
-            left: 75px;
+            top: 40px;
+            left: 60px;
         }
 
         .logo-mockup-2 {
             position: absolute;
             width: 100px;
             height: 80px;
-            top: 91px;
-            left: 117px;
+            top: 70px;
+            left: 100px;
             rotate: -26deg;
         }
 
@@ -102,8 +102,8 @@
             position: absolute;
             width: 50px;
             height: 40px;
-            top: 73px;
-            left: 50px;
+            top: 55px;
+            left: 45px;
             rotate: -35deg;
         }
 
@@ -111,8 +111,8 @@
             position: absolute;
             width: 85px;
             height: 70px;
-            top: 106px;
-            left: 102px;
+            top: 85px;
+            left: 82px;
             rotate: -22deg;
         }
 
@@ -120,24 +120,24 @@
             position: absolute;
             width: 110px;
             height: 90px;
-            top: 98px;
-            left: 86px;
+            top: 70px;
+            left: 75px;
         }
 
         .logo-mockup-6 {
             position: absolute;
             width: 70px;
             height: 80px;
-            top: 85px;
-            left: 131px;
+            top: 65px;
+            left: 110px;
         }
 
         .logo-mockup-7 {
             position: absolute;
             width: 100px;
             height: 80px;
-            top: 103px;
-            left: 101px;
+            top: 75px;
+            left: 85px;
             rotate: -4deg;
         }
 
@@ -145,8 +145,8 @@
             position: absolute;
             width: 120px;
             height: 99px;
-            top: 75px;
-            left: 75px;
+            top: 65px;
+            left: 65px;
         }
 
         form {
@@ -292,13 +292,14 @@
                 width: 140px;
                 height: 130px;
                 top: 45px;
+                left: 75px
             }
 
             .logo-mockup-2 {
                 width: 80px;
                 height: 70px;
-                top: 85px;
-                left: 115px;
+                top: 75px;
+                left: 110px;
             }
 
             .logo-mockup-3 {
@@ -315,7 +316,7 @@
             }
 
             .logo-mockup-5 {
-                top: 85px;
+                top: 70px;
                 left: 75px;
             }
 
@@ -372,7 +373,7 @@
             }
 
             .logo-mockup-5 {
-                top: 65px;
+                top: 50px;
                 left: 56px;
             }
 
@@ -578,7 +579,7 @@
         /* For screen 350px to 479px */
         @media (max-width: 479.98px) {
             .checkout-gallery-container {
-                width: 338px;
+                width: 320px;
                 margin: auto;
             }
 
@@ -643,10 +644,10 @@
     </style>
 
 
-    <div class="container mt-5">
+    <div class="container my-5">
         <div class="row">
             <div class="col-lg-6" style="background-color:#F6FAFF">
-                <div class="checkout-section p-3 h-100">
+                <div class="checkout-section p-3">
                     <h3 class="checkout-title">Checkout</h3>
                     <p class="checkout-subtitle mb-2">{{ session()->get('package-name') }}</p>
                     <a href="{{ url('/packages') }}" class="change-package">Change Package</a>

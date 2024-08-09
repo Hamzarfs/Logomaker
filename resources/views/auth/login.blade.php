@@ -57,7 +57,7 @@
                 <a href="" class="btn btn-primary btn-block mb-2">
                     <i class="fab fa-facebook"></i> Facebook
                 </a>
-                <a href="" class="btn btn-danger btn-block">
+                <a href="{{ route('google.login') }}" class="btn btn-danger btn-block">
                     <i class="fab fa-google"></i> Google
                 </a>
             </div>

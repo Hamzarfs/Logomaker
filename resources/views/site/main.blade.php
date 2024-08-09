@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"> --}}
 
     <style>
+        .owl-carousel .owl-item img {
+            display: block;
+            width: auto;
+        }
 
 .owl-carousel .owl-item img {
     display: block;
@@ -118,14 +122,8 @@
         .owl-nav button:focus {
             outline: none;
         }
-        @media only screen and (max-width: 767px) {
-    .owl-carousel .owl-item img {
 
-        display: block;
-        width: auto;
-    }
-}
-
+ 
 /* Custom scrollbar styles */
 ::-webkit-scrollbar {
     width: 8px; /* Width of the scrollbar */
@@ -202,6 +200,13 @@
 
 
 
+        @media only screen and (max-width: 767px) {
+        .owl-carousel .owl-item img {
+
+            display: block;
+            width: auto;
+        }
+        }
     </style>
 
     <!----------------------------------------- Start Banner Section ------------------------------->
@@ -220,7 +225,7 @@
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" id="companyName11" name="company"
                                 placeholder="Enter your company name" aria-label="Enter your company name">
-                                <input type="hidden" name="flow" value="home" >
+                            <input type="hidden" name="flow" value="home">
                             <input type="submit" class="custom-button-banner" value="Get Started">
                         </div>
                     </form>
@@ -308,15 +313,7 @@
                     <h1 class="heroTitle1">Ready To Turn Your Vision <br>Into A Logo Masterpiece?</h1>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6 d-flex align-items-center mb-3">
-                    <input type="text" class="form-control mr-2" id="businessName"
-                        placeholder="Enter Your Business Name">
-                    <button class="search-button-online" onclick="addText()">Make A logo</button>
-                </div>
-            </div>
-        </div>
-    </section> -->
+        </section> -->
 
     <!-- <------------------End Make A logo---------------->
 
@@ -394,74 +391,92 @@
 
 
     <section class="why-logo-design-section">
-    <div class="container">
-        <!-- Heading -->
-        <h2 class="why-logo-design-heading">Why RFS LOGO DESIGN is the No.1 Choice for Businesses</h2>
+        <div class="container">
+            <!-- Heading -->
+            <h2 class="why-logo-design-heading">Why RFS LOGO DESIGN is the No.1 Choice for Businesses</h2>
 
-        <!-- Description -->
-        <p class="why-logo-design-description">We are the number one website for DIY logo creator software because customers love our tool and service. From top notch quality logo designs to prompt customer service, we make sure you get the branding your company deserve in the least possible time.</p>
+            <!-- Description -->
+            <p class="why-logo-design-description">We are the number one website for DIY logo creator software because
+                customers love our tool and service. From top notch quality logo designs to prompt customer service, we make
+                sure you get the branding your company deserve in the least possible time.</p>
 
-        <!-- Row with 3 Columns -->
-        <div class="row">
-            <!-- Column 1 -->
-            <div class="col-md-4">
-                <div class="icon-box business-needs">
-                    <img src="{{url('images/success.gif')}}" alt="Business Needs Icon" class="icon-box-image">
-                    <h3 class="icon-box-heading">We Understand Business Needs</h3>
-                    <p class="icon-box-description">With over 20+ years in the industry, we are pretty sure we understand what kind of branding small businesses and startups need. You will find all the necessarily brand designs that you'll need to launch a new business starting with a company logo.</p>
+            <!-- Row with 3 Columns -->
+            <div class="row">
+                <!-- Column 1 -->
+                <div class="col-md-4">
+                    <div class="icon-box business-needs">
+                        <img src="{{ url('images/success.gif') }}" alt="Business Needs Icon" class="icon-box-image">
+                        <h3 class="icon-box-heading">We Understand Business Needs</h3>
+                        <p class="icon-box-description">With over 20+ years in the industry, we are pretty sure we
+                            understand what kind of branding small businesses and startups need. You will find all the
+                            necessarily brand designs that you'll need to launch a new business starting with a company
+                            logo.</p>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="col-md-4">
+                    <div class="icon-box premium-quality">
+                        <img src= "{{ url('images/best-quality.gif') }}" alt="Premium Quality Icon"
+                            class="icon-box-image">
+                        <h3 class="icon-box-heading">Premium Quality Graphic Design</h3>
+                        <p class="icon-box-description">We only work with expert graphic and logo designer which is why you
+                            will always get professional and quality designs from LogoDesign.net. All our logos, social
+                            media, stationery, website, etc. are guaranteed to make your brand shine out!</p>
+                    </div>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="col-md-4">
+                    <div class="icon-box custom-designers">
+                        <img src="{{ url('images/logo-design.gif') }}" alt="Custom Designers Icon"
+                            class="icon-box-image">
+                        <h3 class="icon-box-heading">Work with Custom Designers</h3>
+                        <p class="icon-box-description">Not all customers like DIY logo maker tools which is why we also
+                            have the option of custom logo design. Work with experienced and professional graphic designers
+                            or logo designers one-on-one or via crowdsourcing, just contact us!</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Column 2 -->
-            <div class="col-md-4">
-                <div class="icon-box premium-quality">
-                    <img src= "{{url('images/best-quality.gif')}}"  alt="Premium Quality Icon" class="icon-box-image">
-                    <h3 class="icon-box-heading">Premium Quality Graphic Design</h3>
-                    <p class="icon-box-description">We only work with expert graphic and logo designer which is why you will always get professional and quality designs from LogoDesign.net. All our logos, social media, stationery, website, etc. are guaranteed to make your brand shine out!</p>
+            <!-- Additional Row with 3 Columns -->
+            <div class="row">
+                <!-- Column 1 -->
+                <div class="col-md-4">
+                    <div class="icon-box dedicated-support">
+                        <img src="{{ url('images/support.gif') }}" alt="Dedicated Support Icon" class="icon-box-image">
+                        <h3 class="icon-box-heading">Dedicated Support 24/7</h3>
+                        <p class="icon-box-description">Our support team can get you started with our logo maker free for
+                            try out or design a company logo by a logo designer. We can even help guide you how to build an
+                            awesome brand from scratch. Just contact us with call, chat or email!</p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Column 3 -->
-            <div class="col-md-4">
-                <div class="icon-box custom-designers">
-                    <img src="{{url('images/logo-design.gif')}}"  alt="Custom Designers Icon" class="icon-box-image">
-                    <h3 class="icon-box-heading">Work with Custom Designers</h3>
-                    <p class="icon-box-description">Not all customers like DIY logo maker tools which is why we also have the option of custom logo design. Work with experienced and professional graphic designers or logo designers one-on-one or via crowdsourcing, just contact us!</p>
+                <!-- Column 2 -->
+                <div class="col-md-4">
+                    <div class="icon-box digital-media-design">
+                        <img src="{{ url('images/digital-art.gif') }}" alt="Digital Media Design Icon"
+                            class="icon-box-image">
+                        <h3 class="icon-box-heading">Ready for Digital Media Design</h3>
+                        <p class="icon-box-description">All our graphic designs are ready for integration and use on all
+                            types of digital media whether it is a social media, website design, or app design. You can
+                            download your business logo from the logo creator for use instantly!</p>
+                    </div>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="col-md-4">
+                    <div class="icon-box brand-kit">
+                        <img src="{{ url('images/startup.gif') }}" alt="Brand Kit Icon" class="icon-box-image">
+                        <h3 class="icon-box-heading">Brand Kit for Startups</h3>
+                        <p class="icon-box-description">If you are looking for affordable logo designs and brand designs to
+                            make up for your brand kit, then LogoDesign.net offers just the tools to jumpstart your brand.
+                            Just start using our logo maker, and download it today!</p>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <!-- Additional Row with 3 Columns -->
-        <div class="row">
-            <!-- Column 1 -->
-            <div class="col-md-4">
-                <div class="icon-box dedicated-support">
-                    <img src="{{url('images/support.gif')}}"  alt="Dedicated Support Icon" class="icon-box-image">
-                    <h3 class="icon-box-heading">Dedicated Support 24/7</h3>
-                    <p class="icon-box-description">Our support team can get you started with our logo maker free for try out or design a company logo by a logo designer. We can even help guide you how to build an awesome brand from scratch. Just contact us with call, chat or email!</p>
-                </div>
-            </div>
-
-            <!-- Column 2 -->
-            <div class="col-md-4">
-                <div class="icon-box digital-media-design">
-                    <img src="{{url('images/digital-art.gif')}}" alt="Digital Media Design Icon" class="icon-box-image">
-                    <h3 class="icon-box-heading">Ready for Digital Media Design</h3>
-                    <p class="icon-box-description">All our graphic designs are ready for integration and use on all types of digital media whether it is a social media, website design, or app design. You can download your business logo from the logo creator for use instantly!</p>
-                </div>
-            </div>
-
-            <!-- Column 3 -->
-            <div class="col-md-4">
-                <div class="icon-box brand-kit">
-                    <img src="{{url('images/startup.gif')}}" alt="Brand Kit Icon" class="icon-box-image">
-                    <h3 class="icon-box-heading">Brand Kit for Startups</h3>
-                    <p class="icon-box-description">If you are looking for affordable logo designs and brand designs to make up for your brand kit, then LogoDesign.net offers just the tools to jumpstart your brand. Just start using our logo maker, and download it today!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
 
     <!------------------end No.1 Choice for Businesses ------------->
@@ -571,25 +586,25 @@
 
 
     <!-- Start Hire Section -->
-<section class="hire-section-bg">
-    <div class="container hire-section">
-        <div class="row align-items-center">
-            <!-- Left Column -->
-            <div class="col-md-6 left-column">
-                <p>Share Your Unique Vision With Our</p>
-                <h2>Custom Logo Designer</h2>
-            <a class="toll_icon" href="tel:+15516665255" style="color: white;">
-                <button class="hire-call-now-btn">Call Now</button>
-            </a>
+    <section class="hire-section-bg">
+        <div class="container hire-section">
+            <div class="row align-items-center">
+                <!-- Left Column -->
+                <div class="col-md-6 left-column">
+                    <p>Share Your Unique Vision With Our</p>
+                    <h2>Custom Logo Designer</h2>
+                    <a class="toll_icon" href="tel:+15516665255" style="color: white;">
+                        <button class="hire-call-now-btn">Call Now</button>
+                    </a>
 
 
 
+                </div>
+                <!-- Right Column -->
+                <div class="col-md-6 right-column">
+                    <img src="images/hire-section-logos.png" class="hire-section-logo" alt="Logo">
+                </div>
             </div>
-            <!-- Right Column -->
-            <div class="col-md-6 right-column">
-                <img src="images/hire-section-logos.png" class="hire-section-logo" alt="Logo">
-            </div>
-        </div>
     </section>
 
 
@@ -727,8 +742,8 @@
             <div class="card">
                 <div class="card-header" id="headingOne">
                     <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-                            aria-controls="collapseOne">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
                             <span class="faq-question">How can I effectively utilize a logo maker to create a unique
                                 logo design?</span>
 
@@ -913,8 +928,11 @@
 
 
         });
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> suraqa
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

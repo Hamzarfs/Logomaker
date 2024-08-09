@@ -26,3 +26,4 @@ product-slider-images
 ./product-image
 product-image
 fabric-coords-fix.js
+public/orders/*
