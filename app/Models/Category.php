@@ -38,7 +38,7 @@ class Category extends Model
 
     public function headings()
     {
-        $data = $this->contents()->where('key', 'LIKE', 'section-heading%')->get();
-        return transformArray($data);
+        $data = $this->contents()->where('key', 'LIKE', 'heading%')->get();
+        return transformHeadingsArray($data);
     }
 }

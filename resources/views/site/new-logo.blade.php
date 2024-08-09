@@ -1,5 +1,3 @@
-{{-- @dd($cmsData,$faqData,$headingsData) --}}
-@dd($cmsData,$faqData,$headingsData)
 @extends('site.common')
 
 @section('title', 'Category ' . $categoryObj['name'] ?? '')
@@ -284,7 +282,7 @@
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" id="companyName11" name="company"
                                 placeholder="Enter your company name" aria-label="Enter your company name">
-                                <input type="hidden" name="flow" value="category" >
+                            <input type="hidden" name="flow" value="category">
                             <input type="submit" class="custom-button-banner" value="Get Started">
                         </div>
                     </form>
@@ -396,7 +394,7 @@
 
     <div class="container">
         <div class="container custom-section-title">
-            <h2>Make a {{ $categoryObj['name'] }} Logo for Free</h2>
+            <h2>{{ $headingsData[0] ?? '' }}</h2>
         </div>
 
         <div class="row custom-section">
@@ -444,7 +442,7 @@
         </div>
 
         <div class="container custom-section-title">
-            <h2>Memorable {{ $categoryObj['name'] ?? '' }} Logo Elements</h2>
+            <h2>{{ $headingsData[1] ?? '' }}</h2>
         </div>
 
         <div class="row custom-section">
@@ -504,7 +502,7 @@
         </div>
     </div>
 
-    <div class= "faqs" style= "background: #f6f9ff; margin-top:50px;">
+    {{-- <div class= "faqs" style= "background: #f6f9ff; margin-top:50px;">
         <div class="container faq-section">
             <h2 class="text-center mb-4">Frequently Asked Questions About {{ $categoryObj['name'] ?? '' }} Logos</h2>
             <div id="accordion">
@@ -529,6 +527,131 @@
                     </div>
                 @endforeach
             </div>
+        </div>
+    </div> --}}
+
+
+
+    <div class="container faq-section">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div id="accordion">
+            <!-- <-Question 1 -->
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            <span class="faq-question">How can I effectively utilize a logo maker to create a unique
+                                logo design?</span>
+
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        A logo maker is software that offers a selection of pre-made logo design templates from a
+                        database. Here’s how you can create a logo using one:
+
+                        Choose a Template: Browse and select a design template from the gallery that best suits your
+                        business or style.
+
+                        Customize Your Design: Customize the font, colors, and add your company name or tagline. Many
+                        logo makers also offer advanced tools to apply effects like gradients, shadows, and more.
+
+                        Download Your Logo: After customizing, pay a nominal fee to download high-resolution files
+                        instantly. Some platforms offer free downloads with credit attribution.
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                            <span class="faq-question">Can I use my logo for trademark and copyrights?</span>
+
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        Ownership: Logos created using templates are owned by the RFS Logo Design. Exclusive rights can
+                        be purchased separately.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
+                            <span class="faq-question">What are the distinctions between using a logo maker and opting
+                                for custom logo design services?</span>
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        Logo Maker: Uses pre-made templates for customization. You can adjust fonts, colors, and effects
+                        without needing design skills. The design is not exclusive to you.
+                        Custom Design: Involves working with a dedicated designer who creates a unique logo based on
+                        your specific requirements. This design is exclusive to your brand.
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                            aria-expanded="false" aria-controls="collapseFour">
+                            <span class="faq-question">Is it possible to personalize my logo design using your logo
+                                maker tool?</span>
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        Absolutely! With our logo maker, you have the flexibility to customize fonts, colors, text, and
+                        your company name. Additionally, you can enhance
+                        your logo with advanced features like strokes, reflections, shadows, and more, all without
+                        needing any design expertise. These tools empower you
+                        to generate countless unique design variations from a single logo template.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                            aria-expanded="false" aria-controls="collapseFive">
+                            <span class="faq-question">Are the logo design files suitable for printing business
+                                cards?</span>
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                        File Availability: Once customized, download high-resolution files suitable for printing
+                        business cards, stationery, banners, and digital platforms.
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <!-- -------------------End FAQs --------------- -->

@@ -6,7 +6,7 @@
         <div class="row py-5">
             <div class="col-md-4">
                 <a href="{{ url('/') }}">
-                    <img src="images/Footer logo.png" alt="Logo" class="footer-logo mb-6"></a>
+                    <img src="{{ asset('images/Footer logo.png') }}" alt="Logo" class="footer-logo mb-6"></a>
                     <p class="footer-description" style="text-align:justify; font-size: 12px;">
                     At RFS Logo Design, we turn logo dreams into reality for clients worldwide. 
                     With a knack for creating stunning, sophisticated logos at budget-friendly 

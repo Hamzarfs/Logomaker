@@ -931,7 +931,18 @@
             <a href="{{ route('maker') }}" class="btn btn-lg customize me-1">
                 <i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp; Customize
             </a>
-            @guest
+            @if ($hasOrder)
+                <button id="save-logo" class="btn btn-lg btn-success ms-1">Look Perfect</button>
+            @else
+                <a href="{{ route('packages') }}" class="btn btn-lg btn-success ms-1">Look Perfect</a>
+            @endif
+
+            {{-- @auth
+            @else
+                <a href="{{ route('login') }}" class="btn btn-lg btn-success ms-1" id="updateButton">Look Perfect</a>
+            @endauth --}}
+            
+            {{-- @guest
                 <a href="{{ route('login') }}" class="btn btn-lg btn-success ms-1" id="updateButton">Look Perfect</a>
             @else
                 @if ($hasOrder)
@@ -939,7 +950,7 @@
                 @else
                     <a href="{{ route('packages') }}" class="btn btn-lg btn-success ms-1">Look Perfect</a>
                 @endif
-            @endguest
+            @endguest --}}
         </div>
     </div>
 
@@ -1152,19 +1163,19 @@
             // });
 
             @auth
-                $.ajax({
-                    url: "{{ route('saveLogo') }}",
-                    method: 'POST',
-                    headers: {
-                        'X-CSRF-TOKEN': "{{ csrf_token() }}",
-                    },
-                    data: {
-                        userId: {{ auth()->id() }},
-                        productId: {{ session()->get('product-id') }},
-                        logoString: sessionStorage.getItem('logoDataUrl'),
-                    },
-                })
-            @endauth
+            $.ajax({
+                url: "{{ route('saveLogo') }}",
+                method: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': "{{ csrf_token() }}",
+                },
+                data: {
+                    userId: {{ auth()->id() }},
+                    productId: {{ session()->get('product-id') }},
+                    logoString: sessionStorage.getItem('logoDataUrl'),
+                },
+            })
+        @endauth
         });
 
         @if ($hasOrder)

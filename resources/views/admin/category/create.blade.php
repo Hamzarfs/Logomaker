@@ -1,6 +1,3 @@
-@if($errors->any())
-@dd($errors->all())
-@endif
 <x-admin>
     @section('title', 'New Category')
 
@@ -89,19 +86,19 @@
                             <h3 class="card-title">Category Content</h3>
                         </div>
                         <div class="card-body">
+                            @foreach (range(1, 2) as $i)
+                                <div class="form-group">
+                                    <label for="heading-{{ $i }}">Section {{ $i }} heading</label>
+                                    <input type="text" class="form-control" id="heading-{{ $i }}"
+                                        name="headingg[]" required>
+                                    <x-error>headingg[{{ $i - 1 }}]</x-error>
+                                </div>
 
-                            <div class="form-group">
-                                <label for="section-1-heading">Section 1 heading</label>
-                                <input type="text" class="form-control" id="section-1-heading"
-                                    name="section-heading[]" required>
-                                <x-error>section-heading[0]</x-error>
-                            </div>
-                            <div class="form-group">
-                                <label for="section-2-heading">Section 2 heading</label>
-                                <input type="text" class="form-control" id="section-2-heading"
-                                    name="section-heading[]" required>
-                                <x-error>section-heading[1]</x-error>
-                            </div>
+                                @if (!$loop->last)
+                                    <hr class="border-{{ auth()->user()->mode === 'dark' ? 'light' : 'dark' }}">
+                                @endif
+                            @endforeach
+                            <hr class="border-{{ auth()->user()->mode === 'dark' ? 'light' : 'dark' }}">
                             @foreach (range(1, 7) as $i)
                                 <div class="form-group">
                                     <label for="section-{{ $i }}-title">Section {{ $i }}
