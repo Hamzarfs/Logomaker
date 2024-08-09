@@ -491,14 +491,21 @@
             </div>
         </div>
 
-        <div class="container custom-logo-section">
+        <div class="container custom-logo-section" >
+
             <h2>Start Making Custom {{ $categoryObj['name'] ?? '' }} Logos Now!</h2>
-            <form class="form-inline">
-                <input type="text" class="form-control custom-form-control" placeholder="Search">
-                <button type="submit" class="btn custom-btn-generate">Generate Logo</button>
+
+            <form class="form-inline" id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
+                @csrf
+                <input type="text" class="form-control custom-form-control" id="companyName11"
+                name="company" placeholder="Search" aria-label="Enter your company name" required>
+                <input type="submit" class="btn custom-btn-generate" value="Generate Logo">
             </form>
         </div>
     </div>
+
+
+
 
     <div class= "faqs" style= "background: #f6f9ff; margin-top:50px;">
         <div class="container faq-section">
@@ -544,12 +551,12 @@
                 alert("Please enter your company name.");
             }
 
-            {{-- 
+            {{--
             @auth
             @else
                 event.preventDefault()
                 location.assign("{{ route('login') }}")
-            @endauth 
+            @endauth
             --}}
         })
 

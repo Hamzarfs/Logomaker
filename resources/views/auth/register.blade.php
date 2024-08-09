@@ -68,7 +68,7 @@
                 </div>
             </div>
             <div class="col-md-6 text-center">
-                <img src="{{ asset('images/login-image.jpg') }}" alt="Register Image" class="img-fluid">
+                <img src="{{ asset('images/login-image.webp') }}" alt="Register Image" class="img-fluid">
             </div>
         </div>
         <div class="row justify-content-center mt-4">

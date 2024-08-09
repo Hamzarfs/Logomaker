@@ -12,6 +12,27 @@
 
     <style>
 
+form#companyForm {
+    padding-top: 10px;
+    height: 70px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sticky .input-group {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .owl-carousel .owl-item img {
     display: block;
     width: auto;
@@ -118,6 +139,7 @@
         .owl-nav button:focus {
             outline: none;
         }
+
         @media only screen and (max-width: 767px) {
     .owl-carousel .owl-item img {
 
@@ -126,35 +148,6 @@
     }
 }
 
-/* Custom scrollbar styles */
-::-webkit-scrollbar {
-    width: 8px; /* Width of the scrollbar */
-}
-
-::-webkit-scrollbar-track {
-    background: white; /* White background */
-}
-
-::-webkit-scrollbar-thumb {
-    background: #666BC0; /* Purple scrollbar */
-    border-radius: 8px; /* Rounded corners */
-    position: relative;
-}
-
-::-webkit-scrollbar-thumb::before {
-    content: 'VIP';
-    position: absolute;
-    top: 50%;
-    right: -50px;
-    transform: rotate(270deg) translateY(-50%);
-    transform-origin: center;
-    background-color: red; /* Red VIP tag background */
-    color: white; /* White text color */
-    padding: 5px 10px;
-    font-weight: bold;
-    border-radius: 5px 5px 0 0;
-}
-/* End Custom scrollbar styles  */
 
 .logotype-card {
     border: none;
@@ -199,7 +192,13 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Box shadow on hover */
 }
 
-
+@media (max-width: 768px) {
+    .sticky .input-group {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
+}
 
 
     </style>
@@ -215,14 +214,18 @@
                     <p style="color:#fff;">Unleash your creativity and watch your logo come to life effortlessly. Get in
                         touch with us now!</p>
 
-                    <form id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
-                        @csrf
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="companyName11" name="company"
-                                placeholder="Enter your company name" aria-label="Enter your company name">
-                            <input type="submit" class="custom-button-banner" value="Get Started">
-                        </div>
-                    </form>
+
+    <form id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
+        @csrf
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="companyName11" name="company"
+                placeholder="Enter your company name" aria-label="Enter your company name">
+            <input type="submit" class="custom-button-banner" value="Get Started">
+        </div>
+    </form>
+
+
+
                 </div>
                 <div class="col-lg-6 text-center banner-image-sec order-lg-2">
                     <img src="images/Logos pic.png" alt="Example" class="img-fluid">
@@ -284,7 +287,7 @@
                     </div>
                     <div class="col-md-2"></div>
                     <div class="col-md-5">
-                        <img src="images/111 1.png" class="img-fluid">
+                        <img src="{{url('images/bradinggif.gif')}}" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -618,36 +621,44 @@
     <div class="container my-5">
         <div class="row text-center logotypescard d-flex ">
             <div class="col-md-3">
+                <a href="{{url('/logos/arts-logo-maker')}}">
                 <div class="card logotype-card">
-                    <img src="{{url('images/logo-category-illustration-logo.png')}}" class="card-img-top" alt="Illustration Logo">
+                    <img src="{{url('images/logo-category-Arts-logo.webp')}}" class="card-img-top" alt="Arts Logos">
                     <div class="card-body">
-                        <p class="card-text">ILLUSTRATION LOGO</p>
+                        <p class="card-text">ARTS LOGO</p>
                     </div>
                 </div>
+            </a>
             </div>
             <div class="col-md-3">
+                <a href="{{url('/logos/beauty-logo-maker')}}">
                 <div class="card logotype-card">
-                    <img src="{{url('images/logo-category-nature-logo.png')}}" class="card-img-top" alt="Nature Logo">
+                    <img src="{{url('images/logo-category-Beauty-logo.webp')}}" class="card-img-top" alt="Beauty Logos">
                     <div class="card-body">
-                        <p class="card-text">NATURE LOGO</p>
+                        <p class="card-text">BEAUTY LOGOS</p>
                     </div>
                 </div>
+            </a>
             </div>
             <div class="col-md-3">
+                <a href="{{url('/logos/alphabets-logo-maker')}}">
                 <div class="card logotype-card">
-                    <img src="{{url('images/logo-category-abstract-logo.png')}}" class="card-img-top" alt="Abstract Logo">
+                    <img src="{{url('images/logo-category-Alphabet-logo.webp')}}" class="card-img-top" alt="Alphabets logos">
                     <div class="card-body">
-                        <p class="card-text">ABSTRACT LOGO</p>
+                        <p class="card-text">ALPHABETS LOGOS</p>
                     </div>
                 </div>
+            </a>
             </div>
             <div class="col-md-3">
+                <a href="{{url('/logos/cleaning-logo-maker')}}">
                 <div class="card logotype-card">
-                    <img src="{{url('images/logo-category-minimal-logo.png')}}" class="card-img-top" alt="Minimal Logo">
+                    <img src="{{url('images/logo-category-Cleaning-logo.webp')}}" class="card-img-top" alt="Cleanings Logos">
                     <div class="card-body">
-                        <p class="card-text">MINIMAL LOGO</p>
+                        <p class="card-text">ClEANINGS LOGOS</p>
                     </div>
                 </div>
+            </a>
             </div>
         </div>
     </div>
@@ -660,7 +671,7 @@
 
 
 
-<div class="container homepage-category-list">
+{{-- <div class="container homepage-category-list">
     <h2>Try Free Logo Maker for Every Business</h2>
     <p>Explore company logos made easy with our free logo maker tool for all types of professionals and industries.</p>
     <div class="category-buttons">
@@ -703,7 +714,24 @@
         <button>Trade & Logistics Logos</button>
         <button>Travel & Hotel Logos</button>
     </div>
+</div> --}}
+
+
+
+<div class="container homepage-category-list">
+    <h2>Try Free Logo Maker for Every Business</h2>
+    <p>Explore company logos made easy with our free logo maker tool for all types of professionals and industries.</p>
+    <div class="category-buttons">
+        @foreach ($categories as $category)
+            @if ($category->products->isNotEmpty())
+            <a href="{{ url('/logos/'. $category->slug)}}" class="logo-ideas-link">
+
+            <button >{{ $category->name }} Logos</button></a>
+            @endif
+        @endforeach
+    </div>
 </div>
+
 
 
 
@@ -847,6 +875,23 @@
 
 
     <!-- <-----------------End 1M Happy Customers Counting---------------->
+
+
+        <script>
+            window.onscroll = function() {makeSticky()};
+
+var form = document.getElementById("companyForm");
+var sticky = form.offsetTop;
+
+function makeSticky() {
+  if (window.pageYOffset > sticky) {
+    form.classList.add("sticky");
+  } else {
+    form.classList.remove("sticky");
+  }
+}
+
+        </script>
     <script>
         function addText() {
             const businessName = document.getElementById('businessName').value;

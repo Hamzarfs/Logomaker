@@ -50,6 +50,43 @@
         @font-face { font-family: 'LightSport-DEMO'; src: url('fonts/Light Sport DEMO.otf') format('truetype'); }
 
 
+
+
+
+
+
+
+        /* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: white; /* White background */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666BC0; /* Purple scrollbar */
+    border-radius: 8px; /* Rounded corners */
+    position: relative;
+}
+
+::-webkit-scrollbar-thumb::before {
+    content: 'VIP';
+    position: absolute;
+    top: 50%;
+    right: -50px;
+    transform: rotate(270deg) translateY(-50%);
+    transform-origin: center;
+    background-color: red; /* Red VIP tag background */
+    color: white; /* White text color */
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+/* End Custom scrollbar styles  */
+
+
     </style>
 
     <!-- Brevo Conversations {literal} -->
