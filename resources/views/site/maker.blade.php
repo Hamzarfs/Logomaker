@@ -8,9 +8,9 @@
 
     <style>
         /* body {
-                                font-family: Arial, sans-serif;
+                                        font-family: Arial, sans-serif;
 
-                            } */
+                                    } */
 
         .col-md-2 {
             flex: 0 0 auto;
@@ -125,29 +125,29 @@
         /* custom css for editor */
 
         /* @font-face {
-                        font-family: 'Roboto';
-                        src: url('fonts/Roboto-Regular.ttf') format('truetype');
-                    }
+                                font-family: 'Roboto';
+                                src: url('fonts/Roboto-Regular.ttf') format('truetype');
+                            }
 
-                    @font-face {
-                        font-family: 'Open Sans';
-                        src: url('fonts/OpenSans-Regular.ttf') format('truetype');
-                    }
+                            @font-face {
+                                font-family: 'Open Sans';
+                                src: url('fonts/OpenSans-Regular.ttf') format('truetype');
+                            }
 
-                    @font-face {
-                        font-family: 'Lato';
-                        src: url('fonts/Lato-Regular.ttf') format('truetype');
-                    }
+                            @font-face {
+                                font-family: 'Lato';
+                                src: url('fonts/Lato-Regular.ttf') format('truetype');
+                            }
 
-                    @font-face {
-                        font-family: 'Montserrat';
-                        src: url('fonts/Montserrat-Regular.ttf') format('truetype');
-                    }
+                            @font-face {
+                                font-family: 'Montserrat';
+                                src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+                            }
 
-                    @font-face {
-                        font-family: 'Poppins';
-                        src: url('fonts/Poppins-Regular.ttf') format('truetype');
-                    } */
+                            @font-face {
+                                font-family: 'Poppins';
+                                src: url('fonts/Poppins-Regular.ttf') format('truetype');
+                            } */
 
         #logo-canvas {
             border: 1px solid #ddd;
@@ -358,54 +358,54 @@
                                     style="font-family: 'LightSport-DEMO';">LightSport DEMO</option>
 
                                 <!-- <option value="Roboto" style="font-family: 'Roboto';">Roboto</option>
-                                        <option value="Lato" style="font-family: 'Lato';">Lato</option>
-                                        <option value="Montserrat" style="font-family: 'Montserrat';">Montserrat</option>
-                                        <option value="Poppins" style="font-family: 'Poppins';">Poppins</option>
-                                        <option value="Arial" style="font-family: Arial;">Arial</option>
-                                        <option value="Verdana" style="font-family: Verdana;">Verdana</option>
-                                        <option value="Courier New" style="font-family: Courier New;">Courier New</option>
-                                        <option value="Georgia" style="font-family: Georgia;">Georgia</option>
-                                        <option value="Times New Roman" style="font-family: Times New Roman;">Times New Roman
-                                        </option>
-                                        <option value="Trebuchet MS" style="font-family: Trebuchet MS;">Trebuchet MS</option>
-                                        <option value="Comic Sans MS" style="font-family: Comic Sans MS;">Comic Sans MS</option>
-                                        <option value="Tahoma" style="font-family: Tahoma;">Tahoma</option>
-                                        <option value="Impact" style="font-family: Impact;">Impact</option>
-                                        <option value="Arial Black" style="font-family: Arial Black;">Arial Black</option>
-                                        <option value="Lucida Console" style="font-family: Lucida Console;">Lucida Console</option>
-                                        <option value="Lucida Sans Unicode" style="font-family: Lucida Sans Unicode;">Lucida Sans
-                                            Unicode</option>
-                                        <option value="Consolas" style="font-family: Consolas;">Consolas</option>
-                                        <option value="Palatino Linotype" style="font-family: Palatino Linotype;">Palatino Linotype
-                                        </option>
-                                        <option value="Garamond" style="font-family: Garamond;">Garamond</option>
-                                        <option value="MS Serif" style="font-family: MS Serif;">MS Serif</option>
-                                        <option value="MS Sans Serif" style="font-family: MS Sans Serif;">MS Sans Serif</option>
-                                        <option value="Bookman Old Style" style="font-family: Bookman Old Style;">Bookman Old Style
-                                        </option>
-                                        <option value="Arial Narrow" style="font-family: Arial Narrow;">Arial Narrow</option>
-                                        <option value="Century Gothic" style="font-family: Century Gothic;">Century Gothic</option>
-                                        <option value="Frank Ruhl Libre" style="font-family: Frank Ruhl Libre;">Frank Ruhl Libre
-                                        </option>
-                                        <option value="Droid Sans" style="font-family: Droid Sans;">Droid Sans</option>
-                                        <option value="Bebas Neue" style="font-family: Bebas Neue;">Bebas Neue</option>
-                                        <option value="Playfair Display" style="font-family: Playfair Display;">Playfair Display
-                                        </option>
-                                        <option value="Poppins" style="font-family: 'Poppins';">Poppins</option>
-                                        <option value="Montserrat" style="font-family: 'Montserrat';">Montserrat</option>
-                                        <option value="Lora" style="font-family: Lora;">Lora</option>
-                                        <option value="Merriweather" style="font-family: Merriweather;">Merriweather</option>
-                                        <option value="Raleway" style="font-family: Raleway;">Raleway</option>
-                                        <option value="Quicksand" style="font-family: Quicksand;">Quicksand</option>
-                                        <option value="PT Sans" style="font-family: PT Sans;">PT Sans</option>
-                                        <option value="Ubuntu" style="font-family: Ubuntu;">Ubuntu</option>
-                                        <option value="Fira Sans" style="font-family: Fira Sans;">Fira Sans</option>
-                                        <option value="Nunito" style="font-family: Nunito;">Nunito</option>
-                                        <option value="Source Sans Pro" style="font-family: Source Sans Pro;">Source Sans Pro
-                                        </option>
-                                        <option value="Open Sans" style="font-family: 'Open Sans';">Open Sans</option>
-                                        <option value="Lato" style="font-family: 'Lato';">Lato</option>
-                                        <option value="Exo 2" style="font-family: 'Exo 2';">Exo 2</option> -->
+                                                <option value="Lato" style="font-family: 'Lato';">Lato</option>
+                                                <option value="Montserrat" style="font-family: 'Montserrat';">Montserrat</option>
+                                                <option value="Poppins" style="font-family: 'Poppins';">Poppins</option>
+                                                <option value="Arial" style="font-family: Arial;">Arial</option>
+                                                <option value="Verdana" style="font-family: Verdana;">Verdana</option>
+                                                <option value="Courier New" style="font-family: Courier New;">Courier New</option>
+                                                <option value="Georgia" style="font-family: Georgia;">Georgia</option>
+                                                <option value="Times New Roman" style="font-family: Times New Roman;">Times New Roman
+                                                </option>
+                                                <option value="Trebuchet MS" style="font-family: Trebuchet MS;">Trebuchet MS</option>
+                                                <option value="Comic Sans MS" style="font-family: Comic Sans MS;">Comic Sans MS</option>
+                                                <option value="Tahoma" style="font-family: Tahoma;">Tahoma</option>
+                                                <option value="Impact" style="font-family: Impact;">Impact</option>
+                                                <option value="Arial Black" style="font-family: Arial Black;">Arial Black</option>
+                                                <option value="Lucida Console" style="font-family: Lucida Console;">Lucida Console</option>
+                                                <option value="Lucida Sans Unicode" style="font-family: Lucida Sans Unicode;">Lucida Sans
+                                                    Unicode</option>
+                                                <option value="Consolas" style="font-family: Consolas;">Consolas</option>
+                                                <option value="Palatino Linotype" style="font-family: Palatino Linotype;">Palatino Linotype
+                                                </option>
+                                                <option value="Garamond" style="font-family: Garamond;">Garamond</option>
+                                                <option value="MS Serif" style="font-family: MS Serif;">MS Serif</option>
+                                                <option value="MS Sans Serif" style="font-family: MS Sans Serif;">MS Sans Serif</option>
+                                                <option value="Bookman Old Style" style="font-family: Bookman Old Style;">Bookman Old Style
+                                                </option>
+                                                <option value="Arial Narrow" style="font-family: Arial Narrow;">Arial Narrow</option>
+                                                <option value="Century Gothic" style="font-family: Century Gothic;">Century Gothic</option>
+                                                <option value="Frank Ruhl Libre" style="font-family: Frank Ruhl Libre;">Frank Ruhl Libre
+                                                </option>
+                                                <option value="Droid Sans" style="font-family: Droid Sans;">Droid Sans</option>
+                                                <option value="Bebas Neue" style="font-family: Bebas Neue;">Bebas Neue</option>
+                                                <option value="Playfair Display" style="font-family: Playfair Display;">Playfair Display
+                                                </option>
+                                                <option value="Poppins" style="font-family: 'Poppins';">Poppins</option>
+                                                <option value="Montserrat" style="font-family: 'Montserrat';">Montserrat</option>
+                                                <option value="Lora" style="font-family: Lora;">Lora</option>
+                                                <option value="Merriweather" style="font-family: Merriweather;">Merriweather</option>
+                                                <option value="Raleway" style="font-family: Raleway;">Raleway</option>
+                                                <option value="Quicksand" style="font-family: Quicksand;">Quicksand</option>
+                                                <option value="PT Sans" style="font-family: PT Sans;">PT Sans</option>
+                                                <option value="Ubuntu" style="font-family: Ubuntu;">Ubuntu</option>
+                                                <option value="Fira Sans" style="font-family: Fira Sans;">Fira Sans</option>
+                                                <option value="Nunito" style="font-family: Nunito;">Nunito</option>
+                                                <option value="Source Sans Pro" style="font-family: Source Sans Pro;">Source Sans Pro
+                                                </option>
+                                                <option value="Open Sans" style="font-family: 'Open Sans';">Open Sans</option>
+                                                <option value="Lato" style="font-family: 'Lato';">Lato</option>
+                                                <option value="Exo 2" style="font-family: 'Exo 2';">Exo 2</option> -->
                             </select>
 
                             <button id="add-text" class="btn"><i class="fas fa-plus"></i> Add Text</button>
@@ -1074,16 +1074,16 @@
             });
 
             // Save the canvas content as an image
-            $('#save-logo').click(function() {
-                var dataURL = canvas.toDataURL({
-                    format: 'png',
-                    quality: 1
-                });
-                var link = document.createElement('a');
-                link.href = dataURL;
-                link.download = 'logo.png';
-                link.click();
-            });
+            // $('#save-logo').click(function() {
+            //     var dataURL = canvas.toDataURL({
+            //         format: 'png',
+            //         quality: 1
+            //     });
+            //     var link = document.createElement('a');
+            //     link.href = dataURL;
+            //     link.download = 'logo.png';
+            //     link.click();
+            // });
 
             // $('.redirect-to-pckgs-btn').click(function() {
             //     var dataURL = canvas.toDataURL({
@@ -1128,14 +1128,32 @@
         });
 
         $(function() {
+            let dataURL = sessionStorage.getItem('logoDataUrl')
+
             $.ajax({
-                url: "{{ route('saveLogo') }}",
+                url: "{{ route('putImgStringIntoSession') }}",
                 method: 'POST',
-                data: {
-                    userId: {{ auth()->id() }},
-                    productId: {{ session()->get('product-id') }},
+                data: { dataURL },
+                success: function() {
+                    $.ajax({
+                        url: "{{ route('saveLogo') }}",
+                        method: 'POST',
+                        data: {
+                            userId: {{ auth()->id() }},
+                            productId: {{ session()->get('product-id') }},
+                        },
+                    })
                 },
             })
+
+            // $.ajax({
+            //     url: "{{ route('saveLogo') }}",
+            //     method: 'POST',
+            //     data: {
+            //         userId: {{ auth()->id() }},
+            //         productId: {{ session()->get('product-id') }},
+            //     },
+            // })
 
             $('.redirect-to-pckgs-btn').click(function() {
                 let dataURL = canvas.toDataURL({
@@ -1145,25 +1163,34 @@
                 $.ajax({
                     url: "{{ route('putImgStringIntoSession') }}",
                     method: 'POST',
-                    data: {dataURL},
+                    data: { dataURL },
                     success: function() {
                         sessionStorage.setItem('logoDataUrl', dataURL)
+                        $.ajax({
+                            url: "{{ route('saveLogo') }}",
+                            method: 'POST',
+                            data: {
+                                userId: {{ auth()->id() }},
+                                productId: {{ session()->get('product-id') }},
+                            },
+                        })
                         location.assign("{{ route('packages') }}")
                     },
                 })
             })
 
             $('#save-logo').click(function() {
+                let dataURL = canvas.toDataURL({
+                    format: 'png',
+                    quality: 1
+                });
                 @auth
-                    let dataURL = canvas.toDataURL({
-                        format: 'png',
-                        quality: 1
-                    });
                     $.ajax({
                         url: "{{ route('putImgStringIntoSession') }}",
                         method: 'POST',
-                        data: {dataURL},
+                        data: { dataURL },
                         success: function() {
+                            sessionStorage.setItem('logoDataUrl', dataURL)
                             $.ajax({
                                 url: "{{ route('saveLogo') }}",
                                 method: 'POST',
@@ -1175,6 +1202,15 @@
                         },
                     })
                 @endauth
+
+                // var dataURL = canvas.toDataURL({
+                //     format: 'png',
+                //     quality: 1
+                // });
+                var link = document.createElement('a');
+                link.href = dataURL;
+                link.download = 'logo.png';
+                link.click();
             })
         })
     </script>
