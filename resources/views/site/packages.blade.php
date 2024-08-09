@@ -225,7 +225,7 @@
     </style>
 
 
-    <div class="container">
+    <div class="container mb-5">
         <div class="packages-header">
             <div class="dynamic-heading" id="dynamicHeading">Our Packages</div>
             <p>Select the best package that suits your needs</p>
@@ -436,7 +436,8 @@
                 var name = this.dataset.name
                 // Correctly set the URL with only the price parameter
                 let urlBase = "{{ url('/') }}";
-                var newUrl = urlBase + href.split('?')[0] + '?price=' + encodeURIComponent(price) + "&name=" + encodeURIComponent(name);
+                var newUrl = urlBase + href.split('?')[0] + '?price=' + encodeURIComponent(price) +
+                    "&name=" + encodeURIComponent(name);
                 window.location.href = newUrl; // Redirects to the checkout page with the price parameter
             });
         });
