@@ -941,7 +941,7 @@
             @else
                 <a href="{{ route('login') }}" class="btn btn-lg btn-success ms-1" id="updateButton">Look Perfect</a>
             @endauth --}}
-            
+
             {{-- @guest
                 <a href="{{ route('login') }}" class="btn btn-lg btn-success ms-1" id="updateButton">Look Perfect</a>
             @else
@@ -1051,6 +1051,7 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ asset('js/ajaxSetup.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.5.0/fabric.min.js"></script>
     <script>
         var company = @json(session('company', []));
@@ -1117,7 +1118,7 @@
                             evented: false
                         });
                         canvas.add(sampleText1);
-                        // canvas.renderAll()
+                        canvas.renderAll()
 
                         // var sampleText2 = new fabric.Textbox('Slogan Here', {
                         //     left: canvas.width / 2 - 20,
@@ -1134,12 +1135,6 @@
 
                         const dataUrl = canvas.toDataURL()
                         sessionStorage.setItem('logoDataUrl', dataUrl)
-                        // window.logoDataUrl = dataUrl
-                        // document.getElementById('logo').src = dataUrl
-                        // document.getElementByClass('logo').src = dataUrl
-
-                        // const imgTags = document.getElementsByClassName('logo')
-                        // imgTags.forEach()
 
                         $('.logo-mockup').each(function() {
                             this.src = dataUrl
@@ -1155,27 +1150,25 @@
 
             loadCarSVG();
 
-            // load image
-
-            // dataURL = canvas.toDataURL({
-            //     format: 'png',
-            //     quality: 1
-            // });
-
-            @auth
             $.ajax({
-                url: "{{ route('saveLogo') }}",
+                url: "{{ route('putImgStringIntoSession') }}",
                 method: 'POST',
-                headers: {
-                    'X-CSRF-TOKEN': "{{ csrf_token() }}",
-                },
                 data: {
-                    userId: {{ auth()->id() }},
-                    productId: {{ session()->get('product-id') }},
-                    logoString: sessionStorage.getItem('logoDataUrl'),
+                    dataURL: sessionStorage.getItem('logoDataUrl'),
                 },
             })
-        @endauth
+
+            @auth
+                $.ajax({
+                    url: "{{ route('saveLogo') }}",
+                    method: 'POST',
+                    data: {
+                        userId: {{ auth()->id() }},
+                        productId: {{ session()->get('product-id') }},
+                        // logoString: sessionStorage.getItem('logoDataUrl'),
+                    },
+                })
+            @endauth
         });
 
         @if ($hasOrder)
@@ -1185,21 +1178,6 @@
                     format: 'png',
                     quality: 1
                 });
-
-                // @auth
-                //     $.ajax({
-                //         url: "{{ route('saveLogo') }}",
-                //         method: 'POST',
-                //         headers: {
-                //             'X-CSRF-TOKEN': "{{ csrf_token() }}",
-                //         },
-                //         data: {
-                //             userId: {{ auth()->id() }},
-                //             productId: {{ session()->get('product-id') }},
-                //             logoString: dataURL,
-                //         },
-                //     })
-                // @endauth
 
                 var link = document.createElement('a');
                 link.href = dataURL;

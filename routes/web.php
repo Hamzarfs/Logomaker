@@ -32,7 +32,7 @@ use App\Http\Controllers\Site\GeneralController; // Update this line
 Route::get('/', [MainController::class, 'index'])->name('homepage');
 
 Route::middleware(['role:user', 'auth'])->group(function () {
-    Route::get('/checkout2', [MainController::class, 'checkout2'])->name('checkout2');
+    // Route::get('/checkout2', [MainController::class, 'checkout2'])->name('checkout2');
     // Route::get('/checkout', [MainController::class, 'checkout'])->name('checkout');
     Route::get('/packages', [MainController::class, 'packages'])->name('packages');
     Route::get('/checkout', [MainController::class, 'checkout'])->name('checkout');
@@ -54,6 +54,8 @@ Route::middleware(['role:user', 'auth'])->group(function () {
         Route::get('', [FavouriteController::class, 'index'])->name('index');
     });
 });
+
+Route::post('putImgStringIntoSession', [MainController::class, 'putImgStringIntoSession'])->name('putImgStringIntoSession');
 
 
 Route::get('/select-color', [MainController::class, 'selectColor'])->name('select-color');

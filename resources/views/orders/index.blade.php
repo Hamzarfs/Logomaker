@@ -12,6 +12,8 @@
                         <th>#</th>
                         <th>User</th>
                         <th>Product</th>
+                        <th>Date</th>
+                        <th>Status</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -21,20 +23,19 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $o->user->name }}</td>
                             <td>
-                            @if($o->product && !empty($o->product->name))
-                                {{ $o->product->name }}
-                            @endif    
-                        
+                                @if($o->product && !empty($o->product->name))
+                                    {{ $o->product->name }}
+                                @endif    
                             </td>
-
-
+                            <td>
+                                {{ $o->created_at->format('m-d-Y') }}
+                            </td>
+                            <td>{{ ucwords($o->status) }}</td>
                             <td>
                                 @if($o->product && !empty($o->product->name))
-                                <button class="btn btn-primary preview-btn"
-                                    data-file='{{ $o->user->id }}_{{ $o->product->id }}.png' data-toggle="modal"
-                                    data-target="#previewModal">
-                                    Preview
-                                </button>
+                                    <button class="btn btn-primary preview-btn" data-file='{{ $o->user->id }}_{{ $o->product->id }}.png' data-toggle="modal" data-target="#previewModal">
+                                        Preview
+                                    </button>
                                 @endif    
                             </td>
                         </tr>
@@ -50,7 +51,7 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    {{-- Preview Modal --}}
     <div class="modal fade" id="previewModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
