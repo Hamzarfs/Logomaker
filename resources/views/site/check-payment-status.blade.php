@@ -12,7 +12,7 @@
         }
     </style>
 
-    <div>
+    <div class="text-center my-5 py-5">
         <h1>Checking status. Please Wait!!</h1>
     </div>
 
