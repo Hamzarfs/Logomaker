@@ -1111,7 +1111,7 @@
                         var sampleText1 = new fabric.Textbox(company, {
                             left: canvas.width / 2.5 - 10,
                             top: canvas.height / 2 + 150,
-                            fontSize: 50,
+                            fontSize: 30,
                             fill: '#000000',
                             fontFamily: "{{ session('font') }}",
                             textAlign: 'left',

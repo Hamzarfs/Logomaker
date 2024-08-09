@@ -106,7 +106,15 @@ class GeneralController extends \App\Http\Controllers\Controller
     }
     public function customlogo()
     {
-        return view('site/custom-logo');
+        $categories = Category::where('is_top', 1)
+        ->with(['products' => function ($query) {
+            $query->limit(1000); // Ensure to fetch only one product per category
+        }])
+        ->orderBy('id', 'DESC')
+        ->get();
+        return view('site/custom-logo', compact('categories'));
+
+         
     }
     public function printing()
     {
