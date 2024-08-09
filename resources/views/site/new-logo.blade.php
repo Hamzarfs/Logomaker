@@ -274,7 +274,7 @@
                     {{-- <form class="cta-form" method="post" action="{{ url('/store-session-data') }}">
                         <input type="text" name="company_name" class="form-control" placeholder="Enter your company name"
                             maxlength="30">
-                           
+
                         <button type="submit" class="btn btn-primary">Get a Logo</button>
                     </form> --}}
                     <form id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
@@ -399,7 +399,7 @@
 
         <div class="row custom-section">
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/select1.webp') }}" alt="Placeholder Image">
+                <img src="{{ asset('images/select1.png') }}" alt="Placeholder Image">
             </div>
             <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
@@ -417,13 +417,13 @@
                 </div>
             </div>
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Personalization.webp') }}" alt="Placeholder Image">
+                <img src="{{ asset('images/Personalization.png') }}" alt="Placeholder Image">
             </div>
         </div>
 
         <div class="row custom-section">
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Start Branding.webp') }}" alt="Placeholder Image">
+                <img src="{{ asset('images/Start Branding.png') }}" alt="Placeholder Image">
             </div>
             <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
@@ -435,11 +435,17 @@
 
         <div class="container custom-logo-section">
             <h2>Start Making Custom {{ $categoryObj['name'] ?? '' }} Logos Now!</h2>
-            <form class="form-inline">
-                <input type="text" class="form-control custom-form-control" placeholder="Search">
-                <button type="submit" class="btn custom-btn-generate">Generate Logo</button>
+            <form class="form-inline" id="companyForm3" method="POST" action="{{ url('/store-session-data') }}">
+                @csrf
+                <input type="text" class="form-control custom-form-control" id="companyName2"
+                name="company" placeholder="Search" aria-label="Enter your company name" required>
+                <input type="hidden" name="flow" value="category">
+                <input type="submit" class="btn custom-btn-generate" value="Generate Logo">
             </form>
         </div>
+
+
+
 
         <div class="container custom-section-title">
             <h2>{{ $headingsData[1] ?? '' }}</h2>
@@ -453,13 +459,13 @@
                 </div>
             </div>
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Logo Symbol.webp') }}" alt="Placeholder Image">
+                <img src="{{ asset('images/Logo Symbol.png') }}" alt="Placeholder Image">
             </div>
         </div>
 
         <div class="row custom-section">
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Color Choices.webp') }}" alt="Placeholder Image">
+                <img src="{{ asset('images/Color Choices.png') }}" alt="Placeholder Image">
             </div>
             <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
@@ -477,13 +483,13 @@
                 </div>
             </div>
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Fonts.webp') }}" alt="Placeholder Image">
+                <img src="{{ asset('images/Fonts.png') }}" alt="Placeholder Image">
             </div>
         </div>
 
         <div class="row custom-section">
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Logo Styles.webp') }}" alt="Placeholder Image">
+                <img src="{{ asset('images/Logo Styles.png') }}" alt="Placeholder Image">
             </div>
             <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
@@ -493,11 +499,16 @@
             </div>
         </div>
 
-        <div class="container custom-logo-section">
+        <div class="container custom-logo-section" >
+
             <h2>Start Making Custom {{ $categoryObj['name'] ?? '' }} Logos Now!</h2>
-            <form class="form-inline">
-                <input type="text" class="form-control custom-form-control" placeholder="Search">
-                <button type="submit" class="btn custom-btn-generate">Generate Logo</button>
+
+            <form class="form-inline" id="companyForm3" method="POST" action="{{ url('/store-session-data') }}">
+                @csrf
+                <input type="text" class="form-control custom-form-control" id="companyName11"
+                name="company" placeholder="Search" aria-label="Enter your company name" required>
+                <input type="hidden" name="flow" value="category">
+                <input type="submit" class="btn custom-btn-generate" value="Generate Logo">
             </form>
         </div>
     </div>
@@ -671,12 +682,12 @@
                 alert("Please enter your company name.");
             }
 
-            {{-- 
+            {{--
             @auth
             @else
                 event.preventDefault()
                 location.assign("{{ route('login') }}")
-            @endauth 
+            @endauth
             --}}
         })
 
