@@ -1,3 +1,5 @@
+{{-- @dd($cmsData,$faqData,$headingsData) --}}
+@dd($cmsData,$faqData,$headingsData)
 @extends('site.common')
 
 @section('title', 'Category ' . $categoryObj['name'] ?? '')
@@ -398,10 +400,10 @@
         </div>
 
         <div class="row custom-section">
-            <div class="col-md-7 custom-image-container">
+            <div class="col-md-6 custom-image-container">
                 <img src="{{ asset('images/select1.png') }}" alt="Placeholder Image">
             </div>
-            <div class="col-md-5 custom-content-container">
+            <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
                     <h2 style="font-weight:700;">{{ $cmsData[0]['title'] ?? '' }}</h2>
                     {!! $cmsData[0]['content'] ?? '' !!}
@@ -410,22 +412,22 @@
         </div>
 
         <div class="row custom-section">
-            <div class="col-md-5 custom-content-container">
+            <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
                     <h2 style="font-weight:700;">{{ $cmsData[1]['title'] ?? '' }}</h2>
                     {!! $cmsData[1]['content'] ?? '' !!}
                 </div>
             </div>
-            <div class="col-md-7 custom-image-container">
+            <div class="col-md-6 custom-image-container">
                 <img src="{{ asset('images/Personalization.png') }}" alt="Placeholder Image">
             </div>
         </div>
 
         <div class="row custom-section">
-            <div class="col-md-7 custom-image-container">
+            <div class="col-md-6 custom-image-container">
                 <img src="{{ asset('images/Start Branding.png') }}" alt="Placeholder Image">
             </div>
-            <div class="col-md-5 custom-content-container">
+            <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
                     <h2 style="font-weight:700;">{{ $cmsData[2]['title'] ?? '' }}</h2>
                     {!! $cmsData[2]['content'] ?? '' !!}
@@ -434,7 +436,7 @@
         </div>
 
         <div class="container custom-logo-section">
-            <h2>Start Making Custom Attorney & Law Firm Logos Now!</h2>
+            <h2>Start Making Custom {{ $categoryObj['name'] ?? '' }} Logos Now!</h2>
             <form class="form-inline">
                 <input type="text" class="form-control custom-form-control" placeholder="Search">
                 <button type="submit" class="btn custom-btn-generate">Generate Logo</button>
@@ -446,22 +448,22 @@
         </div>
 
         <div class="row custom-section">
-            <div class="col-md-5 custom-content-container">
+            <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
                     <h2>{{ $cmsData[3]['title'] ?? '' }}</h2>
                     {!! $cmsData[3]['content'] ?? '' !!}
                 </div>
             </div>
-            <div class="col-md-7 custom-image-container">
+            <div class="col-md-6 custom-image-container">
                 <img src="{{ asset('images/Logo Symbol.png') }}" alt="Placeholder Image">
             </div>
         </div>
 
         <div class="row custom-section">
-            <div class="col-md-7 custom-image-container">
+            <div class="col-md-6 custom-image-container">
                 <img src="{{ asset('images/Color Choices.png') }}" alt="Placeholder Image">
             </div>
-            <div class="col-md-5 custom-content-container">
+            <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
                     <h2 style="font-weight:700;">{{ $cmsData[4]['title'] ?? '' }}</h2>
                     {!! $cmsData[4]['content'] ?? '' !!}
@@ -470,22 +472,22 @@
         </div>
 
         <div class="row custom-section">
-            <div class="col-md-5 custom-content-container">
+            <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
                     <h2 style="font-weight:700;">{{ $cmsData[5]['title'] ?? '' }}</h2>
                     {!! $cmsData[5]['content'] ?? '' !!}
                 </div>
             </div>
-            <div class="col-md-7 custom-image-container">
+            <div class="col-md-6 custom-image-container">
                 <img src="{{ asset('images/Fonts.png') }}" alt="Placeholder Image">
             </div>
         </div>
 
         <div class="row custom-section">
-            <div class="col-md-7 custom-image-container">
+            <div class="col-md-6 custom-image-container">
                 <img src="{{ asset('images/Logo Styles.png') }}" alt="Placeholder Image">
             </div>
-            <div class="col-md-5 custom-content-container">
+            <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
                     <h2 style="font-weight:700;">{{ $cmsData[6]['title'] ?? '' }}</h2>
                     {!! $cmsData[6]['content'] ?? '' !!}
@@ -504,7 +506,7 @@
 
     <div class= "faqs" style= "background: #f6f9ff; margin-top:50px;">
         <div class="container faq-section">
-            <h2 class="text-center mb-4">Frequently Asked Questions About Childcare Logos</h2>
+            <h2 class="text-center mb-4">Frequently Asked Questions About {{ $categoryObj['name'] ?? '' }} Logos</h2>
             <div id="accordion">
 
                 @foreach ($faqData as $i => $faq)

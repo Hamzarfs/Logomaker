@@ -48,6 +48,9 @@ class CategoryController extends Controller
             'section.*' => 'required|array',
             'section.*.title' => 'required|string',
             'section.*.content' => 'required|string',
+
+            'section-heading' => 'required|array',
+            'section-heading.*' => 'required|string',
         ]);
 
         $baseSlug = Str::slug($request->name);
@@ -72,8 +75,9 @@ class CategoryController extends Controller
 
         $sectionsData = $request->input('section');
         $faqsData = $request->input('faq');
+        $headingsData = $request->input('section-heading');
 
-        DB::transaction(function () use ($sectionsData, $faqsData, $category) {
+        DB::transaction(function () use ($sectionsData, $faqsData, $category, $headingsData) {
             foreach ($sectionsData as $i => $value) {
                 foreach ($value as $key => $v) {
                     $category->contents()->create([
@@ -90,6 +94,13 @@ class CategoryController extends Controller
                         'value' => $v,
                     ]);
                 }
+            }
+
+            foreach ($headingsData as $i => $value) {
+                $category->contents()->create([
+                    'key' => sprintf("section-heading-%d", $i + 1),
+                    'value' => $value,
+                ]);
             }
         });
 

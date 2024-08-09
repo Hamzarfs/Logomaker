@@ -1,3 +1,6 @@
+@if($errors->any())
+@dd($errors->all())
+@endif
 <x-admin>
     @section('title', 'New Category')
 
@@ -86,6 +89,19 @@
                             <h3 class="card-title">Category Content</h3>
                         </div>
                         <div class="card-body">
+
+                            <div class="form-group">
+                                <label for="section-1-heading">Section 1 heading</label>
+                                <input type="text" class="form-control" id="section-1-heading"
+                                    name="section-heading[]" required>
+                                <x-error>section-heading[0]</x-error>
+                            </div>
+                            <div class="form-group">
+                                <label for="section-2-heading">Section 2 heading</label>
+                                <input type="text" class="form-control" id="section-2-heading"
+                                    name="section-heading[]" required>
+                                <x-error>section-heading[1]</x-error>
+                            </div>
                             @foreach (range(1, 7) as $i)
                                 <div class="form-group">
                                     <label for="section-{{ $i }}-title">Section {{ $i }}
@@ -95,8 +111,7 @@
                                     <x-error>section-{{ $i }}-title</x-error>
                                 </div>
                                 <label>Section {{ $i }} content</label>
-                                <textarea id="section-{{ $i }}-content" name="section[{{ $i - 1 }}][content]">
-                                </textarea>
+                                <textarea id="section-{{ $i }}-content" name="section[{{ $i - 1 }}][content]"></textarea>
                                 @if (!$loop->last)
                                     <hr class="border-{{ auth()->user()->mode === 'dark' ? 'light' : 'dark' }}">
                                 @endif
