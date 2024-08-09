@@ -81,13 +81,15 @@ class MainController extends \App\Http\Controllers\Controller
     {
         $userId = auth()->user()?->id;
         $image = session('image');
-        $product = Product::where('image', $image)->first();
-        if ($product) {
-            $productId = $product->id;
-        }
+        $productId = Product::where('image', $image)->value('id');
+        // if ($product) {
+        //     $productId = $product->id;
+        // }
         $hasOrder = Order::where('product_id', $productId)
             ->where('user_id',  $userId)
+            ->where('status', 'paid')
             ->exists();
+
         return view('site/maker', compact('hasOrder'));
     }
 
@@ -173,9 +175,12 @@ class MainController extends \App\Http\Controllers\Controller
         //     $productId = $product->id;
         // }
         // die($productId."AAAAAA".auth()->user()->id );
+
         $hasOrder = Order::where('product_id', $productId)
             ->where('user_id',  $userId)
+            ->where('status', 'paid')
             ->exists();
+            
         return view('site/preview', compact('hasOrder'));
     }
 
