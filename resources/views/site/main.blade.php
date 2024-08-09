@@ -16,6 +16,33 @@
     display: block;
     width: auto;
 }
+
+.homepage-category-list {
+        text-align: center;
+        padding: 50px 0;
+    }
+    .category-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .category-buttons button {
+        background-color: #d3e3fc;
+        border: none;
+        color: #333;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 20px;
+        font-size: 14px;
+        transition: background-color 0.3s;
+    }
+    .category-buttons button:hover {
+        background-color: #b0c7ec;
+    }
+        #testimonial-section {
+            background-color: #f9f9f9;
+        }
+
         .testimonial-card {
             background-color: #ffffff;
             border: none;
@@ -98,6 +125,83 @@
         width: auto;
     }
 }
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: white; /* White background */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666BC0; /* Purple scrollbar */
+    border-radius: 8px; /* Rounded corners */
+    position: relative;
+}
+
+::-webkit-scrollbar-thumb::before {
+    content: 'VIP';
+    position: absolute;
+    top: 50%;
+    right: -50px;
+    transform: rotate(270deg) translateY(-50%);
+    transform-origin: center;
+    background-color: red; /* Red VIP tag background */
+    color: white; /* White text color */
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+/* End Custom scrollbar styles  */
+
+.logotype-card {
+    border: none;
+    background-color: #f0f8ff; /* Light background color for the cards */
+    transition: box-shadow 0.3s ease;
+    border-radius: 15px; /* Rounded corners */
+    padding-top: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.logotype-card img {
+    /* padding: 20px;
+    border-radius: 15px 15px 0 0;
+    width: 160px;
+    align-self: center; */
+
+    height: 120px;
+    width: auto;
+    margin-bottom: 20px;
+
+
+}
+
+.logotype-card .card-body {
+    padding: 15px;
+}
+
+.logotype-card .card-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #5a5a5a;
+}
+
+.logotype-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Box shadow on hover */
+}
+
+
+
+
     </style>
 
     <!----------------------------------------- Start Banner Section ------------------------------->
@@ -116,6 +220,7 @@
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" id="companyName11" name="company"
                                 placeholder="Enter your company name" aria-label="Enter your company name">
+                                <input type="hidden" name="flow" value="home" >
                             <input type="submit" class="custom-button-banner" value="Get Started">
                         </div>
                     </form>
@@ -153,7 +258,7 @@
                 <a href="{{ url('/select-logo') }}"><button class="custom-button-online">Explore Logo</button></a>
                 <img src="images/Logo Pics.png" class="image-online">
             </div>
-            <div class="col-md-2 center-image-online">
+            <div class="col-md-2 center-image-online"> 
                 <img src="images/Line points.png">
             </div>
             <div class="col-md-5">
@@ -292,10 +397,10 @@
     <div class="container">
         <!-- Heading -->
         <h2 class="why-logo-design-heading">Why RFS LOGO DESIGN is the No.1 Choice for Businesses</h2>
-        
+
         <!-- Description -->
         <p class="why-logo-design-description">We are the number one website for DIY logo creator software because customers love our tool and service. From top notch quality logo designs to prompt customer service, we make sure you get the branding your company deserve in the least possible time.</p>
-        
+
         <!-- Row with 3 Columns -->
         <div class="row">
             <!-- Column 1 -->
@@ -495,7 +600,7 @@
 
 
 
-    <!-- <-----------------Start 1M Happy Customers Counting---------------->
+    <!-- <-----------------Start Testimonial Section---------------->
 
 
     <section id="testimonial-section" class="pt-5 pb-5">
@@ -506,6 +611,111 @@
             </div>
         </div>
     </section>
+ {{----------------- End Testiomonial Section --}}
+
+
+    {{-- Start 4 logo type --}}
+
+    <div class="container my-5">
+        <div class="row text-center logotypescard d-flex ">
+            <div class="col-md-3">
+                <div class="card logotype-card">
+                    <img src="{{url('images/logo-category-illustration-logo.png')}}" class="card-img-top" alt="Illustration Logo">
+                    <div class="card-body">
+                        <p class="card-text">ILLUSTRATION LOGO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card logotype-card">
+                    <img src="{{url('images/logo-category-nature-logo.png')}}" class="card-img-top" alt="Nature Logo">
+                    <div class="card-body">
+                        <p class="card-text">NATURE LOGO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card logotype-card">
+                    <img src="{{url('images/logo-category-abstract-logo.png')}}" class="card-img-top" alt="Abstract Logo">
+                    <div class="card-body">
+                        <p class="card-text">ABSTRACT LOGO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card logotype-card">
+                    <img src="{{url('images/logo-category-minimal-logo.png')}}" class="card-img-top" alt="Minimal Logo">
+                    <div class="card-body">
+                        <p class="card-text">MINIMAL LOGO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ {{-- End logo type  --}}
+
+
+
+{{-- Start Category List Section --}}
+
+
+
+<div class="container homepage-category-list">
+    <h2>Try Free Logo Maker for Every Business</h2>
+    <p>Explore company logos made easy with our free logo maker tool for all types of professionals and industries.</p>
+    <div class="category-buttons">
+        <button>Accounting & CPA Logos</button>
+        <button>Advertising Logos</button>
+        <button>Agriculture Logos</button>
+        <button>Alphabets Logos</button>
+        <button>Animal & Pet Logos</button>
+        <button>Arts Logos</button>
+        <button>Auto & Transportation Logos</button>
+        <button>Beauty Logos</button>
+        <button>Childcare Logos</button>
+        <button>Cleaning Logos</button>
+        <button>Communication & Media Logos</button>
+        <button>Community & Foundation Logos</button>
+        <button>Consulting Logos</button>
+        <button>Dating & Matchmaking Logos</button>
+        <button>Employment & HR Logos</button>
+        <button>Engineering & Energy Logos</button>
+        <button>Entertainment & Music Logos</button>
+        <button>Games & Gambling Logos</button>
+        <button>Home Improvement Logos</button>
+        <button>Information Technology Logos</button>
+        <button>Insurance Logos</button>
+        <button>Internet Logos</button>
+        <button>Investment & Finance Logos</button>
+        <button>Jewelry & Gemstones Logos</button>
+        <button>Landscape Logos</button>
+        <button>Marketing Logos</button>
+        <button>Medical & Pharmacy Logos</button>
+        <button>Photography Logos</button>
+        <button>Printing & Publishing Logos</button>
+        <button>Religion & Spirituality Logos</button>
+        <button>Research & Development Logos</button>
+        <button>Security Logos</button>
+        <button>Spa & Massage Logos</button>
+        <button>Sports & Fitness Logos</button>
+        <button>Storage Logos</button>
+        <button>Text Logos</button>
+        <button>Trade & Logistics Logos</button>
+        <button>Travel & Hotel Logos</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+{{-- End Category list section --}}
+
+
+
 
     <!-- -------------------start FAQs --------------- -->
 
@@ -704,8 +914,10 @@
 
         });
 
-        
+
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Other scripts or libraries -->
 

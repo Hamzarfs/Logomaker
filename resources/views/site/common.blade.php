@@ -42,14 +42,14 @@
         @font-face { font-family: 'Stifly'; src: url('fonts/Stifly.ttf') format('truetype'); }
         @font-face { font-family: 'Brandes-Regular'; src: url('fonts/Brandes-Regular.otf') format('truetype'); }
         @font-face { font-family: 'Rohgaz-Demo-VersionRegular'; src: url('fonts/Rohgaz-DemoVersion-Regular.ttf') format('truetype'); }
-        @font-face { font-family: 'Forest-Trophy-Textured'; src: url('fonts/Forest Trophy Textured.otf') format('truetype'); }        
+        @font-face { font-family: 'Forest-Trophy-Textured'; src: url('fonts/Forest Trophy Textured.otf') format('truetype'); }
         @font-face { font-family: 'Aesthetic-Wonder-DEMOBold'; src: url('fonts/AestheticWonderDEMO-Bold.ttf') format('truetype'); }
         @font-face { font-family: 'Nerve-Brush-Regular'; src: url('fonts/NerveBrushRegular.otf') format('truetype'); }
         @font-face { font-family: 'Stander-DEMO'; src: url('fonts/Stander DEMO.otf') format('truetype'); }
         @font-face { font-family: 'Dasport-DEMO'; src: url('fonts/Dasport  DEMO.otf') format('truetype'); }
         @font-face { font-family: 'LightSport-DEMO'; src: url('fonts/Light Sport DEMO.otf') format('truetype'); }
 
-       
+
     </style>
 
     <!-- Brevo Conversations {literal} -->
