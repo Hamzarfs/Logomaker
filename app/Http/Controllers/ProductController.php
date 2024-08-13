@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Collection;
+use App\Models\Font;
 use App\Models\Product;
 use App\Models\ProductImage;
 use App\Models\SubCategory;
@@ -44,7 +45,11 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.products.create');
+        $fonts = Font::all();
+
+        return view('admin.products.create', [
+            'fonts' => $fonts
+        ]);
     }
 
     /**
@@ -52,11 +57,18 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-       
-        $request->validate([
+        $data = $request->validate([
             'name' => 'required|max:255',
             'category' => 'required',
             'image' => 'required|image',
+            'color' => 'required|hex_color',
+            'font' => 'required|exists:fonts,id',
+            'logomaker' => 'required|array',
+            'logomaker.*' => 'required|string',
+            'preview' => 'required|array',
+            'preview.*' => 'required|string',
+            'canva' => 'required|array',
+            'canva.*' => 'required|string',
         ]);
 
         // Generate unique slug
@@ -71,9 +83,22 @@ class ProductController extends Controller
         // Create new product instance
         $product = new Product();
         $product->name = $request->name;
-        
+
         $product->category_id = $request->category;
         $product->slug = $uniqueSlug;
+
+        $product->font_id = $data['font'];
+        $product->color = $data['color'];
+        $product->logomaker_left = $data['logomaker']['left'];
+        $product->logomaker_top = $data['logomaker']['top'];
+        $product->logomaker_font_size = $data['logomaker']['font'];
+        $product->preview_left = $data['preview']['left'];
+        $product->preview_top = $data['preview']['top'];
+        $product->preview_font_size = $data['preview']['font'];
+        $product->canva_left = $data['canva']['left'];
+        $product->canva_top = $data['canva']['top'];
+        $product->canva_font_size = $data['canva']['font'];
+
         $product->save();
         $productId = $product->id;
         $product->image = $this->imageService->compressAndStoreImage($request->file('image'), $uniqueSlug, 'product');
@@ -84,7 +109,7 @@ class ProductController extends Controller
     private function handleProductSliderImages($images, $productId)
     {
         if ($images) {
-            $uniqueSlug = 'product-slider-img'.time();
+            $uniqueSlug = 'product-slider-img' . time();
             foreach ($images as $image) {
                 $realImage = $this->imageService->compressAndStoreImage($image, $uniqueSlug, 'slider');
                 ProductImage::create([
@@ -120,7 +145,7 @@ class ProductController extends Controller
      */
     public function update(Request $request)
     {
-      
+
         // $request->validate([
         //     'name' => 'required|max:255',
         //    // 'collection' => 'required',
@@ -133,13 +158,13 @@ class ProductController extends Controller
             'name' => 'required|max:255',
             'category' => 'required',
         ];
-        
+
         if ($request->hasFile('image')) {
             $rules['image'] = 'required|image|mimes:jpeg,png,jpg|max:2048'; // Adjust max file size as needed
         }
-        
+
         $request->validate($rules);
-        
+
         $baseSlug = Str::slug($request->name);
         $uniqueSlug = $baseSlug;
         $counter = 1;
@@ -147,12 +172,12 @@ class ProductController extends Controller
             $uniqueSlug = $baseSlug . '-' . $counter;
             $counter++;
         }
-       
+
         $product = Product::find($request->id);
         $product->name = $request->name;
-       // $product->collection_id = $request->collection;
+        // $product->collection_id = $request->collection;
         $product->category_id = $request->category;
-       // $product->sub_category_id = $request->subcategory;
+        // $product->sub_category_id = $request->subcategory;
         $product->slug = $uniqueSlug;
         if ($real_image = $request->file('image')) {
             // Old Image remove
@@ -205,7 +230,7 @@ class ProductController extends Controller
         if ($product) {
             $image_path = public_path('product-image/' . $product->image);
             if (file_exists($image_path)) {
-               // unlink($image_path);
+                // unlink($image_path);
                 $product->delete();
             }
         }
