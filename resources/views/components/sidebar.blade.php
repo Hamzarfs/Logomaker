@@ -70,6 +70,13 @@
                     </p>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{ route('admin.font.index') }}"
+                    class="nav-link {{ Route::is('admin.font.index') ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>Fonts</p>
+                </a>
+            </li>
         @endrole
         <li class="nav-item">
             <a href="{{ route('admin.orders.index') }}"

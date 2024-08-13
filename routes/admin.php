@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CollectionController;
+use App\Http\Controllers\FontController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
@@ -25,6 +26,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'verified', 'role:ad
     Route::resource('subcategory', SubCateoryController::class);
     Route::resource('collection', CollectionController::class);
     Route::resource('product', ProductController::class);
+    Route::resource('font', FontController::class);
     Route::get('/get/subcategory', [ProductController::class, 'getsubcategory'])->name('getsubcategory');
     Route::get('/remove-external-img/{id}', [ProductController::class, 'removeImage'])->name('remove.image');
     Route::prefix('orders')->name('orders.')->group(function() {
