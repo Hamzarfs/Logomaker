@@ -45,7 +45,6 @@
                                         <label for="name" class="form-label">Name</label>
                                         <input type="text" name="name" id="name"
                                             value="{{ old('name', $data->name) }}" class="form-control" required>
-                                        <x-error>name</x-error>
                                     </div>
                                 </div>
 
@@ -59,7 +58,6 @@
                                                     {{ $cat->name }}</option>
                                             @endforeach
                                         </select>
-                                        <x-error>category</x-error>
                                     </div>
                                 </div>
 
@@ -69,7 +67,6 @@
                                         <input type="file" name="image" id="image" class="form-control">
                                         <a href="javascript:void(0)" data-toggle="modal"
                                             data-target="#modal-default">View Image</a>
-                                        <x-error>image</x-error>
                                     </div>
                                 </div>
                             </div>
@@ -81,7 +78,6 @@
                                         <label for="name" class="form-label">Color</label>
                                         <input type="color" name="color" id="color"
                                             value="{{ old('color', $data->color) }}" class="form-control" required>
-                                        <x-error>color</x-error>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
@@ -94,7 +90,6 @@
                                                     {{ $font->name }}</option>
                                             @endforeach
                                         </select>
-                                        <x-error>font</x-error>
                                     </div>
                                 </div>
 
