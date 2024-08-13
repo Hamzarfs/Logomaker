@@ -1,6 +1,22 @@
 <x-admin>
     @section('title', 'Products')
 
+    @section('css')
+        <style>
+            img.w-full.modal-img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+
+            img.slider-img {
+                width: 100px;
+                height: auto;
+                object-fit: cover;
+            }
+        </style>
+    @endsection
+
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
@@ -12,7 +28,8 @@
                         </div>
                     </div>
 
-                    <form action="{{ route('admin.product.update', $data->id) }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('admin.product.update', $data->id) }}" method="POST"
+                        enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <input type="hidden" name="id" value="{{ $data->id }}">
@@ -21,8 +38,8 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="name" class="form-label">Name</label>
-                                        <input type="text" name="name" id="name" value="{{ old('name', $data->name) }}"
-                                            class="form-control" required>
+                                        <input type="text" name="name" id="name"
+                                            value="{{ old('name', $data->name) }}" class="form-control" required>
                                         <x-error>name</x-error>
                                     </div>
                                 </div>
@@ -45,6 +62,8 @@
                                     <div class="form-group">
                                         <label for="image" class="form-label">Image</label>
                                         <input type="file" name="image" id="image" class="form-control">
+                                        <a href="javascript:void(0)" data-toggle="modal"
+                                            data-target="#modal-default">View Image</a>
                                         <x-error>image</x-error>
                                     </div>
                                 </div>
@@ -55,8 +74,8 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="name" class="form-label">Color</label>
-                                        <input type="color" name="color" id="color" value="{{ old('color', $data->color) }}"
-                                            class="form-control" required>
+                                        <input type="color" name="color" id="color"
+                                            value="{{ old('color', $data->color) }}" class="form-control" required>
                                         <x-error>color</x-error>
                                     </div>
                                 </div>
@@ -80,7 +99,8 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_left" class="form-label">Left Position</label>
-                                        <input type="number" name="logomaker[left]" id="lm_left" value="{{ old('logomaker[left]', $data->logomaker_left) }}"
+                                        <input type="number" name="logomaker[left]" id="lm_left"
+                                            value="{{ old('logomaker[left]', $data->logomaker_left) }}"
                                             class="form-control" required>
                                         <x-error>logomaker[0]['left']</x-error>
                                     </div>
@@ -88,7 +108,8 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_top" class="form-label">Top Position</label>
-                                        <input type="number" name="logomaker[top]" id="lm_top" value="{{ old('logomaker[top]', $data->logomaker_top) }}"
+                                        <input type="number" name="logomaker[top]" id="lm_top"
+                                            value="{{ old('logomaker[top]', $data->logomaker_top) }}"
                                             class="form-control" required>
                                         <x-error>logomaker[0]['top']</x-error>
                                     </div>
@@ -96,7 +117,8 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_font" class="form-label">Font Size</label>
-                                        <input type="number" name="logomaker[font]" id="lm_font" value="{{ old('logomaker[font]', $data->logomaker_font_size) }}"
+                                        <input type="number" name="logomaker[font]" id="lm_font"
+                                            value="{{ old('logomaker[font]', $data->logomaker_font_size) }}"
                                             class="form-control" required>
                                         <x-error>logomaker[0]['font']</x-error>
                                     </div>
@@ -107,7 +129,8 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="pre_left" class="form-label">Left Position</label>
-                                        <input type="number" name="preview[left]" id="pre_left" value="{{ old('preview[left]', $data->preview_left) }}"
+                                        <input type="number" name="preview[left]" id="pre_left"
+                                            value="{{ old('preview[left]', $data->preview_left) }}"
                                             class="form-control" required>
                                         <x-error>preview[0]['left']</x-error>
                                     </div>
@@ -116,7 +139,8 @@
                                     <div class="form-group">
                                         <label for="pre_top" class="form-label">Top Position</label>
                                         <input type="number" name="preview[top]" id="pre_top"
-                                            value="{{ old('preview[top]', $data->preview_top) }}" class="form-control" required>
+                                            value="{{ old('preview[top]', $data->preview_top) }}"
+                                            class="form-control" required>
                                         <x-error>preview[0]['top']</x-error>
                                     </div>
                                 </div>
@@ -124,7 +148,8 @@
                                     <div class="form-group">
                                         <label for="pre_font" class="form-label">Font Size</label>
                                         <input type="number" name="preview[font]" id="pre_font"
-                                            value="{{ old('preview[font]', $data->preview_font_size) }}" class="form-control" required>
+                                            value="{{ old('preview[font]', $data->preview_font_size) }}"
+                                            class="form-control" required>
                                         <x-error>preview[0]['font']</x-error>
                                     </div>
                                 </div>
@@ -136,7 +161,8 @@
                                     <div class="form-group">
                                         <label for="can_left" class="form-label">Left Position</label>
                                         <input type="number" name="canva[left]" id="can_left"
-                                            value="{{ old('canva[left]', $data->canva_left) }}" class="form-control" required>
+                                            value="{{ old('canva[left]', $data->canva_left) }}" class="form-control"
+                                            required>
                                         <x-error>canva[0]['left']</x-error>
                                     </div>
                                 </div>
@@ -144,7 +170,8 @@
                                     <div class="form-group">
                                         <label for="can_top" class="form-label">Top Position</label>
                                         <input type="number" name="canva[top]" id="can_top"
-                                            value="{{ old('canva[top]', $data->canva_top) }}" class="form-control" required>
+                                            value="{{ old('canva[top]', $data->canva_top) }}" class="form-control"
+                                            required>
                                         <x-error>canva[0]['top']</x-error>
                                     </div>
                                 </div>
@@ -152,7 +179,8 @@
                                     <div class="form-group">
                                         <label for="can_font" class="form-label">Font Size</label>
                                         <input type="number" name="canva[font]" id="can_font"
-                                            value="{{ old('canva[font]', $data->canva_font_size) }}" class="form-control" required>
+                                            value="{{ old('canva[font]', $data->canva_font_size) }}"
+                                            class="form-control" required>
                                         <x-error>canva[0]['font']</x-error>
                                     </div>
                                 </div>
@@ -167,8 +195,29 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="modal-default">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">View Image</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{ asset('category-image/' . $data->image) }}" alt="" class="w-full modal-img">
+                </div>
+                <div class="modal-footer">
+                    <span class="text-muted">If you want to change image just add new image otherwise leave it.</span>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
     @section('js')
-        <script>
-        </script>
+        <script></script>
     @endsection
 </x-admin>
