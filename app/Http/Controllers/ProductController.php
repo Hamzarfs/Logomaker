@@ -64,11 +64,11 @@ class ProductController extends Controller
             'color' => 'required|hex_color',
             'font' => 'required|exists:fonts,id',
             'logomaker' => 'required|array',
-            'logomaker.*' => 'required|string',
+            'logomaker.*' => 'string|nullable',
             'preview' => 'required|array',
-            'preview.*' => 'required|string',
+            'preview.*' => 'string|nullable',
             'canva' => 'required|array',
-            'canva.*' => 'required|string',
+            'canva.*' => 'string|nullable',
         ]);
 
         // Generate unique slug
@@ -162,11 +162,11 @@ class ProductController extends Controller
             'color' => 'required|hex_color',
             'font' => 'required|exists:fonts,id',
             'logomaker' => 'required|array',
-            'logomaker.*' => 'required|string',
+            'logomaker.*' => 'string|nullable',
             'preview' => 'required|array',
-            'preview.*' => 'required|string',
+            'preview.*' => 'string|nullable',
             'canva' => 'required|array',
-            'canva.*' => 'required|string',
+            'canva.*' => 'string|nullable',
         ];
 
         if ($request->hasFile('image')) {

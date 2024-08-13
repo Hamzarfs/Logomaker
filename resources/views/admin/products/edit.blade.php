@@ -1,4 +1,9 @@
+{{-- @dd(session()->all()) --}}
+{{-- @if ($errors->any())
+    @dd($errors->all())
+@endif --}}
 <x-admin>
+
     @section('title', 'Products')
 
     @section('css')
@@ -100,27 +105,24 @@
                                     <div class="form-group">
                                         <label for="lm_left" class="form-label">Left Position</label>
                                         <input type="number" name="logomaker[left]" id="lm_left"
-                                            value="{{ old('logomaker[left]', $data->logomaker_left) }}"
-                                            class="form-control" required>
-                                        <x-error>logomaker[0]['left']</x-error>
+                                            value="{{ old('logomaker.left', $data->logomaker_left) }}"
+                                            class="form-control" >
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_top" class="form-label">Top Position</label>
                                         <input type="number" name="logomaker[top]" id="lm_top"
-                                            value="{{ old('logomaker[top]', $data->logomaker_top) }}"
-                                            class="form-control" required>
-                                        <x-error>logomaker[0]['top']</x-error>
+                                            value="{{ old('logomaker.top', $data->logomaker_top) }}"
+                                            class="form-control" >
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_font" class="form-label">Font Size</label>
                                         <input type="number" name="logomaker[font]" id="lm_font"
-                                            value="{{ old('logomaker[font]', $data->logomaker_font_size) }}"
-                                            class="form-control" required>
-                                        <x-error>logomaker[0]['font']</x-error>
+                                            value="{{ old('logomaker.font', $data->logomaker_font_size) }}"
+                                            class="form-control" >
                                     </div>
                                 </div>
                             </div>
@@ -130,27 +132,24 @@
                                     <div class="form-group">
                                         <label for="pre_left" class="form-label">Left Position</label>
                                         <input type="number" name="preview[left]" id="pre_left"
-                                            value="{{ old('preview[left]', $data->preview_left) }}"
-                                            class="form-control" required>
-                                        <x-error>preview[0]['left']</x-error>
+                                            value="{{ old('preview.left', $data->preview_left) }}"
+                                            class="form-control" >
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="pre_top" class="form-label">Top Position</label>
                                         <input type="number" name="preview[top]" id="pre_top"
-                                            value="{{ old('preview[top]', $data->preview_top) }}"
-                                            class="form-control" required>
-                                        <x-error>preview[0]['top']</x-error>
+                                            value="{{ old('preview.top', $data->preview_top) }}"
+                                            class="form-control" >
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="pre_font" class="form-label">Font Size</label>
                                         <input type="number" name="preview[font]" id="pre_font"
-                                            value="{{ old('preview[font]', $data->preview_font_size) }}"
-                                            class="form-control" required>
-                                        <x-error>preview[0]['font']</x-error>
+                                            value="{{ old('preview.font', $data->preview_font_size) }}"
+                                            class="form-control" >
                                     </div>
                                 </div>
                             </div>
@@ -161,27 +160,24 @@
                                     <div class="form-group">
                                         <label for="can_left" class="form-label">Left Position</label>
                                         <input type="number" name="canva[left]" id="can_left"
-                                            value="{{ old('canva[left]', $data->canva_left) }}" class="form-control"
-                                            required>
-                                        <x-error>canva[0]['left']</x-error>
+                                            value="{{ old('canva.left', $data->canva_left) }}" class="form-control"
+                                            >
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="can_top" class="form-label">Top Position</label>
                                         <input type="number" name="canva[top]" id="can_top"
-                                            value="{{ old('canva[top]', $data->canva_top) }}" class="form-control"
-                                            required>
-                                        <x-error>canva[0]['top']</x-error>
+                                            value="{{ old('canva.top', $data->canva_top) }}" class="form-control"
+                                            >
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="can_font" class="form-label">Font Size</label>
                                         <input type="number" name="canva[font]" id="can_font"
-                                            value="{{ old('canva[font]', $data->canva_font_size) }}"
-                                            class="form-control" required>
-                                        <x-error>canva[0]['font']</x-error>
+                                            value="{{ old('canva.font', $data->canva_font_size) }}"
+                                            class="form-control" >
                                     </div>
                                 </div>
                             </div>
