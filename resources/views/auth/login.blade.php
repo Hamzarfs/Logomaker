@@ -36,12 +36,12 @@
                                 <button type="submit" class="btn btn-primary">Sign in</button>
                             </div>
 
-                            <div class="d-flex justify-content-between">
+                            {{-- <div class="d-flex justify-content-between">
                                 <a href="{{ route('password.request') }}" class="text-decoration-none">Forgot Password?</a>
-                            </div>
+                            </div> --}}
                         </form>
                         <div class="text-center mt-3">
-                            <p>OR</p>
+                            {{-- <p>OR</p> --}}
                             <p>Don't have a LogoDesign account? <a href="{{ route('register') }}" class="text-decoration-none">Sign Up</a></p>
                         </div>
                     </div>
@@ -53,8 +53,9 @@
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-md-4 text-center">
+                <p><b>OR</b></p>
                 <p>Login with one of your social</p>
-                <a href="" class="btn btn-primary btn-block mb-2">
+                <a href="{{ route('facebook.login') }}" class="btn btn-primary btn-block mb-2">
                     <i class="fab fa-facebook"></i> Facebook
                 </a>
                 <a href="{{ route('google.login') }}" class="btn btn-danger btn-block">

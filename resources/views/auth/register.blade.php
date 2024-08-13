@@ -61,7 +61,7 @@
                             </div>
                         </form>
                         <div class="text-center mt-3">
-                            <p>OR</p>
+                            {{-- <p>OR</p> --}}
                             <p>Already have an account? <a href="{{ route('login') }}" class="text-decoration-none">Login</a></p>
                         </div>
                     </div>
@@ -73,6 +73,7 @@
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-md-4 text-center">
+                <p><b>OR</b></p>
                 <p>Register with one of your social</p>
                 <a href="" class="btn btn-primary btn-block mb-2">
                     <i class="fab fa-facebook"></i> Facebook
