@@ -4,6 +4,8 @@ namespace App\View\Components;
 
 use App\Models\Category;
 use App\Models\Collection;
+use App\Models\Font;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\SubCategory;
 use App\Models\User;
@@ -21,25 +23,26 @@ class Sidebar extends Component
     public function __construct()
     {
         $userCount = User::count();
-        view()->share('userCount',$userCount);
-        
         $RoleCount = Role::count();
-        view()->share('RoleCount',$RoleCount);
-        
         $PermissionCount = Permission::count();
-        view()->share('PermissionCount',$PermissionCount);
-        
         $CategoryCount = Category::count();
-        view()->share('CategoryCount',$CategoryCount);
-        
         $SubCategoryCount = SubCategory::count();
-        view()->share('SubCategoryCount',$SubCategoryCount);
-        
         $CollectionCount = Collection::count();
-        view()->share('CollectionCount',$CollectionCount);
-        
         $ProductCount = Product::count();
-        view()->share('ProductCount',$ProductCount);
+        $OrdersCount = Order::count();
+        $FontsCount = Font::count();
+
+        view()->share(compact(
+            'userCount',
+            'RoleCount',
+            'PermissionCount',
+            'CategoryCount',
+            'SubCategoryCount',
+            'CollectionCount',
+            'ProductCount',
+            'OrdersCount',
+            'FontsCount',
+        ));
     }
 
     /**

@@ -29,7 +29,7 @@ class SendLogo extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Logo',
+            subject: 'New logo created',
         );
     }
 
@@ -51,8 +51,7 @@ class SendLogo extends Mailable
     public function attachments(): array
     {
         return [
-            Attachment::fromPath(public_path("orders/{$this->order->user_id}_{$this->order->product_id}.png"))
-                        ->as('logo.png')
+            Attachment::fromPath(public_path("orders/{$this->order->user_id}_{$this->order->product_id}.png"))->as('logo.png')
         ];
     }
 }

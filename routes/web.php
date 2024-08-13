@@ -38,7 +38,7 @@ Route::middleware(['role:user', 'auth'])->group(function () {
     Route::get('/checkout', [MainController::class, 'checkout'])->name('checkout');
     Route::get('/thank-you', [MainController::class, 'thankYou'])->name('thankyou');
     Route::get('/declined', [MainController::class, 'declined'])->name('declined');
-    Route::post('charge', [MainController::class, 'charge'])->name('charge');
+    // Route::post('charge', [MainController::class, 'charge'])->name('charge');
     Route::post('initializeCharge', [MainController::class, 'initializeCharge'])->name('initializeCharge');
     Route::post('checkPaymentStatus', [MainController::class, 'checkPaymentStatus'])->name('checkPaymentStatus');
     Route::get('checkPaymentStatus', [MainController::class, 'checkPaymentStatusView'])->name('checkPaymentStatusView');
@@ -97,7 +97,7 @@ Route::get('/logo-design-new-york', [GeneralController::class, 'logoDesignNewYor
 Route::get('/logo-design-virginia', [GeneralController::class, 'logoDesignVirginia']);
 Route::get('/frequently-asked-question', [GeneralController::class, 'FrequentlyAskedQuestion']);
 Route::get('/contact-us', [GeneralController::class, 'contactUs']);
-Route::get('/terms-condition', [GeneralController::class, 'termsCondition']);
+Route::get('/terms-condition', [GeneralController::class, 'termsCondition'])->name('termsCondition');
 Route::get('/privacy-policy', [GeneralController::class, 'PrivacyPolicy']);
 Route::get('/custom-logo', [GeneralController::class, 'customLogo']);
 Route::post('contact-us', [GeneralController::class, 'contactUsSubmit'])->name('contactUs');

@@ -5,11 +5,11 @@
 @section('content')
 
     <style>
-        footer.footer {
+        /* footer.footer {
             position: fixed;
             width: 100%;
             bottom: 0;
-        }
+        } */
 
         .thumbnail {
             width: 70px;

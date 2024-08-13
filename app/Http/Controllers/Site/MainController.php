@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Site;
 
+use App\Mail\SendLogo;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Order;
@@ -322,13 +323,15 @@ class MainController extends \App\Http\Controllers\Controller
 
         $this->logoService->saveLogo($logoString, $userId, $productId);
 
-        Order::updateOrCreate([
+        $order = Order::updateOrCreate([
             'user_id' => $userId,
             'product_id' => $productId,
         ], [
             'amount' => session()->get('price'),
             'status' => 'paid',
         ]);
+
+        $this->emailService->sendLogo($order);
 
         $this->sessionService->clearSessionData();
     }

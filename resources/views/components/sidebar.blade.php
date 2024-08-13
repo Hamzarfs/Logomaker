@@ -43,7 +43,7 @@
                     </p>
                 </a>
             </li>
-            <!-- <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a href="{{ route('admin.subcategory.index') }}"
                     class="nav-link {{ Route::is('admin.subcategory.index') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-list"></i>
@@ -51,8 +51,8 @@
                         <span class="badge badge-secondary right">{{ $SubCategoryCount }}</span>
                     </p>
                 </a>
-            </li> -->
-            <!-- <li class="nav-item">
+            </li>
+            <li class="nav-item">
                 <a href="{{ route('admin.collection.index') }}"
                     class="nav-link {{ Route::is('admin.collection.index') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-file-pdf"></i>
@@ -60,7 +60,7 @@
                         <span class="badge badge-primary right">{{ $CollectionCount }}</span>
                     </p>
                 </a>
-            </li> -->
+            </li> --}}
             <li class="nav-item">
                 <a href="{{ route('admin.product.index') }}"
                     class="nav-link {{ Route::is('admin.product.index') ? 'active' : '' }}">
@@ -74,7 +74,7 @@
                 <a href="{{ route('admin.font.index') }}"
                     class="nav-link {{ Route::is('admin.font.index') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-th"></i>
-                    <p>Fonts</p>
+                    <p>Fonts <span class="badge badge-warning right">{{ $FontsCount }}</span></p>
                 </a>
             </li>
         @endrole
@@ -82,7 +82,7 @@
             <a href="{{ route('admin.orders.index') }}"
                 class="nav-link {{ Route::is('admin.orders.index') ? 'active' : '' }}">
                 <i class="nav-icon fas fa-id-card"></i>
-                <p>Orders</p>
+                <p>Orders <span class="badge badge-warning right">{{ $OrdersCount }}</span></p>
             </a>
         </li>
         <li class="nav-item">
