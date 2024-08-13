@@ -128,7 +128,8 @@ class ProductController extends Controller
         $data = Product::where('id', decrypt($id))->first();
         $productImages = ProductImage::where('product_id', $data->id)->get();
         $subcategory = SubCategory::where('category_id', $data->category_id)->get();
-        return view('admin.products.edit', compact('productImages', 'data', 'subcategory'));
+        $fonts = Font::all();
+        return view('admin.products.edit', compact('productImages', 'data', 'subcategory', 'fonts'));
     }
 
     /**
@@ -153,17 +154,26 @@ class ProductController extends Controller
         //     'image' => 'required|image|mimes:jpeg,png,jpg|max:2048', // Adjust max file size as needed
 
         // ]);
+        // old();
 
         $rules = [
             'name' => 'required|max:255',
             'category' => 'required',
+            'color' => 'required|hex_color',
+            'font' => 'required|exists:fonts,id',
+            'logomaker' => 'required|array',
+            'logomaker.*' => 'required|string',
+            'preview' => 'required|array',
+            'preview.*' => 'required|string',
+            'canva' => 'required|array',
+            'canva.*' => 'required|string',
         ];
 
         if ($request->hasFile('image')) {
-            $rules['image'] = 'required|image|mimes:jpeg,png,jpg|max:2048'; // Adjust max file size as needed
+            $rules['image'] = 'image|mimes:jpeg,png,jpg|max:2048'; // Adjust max file size as needed
         }
 
-        $request->validate($rules);
+        $data = $request->validate($rules);
 
         $baseSlug = Str::slug($request->name);
         $uniqueSlug = $baseSlug;
@@ -179,6 +189,7 @@ class ProductController extends Controller
         $product->category_id = $request->category;
         // $product->sub_category_id = $request->subcategory;
         $product->slug = $uniqueSlug;
+
         if ($real_image = $request->file('image')) {
             // Old Image remove
             $product = Product::where('id', $request->id)->first();
@@ -192,8 +203,22 @@ class ProductController extends Controller
             $real_image->move($productRealImage, $realImage);
             $product->image = $realImage;
         }
+
+        $product->font_id = $data['font'];
+        $product->color = $data['color'];
+        $product->logomaker_left = $data['logomaker']['left'];
+        $product->logomaker_top = $data['logomaker']['top'];
+        $product->logomaker_font_size = $data['logomaker']['font'];
+        $product->preview_left = $data['preview']['left'];
+        $product->preview_top = $data['preview']['top'];
+        $product->preview_font_size = $data['preview']['font'];
+        $product->canva_left = $data['canva']['left'];
+        $product->canva_top = $data['canva']['top'];
+        $product->canva_font_size = $data['canva']['font'];
+
         $product->save();
-        $productId = $product->id;
+        // $productId = $product->id;
+
         // if ($request->hasFile('image')) {
         //     foreach ($request->file('image') as $image) {
         //         $realImage = $request->slug . "-" . rand(1, 9999) . "-" . date('d-m-Y-h-s') . "." . $image->getClientOriginalExtension();
@@ -205,7 +230,7 @@ class ProductController extends Controller
         //     }
         // }
 
-        return redirect()->route('admin.product.index')->with('success', 'Product created successfully');
+        return redirect()->route('admin.product.index')->with('success', 'Product updated successfully');
     }
 
     /**
