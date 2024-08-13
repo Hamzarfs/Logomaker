@@ -193,13 +193,13 @@ class ProductController extends Controller
         if ($real_image = $request->file('image')) {
             // Old Image remove
             $product = Product::where('id', $request->id)->first();
-            $image_path = public_path('product-image/' . $product->image);
+            $image_path = public_path('category-image/' . $product->image);
             if (file_exists($image_path)) {
-                //unlink($image_path);
+                unlink($image_path);
             }
             // Added new image
-            $productRealImage = 'product-image/';
-            $realImage = $request->slug . "." . $real_image->getClientOriginalExtension();
+            $productRealImage = 'category-image/';
+            $realImage = $product->slug . "." . $real_image->getClientOriginalExtension();
             $real_image->move($productRealImage, $realImage);
             $product->image = $realImage;
         }

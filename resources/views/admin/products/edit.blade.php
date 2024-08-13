@@ -64,7 +64,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="image" class="form-label">Image</label>
-                                        <input type="file" name="image" id="image" class="form-control">
+                                        <input type="file" name="image" id="image" class="form-control" accept=".jpeg,.jpg,.png">
                                         <a href="javascript:void(0)" data-toggle="modal"
                                             data-target="#modal-default">View Image</a>
                                     </div>
