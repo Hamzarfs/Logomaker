@@ -253,23 +253,23 @@ class ProductController extends Controller
     {
         $product = Product::where('id', decrypt($id))->first();
         if ($product) {
-            $image_path = public_path('product-image/' . $product->image);
+            $image_path = public_path('category-image/' . $product->image);
             if (file_exists($image_path)) {
-                // unlink($image_path);
-                $product->delete();
+                unlink($image_path);
             }
+            $product->delete();
         }
-        $productCollectionId = decrypt($id);
-        $imagesToDelete = ProductImage::where('product_id', $productCollectionId)->get();
-        foreach ($imagesToDelete as $image) {
-            $imagePath = public_path('product-slider-images/' . $image->image);
-            // Delete the record from the database
-            $image->delete();
-            // Unlink (delete) the image from storage
-            if (file_exists($imagePath)) {
-                unlink($imagePath);
-            }
-        }
-        return redirect()->route('admin.product.index')->with('error', 'Product deleted successfully.');
+        // $productCollectionId = decrypt($id);
+        // $imagesToDelete = ProductImage::where('product_id', $productCollectionId)->get();
+        // foreach ($imagesToDelete as $image) {
+        //     $imagePath = public_path('product-slider-images/' . $image->image);
+        //     // Delete the record from the database
+        //     $image->delete();
+        //     // Unlink (delete) the image from storage
+        //     if (file_exists($imagePath)) {
+        //         unlink($imagePath);
+        //     }
+        // }
+        return redirect()->route('admin.product.index')->with('success', 'Product deleted successfully.');
     }
 }
