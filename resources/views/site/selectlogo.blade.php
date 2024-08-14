@@ -185,19 +185,28 @@
 
 
             @foreach ($products as $index => $product)
+                
                 @php
                     $font = $fonts[$index % count($fonts)]; // Select font based on index
                     $color = $colors[$index % count($colors)];
+                    $color=$product->color;
+                 
+                    $fontSize = isset($product->logomaker_font_size) ? $product->logomaker_font_size : '50px';
+                    $topPosition = isset($product->logomaker_top) ? $product->logomaker_top : '-30px';
+                    $leftPosition = isset($product->logomaker_left) ? $product->logomaker_left : '-30px';
+
+                    
                 @endphp
+
                 <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
                     <div class="card-container">
                         <img src="{{ asset("category-image/$product->image") }}" class="img-fluid portfolio-image"
                             alt="{{ $product->name }}">
                         <div class="text-placeholder"
-                            style="font-family: {{ $font }}; color:{{ $color }}; font-size:50px; font-weight:500; margin-top:-30px">
+                            style="font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize}}; font-weight:500; margin-left:{{$leftPosition}}; margin-top:{{ $topPosition}}">
                             {{ session('company') }} </div>
                         <a href="{{ url('/store-session-data-image?image=' . $product->image . '&product-id=' . $product->id .'&font=' . $font) }}"
-                            class="hover-button select-btn" data-product-id="{{ $product->id }}">Select </a>
+                            class="hover-button select-btn" data-product-id="{{ $product->id }}">Select {{ $topPosition}}</a>
                         @auth
                             @php
                                 $i = array_search($product->id, array_column($favourites, 'product_id'));

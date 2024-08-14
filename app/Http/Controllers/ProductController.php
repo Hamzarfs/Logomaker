@@ -170,7 +170,7 @@ class ProductController extends Controller
         ];
 
         if ($request->hasFile('image')) {
-            $rules['image'] = 'image|mimes:jpeg,png,jpg|max:2048'; // Adjust max file size as needed
+            $rules['image'] = 'image|mimes:jpeg,png,jpg,svg|max:2048'; // Adjust max file size as needed
         }
 
         $data = $request->validate($rules);

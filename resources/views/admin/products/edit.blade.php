@@ -64,7 +64,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="image" class="form-label">Image</label>
-                                        <input type="file" name="image" id="image" class="form-control" accept=".jpeg,.jpg,.png">
+                                        <input type="file" name="image" id="image" class="form-control" accept=".jpeg,.jpg,.png,.svg">
                                         <a href="javascript:void(0)" data-toggle="modal"
                                             data-target="#modal-default">View Image</a>
                                     </div>
@@ -99,7 +99,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_left" class="form-label">Left Position</label>
-                                        <input type="number" name="logomaker[left]" id="lm_left"
+                                        <input type="text" name="logomaker[left]" id="lm_left"
                                             value="{{ old('logomaker.left', $data->logomaker_left) }}"
                                             class="form-control" >
                                     </div>
@@ -107,7 +107,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_top" class="form-label">Top Position</label>
-                                        <input type="number" name="logomaker[top]" id="lm_top"
+                                        <input type="text" name="logomaker[top]" id="lm_top"
                                             value="{{ old('logomaker.top', $data->logomaker_top) }}"
                                             class="form-control" >
                                     </div>
@@ -115,7 +115,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_font" class="form-label">Font Size</label>
-                                        <input type="number" name="logomaker[font]" id="lm_font"
+                                        <input type="text" name="logomaker[font]" id="lm_font"
                                             value="{{ old('logomaker.font', $data->logomaker_font_size) }}"
                                             class="form-control" >
                                     </div>
@@ -126,7 +126,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="pre_left" class="form-label">Left Position</label>
-                                        <input type="number" name="preview[left]" id="pre_left"
+                                        <input type="text" name="preview[left]" id="pre_left"
                                             value="{{ old('preview.left', $data->preview_left) }}"
                                             class="form-control" >
                                     </div>
@@ -134,7 +134,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="pre_top" class="form-label">Top Position</label>
-                                        <input type="number" name="preview[top]" id="pre_top"
+                                        <input type="text" name="preview[top]" id="pre_top"
                                             value="{{ old('preview.top', $data->preview_top) }}"
                                             class="form-control" >
                                     </div>
@@ -142,7 +142,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="pre_font" class="form-label">Font Size</label>
-                                        <input type="number" name="preview[font]" id="pre_font"
+                                        <input type="text" name="preview[font]" id="pre_font"
                                             value="{{ old('preview.font', $data->preview_font_size) }}"
                                             class="form-control" >
                                     </div>
