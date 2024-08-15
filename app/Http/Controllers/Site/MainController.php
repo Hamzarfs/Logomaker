@@ -175,14 +175,18 @@ class MainController extends \App\Http\Controllers\Controller
         // if ($product) {
         //     $productId = $product->id;
         // }
-        // die($productId."AAAAAA".auth()->user()->id );
+        //  die($productId."AAAAAA".auth()->user()->id );
 
         $hasOrder = Order::where('product_id', $productId)
             ->where('user_id',  $userId)
             ->where('status', 'paid')
             ->exists();
-            
-        return view('site/preview', compact('hasOrder'));
+
+        $product = Order::where('product_id', $productId)
+            ->where('user_id', $userId)
+            ->where('status', 'paid')
+            ->first();            
+        return view('site/preview', compact('hasOrder','product'));
     }
 
     public function packages()

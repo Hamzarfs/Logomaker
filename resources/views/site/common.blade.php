@@ -37,12 +37,13 @@
         <!-- Add your CSS links here -->
 
         {{-- @stack('headerStyles') --}}
+111111111111111111111111
+
 
         <style>
-            @font-face {
-                font-family: 'lazyp-eople';
-                src: url('fonts/Atop-R99O3.ttf') format('truetype');
-            }
+
+            
+          
 
             @font-face {
                 font-family: 'Remon-Demo';

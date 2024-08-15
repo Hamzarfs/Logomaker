@@ -1057,101 +1057,84 @@
         var company = @json(session('company', []));
         var image = @json(session('image', []));
     </script>
+    @php
+    $fontSize = (isset($product->logomaker_font_size) && strlen($product->logomaker_font_size) > 1) 
+                                    ? $product->logomaker_font_size 
+                                    : '38px';
+    @endphp
+   
     <script>
         var canvas = new fabric.Canvas('logo-canvas');
-        // var dataURL
+    // var dataURL
 
-        $(document).ready(function() {
-            canvas.setWidth(505);
-            canvas.setHeight(440);
+    $(document).ready(function() {
+        // Set canvas size to 300x300 pixels
+        canvas.setWidth(300);
+        canvas.setHeight(300);
 
-            // Load SVG function
-            function loadCarSVG() {
-                $.ajax({
-                    url: 'category-image/' + image, // Adjust the URL to load your SVG
-                    dataType: 'text',
-                    success: function(svgString) {
-                        // Clear the canvas
-                        canvas.clear();
+        // Load SVG function
+        function loadCarSVG() {
+            $.ajax({
+                url: 'category-image/' + image, // Adjust the URL to load your SVG
+                dataType: 'text',
+                success: function(svgString) {
+                    // Clear the canvas
+                    canvas.clear();
 
-                        // Load the SVG
-                        fabric.loadSVGFromString(svgString, function(objects, options) {
-                            // Calculate the center of the canvas
-                            var canvasCenter = {
-                                left: canvas.width / 2,
-                                top: canvas.height / 2
-                            };
+                    // Load the SVG
+                    fabric.loadSVGFromString(svgString, function(objects, options) {
+                        // Create a group with the loaded objects
+                        var svgGroup = new fabric.Group(objects);
 
-                            // Calculate the bounding box of the combined objects
-                            var boundingBox = new fabric.Group(objects).getBoundingRect();
+                        // Scale the SVG to fit within the canvas
+                        var canvasWidth = canvas.width;
+                        var canvasHeight = canvas.height;
+                        var boundingBox = svgGroup.getBoundingRect();
 
-                            // Calculate the offset to center the bounding box
-                            var offset = {
-                                left: canvasCenter.left - boundingBox.width / 2,
-                                top: canvasCenter.top - boundingBox.height / 2
-                            };
+                        var scaleX = canvasWidth / boundingBox.width;
+                        var scaleY = canvasHeight / boundingBox.height;
+                        var scale = Math.min(scaleX, scaleY);
 
-                            // Add each object to the canvas and adjust its position
-                            objects.forEach(function(obj, index) {
-                                // Set the object position to center the bounding box
-                                obj.set({
-                                    left: obj.left + offset.left - boundingBox
-                                        .left,
-                                    top: obj.top + offset.top - boundingBox.top,
-                                    selectable: false, // Disable selection
-                                    evented: false, // Disable events
-                                });
-                                canvas.add(obj);
-                            });
-                            // canvas.renderAll();
+                        svgGroup.set({
+                            scaleX: scale,
+                            scaleY: scale,
+                            left: (canvasWidth - boundingBox.width * scale) / 2,
+                            top: (canvasHeight - boundingBox.height * scale) / 2,
+                            selectable: false, // Disable selection
+                            evented: false, // Disable events
                         });
+
+                        canvas.add(svgGroup);
 
                         // Add text elements
                         var company = "{{ session('company') }}"; // Get session company value
                         var sampleText1 = new fabric.Textbox(company, {
-                            left: canvas.width / 2.5 - 10,
-                            top: canvas.height / 2 + 150,
-                            fontSize: 30,
+                            left: canvas.width / 2 - 60,
+                            top: canvas.height / 2 + 80,
+                            fontSize: 20, // Adjust font size as needed
                             fill: '#000000',
                             fontFamily: "{{ session('font') }}",
-                            textAlign: 'left',
+                            textAlign: 'center',
                             selectable: false,
                             evented: false
                         });
                         canvas.add(sampleText1);
-                        canvas.renderAll()
-
-                        // var sampleText2 = new fabric.Textbox('Slogan Here', {
-                        //     left: canvas.width / 2 - 20,
-                        //     top: canvas.height / 2 + 190,
-                        //     fontSize: 14,
-                        //     width: 80,
-                        //     fill: '#000000',
-                        //     fontFamily: 'Arial',
-                        //     textAlign: 'center',
-                        //     selectable: false,
-                        //     evented: false
-                        // });
-                        // canvas.add(sampleText2);
-
-                        const dataUrl = canvas.toDataURL()
-                        sessionStorage.setItem('logoDataUrl', dataUrl)
-
-                        $('.logo-mockup').each(function() {
-                            this.src = dataUrl
-                        })
 
                         canvas.renderAll();
-                    },
-                    error: function(xhr, status, error) {
-                        console.error("Error loading SVG:", status, error);
-                    },
-                    complete: function() {
-                        const dataURL = sessionStorage.getItem('logoDataUrl')
+
+                        // Generate data URL and save to session storage
+                        const dataUrl = canvas.toDataURL();
+                        sessionStorage.setItem('logoDataUrl', dataUrl);
+
+                        $('.logo-mockup').each(function() {
+                            this.src = dataUrl;
+                        });
+
+                        // Optionally send data URL to server
                         $.ajax({
                             url: "{{ route('putImgStringIntoSession') }}",
                             method: 'POST',
-                            data: { dataURL },
+                            data: { dataURL: dataUrl },
                             success: function() {
                                 @auth
                                     $.ajax({
@@ -1160,18 +1143,22 @@
                                         data: {
                                             userId: {{ auth()->id() }},
                                             productId: {{ session()->get('product-id') }},
-                                            // logoString: sessionStorage.getItem('logoDataUrl'),
                                         },
-                                    })
+                                    });
                                 @endauth
                             },
-                        })
-                    }
-                });
-            }
+                        });
+                    });
 
-            loadCarSVG();
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error loading SVG:", status, error);
+                }
+            });
+        }
 
+        loadCarSVG();
+    
             // var dataURL = sessionStorage.getItem('logoDataUrl')
 
             // console.log(sessionStorage.getItem('logoDataUrl'));
