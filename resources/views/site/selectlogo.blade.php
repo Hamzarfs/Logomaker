@@ -145,11 +145,13 @@
                 <div class="row my-4">
                     <div class="col-md-4">
                         <input type="text" class="form-control" id="company" name="company" placeholder="Brand Name"
-                            value="{{ session('company') }}">
+                            value="{{ session('company') }}"  maxlength="30" >
                     </div>
                     <div class="col-md-4">
                         <input type="text" id="industry1" class="form-control" placeholder="Enter Your Industry"
-                            value="{{ session('category_name') }}">
+                            value="{{ session('category_name') }}"   >
+
+                            
                         <input type="hidden" id="industryId1" name="category" value="{{ session('category') }}">
                     </div>
                     <div class="col-md-4">
@@ -191,22 +193,45 @@
                     $color = $colors[$index % count($colors)];
                     $color=$product->color;
                  
-                    $fontSize = isset($product->logomaker_font_size) ? $product->logomaker_font_size : '50px';
-                    $topPosition = isset($product->logomaker_top) ? $product->logomaker_top : '-30px';
-                    $leftPosition = isset($product->logomaker_left) ? $product->logomaker_left : '-30px';
+                     $fontSize = (isset($product->logomaker_font_size) && strlen($product->logomaker_font_size) > 1) 
+                                    ? $product->logomaker_font_size 
+                                    : '38px';
 
+                    $companyName = session('company');
+                    $companyNameLength = strlen($companyName);
+                    if ($companyNameLength > 10 && $companyNameLength <= 15) {
+                         
+                        $fontSize = (int)str_replace('px', '', $fontSize) - 6 . 'px';
+                    }else  if ($companyNameLength > 15 && $companyNameLength <= 20) {
+                        $fontSize = (int)str_replace('px', '', $fontSize) - 12 . 'px';
+                    }else  if ($companyNameLength > 20 && $companyNameLength <= 25) {
+                        $fontSize = (int)str_replace('px', '', $fontSize) - 15 . 'px';
+                    }else  if ($companyNameLength > 25 && $companyNameLength <= 30) {
+                        $fontSize = (int)str_replace('px', '', $fontSize) - 20 . 'px';
+                    }
+
+
+                
+                    $topPosition = (isset($product->logomaker_top) && strlen($product->logomaker_top) > 1) 
+                                    ? $product->logomaker_top 
+                                    : '170px';
+                    
+                    $leftPosition = (isset($product->logomaker_left) && strlen($product->logomaker_left) > 1) 
+                                    ? $product->logomaker_left 
+                                    : '-30px';
+                  
                     
                 @endphp
 
                 <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
                     <div class="card-container">
-                        <img src="{{ asset("category-image/$product->image") }}" class="img-fluid portfolio-image"
+                        <img src="{{ asset("category-image/$product->image") }}" style="position: absolute; margin-top:-30px; z-index: 10;" class="img-fluid portfolio-image"
                             alt="{{ $product->name }}">
                         <div class="text-placeholder"
-                            style="font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize}}; font-weight:500; margin-left:{{$leftPosition}}; margin-top:{{ $topPosition}}">
+                            style=" z-index: 20;font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize}}; font-weight:500; margin-left:{{$leftPosition}}; margin-top:{{ $topPosition}}">
                             {{ session('company') }} </div>
                         <a href="{{ url('/store-session-data-image?image=' . $product->image . '&product-id=' . $product->id .'&font=' . $font) }}"
-                            class="hover-button select-btn" data-product-id="{{ $product->id }}">Select {{ $topPosition}}</a>
+                            class="hover-button select-btn"  title="{{ $product->name}}" style="z-index: 30;" data-product-id="{{ $product->id }}">Select  {{$fontSize}} </a>
                         @auth
                             @php
                                 $i = array_search($product->id, array_column($favourites, 'product_id'));
