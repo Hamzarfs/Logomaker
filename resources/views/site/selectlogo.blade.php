@@ -190,6 +190,11 @@
                 
                 @php
                     $font = $fonts[$index % count($fonts)]; // Select font based on index
+                    
+                    
+                   
+                    $font = pathinfo( $product->font->slug, PATHINFO_FILENAME);
+                   // echo   $font;
                     $color = $colors[$index % count($colors)];
                     $color=$product->color;
                  
@@ -231,7 +236,7 @@
                             style=" z-index: 20;font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize}}; font-weight:500; margin-left:{{$leftPosition}}; margin-top:{{ $topPosition}}">
                             {{ session('company') }} </div>
                         <a href="{{ url('/store-session-data-image?image=' . $product->image . '&product-id=' . $product->id .'&font=' . $font) }}"
-                            class="hover-button select-btn"  title="{{ $product->name}}" style="z-index: 30;" data-product-id="{{ $product->id }}">Select  {{$fontSize}} </a>
+                            class="hover-button select-btn"  title="{{ $product->name}}" style="z-index: 30;" data-product-id="{{ $product->id }}">Select  </a>
                         @auth
                             @php
                                 $i = array_search($product->id, array_column($favourites, 'product_id'));

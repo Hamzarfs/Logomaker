@@ -18,6 +18,7 @@ use App\Services\SessionService;
 use Error;
 use Illuminate\Support\Facades\Log;
 use Stripe\StripeClient;
+use Illuminate\Support\Facades\Session;
 
 class MainController extends \App\Http\Controllers\Controller
 {
@@ -185,8 +186,11 @@ class MainController extends \App\Http\Controllers\Controller
         $product = Order::where('product_id', $productId)
             ->where('user_id', $userId)
             ->where('status', 'paid')
-            ->first();            
-        return view('site/preview', compact('hasOrder','product'));
+            ->first();     
+         
+        // Fetch the product from the database
+        $selectedProduct = Product::find(Session::get('product-id'));
+        return view('site/preview', compact('hasOrder','product','selectedProduct'));
     }
 
     public function packages()

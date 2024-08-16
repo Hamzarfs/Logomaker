@@ -37,19 +37,31 @@
         <!-- Add your CSS links here -->
 
         {{-- @stack('headerStyles') --}}
-111111111111111111111111
+      
+        <style>
+            @foreach ($logoFonts as $font)
+                @php
+                    // Extract the font name without the extension
+                    $fontName = pathinfo($font->name, PATHINFO_FILENAME);
+                @endphp
+                @font-face {
+                    font-family: '{{ $fontName }}';
+                    src: url('{{ asset('fonts/' . $font->name) }}') format('{{ $font->extension }}');
+                }
+            @endforeach
+        </style>
 
 
         <style>
 
             
-          
+           
 
-            @font-face {
+            /* @font-face {
                 font-family: 'Remon-Demo';
                 src: url('fonts/Remon Demo.ttf') format('truetype');
             }
-
+ */
 
 
 

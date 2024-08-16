@@ -1106,17 +1106,56 @@
 
                         canvas.add(svgGroup);
 
+                        @php
+                            
+                            $fontSize = (isset($selectedProduct->preview_font_size) && strlen($selectedProduct->preview_font_size) > 1) 
+                                    ? $selectedProduct->preview_font_size 
+                                    : '40';
+
+                            $companyName = session('company');
+                           
+                            $companyNameLength = strlen($companyName);
+                            if ($companyNameLength > 10 && $companyNameLength <= 15) {
+                                
+                                $fontSize = $fontSize - 6 ;
+                            }else  if ($companyNameLength > 15 && $companyNameLength <= 20) {
+                                $fontSize = $fontSize - 12 ;
+                            }else  if ($companyNameLength > 20 && $companyNameLength <= 25) {
+                                $fontSize = $fontSize - 15 ;
+                            }else  if ($companyNameLength > 25 && $companyNameLength <= 30) {
+                                $fontSize = $fontSize = $fontSize - 20 ;
+                            }
+                          
+ 
+                            //2 - 60 
+                            // $left='canvas.width / '.$selectedProduct->preview_left;
+                            $left = (isset($selectedProduct->preview_left) && strlen($selectedProduct->preview_left) > 1) 
+                                    ? 'canvas.width / '.$selectedProduct->preview_left 
+                                    : 'canvas.width / 2 - 60';
+                                      //$left ='canvas.width / 6 - 40';
+                            
+                            //2 + 80
+
+                            $top ='canvas.height / '. $selectedProduct->preview_top;
+                            $top = (isset($selectedProduct->preview_top) && strlen($selectedProduct->preview_top) > 1) 
+                                    ? 'canvas.height / '.$selectedProduct->preview_top 
+                                    : 'canvas.height / 2 + 80';
+                            
+                        @endphp
+                        
                         // Add text elements
                         var company = "{{ session('company') }}"; // Get session company value
                         var sampleText1 = new fabric.Textbox(company, {
-                            left: canvas.width / 2 - 60,
-                            top: canvas.height / 2 + 80,
-                            fontSize: 20, // Adjust font size as needed
-                            fill: '#000000',
+                            left: {{$left}},
+                            top: {{$top}},
+                            fontSize: {{ $fontSize}}, // Adjust font size as needed
+                            fill: '{{$selectedProduct->color}}',
                             fontFamily: "{{ session('font') }}",
-                            textAlign: 'center',
+                            textAlign: 'left',
                             selectable: false,
-                            evented: false
+                            evented: false,
+                            width: 340,
+                            borderColor: 'red',    
                         });
                         canvas.add(sampleText1);
 

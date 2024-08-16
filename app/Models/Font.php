@@ -10,4 +10,5 @@ class Font extends Model
     use HasFactory;
 
     protected $guarded = [];
+    protected $fillable = ['slug', 'name'];
 }

@@ -25,6 +25,11 @@ class Product extends Model
         return $this->belongsTo(Category::class,'category_id');
     }
     
+    public function font()
+    {
+        return $this->belongsTo(Font::class,'font_id');
+    }
+    
     // public function subcategory()
     // {
     //     return $this->belongsTo(SubCategory::class,'sub_category_id');

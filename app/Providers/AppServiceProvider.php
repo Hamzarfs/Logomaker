@@ -21,23 +21,39 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(): void
+    public function vvboot(): void
     {
         view()->composer(['site.layouts.header', 'site.layouts.footer'], function ($view) {
             $categories = Category::where('is_top', true)->get();
-            $fonts = Font::all();
-        
-            // $view->with([
-            //     'categories' => $categories,
-            //     'fonts' => $fonts
-            // ]);
-            $view->with('categories', $categories, 'fonts', $fonts);
+            $logoFonts = Font::all();
+    
+            // Correctly pass the data to the view
+            $view->with([
+                'categories' => $categories,
+                'logoFonts' => $logoFonts
+            ]);
         });
-
-        // view()->composer('site.layouts.footer', function ($view) {
-        //     $categories = Category::where('is_top', true)->get();
-        //     $view->with('categories', $categories);
-        // });
+    
         Paginator::useBootstrapFive();
     }
+
+    public function boot(): void
+    {
+    view()->composer(['site.layouts.header', 'site.layouts.footer', 'site.common'], function ($view) {
+        $categories = Category::where('is_top', true)->get();
+        $logoFonts = Font::all();
+
+        // Log the data to confirm
+        \Log::info('Logo Fonts:', $logoFonts->toArray());
+
+        $view->with([
+            'categories' => $categories,
+            'logoFonts' => $logoFonts
+        ]);
+    });
+
+    Paginator::useBootstrapFive();
+}
+
+    
 }
