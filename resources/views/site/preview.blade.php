@@ -1086,6 +1086,7 @@
                         // Create a group with the loaded objects
                         var svgGroup = new fabric.Group(objects);
 
+                        
                         // Scale the SVG to fit within the canvas
                         var canvasWidth = canvas.width;
                         var canvasHeight = canvas.height;
@@ -1169,11 +1170,13 @@
                                     //   echo  $left."DDDDDDDDDDDDDDDDDDDDDDDDD";
                             //2 + 80
 
-                            $top ='canvas.height / '. $selectedProduct->preview_top;
-                            $top = (isset($selectedProduct->preview_top) && strlen($selectedProduct->preview_top) > 1) 
-                                    ? 'canvas.height / '.$selectedProduct->preview_top 
-                                    : 'canvas.height / 2 + 80';
+                                
                             
+                       
+                            $top = (isset($selectedProduct->preview_top) && strlen($selectedProduct->preview_top) >= 1) 
+                                    ? 'canvas.height / '. $selectedProduct->preview_top .' + 80'
+                                    : 'canvas.height / 2 + 80';
+                           
                         @endphp
                         
                         // Add text elements
