@@ -1112,11 +1112,10 @@
                                     ? $selectedProduct->preview_font_size 
                                     : '40';
 
-                            $companyName = session('company');
+                             $companyName = session('company');
                            
                             $companyNameLength = strlen($companyName);
                             if ($companyNameLength > 10 && $companyNameLength <= 15) {
-                                
                                 $fontSize = $fontSize - 6 ;
                             }else  if ($companyNameLength > 15 && $companyNameLength <= 20) {
                                 $fontSize = $fontSize - 12 ;
@@ -1125,15 +1124,49 @@
                             }else  if ($companyNameLength > 25 && $companyNameLength <= 30) {
                                 $fontSize = $fontSize = $fontSize - 20 ;
                             }
-                          
- 
+                             
+                            $leftPosition = (isset($selectedProduct->preview_left) && strlen($selectedProduct->preview_left) > 1) 
+                                    ?  floatval($selectedProduct->preview_left)
+                                    : '2.2';   
+
+                            if ($companyNameLength > 3 && $companyNameLength <= 5) {
+                                $leftPosition =  $leftPosition + .1; 
+                            }else  if ($companyNameLength > 5 && $companyNameLength <= 7) {
+                                $leftPosition =  $leftPosition + .2; 
+                            }else  if ($companyNameLength > 7 && $companyNameLength <= 9) {
+                                $leftPosition =  $leftPosition + .4; 
+                            }else  if ($companyNameLength > 9 && $companyNameLength <= 11) {
+                                $leftPosition =  $leftPosition + .6; 
+                            }else  if ($companyNameLength > 11 && $companyNameLength <= 13) {
+                                $leftPosition =  $leftPosition + .8; 
+                            }else  if ($companyNameLength > 13 && $companyNameLength <= 15) {
+                                $leftPosition =  $leftPosition + 1; 
+                            }else  if ($companyNameLength > 15 && $companyNameLength <= 17) {
+                                $leftPosition =  $leftPosition + 1.2; 
+                            }else  if ($companyNameLength > 17 && $companyNameLength <= 19) {
+                                $leftPosition =  $leftPosition + 1.4; 
+                            }else  if ($companyNameLength > 19 && $companyNameLength <= 21) {
+                                $leftPosition =  $leftPosition + 1.6; 
+                            }else  if ($companyNameLength > 21 && $companyNameLength <= 23) {
+                                $leftPosition =  $leftPosition + 1.8; 
+                            }else  if ($companyNameLength > 23 && $companyNameLength <= 25) {
+                                $leftPosition =  $leftPosition + 2; 
+                            }else  if ($companyNameLength > 25 && $companyNameLength <= 27) {
+                                $leftPosition =  $leftPosition + 2.2; 
+                             
+                            }else  if ($companyNameLength > 27 && $companyNameLength <= 30) {
+                                $leftPosition =  $leftPosition + 2.2; 
+                            }
+
+                            $fontSlug = $selectedProduct->font->slug ?? null;
+                            $font = $fontSlug ? pathinfo($fontSlug, PATHINFO_FILENAME) : '';
                             //2 - 60 
                             // $left='canvas.width / '.$selectedProduct->preview_left;
-                            $left = (isset($selectedProduct->preview_left) && strlen($selectedProduct->preview_left) > 1) 
-                                    ? 'canvas.width / '.$selectedProduct->preview_left 
-                                    : 'canvas.width / 2 - 60';
+                            $left = 'canvas.width / '.$leftPosition .' - 60'; 
                                       //$left ='canvas.width / 6 - 40';
-                            
+                                      
+                                    //    $left = 'canvas.width / 1 - 55 ';
+                                    //   echo  $left."DDDDDDDDDDDDDDDDDDDDDDDDD";
                             //2 + 80
 
                             $top ='canvas.height / '. $selectedProduct->preview_top;
@@ -1150,7 +1183,7 @@
                             top: {{$top}},
                             fontSize: {{ $fontSize}}, // Adjust font size as needed
                             fill: '{{$selectedProduct->color}}',
-                            fontFamily: "{{ session('font') }}",
+                            fontFamily: "{{ $font }}",
                             textAlign: 'left',
                             selectable: false,
                             evented: false,

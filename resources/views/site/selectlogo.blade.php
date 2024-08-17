@@ -193,7 +193,10 @@
                     
                     
                    
-                    $font = pathinfo( $product->font->slug, PATHINFO_FILENAME);
+                    
+                    $fontSlug = $product->font->slug ?? null;
+                    $font = $fontSlug ? pathinfo($fontSlug, PATHINFO_FILENAME) : '';
+
                    // echo   $font;
                     $color = $colors[$index % count($colors)];
                     $color=$product->color;
