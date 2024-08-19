@@ -92,6 +92,21 @@
                                         </select>
                                     </div>
                                 </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="category" class="form-label">Logo Position</label>
+                                        <select name="logo_position" id="logo_position" class="form-control" required>
+                                            <option value="" disabled>Select the category</option>
+                                            <option value="top" {{ old('logo_position', $data->logo_position) === 'top' ? 'selected' : '' }}>Top</option>
+                                            <option value="center" {{ old('logo_position', $data->logo_position) === 'center' ? 'selected' : '' }}>Center</option>
+                                            <option value="bottom" {{ old('logo_position', $data->logo_position) === 'bottom' ? 'selected' : '' }}>Bottom</option>
+                                            <option value="left" {{ old('logo_position', $data->logo_position) === 'left' ? 'selected' : '' }}>Left</option>
+                                            <option value="right" {{ old('logo_position', $data->logo_position) === 'right' ? 'selected' : '' }}>Right</option>
+                                        </select>
+
+                                        <x-error>category</x-error>
+                                    </div>
+                                </div>
 
                             </div>
                             <h4>Logo Maker</h4>

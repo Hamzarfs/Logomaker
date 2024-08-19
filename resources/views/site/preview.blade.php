@@ -1068,9 +1068,9 @@
     // var dataURL
 
     $(document).ready(function() {
-        // Set canvas size to 300x300 pixels
-        canvas.setWidth(300);
-        canvas.setHeight(300);
+         
+        canvas.setWidth(400);
+        canvas.setHeight(250);
 
         // Load SVG function
         function loadCarSVG() {
@@ -1093,7 +1093,7 @@
                         var boundingBox = svgGroup.getBoundingRect();
 
                         var scaleX = canvasWidth / boundingBox.width;
-                        var scaleY = canvasHeight / boundingBox.height;
+                        var scaleY = canvasHeight / boundingBox.height-.6;
                         var scale = Math.min(scaleX, scaleY);
 
                         svgGroup.set({
@@ -1112,7 +1112,7 @@
                             $fontSize = (isset($selectedProduct->preview_font_size) && strlen($selectedProduct->preview_font_size) > 1) 
                                     ? $selectedProduct->preview_font_size 
                                     : '40';
-
+                                    
                              $companyName = session('company');
                            
                             $companyNameLength = strlen($companyName);
@@ -1128,7 +1128,7 @@
                              
                             $leftPosition = (isset($selectedProduct->preview_left) && strlen($selectedProduct->preview_left) > 1) 
                                     ?  floatval($selectedProduct->preview_left)
-                                    : '2.2';   
+                                    : '1.7';   
 
                             if ($companyNameLength > 3 && $companyNameLength <= 5) {
                                 $leftPosition =  $leftPosition + .1; 
@@ -1163,19 +1163,21 @@
                             $font = $fontSlug ? pathinfo($fontSlug, PATHINFO_FILENAME) : '';
                             //2 - 60 
                             // $left='canvas.width / '.$selectedProduct->preview_left;
-                            $left = 'canvas.width / '.$leftPosition .' - 60'; 
+                            $left = 'canvas.width / '.$leftPosition .' - 80'; 
                                       //$left ='canvas.width / 6 - 40';
                                       
                                     //    $left = 'canvas.width / 1 - 55 ';
                                     //   echo  $left."DDDDDDDDDDDDDDDDDDDDDDDDD";
                             //2 + 80
 
-                                
+                            //$left = 'canvas.width / 1.05 - 80'; 
                             
                        
                             $top = (isset($selectedProduct->preview_top) && strlen($selectedProduct->preview_top) >= 1) 
                                     ? 'canvas.height / '. $selectedProduct->preview_top .' + 80'
                                     : 'canvas.height / 2 + 80';
+
+                          //$top='canvas.height / 7.5 + 80';                                    
                            
                         @endphp
                         

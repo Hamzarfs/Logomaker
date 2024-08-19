@@ -228,13 +228,46 @@
                                     ? $product->logomaker_left 
                                     : '-30px';
                   
+                   
+                    
+                    $logoPosition = $product->logo_position ?? ''; // Use null coalescing operator to handle unset cases
+                    $logoPositionVertical='margin-top:10px';
+                    if (isset($logoPosition) && strlen($logoPosition) > 0) {
+                        switch ($logoPosition) {
+                            case 'left':
+                                //$logoPosition="margin-left:0px";
+                                break;
+                            case 'center':
+                                // Do something for 'center'
+                                //echo "Logo position is center.";
+                                break;
+                            case 'right':
+                                // Do something for 'right'
+                                //$logoPosition="margin-left:-0px";
+                                break;
+                            case 'top':
+                                // Do something for 'top'
+                                $logoPositionVertical='margin-top:-80px';
+                                break;
+                            case 'bottom':
+                                $logoPositionVertical='margin-top:140px';
+                                break;
+                            default:
+                                // Optionally handle unexpected values
+                                //echo "Unexpected logo position.";
+                                break;
+                        }
+                    }  
                     
                 @endphp
 
                 <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
                     <div class="card-container">
-                        <img src="{{ asset("category-image/$product->image") }}" style="position: absolute; margin-top:-30px; z-index: 10;" class="img-fluid portfolio-image"
+                    
+                        <img src="{{ asset("category-image/$product->image") }}" style="xwidth: 35% !important; {{$logoPosition}}  ;position: absolute; {{$logoPositionVertical}};   z-index: 10;" class="img-fluid portfolio-image"
                             alt="{{ $product->name }}">
+
+
                         <div class="text-placeholder"
                             style=" z-index: 20;font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize}}; font-weight:500; margin-left:{{$leftPosition}}; margin-top:{{ $topPosition}}">
                             {{ session('company') }} </div>

@@ -63,6 +63,8 @@ class ProductController extends Controller
             'image' => 'required|image',
             'color' => 'required|hex_color',
             'font' => 'required|exists:fonts,id',
+            'logo_position' => 'string|nullable',
+
             'logomaker' => 'required|array',
             'logomaker.*' => 'string|nullable',
             'preview' => 'required|array',
@@ -89,6 +91,7 @@ class ProductController extends Controller
 
         $product->font_id = $data['font'];
         $product->color = $data['color'];
+        $product->logo_position = $data['logo_position']; // Now a single value
         $product->logomaker_left = $data['logomaker']['left'];
         $product->logomaker_top = $data['logomaker']['top'];
         $product->logomaker_font_size = $data['logomaker']['font'];
@@ -98,6 +101,8 @@ class ProductController extends Controller
         $product->canva_left = $data['canva']['left'];
         $product->canva_top = $data['canva']['top'];
         $product->canva_font_size = $data['canva']['font'];
+        
+        
 
         $product->save();
         $productId = $product->id;
@@ -161,6 +166,7 @@ class ProductController extends Controller
             'category' => 'required',
             'color' => 'required|hex_color',
             'font' => 'required|exists:fonts,id',
+            'logo_position' => 'string|nullable',
             'logomaker' => 'required|array',
             'logomaker.*' => 'string|nullable',
             'preview' => 'required|array',
@@ -206,6 +212,7 @@ class ProductController extends Controller
 
         $product->font_id = $data['font'];
         $product->color = $data['color'];
+        $product->logo_position = $data['logo_position'];
         $product->logomaker_left = $data['logomaker']['left'];
         $product->logomaker_top = $data['logomaker']['top'];
         $product->logomaker_font_size = $data['logomaker']['font'];

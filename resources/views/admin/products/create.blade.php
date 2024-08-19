@@ -73,6 +73,20 @@
                                     </div>
                                 </div>
 
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="logo_position" class="form-label">Logo Position</label>
+                                        <select name="logo_position" id="logo_position" class="form-control" required>
+                                            <option value="" selected >Select the position</option>
+                                            <option value="top">Top</option>
+                                            <option value="center">Center</option>
+                                            <option value="bottom">Bottom</option>
+                                            <option value="left">Left</option>
+                                            <option value="right">Right</option>
+                                        </select>
+                                        <x-error>logo_position</x-error>
+                                    </div>
+                                </div>
                             </div>
                             <h4>Logo Maker</h4>
                             <div class="row">

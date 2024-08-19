@@ -43,10 +43,12 @@
                 @php
                     // Extract the font name without the extension
                     $fontName = pathinfo($font->name, PATHINFO_FILENAME);
+                    $fontSlug = pathinfo($font->slug, PATHINFO_FILENAME);
+                    
                 @endphp
                 @font-face {
-                    font-family: '{{ $fontName }}';
-                    src: url('{{ asset('fonts/' . $font->name) }}') format('{{ $font->extension }}');
+                    font-family: '{{  $fontSlug }}';
+                    src: url('{{ asset('fonts/' . $font->name) }}') format('truetype');
                 }
             @endforeach
         </style>
