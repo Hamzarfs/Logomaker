@@ -169,7 +169,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="can_left" class="form-label">Left Position</label>
-                                        <input type="number" name="canva[left]" id="can_left"
+                                        <input type="text" name="canva[left]" id="can_left"
                                             value="{{ old('canva.left', $data->canva_left) }}" class="form-control"
                                             >
                                     </div>
@@ -177,7 +177,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="can_top" class="form-label">Top Position</label>
-                                        <input type="number" name="canva[top]" id="can_top"
+                                        <input type="text" name="canva[top]" id="can_top"
                                             value="{{ old('canva.top', $data->canva_top) }}" class="form-control"
                                             >
                                     </div>
@@ -185,7 +185,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="can_font" class="form-label">Font Size</label>
-                                        <input type="number" name="canva[font]" id="can_font"
+                                        <input type="text" name="canva[font]" id="can_font"
                                             value="{{ old('canva.font', $data->canva_font_size) }}"
                                             class="form-control" >
                                     </div>

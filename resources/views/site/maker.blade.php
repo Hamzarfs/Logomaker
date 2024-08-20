@@ -491,9 +491,25 @@
                         // Load the SVG
                         fabric.loadSVGFromString(svgString, function(objects, options) {
                             // Calculate the center of the canvas
+                            @php
+                                $iconLeft = 2;
+                                $iconTop = 2;
+
+                                if ($selectedProduct->logo_position == 'left') {
+                                    $iconLeft = 2.9;
+                                } elseif ($selectedProduct->logo_position == 'right') {
+                                    $iconLeft = 1.5;
+                                } elseif ($selectedProduct->logo_position == 'top') {
+                                    $iconTop = 2.5;
+                                } elseif ($selectedProduct->logo_position == 'bottom') {
+                                    $iconTop = 1.5;
+                                }
+                                //echo $iconLeft."DDDDDDDD".$iconTop;
+                            @endphp
+
                             var canvasCenter = {
-                                left: canvas.width / 2,
-                                top: canvas.height / 2
+                                left: canvas.width / {{$iconLeft}},
+                                top: canvas.height / {{$iconTop}}
                             };
 
                             // Calculate the bounding box of the combined objects
@@ -732,17 +748,50 @@
 
 
                         // Get the session company value and escape single quotes
+                        @php
+                            $fontSlug = $selectedProduct->font->slug ?? null;
+                            $font = $fontSlug ? pathinfo($fontSlug, PATHINFO_FILENAME) : '';
+                            $leftPosition = (isset($selectedProduct->canva_left) && strlen($selectedProduct->canva_left) > 1) 
+                                    ?  floatval($selectedProduct->canva_left)
+                                    : '3.8';   
+                            $topPosition = (isset($selectedProduct->canva_top) && strlen($selectedProduct->canva_top) > 1) 
+                                    ?  floatval($selectedProduct->canva_top)
+                                    : '2.2';   
 
+                            $companyName = session('company');
+                            $companyNameLength = strlen($companyName);
+
+                            $textPosition='center';
+                            if ($selectedProduct->logo_position == 'left') {
+                                $textPosition='left';
+                            } elseif ($selectedProduct->logo_position == 'right') {
+                                $textPosition='right';
+                            }
+                            // if ($companyNameLength >= 1 && $companyNameLength <= 10) {
+                            //     $leftPosition =  $leftPosition + 0.8; 
+                            // }else  if ($companyNameLength > 10 && $companyNameLength <= 20) {
+                            //     $leftPosition =  $leftPosition + 0.8 ; 
+                            // }else  if ($companyNameLength > 20 && $companyNameLength <= 30) {
+                            //     $leftPosition =  $leftPosition + 0.8 ; 
+                            // }
+
+                             // echo $leftPosition."SDDDDDDDDDDDDDDDDDDDDDD".$companyNameLength."-----".$selectedProduct->canva_left;
+
+                        @endphp
+    
+                            // left: canvas.width / 2.2 - 57, // Position the text
+                            // top: canvas.height / 3.8 + 120, // Position the text
 
                         // Create the textbox with the session company value
                         var sampleText1 = new fabric.Textbox(company, {
-                            left: canvas.width / 2.5 - 57, // Position the text
-                            top: canvas.height / 1.8 + 120, // Position the text
-                            fontSize: 80,
-                            fill: '#000000',
-                            fontFamily: "{{ session('font') }}",
-                            textAlign: 'center',
+                            left: canvas.width /  {{$leftPosition}} - 60, // Position the text
+                            top: canvas.height / {{$topPosition}} + 120, // Position the text
+                            fontSize: 30,
+                            fill: '{{$selectedProduct->color}}',
+                            fontFamily: "{{ $font }}",
+                            textAlign: '{{$textPosition}}',
                             selectable: true,
+                            width: 540,
                             evented: true
                         });
 

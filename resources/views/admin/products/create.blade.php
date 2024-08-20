@@ -93,7 +93,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_left" class="form-label">Left Position</label>
-                                        <input type="number" name="logomaker[left]" id="lm_left" value="{{ old('logomaker.left') }}"
+                                        <input type="text" name="logomaker[left]" id="lm_left" value="{{ old('logomaker.left') }}"
                                             class="form-control" >
                                         <x-error>logomaker[left]</x-error>
                                     </div>
@@ -101,7 +101,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_top" class="form-label">Top Position</label>
-                                        <input type="number" name="logomaker[top]" id="lm_top" value="{{ old('logomaker.top') }}"
+                                        <input type="text" name="logomaker[top]" id="lm_top" value="{{ old('logomaker.top') }}"
                                             class="form-control" >
                                         <x-error>logomaker[top]</x-error>
                                     </div>
@@ -109,7 +109,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_font" class="form-label">Font Size</label>
-                                        <input type="number" name="logomaker[font]" id="lm_font" value="{{ old('logomaker.font') }}"
+                                        <input type="text" name="logomaker[font]" id="lm_font" value="{{ old('logomaker.font') }}"
                                             class="form-control" >
                                         <x-error>logomaker[font]</x-error>
                                     </div>
@@ -120,7 +120,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="pre_left" class="form-label">Left Position</label>
-                                        <input type="number" name="preview[left]" id="pre_left" value="{{ old('preview.left') }}"
+                                        <input type="text" name="preview[left]" id="pre_left" value="{{ old('preview.left') }}"
                                             class="form-control" >
                                         <x-error>preview[left]</x-error>
                                     </div>
@@ -128,7 +128,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="pre_top" class="form-label">Top Position</label>
-                                        <input type="number" name="preview[top]" id="pre_top"
+                                        <input type="text" name="preview[top]" id="pre_top"
                                             value="{{ old('preview.top') }}" class="form-control" >
                                         <x-error>preview[top]</x-error>
                                     </div>
@@ -136,7 +136,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="pre_font" class="form-label">Font Size</label>
-                                        <input type="number" name="preview[font]" id="pre_font"
+                                        <input type="text" name="preview[font]" id="pre_font"
                                             value="{{ old('preview.font') }}" class="form-control" >
                                         <x-error>preview[font]</x-error>
                                     </div>
@@ -148,7 +148,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="can_left" class="form-label">Left Position</label>
-                                        <input type="number" name="canva[left]" id="can_left"
+                                        <input type="text" name="canva[left]" id="can_left"
                                             value="{{ old('canva.left') }}" class="form-control" >
                                         <x-error>canva[left]</x-error>
                                     </div>
@@ -156,7 +156,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="can_top" class="form-label">Top Position</label>
-                                        <input type="number" name="canva[top]" id="can_top"
+                                        <input type="text" name="canva[top]" id="can_top"
                                             value="{{ old('canva.top') }}" class="form-control" >
                                         <x-error>canva[top]</x-error>
                                     </div>
@@ -164,7 +164,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="can_font" class="form-label">Font Size</label>
-                                        <input type="number" name="canva[font]" id="can_font"
+                                        <input type="text" name="canva[font]" id="can_font"
                                             value="{{ old('canva.font') }}" class="form-control" >
                                         <x-error>canva[font]</x-error>
                                     </div>

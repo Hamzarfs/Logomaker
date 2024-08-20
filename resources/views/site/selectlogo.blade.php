@@ -243,11 +243,11 @@
                                 break;
                             case 'right':
                                 // Do something for 'right'
-                                //$logoPosition="margin-left:-0px";
+                                $logoPosition="margin-left:-0px";
                                 break;
                             case 'top':
                                 // Do something for 'top'
-                                $logoPositionVertical='margin-top:-80px';
+                                $logoPositionVertical='margin-top:-40px';
                                 break;
                             case 'bottom':
                                 $logoPositionVertical='margin-top:140px';

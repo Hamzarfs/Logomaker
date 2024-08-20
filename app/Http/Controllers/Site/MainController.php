@@ -91,8 +91,8 @@ class MainController extends \App\Http\Controllers\Controller
             ->where('user_id',  $userId)
             ->where('status', 'paid')
             ->exists();
-
-        return view('site/maker', compact('hasOrder'));
+        $selectedProduct = Product::find(Session::get('product-id'));
+        return view('site/maker', compact('hasOrder','selectedProduct'));
     }
 
     public function thankYou()
