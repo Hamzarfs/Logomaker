@@ -1092,9 +1092,9 @@
                         var canvasHeight = canvas.height;
                         var boundingBox = svgGroup.getBoundingRect();
 
-                        var scaleX = canvasWidth / boundingBox.width;
+                        var scaleX = canvasWidth / boundingBox.width-.4;
                         //var scaleY = canvasHeight / boundingBox.height-.6;
-                        var scaleY = canvasHeight / boundingBox.height-.2;
+                        var scaleY = canvasHeight / boundingBox.height-.4;
                         var scale = Math.min(scaleX, scaleY);
                         @php
     // Define the initial position for the SVG based on the logo position
