@@ -252,7 +252,7 @@
                                 break;
                             case 'center':
                                 // Do something for 'center'
-                                //echo "Logo position is center.";
+                                $logoPositionVertical='margin-top:10px';
                                 break;
                             case 'right':
                                 // Do something for 'right'
@@ -261,7 +261,7 @@
                                      $leftPositionValue = (int) str_replace('px', '', $leftPosition);
                                      $adjustedLeftPositionValue = $leftPositionValue  + 130 ;
                                      $leftPosition = "{$adjustedLeftPositionValue}px";
-                                 }elseif($companyNameLength >= 6 && $companyNameLength<=11){
+                                 }elseif($companyNameLength >= 6 && $companyNameLength<=9){
                                      $leftPositionValue = (int) str_replace('px', '', $leftPosition);
                                      $adjustedLeftPositionValue = $leftPositionValue  + 60;
                                      $leftPosition = "{$adjustedLeftPositionValue}px";
@@ -278,6 +278,7 @@
                                 $logoPositionVertical='margin-top:140px';
                                 break;
                             default:
+                            $logoPositionVertical='margin-top:-10px';
                                 // Optionally handle unexpected values
                                 //echo "Unexpected logo position.";
                                 break;

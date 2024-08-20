@@ -1093,25 +1093,13 @@
                         var boundingBox = svgGroup.getBoundingRect();
 
                         var scaleX = canvasWidth / boundingBox.width;
-                        //var scaleY = canvasHeight / boundingBox.height-.6;
-                        var scaleY = canvasHeight / boundingBox.height-.2;
+                        var scaleY = canvasHeight / boundingBox.height-.6;
                         var scale = Math.min(scaleX, scaleY);
-                        @php
-    // Define the initial position for the SVG based on the logo position
-    $leftLogoPosition = '(canvasWidth - boundingBox.width * scale) / 2'; // Default to center
 
-    // Adjust the position based on the logo_position
-    if ($selectedProduct->logo_position == 'left') {
-        $leftLogoPosition = '0'; // Align to the left edge of the canvas
-    } elseif ($selectedProduct->logo_position == 'right') {
-        $leftLogoPosition = 'canvasWidth - boundingBox.width * scale'; // Align to the right edge of the canvas
-    }
-@endphp
                         svgGroup.set({
                             scaleX: scale,
                             scaleY: scale,
-                            left: 220, 
-                            left: {{$leftLogoPosition}},
+                            left: (canvasWidth - boundingBox.width * scale) / 2,
                             top: (canvasHeight - boundingBox.height * scale) / 2,
                             selectable: false, // Disable selection
                             evented: false, // Disable events
@@ -1120,11 +1108,10 @@
                         canvas.add(svgGroup);
 
                         @php
-                            $fontSlug = $selectedProduct->font->slug ?? null;
-                            $font = $fontSlug ? pathinfo($fontSlug, PATHINFO_FILENAME) : '';
+                            
                             $fontSize = (isset($selectedProduct->preview_font_size) && strlen($selectedProduct->preview_font_size) > 1) 
                                     ? $selectedProduct->preview_font_size 
-                                    : '35';
+                                    : '40';
                                     
                              $companyName = session('company');
                            
@@ -1143,34 +1130,34 @@
                                     ?  floatval($selectedProduct->preview_left)
                                     : '1.7';   
 
-                            // if ($companyNameLength > 3 && $companyNameLength <= 5) {
-                            //     $leftPosition =  $leftPosition + .1; 
-                            // }else  if ($companyNameLength > 5 && $companyNameLength <= 7) {
-                            //     $leftPosition =  $leftPosition + .2; 
-                            // }else  if ($companyNameLength > 7 && $companyNameLength <= 9) {
-                            //     $leftPosition =  $leftPosition + .4; 
-                            // }else  if ($companyNameLength > 9 && $companyNameLength <= 11) {
-                            //     $leftPosition =  $leftPosition + .6; 
-                            // }else  if ($companyNameLength > 11 && $companyNameLength <= 13) {
-                            //     $leftPosition =  $leftPosition + .8; 
-                            // }else  if ($companyNameLength > 13 && $companyNameLength <= 15) {
-                            //     $leftPosition =  $leftPosition + 1; 
-                            // }else  if ($companyNameLength > 15 && $companyNameLength <= 17) {
-                            //     $leftPosition =  $leftPosition + 1.2; 
-                            // }else  if ($companyNameLength > 17 && $companyNameLength <= 19) {
-                            //     $leftPosition =  $leftPosition + 1.4; 
-                            // }else  if ($companyNameLength > 19 && $companyNameLength <= 21) {
-                            //     $leftPosition =  $leftPosition + 1.6; 
-                            // }else  if ($companyNameLength > 21 && $companyNameLength <= 23) {
-                            //     $leftPosition =  $leftPosition + 1.8; 
-                            // }else  if ($companyNameLength > 23 && $companyNameLength <= 25) {
-                            //     $leftPosition =  $leftPosition + 2; 
-                            // }else  if ($companyNameLength > 25 && $companyNameLength <= 27) {
-                            //     $leftPosition =  $leftPosition + 2.2; 
+                            if ($companyNameLength > 3 && $companyNameLength <= 5) {
+                                $leftPosition =  $leftPosition + .1; 
+                            }else  if ($companyNameLength > 5 && $companyNameLength <= 7) {
+                                $leftPosition =  $leftPosition + .2; 
+                            }else  if ($companyNameLength > 7 && $companyNameLength <= 9) {
+                                $leftPosition =  $leftPosition + .4; 
+                            }else  if ($companyNameLength > 9 && $companyNameLength <= 11) {
+                                $leftPosition =  $leftPosition + .6; 
+                            }else  if ($companyNameLength > 11 && $companyNameLength <= 13) {
+                                $leftPosition =  $leftPosition + .8; 
+                            }else  if ($companyNameLength > 13 && $companyNameLength <= 15) {
+                                $leftPosition =  $leftPosition + 1; 
+                            }else  if ($companyNameLength > 15 && $companyNameLength <= 17) {
+                                $leftPosition =  $leftPosition + 1.2; 
+                            }else  if ($companyNameLength > 17 && $companyNameLength <= 19) {
+                                $leftPosition =  $leftPosition + 1.4; 
+                            }else  if ($companyNameLength > 19 && $companyNameLength <= 21) {
+                                $leftPosition =  $leftPosition + 1.6; 
+                            }else  if ($companyNameLength > 21 && $companyNameLength <= 23) {
+                                $leftPosition =  $leftPosition + 1.8; 
+                            }else  if ($companyNameLength > 23 && $companyNameLength <= 25) {
+                                $leftPosition =  $leftPosition + 2; 
+                            }else  if ($companyNameLength > 25 && $companyNameLength <= 27) {
+                                $leftPosition =  $leftPosition + 2.2; 
                              
-                            // }else  if ($companyNameLength > 27 && $companyNameLength <= 30) {
-                            //     $leftPosition =  $leftPosition + 2.2; 
-                            // }
+                            }else  if ($companyNameLength > 27 && $companyNameLength <= 30) {
+                                $leftPosition =  $leftPosition + 2.2; 
+                            }
 
                             $fontSlug = $selectedProduct->font->slug ?? null;
                             $font = $fontSlug ? pathinfo($fontSlug, PATHINFO_FILENAME) : '';
@@ -1192,14 +1179,6 @@
 
                           //$top='canvas.height / 7.5 + 80';                                    
                            
-                            $textPosition='center';
-                            if ($selectedProduct->logo_position == 'left') {
-                                $textPosition='left';
-                            } elseif ($selectedProduct->logo_position == 'right') {
-                                $textPosition='right';
-                            }
-
-
                         @endphp
                         
                         // Add text elements
@@ -1210,11 +1189,11 @@
                             fontSize: {{ $fontSize}}, // Adjust font size as needed
                             fill: '{{$selectedProduct->color}}',
                             fontFamily: "{{ $font }}",
-                            textAlign: '{{$textPosition}}',
+                            textAlign: 'left',
                             selectable: false,
                             evented: false,
                             width: 340,
-                           
+                            borderColor: 'red',    
                         });
                         canvas.add(sampleText1);
 

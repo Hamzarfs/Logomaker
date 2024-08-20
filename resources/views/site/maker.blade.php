@@ -751,6 +751,7 @@
                         @php
                             $fontSlug = $selectedProduct->font->slug ?? null;
                             $font = $fontSlug ? pathinfo($fontSlug, PATHINFO_FILENAME) : '';
+                           
                             $leftPosition = (isset($selectedProduct->canva_left) && strlen($selectedProduct->canva_left) > 1) 
                                     ?  floatval($selectedProduct->canva_left)
                                     : '3.8';   
