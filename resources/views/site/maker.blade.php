@@ -751,7 +751,30 @@
                         @php
                             $fontSlug = $selectedProduct->font->slug ?? null;
                             $font = $fontSlug ? pathinfo($fontSlug, PATHINFO_FILENAME) : '';
+                            $fontSize = (isset($selectedProduct->logomaker_font_size) && strlen($selectedProduct->logomaker_font_size) > 1) 
+                                    ? $selectedProduct->logomaker_font_size 
+                                    : 40;
+                                    
+                             $companyName = session('company');
                            
+                             $companyNameLength = strlen($companyName);
+
+                            // Ensure fontSize is numeric
+                            if (!is_numeric($fontSize)) {
+                                $fontSize = 30; // or some other default numeric value
+                            }
+
+                            if ($companyNameLength > 10 && $companyNameLength <= 15) {
+                                $fontSize -= 6;
+                            } elseif ($companyNameLength > 15 && $companyNameLength <= 20) {
+                                $fontSize -= 12;
+                            } elseif ($companyNameLength > 20 && $companyNameLength <= 25) {
+                                $fontSize -= 15;
+                            } elseif ($companyNameLength > 25 && $companyNameLength <= 30) {
+                                $fontSize -= 20;
+                            }
+
+
                             $leftPosition = (isset($selectedProduct->canva_left) && strlen($selectedProduct->canva_left) > 1) 
                                     ?  floatval($selectedProduct->canva_left)
                                     : '3.8';   
@@ -787,7 +810,7 @@
                         var sampleText1 = new fabric.Textbox(company, {
                             left: canvas.width /  {{$leftPosition}} - 60, // Position the text
                             top: canvas.height / {{$topPosition}} + 120, // Position the text
-                            fontSize: 30,
+                            fontSize: {{ $fontSize}}, // Adjust font size as needed
                             fill: '{{$selectedProduct->color}}',
                             fontFamily: "{{ $font }}",
                             textAlign: '{{$textPosition}}',

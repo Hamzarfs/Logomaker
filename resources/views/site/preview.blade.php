@@ -1136,7 +1136,7 @@
                             }else  if ($companyNameLength > 20 && $companyNameLength <= 25) {
                                 $fontSize = $fontSize - 15 ;
                             }else  if ($companyNameLength > 25 && $companyNameLength <= 30) {
-                                $fontSize = $fontSize = $fontSize - 20 ;
+                                $fontSize =   $fontSize - 20 ;
                             }
                              
                             $leftPosition = (isset($selectedProduct->preview_left) && strlen($selectedProduct->preview_left) > 1) 
