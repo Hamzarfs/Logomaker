@@ -177,7 +177,7 @@
                         <a class="nav-link" href="{{ url('/') }}" style="color:#fff;">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/select-logo') }}" style="color:#fff;">Logo Maker</a>
+                        <a class="nav-link" href="{{ url('/logo-maker') }}" style="color:#fff;">Logo Maker</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('about-us') }}" style="color:#fff;">About Us</a>

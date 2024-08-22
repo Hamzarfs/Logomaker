@@ -18,7 +18,7 @@ class SessionDataController extends \App\Http\Controllers\Controller
             if ($request->has('flow') && $request->input('flow')=="home") {
                 return redirect()->route('select-color');
             }else if ($request->has('flow') && $request->input('flow')=="category") {
-                return redirect()->route('select-logo');
+                return redirect()->route('logo-maker');
             }
         }
 
@@ -39,7 +39,7 @@ class SessionDataController extends \App\Http\Controllers\Controller
         if ($request->has('category')) {
             $font = $request->input('category');
             Session::put('category', $font);
-            return redirect()->route('select-logo');
+            return redirect()->route('logo-maker');
         }
 
 
@@ -64,7 +64,7 @@ class SessionDataController extends \App\Http\Controllers\Controller
         }
 
         
-        return redirect()->route('select-logo');
+        return redirect()->route('logo-maker');
 
     }
 

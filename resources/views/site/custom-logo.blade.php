@@ -25,6 +25,7 @@
 
         .custom-logo-page-heading {
             font-weight: 800;
+            font-size: 34px;
         }
 
         .custom-logo-page-button {
@@ -200,9 +201,9 @@
         <div class="row custom-logo-page-section">
             <div class="col-md-6 d-flex align-items-center">
                 <div class="custom-logo-page-content">
-                    <h2 class="custom-logo-page-heading">Customizable Logo Designs In Minutes</h2>
+                    <h1 class="custom-logo-page-heading">Custom Logo Design Services for Your Business</h1>
                     <p>Let our logo designs turn your ideas into professional magic!</p>
-                    <button class="custom-logo-page-button">Get Started</button>
+                    <a href="{{ url('/logo-maker') }}"><button class="custom-logo-page-button">Get Started</button></a>
                 </div>
             </div>
             <div class="col-md-6 d-flex justify-content-center align-items-center">
@@ -482,8 +483,9 @@
                             <textarea class="form-control custom-logo-page-textarea" name="message" id="message" rows="2" placeholder="Your comments"
                                 required></textarea>
                         </div>
+                        <form action="{{ url('/logo-maker') }}" method="POST">
                         <button type="submit" class="btn btn-secondary custom-logo-page-submit">Submit</button>
-                    </form>
+                        </form>
                 </div>
             </div>
         </div>
@@ -495,7 +497,7 @@
                     <div class="col-md-12">
                         <h2 class="premium-logos-heading">Same Premium Logos, Now Faster!</h2>
                         <p class="premium-logos-description">
-                        Since 2001, we have delivered top-notch designs to thousands of clients. 
+                        We have delivered top-notch designs to thousands of clients. 
                         With our free logo services, get high-quality, customizable logos in minutes 
                         straight from our expert designers!
                         </p>
@@ -503,7 +505,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <h3 class="custom-logo-heading">Let Us Create A Custom Logo For Free With Ease!</h3>
+                        <h3 class="custom-logo-heading">Let Us Create A Custom Logo With Ease!</h3>
                         <p class="custom-logo-description">
                         We know you are eager to launch your business, so our simple and speedy customizable 
                         logo design process is here to help. Below are a few simple steps we follow and 
@@ -576,7 +578,7 @@
 
 
 
-            <h1 class="studioTitle">Uncover Versatile Logo Designs With Our Powerful Design Engine!</h1>
+            <h2 class="studioTitle">Uncover Versatile Logo Designs With Our Powerful Design Engine!</h2>
         </div>
     </div>
 
@@ -590,28 +592,28 @@
                 <div class="col-md-4">
                     <div class="card p-4 h-100 custom-card">
                         <h3>01</h3>
-                        <h4>Select a logo design</h4>
-                        <p>Browse through our library of beautiful and editable logo designs that are professionally
-                            designed by expert graphic designers. Each of our customizable logo is based on creative
-                            concepts and out-of-the-box design for businesses</p>
+                        <h4>Discovery and Research</h4>
+                        <p>First up, we dive into learning all about your brand, audience, and competitors. 
+                            This helps us get a feel for what your logo should say and how it should stand out. 
+                            We’ll brainstorm, survey, and check out what others in your space are doing.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card p-4 h-100 custom-card">
                         <h3>02</h3>
-                        <h4>Edit company name</h4>
-                        <p>Once you select a customizable logo from the gallery, It’s time to edit! All you have to do
-                            is click on the text to replace it with your company name, and see your brand transform into
-                            a beautiful identity.</p>
+                        <h4>Concept Refinement</h4>
+                        <p>We begin by sketching ideas and exploring different styles through rough drafts and mood boards. 
+                            Once the best concepts emerge, we refine them by finalizing colors, typography, and ensuring the 
+                            logo works across all formats. Your feedback guides the final tweaks.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card p-4 h-100 custom-card">
                         <h3>03</h3>
-                        <h4>Download for branding</h4>
-                        <p>Once you are satisfied with the result of your custom logo, and have finalized it, It’s time
-                            to download and purchase it for use. Your logo, it is now ready for branding- website,
-                            t-shirt, business card, social media, etc.</p>
+                        <h4>Finalization and Delivery</h4>
+                        <p>Finally, we prepare your logo for action. We create various formats for different uses and make sure 
+                            they look great everywhere. Plus, we might put together a style guide to keep everything consistent.</p>
                     </div>
                 </div>
             </div>
@@ -619,7 +621,7 @@
             <!-- New section added here -->
             <div class="mt-5">
                 <h3 class="custom-heading">We Craft Affordable Logo Designs To Boost Creativity</h3>
-                <p>Allow us to create logo designs online for free with top-notch quality! We offer 
+                <p>Allow us to create logo designs with top-notch quality! We offer 
                 affordable, professional logos perfect for startups and small businesses. Get the 
                 same expert design style without the hefty price tag, thanks to our global team of 
                 skilled logo designers.
@@ -638,19 +640,20 @@
                 <div class="col-md-4 mb-3 text-center">
                     <div class="contact-option">
                         <i class="fas fa-phone fa-2x mb-2"></i>
-                        <p>Phone number: <a href="tel:+123456789">(123) 456 2584</a></p>
+                        <p>Phone number: <a href="tel:+15516665255"> +1(551)666-5255</a></p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3 text-center">
                     <div class="contact-option">
                         <i class="fas fa-envelope fa-2x mb-2"></i>
-                        <p>Email us: <a href="mailto:support@example.com">support@example.com</a></p>
+                        <p>Email us: <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a></p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3 text-center">
                     <div class="contact-option">
                         <i class="fas fa-comment-dots fa-2x mb-2"></i>
-                        <p>Live Chat: <a href="#">Live Chat:</a></p>
+                        <p>Live Chat: <a href="{{ url('https://wa.me/+18482369397') }}">Live Chat</a></p>
+
                     </div>
                 </div>
             </div>

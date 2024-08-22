@@ -19,14 +19,14 @@
     <div class="container mt-5">
         <div class="row align-items-center">
             <div class="col-lg-6 about-us-left order-lg-1">
-                <h2 style="font-weight:700; font-size: 44px; color:#fff;">Hello From<span class="logo-design-color"> RFS!</span></h2>
+                <h1 style="font-weight:700; font-size: 42px; color:#fff;">Hello From<span class="logo-design-color"> RFS!</span></h1>
                 <p style="color: #fff;">Unleash Your Creativity!</p>
                 <form>
-                    <a href="{{ url('/') }}" class="custom-button-online" type="submit">Get Started</a>
+                    <a href="{{ url('/logo-maker') }}" class="custom-button-online" type="submit">Get Started</a>
                 </form>
             </div>
             <div class="col-lg-6 text-center about-us-image-sec order-lg-2">
-                <img src="images/about-us-logo.png" alt="Example" class="img-fluid">
+                <img src="images/about-us-logo.png" alt="About RFS Logo Design" title= "About RFS Logo Design" class="img-fluid">
             </div>
         </div>
     </div>
@@ -40,7 +40,7 @@
             <div class="choose-us-content">
            <h2 style="font-weight:700; font-size:24px;">Turn Your Visions Into Reality</h2>
                 <p style = " text-align:center;">Welcome to RFS Logo Design, your ultimate destination for all things branding. Whether you are 
-                using our free logo maker or opting for custom design services, we craft unique and impactful logos tailored to your vision.</p>
+                using our free logo maker or opting for <a href="{{ url('/custom-logo') }}" >custom design services</a>, we craft unique and impactful logos tailored to your vision.</p>
                 <p style = " text-align:center;">Our expert graphic designers are dedicated 
                 to bringing your ideas to life, while our top-notch website development services ensure your online presence matches your brand's strength.</p>
                 <p style = " text-align:center;">At RFS, we guarantee a smooth journey with responsive support at every turn.</p>
@@ -149,7 +149,7 @@
                 <li><i class="fas fa-paint-brush"></i>Unique illustrations</li>
                 <li><i class="fas fa-bolt"></i>Reflective of your brand</li>
             </ul>
-            <a href="{{ url('/') }}" class="about-button-online" type="submit">Get Started</a>
+            <a href="{{ url('/logo-maker') }}" class="about-button-online" type="submit">Get Started</a>
 
             <p><b>Address:</b> 41 Winthrop Rd, Edison, NJ 08817</p>
         </div>

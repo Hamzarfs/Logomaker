@@ -265,10 +265,10 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h2 style="color:#fff; font-weight:700;">Free <span class="logo-design-color">Logo
+                    <h2 style="color:#fff; font-weight:700;">Free {{ $categoryObj['name'] ?? '' }} <span class="logo-design-color">Logo
                             Maker</span><br>Design
                         Your Logo in Minutes</h2>
-                    <p style="color:#fff;">Utilize our advanced logo creator tool to design a professional logo for your
+                    <p style="color:#fff;">Utilize our advanced {{ $categoryObj['name'] ?? '' }} logo creator tool to design a professional logo for your
                         business or company. Try it now!</p>
                     <!-- <h1>Create Accounting Logos & CPA Logos Instantly</h1> -->
                     {{-- <form class="cta-form" method="post" action="{{ url('/store-session-data') }}">
@@ -399,7 +399,7 @@
 
         <div class="row custom-section">
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/select1.png') }}" alt="Placeholder Image">
+                <img src="{{ asset('images/select1.webp') }}" alt="Find Logo" title="Find Logo">
             </div>
             <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
@@ -417,13 +417,13 @@
                 </div>
             </div>
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Personalization.png') }}" alt="Placeholder Image">
+                <img src="{{ asset('images/Personalization.webp') }}" alt="personalized Logo Design" title="personalized Logo Design">
             </div>
         </div>
 
         <div class="row custom-section">
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Start Branding.png') }}" alt="Placeholder Image">
+                <img src="{{ asset('images/Start Branding.webp') }}" alt="Free Logo Download Maker" title="Free Logo Download Maker">
             </div>
             <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
@@ -459,13 +459,13 @@
                 </div>
             </div>
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Logo Symbol.png') }}" alt="Placeholder Image">
+                <img src="{{ asset('images/Logo Symbol.webp') }}" alt="Icon Creator for Logo" title="Icon Creator for Logo">
             </div>
         </div>
 
         <div class="row custom-section">
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Color Choices.png') }}" alt="Placeholder Image">
+                <img src="{{ asset('images/Color Choices.webp') }}" alt="Color Choices for Logo" title="Color Choices for Logo">
             </div>
             <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
@@ -483,13 +483,13 @@
                 </div>
             </div>
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Fonts.png') }}" alt="Placeholder Image">
+                <img src="{{ asset('images/Fonts.webp') }}" alt="logo Font Generator" title="logo Font Generator">
             </div>
         </div>
 
         <div class="row custom-section">
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Logo Styles.png') }}" alt="Placeholder Image">
+                <img src="{{ asset('images/Logo Styles.webp') }}" alt="Logotype Generator" title="Logotype Generator">
             </div>
             <div class="col-md-6 custom-content-container">
                 <div class="custom-content">

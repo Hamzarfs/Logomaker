@@ -25,12 +25,12 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 banner-left order-lg-1">
-                <h2 style="color:#fff; font-weight:700;">Frequently <span class="logo-design-color">Asked</span><br>Questions
-                </h2>
+                <h1 style="color:#fff; font-weight:700;">Frequently <span class="logo-design-color">Asked</span><br>Questions
+                </h1>
                     <p style="color:#fff;">All your queries answered here.</p>
                 </div>
                 <div class="col-lg-6 text-center banner-image-sec order-lg-2">
-                    <img src="{{ asset('images/faqs(1).png') }}" alt="Example" class="img-fluid">
+                    <img src="{{ asset('images/faqs(1).png') }}" alt="Frequently Asked Questions" title="Frequently Asked Questions" class="img-fluid">
                 </div>
             </div>
         </div>

@@ -268,90 +268,18 @@
 
     <!-- -------------------End FAQs --------------- -->
 
+ <!-- <-----------------Start Testimonial Section---------------->
 
-    
-    <div class="container reviews-section">
-        <h2 class="text-center">See What Our Clients Have to Say</h2>
-        <div id="customers-testimonials" class="owl-carousel owl-theme">
-            <!-- Review 1 -->
-            <div class="item">
-                <div class="review-card">
-                    <div class="star-rating">
-                        <span>&#9733;</span>
-                        <span>&#9733;</span>
-                        <span>&#9733;</span>
-                        <span>&#9733;</span>
-                        <span>&#9733;</span>
-                    </div>
-                    <p class="review-text">I have had a few hiccups during the design process, but they were always there to help resolve any issues.
-                       The team at Logo RFS Logo Design made the logo design journey smooth and delivered beyond my expectations. Thanks a lot!</p>
-                    <p class="review-author">- Alex Thompson</p>
-                </div>
-            </div>
-            <!-- Review 2 -->
-            <div class="item">
-                <div class="review-card">
-                    <div class="star-rating">
-                        <span>&#9733;</span>
-                        <span>&#9733;</span>
-                        <span>&#9733;</span>
-                        <span>&#9733;</span>
-                        <span>&#9733;</span>
-                    </div>
-                    <p class="review-text">A fantastic turnaround. I ordered on Monday, and RFS Logo Design delivered my stationery design within just two days.
-                       The speed and quality amazed me. The design perfectly captured my brand essence. Highly recommended!</p>
-                    <p class="review-author">- Jeter Roberts</p>
-                </div>
-            </div>
-            <!-- Review 3 -->
-            <div class="item">
-                <div class="review-card">
-                    <div class="star-rating">
-                        <span>&#9733;</span>
-                        <span>&#9733;</span>
-                        <span>&#9733;</span>
-                        <span>&#9733;</span>
-                        <span>&#9733;</span>
-                    </div>
-                    <p class="review-text">Thank you for the great work you did on my logo. RFS Logo Design’s team understood my vision and transformed it into a
-                       logo that perfectly represents my brand. They were efficient, responsive, and delivered a standout design.</p>
-                    <p class="review-author">- Jane Smith</p>
-                </div>
-            </div>
-            <!-- Review 4 -->
-            <div class="item">
-                <div class="review-card">
-                    <div class="star-rating">
-                        <span>&#9733;</span>
-                        <span>&#9733;</span>
-                        <span>&#9733;</span>
-                        <span>&#9733;</span>
-                        <span>&#9733;</span>
-                    </div>
-                    <p class="review-text">I never imagined my logo would be this perfect. The designers at RFS Logo Design ensured they understood my requirements before they
-                       began. The seamless design process resulted in a logo that I am proud of and love. 100% recommended!</p>
-                    <p class="review-author">- Sia Williams</p>
-                </div>
-            </div>
-            <!-- Review 5 -->
-            <div class="item">
-                <div class="review-card">
-                    <div class="star-rating">
-                        <span>&#9733;</span>
-                        <span>&#9733;</span>
-                        <span>&#9733;</span>
-                        <span>&#9733;</span>
-                        <span>&#9733;</span>
-                    </div>
-                    <p class="review-text">I was scared to try because I always got scammed before, but RFS Logo Design proved me wrong. They delivered an outstanding logo that truly
-                       reflects my business. The process was transparent, and the final design exceeded my expectations.</p>
-                    <p class="review-author">- Jennifer David</p>
-                </div>
+
+ <section id="testimonial-section" class="pt-5 pb-5">
+        <div class="container">
+            <h2 class="text-center mb-5">See What Our Clients Have to Say</h2>
+            <div class="owl-carousel owl-theme">
+                <!-- Reviews will be inserted here dynamically -->
             </div>
         </div>
-    </div>
-
-    <!---------------------End Clients Have to Say ----------------->
+    </section>
+ <!-- {{----------------- End Testiomonial Section --}} -->
 
     <!---------------------Start why-choose-rfs----------------->
 

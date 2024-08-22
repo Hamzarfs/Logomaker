@@ -95,12 +95,12 @@
                     <p style="color:#fff;">Design and download your perfect logo!</p>
                     <form>
                         <div class="input-group mb-3">
-                            <a href="{{ url('/') }}" class="custom-button-online" type="submit">Get Started</a>
+                            <a href="{{ url('/logo-maker') }}" class="custom-button-online" type="submit">Get Started</a>
                         </div>
                     </form>
                 </div>
                 <div class="col-lg-6 text-center banner-image-sec order-lg-2">
-                    <img src="images/how-work-it.png" alt="Example" class="img-fluid">
+                    <img src="images/how-work-it.png" alt="How RFS Logo Design Works" title="How RFS Logo Design Works" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -109,9 +109,9 @@
     <!-------------------------start section online logo------------------------------------>
 
     <div class="container my-5">
-        <h1 class="maim-heading-online">Quick and Easy Logo Creation</h1>
+        <h2 class="maim-heading-online">Quick and Easy Logo Creation</h2>
         <p class="main-description-online">
-            For a speedy logo design solution, our logo maker is perfect for you. Effortless as 1-2-3,
+            For a speedy logo design solution, our <a href="{{ url('/logo-maker') }}" >logo maker</a> is perfect for you. Effortless as 1-2-3,
             you can craft your personalized logo in just minutes. Simply follow these steps.
         </p>
     </div>
@@ -120,7 +120,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center">
-                    <img src="images/step-select-logo.png" alt="Step Image" class="img-fluid img-shadow">
+                    <img src="images/step-logo-maker.png" alt="Step Image" class="img-fluid img-shadow">
                 </div>
                 <div class="col-md-6">
                     <h2 class="step-title"><span class="step">Step:</span> 1 Select a Logo Design</h2>

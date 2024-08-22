@@ -69,8 +69,8 @@ body {
                 {{-- session('company') --}}
 
                 <h1>Choose colors you want to see in  {{ ucwords(session('company')) }}</h1>
-                <p>Colors help express your brand message</p>
-            </div>
+                <p style="font-size: 18px; font-weight: 400;">Colors help express your brand message</p>
+                </div>
         </div>
 
 

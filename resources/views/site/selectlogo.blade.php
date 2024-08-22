@@ -131,8 +131,8 @@
         <!-- Heading -->
         <div class="row mt-5">
             <div class="col text-center">
-                <h2 style= " font-size:54px; font-weight:700;">Free Logo Maker</h1>
-                    <p>Online logo creator design in minutes!</p>
+                <h1 style= " font-size:42px; font-weight:700;">Free Logo Maker</h1>
+                    <p>Create Unique Logo in Minutes with Our Online Logo Builder!</p>
             </div>
         </div>
     </div>
