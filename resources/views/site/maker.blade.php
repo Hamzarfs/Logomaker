@@ -437,7 +437,7 @@
 
                     <div class="col-md-8">
                         <h1 class="text-center" style="margin-top: 20px;">RFS Logo Editor</h1>
-                        <canvas id="logo-canvas" style="width: 100%; border: 1px solid;"></canvas>
+                        <canvas id="logo-canvas" style="width: 100%; border: 1px solid;" ></canvas>
                     </div>
                 </div>
             </div>

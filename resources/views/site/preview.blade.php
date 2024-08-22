@@ -924,7 +924,7 @@
         </div>
 
         <div class="d-flex justify-content-center align-items-center">
-            <img src="" alt="logo" class="logo-mockup">
+            <img src="" alt="logo" class="logo-mockup"  ondragstart="return false;"   oncontextmenu="return false;">
         </div>
 
         <div class="d-flex justify-content-center align-items-center mt-4">
