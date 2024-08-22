@@ -8,6 +8,8 @@ use Illuminate\Support\Str;
 use App\Http\Controllers\Site\MainController; // Update this line
 use App\Http\Controllers\Site\SessionDataController; // Update this line
 use App\Http\Controllers\Site\GeneralController; // Update this line
+use App\Http\Controllers\ImageController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +32,8 @@ use App\Http\Controllers\Site\GeneralController; // Update this line
 
 // web 
 Route::get('/', [MainController::class, 'index'])->name('homepage');
+Route::get('images/{image}', [ImageController::class, 'show'])->name('image.show');
+
 
 Route::middleware(['role:user', 'auth'])->group(function () {
     // Route::get('/checkout2', [MainController::class, 'checkout2'])->name('checkout2');
