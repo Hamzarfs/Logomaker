@@ -45,7 +45,7 @@
 
     <div class="container my-5">
         <h1 class="maim-heading-online">Steps to Create a Logo Design Online</h1>
-        <p class="main-description-online">
+        <p class="main-description-online" style = "font-size:20px;">
             Use our easiest online logo maker tool to browse through available templates, customize colors,
             fonts, icons, and elements to match your brand's aesthetic, input your business name, and ensure
             it looks unique and professional. Download your custom designed logo and use it across your website,

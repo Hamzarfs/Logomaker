@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"> --}}
 
     <style>
+        .free-logo-heading {
+    font-weight: 700;
+    font-size: 32px;
+    color: #fff;
+}
+
         .owl-carousel .owl-item img {
             display: block;
             width: auto;
@@ -213,8 +219,8 @@ form#companyForm {
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 banner-left order-lg-1">
-                    <h2 style="font-weight:700; color:#fff;">Free <span class="logo-design-color">Logo Maker</span> Tailored
-                        for Every Industry - Design Your Logo in Minutes</h2>
+                <h1 class="free-logo-heading">Free <span class="logo-design-color">Logo Maker</span> Tailored for Every Industry - Design Your Logo in Minutes</h1>
+
                     <p style="color:#fff;">Unleash your creativity and watch your logo come to life effortlessly. Get in
                         touch with us now!</p>
 
@@ -243,7 +249,7 @@ form#companyForm {
 
 
     <div class="container my-5">
-        <h1 class="maim-heading-online">Steps to Craft Your Perfect Logo Design Online</h1>
+        <h2 class="maim-heading-online">Steps to Craft Your Perfect Logo Design Online</h2>
         <p class="main-description-online">
             Use our top-notch logo maker to browse templates, tweak colors, fonts, and icons, and
             create a logo that’s as unique as your brand. Download and showcase your custom design
@@ -258,7 +264,7 @@ form#companyForm {
                     captures your brand's identity. Create a unique and professional logo with
                     minimal effort on your part and watch your idea come to life.
                 </p>
-                <a href="{{ url('/select-logo') }}"><button class="custom-button-online">Explore Logo</button></a>
+                <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Explore Logo</button></a>
                 <img src="images/Logo Pics.png" class="image-online">
             </div>
             <div class="col-md-2 center-image-online">
@@ -272,7 +278,7 @@ form#companyForm {
                     colors, fonts, icons, and taglines to fit your brand’s vibe. Our user-friendly
                     tools make it a breeze for anyone to design a standout, professional logo!
                 </p>
-                <a href="{{ url('/select-logo') }}"><button class="custom-button-online">Try Design Studio</button></a>
+                <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Try Design Studio</button></a>
             </div>
             <div class="container my-5">
                 <div class="row">
@@ -284,7 +290,7 @@ form#companyForm {
                             media or print, ensure your logo shines consistently across your website,
                             social media, business cards, and brochures!
                         </p>
-                        <a href="{{ url('/select-logo') }}"><button class="custom-button-online">Get Started</button></a>
+                        <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Get Started</button></a>
                     </div>
                     <div class="col-md-2"></div>
                     <div class="col-md-5">
@@ -324,10 +330,11 @@ form#companyForm {
         <div class="container portfolio-section">
             <h2 class="portfolio-heading">We Have Logos For Everyone</h2>
             <p class="main-description-online">
-                Explore our logo builder’s vast template collection, from medical
-                to fashion, sports to food. RFS Logo Design helps you find the perfect
-                logo to match your business identity and branding needs.
-            </p>
+    Explore our <a href="{{ url('logo-maker') }}" style="font-weight: bold; color: inherit;">logo builder’s</a> vast template collection, from medical
+    to fashion, sports to food. RFS Logo Design helps you find the perfect
+    logo to match your business identity and branding needs.
+</p>
+
 
 
             <div class="row">
@@ -380,7 +387,7 @@ form#companyForm {
 
 
 
-            <h1 class="studioTitle">Uncover Versatile Logo Designs With Our Powerful Design Engine!</h1>
+            <h2 class="studioTitle">Uncover Versatile Logo Designs With Our Powerful Design Engine!</h2>
         </div>
     </div>
 
@@ -478,7 +485,7 @@ form#companyForm {
             <div class="row mb-4">
                 <div class="col text-center">
                     <h2>Designing The Perfect Logo Made Easy With Our Logo Creator</h2>
-                    <p>Still unsure? Dive deeper or consult with our expert designers for tailored guidance.</p>
+                    <p style="font-size: 18px; font-weight: 400;">Still unsure? Dive deeper or consult with our expert designers for tailored guidance.</p>
                 </div>
             </div>
             <!-- Second Row -->
@@ -533,36 +540,39 @@ form#companyForm {
             <!-- Heading -->
             <div class="row">
                 <div class="col-12">
-                    <div class="heading">Sounds Like a Plan</div>
+                    <div class="heading">Plan Your Way to Success</div>
                 </div>
             </div>
             <!-- Card Slider -->
             <div class="row card-price-container flex-column flex-md-row">
                 <div class="card" onclick="expandCard(this)">
-                    <h5>Get Logo Maker Deal</h5>
-                    <p>Make standout social content, flyers, logos, banners, and more. Free use forever.</p>
+                <h3 class="bold-heading">Logo Maker for Startups</h3>
+                <p>Create eye-catching designs for social media, banners, promotional materials, logos, and beyond - all yours to use at no cost, forever.</p>
                     <ul>
                         <li><i class="bi bi-check-circle"></i> 10000+ logos to choose</li>
+                        <li><i class="bi bi-check-circle"></i> Endless customization options</li>
+                        <li><i class="bi bi-check-circle"></i> High-res design files</li>
+                        <b>(PDF, PNG, JPG)</b>
                         <li><i class="bi bi-check-circle"></i> Instant download</li>
-                        <li><i class="bi bi-check-circle"></i> Unlimited customization</li>
                         <li><i class="bi bi-check-circle"></i> Ready brand identity designs</li>
-                        <li><i class="bi bi-check-circle"></i> High-res PDF, PNG, JPG</li>
                         <li><i class="bi bi-check-circle"></i> As low as $37</li>
                     </ul>
-                    <a href="{{ url('/select-logo') }}"><button class="plan-btn">For Startups</button></a>
+                    <a href="{{ url('/logo-maker') }}"><button class="plan-btn">For Startups</button></a>
                 </div>
                 <div class="card" onclick="expandCard(this)">
-                    <h5>Get Logo Maker Deal</h5>
-                    <p>Make standout social content, flyers, logos, banners, and more. Free use forever.</p>
+                <h3 class="bold-heading">Logo Maker for Small Businesses</h3>
+                    <p>Get premium logo design to create eye-catching graphics for social media, banners, promotional materials, 
+                    logos, and beyond - all yours to use it.</p>
                     <ul>
-                        <li><i class="bi bi-check-circle"></i> 10000+ logos to choose</li>
-                        <li><i class="bi bi-check-circle"></i> Instant download</li>
-                        <li><i class="bi bi-check-circle"></i> Unlimited customization</li>
-                        <li><i class="bi bi-check-circle"></i> Ready brand identity designs</li>
-                        <li><i class="bi bi-check-circle"></i> High-res PDF, PNG, JPG</li>
-                        <li><i class="bi bi-check-circle"></i> As low as $37</li>
+                        <li><i class="bi bi-check-circle"></i> Work directly with skilled designers</li>
+                        <li><i class="bi bi-check-circle"></i> Fully bespoke solution</li>
+                        <li><i class="bi bi-check-circle"></i> high-res design files</li>
+                        <b>(Ai, PSD, EPS, PNG, JPG, PDF, SVG, TIFF)</b>
+                        <li><i class="bi bi-check-circle"></i> Premium graphic design work</li>
+                        <li><i class="bi bi-check-circle"></i> Dedicated account manager</li>
+                        <li><i class="bi bi-check-circle"></i> As low as $199</li>
                     </ul>
-                    <a href="{{ url('/select-logo') }}"><button class="plan-btn">For Startups</button></a>
+                    <a href="{{ url('/logo-maker') }}"><button class="plan-btn">For Startups</button></a>
                 </div>
             </div>
         </div>
@@ -613,7 +623,7 @@ form#companyForm {
             </div>
         </div>
     </section>
- {{----------------- End Testiomonial Section --}}
+ <!-- {{----------------- End Testiomonial Section --}} -->
 
 
     {{-- Start 4 logo type --}}
@@ -655,7 +665,7 @@ form#companyForm {
                 <div class="card logotype-card">
                     <img src="{{url('images/logo-category-Cleaning-logo.webp')}}" class="card-img-top" alt="Cleanings Logos">
                     <div class="card-body">
-                        <p class="card-text">ClEANINGS LOGOS</p>
+                        <p class="card-text">ClEANING LOGOS</p>
                     </div>
                 </div>
             </a>
