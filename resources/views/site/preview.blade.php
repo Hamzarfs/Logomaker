@@ -1120,8 +1120,7 @@
                         canvas.add(svgGroup);
 
                         @php
-                            $fontSlug = $selectedProduct->font->slug ?? null;
-                            $font = $fontSlug ? pathinfo($fontSlug, PATHINFO_FILENAME) : '';
+                            
                             $fontSize = (isset($selectedProduct->preview_font_size) && strlen($selectedProduct->preview_font_size) > 1) 
                                     ? $selectedProduct->preview_font_size 
                                     : '35';

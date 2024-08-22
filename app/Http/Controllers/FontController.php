@@ -15,7 +15,7 @@ class FontController extends Controller
      */
     public function index()
     {
-        $fonts = Font::paginate(10);
+        $fonts = Font::paginate(10000);
         return view('admin.fonts.index', [
             'fonts' => $fonts
         ]);
