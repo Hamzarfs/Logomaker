@@ -227,23 +227,48 @@
                     $leftPosition = (isset($product->logomaker_left) && strlen($product->logomaker_left) > 1) 
                                     ? $product->logomaker_left 
                                     : '-30px';
-                  
+                    
                    
+
                     
                     $logoPosition = $product->logo_position ?? ''; // Use null coalescing operator to handle unset cases
                     $logoPositionVertical='margin-top:10px';
                     if (isset($logoPosition) && strlen($logoPosition) > 0) {
                         switch ($logoPosition) {
                             case 'left':
+                                 if($companyNameLength <= 5){
+                                     $leftPositionValue = (int) str_replace('px', '', $leftPosition);
+                                     $adjustedLeftPositionValue = $leftPositionValue  - 80;
+                                     $leftPosition = "{$adjustedLeftPositionValue}px";
+                                 }else if($companyNameLength >= 6 && $companyNameLength<=11){
+                                    
+                                    $leftPositionValue = (int) str_replace('px', '', $leftPosition);
+                                     $adjustedLeftPositionValue = $leftPositionValue  - 20;
+                                     $leftPosition = "{$adjustedLeftPositionValue}px";
+                                 
+                                }    
+                               // die($companyNameLength."DDDDDDDDDDD".session('company'));
                                 //$logoPosition="margin-left:0px";
                                 break;
                             case 'center':
                                 // Do something for 'center'
-                                //echo "Logo position is center.";
+                                $logoPositionVertical='margin-top:10px';
                                 break;
                             case 'right':
                                 // Do something for 'right'
                                 $logoPosition="margin-left:-0px";
+                                if($companyNameLength<= 5){
+                                     $leftPositionValue = (int) str_replace('px', '', $leftPosition);
+                                     $adjustedLeftPositionValue = $leftPositionValue  + 130 ;
+                                     $leftPosition = "{$adjustedLeftPositionValue}px";
+                                 }elseif($companyNameLength >= 6 && $companyNameLength<=9){
+                                     $leftPositionValue = (int) str_replace('px', '', $leftPosition);
+                                     $adjustedLeftPositionValue = $leftPositionValue  + 60;
+                                     $leftPosition = "{$adjustedLeftPositionValue}px";
+                                 
+                                }    
+                                 
+                                
                                 break;
                             case 'top':
                                 // Do something for 'top'
@@ -253,6 +278,7 @@
                                 $logoPositionVertical='margin-top:140px';
                                 break;
                             default:
+                            $logoPositionVertical='margin-top:-10px';
                                 // Optionally handle unexpected values
                                 //echo "Unexpected logo position.";
                                 break;
@@ -268,9 +294,12 @@
                             alt="{{ $product->name }}">
 
 
-                        <div class="text-placeholder"
+                            <div class="text-placeholder"
                             style=" z-index: 20;font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize}}; font-weight:500; margin-left:{{$leftPosition}}; margin-top:{{ $topPosition}}">
                             {{ session('company') }} </div>
+
+
+
                         <a href="{{ url('/store-session-data-image?image=' . $product->image . '&product-id=' . $product->id .'&font=' . $font) }}"
                             class="hover-button select-btn"  title="{{ $product->name}}" style="z-index: 30;" data-product-id="{{ $product->id }}">Select  </a>
                         @auth
