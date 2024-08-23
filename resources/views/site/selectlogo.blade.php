@@ -127,12 +127,12 @@
         }
     </style>
 
-    <div class="container">
+    <div class="container" >
         <!-- Heading -->
         <div class="row mt-5">
             <div class="col text-center">
-                <h2 style= " font-size:54px; font-weight:700;">Free Logo Maker</h1>
-                    <p>Online logo creator design in minutes!</p>
+                <h1 style= " font-size:42px; font-weight:700;">Free Logo Maker</h1>
+                    <p>Create Unique Logo in Minutes with Our Online Logo Builder!</p>
             </div>
         </div>
     </div>
@@ -290,8 +290,30 @@
                 <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
                     <div class="card-container">
                     
-                        <img src="{{ asset("category-image/$product->image") }}" style="xwidth: 35% !important; {{$logoPosition}}  ;position: absolute; {{$logoPositionVertical}};   z-index: 10;" class="img-fluid portfolio-image"
-                            alt="{{ $product->name }}">
+                    <!-- <img src="{{ route('image.show', $product->image) }}" 
+                        style="xwidth: 35% !important; {{ $logoPosition }}; position: absolute; {{ $logoPositionVertical }}; z-index: 10;" 
+                        class="img-fluid portfolio-image" 
+                        alt="{{ $product->name }}"> -->
+
+                        
+                        <!-- <img src="{{ asset("category-image/$product->image") }}" style="xwidth: 35% !important; {{$logoPosition}}  ;position: absolute; {{$logoPositionVertical}};   z-index: 10;" class="img-fluid portfolio-image"
+                            alt="{{ $product->name }}"> -->
+
+                            <!-- <img src="{{ asset("category-image/$product->image") }}" 
+    style="xwidth: 35% !important; {{$logoPosition}}  ;position: absolute; {{$logoPositionVertical}};   z-index: 10;" 
+    class="img-fluid portfolio-image"
+    alt="{{ $product->name }}"
+    oncontextmenu="return false;"> -->
+
+
+                            <img src="{{ asset("category-image/$product->image") }}" 
+                            style="xwidth: 35% !important; {{$logoPosition}}; position: absolute; {{$logoPositionVertical}}; z-index: 10;" 
+                            class="img-fluid portfolio-image" 
+                            alt="{{ $product->name }}" 
+                            ondragstart="return false;" 
+                            oncontextmenu="return false;">
+
+                           
 
 
                             <div class="text-placeholder"

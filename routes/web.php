@@ -8,6 +8,8 @@ use Illuminate\Support\Str;
 use App\Http\Controllers\Site\MainController; // Update this line
 use App\Http\Controllers\Site\SessionDataController; // Update this line
 use App\Http\Controllers\Site\GeneralController; // Update this line
+use App\Http\Controllers\ImageController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +32,8 @@ use App\Http\Controllers\Site\GeneralController; // Update this line
 
 // web 
 Route::get('/', [MainController::class, 'index'])->name('homepage');
+Route::get('images/{image}', [ImageController::class, 'show'])->name('image.show');
+
 
 Route::middleware(['role:user', 'auth'])->group(function () {
     // Route::get('/checkout2', [MainController::class, 'checkout2'])->name('checkout2');
@@ -61,7 +65,7 @@ Route::post('putImgStringIntoSession', [MainController::class, 'putImgStringInto
 Route::get('/select-color', [MainController::class, 'selectColor'])->name('select-color');
 Route::get('/select-font', [MainController::class, 'selectFont'])->name('select-font');
 Route::get('/select-category', [MainController::class, 'selectCategory'])->name('select-category');
-Route::get('/select-logo', [MainController::class, 'selectlogo'])->name('select-logo');
+Route::get('/logo-maker', [MainController::class, 'selectlogo'])->name('logo-maker');
 Route::get('/logos/{category}', [MainController::class, 'selectLogoCategory'])->name('logos');
 Route::get('/preview', [MainController::class, 'preview'])->name('preview');
 

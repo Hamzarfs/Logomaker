@@ -165,22 +165,24 @@
                 <div class="col-md-6">
                     <h1>Contact Us</h1>
                     <p>Your one-stop solution for all your design needs.</p>
-                    <a class="contact-button-online" href="{{ url('/') }}">Get Started</a>
+                    <a class="contact-button-online" href="{{ url('/logo-maker') }}">Get Started</a>
                 </div>
                 <div class="col-md-6">
-                    <img src="images/contect-us.webp" alt="Banner Image" class="img-fluid">
+                    <img src="images/contect-us.webp" alt="Contact RFS Logo Design" title="Contact RFS Logo Design" class="img-fluid">
                 </div>
             </div>
         </div>
     </div>
     <div class="container contact-section">
-        <h2>Contact Us</h2>
+        <h2>Contact RFS Logo Design</h2>
         <p>If you have a unique idea that you can't find among our templates, chat with a live representative through
             our chat window or reach out to us using the form below. Rest assured, we'll respond promptly.</p>
-        <p>For tailored design solutions, explore our comprehensive range of services, including custom logo design,
+        <p>For tailored design solutions, explore our comprehensive range of services, including <a href="{{ url('/custom-logo') }}" >custom logo design</a>,
             business cards, stationery design, banners, and website design and development. Expect a prompt response
             from our team, ready to assist you every step of the way.</p>
-        <button class="contact-button-online">Chat with Us</button>
+            
+            <button class="contact-button-online" onclick="window.location.href='//wa.me/+18482369397'">Chat with Us</button>
+        
 
         <div class="row">
             <div class="col-md-6">
@@ -225,8 +227,8 @@
                         <label for="phone">Phone</label>
                         <i class="fas fa-phone form-icon"></i>
                         <input type="text" class="form-control" name="phone" id="phone"
-                            placeholder="Enter your phone number" pattern="\d{10}" required maxlength="10">
-                    </div>
+                        placeholder="Enter your phone number" required maxlength="15" minlength="10">
+                        </div>
                     <div class="form-group">
                         <label for="comment">Comment</label>
                         <i class="fas fa-comment form-icon"></i>
