@@ -1125,7 +1125,9 @@
                                     ? $selectedProduct->preview_font_size 
                                     : '35';
                                     
-                             $companyName = session('company');
+                            $companyName = session('company') ? session('company') : $selectedProduct->category->name;
+
+                           
                            
                             $companyNameLength = strlen($companyName);
                             if ($companyNameLength > 10 && $companyNameLength <= 15) {
@@ -1202,7 +1204,7 @@
                         @endphp
                         
                         // Add text elements
-                        var company = "{{ session('company') }}"; // Get session company value
+                        var company = "{{ $companyName }}".replace(/&amp;/g, '&');
                         var sampleText1 = new fabric.Textbox(company, {
                             left: {{$left}},
                             top: {{$top}},

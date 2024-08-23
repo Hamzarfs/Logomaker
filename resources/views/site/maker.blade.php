@@ -755,7 +755,7 @@
                                     ? $selectedProduct->logomaker_font_size 
                                     : 40;
                                     
-                             $companyName = session('company');
+                             $companyName = session('company') ? session('company') : $selectedProduct->category->name;
                            
                              $companyNameLength = strlen($companyName);
 
@@ -782,7 +782,7 @@
                                     ?  floatval($selectedProduct->canva_top)
                                     : '2.2';   
 
-                            $companyName = session('company');
+                            $companyName =  "{{ $companyName }}".replace(/&amp;/g, '&');
                             $companyNameLength = strlen($companyName);
 
                             $textPosition='center';
