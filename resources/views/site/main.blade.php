@@ -12,64 +12,68 @@
 
     <style>
         .free-logo-heading {
-    font-weight: 700;
-    font-size: 32px;
-    color: #fff;
-}
+            font-weight: 700;
+            font-size: 32px;
+            color: #fff;
+        }
 
         .owl-carousel .owl-item img {
             display: block;
             width: auto;
         }
 
-form#companyForm {
-    padding-top: 10px;
-    height: 70px;
-}
+        form#companyForm {
+            padding-top: 10px;
+            height: 70px;
+        }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 1000;
-    background: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+        .sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-.sticky .input-group {
-    max-width: 800px;
-    margin: 0 auto;
-}
+        .sticky .input-group {
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-.owl-carousel .owl-item img {
-    display: block;
-    width: auto;
-}
+        .owl-carousel .owl-item img {
+            display: block;
+            width: auto;
+        }
 
-.homepage-category-list {
-        text-align: center;
-        padding: 50px 0;
-    }
-    .category-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .category-buttons button {
-        background-color: #d3e3fc;
-        border: none;
-        color: #333;
-        padding: 10px 20px;
-        margin: 5px;
-        border-radius: 20px;
-        font-size: 14px;
-        transition: background-color 0.3s;
-    }
-    .category-buttons button:hover {
-        background-color: #b0c7ec;
-    }
+        .homepage-category-list {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .category-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .category-buttons button {
+            background-color: #d3e3fc;
+            border: none;
+            color: #333;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .category-buttons button:hover {
+            background-color: #b0c7ec;
+        }
+
         #testimonial-section {
             background-color: #f9f9f9;
         }
@@ -152,64 +156,67 @@ form#companyForm {
 
 
 
-.logotype-card {
-    border: none;
-    background-color: #f0f8ff; /* Light background color for the cards */
-    transition: box-shadow 0.3s ease;
-    border-radius: 15px; /* Rounded corners */
-    padding-top: 20px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    text-decoration: none;
-}
+        .logotype-card {
+            border: none;
+            background-color: #f0f8ff;
+            /* Light background color for the cards */
+            transition: box-shadow 0.3s ease;
+            border-radius: 15px;
+            /* Rounded corners */
+            padding-top: 20px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            text-decoration: none;
+        }
 
-.logotype-card img {
-    /* padding: 20px;
-    border-radius: 15px 15px 0 0;
-    width: 160px;
-    align-self: center; */
+        .logotype-card img {
+            /* padding: 20px;
+            border-radius: 15px 15px 0 0;
+            width: 160px;
+            align-self: center; */
 
-    height: 120px;
-    width: auto;
-    margin-bottom: 20px;
+            height: 120px;
+            width: auto;
+            margin-bottom: 20px;
 
 
-}
+        }
 
-.logotype-card .card-body {
-    padding: 15px;
-}
+        .logotype-card .card-body {
+            padding: 15px;
+        }
 
-.logotype-card .card-text {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #5a5a5a;
-}
+        .logotype-card .card-text {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #5a5a5a;
+        }
 
-.logotype-card:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Box shadow on hover */
-}
+        .logotype-card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            /* Box shadow on hover */
+        }
 
-@media (max-width: 768px) {
-    .sticky .input-group {
-        max-width: 400px;
-        margin: 0 auto;
-        margin-top: 5px;
-    }
-}
+        @media (max-width: 768px) {
+            .sticky .input-group {
+                max-width: 400px;
+                margin: 0 auto;
+                margin-top: 5px;
+            }
+        }
 
 
         @media only screen and (max-width: 767px) {
-        .owl-carousel .owl-item img {
+            .owl-carousel .owl-item img {
 
-            display: block;
-            width: auto;
-        }
+                display: block;
+                width: auto;
+            }
         }
     </style>
 
@@ -219,7 +226,8 @@ form#companyForm {
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 banner-left order-lg-1">
-                <h1 class="free-logo-heading">Free <span class="logo-design-color">Logo Maker</span> Tailored for Every Industry - Design Your Logo in Minutes</h1>
+                    <h1 class="free-logo-heading">Free <span class="logo-design-color">Logo Maker</span> Tailored for Every
+                        Industry - Design Your Logo in Minutes</h1>
 
                     <p style="color:#fff;">Unleash your creativity and watch your logo come to life effortlessly. Get in
                         touch with us now!</p>
@@ -294,7 +302,7 @@ form#companyForm {
                     </div>
                     <div class="col-md-2"></div>
                     <div class="col-md-5">
-                        <img src="{{url('images/bradinggif.gif')}}" class="img-fluid">
+                        <img src="{{ url('images/bradinggif.gif') }}" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -309,15 +317,15 @@ form#companyForm {
 
 
     <!-- <------------------Make A logo------------------>
-<!--
-<section class="heroSection1">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 mb-4">
-                    <h1 class="heroTitle1">Ready To Turn Your Vision <br>Into A Logo Masterpiece?</h1>
-                </div>
-            </div>
-        </section> -->
+    <!--
+        <section class="heroSection1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <h1 class="heroTitle1">Ready To Turn Your Vision <br>Into A Logo Masterpiece?</h1>
+                        </div>
+                    </div>
+                </section> -->
 
     <!-- <------------------End Make A logo---------------->
 
@@ -330,41 +338,32 @@ form#companyForm {
         <div class="container portfolio-section">
             <h2 class="portfolio-heading">We Have Logos For Everyone</h2>
             <p class="main-description-online">
-    Explore our <a href="{{ url('logo-maker') }}" style="font-weight: bold; color: inherit;">logo builder’s</a> vast template collection, from medical
-    to fashion, sports to food. RFS Logo Design helps you find the perfect
-    logo to match your business identity and branding needs.
-</p>
+                Explore our <a href="{{ url('logo-maker') }}" style="font-weight: bold; color: inherit;">logo builder’s</a>
+                vast template collection, from medical
+                to fashion, sports to food. RFS Logo Design helps you find the perfect
+                logo to match your business identity and branding needs.
+            </p>
 
 
 
             <div class="row">
                 @foreach ($categories as $category)
-                    @if ($category->products->isNotEmpty())
-                        @php
-                            $product = $category->products->first(); // Get the first product
-                        @endphp
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <a href="{{ route('logos', $category->slug) }}" class="card-container-link"
-                                data-image="{{ $product->image }}" data-id="{{ $product->id }}"
-                                data-placeholder="{{ $product->placeholder_value }}">
-                                <div class="card-container">
-                                    <div class="card-inner">
-                                        <div class="card-front">
-                                            <img src="category-image/{{ $product->image }}"
-                                                class="img-fluid portfolio-image" alt="{{ $product->name }}">
-                                            <div class="text-placeholder"
-                                                data-placeholder-value="{{ $product->placeholder_value }}"></div>
-
-                                        </div>
-                                        <div class="card-back">
-                                            <div class="category-name">{{ $category->name }}</div>
-                                        </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <a href="{{ route('logos', $category->slug) }}" class="card-container-link">
+                            <div class="card-container">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="{{ asset($category->image ?: "category-image/{$category->latest_product->image}") }}" class="img-fluid portfolio-image"
+                                            alt="{{ $category->name }}">
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="category-name">{{ $category->name }}</div>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
+                        </a>
 
-                        </div>
-                    @endif
+                    </div>
                 @endforeach
             </div>
 
@@ -402,7 +401,9 @@ form#companyForm {
             </h2>
 
             <!-- Description -->
-            <p class="why-logo-design-description">Our team of concept-driven logo designers is passionate about crafting visually stunning and professional logos that truly elevate your brand and leave a lasting impression. Here is why RFS is the perfect choice for you:</p>
+            <p class="why-logo-design-description">Our team of concept-driven logo designers is passionate about crafting
+                visually stunning and professional logos that truly elevate your brand and leave a lasting impression. Here
+                is why RFS is the perfect choice for you:</p>
 
             <!-- Row with 3 Columns -->
             <div class="row">
@@ -411,7 +412,10 @@ form#companyForm {
                     <div class="icon-box business-needs">
                         <img src="{{ url('images/success.gif') }}" alt="Business Needs Icon" class="icon-box-image">
                         <h3 class="icon-box-heading">Bringing Ideas To Life</h3>
-                        <p class="icon-box-description">At RFS, we get your vision. We are all about teamwork to craft logo designs that truly capture your business’s identity and values. With decades of experience, we turn your ideas into powerful brand symbols. Whether you are launching or revamping, our logo design services are here to give your business a standout boost.
+                        <p class="icon-box-description">At RFS, we get your vision. We are all about teamwork to craft logo
+                            designs that truly capture your business’s identity and values. With decades of experience, we
+                            turn your ideas into powerful brand symbols. Whether you are launching or revamping, our logo
+                            design services are here to give your business a standout boost.
                         </p>
                     </div>
                 </div>
@@ -422,7 +426,10 @@ form#companyForm {
                         <img src= "{{ url('images/best-quality.gif') }}" alt="Premium Quality Icon"
                             class="icon-box-image">
                         <h3 class="icon-box-heading">Conducting Insightful Research</h3>
-                        <p class="icon-box-description">We mix your ideas with what your audience craves. Our custom logo design service fuses your brand vision with smart, research-driven elements to create a logo that catches your eyes and engages prospects. Get the best logo design company on your side to make your brand irresistible!
+                        <p class="icon-box-description">We mix your ideas with what your audience craves. Our custom logo
+                            design service fuses your brand vision with smart, research-driven elements to create a logo
+                            that catches your eyes and engages prospects. Get the best logo design company on your side to
+                            make your brand irresistible!
                         </p>
                     </div>
                 </div>
@@ -433,7 +440,10 @@ form#companyForm {
                         <img src="{{ url('images/logo-design.gif') }}" alt="Custom Designers Icon"
                             class="icon-box-image">
                         <h3 class="icon-box-heading">Crafting Value</h3>
-                        <p class="icon-box-description">We infuse real value into every logo. Our meticulous design process starts with diving deep into your brand’s needs, enabling our top-notch designers to craft a logo packed with persuasive elements and audience appeal. Get ready to see your brand soar to new heights.
+                        <p class="icon-box-description">We infuse real value into every logo. Our meticulous design process
+                            starts with diving deep into your brand’s needs, enabling our top-notch designers to craft a
+                            logo packed with persuasive elements and audience appeal. Get ready to see your brand soar to
+                            new heights.
                         </p>
                     </div>
                 </div>
@@ -446,7 +456,10 @@ form#companyForm {
                     <div class="icon-box dedicated-support">
                         <img src="{{ url('images/support.gif') }}" alt="Dedicated Support Icon" class="icon-box-image">
                         <h3 class="icon-box-heading">Unique Design Solutions</h3>
-                        <p class="icon-box-description">Explore our diverse graphic design solutions! Our portfolio showcases top-tier work across various industries, from eye-catching logos to complete branding and promotion services. Whether you need standout designs for your mobile app, website, or social media, we have got you covered. </p>
+                        <p class="icon-box-description">Explore our diverse graphic design solutions! Our portfolio
+                            showcases top-tier work across various industries, from eye-catching logos to complete branding
+                            and promotion services. Whether you need standout designs for your mobile app, website, or
+                            social media, we have got you covered. </p>
                     </div>
                 </div>
 
@@ -456,7 +469,10 @@ form#companyForm {
                         <img src="{{ url('images/digital-art.gif') }}" alt="Digital Media Design Icon"
                             class="icon-box-image">
                         <h3 class="icon-box-heading">At Your Service 24/7</h3>
-                        <p class="icon-box-description">Get the support you deserve with our dedicated, 24/7 expert team. We are here to tackle your queries and offer proactive advice. At RFS, exceptional customer service is our priority, ensuring your branding journey is as smooth and successful as possible.</p>
+                        <p class="icon-box-description">Get the support you deserve with our dedicated, 24/7 expert team.
+                            We are here to tackle your queries and offer proactive advice. At RFS, exceptional customer
+                            service is our priority, ensuring your branding journey is as smooth and successful as possible.
+                        </p>
                     </div>
                 </div>
 
@@ -465,7 +481,10 @@ form#companyForm {
                     <div class="icon-box brand-kit">
                         <img src="{{ url('images/startup.gif') }}" alt="Brand Kit Icon" class="icon-box-image">
                         <h3 class="icon-box-heading">Impactful Branding For Growth</h3>
-                        <p class="icon-box-description">We stick to the best practices in logo design and branding to take your brand to new heights. With our tried-and-true design process, deep expertise, and top-tier designers, we will set your enterprise on the path to exponential growth. Join us now for branding that makes an impact!</p>
+                        <p class="icon-box-description">We stick to the best practices in logo design and branding to take
+                            your brand to new heights. With our tried-and-true design process, deep expertise, and top-tier
+                            designers, we will set your enterprise on the path to exponential growth. Join us now for
+                            branding that makes an impact!</p>
                     </div>
                 </div>
             </div>
@@ -485,7 +504,8 @@ form#companyForm {
             <div class="row mb-4">
                 <div class="col text-center">
                     <h2>Designing The Perfect Logo Made Easy With Our Logo Creator</h2>
-                    <p style="font-size: 18px; font-weight: 400;">Still unsure? Dive deeper or consult with our expert designers for tailored guidance.</p>
+                    <p style="font-size: 18px; font-weight: 400;">Still unsure? Dive deeper or consult with our expert
+                        designers for tailored guidance.</p>
                 </div>
             </div>
             <!-- Second Row -->
@@ -546,8 +566,9 @@ form#companyForm {
             <!-- Card Slider -->
             <div class="row card-price-container flex-column flex-md-row">
                 <div class="card" onclick="expandCard(this)">
-                <h3 class="bold-heading">Logo Maker for Startups</h3>
-                <p>Create eye-catching designs for social media, banners, promotional materials, logos, and beyond - all yours to use at no cost, forever.</p>
+                    <h3 class="bold-heading">Logo Maker for Startups</h3>
+                    <p>Create eye-catching designs for social media, banners, promotional materials, logos, and beyond - all
+                        yours to use at no cost, forever.</p>
                     <ul>
                         <li><i class="bi bi-check-circle"></i> 10000+ logos to choose</li>
                         <li><i class="bi bi-check-circle"></i> Endless customization options</li>
@@ -560,9 +581,10 @@ form#companyForm {
                     <a href="{{ url('/logo-maker') }}"><button class="plan-btn">For Startups</button></a>
                 </div>
                 <div class="card" onclick="expandCard(this)">
-                <h3 class="bold-heading">Logo Maker for Small Businesses</h3>
-                    <p>Get premium logo design to create eye-catching graphics for social media, banners, promotional materials, 
-                    logos, and beyond - all yours to use it.</p>
+                    <h3 class="bold-heading">Logo Maker for Small Businesses</h3>
+                    <p>Get premium logo design to create eye-catching graphics for social media, banners, promotional
+                        materials,
+                        logos, and beyond - all yours to use it.</p>
                     <ul>
                         <li><i class="bi bi-check-circle"></i> Work directly with skilled designers</li>
                         <li><i class="bi bi-check-circle"></i> Fully bespoke solution</li>
@@ -623,7 +645,7 @@ form#companyForm {
             </div>
         </div>
     </section>
- <!-- {{----------------- End Testiomonial Section --}} -->
+    <!-- {{-- --------------- End Testiomonial Section --}} -->
 
 
     {{-- Start 4 logo type --}}
@@ -631,57 +653,61 @@ form#companyForm {
     <div class="container my-5">
         <div class="row text-center logotypescard d-flex ">
             <div class="col-md-3">
-                <a href="{{url('/logos/arts-logo-maker')}}">
-                <div class="card logotype-card">
-                    <img src="{{url('images/logo-category-Arts-logo.webp')}}" class="card-img-top" alt="Arts Logos">
-                    <div class="card-body">
-                        <p class="card-text">ARTS LOGO</p>
+                <a href="{{ url('/logos/arts-logo-maker') }}">
+                    <div class="card logotype-card">
+                        <img src="{{ url('images/logo-category-Arts-logo.webp') }}" class="card-img-top"
+                            alt="Arts Logos">
+                        <div class="card-body">
+                            <p class="card-text">ARTS LOGO</p>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
             </div>
             <div class="col-md-3">
-                <a href="{{url('/logos/beauty-logo-maker')}}">
-                <div class="card logotype-card">
-                    <img src="{{url('images/logo-category-Beauty-logo.webp')}}" class="card-img-top" alt="Beauty Logos">
-                    <div class="card-body">
-                        <p class="card-text">BEAUTY LOGOS</p>
+                <a href="{{ url('/logos/beauty-logo-maker') }}">
+                    <div class="card logotype-card">
+                        <img src="{{ url('images/logo-category-Beauty-logo.webp') }}" class="card-img-top"
+                            alt="Beauty Logos">
+                        <div class="card-body">
+                            <p class="card-text">BEAUTY LOGOS</p>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
             </div>
             <div class="col-md-3">
-                <a href="{{url('/logos/alphabets-logo-maker')}}">
-                <div class="card logotype-card">
-                    <img src="{{url('images/logo-category-Alphabet-logo.webp')}}" class="card-img-top" alt="Alphabets logos">
-                    <div class="card-body">
-                        <p class="card-text">ALPHABETS LOGOS</p>
+                <a href="{{ url('/logos/alphabets-logo-maker') }}">
+                    <div class="card logotype-card">
+                        <img src="{{ url('images/logo-category-Alphabet-logo.webp') }}" class="card-img-top"
+                            alt="Alphabets logos">
+                        <div class="card-body">
+                            <p class="card-text">ALPHABETS LOGOS</p>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
             </div>
             <div class="col-md-3">
-                <a href="{{url('/logos/cleaning-logo-maker')}}">
-                <div class="card logotype-card">
-                    <img src="{{url('images/logo-category-Cleaning-logo.webp')}}" class="card-img-top" alt="Cleanings Logos">
-                    <div class="card-body">
-                        <p class="card-text">ClEANING LOGOS</p>
+                <a href="{{ url('/logos/cleaning-logo-maker') }}">
+                    <div class="card logotype-card">
+                        <img src="{{ url('images/logo-category-Cleaning-logo.webp') }}" class="card-img-top"
+                            alt="Cleanings Logos">
+                        <div class="card-body">
+                            <p class="card-text">ClEANING LOGOS</p>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
             </div>
         </div>
     </div>
 
- {{-- End logo type  --}}
+    {{-- End logo type  --}}
 
 
 
-{{-- Start Category List Section --}}
+    {{-- Start Category List Section --}}
 
 
 
-{{-- <div class="container homepage-category-list">
+    {{-- <div class="container homepage-category-list">
     <h2>Try Free Logo Maker for Every Business</h2>
     <p>Explore company logos made easy with our free logo maker tool for all types of professionals and industries.</p>
     <div class="category-buttons">
@@ -728,19 +754,19 @@ form#companyForm {
 
 
 
-<div class="container homepage-category-list">
-    <h2>Try Free Logo Maker for Every Business</h2>
-    <p>Explore company logos made easy with our free logo maker tool for all types of professionals and industries.</p>
-    <div class="category-buttons">
-        @foreach ($categories as $category)
-            @if ($category->products->isNotEmpty())
-            <a href="{{ url('/logos/'. $category->slug)}}" class="logo-ideas-link">
+    <div class="container homepage-category-list">
+        <h2>Try Free Logo Maker for Every Business</h2>
+        <p>Explore company logos made easy with our free logo maker tool for all types of professionals and industries.</p>
+        <div class="category-buttons">
+            @foreach ($categories as $category)
+                @if ($category->products->isNotEmpty())
+                    <a href="{{ url('/logos/' . $category->slug) }}" class="logo-ideas-link">
 
-            <button >{{ $category->name }} Logos</button></a>
-            @endif
-        @endforeach
+                        <button>{{ $category->name }} Logos</button></a>
+                @endif
+            @endforeach
+        </div>
     </div>
-</div>
 
 
 
@@ -749,7 +775,7 @@ form#companyForm {
 
 
 
-{{-- End Category list section --}}
+    {{-- End Category list section --}}
 
 
 
@@ -887,21 +913,22 @@ form#companyForm {
     <!-- <-----------------End 1M Happy Customers Counting---------------->
 
 
-        <script>
-            window.onscroll = function() {makeSticky()};
+    <script>
+        window.onscroll = function() {
+            makeSticky()
+        };
 
-var form = document.getElementById("companyForm");
-var sticky = form.offsetTop;
+        var form = document.getElementById("companyForm");
+        var sticky = form.offsetTop;
 
-function makeSticky() {
-  if (window.pageYOffset > sticky) {
-    form.classList.add("sticky");
-  } else {
-    form.classList.remove("sticky");
-  }
-}
-
-        </script>
+        function makeSticky() {
+            if (window.pageYOffset > sticky) {
+                form.classList.add("sticky");
+            } else {
+                form.classList.remove("sticky");
+            }
+        }
+    </script>
     <script>
         function addText() {
             const businessName = document.getElementById('businessName').value;
@@ -965,8 +992,6 @@ function makeSticky() {
             //     }
             // });
         });
-
-
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

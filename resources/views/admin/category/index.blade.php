@@ -2,7 +2,6 @@
     @section('title', 'Category')
     <div class="card">
         <div class="card-header">
-            {{-- <h3 class="card-title">Category Table</h3> --}}
             <div class="card-tools">
                 <a href="{{ route('admin.category.create') }}" class="btn btn-sm btn-info">New</a>
             </div>
@@ -13,7 +12,6 @@
                     <tr>
                         <th>Name</th>
                         <th>Action</th>
-                        {{-- <th></th> --}}
                     </tr>
                 </thead>
                 <tbody>
@@ -31,7 +29,7 @@
                                         <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                                     </form>
                                 </div>
-                            <td>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

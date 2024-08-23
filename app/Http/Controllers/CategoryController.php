@@ -32,17 +32,18 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $data = $request->validate([
             'name' => 'required|max:255',
+            'image' => 'nullable|image|mimes:png,jpg,jpeg',
             'meta_title' => 'required|max:255',
             'meta_desc' => 'required|max:255',
             'content' => 'required',
             'heading' => 'required',
 
-            'faq' => 'required|array',
-            'faq.*' => 'required|array',
-            'faq.*.title' => 'required|string',
-            'faq.*.content' => 'required|string',
+            'faq' => 'array',
+            'faq.*' => 'array',
+            'faq.*.title' => 'nullable|string',
+            'faq.*.content' => 'nullable|string',
 
             'section' => 'required|array',
             'section.*' => 'required|array',
@@ -62,15 +63,21 @@ class CategoryController extends Controller
             $counter++;
         }
 
+        if ($data['image']) {
+            $imageName = sprintf("%s.%s", $data['name'], $data['image']->getClientOriginalExtension());
+            $data['image']->move(public_path('category'), $imageName);
+            $imagePath = "category/$imageName";
+        }
+
         $category = Category::create([
             'name' => $request->name,
+            'image' => $imagePath,
             'slug' => $uniqueSlug,
             'meta_title' => $request->meta_title,
             'meta_desc' => $request->meta_desc,
             'content' => $request->content,
             'heading' => $request->heading,
             'is_top' => $request->is_top,
-
         ]);
 
         $sectionsData = $request->input('section');
@@ -132,8 +139,9 @@ class CategoryController extends Controller
         //     'heading' => 'required',
         // ]);
 
-        $request->validate([
+        $data = $request->validate([
             'name' => 'required|max:255',
+            'image' => 'nullable|image|mimes:png,jpg,jpeg',
             'meta_title' => 'required|max:255',
             'meta_desc' => 'required|max:255',
             'content' => 'required',
@@ -162,8 +170,18 @@ class CategoryController extends Controller
             $counter++;
         }
 
+        if ($data['image']) {
+            if (file_exists($oldImage = public_path($category->image)))
+                unlink($oldImage);
+
+            $imageName = sprintf("%s.%s", $data['name'], $data['image']->getClientOriginalExtension());
+            $data['image']->move(public_path('category'), $imageName);
+            $imagePath = "category/$imageName";
+        }
+
         $category->update([
             'name' => $request->name,
+            'image' => $imagePath,
             'slug' => $uniqueSlug,
             'meta_title' => $request->meta_title,
             'meta_desc' => $request->meta_desc,

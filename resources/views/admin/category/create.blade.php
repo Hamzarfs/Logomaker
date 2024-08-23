@@ -1,7 +1,7 @@
 <x-admin>
     @section('title', 'New Category')
 
-    <form class="mx-5" id="form" action="{{ route('admin.category.store') }}" method="POST">
+    <form class="mx-5" id="form" action="{{ route('admin.category.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="col-lg-6">
@@ -15,9 +15,14 @@
                                 <label for="name">Category Name</label>
                                 <input type="text" class="form-control" id="name" name="name"
                                     placeholder="Enter category name" required value="{{ old('name') }}">
-
                             </div>
-                            <x-error>name</x-error>
+                            <div class="form-group">
+                                <label for="image">Category Image</label>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" name="image" id="image" accept=".jpg,.jpeg,.png">
+                                    <label class="custom-file-label" for="image">Choose category image</label>
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <label for="name">Meta Title</label>
                                 <input type="text" class="form-control" id="meta_title" name="meta_title"
@@ -88,10 +93,11 @@
                         <div class="card-body">
                             @foreach (range(1, 2) as $i)
                                 <div class="form-group">
-                                    <label for="heading-{{ $i }}">Section {{ $i }} heading</label>
+                                    <label for="heading-{{ $i }}">Section {{ $i }}
+                                        heading</label>
                                     <input type="text" class="form-control" id="heading-{{ $i }}"
                                         name="headingg[]" required>
-                                    <x-error>headingg[{{ $i - 1 }}]</x-error>
+                                    {{-- <x-error>headingg[{{ $i - 1 }}]</x-error> --}}
                                 </div>
 
                                 @if (!$loop->last)
@@ -103,9 +109,10 @@
                                 <div class="form-group">
                                     <label for="section-{{ $i }}-title">Section {{ $i }}
                                         title</label>
-                                    <input type="text" class="form-control" id="section-{{ $i }}-title"
+                                    <input type="text" class="form-control"
+                                        id="section-{{ $i }}-title"
                                         name="section[{{ $i - 1 }}][title]" required>
-                                    <x-error>section-{{ $i }}-title</x-error>
+                                    {{-- <x-error>section-{{ $i }}-title</x-error> --}}
                                 </div>
                                 <label>Section {{ $i }} content</label>
                                 <textarea id="section-{{ $i }}-content" name="section[{{ $i - 1 }}][content]"></textarea>

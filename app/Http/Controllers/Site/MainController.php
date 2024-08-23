@@ -16,6 +16,8 @@ use App\Services\EmailService;
 use App\Services\LogoService;
 use App\Services\SessionService;
 use Error;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Stripe\StripeClient;
 use Illuminate\Support\Facades\Session;
@@ -31,11 +33,14 @@ class MainController extends \App\Http\Controllers\Controller
     public function index()
     {
         $categories = Category::where('is_top', 1)
-            ->with(['products' => function ($query) {
-                $query->limit(1000); // Ensure to fetch only one product per category
-            }])
+            ->where(function (Builder $query) {
+                $query->where('image', '<>', '')
+                    ->orWhereHas('products');
+            })
             ->orderBy('id', 'DESC')
-            ->get();
+            ->get()
+            ->map(fn(Category $category) => $category->image ? $category : $category->append('latest_product'));
+
         return view('site/main', compact('categories'));
     }
 
@@ -92,7 +97,7 @@ class MainController extends \App\Http\Controllers\Controller
             ->where('status', 'paid')
             ->exists();
         $selectedProduct = Product::find(Session::get('product-id'));
-        return view('site/maker', compact('hasOrder','selectedProduct'));
+        return view('site/maker', compact('hasOrder', 'selectedProduct'));
     }
 
     public function thankYou()
@@ -186,11 +191,11 @@ class MainController extends \App\Http\Controllers\Controller
         $product = Order::where('product_id', $productId)
             ->where('user_id', $userId)
             ->where('status', 'paid')
-            ->first();     
-         
+            ->first();
+
         // Fetch the product from the database
         $selectedProduct = Product::find(Session::get('product-id'));
-        return view('site/preview', compact('hasOrder','product','selectedProduct'));
+        return view('site/preview', compact('hasOrder', 'product', 'selectedProduct'));
     }
 
     public function packages()
