@@ -228,7 +228,7 @@ form#companyForm {
                         @csrf
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" id="companyName11" name="company"
-                                placeholder="Enter your company name" aria-label="Enter your company name">
+                                placeholder="Enter your company name" aria-label="Enter your company name"  maxlength="30">
                             <input type="hidden" name="flow" value="home">
                             <input type="submit" class="custom-button-banner" value="Get Started">
                         </div>
