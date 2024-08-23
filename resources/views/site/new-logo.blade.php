@@ -323,14 +323,150 @@
             </p>
 
 
+            
+            @php
+                $fonts = [
+                    'lazyp-eople',
+                    'Remon-Demo',
+                    'Stifly',
+                    'Brandes-Regular',
+                    'Rohgaz-Demo-VersionRegular',
+                    'Forest-Trophy-Textured',
+                    'Aesthetic-Wonder-DEMOBold',
+                    'Nerve-Brush-Regular',
+                    'Stander-DEMO',
+                    'Dasport-DEMO',
+                    'LightSport-DEMO',
+                ]; // List of fonts
+                $colors = ['#900C3F', '#36454F', '#343434', '#191970', '#581845'];
+            @endphp
+
+
             <div class="row logo-gallery">
                 @foreach ($products as $product)
-                    <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
+            
+            
+                @php
+                    
+                
+                   
+                    
+                    $fontSlug = $product->font->slug ?? null;
+                    $font = $fontSlug ? pathinfo($fontSlug, PATHINFO_FILENAME) : '';
+
+                   // echo   $font;
+                   
+                    $color=$product->color;
+                 
+                     $fontSize = (isset($product->logomaker_font_size) && strlen($product->logomaker_font_size) > 1) 
+                                    ? $product->logomaker_font_size 
+                                    : '38px';
+                    {{ session('company') ? $fontSize : $fontSize='22px'; }}
+
+                    $companyName = session('company');
+                    $companyNameLength = strlen($companyName);
+                    if ($companyNameLength > 10 && $companyNameLength <= 15) {
+                        $fontSize = (int)str_replace('px', '', $fontSize) - 6 . 'px';
+                    }else  if ($companyNameLength > 15 && $companyNameLength <= 20) {
+                        $fontSize = (int)str_replace('px', '', $fontSize) - 12 . 'px';
+                    }else  if ($companyNameLength > 20 && $companyNameLength <= 25) {
+                        $fontSize = (int)str_replace('px', '', $fontSize) - 15 . 'px';
+                    }else  if ($companyNameLength > 25 && $companyNameLength <= 30) {
+                        $fontSize = (int)str_replace('px', '', $fontSize) - 20 . 'px';
+                    }
+
+
+                
+                    $topPosition = (isset($product->logomaker_top) && strlen($product->logomaker_top) > 1) 
+                                    ? $product->logomaker_top 
+                                    : '170px';
+                    
+                    $leftPosition = (isset($product->logomaker_left) && strlen($product->logomaker_left) > 1) 
+                                    ? $product->logomaker_left 
+                                    : '-30px';
+                    
+                   
+
+                    
+                    $logoPosition = $product->logo_position ?? ''; // Use null coalescing operator to handle unset cases
+                    $logoPositionVertical='margin-top:10px';
+                    if (isset($logoPosition) && strlen($logoPosition) > 0) {
+                        switch ($logoPosition) {
+                            case 'left':
+                                 if($companyNameLength <= 5){
+                                     $leftPositionValue = (int) str_replace('px', '', $leftPosition);
+                                     $adjustedLeftPositionValue = $leftPositionValue  - 80;
+                                     $leftPosition = "{$adjustedLeftPositionValue}px";
+                                 }else if($companyNameLength >= 6 && $companyNameLength<=11){
+                                    
+                                    $leftPositionValue = (int) str_replace('px', '', $leftPosition);
+                                     $adjustedLeftPositionValue = $leftPositionValue  - 20;
+                                     $leftPosition = "{$adjustedLeftPositionValue}px";
+                                 
+                                }    
+                               // die($companyNameLength."DDDDDDDDDDD".session('company'));
+                                //$logoPosition="margin-left:0px";
+                                break;
+                            case 'center':
+                                // Do something for 'center'
+                                $logoPositionVertical='margin-top:10px';
+                                break;
+                            case 'right':
+                                // Do something for 'right'
+                                $logoPosition="margin-left:-0px";
+                                if($companyNameLength<= 5){
+                                     $leftPositionValue = (int) str_replace('px', '', $leftPosition);
+                                     $adjustedLeftPositionValue = $leftPositionValue  + 130 ;
+                                     $leftPosition = "{$adjustedLeftPositionValue}px";
+                                 }elseif($companyNameLength >= 6 && $companyNameLength<=9){
+                                     $leftPositionValue = (int) str_replace('px', '', $leftPosition);
+                                     $adjustedLeftPositionValue = $leftPositionValue  + 60;
+                                     $leftPosition = "{$adjustedLeftPositionValue}px";
+                                 
+                                }    
+                                 
+                                
+                                break;
+                            case 'top':
+                                // Do something for 'top'
+                                $logoPositionVertical='margin-top:-40px';
+                                break;
+                            case 'bottom':
+                                $logoPositionVertical='margin-top:140px';
+                                break;
+                            default:
+                            $logoPositionVertical='margin-top:-10px';
+                                // Optionally handle unexpected values
+                                //echo "Unexpected logo position.";
+                                break;
+                        }
+                    }  
+                    
+                @endphp
+                <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
                         <div class="card-container">
-                            <img src="{{ asset("category-image/$product->image") }}" class="img-fluid portfolio-image"
-                                alt="{{ $product->name }}">
+                            <!-- <img src="{{ asset("category-image/$product->image") }}" class="img-fluid portfolio-image"
+                                alt="{{ $product->name }}"> -->
+
+
+                                <img src="{{ asset("category-image/$product->image") }}" 
+                            style="xwidth: 35% !important; {{$logoPosition}}; position: absolute; {{$logoPositionVertical}}; z-index: 10;" 
+                            class="img-fluid portfolio-image" 
+                            alt="{{ $product->name }}" 
+                            ondragstart="return false;" 
+                            oncontextmenu="return false;">
+
+
+
+                                <div class="text-placeholder"
+                            style=" z-index: 20;font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize}}; font-weight:500; margin-left:{{$leftPosition}}; margin-top:{{ $topPosition}}">
+                            {{ session('company') ? session('company') : $categoryObj['name'] }}
+                            </div>
+
+
+                            
                             <a href="{{ url('/store-session-data-image?image=' . $product->image . '&product-id=' . $product->id) }}"
-                                class="hover-button select-btn" data-product-id="{{ $product->id }}">Select </a>
+                                class="hover-button select-btn" style="z-index: 30;" data-product-id="{{ $product->id }}">Select </a>
                             @auth
                                 @php
                                     $i = array_search($product->id, array_column($favourites, 'product_id'));

@@ -205,6 +205,9 @@
                                     ? $product->logomaker_font_size 
                                     : '38px';
 
+                   {{ session('company') ? $fontSize : $fontSize='22px'; }}
+
+
                     $companyName = session('company');
                     $companyNameLength = strlen($companyName);
                     if ($companyNameLength > 10 && $companyNameLength <= 15) {
@@ -318,7 +321,7 @@
 
                             <div class="text-placeholder"
                             style=" z-index: 20;font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize}}; font-weight:500; margin-left:{{$leftPosition}}; margin-top:{{ $topPosition}}">
-                            {{ session('company') }} </div>
+                            {{ session('company') ? session('company') : $product->category['name'] }}</div>
 
 
 
