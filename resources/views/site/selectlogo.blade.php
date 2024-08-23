@@ -307,8 +307,7 @@
     class="img-fluid portfolio-image"
     alt="{{ $product->name }}"
     oncontextmenu="return false;"> -->
-
-
+ 
                             <img src="{{ asset("category-image/$product->image") }}" 
                             style="xwidth: 35% !important; {{$logoPosition}}; position: absolute; {{$logoPositionVertical}}; z-index: 10;" 
                             class="img-fluid portfolio-image" 
@@ -316,6 +315,7 @@
                             ondragstart="return false;" 
                             oncontextmenu="return false;">
 
+                
                            
 
 

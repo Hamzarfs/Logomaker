@@ -50,7 +50,7 @@
                 @endphp
                 @font-face {
                     font-family: '{{  $fontSlug }}';
-                    src: url('{{ asset('fonts/' . $font->name) }}') format('truetype');
+                    src: url('{{ asset('fonts/' . $font->name) }}') format('opentype');
                 }
             @endforeach
         </style>
