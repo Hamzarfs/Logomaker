@@ -574,7 +574,7 @@
             <form class="form-inline" id="companyForm3" method="POST" action="{{ url('/store-session-data') }}">
                 @csrf
                 <input type="text" class="form-control custom-form-control" id="companyName2"
-                name="company" placeholder="Search" aria-label="Enter your company name" required>
+                name="company" placeholder="Search" aria-label="Enter your company name" required  maxlength="30">
                 <input type="hidden" name="flow" value="category">
                 <input type="submit" class="btn custom-btn-generate" value="Generate Logo">
             </form>
@@ -642,7 +642,7 @@
             <form class="form-inline" id="companyForm3" method="POST" action="{{ url('/store-session-data') }}">
                 @csrf
                 <input type="text" class="form-control custom-form-control" id="companyName11"
-                name="company" placeholder="Search" aria-label="Enter your company name" required>
+                name="company" placeholder="Search" aria-label="Enter your company name"  maxlength="30" required>
                 <input type="hidden" name="flow" value="category">
                 <input type="submit" class="btn custom-btn-generate" value="Generate Logo">
             </form>
