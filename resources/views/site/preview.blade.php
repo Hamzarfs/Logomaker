@@ -72,14 +72,14 @@
 
         .first-section .mockup-wrapper .logo-wrapper-3 .logo-mockup {
             position: absolute;
-            width: 160px;
-            height: 160px;
+            width: 150px;
+            height: 100px;
         }
 
         .first-section .mockup-wrapper .logo-wrapper-4 .logo-mockup {
             position: absolute;
-            width: 130px;
-            height: 140px;
+            width: 115px;
+            height: 90px;
         }
 
         .first-section .mockup-wrapper .logo-wrapper-1 {
@@ -96,14 +96,14 @@
 
         .first-section .mockup-wrapper .logo-wrapper-3 {
             position: absolute;
-            bottom: 440px;
-            left: 270px;
+            bottom: 400px;
+            left: 274px;
         }
 
         .first-section .mockup-wrapper .logo-wrapper-4 {
             position: absolute;
-            bottom: 255px;
-            right: 550px;
+            bottom: 230px;
+            right: 544px;
         }
 
         .purple-bg {
@@ -131,14 +131,14 @@
 
         .second-section .mockup-wrapper .logo-mockup {
             position: absolute;
-            width: 100px;
-            height: 100px;
+            width: 130px;
+            height: 85px;
         }
 
         .second-section .mockup-wrapper .logo-wrapper {
             position: absolute;
-            top: 150px;
-            left: 525px;
+            top: 175px;
+            left: 520px;
             rotate: -25deg;
         }
 
@@ -167,15 +167,15 @@
 
         .third-section .mockup-wrapper .logo-mockup {
             position: absolute;
-            width: 110px;
-            height: 95px;
+            width: 100px;
+            height: 70px;
         }
 
         .third-section .mockup-wrapper .logo-wrapper {
             position: absolute;
-            top: 165px;
-            left: 490px;
-            rotate: -20deg;
+            top: 180px;
+            left: 495px;
+            rotate: -21deg;
         }
 
         .pink-bg {
@@ -204,12 +204,12 @@
         .fourth-section .mockup-wrapper .logo-mockup {
             position: absolute;
             width: 60px;
-            height: 50px;
+            height: 40px;
         }
 
         .fourth-section .mockup-wrapper .logo-wrapper {
             position: absolute;
-            top: 115px;
+            top: 125px;
             left: 425px;
             rotate: -38deg;
         }
@@ -241,31 +241,31 @@
         .fifth-section .mockup-wrapper .logo-mockup {
             position: absolute;
             width: 110px;
-            height: 100px;
+            height: 75px;
         }
 
         .fifth-section .mockup-wrapper .logo-wrapper-1 {
             position: absolute;
-            top: 55px;
-            left: 400px;
+            top: 65px;
+            left: 385px;
             rotate: 90deg;
         }
 
         .fifth-section .mockup-wrapper .logo-wrapper-2 {
             position: absolute;
-            top: 50px;
+            top: 60px;
             left: 480px;
         }
 
         .fifth-section .mockup-wrapper .logo-wrapper-3 {
             position: absolute;
-            bottom: 260px;
-            right: 345px;
+            bottom: 235px;
+            right: 349px;
         }
 
         .fifth-section .mockup-wrapper .logo-wrapper-4 {
             position: absolute;
-            bottom: 145px;
+            bottom: 125px;
             right: 380px;
         }
 
@@ -290,13 +290,13 @@
         .sixth-section .mockup-wrapper .logo-mockup {
             position: absolute;
             width: 190px;
-            height: 180px;
+            height: 120px;
         }
 
         .sixth-section .mockup-wrapper .logo-wrapper {
             position: absolute;
-            bottom: 270px;
-            left: 470px;
+            bottom: 220px;
+            left: 465px;
         }
 
         /*********************** Responsive Start ***********************/
@@ -321,7 +321,7 @@
             }
 
             .first-section .mockup-wrapper .logo-wrapper-4 {
-                right: 556px;
+                right: 544px;
             }
 
             .second-section .mockup-wrapper .logo-wrapper {
@@ -337,7 +337,7 @@
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-1 {
-                left: 396px;
+                left: 385px;
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-2 {
@@ -361,7 +361,7 @@
         @media (max-width: 1199.98px) {
             .preview-section .logo-mockup {
                 width: 250px;
-                height: 250px;
+                height: 200px;
             }
 
             .first-section .mockup-wrapper .logo-wrapper-1 {
@@ -373,11 +373,11 @@
             }
 
             .first-section .mockup-wrapper .logo-wrapper-3 {
-                left: 180px;
+                left: 184px;
             }
 
             .first-section .mockup-wrapper .logo-wrapper-4 {
-                right: 466px;
+                right: 454px;
             }
 
             .second-section .mockup-wrapper .logo-wrapper {
@@ -393,15 +393,16 @@
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-1 {
-                left: 305px;
+                left: 295px;
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-2 {
                 left: 387px;
             }
 
-            .fifth-section .mockup-wrapper .logo-wrapper-3 {
-                right: 264px;
+            .fifth-section .mockup-wrapper .logo-wrapper-3 {                        
+
+                right: 258px;
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-4 {
@@ -409,12 +410,17 @@
             }
 
             .sixth-section .mockup-wrapper .logo-wrapper {
-                left: 380px;
+                left: 375px;
             }
         }
 
         /* For screen 768px to 991px */
         @media (max-width: 991.98px) {
+            .preview-section .logo-mockup {
+                width: 250px;
+                height: 175px;
+            }
+
             .first-section .mockup-wrapper {
                 height: 368px;
             }
@@ -425,13 +431,14 @@
             }
 
             .first-section .mockup-wrapper .logo-wrapper-3 .logo-mockup {
-                width: 135px;
-                height: 142px;
+                width: 115px;
+                height: 90px;
             }
 
             .first-section .mockup-wrapper .logo-wrapper-4 .logo-mockup {
-                width: 110px;
-                height: 125px;
+                width: 90px;                       
+
+                height: 75px;
             }
 
             .first-section .mockup-wrapper .logo-wrapper-1 {
@@ -445,13 +452,13 @@
             }
 
             .first-section .mockup-wrapper .logo-wrapper-3 {
-                left: 125px;
-                bottom: 360px;
+                left: 133px;
+                bottom: 330px;
             }
 
             .first-section .mockup-wrapper .logo-wrapper-4 {
-                right: 352px;
-                bottom: 215px;
+                right: 338px;
+                bottom: 185px;
             }
 
             .second-section .mockup-wrapper .logo-wrapper {
@@ -467,17 +474,18 @@
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-1 {
-                left: 200px;
+                left: 195px;
                 top: 75px;
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-2 {
                 left: 265px;
-                top: 62px;
+                top: 75px;
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-3 {
-                right: 165px;
+                right: 162px;                       
+
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-4 {
@@ -493,7 +501,7 @@
         @media (max-width: 767.98px) {
             .preview-section .logo-mockup {
                 width: 200px;
-                height: 200px;
+                height: 150px;
             }
 
             .preview-section a.btn {
@@ -510,37 +518,37 @@
 
             .first-section .mockup-wrapper .logo-mockup {
                 width: 25px;
-                height: 25px;
+                height: 20px;
             }
 
             .first-section .mockup-wrapper .logo-wrapper-3 .logo-mockup {
-                width: 105px;
-                height: 115px;
+                width: 80px;
+                height: 61px;
             }
 
             .first-section .mockup-wrapper .logo-wrapper-4 .logo-mockup {
-                width: 90px;
-                height: 100px;
+                width: 65px;
+                height: 55px;
             }
 
             .first-section .mockup-wrapper .logo-wrapper-1 {
                 left: 16px;
-                bottom: 126px;
+                bottom: 123px;
             }
 
             .first-section .mockup-wrapper .logo-wrapper-2 {
                 left: 92px;
-                bottom: 155px;
+                bottom: 151px;
             }
 
             .first-section .mockup-wrapper .logo-wrapper-3 {
-                left: 90px;
-                bottom: 276px;
+                left: 101px;
+                bottom: 235px;
             }
 
             .first-section .mockup-wrapper .logo-wrapper-4 {
-                right: 264px;
-                bottom: 163px;
+                right: 249px;
+                bottom: 140px;
             }
 
             .second-section .mockup-wrapper .logo-wrapper {
@@ -573,27 +581,27 @@
 
             .fifth-section .mockup-wrapper .logo-mockup {
                 width: 80px;
-                height: 90px;
+                height: 60px;
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-1 {
-                left: 155px;
-                top: 45px;
+                left: 143px;
+                top: 50px;
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-2 {
                 left: 200px;
-                top: 35px;
+                top: 47px;
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-3 {
                 right: 120px;
-                bottom: 193px;
+                bottom: 175px;
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-4 {
-                right: 145px;
-                bottom: 113px;
+                right: 140px;
+                bottom: 100px;
             }
 
             .sixth-section h2 {
@@ -621,32 +629,38 @@
             }
 
             .first-section .mockup-wrapper .logo-wrapper-1 {
-                left: 13px;
-                bottom: 129px;
+                left: 15px;
+                bottom: 123px;
             }
 
             .first-section .mockup-wrapper .logo-wrapper-2 {
-                left: 80px;
-                bottom: 153px;
+                left: 82px;
+                bottom: 147px;
             }
 
             .first-section .mockup-wrapper .logo-wrapper-3 {
-                left: 85px;
-                bottom: 246px;
+                left: 89px;
+                bottom: 227px;
             }
 
             .first-section .mockup-wrapper .logo-wrapper-4 {
-                right: 224px;
+                right: 219px;
+            }
+
+            .first-section .mockup-wrapper .logo-mockup {
+                width: 20px;
+                height: 15px;
             }
 
             .first-section .mockup-wrapper .logo-wrapper-3 .logo-mockup {
-                width: 80px;
-                height: 90px;
+                width: 70px;
+                height: 55px;
             }
 
             .first-section .mockup-wrapper .logo-wrapper-4 .logo-mockup {
-                width: 65px;
-                height: 90px;
+                width: 55px;                         
+
+                height: 45px;
             }
 
             .second-section .mockup-wrapper {
@@ -680,7 +694,8 @@
             }
 
             .third-section .mockup-wrapper .logo-wrapper {
-                left: 160px;
+                left: 160px;                         
+
             }
 
             .fourth-section .mockup-wrapper {
@@ -715,22 +730,23 @@
 
             .fifth-section .mockup-wrapper .logo-mockup {
                 width: 70px;
-                height: 70px;
+                height: 50px;
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-1 {
-                left: 135px;
-                top: 60px;
-            }
+                left: 125px;
+                top: 65px;
+            }                      
+
 
             .fifth-section .mockup-wrapper .logo-wrapper-2 {
                 left: 180px;
-                top: 55px;
+                top: 60px;
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-3 {
-                right: 105px;
-                bottom: 183px;
+                right: 106px;
+                bottom: 168px;
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-4 {
@@ -751,8 +767,8 @@
             }
 
             .sixth-section .mockup-wrapper .logo-wrapper {
-                left: 145px;
-                bottom: 265px;
+                left: 137px;
+                bottom: 218px;
             }
         }
 
@@ -770,13 +786,13 @@
             }
 
             .first-section .mockup-wrapper .logo-wrapper-3 .logo-mockup {
-                width: 60px;
-                height: 70px;
+                width: 50px;
+                height: 35px;
             }
 
             .first-section .mockup-wrapper .logo-wrapper-4 .logo-mockup {
-                width: 50px;
-                height: 70px;
+                width: 40px;
+                height: 35px;
             }
 
             .first-section .mockup-wrapper .logo-wrapper-1 {
@@ -790,13 +806,13 @@
             }
 
             .first-section .mockup-wrapper .logo-wrapper-3 {
-                left: 60px;
-                bottom: 178px;
+                left: 65px;
+                bottom: 155px;
             }
 
             .first-section .mockup-wrapper .logo-wrapper-4 {
-                right: 162px;
-                bottom: 114px;
+                right: 158px;
+                bottom: 93px;
             }
 
             .second-section .mockup-wrapper {
@@ -866,27 +882,27 @@
 
             .fifth-section .mockup-wrapper .logo-mockup {
                 width: 50px;
-                height: 50px;
+                height: 35px;
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-1 {
-                left: 95px;
-                top: 35px;
+                left: 90px;
+                top: 40px;
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-2 {
                 left: 130px;
-                top: 34px;
+                top: 40px;
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-3 {
                 right: 75px;
-                bottom: 125px;
+                bottom: 115px;
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-4 {
                 right: 90px;
-                bottom: 75px;
+                bottom: 65px;
             }
 
             .sixth-section h2 {
@@ -903,7 +919,7 @@
             }
 
             .sixth-section .mockup-wrapper .logo-wrapper {
-                left: 80px;
+                left: 75px;
             }
 
         }
@@ -924,7 +940,7 @@
         </div>
 
         <div class="d-flex justify-content-center align-items-center">
-            <img src="" alt="logo" class="logo-mockup"  ondragstart="return false;"   oncontextmenu="return false;">
+            <img src="" alt="logo" class="logo-mockup" ondragstart="return false;" oncontextmenu="return false;">
         </div>
 
         <div class="d-flex justify-content-center align-items-center mt-4">
@@ -1058,229 +1074,223 @@
         var image = @json(session('image', []));
     </script>
     @php
-    $fontSize = (isset($product->logomaker_font_size) && strlen($product->logomaker_font_size) > 1) 
-                                    ? $product->logomaker_font_size 
-                                    : '38px';
+        $fontSize =
+            isset($product->logomaker_font_size) && strlen($product->logomaker_font_size) > 1
+                ? $product->logomaker_font_size
+                : '38px';
     @endphp
-   
+
     <script>
         var canvas = new fabric.Canvas('logo-canvas');
-    // var dataURL
+        // var dataURL
 
-    $(document).ready(function() {
-         
-        canvas.setWidth(400);
-        canvas.setHeight(250);
+        $(document).ready(function() {
 
-        // Load SVG function
-        function loadCarSVG() {
-            $.ajax({
-                url: 'category-image/' + image, // Adjust the URL to load your SVG
-                dataType: 'text',
-                success: function(svgString) {
-                    // Clear the canvas
-                    canvas.clear();
+            canvas.setWidth(400);
+            canvas.setHeight(250);
 
-                    // Load the SVG
-                    fabric.loadSVGFromString(svgString, function(objects, options) {
-                        // Create a group with the loaded objects
-                        var svgGroup = new fabric.Group(objects);
+            // Load SVG function
+            function loadCarSVG() {
+                $.ajax({
+                        url: 'category-image/' + image, // Adjust the URL to load your SVG
+                        dataType: 'text',
+                        success: function(svgString) {
+                            // Clear the canvas
+                            canvas.clear();
 
-                        
-                        // Scale the SVG to fit within the canvas
-                        var canvasWidth = canvas.width;
-                        var canvasHeight = canvas.height;
-                        var boundingBox = svgGroup.getBoundingRect();
-
-                        var scaleX = canvasWidth / boundingBox.width-.4;
-                        //var scaleY = canvasHeight / boundingBox.height-.6;
-                        var scaleY = canvasHeight / boundingBox.height-.4;
-                        var scale = Math.min(scaleX, scaleY);
-                        @php
-    // Define the initial position for the SVG based on the logo position
-    $leftLogoPosition = '(canvasWidth - boundingBox.width * scale) / 2'; // Default to center
-
-    // Adjust the position based on the logo_position
-    if ($selectedProduct->logo_position == 'left') {
-        $leftLogoPosition = '0'; // Align to the left edge of the canvas
-    } elseif ($selectedProduct->logo_position == 'right') {
-        $leftLogoPosition = 'canvasWidth - boundingBox.width * scale'; // Align to the right edge of the canvas
-    }
-@endphp
-                        svgGroup.set({
-                            scaleX: scale,
-                            scaleY: scale,
-                            left: 220, 
-                            left: {{$leftLogoPosition}},
-                            top: (canvasHeight - boundingBox.height * scale) / 2,
-                            selectable: false, // Disable selection
-                            evented: false, // Disable events
-                        });
-
-                        canvas.add(svgGroup);
-
-                        @php
-                            
-                            $fontSize = (isset($selectedProduct->preview_font_size) && strlen($selectedProduct->preview_font_size) > 1) 
-                                    ? $selectedProduct->preview_font_size 
-                                    : '35';
-                                    
-                            $companyName = session('company') ? session('company') : $selectedProduct->category->name;
-
-                           
-                           
-                            $companyNameLength = strlen($companyName);
-                            if ($companyNameLength > 10 && $companyNameLength <= 15) {
-                                $fontSize = $fontSize - 6 ;
-                            }else  if ($companyNameLength > 15 && $companyNameLength <= 20) {
-                                $fontSize = $fontSize - 12 ;
-                            }else  if ($companyNameLength > 20 && $companyNameLength <= 25) {
-                                $fontSize = $fontSize - 15 ;
-                            }else  if ($companyNameLength > 25 && $companyNameLength <= 30) {
-                                $fontSize =   $fontSize - 20 ;
-                            }
-                             
-                            $leftPosition = (isset($selectedProduct->preview_left) && strlen($selectedProduct->preview_left) > 1) 
-                                    ?  floatval($selectedProduct->preview_left)
-                                    : '1.7';   
-
-                            // if ($companyNameLength > 3 && $companyNameLength <= 5) {
-                            //     $leftPosition =  $leftPosition + .1; 
-                            // }else  if ($companyNameLength > 5 && $companyNameLength <= 7) {
-                            //     $leftPosition =  $leftPosition + .2; 
-                            // }else  if ($companyNameLength > 7 && $companyNameLength <= 9) {
-                            //     $leftPosition =  $leftPosition + .4; 
-                            // }else  if ($companyNameLength > 9 && $companyNameLength <= 11) {
-                            //     $leftPosition =  $leftPosition + .6; 
-                            // }else  if ($companyNameLength > 11 && $companyNameLength <= 13) {
-                            //     $leftPosition =  $leftPosition + .8; 
-                            // }else  if ($companyNameLength > 13 && $companyNameLength <= 15) {
-                            //     $leftPosition =  $leftPosition + 1; 
-                            // }else  if ($companyNameLength > 15 && $companyNameLength <= 17) {
-                            //     $leftPosition =  $leftPosition + 1.2; 
-                            // }else  if ($companyNameLength > 17 && $companyNameLength <= 19) {
-                            //     $leftPosition =  $leftPosition + 1.4; 
-                            // }else  if ($companyNameLength > 19 && $companyNameLength <= 21) {
-                            //     $leftPosition =  $leftPosition + 1.6; 
-                            // }else  if ($companyNameLength > 21 && $companyNameLength <= 23) {
-                            //     $leftPosition =  $leftPosition + 1.8; 
-                            // }else  if ($companyNameLength > 23 && $companyNameLength <= 25) {
-                            //     $leftPosition =  $leftPosition + 2; 
-                            // }else  if ($companyNameLength > 25 && $companyNameLength <= 27) {
-                            //     $leftPosition =  $leftPosition + 2.2; 
-                             
-                            // }else  if ($companyNameLength > 27 && $companyNameLength <= 30) {
-                            //     $leftPosition =  $leftPosition + 2.2; 
-                            // }
-
-                            $fontSlug = $selectedProduct->font->slug ?? null;
-                            $font = $fontSlug ? pathinfo($fontSlug, PATHINFO_FILENAME) : '';
-                            //2 - 60 
-                            // $left='canvas.width / '.$selectedProduct->preview_left;
-                            $left = 'canvas.width / '.$leftPosition .' - 80'; 
-                                      //$left ='canvas.width / 6 - 40';
-                                      
-                                    //    $left = 'canvas.width / 1 - 55 ';
-                                    //   echo  $left."DDDDDDDDDDDDDDDDDDDDDDDDD";
-                            //2 + 80
-
-                            //$left = 'canvas.width / 1.05 - 80'; 
-                            
-                       
-                            $top = (isset($selectedProduct->preview_top) && strlen($selectedProduct->preview_top) >= 1) 
-                                    ? 'canvas.height / '. $selectedProduct->preview_top .' + 80'
-                                    : 'canvas.height / 2 + 80';
-
-                          //$top='canvas.height / 7.5 + 80';                                    
-                           
-                            $textPosition='center';
-                            if ($selectedProduct->logo_position == 'left') {
-                                $textPosition='left';
-                            } elseif ($selectedProduct->logo_position == 'right') {
-                                $textPosition='right';
-                            }
+                            // Load the SVG
+                            fabric.loadSVGFromString(svgString, function(objects, options) {
+                                    // Create a group with the loaded objects
+                                    var svgGroup = new fabric.Group(objects);
 
 
-                        @endphp
-                        
-                        // Add text elements
-                        var company = "{{ $companyName }}".replace(/&amp;/g, '&');
-                        var sampleText1 = new fabric.Textbox(company, {
-                            left: {{$left}},
-                            top: {{$top}},
-                            fontSize: {{ $fontSize}}, // Adjust font size as needed
-                            fill: '{{$selectedProduct->color}}',
-                            fontFamily: "{{ $font }}",
-                            textAlign: '{{$textPosition}}',
-                            selectable: false,
-                            evented: false,
-                            width: 340,
-                           
-                        });
-                        canvas.add(sampleText1);
+                                    // Scale the SVG to fit within the canvas
+                                    var canvasWidth = canvas.width;
+                                    var canvasHeight = canvas.height;
+                                    var boundingBox = svgGroup.getBoundingRect();
 
-                        canvas.renderAll();
+                                    var scaleX = canvasWidth / boundingBox.width - .4;
+                                    //var scaleY = canvasHeight / boundingBox.height-.6;
+                                    var scaleY = canvasHeight / boundingBox.height - .4;
+                                    var scale = Math.min(scaleX, scaleY);
+                                    @php
+                                        // Define the initial position for the SVG based on the logo position
+                                        $leftLogoPosition = '(canvasWidth - boundingBox.width * scale) / 2'; // Default to center
 
-                        // Generate data URL and save to session storage
-                        const dataUrl = canvas.toDataURL();
-                        sessionStorage.setItem('logoDataUrl', dataUrl);
+                                        // Adjust the position based on the logo_position
+                                        if ($selectedProduct->logo_position == 'left') {
+                                            $leftLogoPosition = '0'; // Align to the left edge of the canvas
+                                        } elseif ($selectedProduct->logo_position == 'right') {
+                                            $leftLogoPosition = 'canvasWidth - boundingBox.width * scale'; // Align to the right edge of the canvas
+                                        }
+                                    @endphp
+                                    svgGroup.set({
+                                        scaleX: scale,
+                                        scaleY: scale,
+                                        left: 220,
+                                        left: {{ $leftLogoPosition }},
+                                        top: (canvasHeight - boundingBox.height * scale) / 2,
+                                        selectable: false, // Disable selection
+                                        evented: false, // Disable events
+                                    });
 
-                        $('.logo-mockup').each(function() {
-                            this.src = dataUrl;
-                        });
+                                    canvas.add(svgGroup);
 
-                        // Optionally send data URL to server
-                        $.ajax({
-                            url: "{{ route('putImgStringIntoSession') }}",
-                            method: 'POST',
-                            data: { dataURL: dataUrl },
-                            success: function() {
-                                @auth
+                                    @php
+
+                                        $fontSize = isset($selectedProduct->preview_font_size) && strlen($selectedProduct->preview_font_size) > 1 ? $selectedProduct->preview_font_size : '35';
+
+                                         $companyName = session('company') ? session('company') : $selectedProduct->category->name;
+
+                                         $companyNameLength = strlen($companyName);
+                                        if ($companyNameLength > 10 && $companyNameLength <= 15) {
+                                            $fontSize = $fontSize - 6;
+                                        } elseif ($companyNameLength > 15 && $companyNameLength <= 20) {
+                                            $fontSize = $fontSize - 12;
+                                        } elseif ($companyNameLength > 20 && $companyNameLength <= 25) {
+                                            $fontSize = $fontSize - 15;
+                                        } elseif ($companyNameLength > 25 && $companyNameLength <= 30) {
+                                            $fontSize = $fontSize - 20;
+                                        }
+
+                                        $leftPosition = isset($selectedProduct->preview_left) && strlen($selectedProduct->preview_left) > 1 ? floatval($selectedProduct->preview_left) : '1.7';
+
+                                        // if ($companyNameLength > 3 && $companyNameLength <= 5) {
+                                        //     $leftPosition =  $leftPosition + .1;
+                                        // }else  if ($companyNameLength > 5 && $companyNameLength <= 7) {
+                                        //     $leftPosition =  $leftPosition + .2;
+                                        // }else  if ($companyNameLength > 7 && $companyNameLength <= 9) {
+                                        //     $leftPosition =  $leftPosition + .4;
+                                        // }else  if ($companyNameLength > 9 && $companyNameLength <= 11) {
+                                        //     $leftPosition =  $leftPosition + .6;
+                                        // }else  if ($companyNameLength > 11 && $companyNameLength <= 13) {
+                                        //     $leftPosition =  $leftPosition + .8;
+                                        // }else  if ($companyNameLength > 13 && $companyNameLength <= 15) {
+                                        //     $leftPosition =  $leftPosition + 1;
+                                        // }else  if ($companyNameLength > 15 && $companyNameLength <= 17) {
+                                        //     $leftPosition =  $leftPosition + 1.2;
+                                        // }else  if ($companyNameLength > 17 && $companyNameLength <= 19) {
+                                        //     $leftPosition =  $leftPosition + 1.4;
+                                        // }else  if ($companyNameLength > 19 && $companyNameLength <= 21) {
+                                        //     $leftPosition =  $leftPosition + 1.6;
+                                        // }else  if ($companyNameLength > 21 && $companyNameLength <= 23) {
+                                        //     $leftPosition =  $leftPosition + 1.8;
+                                        // }else  if ($companyNameLength > 23 && $companyNameLength <= 25) {
+                                        //     $leftPosition =  $leftPosition + 2;
+                                        // }else  if ($companyNameLength > 25 && $companyNameLength <= 27) {
+                                        //     $leftPosition =  $leftPosition + 2.2;
+
+                                        // }else  if ($companyNameLength > 27 && $companyNameLength <= 30) {
+                                        //     $leftPosition =  $leftPosition + 2.2;
+                                        // }
+
+                                        $fontSlug = $selectedProduct->font->slug ?? null;
+                                        $font = $fontSlug ? pathinfo($fontSlug, PATHINFO_FILENAME) : '';
+                                        //2 - 60
+                                        // $left='canvas.width / '.$selectedProduct->preview_left;
+                                        $left = 'canvas.width / ' . $leftPosition . ' - 80';
+                                        //$left ='canvas.width / 6 - 40';
+
+                                        //    $left = 'canvas.width / 1 - 55 ';
+                                        //   echo  $left."DDDDDDDDDDDDDDDDDDDDDDDDD";
+                                        //2 + 80
+
+                                        //$left = 'canvas.width / 1.05 - 80';
+
+                                        $top = isset($selectedProduct->preview_top) && strlen($selectedProduct->preview_top) >= 1 ? 'canvas.height / ' . $selectedProduct->preview_top . ' + 80' : 'canvas.height / 2 + 80';
+
+                                        //$top='canvas.height / 7.5 + 80';
+
+                                        $textPosition = 'center';
+                                        if ($selectedProduct->logo_position == 'left') {
+                                            $textPosition = 'left';
+                                        } elseif ($selectedProduct->logo_position == 'right') {
+                                            $textPosition = 'right';
+                                        }
+
+                                    @endphp
+
+                                    // Add text elements
+                                    var company = "{{ $companyName }}".replace(/&amp;/g, '&');
+
+                                    var sampleText1 = new fabric.Textbox(company, {
+                                        left: {{ $left }},
+                                        top: {{ $top }},
+                                        fontSize: {{ $fontSize }}, // Adjust font size as needed
+                                        fill: '{{ $selectedProduct->color }}',
+                                        fontFamily: "{{ $font }}",
+                                        textAlign: '{{ $textPosition }}',
+                                        selectable: false,
+                                        evented: false,
+                                        width: 340,
+
+                                    });
+                                    canvas.add(sampleText1);
+
+                                    canvas.renderAll();
+
+                                    // Generate data URL and save to session storage
+                                    const dataUrl = canvas.toDataURL();
+                                    sessionStorage.setItem('logoDataUrl', dataUrl);
+
+                                    $('.logo-mockup').each(function() {
+                                        this.src = dataUrl;
+                                    });
+
+                                    // Optionally send data URL to server
                                     $.ajax({
-                                        url: "{{ route('saveLogo') }}",
-                                        method: 'POST',
-                                        data: {
-                                            userId: {{ auth()->id() }},
-                                            productId: {{ session()->get('product-id') }},
+                                            url: "{{ route('putImgStringIntoSession') }}",
+                                            method: 'POST',
+                                            data: {
+                                                dataURL: dataUrl
+                                            },
+                                            success: function() {
+                                                @auth
+                                                $.ajax({
+                                                    url: "{{ route('saveLogo') }}",
+                                                    method: 'POST',
+                                                    data: {
+                                                        userId: {{ auth()->id() }},
+                                                        productId: {{ session()->get('product-id') }},
+                                                    },
+                                                });
+                                            @endauth
                                         },
                                     });
-                                @endauth
-                            },
-                        });
-                    });
+                            });
 
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error loading SVG:", status, error);
-                }
-            });
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error loading SVG:", status, error);
+                    }
+                });
         }
 
         loadCarSVG();
-    
-            // var dataURL = sessionStorage.getItem('logoDataUrl')
 
-            // console.log(sessionStorage.getItem('logoDataUrl'));
-            
+        // var dataURL = sessionStorage.getItem('logoDataUrl')
 
-            // $.ajax({
-            //     url: "{{ route('putImgStringIntoSession') }}",
-            //     method: 'POST',
-            //     data: { dataURL },
-            //     success: function() {
-            //         @auth
-            //             $.ajax({
-            //                 url: "{{ route('saveLogo') }}",
-            //                 method: 'POST',
-            //                 data: {
-            //                     userId: {{ auth()->id() }},
-            //                     productId: {{ session()->get('product-id') }},
-            //                     // logoString: sessionStorage.getItem('logoDataUrl'),
-            //                 },
-            //             })
-            //         @endauth
-            //     },
-            // })
+        // console.log(sessionStorage.getItem('logoDataUrl'));
+
+
+        // $.ajax({
+        //     url: "{{ route('putImgStringIntoSession') }}",
+        //     method: 'POST',
+        //     data: { dataURL },
+        //     success: function() {
+        //         @auth
+        //             $.ajax({
+        //                 url: "{{ route('saveLogo') }}",
+        //                 method: 'POST',
+        //                 data: {
+        //                     userId: {{ auth()->id() }},
+        //                     productId: {{ session()->get('product-id') }},
+        //                     // logoString: sessionStorage.getItem('logoDataUrl'),
+        //                 },
+        //             })
+        //         @endauth
+        //     },
+        // })
         });
 
         @if ($hasOrder)
