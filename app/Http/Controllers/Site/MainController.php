@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Site;
 use App\Mail\SendLogo;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Font;
 use App\Models\Order;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -97,7 +98,8 @@ class MainController extends \App\Http\Controllers\Controller
             ->where('status', 'paid')
             ->exists();
         $selectedProduct = Product::find(Session::get('product-id'));
-        return view('site/maker', compact('hasOrder', 'selectedProduct'));
+        $fonts = Font::all(); 
+        return view('site/maker', compact('hasOrder', 'selectedProduct','fonts'));
     }
 
     public function thankYou()
@@ -195,6 +197,7 @@ class MainController extends \App\Http\Controllers\Controller
 
         // Fetch the product from the database
         $selectedProduct = Product::find(Session::get('product-id'));
+       
         return view('site/preview', compact('hasOrder', 'product', 'selectedProduct'));
     }
 

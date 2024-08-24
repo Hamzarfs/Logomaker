@@ -205,8 +205,11 @@
                                     ? $product->logomaker_font_size 
                                     : '38px';
 
-                   {{ session('company') ? $fontSize : $fontSize='22px'; }}
+                                    
+          
+                    $fontSize = empty(session('company')) ? '18px' : $fontSize;
 
+                    
 
                     $companyName = session('company');
                     $companyNameLength = strlen($companyName);
