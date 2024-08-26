@@ -58,7 +58,8 @@ a {
 
 
 
-.card-container, .card-container2 {
+.card-container,
+.card-container2 {
     perspective: 1000px;
 }
 
@@ -71,7 +72,7 @@ a {
 }
 
 .card-container:hover .card-inner,
-.card-container2:hover .card-inner{
+.card-container2:hover .card-inner {
     transform: rotateY(180deg);
 }
 
@@ -109,7 +110,7 @@ a {
 
 
 .card-container,
-.card-container2{
+.card-container2 {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -156,7 +157,7 @@ a {
 }
 
 .card-container:hover .hover-button,
-.card-container2:hover .hover-button{
+.card-container2:hover .hover-button {
     display: block;
 }
 
@@ -296,6 +297,13 @@ p,
 
 .form-control {
     /* height: 50px !important; */
+    /* Adjust input height */
+    margin-right: 10px;
+    font-size: 13px;
+}
+
+#companyName11 {
+    height: 50px !important;
     /* Adjust input height */
     margin-right: 10px;
     font-size: 13px;
