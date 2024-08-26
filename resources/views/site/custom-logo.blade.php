@@ -185,16 +185,17 @@
             background-color: #5058c9;
             border-color: #5058c9;
         }
+
         .btn-secondary {
-            margin-top: 20px
-    color: #fff;
-    background-color: #6868D1;
-    border-color: #6868D1;
-}
+            margin-top: 20px color: #fff;
+            background-color: #6868D1;
+            border-color: #6868D1;
+        }
+
         button.btn.btn-secondary.custom-logo-page-submit {
-    width: fit-content;
-    width: -webkit-fill-available;
-}
+            width: fit-content;
+            width: -webkit-fill-available;
+        }
     </style>
 
     <div class="container mt-5">
@@ -475,16 +476,16 @@
                         </div>
                         <div class="form-group mb-2">
                             <label for="phone" class="custom-logo-page-label">Phone Number:</label>
-                            <input type="tel" class="form-control custom-logo-page-input iti" name="phone" id="phone"
-                                placeholder="Enter your phone number" required>
+                            <input type="tel" class="form-control custom-logo-page-input iti" name="phone"
+                                id="phone" placeholder="Enter your phone number" required>
                         </div>
                         <div class="form-group mb-2">
                             <label for="message" class="custom-logo-page-label">Comments:</label>
-                            <textarea class="form-control custom-logo-page-textarea" name="message" id="message" rows="2" placeholder="Your comments"
-                                required></textarea>
+                            <textarea class="form-control custom-logo-page-textarea" name="message" id="message" rows="2"
+                                placeholder="Your comments" required></textarea>
                         </div>
                         <form action="{{ url('/logo-maker') }}" method="POST">
-                        <button type="submit" class="btn btn-secondary custom-logo-page-submit">Submit</button>
+                            <button type="submit" class="btn btn-secondary custom-logo-page-submit">Submit</button>
                         </form>
                 </div>
             </div>
@@ -497,9 +498,9 @@
                     <div class="col-md-12">
                         <h2 class="premium-logos-heading">Same Premium Logos, Now Faster!</h2>
                         <p class="premium-logos-description">
-                        We have delivered top-notch designs to thousands of clients. 
-                        With our free logo services, get high-quality, customizable logos in minutes 
-                        straight from our expert designers!
+                            We have delivered top-notch designs to thousands of clients.
+                            With our free logo services, get high-quality, customizable logos in minutes
+                            straight from our expert designers!
                         </p>
                     </div>
                 </div>
@@ -507,18 +508,18 @@
                     <div class="col-md-12">
                         <h3 class="custom-logo-heading">Let Us Create A Custom Logo With Ease!</h3>
                         <p class="custom-logo-description">
-                        We know you are eager to launch your business, so our simple and speedy customizable 
-                        logo design process is here to help. Below are a few simple steps we follow and 
-                        produce a professional logo worthy of your brand in no time at all. 
+                            We know you are eager to launch your business, so our simple and speedy customizable
+                            logo design process is here to help. Below are a few simple steps we follow and
+                            produce a professional logo worthy of your brand in no time at all.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        </div>
-        
-        <div class="banner-section" style="background-color: #f2f6fe; padding-bottom: 100px;">
+    </div>
+
+    <div class="banner-section" style="background-color: #f2f6fe; padding-bottom: 100px;">
         <div class="container portfolio-section">
             <h2 class="portfolio-heading">We Have Logos For Everyone</h2>
             <p class="main-description-online">
@@ -583,220 +584,220 @@
     </div>
 
 
-        <div class="container py-5 text-center custom-logo-process">
-            <h2>Simple and Fast Customizable Logo Design Process</h2>
-            <p>We understand the rush to launch your business startup, and that’s why customizable logos make sense.
-                Getting a professional logo design from our advance studio isn’t hard, just follow these steps.</p>
+    <div class="container py-5 text-center custom-logo-process">
+        <h2>Simple and Fast Customizable Logo Design Process</h2>
+        <p>We understand the rush to launch your business startup, and that’s why customizable logos make sense.
+            Getting a professional logo design from our advance studio isn’t hard, just follow these steps.</p>
 
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card p-4 h-100 custom-card">
-                        <h3>01</h3>
-                        <h4>Discovery and Research</h4>
-                        <p>First up, we dive into learning all about your brand, audience, and competitors. 
-                            This helps us get a feel for what your logo should say and how it should stand out. 
-                            We’ll brainstorm, survey, and check out what others in your space are doing.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card p-4 h-100 custom-card">
-                        <h3>02</h3>
-                        <h4>Concept Refinement</h4>
-                        <p>We begin by sketching ideas and exploring different styles through rough drafts and mood boards. 
-                            Once the best concepts emerge, we refine them by finalizing colors, typography, and ensuring the 
-                            logo works across all formats. Your feedback guides the final tweaks.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card p-4 h-100 custom-card">
-                        <h3>03</h3>
-                        <h4>Finalization and Delivery</h4>
-                        <p>Finally, we prepare your logo for action. We create various formats for different uses and make sure 
-                            they look great everywhere. Plus, we might put together a style guide to keep everything consistent.</p>
-                    </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card p-4 h-100 custom-card">
+                    <h3>01</h3>
+                    <h4>Discovery and Research</h4>
+                    <p>First up, we dive into learning all about your brand, audience, and competitors.
+                        This helps us get a feel for what your logo should say and how it should stand out.
+                        We’ll brainstorm, survey, and check out what others in your space are doing.
+                    </p>
                 </div>
             </div>
+            <div class="col-md-4">
+                <div class="card p-4 h-100 custom-card">
+                    <h3>02</h3>
+                    <h4>Concept Refinement</h4>
+                    <p>We begin by sketching ideas and exploring different styles through rough drafts and mood boards.
+                        Once the best concepts emerge, we refine them by finalizing colors, typography, and ensuring the
+                        logo works across all formats. Your feedback guides the final tweaks.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 h-100 custom-card">
+                    <h3>03</h3>
+                    <h4>Finalization and Delivery</h4>
+                    <p>Finally, we prepare your logo for action. We create various formats for different uses and make sure
+                        they look great everywhere. Plus, we might put together a style guide to keep everything consistent.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-            <!-- New section added here -->
-            <div class="mt-5">
-                <h3 class="custom-heading">We Craft Affordable Logo Designs To Boost Creativity</h3>
-                <p>Allow us to create logo designs with top-notch quality! We offer 
-                affordable, professional logos perfect for startups and small businesses. Get the 
-                same expert design style without the hefty price tag, thanks to our global team of 
+        <!-- New section added here -->
+        <div class="mt-5">
+            <h3 class="custom-heading">We Craft Affordable Logo Designs To Boost Creativity</h3>
+            <p>Allow us to create logo designs with top-notch quality! We offer
+                affordable, professional logos perfect for startups and small businesses. Get the
+                same expert design style without the hefty price tag, thanks to our global team of
                 skilled logo designers.
-                </p>
-                <a href="{{ url('thanks') }}" class="custom-button-online">Get Started</a>
+            </p>
+            <a href="#" class="custom-button-online">Get Started</a>
+        </div>
+    </div>
 
+
+
+    <section class="container py-5">
+        <div class="text-center mb-4">
+            <h2>Need help choosing a professional logo design? Consult with our expert!</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4 mb-3 text-center">
+                <div class="contact-option">
+                    <i class="fas fa-phone fa-2x mb-2"></i>
+                    <p>Phone number: <a href="tel:+15516665255"> +1(551)666-5255</a></p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 text-center">
+                <div class="contact-option">
+                    <i class="fas fa-envelope fa-2x mb-2"></i>
+                    <p>Email us: <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a></p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 text-center">
+                <div class="contact-option">
+                    <i class="fas fa-comment-dots fa-2x mb-2"></i>
+                    <p>Live Chat: <a href="{{ url('https://wa.me/+18482369397') }}">Live Chat</a></p>
+
+                </div>
             </div>
         </div>
+    </section>
 
 
 
-        <section class="container py-5">
-            <div class="text-center mb-4">
-                <h2>Need help choosing a professional logo design? Consult with our expert!</h2>
+
+    <!-- ------------------Start FAQs --------------- -->
+    <div class="container faq-section">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div id="accordion">
+            <!-- <-Question 1 -->
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            <span class="faq-question">How can I effectively utilize a logo maker to create a
+                                unique
+                                logo design?</span>
+
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        A logo maker is software that offers a selection of pre-made logo design templates from a
+                        database. Here’s how you can create a logo using one:
+
+                        Choose a Template: Browse and select a design template from the gallery that best suits your
+                        business or style.
+
+                        Customize Your Design: Customize the font, colors, and add your company name or tagline.
+                        Many
+                        logo makers also offer advanced tools to apply effects like gradients, shadows, and more.
+
+                        Download Your Logo: After customizing, pay a nominal fee to download high-resolution files
+                        instantly. Some platforms offer free downloads with credit attribution.
+
+                    </div>
+                </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-4 mb-3 text-center">
-                    <div class="contact-option">
-                        <i class="fas fa-phone fa-2x mb-2"></i>
-                        <p>Phone number: <a href="tel:+15516665255"> +1(551)666-5255</a></p>
+
+            <!-- Question 2 -->
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                            <span class="faq-question">Can I use my logo for trademark and copyrights?</span>
+
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        Ownership: Logos created using templates are owned by the RFS Logo Design. Exclusive rights
+                        can
+                        be purchased separately.
                     </div>
                 </div>
-                <div class="col-md-4 mb-3 text-center">
-                    <div class="contact-option">
-                        <i class="fas fa-envelope fa-2x mb-2"></i>
-                        <p>Email us: <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a></p>
-                    </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
+                            <span class="faq-question">What are the distinctions between using a logo maker and
+                                opting
+                                for custom logo design services?</span>
+                        </button>
+                    </h5>
                 </div>
-                <div class="col-md-4 mb-3 text-center">
-                    <div class="contact-option">
-                        <i class="fas fa-comment-dots fa-2x mb-2"></i>
-                        <p>Live Chat: <a href="{{ url('https://wa.me/+18482369397') }}">Live Chat</a></p>
+
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        Logo Maker: Uses pre-made templates for customization. You can adjust fonts, colors, and
+                        effects
+                        without needing design skills. The design is not exclusive to you.
+                        Custom Design: Involves working with a dedicated designer who creates a unique logo based on
+                        your specific requirements. This design is exclusive to your brand.
 
                     </div>
                 </div>
             </div>
-        </section>
 
-
-
-
-        <!-- ------------------Start FAQs --------------- -->
-        <div class="container faq-section">
-            <h2 class="text-center mb-4">Frequently Asked Questions</h2>
-            <div id="accordion">
-                <!-- <-Question 1 -->
-                <div class="card">
-                    <div class="card-header" id="headingOne">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                                aria-expanded="true" aria-controls="collapseOne">
-                                <span class="faq-question">How can I effectively utilize a logo maker to create a
-                                    unique
-                                    logo design?</span>
-
-                            </button>
-                        </h5>
-                    </div>
-
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                        <div class="card-body">
-                            A logo maker is software that offers a selection of pre-made logo design templates from a
-                            database. Here’s how you can create a logo using one:
-
-                            Choose a Template: Browse and select a design template from the gallery that best suits your
-                            business or style.
-
-                            Customize Your Design: Customize the font, colors, and add your company name or tagline.
-                            Many
-                            logo makers also offer advanced tools to apply effects like gradients, shadows, and more.
-
-                            Download Your Logo: After customizing, pay a nominal fee to download high-resolution files
-                            instantly. Some platforms offer free downloads with credit attribution.
-
-                        </div>
-                    </div>
+            <!-- Question 4 -->
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                            aria-expanded="false" aria-controls="collapseFour">
+                            <span class="faq-question">Is it possible to personalize my logo design using your logo
+                                maker tool?</span>
+                        </button>
+                    </h5>
                 </div>
 
-                <!-- Question 2 -->
-                <div class="card">
-                    <div class="card-header" id="headingTwo">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                                aria-expanded="false" aria-controls="collapseTwo">
-                                <span class="faq-question">Can I use my logo for trademark and copyrights?</span>
-
-                            </button>
-                        </h5>
-                    </div>
-
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                        <div class="card-body">
-                            Ownership: Logos created using templates are owned by the RFS Logo Design. Exclusive rights
-                            can
-                            be purchased separately.
-                        </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        Absolutely! With our logo maker, you have the flexibility to customize fonts, colors, text,
+                        and
+                        your company name. Additionally, you can enhance
+                        your logo with advanced features like strokes, reflections, shadows, and more, all without
+                        needing any design expertise. These tools empower you
+                        to generate countless unique design variations from a single logo template.
                     </div>
                 </div>
-
-                <!-- Question 3 -->
-                <div class="card">
-                    <div class="card-header" id="headingThree">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
-                                aria-expanded="false" aria-controls="collapseThree">
-                                <span class="faq-question">What are the distinctions between using a logo maker and
-                                    opting
-                                    for custom logo design services?</span>
-                            </button>
-                        </h5>
-                    </div>
-
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                        <div class="card-body">
-                            Logo Maker: Uses pre-made templates for customization. You can adjust fonts, colors, and
-                            effects
-                            without needing design skills. The design is not exclusive to you.
-                            Custom Design: Involves working with a dedicated designer who creates a unique logo based on
-                            your specific requirements. This design is exclusive to your brand.
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Question 4 -->
-                <div class="card">
-                    <div class="card-header" id="headingFour">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
-                                aria-expanded="false" aria-controls="collapseFour">
-                                <span class="faq-question">Is it possible to personalize my logo design using your logo
-                                    maker tool?</span>
-                            </button>
-                        </h5>
-                    </div>
-
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                        <div class="card-body">
-                            Absolutely! With our logo maker, you have the flexibility to customize fonts, colors, text,
-                            and
-                            your company name. Additionally, you can enhance
-                            your logo with advanced features like strokes, reflections, shadows, and more, all without
-                            needing any design expertise. These tools empower you
-                            to generate countless unique design variations from a single logo template.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Question 7 -->
-                <div class="card">
-                    <div class="card-header" id="headingFour">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven"
-                                aria-expanded="false" aria-controls="collapseSeven">
-                                <span class="faq-question">Do you provide help in customizing my design?</span>
-                            </button>
-                        </h5>
-                    </div>
-
-                    <div id="collapseSeven" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                        <div class="card-body">
-                            We have a dedicated customer support team ready to assist with any inquiries regarding our
-                            logo
-                            design maker.
-                            For custom logo design services by dedicated graphic designers, please contact us at
-                            551-666-2555, email us at support@rfslogodesign.com, or fill out a hiring a logo designer
-                            form
-                            here.
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
+
+            <!-- Question 7 -->
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven"
+                            aria-expanded="false" aria-controls="collapseSeven">
+                            <span class="faq-question">Do you provide help in customizing my design?</span>
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        We have a dedicated customer support team ready to assist with any inquiries regarding our
+                        logo
+                        design maker.
+                        For custom logo design services by dedicated graphic designers, please contact us at
+                        551-666-2555, email us at support@rfslogodesign.com, or fill out a hiring a logo designer
+                        form
+                        here.
+                    </div>
+                </div>
+            </div>
+
+
         </div>
+    </div>
 
 
 

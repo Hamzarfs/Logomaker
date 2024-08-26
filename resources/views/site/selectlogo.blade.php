@@ -5,59 +5,59 @@
 @section('content')
     <style>
         /* @font-face {
-            font-family: 'lazy_people';
-            src: url('fonts/Atop-R99O3.ttf') format('truetype');
-        }
+                    font-family: 'lazy_people';
+                    src: url('fonts/Atop-R99O3.ttf') format('truetype');
+                }
 
-        @font-face {
-            font-family: 'Remon Demo';
-            src: url('fonts/Remon Demo.ttf') format('truetype');
-        }
+                @font-face {
+                    font-family: 'Remon Demo';
+                    src: url('fonts/Remon Demo.ttf') format('truetype');
+                }
 
-        @font-face {
-            font-family: 'Stifly';
-            src: url('fonts/Stifly.ttf') format('truetype');
-        }
+                @font-face {
+                    font-family: 'Stifly';
+                    src: url('fonts/Stifly.ttf') format('truetype');
+                }
 
-        @font-face {
-            font-family: 'Brandes-Regular';
-            src: url('fonts/Brandes-Regular.otf') format('truetype');
-        }
+                @font-face {
+                    font-family: 'Brandes-Regular';
+                    src: url('fonts/Brandes-Regular.otf') format('truetype');
+                }
 
-        @font-face {
-            font-family: 'Rohgaz-DemoVersion-Regular';
-            src: url('fonts/Rohgaz-DemoVersion-Regular.ttf') format('truetype');
-        }
+                @font-face {
+                    font-family: 'Rohgaz-DemoVersion-Regular';
+                    src: url('fonts/Rohgaz-DemoVersion-Regular.ttf') format('truetype');
+                }
 
-        @font-face {
-            font-family: 'Forest Trophy Textured';
-            src: url('fonts/Forest Trophy Textured.otf') format('truetype');
-        }
+                @font-face {
+                    font-family: 'Forest Trophy Textured';
+                    src: url('fonts/Forest Trophy Textured.otf') format('truetype');
+                }
 
-        @font-face {
-            font-family: 'AestheticWonderDEMO-Bold';
-            src: url('fonts/AestheticWonderDEMO-Bold.ttf') format('truetype');
-        }
+                @font-face {
+                    font-family: 'AestheticWonderDEMO-Bold';
+                    src: url('fonts/AestheticWonderDEMO-Bold.ttf') format('truetype');
+                }
 
-        @font-face {
-            font-family: 'NerveBrushRegular';
-            src: url('fonts/NerveBrushRegular.otf') format('truetype');
-        }
+                @font-face {
+                    font-family: 'NerveBrushRegular';
+                    src: url('fonts/NerveBrushRegular.otf') format('truetype');
+                }
 
-        @font-face {
-            font-family: 'Stander DEMO';
-            src: url('fonts/Stander DEMO.otf') format('truetype');
-        }
+                @font-face {
+                    font-family: 'Stander DEMO';
+                    src: url('fonts/Stander DEMO.otf') format('truetype');
+                }
 
-        @font-face {
-            font-family: 'Dasport  DEMO';
-            src: url('fonts/Dasport  DEMO.otf') format('truetype');
-        }
+                @font-face {
+                    font-family: 'Dasport  DEMO';
+                    src: url('fonts/Dasport  DEMO.otf') format('truetype');
+                }
 
-        @font-face {
-            font-family: 'Light Sport DEMO';
-            src: url('fonts/Light Sport DEMO.otf') format('truetype');
-        } */
+                @font-face {
+                    font-family: 'Light Sport DEMO';
+                    src: url('fonts/Light Sport DEMO.otf') format('truetype');
+                } */
 
         .logo-gallery {
             display: flex;
@@ -74,11 +74,11 @@
         }
 
         /* .logo-item img {
-                                                    width: 100%;
-                                                    height: 100%;
-                                                    object-fit: cover;
-                                                    object-position: center;
-                                                } */
+                                                            width: 100%;
+                                                            height: 100%;
+                                                            object-fit: cover;
+                                                            object-position: center;
+                                                        } */
         .select-btn {
             display: none;
             position: absolute;
@@ -127,12 +127,12 @@
         }
     </style>
 
-    <div class="container" >
+    <div class="container">
         <!-- Heading -->
         <div class="row mt-5">
             <div class="col text-center">
                 <h1 style= " font-size:42px; font-weight:700;">Free Logo Maker</h1>
-                    <p>Create Unique Logo in Minutes with Our Online Logo Builder!</p>
+                <p>Create Unique Logo in Minutes with Our Online Logo Builder!</p>
             </div>
         </div>
     </div>
@@ -145,13 +145,13 @@
                 <div class="row my-4">
                     <div class="col-md-4">
                         <input type="text" class="form-control" id="company" name="company" placeholder="Brand Name"
-                            value="{{ session('company') }}"  maxlength="30" >
+                            value="{{ session('company') }}" maxlength="30">
                     </div>
                     <div class="col-md-4">
                         <input type="text" id="industry1" class="form-control" placeholder="Enter Your Industry"
-                            value="{{ session('category_name') }}"   >
+                            value="{{ session('category_name') }}">
 
-                            
+
                         <input type="hidden" id="industryId1" name="category" value="{{ session('category') }}">
                     </div>
                     <div class="col-md-4">
@@ -183,38 +183,38 @@
                 $colors = ['#900C3F', '#36454F', '#343434', '#191970', '#581845'];
             @endphp
 
-            
+
 
 
             @foreach ($products as $index => $product)
-                
+
                 @php
                     $font = $fonts[$index % count($fonts)]; // Select font based on index
-                    
-                    
-                   
-                    
+
+
+
+
                     $fontSlug = $product->font->slug ?? null;
                     $font = $fontSlug ? pathinfo($fontSlug, PATHINFO_FILENAME) : '';
 
-                   // echo   $font;
+                    // echo   $font;
                     $color = $colors[$index % count($colors)];
                     $color=$product->color;
-                 
-                     $fontSize = (isset($product->logomaker_font_size) && strlen($product->logomaker_font_size) > 1) 
-                                    ? $product->logomaker_font_size 
+
+                     $fontSize = (isset($product->logomaker_font_size) && strlen($product->logomaker_font_size) > 1)
+                                    ? $product->logomaker_font_size
                                     : '38px';
 
                                     
           
                     $fontSize = empty(session('company')) ? '16px' : $fontSize;
 
-                    
+ 
 
                     $companyName = session('company');
                     $companyNameLength = strlen($companyName);
                     if ($companyNameLength > 10 && $companyNameLength <= 15) {
-                         
+
                         $fontSize = (int)str_replace('px', '', $fontSize) - 6 . 'px';
                     }else  if ($companyNameLength > 15 && $companyNameLength <= 20) {
                         $fontSize = (int)str_replace('px', '', $fontSize) - 12 . 'px';
@@ -225,20 +225,19 @@
                     }
 
 
-                
-                    $topPosition = (isset($product->logomaker_top) && strlen($product->logomaker_top) > 1) 
-                                    ? $product->logomaker_top 
+                    $topPosition = (isset($product->logomaker_top) && strlen($product->logomaker_top) > 1)
+                                    ? $product->logomaker_top
                                     : '170px';
-                    
-                    $leftPosition = (isset($product->logomaker_left) && strlen($product->logomaker_left) > 1) 
-                                    ? $product->logomaker_left 
-                                    : '-30px';
-                    
-                   
 
-                    
+                    $leftPosition = (isset($product->logomaker_left) && strlen($product->logomaker_left) > 1)
+                                    ? $product->logomaker_left
+                                    : '-30px';
+
+
+
+
                     $logoPosition = $product->logo_position ?? ''; // Use null coalescing operator to handle unset cases
-                    $logoPositionVertical='margin-top:10px';
+                    $logoPositionVertical = 'margin-top:10px';
                     if (isset($logoPosition) && strlen($logoPosition) > 0) {
                         switch ($logoPosition) {
                             case 'left':
@@ -247,18 +246,18 @@
                                      $adjustedLeftPositionValue = $leftPositionValue  - 80;
                                      $leftPosition = "{$adjustedLeftPositionValue}px";
                                  }else if($companyNameLength >= 6 && $companyNameLength<=11){
-                                    
+
                                     $leftPositionValue = (int) str_replace('px', '', $leftPosition);
                                      $adjustedLeftPositionValue = $leftPositionValue  - 20;
                                      $leftPosition = "{$adjustedLeftPositionValue}px";
-                                 
-                                }    
+
+                                }
                                // die($companyNameLength."DDDDDDDDDDD".session('company'));
                                 //$logoPosition="margin-left:0px";
                                 break;
                             case 'center':
                                 // Do something for 'center'
-                                $logoPositionVertical='margin-top:10px';
+                                $logoPositionVertical = 'margin-top:10px';
                                 break;
                             case 'right':
                                 // Do something for 'right'
@@ -271,55 +270,55 @@
                                      $leftPositionValue = (int) str_replace('px', '', $leftPosition);
                                      $adjustedLeftPositionValue = $leftPositionValue  + 60;
                                      $leftPosition = "{$adjustedLeftPositionValue}px";
-                                 
-                                }    
-                                 
-                                
+
+                                }
+
+
                                 break;
                             case 'top':
                                 // Do something for 'top'
-                                $logoPositionVertical='margin-top:-40px';
+                                $logoPositionVertical = 'margin-top:-40px';
                                 break;
                             case 'bottom':
-                                $logoPositionVertical='margin-top:140px';
+                                $logoPositionVertical = 'margin-top:140px';
                                 break;
                             default:
-                            $logoPositionVertical='margin-top:-10px';
+                                $logoPositionVertical = 'margin-top:-10px';
                                 // Optionally handle unexpected values
                                 //echo "Unexpected logo position.";
                                 break;
                         }
-                    }  
-                    
+                    }
+
                 @endphp
 
                 <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
                     <div class="card-container">
-                    
-                    <!-- <img src="{{ route('image.show', $product->image) }}" 
-                        style="xwidth: 35% !important; {{ $logoPosition }}; position: absolute; {{ $logoPositionVertical }}; z-index: 10;" 
-                        class="img-fluid portfolio-image" 
+
+                    <!-- <img src="{{ route('image.show', $product->image) }}"
+                        style="xwidth: 35% !important; {{ $logoPosition }}; position: absolute; {{ $logoPositionVertical }}; z-index: 10;"
+                        class="img-fluid portfolio-image"
                         alt="{{ $product->name }}"> -->
 
-                        
+
                         <!-- <img src="{{ asset("category-image/$product->image") }}" style="xwidth: 35% !important; {{$logoPosition}}  ;position: absolute; {{$logoPositionVertical}};   z-index: 10;" class="img-fluid portfolio-image"
                             alt="{{ $product->name }}"> -->
 
-                            <!-- <img src="{{ asset("category-image/$product->image") }}" 
-    style="xwidth: 35% !important; {{$logoPosition}}  ;position: absolute; {{$logoPositionVertical}};   z-index: 10;" 
+                            <!-- <img src="{{ asset("category-image/$product->image") }}"
+    style="xwidth: 35% !important; {{$logoPosition}}  ;position: absolute; {{$logoPositionVertical}};   z-index: 10;"
     class="img-fluid portfolio-image"
     alt="{{ $product->name }}"
     oncontextmenu="return false;"> -->
- 
-                            <img src="{{ asset("category-image/$product->image") }}" 
-                            style="xwidth: 35% !important; {{$logoPosition}}; position: absolute; {{$logoPositionVertical}}; z-index: 10;" 
-                            class="img-fluid portfolio-image" 
-                            alt="{{ $product->name }}" 
-                            ondragstart="return false;" 
+
+                            <img src="{{ asset("category-image/$product->image") }}"
+                            style="xwidth: 35% !important; {{$logoPosition}}; position: absolute; {{$logoPositionVertical}}; z-index: 10;"
+                            class="img-fluid portfolio-image"
+                            alt="{{ $product->name }}"
+                            ondragstart="return false;"
                             oncontextmenu="return false;">
 
-                
-                           
+
+
 
 
                             <div class="text-placeholder"
@@ -328,8 +327,9 @@
 
 
 
-                        <a href="{{ url('/store-session-data-image?image=' . $product->image . '&product-id=' . $product->id .'&font=' . $font) }}"
-                            class="hover-button select-btn"  title="{{ $product->name}}" style="z-index: 30;" data-product-id="{{ $product->id }}">Select  </a>
+                        <a href="{{ url('/store-session-data-image?image=' . $product->image . '&product-id=' . $product->id . '&font=' . $font) }}"
+                            class="hover-button select-btn" title="{{ $product->name }}" style="z-index: 30;"
+                            data-product-id="{{ $product->id }}">Select </a>
                         @auth
                             @php
                                 $i = array_search($product->id, array_column($favourites, 'product_id'));

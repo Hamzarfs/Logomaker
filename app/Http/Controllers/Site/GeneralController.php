@@ -16,7 +16,7 @@ class GeneralController extends \App\Http\Controllers\Controller
 
     public function aboutUs()
     {
-        
+
         return view('site/aboutus');
     }
 
@@ -29,7 +29,7 @@ class GeneralController extends \App\Http\Controllers\Controller
 
     public function stationeryDesigning()
     {
-        return view('site/stationery-designing');
+        return redirect()->to('printing');
     }
 
     public function howItWorks()
@@ -118,7 +118,7 @@ class GeneralController extends \App\Http\Controllers\Controller
         ->get();
         return view('site/custom-logo', compact('categories'));
 
-         
+
     }
     public function printing()
     {
