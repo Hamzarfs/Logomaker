@@ -26,8 +26,8 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 banner-left order-lg-1">
-                <h2 style="color:#fff; font-weight:700;"><span class="logo-design-color">Printing</span> Packages</h2>
-                <p style="color:#fff;">Now You Can Print Without a Worry.</p>
+                <h2 style="color:#fff; font-weight:700;"><span class="logo-design-color">Printing</span> Plans</h2>
+                <p style="color:#fff;">Printing Made Easier</p>
             </div>
             <div class="col-lg-6 text-center banner-image-sec order-lg-2">
                 <img src="images/print(1).png" alt="Example" class="img-fluid">
@@ -46,9 +46,10 @@
                 <img src="images/print22(1).png" alt="Image" class="img-fluid">
             </div>
             <div class="col-md-7 content">
-                <h2>Can't Afford to Print Business Cards, Flyers, Stationery or Even Employee T-shirts?</h2>
-                <p>If you’re a startup or small business owner with a tight budget, afraid of the skyrocket pricing of printing visiting cards, letterheads, brochure or even t-shirts, then we understand your concerns.</p>
-                <p>When every cent makes a difference, why waste it on expensive printing materials that you can’t afford? Still, you need visiting cards to give to clients, flyers to drop, and letters to write.</p>
+                <h2>Is the cost of printing business cards, stationery, flyers, and other materials beyond your budget?</h2>
+                <p style = text-align:justify;>With the ever-rising prices of printing letterheads, brochures, t-shirts, and visiting cards, small businesses and startups don’t have it easy.</p>
+                <p style = text-align:justify;>We understand how important it is for you to have visiting cards for your clients, flyers to advertise, and letters to send everywhere. So, why even 
+                think of wasting your money on expensive printing materials that you can’t afford with your tight budget?</p>
             </div>
         </div>
     </div>
@@ -63,10 +64,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-7 content">
-                <h2>Now You Can Print Without a Worry</h2>
-                <p>What if we tell you, you can enjoy beautiful printed materials without breaking the bank?<br> In fact we’ll show you that you can.</p>
-                <p>With LogoDesign.net as a branding partner, now you can get all printing done without a worry in the world. We have been in the business
-                    for more than 15 years so we know all about small business branding, and printing marketing materials is an essential need.</p>
+                <h2>Stress-Free Printing </h2>
+                <p style = text-align:justify;>Still wondering how to get the best quality printing materials at the best prices? No need to worry, because we have got your back!</p>
+                <p style = text-align:justify;>With RFS Logo Design as your branding partner, rates and quality will be the least of your concerns. Our experience spans over more than 
+                15 years, so we know about everything there is about the world of marketing material for print and branding for small businesses.</p>
             </div>
             <div class="col-md-5">
                 <img src="images/print1212(1).png" alt="Image" class="img-fluid">
@@ -87,15 +88,16 @@
                 <img src="images/print3(1).png" alt="Image" style="margin-top:50px;" class="img-fluid">
             </div>
             <div class="col-md-7 content">
-                <h2>Call the Prints You Want</h2>
-                <p>At LogoDesign.net we provide top notch printing solutions for small business and startups at affordable pricing because we understand your needs (and pocket).</p>
-                <p>For all LogoDesign.net design templates we offer printing services:</p>
+                <h2>Get All the Prints You Need</h2>
+                <p>RFS Logo Design offers high-quality yet affordable printing solutions for startups and small businesses.</p>
+                <p>We provide printing services for all of the RFS Logo Design templates, including:</p>
 
                 <ul>
-                    <li>Visiting Cards</li>
+
                     <li>Brochures</li>
                     <li>Flyers</li>
-                    <li>Stationery</li>
+                    <li>Stationery Items</li>
+                    <li>Business Cards</li>
                 </ul>
             </div>
         </div>
@@ -115,10 +117,10 @@
     <!-------------------- Start Boxed Section ------------------>
     <section class="boxed-section">
         <div class="container">
-            <h2>Quality or Quantity Printing That’s Up to You</h2>
-            <p>Whether you want a few letterheads or thousands of business cards, 
-                you can get them printed in whatever quantity or quality you like. 
-                Just select a printing service and contact us at <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a> or 
+            <h2>Flexible Printing Options</h2>
+            <p>Choose your preferred quantity and quality, and get your materials printed without a worry. 
+            All you have to do is pick out a printing service and reach out to us at 
+            <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a> or 
                 call us at <a href="tel:+15516665255">+1 (551) 666-5255</a>.</p>
                 <a href="{{ url('contact-us') }}" class="california-button-online">Get Started</a>
 
