@@ -65,7 +65,7 @@
             <div class="col-md-7 content">
                 <h2>Now You Can Print Without a Worry</h2>
                 <p>What if we tell you, you can enjoy beautiful printed materials without breaking the bank?<br> In fact we’ll show you that you can.</p>
-                <p>With LogoDesign.net as a branding partner, now you can get all printing done without a worry in the world. We have been in the business
+                <p>With RFSLogoDesign as a branding partner, now you can get all printing done without a worry in the world. We have been in the business
                     for more than 15 years so we know all about small business branding, and printing marketing materials is an essential need.</p>
             </div>
             <div class="col-md-5">
@@ -88,8 +88,8 @@
             </div>
             <div class="col-md-7 content">
                 <h2>Call the Prints You Want</h2>
-                <p>At LogoDesign.net we provide top notch printing solutions for small business and startups at affordable pricing because we understand your needs (and pocket).</p>
-                <p>For all LogoDesign.net design templates we offer printing services:</p>
+                <p>At RFSLogoDesign we provide top notch printing solutions for small business and startups at affordable pricing because we understand your needs (and pocket).</p>
+                <p>For all RFSLogoDesign design templates we offer printing services:</p>
 
                 <ul>
                     <li>Visiting Cards</li>
@@ -116,9 +116,9 @@
     <section class="boxed-section">
         <div class="container">
             <h2>Quality or Quantity Printing That’s Up to You</h2>
-            <p>Whether you want a few letterheads or thousands of business cards, 
-                you can get them printed in whatever quantity or quality you like. 
-                Just select a printing service and contact us at <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a> or 
+            <p>Whether you want a few letterheads or thousands of business cards,
+                you can get them printed in whatever quantity or quality you like.
+                Just select a printing service and contact us at <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a> or
                 call us at <a href="tel:+15516665255">+1 (551) 666-5255</a>.</p>
                 <a href="{{ url('contact-us') }}" class="california-button-online">Get Started</a>
 

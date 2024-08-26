@@ -120,7 +120,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center">
-                    <img src="images/step-logo-maker.png" alt="Step Image" class="img-fluid img-shadow">
+                    <img src="images/step-logo-maker.png" alt="Select a Logo Design" class="img-fluid img-shadow">
                 </div>
                 <div class="col-md-6">
                     <h2 class="step-title"><span class="step">Step:</span> 1 Select a Logo Design</h2>
@@ -141,7 +141,7 @@
                         icons. Our easy-to-use editor allows you to create a logo that truly represents your brand.</p>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img src="images/step-customize-logo.png" alt="Step Image" class="img-fluid img-shadow">
+                    <img src="images/step-customize-logo.png" alt="Customize Your Logo" class="img-fluid img-shadow">
                 </div>
             </div>
         </div>
@@ -151,7 +151,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center">
-                    <img src="images/step-download-logo.png" alt="Step Image" class="img-fluid img-shadow">
+                    <img src="images/step-download-logo.png" alt="Download Your Logo" class="img-fluid img-shadow">
                 </div>
                 <div class="col-md-6">
                     <h2 class="step-title"><span class="step">Step:</span> 3 Download Your Logo</h2>

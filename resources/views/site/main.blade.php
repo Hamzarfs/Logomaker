@@ -338,7 +338,7 @@
         <div class="container portfolio-section">
             <h2 class="portfolio-heading">We Have Logos For Everyone</h2>
             <p class="main-description-online">
-                Explore our <a href="{{ url('logo-maker') }}" style="font-weight: bold; color: inherit;">logo builder’s</a>
+                Explore our <a href="{{ url('logo-maker') }}" style="font-weight: bold; color: inherit;">logo builder</a>'s
                 vast template collection, from medical
                 to fashion, sports to food. RFS Logo Design helps you find the perfect
                 logo to match your business identity and branding needs.
@@ -573,7 +573,7 @@
                         <li><i class="bi bi-check-circle"></i> 10000+ logos to choose</li>
                         <li><i class="bi bi-check-circle"></i> Endless customization options</li>
                         <li><i class="bi bi-check-circle"></i> High-res design files</li>
-                        <b>(PDF, PNG, JPG)</b>
+                        <li style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>(PDF, PNG, JPG)</b></li>
                         <li><i class="bi bi-check-circle"></i> Instant download</li>
                         <li><i class="bi bi-check-circle"></i> Ready brand identity designs</li>
                         <li><i class="bi bi-check-circle"></i> As low as $37</li>
@@ -584,12 +584,12 @@
                     <h3 class="bold-heading">Logo Maker for Small Businesses</h3>
                     <p>Get premium logo design to create eye-catching graphics for social media, banners, promotional
                         materials,
-                        logos, and beyond - all yours to use it.</p>
+                        logos, and beyond - all yours to use at no cost, forever.</p>
                     <ul>
                         <li><i class="bi bi-check-circle"></i> Work directly with skilled designers</li>
                         <li><i class="bi bi-check-circle"></i> Fully bespoke solution</li>
                         <li><i class="bi bi-check-circle"></i> high-res design files</li>
-                        <b>(Ai, PSD, EPS, PNG, JPG, PDF, SVG, TIFF)</b>
+                        <li style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>(Ai, PSD, EPS, PNG, JPG, PDF, SVG, TIFF)</b></li>
                         <li><i class="bi bi-check-circle"></i> Premium graphic design work</li>
                         <li><i class="bi bi-check-circle"></i> Dedicated account manager</li>
                         <li><i class="bi bi-check-circle"></i> As low as $199</li>

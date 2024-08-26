@@ -11,150 +11,179 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
-    .contact-section {
-      padding: 60px 0;
-    }
-    .contact-section h2 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #333;
-      margin-bottom: 20px;
-    }
-    .contact-section p {
-      font-size: 1.1rem;
-      color: #666;
-      margin-bottom: 30px;
-    }
-    .contact-section .btn {
-      background-color: #512f90;
-      border: none;
-      border-radius: 5px;
-      padding: 10px 20px;
-    }
-    .contact-section .btn:hover {
-      background-color: #3d2171;
-    }
-    .contact-info {
-      margin-bottom: 30px;
-      display: flex;
-      align-items: center;
-    }
-    .contact-info h5 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 10px;
-      margin-left: 10px;
-    }
-    .contact-info i {
-      font-size: 1.5rem;
-      color: #512f90;
-      margin-right: 15px;
-    }
-    .contact-info p {
-      margin: 0;
-      font-size: 1.1rem;
-      color: #666;
-    }
-    .contact-info a {
-      color: inherit;
-      text-decoration: none;
-    }
-    .form-group label {
-      font-weight: 600;
-      color: #333;
-    }
-    .form-control {
-      border: none;
-      border-bottom: 2px solid #ddd;
-      border-radius: 0;
-      padding-left: 2.5rem;
-    }
-    .form-control::placeholder {
-      color: #aaa;
-    }
-    .form-control:focus {
-      box-shadow: none;
-      border-color: #512f90;
-    }
-    .form-icon {
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #aaa;
-    }
-    .form-group {
-      position: relative;
-      margin-bottom: 1.5rem;
-    }
-    .form-group.filled .form-icon {
-      color: #512f90;
-    }
-    .animated-form {
-      animation: slideInRight 1s ease-in-out;
-    }
-    @keyframes slideInRight {
-      from {
-        opacity: 0;
-        transform: translateX(100%);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-    .heading-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-    .heading-container h3 {
-      font-size: 18px;
-      font-weight: bold;
-      color: #6a70d6;
-    }
-    .contact-button-online {
-      padding: 10px;
-      border-radius: 5px;
-      color: #fff;
-      background-color: #646BD9;
-      font-size: 15px;
-      font-weight: 700;
-      line-height: 24px;
-      text-align: center;
-      border-color: #646BD9;
-      margin-bottom: 30px;
-    }
-    .contact-button-online:hover {
-      background-color: #646BD9;
-      border-color: #646BD9;
-    }
-    .banner-section {
-      background-color: #080a2d;
-      padding: 50px 0;
-    }
-    .banner-section h1 {
-      font-size: 34px;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 20px;
-    }
-    .banner-section p {
-      font-size: 1.2rem;
-      color: #fff;
-      margin-bottom: 30px;
-    }
-    .banner-section .btn {
-      background-color: #512f90;
-      border: none;
-      border-radius: 5px;
-      padding: 10px 20px;
-    }
-    .banner-section .btn:hover {
-      background-color: #3d2171;
-    }
+
+        .contact-section {
+            padding: 60px 0;
+        }
+
+        .contact-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .contact-section p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .contact-section .btn {
+            background-color: #512f90;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+
+        .contact-section .btn:hover {
+            background-color: #3d2171;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info h5 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+
+        .contact-info i {
+            font-size: 1.5rem;
+            color: #512f90;
+            margin-right: 15px;
+        }
+
+        .contact-info p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .contact-info a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-control {
+            border: none;
+            border-bottom: 2px solid #ddd;
+            border-radius: 0;
+            padding-left: 2.5rem;
+        }
+
+        .form-control::placeholder {
+            color: #aaa;
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+            border-color: #512f90;
+        }
+
+        .form-icon {
+            position: absolute;
+            left: 10px;
+            top: 70%;
+            transform: translateY(-50%);
+            color: #aaa;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group.filled .form-icon {
+            color: #512f90;
+        }
+
+        .animated-form {
+            animation: slideInRight 1s ease-in-out;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .heading-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .heading-container h3 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #6a70d6;
+        }
+
+        .contact-button-online {
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+            background-color: #646BD9;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 24px;
+            text-align: center;
+            border-color: #646BD9;
+            margin-bottom: 30px;
+        }
+
+        .contact-button-online:hover {
+            background-color: #646BD9;
+            border-color: #646BD9;
+        }
+
+        .banner-section {
+            background-color: #080a2d;
+            padding: 50px 0;
+        }
+
+        .banner-section h1 {
+            font-size: 34px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .banner-section p {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .banner-section .btn {
+            background-color: #512f90;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+
+        .banner-section .btn:hover {
+            background-color: #3d2171;
+        }
     </style>
 
 
@@ -168,7 +197,8 @@
                     <a class="contact-button-online" href="{{ url('/logo-maker') }}">Get Started</a>
                 </div>
                 <div class="col-md-6">
-                    <img src="images/contect-us.webp" alt="Contact RFS Logo Design" title="Contact RFS Logo Design" class="img-fluid">
+                    <img src="images/contect-us.webp" alt="Contact RFS Logo Design" title="Contact RFS Logo Design"
+                        class="img-fluid">
                 </div>
             </div>
         </div>
@@ -177,12 +207,13 @@
         <h2>Contact RFS Logo Design</h2>
         <p>If you have a unique idea that you can't find among our templates, chat with a live representative through
             our chat window or reach out to us using the form below. Rest assured, we'll respond promptly.</p>
-        <p>For tailored design solutions, explore our comprehensive range of services, including <a href="{{ url('/custom-logo') }}" >custom logo design</a>,
+        <p>For tailored design solutions, explore our comprehensive range of services, including <a
+                href="{{ url('/custom-logo') }}">custom logo design</a>,
             business cards, stationery design, banners, and website design and development. Expect a prompt response
             from our team, ready to assist you every step of the way.</p>
-            
-            <button class="contact-button-online" onclick="window.location.href='//wa.me/+18482369397'">Chat with Us</button>
-        
+
+        <button class="contact-button-online" onclick="window.location.href='//wa.me/+18482369397'">Chat with Us</button>
+
 
         <div class="row">
             <div class="col-md-6">
@@ -227,8 +258,8 @@
                         <label for="phone">Phone</label>
                         <i class="fas fa-phone form-icon"></i>
                         <input type="text" class="form-control" name="phone" id="phone"
-                        placeholder="Enter your phone number" required maxlength="15" minlength="10">
-                        </div>
+                            placeholder="Enter your phone number" required maxlength="10" minlength="10">
+                    </div>
                     <div class="form-group">
                         <label for="comment">Comment</label>
                         <i class="fas fa-comment form-icon"></i>
