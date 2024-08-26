@@ -323,89 +323,13 @@
                         <div class="form-group">
                             <label for="font-family" class="font-label">Font Family </label>
                             <select id="font-family" class="form-control">
-                                <!-- Add your font options here -->
-                                <!-- <option value="{{ session()->get('font') }}" style="font-family: '{{ session()->get('font') }};'">{{ session()->get('font') }}</option> -->
-                                <option value="lazyp-eople" {{ session()->get('font') == 'lazyp-eople' ? 'selected' : '' }}
-                                    style="font-family: 'lazyp-eople';">Lazy People</option>
-                                <option value="Remon-Demo" {{ session()->get('font') == 'Remon-Demo' ? 'selected' : '' }}
-                                    style="font-family: 'Remon-Demo';">Remon Demo</option>
-
-                                <option value="Stifly" {{ session()->get('font') == 'Stifly' ? 'selected' : '' }}
-                                    style="font-family: 'Stifly';">Stifly</option>
-                                <option value="Brandes-Regular"
-                                    {{ session()->get('font') == 'Brandes-Regular' ? 'selected' : '' }}
-                                    style="font-family: 'Brandes-Regular';">Brandes Regular</option>
-                                <option value="Rohgaz-Demo-VersionRegular"
-                                    {{ session()->get('font') == 'Rohgaz-Demo-VersionRegular' ? 'selected' : '' }}
-                                    style="font-family: 'Rohgaz-Demo-VersionRegular';">Rohgaz Demo VersionRegular</option>
-                                <option value="Forest-Trophy-Textured"
-                                    {{ session()->get('font') == 'Forest-Trophy-Textured' ? 'selected' : '' }}
-                                    style="font-family: 'Forest-Trophy-Textured';">Forest Trophy Textured</option>
-                                <option value="Aesthetic-Wonder-DEMOBold"
-                                    {{ session()->get('font') == 'Aesthetic-Wonder-DEMOBold' ? 'selected' : '' }}
-                                    style="font-family: 'Aesthetic-Wonder-DEMOBold';">Aesthetic Wonder DEMOBold</option>
-                                <option value="Nerve-Brush-Regular"
-                                    {{ session()->get('font') == 'Nerve-Brush-Regular' ? 'selected' : '' }}
-                                    style="Nerve-Brush-Regular: 'lazyp-eople';">Nerve Brush Regular</option>
-                                <option value="Stander-DEMO"
-                                    {{ session()->get('font') == 'Stander-DEMO' ? 'selected' : '' }}
-                                    style="font-family: 'Stander-DEMO';">Stander DEMO</option>
-                                <option value="Dasport-DEMO"
-                                    {{ session()->get('font') == 'Dasport-DEMO' ? 'selected' : '' }}
-                                    style="font-family: 'Dasport-DEMO';">Dasport DEMO</option>
-                                <option value="LightSport-DEMO"
-                                    {{ session()->get('font') == 'LightSport-DEMO' ? 'selected' : '' }}
-                                    style="font-family: 'LightSport-DEMO';">LightSport DEMO</option>
-
-                                <!-- <option value="Roboto" style="font-family: 'Roboto';">Roboto</option>
-                                                <option value="Lato" style="font-family: 'Lato';">Lato</option>
-                                                <option value="Montserrat" style="font-family: 'Montserrat';">Montserrat</option>
-                                                <option value="Poppins" style="font-family: 'Poppins';">Poppins</option>
-                                                <option value="Arial" style="font-family: Arial;">Arial</option>
-                                                <option value="Verdana" style="font-family: Verdana;">Verdana</option>
-                                                <option value="Courier New" style="font-family: Courier New;">Courier New</option>
-                                                <option value="Georgia" style="font-family: Georgia;">Georgia</option>
-                                                <option value="Times New Roman" style="font-family: Times New Roman;">Times New Roman
-                                                </option>
-                                                <option value="Trebuchet MS" style="font-family: Trebuchet MS;">Trebuchet MS</option>
-                                                <option value="Comic Sans MS" style="font-family: Comic Sans MS;">Comic Sans MS</option>
-                                                <option value="Tahoma" style="font-family: Tahoma;">Tahoma</option>
-                                                <option value="Impact" style="font-family: Impact;">Impact</option>
-                                                <option value="Arial Black" style="font-family: Arial Black;">Arial Black</option>
-                                                <option value="Lucida Console" style="font-family: Lucida Console;">Lucida Console</option>
-                                                <option value="Lucida Sans Unicode" style="font-family: Lucida Sans Unicode;">Lucida Sans
-                                                    Unicode</option>
-                                                <option value="Consolas" style="font-family: Consolas;">Consolas</option>
-                                                <option value="Palatino Linotype" style="font-family: Palatino Linotype;">Palatino Linotype
-                                                </option>
-                                                <option value="Garamond" style="font-family: Garamond;">Garamond</option>
-                                                <option value="MS Serif" style="font-family: MS Serif;">MS Serif</option>
-                                                <option value="MS Sans Serif" style="font-family: MS Sans Serif;">MS Sans Serif</option>
-                                                <option value="Bookman Old Style" style="font-family: Bookman Old Style;">Bookman Old Style
-                                                </option>
-                                                <option value="Arial Narrow" style="font-family: Arial Narrow;">Arial Narrow</option>
-                                                <option value="Century Gothic" style="font-family: Century Gothic;">Century Gothic</option>
-                                                <option value="Frank Ruhl Libre" style="font-family: Frank Ruhl Libre;">Frank Ruhl Libre
-                                                </option>
-                                                <option value="Droid Sans" style="font-family: Droid Sans;">Droid Sans</option>
-                                                <option value="Bebas Neue" style="font-family: Bebas Neue;">Bebas Neue</option>
-                                                <option value="Playfair Display" style="font-family: Playfair Display;">Playfair Display
-                                                </option>
-                                                <option value="Poppins" style="font-family: 'Poppins';">Poppins</option>
-                                                <option value="Montserrat" style="font-family: 'Montserrat';">Montserrat</option>
-                                                <option value="Lora" style="font-family: Lora;">Lora</option>
-                                                <option value="Merriweather" style="font-family: Merriweather;">Merriweather</option>
-                                                <option value="Raleway" style="font-family: Raleway;">Raleway</option>
-                                                <option value="Quicksand" style="font-family: Quicksand;">Quicksand</option>
-                                                <option value="PT Sans" style="font-family: PT Sans;">PT Sans</option>
-                                                <option value="Ubuntu" style="font-family: Ubuntu;">Ubuntu</option>
-                                                <option value="Fira Sans" style="font-family: Fira Sans;">Fira Sans</option>
-                                                <option value="Nunito" style="font-family: Nunito;">Nunito</option>
-                                                <option value="Source Sans Pro" style="font-family: Source Sans Pro;">Source Sans Pro
-                                                </option>
-                                                <option value="Open Sans" style="font-family: 'Open Sans';">Open Sans</option>
-                                                <option value="Lato" style="font-family: 'Lato';">Lato</option>
-                                                <option value="Exo 2" style="font-family: 'Exo 2';">Exo 2</option> -->
+                                @foreach ($fonts as $font)
+                                    <option value="{{ preg_replace('/\.[^.\s]+$/', '', $font->slug) }}" 
+                                        {{ session()->get('font') == $font->slug ? 'selected' : '' }}
+                                        style="font-family: '{{ preg_replace('/\.[^.\s]+$/', '', $font->slug) }}';">
+                                        {{ preg_replace('/\.[^.\s]+$/', '', $font->name) }}
+                                    </option>
+                                @endforeach
                             </select>
 
                             <button id="add-text" class="btn"><i class="fas fa-plus"></i> Add Text</button>
@@ -755,7 +679,7 @@
                                     ? $selectedProduct->logomaker_font_size 
                                     : 40;
                                     
-                             $companyName = session('company');
+                             $companyName = session('company') ? session('company') : $selectedProduct->category->name;
                            
                              $companyNameLength = strlen($companyName);
 
@@ -781,8 +705,10 @@
                             $topPosition = (isset($selectedProduct->canva_top) && strlen($selectedProduct->canva_top) > 1) 
                                     ?  floatval($selectedProduct->canva_top)
                                     : '2.2';   
+                            
+                            $companyName = session('company') ? session('company') : $selectedProduct->category->name;
+                            
 
-                            $companyName = session('company');
                             $companyNameLength = strlen($companyName);
 
                             $textPosition='center';
@@ -807,6 +733,7 @@
                             // top: canvas.height / 3.8 + 120, // Position the text
 
                         // Create the textbox with the session company value
+                        var company = "{{ $companyName }}".replace(/&amp;/g, '&');
                         var sampleText1 = new fabric.Textbox(company, {
                             left: canvas.width /  {{$leftPosition}} - 60, // Position the text
                             top: canvas.height / {{$topPosition}} + 120, // Position the text

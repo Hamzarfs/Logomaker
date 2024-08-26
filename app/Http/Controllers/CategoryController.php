@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
@@ -34,7 +34,7 @@ class CategoryController extends Controller
     {
         $data = $request->validate([
             'name' => 'required|max:255',
-            'image' => 'nullable|image|mimes:png,jpg,jpeg',
+            'image' => 'nullable|image|mimes:png,jpg,jpeg,svg',
             'meta_title' => 'required|max:255',
             'meta_desc' => 'required|max:255',
             'content' => 'required',
@@ -141,7 +141,7 @@ class CategoryController extends Controller
 
         $data = $request->validate([
             'name' => 'required|max:255',
-            'image' => 'nullable|image|mimes:png,jpg,jpeg',
+            'image' => 'nullable|image|mimes:png,jpg,jpeg,svg',
             'meta_title' => 'required|max:255',
             'meta_desc' => 'required|max:255',
             'content' => 'required',
@@ -171,7 +171,7 @@ class CategoryController extends Controller
         }
 
         if ($data['image']) {
-            if (file_exists($oldImage = public_path($category->image)))
+            if ($category->image && file_exists($oldImage = public_path($category->image)))
                 unlink($oldImage);
 
             $imageName = sprintf("%s.%s", $data['name'], $data['image']->getClientOriginalExtension());

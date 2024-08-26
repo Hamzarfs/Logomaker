@@ -19,7 +19,7 @@
                             <div class="form-group">
                                 <label for="image">Category Image</label>
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" name="image" id="image" accept=".jpg,.jpeg,.png">
+                                    <input type="file" class="custom-file-input" name="image" id="image" accept=".jpg,.jpeg,.png,.svg">
                                     <label class="custom-file-label" for="image">Choose category image</label>
                                 </div>
                             </div>
