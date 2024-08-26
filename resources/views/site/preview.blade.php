@@ -400,8 +400,6 @@
                 left: 387px;
             }
 
-                       
-
             .fifth-section .mockup-wrapper .logo-wrapper-3 {
                 right: 258px;
             }
@@ -437,7 +435,7 @@
             }
 
             .first-section .mockup-wrapper .logo-wrapper-4 .logo-mockup {
-                width: 90px;                       
+                width: 90px;
 
                 height: 75px;
             }
@@ -485,7 +483,7 @@
             }
 
             .fifth-section .mockup-wrapper .logo-wrapper-3 {
-                right: 162px;                       
+                right: 162px;
 
             }
 
@@ -659,7 +657,7 @@
             }
 
             .first-section .mockup-wrapper .logo-wrapper-4 .logo-mockup {
-                width: 55px;                         
+                width: 55px;
 
                 height: 45px;
             }
@@ -695,7 +693,7 @@
             }
 
             .third-section .mockup-wrapper .logo-wrapper {
-                left: 160px;                         
+                left: 160px;
 
             }
 
@@ -737,7 +735,7 @@
             .fifth-section .mockup-wrapper .logo-wrapper-1 {
                 left: 125px;
                 top: 65px;
-            }                      
+            }
 
 
             .fifth-section .mockup-wrapper .logo-wrapper-2 {

@@ -151,7 +151,7 @@
                         <input type="text" id="industry1" class="form-control" placeholder="Enter Your Industry"
                             value="{{ session('category_name') }}"   >
 
-                            
+
                         <input type="hidden" id="industryId1" name="category" value="{{ session('category') }}">
                     </div>
                     <div class="col-md-4">
@@ -183,38 +183,38 @@
                 $colors = ['#900C3F', '#36454F', '#343434', '#191970', '#581845'];
             @endphp
 
-            
+
 
 
             @foreach ($products as $index => $product)
-                
+
                 @php
                     $font = $fonts[$index % count($fonts)]; // Select font based on index
-                    
-                    
-                   
-                    
+
+
+
+
                     $fontSlug = $product->font->slug ?? null;
                     $font = $fontSlug ? pathinfo($fontSlug, PATHINFO_FILENAME) : '';
 
                    // echo   $font;
                     $color = $colors[$index % count($colors)];
                     $color=$product->color;
-                 
-                     $fontSize = (isset($product->logomaker_font_size) && strlen($product->logomaker_font_size) > 1) 
-                                    ? $product->logomaker_font_size 
+
+                     $fontSize = (isset($product->logomaker_font_size) && strlen($product->logomaker_font_size) > 1)
+                                    ? $product->logomaker_font_size
                                     : '38px';
 
-                                    
-          
-                    $fontSize = empty(session('company')) ? '18px' : $fontSize;
 
-                    
+
+                    $fontSize = empty(session('company')) ? '16px' : $fontSize;
+
+
 
                     $companyName = session('company');
                     $companyNameLength = strlen($companyName);
                     if ($companyNameLength > 10 && $companyNameLength <= 15) {
-                         
+
                         $fontSize = (int)str_replace('px', '', $fontSize) - 6 . 'px';
                     }else  if ($companyNameLength > 15 && $companyNameLength <= 20) {
                         $fontSize = (int)str_replace('px', '', $fontSize) - 12 . 'px';
@@ -225,18 +225,18 @@
                     }
 
 
-                
-                    $topPosition = (isset($product->logomaker_top) && strlen($product->logomaker_top) > 1) 
-                                    ? $product->logomaker_top 
-                                    : '170px';
-                    
-                    $leftPosition = (isset($product->logomaker_left) && strlen($product->logomaker_left) > 1) 
-                                    ? $product->logomaker_left 
-                                    : '-30px';
-                    
-                   
 
-                    
+                    $topPosition = (isset($product->logomaker_top) && strlen($product->logomaker_top) > 1)
+                                    ? $product->logomaker_top
+                                    : '170px';
+
+                    $leftPosition = (isset($product->logomaker_left) && strlen($product->logomaker_left) > 1)
+                                    ? $product->logomaker_left
+                                    : '-30px';
+
+
+
+
                     $logoPosition = $product->logo_position ?? ''; // Use null coalescing operator to handle unset cases
                     $logoPositionVertical='margin-top:10px';
                     if (isset($logoPosition) && strlen($logoPosition) > 0) {
@@ -247,12 +247,12 @@
                                      $adjustedLeftPositionValue = $leftPositionValue  - 80;
                                      $leftPosition = "{$adjustedLeftPositionValue}px";
                                  }else if($companyNameLength >= 6 && $companyNameLength<=11){
-                                    
+
                                     $leftPositionValue = (int) str_replace('px', '', $leftPosition);
                                      $adjustedLeftPositionValue = $leftPositionValue  - 20;
                                      $leftPosition = "{$adjustedLeftPositionValue}px";
-                                 
-                                }    
+
+                                }
                                // die($companyNameLength."DDDDDDDDDDD".session('company'));
                                 //$logoPosition="margin-left:0px";
                                 break;
@@ -271,10 +271,10 @@
                                      $leftPositionValue = (int) str_replace('px', '', $leftPosition);
                                      $adjustedLeftPositionValue = $leftPositionValue  + 60;
                                      $leftPosition = "{$adjustedLeftPositionValue}px";
-                                 
-                                }    
-                                 
-                                
+
+                                }
+
+
                                 break;
                             case 'top':
                                 // Do something for 'top'
@@ -289,37 +289,37 @@
                                 //echo "Unexpected logo position.";
                                 break;
                         }
-                    }  
-                    
+                    }
+
                 @endphp
 
                 <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
                     <div class="card-container">
-                    
-                    <!-- <img src="{{ route('image.show', $product->image) }}" 
-                        style="xwidth: 35% !important; {{ $logoPosition }}; position: absolute; {{ $logoPositionVertical }}; z-index: 10;" 
-                        class="img-fluid portfolio-image" 
+
+                    <!-- <img src="{{ route('image.show', $product->image) }}"
+                        style="xwidth: 35% !important; {{ $logoPosition }}; position: absolute; {{ $logoPositionVertical }}; z-index: 10;"
+                        class="img-fluid portfolio-image"
                         alt="{{ $product->name }}"> -->
 
-                        
+
                         <!-- <img src="{{ asset("category-image/$product->image") }}" style="xwidth: 35% !important; {{$logoPosition}}  ;position: absolute; {{$logoPositionVertical}};   z-index: 10;" class="img-fluid portfolio-image"
                             alt="{{ $product->name }}"> -->
 
-                            <!-- <img src="{{ asset("category-image/$product->image") }}" 
-    style="xwidth: 35% !important; {{$logoPosition}}  ;position: absolute; {{$logoPositionVertical}};   z-index: 10;" 
+                            <!-- <img src="{{ asset("category-image/$product->image") }}"
+    style="xwidth: 35% !important; {{$logoPosition}}  ;position: absolute; {{$logoPositionVertical}};   z-index: 10;"
     class="img-fluid portfolio-image"
     alt="{{ $product->name }}"
     oncontextmenu="return false;"> -->
- 
-                            <img src="{{ asset("category-image/$product->image") }}" 
-                            style="xwidth: 35% !important; {{$logoPosition}}; position: absolute; {{$logoPositionVertical}}; z-index: 10;" 
-                            class="img-fluid portfolio-image" 
-                            alt="{{ $product->name }}" 
-                            ondragstart="return false;" 
+
+                            <img src="{{ asset("category-image/$product->image") }}"
+                            style="xwidth: 35% !important; {{$logoPosition}}; position: absolute; {{$logoPositionVertical}}; z-index: 10;"
+                            class="img-fluid portfolio-image"
+                            alt="{{ $product->name }}"
+                            ondragstart="return false;"
                             oncontextmenu="return false;">
 
-                
-                           
+
+
 
 
                             <div class="text-placeholder"
