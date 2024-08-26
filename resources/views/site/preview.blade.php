@@ -400,9 +400,8 @@
                 left: 387px;
             }
 
-                       
+            .fifth-section .mockup-wrapper .logo-wrapper-3 {                        
 
-            .fifth-section .mockup-wrapper .logo-wrapper-3 {
                 right: 258px;
             }
 

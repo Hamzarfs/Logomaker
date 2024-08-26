@@ -350,10 +350,10 @@
                 @foreach ($categories as $category)
                     <div class="col-lg-4 col-md-6 mb-4">
                         <a href="{{ route('logos', $category->slug) }}" class="card-container-link">
-                            <div class="card-container">
+                            <div class="card-container2">
                                 <div class="card-inner">
                                     <div class="card-front">
-                                        <img src="{{ asset($category->image ?: "category-image/{$category->latest_product->image}") }}" class="img-fluid portfolio-image"
+                                        <img src="{{ asset($category->image ?: "category-image/{$category->latest_product->image}") }}" class="img-fluid"
                                             alt="{{ $category->name }}">
                                     </div>
                                     <div class="card-back">
@@ -691,7 +691,7 @@
                         <img src="{{ url('images/logo-category-Cleaning-logo.webp') }}" class="card-img-top"
                             alt="Cleanings Logos">
                         <div class="card-body">
-                            <p class="card-text">ClEANING LOGOS</p>
+                            <p class="card-text">CLEANING LOGOS</p>
                         </div>
                     </div>
                 </a>
