@@ -199,17 +199,19 @@
     </style>
 
     <div class="container mt-5">
-        <div class="row custom-logo-page-section">
+        <div class="row custom-logo-page-section mx-0">
             <div class="col-md-6 d-flex align-items-center">
                 <div class="custom-logo-page-content">
                     <h1 class="custom-logo-page-heading">Custom Logo Design Services for Your Business</h1>
                     <p>Let our logo designs turn your ideas into professional magic!</p>
-                    <a href="{{ url('/logo-maker') }}"><button class="custom-logo-page-button">Get Started</button></a>
+                    <div class="text-center">
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#contact-modal"><button class="custom-logo-page-button">Get Started</button></a>
+                    </div>
                 </div>
             </div>
             <div class="col-md-6 d-flex justify-content-center align-items-center">
                 <div class="custom-logo-page-form bg-white border p-3 rounded">
-                    <h3 class="custom-logo-page-form-heading">Free Consultation</h3>
+                    <h3 class="custom-logo-page-form-heading text-center">Free Consultation</h3>
                     <form id="custom-form" method="POST" action="{{ route('customLogoSubmit') }}">
                         @csrf
                         <div class="form-group mb-2">
@@ -491,7 +493,6 @@
             </div>
         </div>
 
-
         <section class="premium-logos-section">
             <div class="container">
                 <div class="row">
@@ -521,16 +522,34 @@
 
     <div class="banner-section" style="background-color: #f2f6fe; padding-bottom: 100px;">
         <div class="container portfolio-section">
-            <h2 class="portfolio-heading">We Have Logos For Everyone</h2>
+            <h2 class="portfolio-heading">Hire Logo Designer for Custom Logo Design</h2>
             <p class="main-description-online">
-                Explore our logo builder’s vast template collection, from medical
-                to fashion, sports to food. RFS Logo Design helps you find the perfect
-                logo to match your business identity and branding needs.
+                Are you looking for a professional logo that truly represents your company? Hire an expert logo designer for
+                custom logo design at RFS Logo Design tailored to your business. Stand out with a unique and memorable
+                identity that leaves a lasting impression.
             </p>
 
 
             <div class="row">
                 @foreach ($categories as $category)
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <a href="javascript:void(0)" class="card-container-link" style="cursor: default">
+                            <div class="card-container2">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="{{ asset($category->image ?: "category-image/{$category->latest_product->image}") }}"
+                                            class="img-fluid" alt="{{ $category->name }}">
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="category-name">{{ $category->name }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                @endforeach
+                {{-- @foreach ($categories as $category)
                     @if ($category->products->isNotEmpty())
                         @php
                             $product = $category->products->first(); // Get the first product
@@ -557,7 +576,7 @@
 
                         </div>
                     @endif
-                @endforeach
+                @endforeach --}}
             </div>
 
 
@@ -582,7 +601,6 @@
             <h2 class="studioTitle">Uncover Versatile Logo Designs With Our Powerful Design Engine!</h2>
         </div>
     </div>
-
 
     <div class="container py-5 text-center custom-logo-process">
         <h2>Simple and Fast Customizable Logo Design Process</h2>
@@ -628,11 +646,9 @@
                 same expert design style without the hefty price tag, thanks to our global team of
                 skilled logo designers.
             </p>
-            <a href="#" class="custom-button-online">Get Started</a>
+            <a href="#" class="custom-button-online" data-bs-toggle="modal" data-bs-target="#contact-modal">Get Started</a>
         </div>
     </div>
-
-
 
     <section class="container py-5">
         <div class="text-center mb-4">
@@ -660,9 +676,6 @@
             </div>
         </div>
     </section>
-
-
-
 
     <!-- ------------------Start FAQs --------------- -->
     <div class="container faq-section">
@@ -794,13 +807,50 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
 
+    {{-- Contact us Modal --}}
+    <div class="modal fade" id="contact-modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title text-center">Contact Form</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="{{ route('contactUs') }}" method="post">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="name" class="form-label"><b>Name</b></label>
+                            <input type="text" class="form-control" name="name" id="name"
+                                placeholder="John Doe">
+                        </div>
 
+                        <div class="mb-3">
+                            <label for="email" class="form-label"><b>Email address</b></label>
+                            <input type="email" class="form-control" name="email" id="email"
+                                placeholder="name@example.com">
+                        </div>
 
+                        <div class="mb-3">
+                            <label for="phone" class="form-label"><b>Phone number</b></label>
+                            <input type="tel" class="form-control" name="phone" id="phone"
+                                placeholder="123456789">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="comment" class="form-label"><b>Comment</b></label>
+                            <textarea name="comment" id="comment" rows="5" class="form-control" placeholder="Comments"></textarea>
+                        </div>
+
+                        <div class="text-center d-grid">
+                            <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -821,7 +871,11 @@
                 swal.fire({
                     icon: 'success',
                     title: 'Success',
-                    text: 'Contact us form submitted successfully!'
+                    text: 'Custom logo form submitted successfully!',
+                    timer: 1500,
+                    timerProgressBar: true
+                }).then(() => {
+                    location.assign("{{ url('thanks') }}")
                 })
             @else
                 swal.fire({

@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Mail\ContactUs;
 use App\Mail\CustomLogo;
 use App\Models\Category;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
@@ -29,7 +30,7 @@ class GeneralController extends \App\Http\Controllers\Controller
 
     public function stationeryDesigning()
     {
-        return redirect()->to('printing');
+        return view('site/stationery-designing');
     }
 
     public function howItWorks()
@@ -110,30 +111,36 @@ class GeneralController extends \App\Http\Controllers\Controller
     }
     public function customlogo()
     {
+        // $categories = Category::where('is_top', 1)
+        // ->with(['products' => function ($query) {
+        //     $query->limit(1000); // Ensure to fetch only one product per category
+        // }])
+        // ->orderBy('id', 'DESC')
+        // ->get();
         $categories = Category::where('is_top', 1)
-        ->with(['products' => function ($query) {
-            $query->limit(1000); // Ensure to fetch only one product per category
-        }])
-        ->orderBy('id', 'DESC')
-        ->get();
+            ->where(function (Builder $query) {
+                $query->where('image', '<>', '')
+                    ->orWhereHas('products');
+            })
+            ->orderBy('id', 'DESC')
+            ->get()
+            ->map(fn(Category $category) => $category->image ? $category : $category->append('latest_product'));
         return view('site/custom-logo', compact('categories'));
-
-
     }
     public function printing()
     {
-    return view('site/printing');
+        return view('site/printing');
     }
     public function contactUsSubmit(Request $request)
     {
         $data = $request->all();
-        $users = User::role('admin')->get();
+        $users = User::role('admin')->pluck('email');
+        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com'];
         try {
-            foreach ($users as $user) {
-                Mail::to($user->email)->send(new ContactUs($data));
-            }
+            Mail::to($users)->send(new ContactUs($data));
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
+            Log::error($th->getTraceAsString());
             return back()->with([
                 'success' => false,
                 'message' => $th->getMessage()
@@ -147,13 +154,13 @@ class GeneralController extends \App\Http\Controllers\Controller
     public function customLogoSubmit(Request $request)
     {
         $data = $request->all();
-        $users = User::role('admin')->get();
+        $users = User::role('admin')->pluck('email');
+        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com'];
         try {
-            foreach ($users as $user) {
-                Mail::to($user->email)->send(new CustomLogo($data));
-            }
+            Mail::to($users)->send(new CustomLogo($data));
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
+            Log::error($th->getTraceAsString());
             return back()->with([
                 'success' => false,
                 'message' => $th->getMessage()
@@ -164,8 +171,8 @@ class GeneralController extends \App\Http\Controllers\Controller
         ]);
     }
     // general pages
-
-    function siteMap() {
+    function siteMap()
+    {
         $categories = Category::where('is_top', true)->get();
         return view('site.site-map', compact('categories'));
     }

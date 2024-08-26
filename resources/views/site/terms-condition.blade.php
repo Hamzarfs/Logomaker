@@ -48,7 +48,7 @@
 
         <div class="mb-5 refund-procedure">
             <h2>Refund Procedure</h2>
-            <p>Our refund policy is applicable under specific conditions:</p>
+            {{-- <p>Our refund policy is applicable under specific conditions:</p>
             <ul>
                 <li>Opting for an all-inclusive plan</li>
                 <li>Acceptance of the main design idea</li>
@@ -61,7 +61,7 @@
                 <li>Requesting a complete redesign</li>
                 <li>Exceeding the “refund request” timeframe</li>
                 <li>Changes in the company’s name or operations</li>
-            </ul>
+            </ul> --}}
             <p>Refunds are granted for the specific service, not the entire bundle. No return request is accepted after final files are sent. Free items are exempt from returns and revisions. No refund for websites or logos after 30 days. Non-refundable services include social media, SEO, domain registration, and web hosting. No returns once the client accepts the website design. RFS Logo Design may refuse any project or terminate the agreement, retaining exclusive rights to the designs after a refund. The designs legally belong to the company.</p>
         </div>
 

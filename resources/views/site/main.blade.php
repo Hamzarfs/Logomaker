@@ -50,7 +50,8 @@
 
         .homepage-category-list {
             text-align: center;
-            padding: 50px 0;
+            padding-top: 50px;
+            padding-bottom: 50px;
         }
 
         .category-buttons {
@@ -176,9 +177,9 @@
 
         .logotype-card img {
             /* padding: 20px;
-            border-radius: 15px 15px 0 0;
-            width: 160px;
-            align-self: center; */
+                    border-radius: 15px 15px 0 0;
+                    width: 160px;
+                    align-self: center; */
 
             height: 120px;
             width: auto;
@@ -236,7 +237,7 @@
                         @csrf
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" id="companyName11" name="company"
-                                placeholder="Enter your company name" aria-label="Enter your company name"  maxlength="30">
+                                placeholder="Enter your company name" aria-label="Enter your company name" maxlength="30">
                             <input type="hidden" name="flow" value="home">
                             <input type="submit" class="custom-button-banner" value="Get Started">
                         </div>
@@ -272,7 +273,9 @@
                     captures your brand's identity. Create a unique and professional logo with
                     minimal effort on your part and watch your idea come to life.
                 </p>
-                <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Explore Logo</button></a>
+                <div class="text-center">
+                    <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Explore Logo</button></a>
+                </div>
                 <img src="images/Logo Pics.png" class="image-online">
             </div>
             <div class="col-md-2 center-image-online">
@@ -286,7 +289,9 @@
                     colors, fonts, icons, and taglines to fit your brand’s vibe. Our user-friendly
                     tools make it a breeze for anyone to design a standout, professional logo!
                 </p>
-                <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Try Design Studio</button></a>
+                <div class="text-center">
+                    <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Try Design Studio</button></a>
+                </div>
             </div>
             <div class="container my-5">
                 <div class="row">
@@ -298,7 +303,9 @@
                             media or print, ensure your logo shines consistently across your website,
                             social media, business cards, and brochures!
                         </p>
-                        <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Get Started</button></a>
+                        <div class="text-center">
+                            <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Get Started</button></a>
+                        </div>
                     </div>
                     <div class="col-md-2"></div>
                     <div class="col-md-5">
@@ -318,14 +325,14 @@
 
     <!-- <------------------Make A logo------------------>
     <!--
-        <section class="heroSection1">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 mb-4">
-                            <h1 class="heroTitle1">Ready To Turn Your Vision <br>Into A Logo Masterpiece?</h1>
-                        </div>
-                    </div>
-                </section> -->
+                <section class="heroSection1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 mb-4">
+                                    <h1 class="heroTitle1">Ready To Turn Your Vision <br>Into A Logo Masterpiece?</h1>
+                                </div>
+                            </div>
+                        </section> -->
 
     <!-- <------------------End Make A logo---------------->
 
@@ -353,8 +360,8 @@
                             <div class="card-container2">
                                 <div class="card-inner">
                                     <div class="card-front">
-                                        <img src="{{ asset($category->image ?: "category-image/{$category->latest_product->image}") }}" class="img-fluid"
-                                            alt="{{ $category->name }}">
+                                        <img src="{{ asset($category->image ?: "category-image/{$category->latest_product->image}") }}"
+                                            class="img-fluid" alt="{{ $category->name }}">
                                     </div>
                                     <div class="card-back">
                                         <div class="category-name">{{ $category->name }}</div>
@@ -512,8 +519,10 @@
             <div class="row">
                 <!-- First Column -->
                 <div class="col-md-4 image-column mb-3 mb-md-0">
-                    <img src="images/Imagebox1_bird.png" alt="Logo type">
-                    <h2>Logo type</h2>
+                    <div class="text-center">
+                        <img src="images/Imagebox1_bird.png" alt="Logo type">
+                        <h2>Logo type</h2>
+                    </div>
                     <p style="text-align: justify;">Logos come in various types, each serving different purposes: emblem
                         logos combine text and symbols within a badge-like shape; wordmark logos
                         focus on stylized text; lettermark logos use initials or abbreviations; abstract logos represent
@@ -523,8 +532,10 @@
                 </div>
                 <!-- Second Column -->
                 <div class="col-md-4 image-column mb-3 mb-md-0">
-                    <img src="images/Imagebox2_color.png" alt="Logo colors">
-                    <h2>Logo colors</h2>
+                    <div class="text-center">
+                        <img src="images/Imagebox2_color.png" alt="Logo colors">
+                        <h2>Logo colors</h2>
+                    </div>
                     <p style="text-align: justify;">
                         Colors are key to your brand’s identity, each evoking distinct
                         emotions. Red bursts with energy and passion, while blue signals
@@ -534,9 +545,11 @@
                     <!-- <a href="#" style= "color:#646bd9;">Connect with an expert</a> -->
                 </div>
                 <!-- Third Column -->
-                <div class="col-md-4 image-column">
-                    <img src="images/Imagebox3_font.png" alt="Logo fonts">
-                    <h2>Logo fonts</h2>
+                <div class="col-md-4 image-column mb-3 mb-md-0">
+                    <div class="text-center">
+                        <img src="images/Imagebox3_font.png" alt="Logo fonts">
+                        <h2>Logo fonts</h2>
+                    </div>
                     <p style="text-align: justify;">Choosing the right font is crucial for your brand logo, as it reflects
                         your brand’s personality and message. Here are some ideas for you.<br>
                         <b>Serif Fonts:</b> Exude tradition and reliability.<br>
@@ -564,7 +577,7 @@
                 </div>
             </div>
             <!-- Card Slider -->
-            <div class="row card-price-container flex-column flex-md-row">
+            <div class="card-price-container flex-column flex-md-row">
                 <div class="card" onclick="expandCard(this)">
                     <h3 class="bold-heading">Logo Maker for Startups</h3>
                     <p>Create eye-catching designs for social media, banners, promotional materials, logos, and beyond - all
@@ -589,7 +602,8 @@
                         <li><i class="bi bi-check-circle"></i> Work directly with skilled designers</li>
                         <li><i class="bi bi-check-circle"></i> Fully bespoke solution</li>
                         <li><i class="bi bi-check-circle"></i> high-res design files</li>
-                        <li style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>(Ai, PSD, EPS, PNG, JPG, PDF, SVG, TIFF)</b></li>
+                        <li style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>(Ai, PSD, EPS, PNG, JPG,
+                                PDF, SVG, TIFF)</b></li>
                         <li><i class="bi bi-check-circle"></i> Premium graphic design work</li>
                         <li><i class="bi bi-check-circle"></i> Dedicated account manager</li>
                         <li><i class="bi bi-check-circle"></i> As low as $199</li>
@@ -639,7 +653,7 @@
 
     <section id="testimonial-section" class="pt-5 pb-5">
         <div class="container">
-            <h2 class="text-center mb-5">1M+ Happy Customers and Counting</h2>
+            <h2 class="text-center mb-5">Happy Customers and Counting</h2>
             <div class="owl-carousel owl-theme">
                 <!-- Reviews will be inserted here dynamically -->
             </div>

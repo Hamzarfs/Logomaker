@@ -8,15 +8,15 @@
                 <a href="{{ url('/') }}">
                     <img src="{{ asset('images/Footer logo.png') }}" alt="Logo" class="footer-logo mb-6"></a>
                     <p class="footer-description" style="text-align:justify; font-size: 12px;">
-                    At RFS Logo Design, we turn logo dreams into reality for clients worldwide. 
-                    With a knack for creating stunning, sophisticated logos at budget-friendly 
+                    At RFS Logo Design, we turn logo dreams into reality for clients worldwide.
+                    With a knack for creating stunning, sophisticated logos at budget-friendly
                     prices, we cater to every industry. Get in touch with us today!</p>
                 <div class="social-icons">
-                    <a href="#"><i class="bi bi-whatsapp"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-twitter"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    {{-- <a href="#"><i class="bi bi-whatsapp"></i></a> --}}
+                    <a href="https://www.instagram.com/rfs_logodesign/" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.facebook.com/rfslogodesign/" target="_blank"><i class="bi bi-facebook"></i></a>
+                    {{-- <a href="#"><i class="bi bi-twitter"></i></a> --}}
+                    {{-- <a href="#"><i class="bi bi-linkedin"></i></a> --}}
                 </div>
             </div>
             <div class="col-md-2">
@@ -30,7 +30,7 @@
                 </ul>
             </div>
 
-           
+
             <div class="col-md-2">
                 <h5>Top Locations</h5>
                 <ul class="list-unstyled">
@@ -57,7 +57,7 @@
                 </ul>
             </div>
 
-      
+
 
 
 
@@ -75,8 +75,8 @@
     </ul>
 </div>
 
-            
-        
+
+
           </div>
 
         <!-- Second Row -->
