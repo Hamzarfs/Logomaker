@@ -52,6 +52,7 @@
                 <h5>Other Services</h5>
                 <ul class="list-unstyled">
                     <li><a href="{{ url('printing') }}">Printing</a></li>
+                    <li><a href="{{ url('stationery-designing') }}">Stationery Design</a></li>
 
                 </ul>
             </div>
