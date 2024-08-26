@@ -207,7 +207,7 @@
 
                                     
           
-                    $fontSize = empty(session('company')) ? '18px' : $fontSize;
+                    $fontSize = empty(session('company')) ? '16px' : $fontSize;
 
                     
 
