@@ -108,6 +108,8 @@ Route::post('contact-us', [GeneralController::class, 'contactUsSubmit'])->name('
 Route::post('custom-logo', [GeneralController::class, 'customLogoSubmit'])->name('customLogoSubmit');
 Route::get('/site-map', [GeneralController::class, 'siteMap']);
 Route::get('/printing', [GeneralController::class, 'printing']);
+Route::get('/thanks', [GeneralController::class, 'thanks']);
+
 
 
 //  End general pages

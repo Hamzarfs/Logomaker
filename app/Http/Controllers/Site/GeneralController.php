@@ -104,6 +104,10 @@ class GeneralController extends \App\Http\Controllers\Controller
     {
         return view('site/privacy-policy');
     }
+    public function thanks()
+    {
+        return view('site/thanks');
+    }
     public function customlogo()
     {
         $categories = Category::where('is_top', 1)

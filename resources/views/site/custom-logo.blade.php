@@ -626,7 +626,8 @@
                 same expert design style without the hefty price tag, thanks to our global team of 
                 skilled logo designers.
                 </p>
-                <a href="#" class="custom-button-online">Get Started</a>
+                <a href="{{ url('thanks') }}" class="custom-button-online">Get Started</a>
+
             </div>
         </div>
 

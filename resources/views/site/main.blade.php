@@ -454,7 +454,7 @@
                 <!-- Column 1 -->
                 <div class="col-md-4">
                     <div class="icon-box dedicated-support">
-                        <img src="{{ url('images/support.gif') }}" alt="Dedicated Support Icon" class="icon-box-image">
+                        <img src="{{ url('images/digital-art.gif') }}" alt="Dedicated Support Icon" class="icon-box-image">
                         <h3 class="icon-box-heading">Unique Design Solutions</h3>
                         <p class="icon-box-description">Explore our diverse graphic design solutions! Our portfolio
                             showcases top-tier work across various industries, from eye-catching logos to complete branding
@@ -466,7 +466,7 @@
                 <!-- Column 2 -->
                 <div class="col-md-4">
                     <div class="icon-box digital-media-design">
-                        <img src="{{ url('images/digital-art.gif') }}" alt="Digital Media Design Icon"
+                        <img src="{{ url('images/support.gif') }}" alt="Digital Media Design Icon"
                             class="icon-box-image">
                         <h3 class="icon-box-heading">At Your Service 24/7</h3>
                         <p class="icon-box-description">Get the support you deserve with our dedicated, 24/7 expert team.
