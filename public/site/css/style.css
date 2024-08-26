@@ -295,7 +295,7 @@ p,
 }
 
 .form-control {
-    height: 50px !important;
+    /* height: 50px !important; */
     /* Adjust input height */
     margin-right: 10px;
     font-size: 13px;

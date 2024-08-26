@@ -13,7 +13,8 @@
         }
 
         .contact-section {
-            padding: 60px 0;
+            padding-top: 60px;
+            padding-bottom: 60px;
         }
 
         .contact-section h2 {
@@ -95,7 +96,7 @@
         .form-icon {
             position: absolute;
             left: 10px;
-            top: 70%;
+            top: 68%;
             transform: translateY(-50%);
             color: #aaa;
         }
@@ -313,7 +314,11 @@
                 swal.fire({
                     icon: 'success',
                     title: 'Success',
-                    text: 'Contact us form submitted successfully!'
+                    text: 'Contact us form submitted successfully!',
+                    timer: 1500,
+                    timerProgressBar: true
+                }).then(() => {
+                    location.assign("{{ url('thanks') }}")
                 })
             @else
                 swal.fire({

@@ -1,38 +1,31 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <style>
+    .topnavbar {
+        background-color: #f2f6fe;
+        padding: 5px 0;
+    }
 
+    .topnavbar .btn {
+        margin: 0 5px;
+        font-size: 14px;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
 
+    .topnavbar .phone-btn {
 
-.topnavbar {
-  background-color: #f2f6fe;
-  padding: 5px 0;
-}
+        color: #000;
+        text-decoration: none;
 
-.topnavbar .btn {
-  margin: 0 5px;
-  font-size: 14px;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
+    }
 
-.topnavbar .phone-btn {
+    .topnavbar .chat-btn {
+        color: #000;
+        border: none;
+        text-decoration: none;
 
-  color: #000;
-  text-decoration: none;
-
-}
-
-.topnavbar .chat-btn {
-  color: #000;
-  border: none;
-  text-decoration: none;
-
-}
-
-/* .topnavbar .chat-btn:hover {
-  background-color: #0056b3;
-} */
+    }
 
 
     .mega-menu {
@@ -126,7 +119,12 @@
     }
 
     .navbar-light .navbar-toggler-icon {
-        background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>")
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
+
+    }
+
+    .navbar-light .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, .5) !important;
     }
 
     .navbar .dropdown-menu {
@@ -145,20 +143,31 @@
         .dropdown-menu.dropdown-menu-right.show {
             left: 0px;
         }
+
+        .search-menu-item {
+            display: none;
+        }
+    }
+
+    /* For screen 480px to 575px */
+    @media (max-width: 575.98px) {
+        .topnavbar .header-links {
+            text-align: center !important;
+        }
     }
 </style>
 
-<div class="container-fluid topnavbar">
+<div class="topnavbar">
     <div class="container">
-    <div class="row">
-      <div class="col-md-6"></div>
-      <div class="col-md-6 text-right">
-        <a  href="tel:+15516665255" ; class="phone-btn">+1 (551) 666-5255  |</a>
-        <a href="tel:+15516665255" class="chat-btn">Live Chat with Expert</a>
-      </div>
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6 text-right header-links">
+                <a href="tel:+15516665255" class="phone-btn">+1 (551) 666-5255 |</a>
+                <a href="tel:+15516665255" class="chat-btn">Live Chat with Expert</a>
+            </div>
+        </div>
     </div>
 </div>
-  </div>
 
 
 <div class="container-fluid" style="background-color: #080A2D;">
@@ -167,10 +176,16 @@
             <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="{{ asset('images/Footer logo.png') }}" alt="Logo" class="logo">
             </a>
-            <button class="navbar-toggler w-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="d-flex align-items-center">
+                <a class="nav-link search-icon d-lg-none" href="javascript:void(0);" style="color:#fff;">
+                    <i class="fas fa-search" style="font-size: 20px;"></i>
+                </a>
+                <button class="navbar-toggler w-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -215,7 +230,7 @@
                         @endrole
                     @endguest
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item search-menu-item">
                         <a class="nav-link search-icon" href="javascript:void(0);" style="color:#fff;">
                             <i class="fas fa-search"></i>
                         </a>
