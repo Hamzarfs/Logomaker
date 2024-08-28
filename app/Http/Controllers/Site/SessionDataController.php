@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Site;
 
 use Illuminate\Http\Request;
@@ -9,26 +10,22 @@ class SessionDataController extends \App\Http\Controllers\Controller
 {
     public function storeSessionData(Request $request)
     {
-  
-          if ($request->has('company')) {
-        
+        if ($request->has('company')) {
             $company = $request->input('company');
             Session::put('company', $company);
 
-            if ($request->has('flow') && $request->input('flow')=="home") {
+            if ($request->has('flow') && $request->input('flow') == "home") {
                 return redirect()->route('select-color');
-            }else if ($request->has('flow') && $request->input('flow')=="category") {
+            } else if ($request->has('flow') && $request->input('flow') == "category") {
                 return redirect()->route('logo-maker');
             }
         }
-
 
         if ($request->has('colors')) {
             $colors = $request->input('colors');
             Session::put('colors', $colors);
             return redirect()->route('select-font');
         }
-    
 
         if ($request->has('font')) {
             $font = $request->input('font');
@@ -37,22 +34,16 @@ class SessionDataController extends \App\Http\Controllers\Controller
         }
 
         if ($request->has('category')) {
-            $font = $request->input('category');
-            Session::put('category', $font);
+            $category = $request->input('category');
+            Session::put('category', $category);
             return redirect()->route('logo-maker');
         }
 
-
-        
-        // Redirect to the 'select-color' route
-       
-        
-        //return response()->json(['success' => true]);
     }
 
     public function storeSessionDataLogo(Request $request)
     {
-        
+
         if ($request->has('company')) {
             $company = $request->input('company');
             Session::put('company', $company);
@@ -63,9 +54,8 @@ class SessionDataController extends \App\Http\Controllers\Controller
             Session::put('category', $font);
         }
 
-        
-        return redirect()->route('logo-maker');
 
+        return redirect()->route('logo-maker');
     }
 
 
@@ -77,9 +67,8 @@ class SessionDataController extends \App\Http\Controllers\Controller
         }
 
         if ($request->has('font')) {
-            $company = $request->input('font'); 
+            $company = $request->input('font');
             Session::put('font', $company);
-          
         }
 
         if ($request->has('image')) {
@@ -97,18 +86,17 @@ class SessionDataController extends \App\Http\Controllers\Controller
 
     public function storePrice(Request $request)
     {
-        
+
         if ($request->has('price')) {
             $price = $request->input('price');
             Session::put('price', $price);
-             
         }
-        
+
         if ($request->has('name')) {
             $name = $request->input('name');
             Session::put('package-name', $name);
         }
-       
+
 
         return redirect()->route('checkout');
     }

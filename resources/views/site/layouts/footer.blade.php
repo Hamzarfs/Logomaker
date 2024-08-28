@@ -13,8 +13,8 @@
                     prices, we cater to every industry. Get in touch with us today!</p>
                 <div class="social-icons">
                     {{-- <a href="#"><i class="bi bi-whatsapp"></i></a> --}}
-                    <a href="https://www.instagram.com/rfs_logodesign/" target="_blank"><i class="bi bi-instagram"></i></a>
                     <a href="https://www.facebook.com/rfslogodesign/" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/rfs_logodesign/" target="_blank"><i class="bi bi-instagram"></i></a>
                     {{-- <a href="#"><i class="bi bi-twitter"></i></a> --}}
                     {{-- <a href="#"><i class="bi bi-linkedin"></i></a> --}}
                 </div>
