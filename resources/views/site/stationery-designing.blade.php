@@ -185,7 +185,19 @@
  <!-- {{----------------- End Testiomonial Section --}} -->
 
 
+<!-------------------- Start Boxed Section ------------------>
+<section class="boxed-section">
+        <div class="container">
+        <h2 style= font-size:1.6em;>Get Your Custom Stationery Designs Today!</h2>
+            <p>Enhance your brand with our professional stationery design services. We are your one stop shop 
+            for quality stationery designs & branding materials. Contact us at 
+            <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a> or 
+                call us at <a href="tel:+15516665255">+1 (551) 666-5255</a>.</p>
+                <a href="{{ url('contact-us') }}" class="california-button-online">Get Started</a>
 
+        </div>
+    </section>
+    <!-------------------- End Boxed Section ------------------>
 
     <!---------------------Start Crafting----------------->
 <!-- 
