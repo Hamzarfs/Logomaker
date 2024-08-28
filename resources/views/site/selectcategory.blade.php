@@ -49,14 +49,25 @@
         }
     </style>
 
+    <!-- Include Select2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Include Select2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+
     <form id="categoryForm" method="POST" action="{{ url('/store-session-data') }}">
         @csrf
         <div class="container category-section">
-            <div class="row mb-3">
-                <label for="industry1" class="form-label">Select Your Industry</label>
-                <input type="text" id="industry1" class="form-control" placeholder="Enter Your Industry">
-                <input type="hidden" id="industryId1" name="category"> <!-- Hidden field to store selected category ID -->
-            </div>
+        <div class="row mb-3">
+    <label for="industry1" class="form-label">Select Your Industry</label>
+    <select id="industry1" class="form-control" name="category" >
+        <!-- Options will be dynamically added via JavaScript -->
+    </select>
+</div>
             <div class="row mb-3">
                 <label for="business" class="form-label">Tell us about your business to help us understand your branding
                     needs.</label>
@@ -79,25 +90,24 @@
 
     <script>
         $(document).ready(function() {
-            // Prepare an array of categories for the autocomplete widget
+                  
             var categories = @json($categories);
 
-            // Extract the category names and ids for the autocomplete
-            var availableTags = categories.map(function(category) {
-                return {
-                    label: category.name,
-                    value: category.id
-                };
+             
+            categories.forEach(function(category) {
+                $('#industry1').append(
+                    $('<option>', {
+                        value: category.id,
+                        text: category.name
+                    })
+                );
             });
 
-            // Initialize the autocomplete widget
-            $('#industry1').autocomplete({
-                source: availableTags,
-                select: function(event, ui) {
-                    $('#industry1').val(ui.item.label);
-                    $('#industryId1').val(ui.item.value); // Store the selected category ID
-                    return false;
-                }
+           
+            $('#industry1').select2({
+                placeholder: "Select Your Industry",
+                allowClear: true,
+                width: '100%' // Ensures the dropdown is responsive
             });
 
             // Handle Next button click

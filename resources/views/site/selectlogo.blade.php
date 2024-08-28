@@ -148,12 +148,11 @@
                             value="{{ session('company') }}" maxlength="30">
                     </div>
                     <div class="col-md-4">
-                        <input type="text" id="industry1" class="form-control" placeholder="Enter Your Industry"
-                            value="{{ session('category_name') }}">
-
-
+                        <input type="text" id="industry1" class="form-control" placeholder="Enter Your Industry" value="{{ session('category_name') }}">
                         <input type="hidden" id="industryId1" name="category" value="{{ session('category') }}">
                     </div>
+
+
                     <div class="col-md-4">
                         <button class="btn btn-primary w-100"
                             style = "background-color:#6c73db; border-color:#6c73db; "id="updateButton">Update</button>
@@ -207,11 +206,12 @@
 
                                     
           
-                    $fontSize = empty(session('company')) ? '16px' : $fontSize;
+                    
 
  
 
-                    $companyName = session('company');
+                    $companyName = session('company') ? session('company') : $product->category->name;
+
                     $companyNameLength = strlen($companyName);
                     if ($companyNameLength > 10 && $companyNameLength <= 15) {
 
@@ -358,25 +358,48 @@
     <script src="{{ asset('js/ajaxSetup.js') }}"></script>
     <script>
         $(document).ready(function() {
-            var categories = @json($categories); // Convert PHP categories array to JavaScript
+            // var categories = @json($categories); // Convert PHP categories array to JavaScript
 
-            // Extract the category names and ids for the autocomplete
-            var availableTags = categories.map(function(category) {
-                return {
-                    label: category.name,
-                    value: category.id
-                };
-            });
+            // // Extract the category names and ids for the autocomplete
+            // var availableTags = categories.map(function(category) {
+            //     return {
+            //         label: category.name,
+            //         value: category.id
+            //     };
+            // });
 
-            // Initialize the autocomplete widget
-            $('#industry1').autocomplete({
-                source: availableTags,
-                select: function(event, ui) {
-                    $('#industry1').val(ui.item.label);
-                    $('#industryId1').val(ui.item.value); // Store the selected category ID
-                    return false;
-                }
-            });
+            // // Initialize the autocomplete widget
+            // $('#industry1').autocomplete({
+            //     source: availableTags,
+            //     select: function(event, ui) {
+            //         $('#industry1').val(ui.item.label);
+            //         $('#industryId1').val(ui.item.value); // Store the selected category ID
+            //         return false;
+            //     }
+            // });
+
+
+             var categories = @json($categories); // Convert PHP categories array to JavaScript
+
+    // Prepare the data for the autocomplete widget
+    var availableTags = categories.map(function(category) {
+        return {
+            label: category.name, // The text displayed in the autocomplete suggestions
+            value: category.id   // The value to be stored when an option is selected
+        };
+    });
+
+    // Initialize the autocomplete widget
+    $('#industry1').autocomplete({
+        source: availableTags,
+        select: function(event, ui) {
+            $('#industry1').val(ui.item.label); // Set the input field to the selected item’s label
+            $('#industryId1').val(ui.item.value); // Store the selected category ID in the hidden input
+            return false; // Prevent the input field from being updated with the selected value
+        }
+    });
+                   
+            
 
             // Check if there's a session value for category and set the corresponding name
             var sessionCategoryId = $('#industryId1').val();

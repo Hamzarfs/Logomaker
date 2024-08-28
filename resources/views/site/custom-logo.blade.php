@@ -211,7 +211,7 @@
             </div>
             <div class="col-md-6 d-flex justify-content-center align-items-center">
                 <div class="custom-logo-page-form bg-white border p-3 rounded">
-                    <h3 class="custom-logo-page-form-heading text-center">Free Consultation</h3>
+                    <h3 class="custom-logo-page-form-heading text-center">Get a Free Quote</h3>
                     <form id="custom-form" method="POST" action="{{ route('customLogoSubmit') }}">
                         @csrf
                         <div class="form-group mb-2">

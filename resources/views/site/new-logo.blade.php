@@ -361,9 +361,10 @@
                      $fontSize = (isset($product->logomaker_font_size) && strlen($product->logomaker_font_size) > 1)
                                     ? $product->logomaker_font_size
                                     : '38px';
-                    {{ session('company') ? $fontSize : $fontSize='22px'; }}
+                   
 
-                    $companyName = session('company');
+                    $companyName = session('company') ? session('company') : $product->category->name;
+
                     $companyNameLength = strlen($companyName);
                     if ($companyNameLength > 10 && $companyNameLength <= 15) {
                         $fontSize = (int)str_replace('px', '', $fontSize) - 6 . 'px';
