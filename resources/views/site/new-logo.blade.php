@@ -265,7 +265,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h1 style="color:#fff; font-weight:700;">Free {{ $categoryObj['name'] ?? '' }} <span class="logo-design-color">Logo
+                    <h1 style="color:#fff; font-weight:700;  font-size:26px;">Free {{ $categoryObj['name'] ?? '' }} <span class="logo-design-color">Logo
                             Maker</span><br>Design
                         Your Logo in Minutes</h1>
                     <p style="color:#fff;">Utilize our advanced {{ $categoryObj['name'] ?? '' }} logo creator tool to design a professional logo for your

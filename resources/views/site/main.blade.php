@@ -586,7 +586,7 @@
                         <li><i class="bi bi-check-circle"></i> 10000+ logos to choose</li>
                         <li><i class="bi bi-check-circle"></i> Endless customization options</li>
                         <li><i class="bi bi-check-circle"></i> High-res design files</li>
-                        <li style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>(PDF, PNG, JPG)</b></li>
+                        <li style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small><b>(PDF, PNG, JPG)</b></small></li>
                         <li><i class="bi bi-check-circle"></i> Instant download</li>
                         <li><i class="bi bi-check-circle"></i> Ready brand identity designs</li>
                         <li><i class="bi bi-check-circle"></i> As low as $37</li>
@@ -602,8 +602,8 @@
                         <li><i class="bi bi-check-circle"></i> Work directly with skilled designers</li>
                         <li><i class="bi bi-check-circle"></i> Fully bespoke solution</li>
                         <li><i class="bi bi-check-circle"></i> high-res design files</li>
-                        <li style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>(Ai, PSD, EPS, PNG, JPG,
-                                PDF, SVG, TIFF)</b></li>
+                        <li style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small><b>(Ai, PSD, EPS, PNG, JPG,
+                                PDF, SVG, TIFF)</b></small></li>
                         <li><i class="bi bi-check-circle"></i> Premium graphic design work</li>
                         <li><i class="bi bi-check-circle"></i> Dedicated account manager</li>
                         <li><i class="bi bi-check-circle"></i> As low as $199</li>
@@ -613,7 +613,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- End Plan Section -->
 

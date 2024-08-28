@@ -1566,6 +1566,7 @@ h2 {
 
 .faq-section {
     padding: 30px;
+    margin-bottom: 20px;
 }
 
 .faq-section h2 {
@@ -1577,13 +1578,13 @@ h2 {
 
 .faq-question {
     cursor: pointer;
-    color: #646BD9;
+    color: #000000;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .faq-question:hover {
-    text-decoration: none;
+    text-decoration: none; 
 }
 
 .faq-icon {

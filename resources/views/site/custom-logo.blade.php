@@ -7,9 +7,218 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
     <style>
+         .custom-text-section-v3 h2 {
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #010935;
+        }
+        .custom-container-margin-v3 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+        .custom-text-section-v3 p {
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .custom-bold-text-v3 {
+            font-weight: bold;
+            font-size: 18px;
+            color: #512F90;
+            margin: 20px 0;
+        }
+
+        .custom-image-section-v3 {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Center the image vertically */
+        }
+
+        .custom-image-section-v3 img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+
+
+
+        .box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+}
+
+.box:hover .box-content {
+    background-color: rgb(81, 47, 144); /* Purple background on hover */
+}
+
+.box:hover .box-text {
+    display: block; /* Show text on hover */
+}
+
+.box-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.box-content {
+    position: absolute;
+    top: 0; /* Ensure it covers the top of the box */
+    left: 0;
+    width: 100%;
+    height: 100%; /* Cover the entire box */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, #512f90f6);
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    transition: background-color 1s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align text to the bottom */
+}
+
+.box-heading {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.box-text {
+    font-size: 16px;
+    margin-top: 10px;
+    display: none; /* Hide text initially */
+}
+
+.box-heading-number {
+    display: block; /* Make sure the number is on a new line */
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 58px; /* Adjust as needed */
+    font-weight: 900;
+}
+.custom-logo-process {
+    padding: 20px 0;
+    margin-bottom: -30px;
+    margin-top:50px;
+}
+
+.custom-logo-process h2 {
+    font-weight: 700;
+    color: #010935;
+    font-size:40px;
+}
+
+.custom-logo-process p {
+    font-size: 18px;
+    color: #000;
+}
+.custom-section-v3 {
+    margin: 50px 0;
+}
+
+.custom-image-v3 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.custom-content-v3 {
+    text-align: left;
+}
+
+.custom-content-v3 h2 {
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #010935;
+}
+
+.custom-content-v3 p {
+    font-size: 16px;
+    color: #333;
+}
+
+
+
+
+
+
+
+/* Unique class for contact section */
+.contact-section .icon-circle {
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6a70d6; /* Background color of the circle */
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+}
+.contact-section .icon-circle i {
+    color: #ffffff; /* White color for icons */
+}
+
+
+
+
+/* Make h2 bold */
+.contact-section h2.font-weight-bold {
+    font-weight: 700;
+}
+
+/* Style for links in the contact section */
+.contact-section .contact-option a {
+    color: #010935; /* Black color for text */
+    font-weight: bold; /* Bold text */
+    text-decoration: none; /* Remove underline */
+}
+
+.contact-section .contact-option a:hover {
+    color: #010935; /* Black color on hover */
+    text-decoration: none; /* Underline on hover (optional) */
+}
+
+
+
+
+@media (max-width: 1198px) and (min-width: 992px) {
+    .box-heading-number {
+        font-size: 34px; /* Adjusted size for screens in this range */
+    }
+
+    .box-heading {
+        font-size: 22px; /* Adjusted size for screens in this range */
+    }
+}
+
+
+
+
+
+
+
+
         .custom-logo-page-section {
             background-color: #6868d1;
             border-radius: 25px;
@@ -24,7 +233,7 @@
         }
 
         .custom-logo-page-heading {
-            font-weight: 800;
+            font-weight: 700;
             font-size: 34px;
         }
 
@@ -69,111 +278,6 @@
 
         .iti {
             width: 100%;
-        }
-
-        /* Ensures the phone input takes full width */
-
-
-        .premium-logos-section {
-            padding: 40px 0;
-            background-color: #f9f9f9;
-            margin-top: 20px;
-            border-radius: 20px;
-        }
-
-        .premium-logos-section {
-            padding: 40px 0;
-            background-color: #f9f9f9;
-            /* Optional: Background color for better contrast */
-        }
-
-        .premium-logos-heading,
-        .custom-logo-heading {
-            font-weight: 700;
-            font-size: 24px;
-            color: #512f90;
-            /* Use your preferred color */
-            margin-top: 30px;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        .premium-logos-description,
-        .custom-logo-description {
-            font-size: 16px;
-            color: #333;
-            /* Use your preferred text color */
-            text-align: center;
-        }
-
-        .custom-logo-process {
-            background-color: #f0f4f8;
-            border-radius: 10px;
-            box-shadow: #512f90;
-            padding: 40px 20px;
-            margin-top: 20px;
-            /* Added margin-top */
-        }
-
-        .custom-logo-process h2 {
-            color: #333;
-            font-weight: 800;
-            margin-bottom: 20px;
-        }
-
-        .custom-logo-process p {
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 16px;
-        }
-
-        .custom-card {
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .custom-card:hover {
-            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
-        }
-
-        .custom-card h3 {
-            font-size: 40px;
-            color: #512f90;
-            font-weight: 700;
-        }
-
-        .custom-card h4 {
-            color: #333;
-            font-weight: 700;
-            margin: 10px 0;
-        }
-
-        .custom-card p {
-            color: #555;
-        }
-
-        .custom-heading {
-            color: #333;
-            font-weight: 800;
-        }
-
-        .contact-option i {
-            color: #646bd9;
-        }
-
-        .contact-option p {
-            margin: 0;
-        }
-
-        .contact-option a {
-            color: #646bd9;
-            text-decoration: none;
-        }
-
-        .contact-option a:hover {
-            text-decoration: underline;
         }
 
         .btn-primary {
@@ -487,36 +591,30 @@
                                 placeholder="Your comments" required></textarea>
                         </div>
                         <form action="{{ url('/logo-maker') }}" method="POST">
-                            <button type="submit" class="btn btn-secondary custom-logo-page-submit">Submit</button>
+                        <button type="submit" class="btn btn-secondary custom-logo-page-submit align-left">Submit</button>
                         </form>
                 </div>
             </div>
         </div>
 
-        <section class="premium-logos-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2 class="premium-logos-heading">Same Premium Logos, Now Faster!</h2>
-                        <p class="premium-logos-description">
-                            We have delivered top-notch designs to thousands of clients.
-                            With our free logo services, get high-quality, customizable logos in minutes
-                            straight from our expert designers!
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3 class="custom-logo-heading">Let Us Create A Custom Logo With Ease!</h3>
-                        <p class="custom-logo-description">
-                            We know you are eager to launch your business, so our simple and speedy customizable
-                            logo design process is here to help. Below are a few simple steps we follow and
-                            produce a professional logo worthy of your brand in no time at all.
-                        </p>
-                    </div>
-                </div>
+
+    <div class="container custom-container-margin-v3">
+        <div class="row align-items-center">
+            <div class="col-lg-6 custom-text-section-v3">
+                <h2>Same Premium Logos, Now Faster!</h2>
+                <p>We have delivered top-notch designs to thousands of clients. With our free logo services, 
+                get high-quality, customizable logos in minutes straight from our expert designers!</p>
+                <p>We know you are eager to launch your business, so our simple and speedy customizable 
+                logo design process is here to help. Below are a few simple steps we follow and produce 
+                a professional logo worthy of your brand in no time at all.</p>
+                <div class="custom-bold-text-v3">Let Us Create A Custom Logo With Ease!</div>
             </div>
-        </section>
+            <div class="col-lg-6 custom-image-section-v3">
+                <img src="images/Mask group.png" alt="Descriptive Image Text">
+            </div>
+        </div>
+    </div>
+
 
     </div>
 
@@ -601,81 +699,116 @@
             <h2 class="studioTitle">Uncover Versatile Logo Designs With Our Powerful Design Engine!</h2>
         </div>
     </div>
+      
 
-    <div class="container py-5 text-center custom-logo-process">
-        <h2>Simple and Fast Customizable Logo Design Process</h2>
-        <p>We understand the rush to launch your business startup, and that’s why customizable logos make sense.
-            Getting a professional logo design from our advance studio isn’t hard, just follow these steps.</p>
-
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card p-4 h-100 custom-card">
-                    <h3>01</h3>
-                    <h4>Discovery and Research</h4>
-                    <p>First up, we dive into learning all about your brand, audience, and competitors.
-                        This helps us get a feel for what your logo should say and how it should stand out.
-                        We’ll brainstorm, survey, and check out what others in your space are doing.
-                    </p>
-                </div>
+       
+<!----------------------start simple and fast --------------------->
+<section class="custom-logo-process">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2>Simple and Fast<br>Customizable Logo<br>Design Process</h2>
             </div>
-            <div class="col-md-4">
-                <div class="card p-4 h-100 custom-card">
-                    <h3>02</h3>
-                    <h4>Concept Refinement</h4>
-                    <p>We begin by sketching ideas and exploring different styles through rough drafts and mood boards.
-                        Once the best concepts emerge, we refine them by finalizing colors, typography, and ensuring the
-                        logo works across all formats. Your feedback guides the final tweaks.</p>
-                </div>
+            <div class="col-md-6">
+                <p style="text-align: justify;">We understand the rush to launch your business startup, and that’s why customizable logos make sense. Getting a professional logo design from our advance studio isn’t hard, just follow these steps.</p>
             </div>
-            <div class="col-md-4">
-                <div class="card p-4 h-100 custom-card">
-                    <h3>03</h3>
-                    <h4>Finalization and Delivery</h4>
-                    <p>Finally, we prepare your logo for action. We create various formats for different uses and make sure
-                        they look great everywhere. Plus, we might put together a style guide to keep everything consistent.
-                    </p>
+        </div>
+    </div>
+</section>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="box">
+                <img src="images/Frame 20.png" class="box-image" alt="Image 1">
+                <div class="box-content">
+                    <span class="box-heading-number">01</span>
+                    <h3 class="box-heading">Discovery and Research</h3>
+                    <p class="box-text">First up, we dive into learning all about your brand, audience, and competitors. This helps us get 
+                        a feel for what your logo should say and how it should stand out. We’ll brainstorm, survey, and check out what others in your space are doing.</p>
                 </div>
             </div>
         </div>
-
-        <!-- New section added here -->
-        <div class="mt-5">
-            <h3 class="custom-heading">We Craft Affordable Logo Designs To Boost Creativity</h3>
-            <p>Allow us to create logo designs with top-notch quality! We offer
-                affordable, professional logos perfect for startups and small businesses. Get the
-                same expert design style without the hefty price tag, thanks to our global team of
-                skilled logo designers.
-            </p>
-            <a href="#" class="custom-button-online" data-bs-toggle="modal" data-bs-target="#contact-modal">Get Started</a>
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="box">
+                <img src="images/Frame 21.png" class="box-image" alt="Image 2">
+                <div class="box-content">
+                    <span class="box-heading-number">02</span>
+                    <h3 class="box-heading">Concept<br> Refinement</h3>
+                    <p class="box-text">We begin by sketching ideas and exploring different styles through rough drafts and mood boards. 
+                        Once the best concepts emerge, we refine them by finalizing colors, typography, and ensuring the logo works across all formats. Your feedback guides the final tweaks.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="box">
+                <img src="images/Frame 22.png" class="box-image" alt="Image 3">
+                <div class="box-content">
+                    <span class="box-heading-number">03</span>
+                    <h3 class="box-heading">Finalization and Delivery</h3>
+                    <p class="box-text">Finally, we prepare your logo for action. We create various formats for different uses and 
+                        make sure they look great everywhere. Plus, we might put together a style guide to keep everything consistent.</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <section class="container py-5">
-        <div class="text-center mb-4">
-            <h2>Need help choosing a professional logo design? Consult with our expert!</h2>
+<!----------------------end simple and fast --------------------->
+<div class="container custom-section-v3">
+    <div class="row align-items-center">
+        <div class="col-lg-6 custom-image-v3"style = padding-right:50px;>
+            <img src="images/Mask group (1).png" alt="Affordable Logo Design">
         </div>
-        <div class="row justify-content-center">
-            <div class="col-md-4 mb-3 text-center">
-                <div class="contact-option">
-                    <i class="fas fa-phone fa-2x mb-2"></i>
-                    <p>Phone number: <a href="tel:+15516665255"> +1(551)666-5255</a></p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-3 text-center">
-                <div class="contact-option">
-                    <i class="fas fa-envelope fa-2x mb-2"></i>
-                    <p>Email us: <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a></p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-3 text-center">
-                <div class="contact-option">
-                    <i class="fas fa-comment-dots fa-2x mb-2"></i>
-                    <p>Live Chat: <a href="{{ url('https://wa.me/+18482369397') }}">Live Chat</a></p>
+        <div class="col-lg-6 custom-content-v3">
+            <h2>We Craft Affordable Logo Designs To Boost Creativity</h2>
+            <p style="text-align: justify;">Allow us to create logo designs with top-notch quality! We offer affordable, professional logos perfect for startups and small businesses. Get the same expert design style without the hefty price tag, thanks to our global team of skilled logo designers.</p>
+        </div>
+    </div>
+</div>
 
+</div>
+
+
+    <!----------------------start need help--------------------->
+
+
+
+<section class="container py-5 contact-section">
+    <div class="text-center mb-4">
+        <h2 class="font-weight-bold">Need help choosing a professional logo design?<br> Consult with our expert!</h2>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-4 mb-3 text-center">
+            <div class="contact-option">
+                <div class="icon-circle">
+                    <i class="fas fa-phone fa-2x"></i>
                 </div>
+                <a href="tel:+15516665255"> +1(551)666-5255</a>
             </div>
         </div>
-    </section>
+        <div class="col-md-4 mb-3 text-center">
+            <div class="contact-option">
+                <div class="icon-circle">
+                    <i class="fas fa-envelope fa-2x"></i>
+                </div>
+                <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3 text-center">
+            <div class="contact-option">
+                <div class="icon-circle">
+                    <i class="fas fa-comment-dots fa-2x"></i>
+                </div>
+                <a href="{{ url('https://wa.me/+18482369397') }}">Live Chat</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!----------------------start need help--------------------->
+
+
+
+
 
     <!-- ------------------Start FAQs --------------- -->
     <div class="container faq-section">
