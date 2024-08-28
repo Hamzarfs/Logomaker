@@ -59,7 +59,7 @@ class MainController extends \App\Http\Controllers\Controller
 
     public function selectCategory()
     {
-        $categories = Category::orderBy('id', 'DESC')->get();
+        $categories = Category::orderBy('name', 'ASC')->get();
         return view('site/selectcategory', compact('categories'));
     }
 
@@ -79,7 +79,7 @@ class MainController extends \App\Http\Controllers\Controller
             // Handle the case where no category ID is available (optional)
             $products = Product::orderBy('id', 'DESC')->paginate(12);
         }
-        $categories = Category::orderBy('id', 'ASC')->get();
+        $categories = Category::orderBy('name', 'ASC')->get();
         $favourites = auth()->user()?->favourites->toArray();
         return view('site/selectlogo', compact('categories', 'products', 'favourites'));
     }
@@ -98,7 +98,7 @@ class MainController extends \App\Http\Controllers\Controller
             ->where('status', 'paid')
             ->exists();
         $selectedProduct = Product::find(Session::get('product-id'));
-        $fonts = Font::all(); 
+        $fonts = Font::all();
         return view('site/maker', compact('hasOrder', 'selectedProduct','fonts'));
     }
 
@@ -197,7 +197,7 @@ class MainController extends \App\Http\Controllers\Controller
 
         // Fetch the product from the database
         $selectedProduct = Product::find(Session::get('product-id'));
-       
+
         return view('site/preview', compact('hasOrder', 'product', 'selectedProduct'));
     }
 
