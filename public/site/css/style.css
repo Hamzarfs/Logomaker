@@ -1241,7 +1241,8 @@ margin-bottom: 50px;
     transition: background-color 0.1s ease; /* Smooth background color transition */
 }
 .slider-button:hover {
-    background-color: #003d80; /* Darker background on hover */
+     color: #fff; /* Darker background on hover */
+     text-decoration: none;
 }
 
 

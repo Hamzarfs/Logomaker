@@ -160,7 +160,7 @@
             <div class="slide">Unique illustrations</div>
         </div>
         
-        <button class="slider-button">Learn More</button>
+        <a href="{{ url('/logo-maker') }}" class="slider-button" >Learn More</a>
 
 
 
