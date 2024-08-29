@@ -170,11 +170,11 @@
 </div>
 
 
-<div class="container-fluid" style="background-color: #080A2D;">
+<div class="container-fluid" style="background-color: #6e71d2;">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ asset('images/Footer logo.png') }}" alt="Logo" class="logo">
+                <img src="{{ asset('images/RFS.svg') }}" alt="Logo" class="logo">
             </a>
             <div class="d-flex align-items-center">
                 <a class="nav-link search-icon d-lg-none" href="javascript:void(0);" style="color:#fff;">
