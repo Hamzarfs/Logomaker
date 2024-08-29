@@ -6,6 +6,8 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 use App\Models\Category;
 use App\Models\Font;
+use Illuminate\Support\Facades\Log;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -26,14 +28,14 @@ class AppServiceProvider extends ServiceProvider
         view()->composer(['site.layouts.header', 'site.layouts.footer'], function ($view) {
             $categories = Category::where('is_top', true)->get();
             $logoFonts = Font::all();
-    
+
             // Correctly pass the data to the view
             $view->with([
                 'categories' => $categories,
                 'logoFonts' => $logoFonts
             ]);
         });
-    
+
         Paginator::useBootstrapFive();
     }
 
@@ -44,7 +46,7 @@ class AppServiceProvider extends ServiceProvider
         $logoFonts = Font::all();
 
         // Log the data to confirm
-        \Log::info('Logo Fonts:', $logoFonts->toArray());
+        Log::info('Logo Fonts:', $logoFonts->toArray());
 
         $view->with([
             'categories' => $categories,
@@ -55,5 +57,5 @@ class AppServiceProvider extends ServiceProvider
     Paginator::useBootstrapFive();
 }
 
-    
+
 }

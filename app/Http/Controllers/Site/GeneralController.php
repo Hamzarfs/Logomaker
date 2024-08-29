@@ -17,16 +17,13 @@ class GeneralController extends \App\Http\Controllers\Controller
 
     public function aboutUs()
     {
-
         return view('site/aboutus');
     }
-
 
     public function graphicDesigning()
     {
         return view('site/graphic-designing');
     }
-
 
     public function stationeryDesigning()
     {
@@ -37,8 +34,6 @@ class GeneralController extends \App\Http\Controllers\Controller
     {
         return view('site/how-it-works');
     }
-
-
 
     // -------------- General Pages //
     public function logodesigncalifornia()
@@ -111,12 +106,6 @@ class GeneralController extends \App\Http\Controllers\Controller
     }
     public function customlogo()
     {
-        // $categories = Category::where('is_top', 1)
-        // ->with(['products' => function ($query) {
-        //     $query->limit(1000); // Ensure to fetch only one product per category
-        // }])
-        // ->orderBy('id', 'DESC')
-        // ->get();
         $categories = Category::where('is_top', 1)
             ->where(function (Builder $query) {
                 $query->where('image', '<>', '')
@@ -127,10 +116,12 @@ class GeneralController extends \App\Http\Controllers\Controller
             ->map(fn(Category $category) => $category->image ? $category : $category->append('latest_product'));
         return view('site/custom-logo', compact('categories'));
     }
+
     public function printing()
     {
         return view('site/printing');
     }
+
     public function contactUsSubmit(Request $request)
     {
         $data = $request->all();
@@ -170,10 +161,31 @@ class GeneralController extends \App\Http\Controllers\Controller
             'success' => true,
         ]);
     }
+
     // general pages
     function siteMap()
     {
         $categories = Category::where('is_top', true)->get();
         return view('site.site-map', compact('categories'));
+    }
+
+    public function websiteDesignDevelopment() {
+        return view('site.website-design-development');
+    }
+
+    public function customWebsiteDesignDevelopment() {
+        return view('site.custom-website-design-development');
+    }
+
+    public function wordpressWebsiteDevelopment() {
+        return view('site.wordpress-website-development');
+    }
+
+    public function shopifyWebsiteDevelopment() {
+        return view('site.shopify-website-development');
+    }
+
+    public function eCommerceWebsiteDevelopment() {
+        return view('site.e-commerce-website-development');
     }
 }

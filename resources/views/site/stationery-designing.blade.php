@@ -1,7 +1,6 @@
-<!-- resources/views/site/main.blade.php -->
 @extends('site.common')
 
-@section('title', 'Welcome')
+@section('title', 'Stationery Designing')
 
 @section('content')
 
@@ -154,8 +153,8 @@
             <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
                 <img src="{{ url('images/Letterhead Design02.webp') }}" alt="Illustrative Logo 1">
             </div>
-           
-           
+
+
 
             <!-- Animated Logos -->
             <div class="col-lg-4 col-md-6 mb-4 filter all animated">
@@ -165,7 +164,7 @@
                 <img src="images/logo-design-animation.gif" alt="Animated Logo 2">
             </div>
         </div>
-    </div>   
+    </div>
    </div>
 <!---------------------- End Portfolio -------------------------->
 
@@ -189,9 +188,9 @@
 <section class="boxed-section">
         <div class="container">
         <h2 style= font-size:1.6em;>Get Your Custom Stationery Designs Today!</h2>
-            <p>Enhance your brand with our professional stationery design services. We are your one stop shop 
-            for quality stationery designs & branding materials. Contact us at 
-            <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a> or 
+            <p>Enhance your brand with our professional stationery design services. We are your one stop shop
+            for quality stationery designs & branding materials. Contact us at
+            <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a> or
                 call us at <a href="tel:+15516665255">+1 (551) 666-5255</a>.</p>
                 <a href="{{ url('contact-us') }}" class="california-button-online">Get Started</a>
 
@@ -200,7 +199,7 @@
     <!-------------------- End Boxed Section ------------------>
 
     <!---------------------Start Crafting----------------->
-<!-- 
+<!--
     <section class="crafting-logos">
         <div class="container">
             <div class="row content">
@@ -209,11 +208,11 @@
                 </div>
                 <div class="col-md-6 text">
                     <h2 style="font-weight: 800;">TAILORED LOGO SOLUTIONS FOR ARIZONA INDUSTRIES</h2>
-                    <p style="text-align: justify;">At RFS Logo Design, we offer tailored logo solutions for a wide range of industries in Arizona. 
-                        Our team of skilled designers collaborates closely with clients to understand their unique requirements and preferences, 
-                        ensuring that every design reflects the brand's identity and values. Whether you're in healthcare, technology, or retail, 
-                        we have the expertise to create logos that stand out in the market and resonate with your target audience. With our custom 
-                        logo design services, we help businesses across industries elevate their brand image and make a lasting impact in the Arizona 
+                    <p style="text-align: justify;">At RFS Logo Design, we offer tailored logo solutions for a wide range of industries in Arizona.
+                        Our team of skilled designers collaborates closely with clients to understand their unique requirements and preferences,
+                        ensuring that every design reflects the brand's identity and values. Whether you're in healthcare, technology, or retail,
+                        we have the expertise to create logos that stand out in the market and resonate with your target audience. With our custom
+                        logo design services, we help businesses across industries elevate their brand image and make a lasting impact in the Arizona
                         business landscape. Contact us today to explore how RFS Logo Design can help your business thrive.</p>
                 </div>
             </div>

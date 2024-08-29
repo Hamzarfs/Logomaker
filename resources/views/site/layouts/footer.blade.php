@@ -54,9 +54,11 @@
                     <li><a href="{{ url('printing') }}">Printing</a></li>
                     <li><a href="{{ url('stationery-designing') }}">Stationery Designing</a></li>
                     <li><a href="{{ url('graphic-designing') }}">Graphic Designing</a></li>
-
-
-
+                    <li><a href="{{ url('website-design-development') }}">Website Design Development</a></li>
+                    <li><a href="{{ url('custom-website-design-development') }}">Custom Website Design Development</a></li>
+                    <li><a href="{{ url('wordpress-website-development') }}">Wordpress Website Development</a></li>
+                    <li><a href="{{ url('shopify-website-development') }}">Shopify Website Development</a></li>
+                    <li><a href="{{ url('e-commerce-website-development') }}">E-commerce Website Development</a></li>
                 </ul>
             </div>
 
