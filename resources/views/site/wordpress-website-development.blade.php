@@ -13,7 +13,7 @@
         }
 
         .gradient-heading {
-            background: linear-gradient(90deg, #501e9c 0%, #8169f1 40%, #a44cee 75%, #ff847f 100%);
+            background: linear-gradient(209deg, #501e9c 0%, #8169f1 40%, #a44cee 75%, #ff847f 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -54,6 +54,10 @@
 
         .wp-projects .swiper {
             height: 300px;
+        }
+
+        .logo-designs-portfolio h1 {
+            font-weight: 700;
         }
     </style>
 
@@ -187,56 +191,45 @@
 
     <div class="logo-designs-portfolio">
         <div class="container">
-            <div class="row filter-button-group">
-                <button class="btn filter-button active" data-filter="all">All</button>
-                <button class="btn filter-button" data-filter="iconic">Business Cards</button>
-                <button class="btn filter-button" data-filter="typography">Envelope Design</button>
-                <button class="btn filter-button" data-filter="illustrative">Letterhead Design</button>
-            </div>
-
             <div class="row gallery">
-                <!-- Iconic Logos -->
-                <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
-                    <img src="{{ url('images/Business Cards01.png') }}" alt="Iconic Logo 1">
+                <div class="col-12 text-center mb-4">
+                    <h1 class="gradient-heading">Our Award-Winning Company Website Portfolio</h1>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
-                    <img src="{{ url('images/Business Cards02.png') }}" alt="Iconic Logo 2">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/fundflow.webp') }}">
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
-                    <img src="{{ url('images/Business Cards03.png') }}" alt="Iconic Logo 3">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/global.webp') }}">
                 </div>
-
-                <!-- Typography Logos -->
-                <div class="col-lg-4 col-md-6 mb-4 filter all typography">
-                    <img src="{{ url('images/Envelope Design02.png') }}" alt="Typography Logo 1">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/noweco.webp') }}">
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all typography">
-                    <img src="{{ url('images/Envelope Design01.png') }}" alt="Typography Logo 2">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/navitas.webp') }}">
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all typography">
-                    <img src="{{ url('images/Envelope Design03.png') }}" alt="Typography Logo 2">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/home.webp') }}">
                 </div>
-
-
-                <!-- Illustrative Logos -->
-                <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
-                    <img src="{{ url('images/Letterhead Design.webp') }}" alt="Illustrative Logo 1">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/cleaning.webp') }}">
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
-                    <img src="{{ url('images/Letterhead Design01.webp') }}" alt="Illustrative Logo 1">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/building.webp') }}">
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
-                    <img src="{{ url('images/Letterhead Design02.webp') }}" alt="Illustrative Logo 1">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/maplin.webp') }}">
                 </div>
-
-
-
-                <!-- Animated Logos -->
-                <div class="col-lg-4 col-md-6 mb-4 filter all animated">
-                    <img src="images/logo-animation-example-conversable.gif" alt="Animated Logo 1">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/orbis.webp') }}">
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all animated">
-                    <img src="images/logo-design-animation.gif" alt="Animated Logo 2">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/paints1.webp') }}">
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/digilit.webp') }}">
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/vital.webp') }}">
                 </div>
             </div>
         </div>
@@ -385,30 +378,30 @@
             });
 
             // Show only the first 9 items on page load
-            $('.filter').hide();
-            $('.filter.all').slice(0, 9).show();
+            // $('.filter').hide();
+            // $('.filter.all').slice(0, 9).show();
 
-            $('.filter-button').click(function() {
-                var value = $(this).attr('data-filter');
-                $('.filter-button').removeClass('active');
-                $(this).addClass('active');
-                if (value == 'all') {
-                    $('.filter').hide();
-                    $('.filter.all').slice(0, 9).show();
-                    $('.load-more-button').show();
-                } else {
-                    $('.filter').hide();
-                    $('.filter.' + value).slice(0, 2).show();
-                    $('.load-more-button').hide();
-                }
-            });
+            // $('.filter-button').click(function() {
+            //     var value = $(this).attr('data-filter');
+            //     $('.filter-button').removeClass('active');
+            //     $(this).addClass('active');
+            //     if (value == 'all') {
+            //         $('.filter').hide();
+            //         $('.filter.all').slice(0, 9).show();
+            //         $('.load-more-button').show();
+            //     } else {
+            //         $('.filter').hide();
+            //         $('.filter.' + value).slice(0, 2).show();
+            //         $('.load-more-button').hide();
+            //     }
+            // });
 
-            $('.load-more-button').click(function() {
-                $('.filter.all:hidden').slice(0, 9).slideDown();
-                if ($('.filter.all:hidden').length == 0) {
-                    $(this).fadeOut('slow');
-                }
-            });
+            // $('.load-more-button').click(function() {
+            //     $('.filter.all:hidden').slice(0, 9).slideDown();
+            //     if ($('.filter.all:hidden').length == 0) {
+            //         $(this).fadeOut('slow');
+            //     }
+            // });
         })
     </script>
 

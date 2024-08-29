@@ -12,7 +12,7 @@
         }
 
         .gradient-heading {
-            background: linear-gradient(90deg, #501e9c 0%, #8169f1 40%, #a44cee 75%, #ff847f 100%);
+            background: linear-gradient(209deg, #501e9c 0%, #8169f1 40%, #a44cee 75%, #ff847f 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -53,6 +53,10 @@
 
         .wp-projects .swiper {
             height: 300px;
+        }
+
+        .logo-designs-portfolio h1 {
+            font-weight: 700;
         }
     </style>
 
@@ -117,78 +121,81 @@
                 <div class="col-lg-6">
                     <h1 class="mb-3">
                         Best <span class="gradient-heading">eCommerce Website</span> Development</h1>
-                        <p>
-                            E-commerce Store
-                            Best eCommerce Website Development
-                            Embark on an exhilarating retail adventure on our cutting-edge E-commerce platform. Immerse
-                            yourself in a vast array of products, all at your fingertips for unparalleled convenience.
-                            Indulge in an effortless browsing experience through our intuitive interface, tailored to your
-                            liking for a seamless online shopping experience.
-                        </p>
-                        <div id="accordion" class="mb-5">
-                            <!-- <-Question 1 -->
-                            <div class="card">
-                                <div class="card-header" id="headingOne">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                                            aria-expanded="true" aria-controls="collapseOne">
-                                            <span class="faq-question">Build Your Online Empire with Shopify</span>
-                                        </button>
-                                    </h5>
-                                </div>
-
-                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-                                    data-parent="#accordion">
-                                    <div class="card-body">
-                                        Shopify is a robust eCommerce platform that empowers businesses of all sizes. Create a stunning online store with ease, manage inventory effortlessly, and benefit from a range of powerful tools to boost sales.
-                                    </div>
-                                </div>
+                    <p>
+                        E-commerce Store
+                        Best eCommerce Website Development
+                        Embark on an exhilarating retail adventure on our cutting-edge E-commerce platform. Immerse
+                        yourself in a vast array of products, all at your fingertips for unparalleled convenience.
+                        Indulge in an effortless browsing experience through our intuitive interface, tailored to your
+                        liking for a seamless online shopping experience.
+                    </p>
+                    <div id="accordion" class="mb-5">
+                        <!-- <-Question 1 -->
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="faq-question">Build Your Online Empire with Shopify</span>
+                                    </button>
+                                </h5>
                             </div>
 
-                            <!-- Question 2 -->
-                            <div class="card">
-                                <div class="card-header" id="headingTwo">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            <span class="faq-question">Craft Your Perfect Online Store with WooCommerce</span>
-
-                                        </button>
-                                    </h5>
-                                </div>
-
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                    data-parent="#accordion">
-                                    <div class="card-body">
-                                        If you prefer the flexibility of WordPress, WooCommerce is the ideal solution. Seamlessly integrate eCommerce functionalities into your WordPress site, offering a customizable and scalable online store.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Question 3 -->
-                            <div class="card">
-                                <div class="card-header" id="headingThree">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                            data-target="#collapseThree" aria-expanded="false"
-                                            aria-controls="collapseThree">
-                                            <span class="faq-question">Unleash Your Business Potential with BigCommerce</span>
-                                        </button>
-                                    </h5>
-                                </div>
-
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                    data-parent="#accordion">
-                                    <div class="card-body">
-                                        BigCommerce is a feature-rich eCommerce platform designed to scale alongside your growing business. Enjoy a comprehensive suite of tools, responsive themes, and enterprise-level functionality.
-                                    </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    Shopify is a robust eCommerce platform that empowers businesses of all sizes. Create a
+                                    stunning online store with ease, manage inventory effortlessly, and benefit from a range
+                                    of powerful tools to boost sales.
                                 </div>
                             </div>
                         </div>
 
-                        <a class="btn btn-primary rounded-5" href="{{ url('contact-us') }}">
-                            Get Started
-                        </a>
+                        <!-- Question 2 -->
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                        aria-expanded="false" aria-controls="collapseTwo">
+                                        <span class="faq-question">Craft Your Perfect Online Store with WooCommerce</span>
+
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    If you prefer the flexibility of WordPress, WooCommerce is the ideal solution.
+                                    Seamlessly integrate eCommerce functionalities into your WordPress site, offering a
+                                    customizable and scalable online store.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 3 -->
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <span class="faq-question">Unleash Your Business Potential with BigCommerce</span>
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    BigCommerce is a feature-rich eCommerce platform designed to scale alongside your
+                                    growing business. Enjoy a comprehensive suite of tools, responsive themes, and
+                                    enterprise-level functionality.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="btn btn-primary rounded-5" href="{{ url('contact-us') }}">
+                        Get Started
+                    </a>
                 </div>
             </div>
         </div>
@@ -196,56 +203,48 @@
 
     <div class="logo-designs-portfolio">
         <div class="container">
-            <div class="row filter-button-group">
-                <button class="btn filter-button active" data-filter="all">All</button>
-                <button class="btn filter-button" data-filter="iconic">Business Cards</button>
-                <button class="btn filter-button" data-filter="typography">Envelope Design</button>
-                <button class="btn filter-button" data-filter="illustrative">Letterhead Design</button>
-            </div>
-
             <div class="row gallery">
-                <!-- Iconic Logos -->
-                <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
-                    <img src="{{ url('images/Business Cards01.png') }}" alt="Iconic Logo 1">
+                <div class="col-12 text-center mb-4">
+                    <h1 class="gradient-heading">Our Award-Winning Company Website Portfolio</h1>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
-                    <img src="{{ url('images/Business Cards02.png') }}" alt="Iconic Logo 2">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/1-ecommerce.webp') }}">
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
-                    <img src="{{ url('images/Business Cards03.png') }}" alt="Iconic Logo 3">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/2-ecommerce.webp') }}">
                 </div>
-
-                <!-- Typography Logos -->
-                <div class="col-lg-4 col-md-6 mb-4 filter all typography">
-                    <img src="{{ url('images/Envelope Design02.png') }}" alt="Typography Logo 1">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/3-ecommerce.webp') }}">
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all typography">
-                    <img src="{{ url('images/Envelope Design01.png') }}" alt="Typography Logo 2">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/4-ecommerce.webp') }}">
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all typography">
-                    <img src="{{ url('images/Envelope Design03.png') }}" alt="Typography Logo 2">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/5-ecommerce.webp') }}">
                 </div>
-
-
-                <!-- Illustrative Logos -->
-                <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
-                    <img src="{{ url('images/Letterhead Design.webp') }}" alt="Illustrative Logo 1">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/6-ecommerce.webp') }}">
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
-                    <img src="{{ url('images/Letterhead Design01.webp') }}" alt="Illustrative Logo 1">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/7-ecommerce.webp') }}">
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
-                    <img src="{{ url('images/Letterhead Design02.webp') }}" alt="Illustrative Logo 1">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/8-ecommerce.webp') }}">
                 </div>
-
-
-
-                <!-- Animated Logos -->
-                <div class="col-lg-4 col-md-6 mb-4 filter all animated">
-                    <img src="images/logo-animation-example-conversable.gif" alt="Animated Logo 1">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/9-ecommerce.webp') }}">
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all animated">
-                    <img src="images/logo-design-animation.gif" alt="Animated Logo 2">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/10-ecommerce.webp') }}">
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/11-ecommerce.webp') }}">
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/migral.webp') }}">
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="{{ asset('images/vital1.webp') }}">
                 </div>
             </div>
         </div>
@@ -265,30 +264,30 @@
     <script>
         $(function() {
             // Show only the first 9 items on page load
-            $('.filter').hide();
-            $('.filter.all').slice(0, 9).show();
+            // $('.filter').hide();
+            // $('.filter.all').slice(0, 9).show();
 
-            $('.filter-button').click(function() {
-                var value = $(this).attr('data-filter');
-                $('.filter-button').removeClass('active');
-                $(this).addClass('active');
-                if (value == 'all') {
-                    $('.filter').hide();
-                    $('.filter.all').slice(0, 9).show();
-                    $('.load-more-button').show();
-                } else {
-                    $('.filter').hide();
-                    $('.filter.' + value).slice(0, 2).show();
-                    $('.load-more-button').hide();
-                }
-            });
+            // $('.filter-button').click(function() {
+            //     var value = $(this).attr('data-filter');
+            //     $('.filter-button').removeClass('active');
+            //     $(this).addClass('active');
+            //     if (value == 'all') {
+            //         $('.filter').hide();
+            //         $('.filter.all').slice(0, 9).show();
+            //         $('.load-more-button').show();
+            //     } else {
+            //         $('.filter').hide();
+            //         $('.filter.' + value).slice(0, 2).show();
+            //         $('.load-more-button').hide();
+            //     }
+            // });
 
-            $('.load-more-button').click(function() {
-                $('.filter.all:hidden').slice(0, 9).slideDown();
-                if ($('.filter.all:hidden').length == 0) {
-                    $(this).fadeOut('slow');
-                }
-            });
+            // $('.load-more-button').click(function() {
+            //     $('.filter.all:hidden').slice(0, 9).slideDown();
+            //     if ($('.filter.all:hidden').length == 0) {
+            //         $(this).fadeOut('slow');
+            //     }
+            // });
         })
     </script>
 
