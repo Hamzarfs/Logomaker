@@ -1,6 +1,6 @@
 <!-- resources/views/site/common.blade.php -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
@@ -17,6 +17,7 @@
         <meta name="description" content="{{ $categoryObj->meta_desc }}">
     @endisset
 
+    <link rel="canonical" href="{{ url()->current() }}" />
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -100,55 +101,30 @@
             border-radius: 5px 5px 0 0;
         }
 
-        /* End Custom scrollbar styles  */
-
-        @font-face {
-            font-family: 'Stifly';
-            src: url('fonts/Stifly.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-family: 'Brandes-Regular';
-            src: url('fonts/Brandes-Regular.otf') format('truetype');
-        }
-
-        @font-face {
-            font-family: 'Rohgaz-Demo-VersionRegular';
-            src: url('fonts/Rohgaz-DemoVersion-Regular.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-family: 'Forest-Trophy-Textured';
-            src: url('fonts/Forest Trophy Textured.otf') format('truetype');
-        }
-
-        @font-face {
-            font-family: 'Aesthetic-Wonder-DEMOBold';
-            src: url('fonts/AestheticWonderDEMO-Bold.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-family: 'Nerve-Brush-Regular';
-            src: url('fonts/NerveBrushRegular.otf') format('truetype');
-        }
-
-        @font-face {
-            font-family: 'Stander-DEMO';
-            src: url('fonts/Stander DEMO.otf') format('truetype');
-        }
-
-        @font-face {
-            font-family: 'Dasport-DEMO';
-            src: url('fonts/Dasport DEMO.otf') format('truetype');
-        }
-
-        @font-face {
-            font-family: 'LightSport-DEMO';
-            src: url('fonts/Light Sport DEMO.otf') format('truetype');
-        }
+       
     </style>
-
+    
     {{-- @yield('styles') --}}
+
+
+
+    <meta name="google-site-verification" content="PCblVwSUWCzACg0raNR0v7VHp7F1haeuavWupNiKPhk" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8EQZ5SK5PS"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8EQZ5SK5PS');
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16485766646"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date()); gtag('config', 'AW-16485766646');
+    </script>
 
     <!-- Brevo Conversations {literal} -->
     <script>
