@@ -1,28 +1,82 @@
 @extends('site.common')
 
-@section('title', 'Graphics Designing')
+@section('title', 'Shopify Website Development')
 
 @section('content')
 
-    <div class="banner-section">
+
+    <style>
+        .banner-section h1 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .gradient-heading {
+            background: linear-gradient(90deg, #501e9c 0%, #8169f1 40%, #a44cee 75%, #ff847f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .wp-website {
+            background-color: #fffdf6
+        }
+
+        .wp-website h1 {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 45px;
+            text-transform: uppercase;
+        }
+
+        .wp-website p {
+            text-align: justify;
+        }
+
+        .wp-website a {
+            background-color: #501e9c;
+            border: none;
+        }
+
+        .wp-website a:hover,
+        .wp-website a:focus,
+        .wp-website a:focus-visible,
+        .wp-website a:active {
+            background-color: #a44cee !important;
+            border: none !important;
+            box-shadow: none;
+        }
+
+        .wp-projects .swiper .swiper-slide img {
+            width: 360px;
+            height: 250px;
+        }
+
+        .wp-projects .swiper {
+            height: 300px;
+        }
+    </style>
+
+    <div class="banner-section text-white">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 content-section">
-                    <h1>Design Just Got Easy</h1>
-                    <h2>Create impressive videos and images <span class="logo-design-color">designs in minutes.</span>
-                    </h2>
+                <div class="col-lg-6">
+                    <h1><span class="logo-design-color">Shopifiy Website</span> Get<br>
+                        Started at <span class="logo-design-color">$499</span></h1>
+                    <p>
+                        Looking to take your online store to the next level? Our team of Shopify developers has got you covered. We specialize in creating visually stunning and user-friendly Shopify websites, complete with secure payment gateways.
+                    </p>
                     <ul class="icon-list">
-                        <li><i class="fas fa-trophy"></i> Graphic Designing In Digital Marketing</li>
-                        <li><i class="fas fa-briefcase"></i> Multimedia & Print Media Services</li>
-                        <li><i class="fas fa-sync-alt"></i> Character & Creative Design</li>
-                        <li><i class="fas fa-users"></i> Corporate Identity Design</li>
-                        <li><i class="fas fa-star"></i> Logo Design</li>
+                        <li><i class="fas fa-trophy"></i> Shopify Integration Services</li>
+                        <li><i class="fas fa-briefcase"></i> Website Development Services</li>
+                        <li><i class="fas fa-sync-alt"></i> Theme Development Services</li>
+                        <li><i class="fas fa-users"></i> Upgrading & Extension Services</li>
+                        <li><i class="fas fa-star"></i> Shopify Migration Services</li>
                     </ul>
-                    <a href="{{ url('/') }}" class="california-button-online">Get Started</a>
+                    <a href="{{ url('contact-us') }}" class="california-button-online">Get a Quote</a>
                 </div>
                 <div class="col-lg-6 text-center about-us-image-sec order-lg-2">
-                    <img src="images/graphic designer.png" alt="About RFS Logo Design" title= "About RFS Logo Design"
-                        class="img-fluid">
+                    <img src="{{ asset('images/shopify.webp') }}" alt="Shopify Development"
+                        title= "Shopify Development" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -53,65 +107,26 @@
         </div>
     </div>
 
-
-    <!--------------------- Start PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
-    <div class="logo-designs-ca">
+    <section class="wp-website py-5 my-5">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 text-center">
-                    <img src="images/111 1.png" alt="Professional Logo Designs" class="professional-logo-image">
+                <div class="col-lg-6">
+                    <img src="{{ asset('images/Ecommerce-Development.webp') }}" alt="E-commerce Website Development"
+                        class="img-fluid">
                 </div>
                 <div class="col-lg-6">
-                    <h3>Graphic Designing</h3>
-                    <p style="text-align: justify;">Graphic design is an electrifying field that involves organizing
-                        visual elements to effectively communicate messages. With a seamless blend of inventiveness
-                        and technical skill, designers mold brand identities by using captivating logos, dynamic color
-                        palettes, and captivating aesthetics. Whether working in print or online, they craft powerful
-                        materials, including eye-catching brochures, striking posters, sleek web designs, and
-                        captivating
-                        social media graphics.</p>
+                    <h1 class="mb-3"><span class="gradient-heading">Shopifiy Website</span> Developments</h1>
+                    <p>
+                        Building a website on Shopify is just like opening up a charming boutique in a cozy, welcoming community. Start by claiming your very own personal corner in the virtual world by signing up for a Shopify account and browsing through the Shopify Theme Store to find the perfect design. Then, put the finishing touches on your space by customizing colors, fonts, and layout. Fill up your shelves with an array of products, thoughtfully arranged into categories for a delightful and inviting shopping experience.
+                    </p>
+                    <a class="btn btn-primary rounded-5" href="{{ route('packages')}}">
+                        Learn more
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
-    <!--------------------- End PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
+    </section>
 
-    <!--------------------- Start PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
-    <div class="services-section" style=padding:0px;>
-        <div class="container">
-            <h2>What Services Do We Offer?</h2>
-            <p>Our experts are dedicated to delivering excellence in every project.</p>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="service-card business-card-design">
-                        <img src="{{ url('images/Stationery.png') }}" alt="Business Card Design">
-                        <h4>Branding Design</h4>
-                        <p>A professional branding design service enhances a brand’s visual identity. It creates a
-                            positive ecosystem for the brand to grow amid competitors.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="service-card letterhead-design">
-                        <img src="{{ url('images/BRANDING.png') }}" alt="Letterhead Design">
-                        <h4>Stationery Design</h4>
-                        <p>Utilizing a custom stationery design service can facilitate the growth of your business. The
-                            professional designs will enhance your brand through direct.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="service-card envelope-design">
-                        <img src="{{ url('images/LOGODESIGN(1).png') }}" alt="Envelope Design">
-                        <h4>Logo Design</h4>
-                        <p>Grow your business with a professional, custom logo designed by our designer creative
-                            experts. Because good design makes great business.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--------------------- End PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
-
-    <!---------------------- Start Portfolio -------------------------->
     <div class="logo-designs-portfolio">
         <div class="container">
             <div class="row filter-button-group">
@@ -168,38 +183,20 @@
             </div>
         </div>
     </div>
-    <!---------------------- End Portfolio -------------------------->
 
-    <!-- <-----------------Start Testimonial Section---------------->
-    <section id="testimonial-section" class="pt-5 pb-5">
-        <div class="container">
-            <h2 class="text-center mb-5">See What Our Clients Have to Say</h2>
-            <div class="owl-carousel owl-theme">
-                <!-- Reviews will be inserted here dynamically -->
-            </div>
-        </div>
-    </section>
-    <!-- {{-- --------------- End Testiomonial Section --}} -->
-
-    <!-------------------- Start Boxed Section ------------------>
     <section class="boxed-section">
         <div class="container">
-            <h2 style=font-size:1.6em;>Get Your Custom Graphics Designs Today!</h2>
-            <p>Enhance your brand with our professional graphics design services. We are your one stop shop for quality
-                graphics designs. Contact us at <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a> or
-                call us at <a href="tel:+15516665255">+1 (551) 666-5255</a>.</p>
+            <h2 style=font-size:1.6em;>Get Your Shopify Website Development Done Today!</h2>
+            <p>Enhance your brand with our professional shopify website development services. We are your one stop
+                shop for quality shopify website development. Contact us at <a
+                    href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a> or call us at <a
+                    href="tel:+15516665255">+1 (551) 666-5255</a>.</p>
             <a href="{{ url('contact-us') }}" class="california-button-online">Get Started</a>
         </div>
     </section>
-    <!-------------------- End Boxed Section ------------------>
 
-
-    <!-- Bootstrap JS and dependencies -->
-    {{-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> --}}
     <script>
-        $(document).ready(function() {
+        $(function() {
             // Show only the first 9 items on page load
             $('.filter').hide();
             $('.filter.all').slice(0, 9).show();
@@ -225,6 +222,8 @@
                     $(this).fadeOut('slow');
                 }
             });
-        });
+        })
     </script>
+
+
 @endsection

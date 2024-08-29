@@ -177,9 +177,9 @@
 
         .logotype-card img {
             /* padding: 20px;
-                    border-radius: 15px 15px 0 0;
-                    width: 160px;
-                    align-self: center; */
+                        border-radius: 15px 15px 0 0;
+                        width: 160px;
+                        align-self: center; */
 
             height: 120px;
             width: auto;
@@ -325,14 +325,14 @@
 
     <!-- <------------------Make A logo------------------>
     <!--
-                <section class="heroSection1">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12 mb-4">
-                                    <h1 class="heroTitle1">Ready To Turn Your Vision <br>Into A Logo Masterpiece?</h1>
+                    <section class="heroSection1">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                        <h1 class="heroTitle1">Ready To Turn Your Vision <br>Into A Logo Masterpiece?</h1>
+                                    </div>
                                 </div>
-                            </div>
-                        </section> -->
+                            </section> -->
 
     <!-- <------------------End Make A logo---------------->
 
@@ -360,8 +360,12 @@
                             <div class="card-container2">
                                 <div class="card-inner">
                                     <div class="card-front">
-                                        <img src="{{ asset($category->image ?: "category-image/{$category->latest_product->image}") }}"
+                                        {{-- <img src="{{ $category->image ? asset($category->image) : logo_asset_helper($category->latest_product->image) }}"
+                                            class="img-fluid" alt="{{ $category->name }}"> --}}
+                                        <img src="{{ $category->image ? asset($category->image) : asset('category-image/' . $category->latest_product->image) }}"
                                             class="img-fluid" alt="{{ $category->name }}">
+                                        {{-- <img src="{{ asset($category->image ?: "category-image/{$category->latest_product->image}") }}" logo_asset_helper
+                                            class="img-fluid" alt="{{ $category->name }}"> --}}
                                     </div>
                                     <div class="card-back">
                                         <div class="category-name">{{ $category->name }}</div>
@@ -461,7 +465,8 @@
                 <!-- Column 1 -->
                 <div class="col-md-4">
                     <div class="icon-box dedicated-support">
-                        <img src="{{ url('images/digital-art.gif') }}" alt="Dedicated Support Icon" class="icon-box-image">
+                        <img src="{{ url('images/digital-art.gif') }}" alt="Dedicated Support Icon"
+                            class="icon-box-image">
                         <h3 class="icon-box-heading">Unique Design Solutions</h3>
                         <p class="icon-box-description">Explore our diverse graphic design solutions! Our portfolio
                             showcases top-tier work across various industries, from eye-catching logos to complete branding
@@ -586,7 +591,8 @@
                         <li><i class="bi bi-check-circle"></i> 10000+ logos to choose</li>
                         <li><i class="bi bi-check-circle"></i> Endless customization options</li>
                         <li><i class="bi bi-check-circle"></i> High-res design files</li>
-                        <li style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small><b>(PDF, PNG, JPG)</b></small></li>
+                        <li style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small><b>(PDF, PNG,
+                                    JPG)</b></small></li>
                         <li><i class="bi bi-check-circle"></i> Instant download</li>
                         <li><i class="bi bi-check-circle"></i> Ready brand identity designs</li>
                         <li><i class="bi bi-check-circle"></i> As low as $37</li>
@@ -602,8 +608,9 @@
                         <li><i class="bi bi-check-circle"></i> Work directly with skilled designers</li>
                         <li><i class="bi bi-check-circle"></i> Fully bespoke solution</li>
                         <li><i class="bi bi-check-circle"></i> high-res design files</li>
-                        <li style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small><b>(Ai, PSD, EPS, PNG, JPG,
-                                PDF, SVG, TIFF)</b></small></li>
+                        <li style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small><b>(Ai, PSD, EPS,
+                                    PNG, JPG,
+                                    PDF, SVG, TIFF)</b></small></li>
                         <li><i class="bi bi-check-circle"></i> Premium graphic design work</li>
                         <li><i class="bi bi-check-circle"></i> Dedicated account manager</li>
                         <li><i class="bi bi-check-circle"></i> As low as $199</li>

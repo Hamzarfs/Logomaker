@@ -30,15 +30,15 @@ use App\Http\Controllers\ImageController;
 //     ]);
 // });
 
-// web 
+// web
 Route::get('/', [MainController::class, 'index'])->name('homepage');
 Route::get('images/{image}', [ImageController::class, 'show'])->name('image.show');
 
 
+Route::get('/packages', [MainController::class, 'packages'])->name('packages');
 Route::middleware(['role:user', 'auth'])->group(function () {
     // Route::get('/checkout2', [MainController::class, 'checkout2'])->name('checkout2');
     // Route::get('/checkout', [MainController::class, 'checkout'])->name('checkout');
-    Route::get('/packages', [MainController::class, 'packages'])->name('packages');
     Route::get('/checkout', [MainController::class, 'checkout'])->name('checkout');
     Route::get('/thank-you', [MainController::class, 'thankYou'])->name('thankyou');
     Route::get('/declined', [MainController::class, 'declined'])->name('declined');
@@ -109,6 +109,11 @@ Route::post('custom-logo', [GeneralController::class, 'customLogoSubmit'])->name
 Route::get('/site-map', [GeneralController::class, 'siteMap']);
 Route::get('/printing', [GeneralController::class, 'printing']);
 Route::get('/thanks', [GeneralController::class, 'thanks']);
+Route::get('website-design-development', [GeneralController::class, 'websiteDesignDevelopment']);
+Route::get('custom-website-design-development', [GeneralController::class, 'customWebsiteDesignDevelopment']);
+Route::get('wordpress-website-development', [GeneralController::class, 'wordpressWebsiteDevelopment']);
+Route::get('shopify-website-development', [GeneralController::class, 'shopifyWebsiteDevelopment']);
+Route::get('e-commerce-website-development', [GeneralController::class, 'eCommerceWebsiteDevelopment']);
 
 
 
@@ -150,5 +155,6 @@ Route::prefix('oauth/')->group(function () {
 
 // Auth routes
 require __DIR__ . '/auth.php';
+
 // Admin Routes
 require('admin.php');

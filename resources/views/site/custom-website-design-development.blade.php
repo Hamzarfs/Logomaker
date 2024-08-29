@@ -1,28 +1,95 @@
 @extends('site.common')
 
-@section('title', 'Graphics Designing')
+@section('title', 'Custom Website Design Development')
 
 @section('content')
 
-    <div class="banner-section">
+    <style>
+        .banner-section h1 {
+            font-weight: 700;
+            font-size: 32px;
+        }
+
+        .banner-section ul li {
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .gradient-heading {
+            background: linear-gradient(90deg, #501e9c 0%, #8169f1 40%, #a44cee 75%, #ff847f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .custom-web h1 {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .custom-web p.column-1 {
+            text-align: justify;
+        }
+
+        .custom-web .custom-link {
+            color: #0c3df4;
+            text-decoration: none;
+        }
+
+        .custom-web .custom-link:hover {
+            color: #12C2E9;
+        }
+
+        .custom-web a.btn {
+            background-color: #501e9c;
+            border: none;
+        }
+
+        .custom-web a.btn:hover,
+        .custom-web a.btn:focus,
+        .custom-web a.btn:focus-visible,
+        .custom-web a.btn:active {
+            background-color: #a44cee !important;
+            border: none !important;
+            box-shadow: none;
+        }
+
+        .custom-web .card-1 {
+            background-color: #5842BC;
+        }
+
+        .custom-web .card-2 {
+            background-color: #42A1BC;
+        }
+
+        .custom-web .card-3 {
+            background-color: #F16C6A;
+        }
+
+        .custom-web .card-4 {
+            background-color: #D67300;
+        }
+    </style>
+
+    <div class="banner-section text-white">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 content-section">
-                    <h1>Design Just Got Easy</h1>
-                    <h2>Create impressive videos and images <span class="logo-design-color">designs in minutes.</span>
-                    </h2>
+                <div class="col-lg-6">
+                    <h1>Build Your Site With a Trusted <span class="logo-design-color">Custom Web Design</span> Services</h1>
+                    <p>
+                        Unlock the potential of tomorrow with Design Dior – where every pixel counts in shaping a creative
+                        and dynamic digital experience. From website development to logo design, our imagination knows no
+                        bounds.
+                    </p>
                     <ul class="icon-list">
-                        <li><i class="fas fa-trophy"></i> Graphic Designing In Digital Marketing</li>
-                        <li><i class="fas fa-briefcase"></i> Multimedia & Print Media Services</li>
-                        <li><i class="fas fa-sync-alt"></i> Character & Creative Design</li>
-                        <li><i class="fas fa-users"></i> Corporate Identity Design</li>
-                        <li><i class="fas fa-star"></i> Logo Design</li>
+                        <li><i class="fas fa-trophy"></i> Custom UX & UI Design</li>
+                        <li><i class="fas fa-briefcase"></i> Search & Conversion Optimization</li>
+                        <li><i class="fas fa-sync-alt"></i> End-To-End Development</li>
                     </ul>
                     <a href="{{ url('/') }}" class="california-button-online">Get Started</a>
                 </div>
                 <div class="col-lg-6 text-center about-us-image-sec order-lg-2">
-                    <img src="images/graphic designer.png" alt="About RFS Logo Design" title= "About RFS Logo Design"
-                        class="img-fluid">
+                    <img src="{{ asset('images/CUSTOM-WEBSITE-DESIGN-DEVELOPMENT_.webp') }}" alt="About RFS Logo Design"
+                        title= "About RFS Logo Design" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -53,63 +120,70 @@
         </div>
     </div>
 
-
-    <!--------------------- Start PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
-    <div class="logo-designs-ca">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 text-center">
-                    <img src="images/111 1.png" alt="Professional Logo Designs" class="professional-logo-image">
-                </div>
-                <div class="col-lg-6">
-                    <h3>Graphic Designing</h3>
-                    <p style="text-align: justify;">Graphic design is an electrifying field that involves organizing
-                        visual elements to effectively communicate messages. With a seamless blend of inventiveness
-                        and technical skill, designers mold brand identities by using captivating logos, dynamic color
-                        palettes, and captivating aesthetics. Whether working in print or online, they craft powerful
-                        materials, including eye-catching brochures, striking posters, sleek web designs, and
-                        captivating
-                        social media graphics.</p>
+    <section class="custom-web container py-5 my-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4">
+                <h1>
+                    Custom <span class="gradient-heading">Web Design & Development</span>
+                </h1>
+                <p class="column-1">
+                    At RFS logo design, we specialize in crafting exceptional websites that are customized to suit your
+                    business’s needs. Our websites are not only optimized for mobile devices but also visually captivating,
+                    making them a powerful tool for achieving your objectives with excellence. Research shows that 85% of
+                    consumers visit a company’s website before making a purchase.
+                </p>
+                <p>
+                    Recognizing the profound influence of user experience, aesthetics, usability, and accessibility on
+                    website success, our adept team is dedicated to crafting a standout online presence for your brand. <a
+                        href="{{ url('graphic-designing') }}" class="custom-link">Elevate your business by turning logo
+                        concepts into reality</a>—reach out to us today!
+                </p>
+                <a class="btn btn-primary rounded-5 px-4 py-3" href="{{ url('contact-us') }}">
+                    Get Started
+                </a>
+            </div>
+            <div class="col-lg-6 text-white">
+                <div class="row">
+                    <div class="col-md-6 d-flex">
+                        <div class="card-1 px-4 py-2 rounded-3 mb-4 d-flex align-items-center">
+                            <div class="">
+                                <h5 class="mb-3">Experienced Website Developers</h5>
+                                <p>Leverage our skilled website developers' expertise! Share your vision and our creative
+                                    team will swiftly bring it to life.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex">
+                        <div class="card-2 px-4 py-2 rounded-3 mb-4 d-flex align-items-center">
+                            <div class="">
+                                <h5 class="mb-3">Swift Project Delivery</h5>
+                                <p>As adept web developers, we collaborate with businesses of every scale, prioritizing
+                                    timely outcomes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex">
+                        <div class="card-3 px-4 py-2 rounded-3 mb-4 d-flex align-items-center">
+                            <div class="">
+                                <h5 class="mb-3">Customized Design Solutions</h5>
+                                <p>We prioritize unique design elements that set your website apart, ensuring a distinctive
+                                    online presence.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex">
+                        <div class="card-4 px-4 py-2 rounded-3 mb-4 d-flex align-items-center">
+                            <div class="">
+                                <h5 class="mb-3">Emphasis on Performance</h5>
+                                <p>We prioritize performance, ensuring fast loading and elevating the overall user
+                                    experience with efficiency.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--------------------- End PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
-
-    <!--------------------- Start PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
-    <div class="services-section" style=padding:0px;>
-        <div class="container">
-            <h2>What Services Do We Offer?</h2>
-            <p>Our experts are dedicated to delivering excellence in every project.</p>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="service-card business-card-design">
-                        <img src="{{ url('images/Stationery.png') }}" alt="Business Card Design">
-                        <h4>Branding Design</h4>
-                        <p>A professional branding design service enhances a brand’s visual identity. It creates a
-                            positive ecosystem for the brand to grow amid competitors.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="service-card letterhead-design">
-                        <img src="{{ url('images/BRANDING.png') }}" alt="Letterhead Design">
-                        <h4>Stationery Design</h4>
-                        <p>Utilizing a custom stationery design service can facilitate the growth of your business. The
-                            professional designs will enhance your brand through direct.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="service-card envelope-design">
-                        <img src="{{ url('images/LOGODESIGN(1).png') }}" alt="Envelope Design">
-                        <h4>Logo Design</h4>
-                        <p>Grow your business with a professional, custom logo designed by our designer creative
-                            experts. Because good design makes great business.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--------------------- End PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
+    </section>
 
     <!---------------------- Start Portfolio -------------------------->
     <div class="logo-designs-portfolio">
@@ -184,20 +258,15 @@
     <!-------------------- Start Boxed Section ------------------>
     <section class="boxed-section">
         <div class="container">
-            <h2 style=font-size:1.6em;>Get Your Custom Graphics Designs Today!</h2>
-            <p>Enhance your brand with our professional graphics design services. We are your one stop shop for quality
-                graphics designs. Contact us at <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a> or
+            <h2 style=font-size:1.6em;>Get Your Custom Website Design Development Done Today!</h2>
+            <p>Enhance your brand with our professional custom website design development services. We are your one stop shop for quality
+                custom website design development. Contact us at <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a> or
                 call us at <a href="tel:+15516665255">+1 (551) 666-5255</a>.</p>
             <a href="{{ url('contact-us') }}" class="california-button-online">Get Started</a>
         </div>
     </section>
     <!-------------------- End Boxed Section ------------------>
 
-
-    <!-- Bootstrap JS and dependencies -->
-    {{-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> --}}
     <script>
         $(document).ready(function() {
             // Show only the first 9 items on page load
