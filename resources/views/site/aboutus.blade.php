@@ -148,7 +148,7 @@
 
 
 
-    <div class="container custom-section">
+    <div class="container custom-section-logo">
         <h3>Why Choose RFS LOGO DESIGN?</h3>
         <p>Our expert designers craft unique, impactful logos tailored to your brand.</p>
         <p>Experience top-notch creativity and support with RFS, your go-to branding partner.</p>
