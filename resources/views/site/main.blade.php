@@ -578,6 +578,103 @@ width: 37px;
     text-align: left;
 }
 
+.why-rfs{
+
+    color: #fff;
+}
+
+a.card11 {
+    text-decoration: none;
+}
+
+
+
+.new-card-design-section {
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .new-card-design-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .new-card-design-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .new-card-design-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -10px;
+        }
+        .new-card-design-col {
+            padding: 10px;
+            flex: 1 1 33.33%;
+            box-sizing: border-box;
+        }
+
+        .new-card-design-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: relative;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        .new-card-design-card img {
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+        .new-card-design-card h2 {
+            font-size: 20px;
+            margin: 15px 0;
+            color: #333;
+        }
+        .new-card-design-card i {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    background: #6868D1;
+    padding: 5px;
+    border-radius: 10px;
+}
+        .new-card-design-card:hover {
+            transform: translateY(-5px);
+        }
+        .new-card-design-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .new-card-design-card:hover .new-card-design-overlay {
+            opacity: 1;
+        }
+        .new-card-design-overlay-text {
+            padding: 10px;
+            text-align: center;
+        }
+        @media (max-width: 480px) {
+            .new-card-design-col {
+                flex: 1 1 100%;
+            }
+        }
+
+
 
 @media only screen and (max-width: 500px){
     a.card11 {
@@ -604,11 +701,17 @@ width: 37px;
     }
 }
 
+
         @media only screen and (max-width: 767px) {
             .owl-carousel .owl-item img {
 
                 display: block;
                 width: auto;
+            }
+        }
+        @media (max-width: 768px) {
+            .new-card-design-col {
+                flex: 1 1 100%;
             }
         }
 
@@ -637,6 +740,9 @@ width: 37px;
                 margin-top: 5px;
             }
         }
+
+
+
 
         @media only screen and (max-width:801px){
 
@@ -696,7 +802,7 @@ display: flex;
 
 @media only screen and (max-width: 890px){
      a.card11{
-        height: 305px;
+        height: 380px;
     }
 }
 
@@ -976,20 +1082,25 @@ display: flex;
 
     <!-----------------End  Portfolio ----------------------->
 
-    <div style="padding-top: 100px; padding-bottom: 100px; background-color:#6868D1" >
-
+    <div style="padding-top: 70px; padding-bottom: 100px; background-color:#6868D1" >
 
 
         <div class="container">
+            <div class="why-rfs">
+           <h2 class="portfolio-heading">  Why RFS Is Your Go-To Logo Designer</h2>
+            <p class="main-description-online">
+                Our team of concept-driven logo designers is passionate about crafting visually stunning and professional logos that truly elevate your brand and leave a lasting impression. Here is why RFS is the perfect choice for you:
+            </p>
+        </div>
             <div class="row">
 
             <div class="col-md-4 edyy">
-        <a href="javasctipt:void(0)" class="card11 education">
+        <a class="card11 education">
         <div class="row" style="WIDTH: 100%;">
         <div class="col-md-4">
              <div class="overlay"></div>
         <div class="imgicon">
-        <img src="images/animate-icon.png" class="opeer">
+        <img src="{{url('images/image 52.png')}}" class="opeer">
           </div></div>
 
 
@@ -1003,12 +1114,12 @@ display: flex;
           </div></a>
           </div>
           <div class="col-md-4 edyy">
-        <a href="javasctipt:void(0)" class="card11 education">
+        <a class="card11 education">
         <div class="row" style="WIDTH: 100%;">
         <div class="col-md-4">
-             <div class="overlay1"></div>
+             <div class="overlay"></div>
         <div class="imgicon">
-        <img src="images/slick.png" class="opeer">
+        <img src="{{url('images/image 53.png')}}" class="opeer">
           </div></div>
 
 
@@ -1022,12 +1133,12 @@ display: flex;
           </div></a>
           </div>
           <div class="col-md-4 edyy">
-        <a href="javasctipt:void(0)" class="card11 education">
+        <a class="card11 education">
         <div class="row" style="WIDTH: 100%;">
         <div class="col-md-4">
-             <div class="overlay2"></div>
+             <div class="overlay"></div>
         <div class="imgicon">
-        <img src="images/unleash.png" class="opeer">
+        <img src="{{url('images/image 54.png')}}" class="opeer">
           </div></div>
 
 
@@ -1051,12 +1162,12 @@ display: flex;
                 <div class="row">
 
                 <div class="col-md-4 edyy">
-            <a href="javasctipt:void(0)" class="card11 education">
+            <a class="card11 education">
             <div class="row" style="WIDTH: 100%;">
             <div class="col-md-4">
                  <div class="overlay"></div>
             <div class="imgicon">
-            <img src="images/animate-icon.png" class="opeer">
+            <img src="{{url('images/image 55.png')}}" class="opeer">
               </div></div>
 
 
@@ -1070,12 +1181,12 @@ display: flex;
               </div></a>
               </div>
               <div class="col-md-4 edyy">
-            <a href="javasctipt:void(0)" class="card11 education">
+            <a class="card11 education">
             <div class="row" style="WIDTH: 100%;">
             <div class="col-md-4">
-                 <div class="overlay1"></div>
+                 <div class="overlay"></div>
             <div class="imgicon">
-            <img src="images/slick.png" class="opeer">
+            <img src="{{url('images/image 56.png')}}" class="opeer">
               </div></div>
 
 
@@ -1089,12 +1200,12 @@ display: flex;
               </div></a>
               </div>
               <div class="col-md-4 edyy">
-            <a href="javasctipt:void(0)" class="card11 education">
+            <a class="card11 education">
             <div class="row" style="WIDTH: 100%;">
             <div class="col-md-4">
-                 <div class="overlay2"></div>
+                 <div class="overlay"></div>
             <div class="imgicon">
-            <img src="images/unleash.png" class="opeer">
+            <img src="{{url('images/image 57.png')}}" class="opeer">
               </div></div>
 
 
@@ -1119,20 +1230,20 @@ display: flex;
     <!------------------start No.1 Choice for Businesses ------------->
 
 
-    <section class="why-logo-design-section">
+    {{-- <section class="why-logo-design-section">
         <div class="container">
-            <!-- Heading -->
+
             <h2 class="why-logo-design-heading">Why RFS Is Your Go-To Logo Designer
             </h2>
 
-            <!-- Description -->
+
             <p class="why-logo-design-description">Our team of concept-driven logo designers is passionate about crafting
                 visually stunning and professional logos that truly elevate your brand and leave a lasting impression. Here
                 is why RFS is the perfect choice for you:</p>
 
-            <!-- Row with 3 Columns -->
+
             <div class="row">
-                <!-- Column 1 -->
+
                 <div class="col-md-4">
                     <div class="icon-box business-needs">
                         <img src="{{ url('images/success.gif') }}" alt="Business Needs Icon" class="icon-box-image">
@@ -1145,7 +1256,7 @@ display: flex;
                     </div>
                 </div>
 
-                <!-- Column 2 -->
+
                 <div class="col-md-4">
                     <div class="icon-box premium-quality">
                         <img src= "{{ url('images/best-quality.gif') }}" alt="Premium Quality Icon"
@@ -1159,7 +1270,7 @@ display: flex;
                     </div>
                 </div>
 
-                <!-- Column 3 -->
+
                 <div class="col-md-4">
                     <div class="icon-box custom-designers">
                         <img src="{{ url('images/logo-design.gif') }}" alt="Custom Designers Icon"
@@ -1174,9 +1285,9 @@ display: flex;
                 </div>
             </div>
 
-            <!-- Additional Row with 3 Columns -->
+
             <div class="row">
-                <!-- Column 1 -->
+
                 <div class="col-md-4">
                     <div class="icon-box dedicated-support">
                         <img src="{{ url('images/digital-art.gif') }}" alt="Dedicated Support Icon"
@@ -1189,7 +1300,7 @@ display: flex;
                     </div>
                 </div>
 
-                <!-- Column 2 -->
+
                 <div class="col-md-4">
                     <div class="icon-box digital-media-design">
                         <img src="{{ url('images/support.gif') }}" alt="Digital Media Design Icon"
@@ -1202,7 +1313,7 @@ display: flex;
                     </div>
                 </div>
 
-                <!-- Column 3 -->
+
                 <div class="col-md-4">
                     <div class="icon-box brand-kit">
                         <img src="{{ url('images/startup.gif') }}" alt="Brand Kit Icon" class="icon-box-image">
@@ -1215,10 +1326,56 @@ display: flex;
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
     <!------------------end No.1 Choice for Businesses ------------->
+
+
+
+    <div style="padding-top: 70px; padding-bottom: 100px; background-color:#6868D1" >
+    <div class="new-card-design-section">
+        <div class="new-card-design-container">
+            <h2 class="new-card-design-title">Designing The Perfect Logo Made Easy With Our Logo Creator</h2>
+            <p style="text-align: center;">Still unsure? Dive deeper or consult with our expert designers for tailored guidance.</p>
+        </div>
+
+        <div class="new-card-design-container">
+            <div class="new-card-design-row">
+                <div class="new-card-design-col">
+                    <div class="new-card-design-card">
+                        <img src="{{url('images/card-design1.png')}}" alt="Image 1">
+                        <h2>Card Title 1</h2>
+                        <i class="fas fa-arrow-up"></i>
+                        <div class="new-card-design-overlay">
+                            <div class="new-card-design-overlay-text">Logos come in various types, each serving different purposes: emblem logos combine text and symbols within a badge-like shape; wordmark logos focus on stylized text; lettermark logos use initials or abbreviations; abstract logos represent ideas in a unique, non-literal way; and pictorial logos illustrate the business with a visual icon.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-card-design-col">
+                    <div class="new-card-design-card">
+                        <img src="{{url('images/card-design2.png')}}" alt="Image 2">
+                        <h2>Card Title 2</h2>
+                        <i class="fas fa-arrow-up"></i>
+                        <div class="new-card-design-overlay">
+                            <div class="new-card-design-overlay-text">Colors are key to your brand’s identity, each evoking distinct emotions. Red bursts with energy and passion, while blue signals trust and professionalism. Use our logo maker tool to pick the perfect palette that captures your brand’s essence and connects with your audience.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-card-design-col">
+                    <div class="new-card-design-card">
+                        <img src="{{url('images/card-design3.png')}}" alt="Image 3">
+                        <h2>Card Title 3</h2>
+                        <i class="fas fa-arrow-up"></i>
+                        <div class="new-card-design-overlay">
+                            <div class="new-card-design-overlay-text">Choosing the right font is crucial for your brand logo, as it reflects your brand’s personality and message. Here are some ideas for you. Serif Fonts: Exude tradition and reliability. Sans-Serif Fonts: Suggest modernity and simplicity. Script Fonts: Add a touch of elegance. Display Fonts: Command attention and stand out.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 
 
     <!------------Start Image Box Section ------------->
