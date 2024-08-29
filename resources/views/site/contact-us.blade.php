@@ -143,7 +143,7 @@
             padding: 10px;
             border-radius: 5px;
             color: #fff;
-            background-color: #646BD9;
+            background-color: #512f90;
             font-size: 15px;
             font-weight: 700;
             line-height: 24px;
@@ -153,12 +153,14 @@
         }
 
         .contact-button-online:hover {
-            background-color: #646BD9;
-            border-color: #646BD9;
+            background-color: #512f90;
+            background-color: #512f90;
+            color:#fff;
+            text-decoration: none; /* Remove any text decoration */
         }
 
         .banner-section {
-            background-color: #080a2d;
+            background-color: #6868D1;
             padding: 50px 0;
         }
 
@@ -183,7 +185,7 @@
         }
 
         .banner-section .btn:hover {
-            background-color: #3d2171;
+            background-color: #6868D1;
         }
     </style>
 

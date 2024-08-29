@@ -181,6 +181,7 @@ body {
 
 .navbar {
     padding: 1rem 0;
+
 }
 
 .logo {
@@ -200,12 +201,12 @@ body {
 }
 
 .navbar-nav .nav-link:hover {
-    color: #646BD9;
+    color: #6868D1;
     /* Optional: Add a hover color if desired */
 }
 
 .banner-section {
-    background-color: #080a2d;
+    background-color: #6868D1;
 
 }
 
@@ -754,12 +755,12 @@ p,
     height: 50px;
     border-radius: 5px;
     color: #fff;
-    background-color: #646BD9;
+    background-color: #512f90;
     font-size: 15px;
     font-weight: 700;
     line-height: 24px;
     text-align: center;
-    border-color: #646BD9;
+    border-color: #512f90;
     margin-bottom: 60px;
 }
 
@@ -1354,7 +1355,7 @@ margin-bottom: 50px;
 
 /* /------------------------------------------Start California---------------------------------------/ */
 .banner-section {
-    background-color: #080a2d;
+    background-color: #6868D1;
     /* Banner background color */
     padding: 40px 0;
     /* Adjust padding as needed */
@@ -1404,7 +1405,7 @@ margin-bottom: 50px;
 .icon-list i {
     font-size: 16px;
     /* Size of the icons */
-    color: #646bd9;
+    color: #512F90;
     /* Icon color */
     margin-right: 10px;
     /* Space between icon and text */
@@ -1428,7 +1429,7 @@ margin-bottom: 50px;
     padding: 10px 20px;
     font-size: 16px;
     color: #fff;
-    background-color: #646BD9;
+    background-color: #512F90;
     /* Button background color */
     text-decoration: none;
     border-radius: 5px;
@@ -1436,7 +1437,7 @@ margin-bottom: 50px;
 }
 
 .california-button-online:hover {
-    background-color: #646BD9;
+    background-color: #512F90;
     /* Darker shade on hover */
     color: #fff;
 }
@@ -1562,7 +1563,7 @@ margin-bottom: 50px;
 }
 
 .faq-question:hover {
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .faq-icon {
