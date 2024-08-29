@@ -53,6 +53,7 @@ a {
 
 .logo-design-color {
     color: #512f90;
+    font-weight: 800px;
     /* Example color, adjust as needed */
 }
 
@@ -922,7 +923,7 @@ p,
 /* Start Footer Section */
 
 .footer {
-    background-color: #080a2d;
+    background-color: #646BD9;
 }
 
 .footer-logo {
@@ -985,320 +986,287 @@ p,
 
 
 /*-------------Start About us-------------*/
+
 .about-us-section {
-    background-color: #080a2d;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    background-image: url('/images/Group 123.jpg'); /* Update with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 20px; /* Adjust padding as needed */
 }
+
+.about-us-content {
+    padding: 20px; /* Optional: Adjust padding for better spacing */
+}
+
+.custom-button-online {
+    /* Add any specific styles for the button here */
+}
+
 
 h1,
 h2 {
     font-weight: bold;
 }
 
-.custom-button-online {
-    width: 194px;
-    height: 50px;
-    border-radius: 5px;
-    color: #fff;
-    background-color: #646BD9;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 24px;
-    text-align: center;
-    border-color: #646BD9;
-    margin-bottom: 60px;
+.custom-text-section-v3 h2 {
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #010935;
+}
+.custom-container-margin-v3 {
+margin-top: 80px;
+margin-bottom: 50px;
 }
 
-.custom-button-online:hover {
-    background-color: #646BD9;
-    border-color: #646BD9;
+.custom-text-section-v3 p {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    color: #000000;
+    margin-bottom: 20px;
 }
 
-.img-fluid {
+.custom-bold-text-v3 {
+    font-weight: bold;
+    font-size: 18px;
+    color: #512F90;
+    margin: 20px 0;
+}
+
+.custom-image-section-v3 {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the image vertically */
+}
+
+.custom-image-section-v3 img {
     max-width: 100%;
     height: auto;
 }
+@keyframes slowBounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px); /* Adjust this value for the height of the bounce */
+    }
+  }
+
+  .slow-bounce {
+    animation: slowBounce 2s ease-in-out infinite; /* Increase the duration for a slower bounce */
+  }
+  .small-image {
+    width: 80%; /* Adjust this value as needed */
+  }
 
 
 
-/* Custom CSS for justified text */
-.text-justify {
-    text-align: justify;
+
+
+
+  /* <!---------our work----------> */ 
+
+
+  .our-work-section {
+    padding: 40px 20px 10px; /* Remove bottom padding */
 }
 
-
-
-/* <!-------------Strat Our Mission $ Our vision--------- */
-.vision-section {
-    background-color: #6c73db;
-    /* Pink background color */
-    padding: 60px 0;
-    /* Top and bottom padding */
-}
-
-.vision-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-}
-
-.vision-content .image {
-    flex: 1;
-    padding: 20px;
-}
-
-.vision-content .image img {
-    max-width: 100%;
-    border-radius: 10px;
-    /* Rounded corners for the image */
-}
-
-.vision-content .text {
-    flex: 1;
-    padding: 20px;
-}
-
-.vision-content .text h2 {
+.our-work-section h3 {
     font-size: 36px;
-    font-weight: 700;
-    color: #ffffff;
-    /* Dark color for heading */
-    margin-bottom: 20px;
-}
-
-.vision-content .text p {
-    font-size: 16px;
-    color: #ffffff;
-    /* Dark color for text */
-    line-height: 1.6;
-}
-
-.mission-section {
-    background-color: #ffffff;
-    /* Light grey background color */
-    padding: 30px 0;
-    /* Top and bottom padding */
-}
-
-.mission-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-}
-
-.mission-content .image {
-    flex: 1;
-    padding: 20px;
-}
-
-.mission-content .image img {
-    max-width: 100%;
-    border-radius: 10px;
-    /* Rounded corners for the image */
-}
-
-.mission-content .text {
-    flex: 1;
-    padding: 20px;
-}
-
-.mission-content .text h2 {
-    font-size: 36px;
-    font-weight: 700;
-    color: #333;
-    /* Dark color for heading */
-    margin-bottom: 20px;
-}
-
-.mission-content .text p {
-    font-size: 16px;
-    color: #333;
-    /* Dark color for text */
-    line-height: 1.6;
-}
-
-.work-section {
-    background-color: #e9ecef;
-    /* Light grey background color */
-    padding: 60px 0;
-    /* Top and bottom padding */
-}
-
-.work-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-}
-
-.work-content .image {
-    flex: 1;
-    padding: 20px;
-}
-
-.work-content .image img {
-    max-width: 100%;
-    border-radius: 10px;
-    /* Rounded corners for the image */
-}
-
-.work-content .text {
-    flex: 1;
-    padding: 20px;
-}
-
-.work-content .text h2 {
-    font-size: 36px;
-    font-weight: 700;
-    color: #333;
-    /* Dark color for heading */
-    margin-bottom: 20px;
-}
-
-.work-content .text p {
-    font-size: 16px;
-    color: #333;
-    /* Dark color for text */
-    line-height: 1.6;
-}
-
-/*-----------start Why Choose RFS Logo Design? ------------------ */
-.choose-us-section {
-    padding: 60px 0;
-}
-
-.choose-us-content {
-    border-radius: 8px;
     text-align: center;
-    margin: 0 auto;
+    font-weight: 700;
+    color: #010935;
 }
-
-.choose-us-content h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 34px;
-    margin-bottom: 20px;
-}
-
-.choose-us-content h2 span {
-    color: #512f90;
-    /* Color for 'RFS Logo Design?' */
-}
-
-.choose-us-content p {
-    font-family: 'Poppins', sans-serif;
+.our-work-section p {
+    text-align: center;
     font-size: 16px;
-    line-height: 1.6;
-    color: #666;
+    color: #333;
 }
 
-.why-choose-section {
+/* .fun-easy-process-section {
+    padding: 40px 20px;
+} */
+.fun-easy-process-section h4 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #010935;
+}
+.fun-easy-process-section p {
+    font-size: 16px;
+    color: #333;
+}
+
+.top-designers-section {
     padding: 40px 20px;
 }
-
-.why-choose-heading {
-    font-weight: 800;
-    color: #512f90;
+.top-designers-section h4 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #010935;
 }
-
-.why-choose-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.why-choose-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.why-choose-list li i {
-    font-size: 24px;
-    margin-right: 10px;
-    color: #512F90;
-}
-
-.about-button-online {
-    color: #fff;
-    background-color: #6c73db;
-    border: none;
-    padding: 10px 20px;
+.top-designers-section p {
     font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: #333;
+}
+
+.full-ownership-section {
+    padding: 40px 20px;
+}
+.full-ownership-section h4 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #010935;
+}
+.full-ownership-section p {
+    font-size: 16px;
+    color: #333;
+}
+.divider {
+    border: 0;
+    border-top: 2px solid #646BD9;
+    width: 30%; /* Adjust width as needed */
+    margin-top: 0;
     margin-bottom: 15px;
 }
 
-.about-button-online:hover {
-    background-color: #575fcf;
-    color: #fff;
-    text-decoration: none;
-    transform: scale(1.05);
+
+.full-width-section {
+    background-color: #152441; /* Background color for the section */
+    color: white;
+    padding: 20px 0;
+    width: 100%; /* Full viewport width */
+    overflow: hidden; /* Prevent horizontal scroll */
+}
+.container-boxed {
+    max-width: 1200px; /* Adjust based on your design needs */
+    margin: 0 auto; /* Center align the container */
+    padding: 60px 15px;
+}
+.heading-row {
+    display: flex; /* Arrange headings in a row */
+    justify-content: space-between; /* Space out headings */
+    margin-bottom: 20px;
+}
+.heading {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none; /* Remove border */
+    border-radius: 5px;
+    background-color: transparent; /* Remove background */
+    color: white;
+    font-weight: bold;
+    font-size: 34px; /* Increase font size */
+    text-align: center;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+    flex: 1; /* Allow headings to grow and fill available space */
+}
+.heading:last-child {
+    margin-right: 0;
+}
+.heading.active {
+    color: #646BD9; /* Active text color */
+}
+.section-content {
+    display: none;
+}
+.section-content.show {
+    display: block;
+}
+.section-heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 28px; /* Increase font size */
+}
+.section-heading img {
+    width: 60px; /* Adjust image size as needed */
+    height: 60px;
+    margin-right: 15px;
+}
+.section-divider {
+    border-bottom: 2px solid #ffffff; /* White divider */
+    margin: 10px 0; /* Margin for spacing */
+    display: none; /* Hide by default */
+}
+.section-content.show .section-divider {
+    display: block; /* Show divider when content is active */
 }
 
-/* Mobile Responsive Styles */
-@media (max-width: 991px) {
 
-    .vision-section,
-    .mission-section,
-    .work-section {
-        padding: 30px 0;
-        /* Reduce padding for smaller screens */
-    }
-
-    .vision-content,
-    .mission-content,
-    .work-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .vision-content .image,
-    .mission-content .image,
-    .work-content .image {
-        padding: 0;
-    }
-
-    .vision-content .text,
-    .mission-content .text,
-    .work-content .text {
-        padding: 20px;
-    }
-
-    .choose-us-content h2 {
-        font-size: 28px;
-    }
-
-    .choose-us-content p {
-        font-size: 14px;
-    }
-
-    .about-button-online {
-        width: auto;
-        padding: 12px 24px;
-    }
+.custom-section {
+    text-align: center; /* Center-align text */
+    padding: 40px 20px; /* Adjust padding as needed */
+}
+.custom-section h3 {
+    font-size: 36px; /* Adjust heading size */
+    font-weight: 800; /* Bold heading */
+    margin-bottom: 20px; /* Spacing below heading */
+}
+.custom-section p {
+    font-size: 18px; /* Adjust paragraph size */
+    margin-bottom: 10px; /* Spacing between paragraphs */
+}
+.text-slider {
+    position: relative;
+    height: 100px; /* Set height based on your content */
+    overflow: hidden; /* Hide overflowing content */
+    margin: 10px 0; /* Margin for spacing */
+}
+.text-slider .slide {
+    position: absolute;
+    width: 100%;
+    font-size: 48px; /* Increase font size */
+    font-weight: 700; /* Make the font bold */
+    color: white;
+    text-shadow: 0 0 5px #646BD9; /* Enhanced text outline effect */
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth transition */
+}
+.text-slider .slide.show {
+    opacity: 1;
+    transform: translateY(0%);
+}
+.slider-button {
+    background-color: #646BD9; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 18px; /* Font size */
+    transition: background-color 0.1s ease; /* Smooth background color transition */
+}
+.slider-button:hover {
+    background-color: #003d80; /* Darker background on hover */
 }
 
-@media (max-width: 576px) {
-    .choose-us-content h2 {
-        font-size: 24px;
-    }
 
-    .choose-us-content p {
-        font-size: 12px;
-    }
 
-    .about-button-online {
-        width: auto;
-        padding: 10px 20px;
-    }
-}
 
-/*---------------------------------End About us-----------------------------*/
+
+
+
+
+
+/* <!---------our work----------> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1449,7 +1417,9 @@ h2 {
 }
 
 .logo-design-color {
-    color: #646BD9;
+    color: #512f90;
+    font-weight: 800px;
+
     /* Specific color for "Logo Design" */
 }
 
