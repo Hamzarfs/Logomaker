@@ -14,7 +14,7 @@
         }
 
         .how-it-works {
-            background-color: #080a2d;
+            background-color: #6868D1;
             /* Changed background color to white */
             padding-bottom: 50px;
             padding-top: 50px;
