@@ -3,14 +3,9 @@
 @section('title', 'sitemap')
 
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    {{-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> --}}
     <style>
         .sitemap {
             width: 100%;
@@ -94,12 +89,8 @@
             color: #646bd9;
             font-weight: 600;
         }
-
-      
     </style>
-</head>
 
-<body>
     <div class="sitemap">
         <div class="container sitemap-container">
             <h1>Site Map</h1>
@@ -150,33 +141,47 @@
                         </ul>
                     </div>
                 </div>
+                <div class="divider"></div>
+                <div class="col-md-4">
+                    <div class="sitemap-item">
+                        <h4>Other services</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="{{ url('printing') }}">Printing</a></li>
+                            <li><a href="{{ url('stationery-designing') }}">Stationery Designing</a></li>
+                            <li><a href="{{ url('graphic-designing') }}">Graphic Designing</a></li>
+                            <li><a href="{{ url('website-design-development') }}">Website Design Development</a></li>
+                            <li><a href="{{ url('custom-website-design-development') }}">Custom Website Design Development</a></li>
+                            <li><a href="{{ url('wordpress-website-development') }}">Wordpress Website Development</a></li>
+                            <li><a href="{{ url('shopify-website-development') }}">Shopify Website Development</a></li>
+                            <li><a href="{{ url('e-commerce-website-development') }}">E-commerce Website Development</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="divider"></div>
             <!-- Logo Ideas Section -->
-                                <div class="sitemap-item">
-
-            <h4>Categories</h4>
-            <div class="row">
-                @foreach ($categories as $index => $category)
-                    @if ($index % 4 == 0)
-                        @if ($index != 0)
+            <div class="sitemap-item">
+                <h4>Categories</h4>
+                <div class="row">
+                    @foreach ($categories as $index => $category)
+                        @if ($index % 4 == 0)
+                            @if ($index != 0)
                             </div>
+                            @endif
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
                         @endif
-                        <div class="col-md-3">
-                            <ul class="list-unstyled">
-                    @endif
-                    <li><a href="{{ url('/logos/'. $category->slug)}}" class="logo-ideas-link">{{ $category->name }}</a></li>
-                @endforeach
-                </ul>
-            </div>
-            </div>
+                        <li><a href="{{ url('/logos/' . $category->slug) }}"
+                                class="logo-ideas-link">{{ $category->name }}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    </div>
+    {{-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> --}}
 
-</html>
 @endsection
