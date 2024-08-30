@@ -32,8 +32,8 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 content-section">
-                    <h1>Professional Logo Designing at RFS Logo Design</h1>
-                    <h2>Custom <span class="logo-design-color">Logo Design</span> Company in Texas</h2>
+                    <h2>Professional Logo Designing at RFS Logo Design</h2>
+                    <h1>Custom <span class="logo-design-color">Logo Design</span> Company in Texas</h1>
                     <ul class="icon-list">
                         <li><i class="fas fa-trophy"></i> Ranked #1 Logo Design Agency in Texas</li>
                         <li><i class="fas fa-briefcase"></i> Extensive Industry Expertise for Versatile Solutions</li>

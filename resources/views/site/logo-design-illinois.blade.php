@@ -32,8 +32,8 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 content-section">
-                    <h1>Reliable Logo Designing at RFS Logo Design</h1>
-                    <h2>Custom <span class="logo-design-color">Logo Design</span> Company in Illinois</h2>
+                    <h2>Reliable Logo Designing at RFS Logo Design</h2>
+                    <h1>Custom <span class="logo-design-color">Logo Design</span> Company in Illinois</h1>
                     <ul class="icon-list">
                         <li><i class="fas fa-trophy"></i> Ranked #1 Logo Design Agency in Illinois</li>
                         <li><i class="fas fa-briefcase"></i> Vast Industry Insight for Adaptable Solutions</li>

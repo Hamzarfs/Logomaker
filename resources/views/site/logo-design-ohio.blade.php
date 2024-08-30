@@ -32,8 +32,8 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 content-section">
-                    <h1>Affordable Logo Designing at RFS Logo Design</h1>
-                    <h2>Full-Service Custom <span class="logo-design-color">Logo Design</span> Company In Ohio</h2>
+                    <h2>Affordable Logo Designing at RFS Logo Design</h2>
+                    <h1>Full-Service Custom <span class="logo-design-color">Logo Design</span> Company In Ohio</h1>
                     <ul class="icon-list">
                         <li><i class="fas fa-trophy"></i> Ranked #1 Logo Design Agency in Ohio</li>
                         <li><i class="fas fa-briefcase"></i> Extensive Industry Knowledge for Flexible Solutions</li>

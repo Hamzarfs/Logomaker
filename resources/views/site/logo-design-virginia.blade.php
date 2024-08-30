@@ -32,8 +32,8 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 content-section">
-                    <h1>Professional Logo Designers at RFS Logo Design</h1>
-                    <h2>Custom <span class="logo-design-color">Logo Design</span> Agency in Virginia</h2>
+                    <h2>Professional Logo Designers at RFS Logo Design</h2>
+                    <h1>Custom <span class="logo-design-color">Logo Design</span> Agency in Virginia</h1>
                     <ul class="icon-list">
                         <li><i class="fas fa-trophy"></i> Ranked #1 Logo Design Agency in Virginia</li>
                         <li><i class="fas fa-briefcase"></i> In-depth Industry Knowledge for Versatile Solutions</li>

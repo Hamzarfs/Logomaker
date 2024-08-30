@@ -1215,7 +1215,7 @@ margin-bottom: 50px;
     padding: 20px;
 }
 
-.content-section h1 {
+.content-section h2 {
     font-size: 20px;
     /* Adjust as needed */
     color: #ffffff;
@@ -1223,7 +1223,7 @@ margin-bottom: 50px;
     font-weight: 700;
 }
 
-.content-section h2 {
+.content-section h1 {
     font-size: 34px;
     /* Adjust as needed */
     color: #ffffff;

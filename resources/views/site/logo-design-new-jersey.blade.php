@@ -32,8 +32,8 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 content-section">
-                    <h1>Professional Logo Designers at RFS Logo Design</h1>
-                    <h2>Full-Service Custom <span class="logo-design-color">Logo Design</span> Company in New Jersey</h2>
+                    <h2>Professional Logo Designers at RFS Logo Design</h2>
+                    <h1>Full-Service Custom <span class="logo-design-color">Logo Design</span> Company in New Jersey</h1>
                     <ul class="icon-list">
                         <li><i class="fas fa-trophy"></i> Ranked #1 Logo Design Agency in New Jersey</li>
                         <li><i class="fas fa-briefcase"></i> Comprehensive Industry Expertise for Versatile Solutions</li>
