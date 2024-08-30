@@ -235,16 +235,7 @@
         </div>
     </div>
 
-    <section class="boxed-section">
-        <div class="container">
-            <h2 style=font-size:1.6em;>Get Your Wordpress Website Design Development Done Today!</h2>
-            <p>Enhance your brand with our professional wordpress website design development services. We are your one stop
-                shop for quality custom website design development. Contact us at <a
-                    href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a> or call us at <a
-                    href="tel:+15516665255">+1 (551) 666-5255</a>.</p>
-            <a href="{{ url('contact-us') }}" class="california-button-online">Get Started</a>
-        </div>
-    </section>
+
 
     <div class="container faq-section">
         <h2 class="text-center mb-4">Frequently Asked Questions</h2>
@@ -356,10 +347,21 @@
                     </div>
                 </div>
             </div>
-
-        </div>
+            </div>
     </div>
 
+
+            <section class="boxed-section">
+        <div class="container">
+            <h2 style=font-size:1.6em;>Get Your Wordpress Website Design Development Done Today!</h2>
+            <p>Enhance your brand with our professional wordpress website design development services. We are your one stop
+                shop for quality custom website design development. Contact us at <a
+                    href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a> or call us at <a
+                    href="tel:+15516665255">+1 (551) 666-5255</a>.</p>
+            <a href="{{ url('contact-us') }}" class="california-button-online">Get Started</a>
+        </div>
+    </section>
+        
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         $(function() {

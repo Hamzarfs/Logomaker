@@ -32,8 +32,8 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 content-section">
-                    <h1>Expert Logo Designers at RFS Logo Design</h1>
-                    <h2>Custom <span class="logo-design-color">Logo Design</span> Company in New York</h2>
+                    <h2>Expert Logo Designers at RFS Logo Design</h2>
+                    <h1>Custom <span class="logo-design-color">Logo Design</span> Company in New York</h1>
                     <ul class="icon-list">
                         <li><i class="fas fa-trophy"></i> Ranked #1 Logo Design Agency in New York</li>
                         <li><i class="fas fa-briefcase"></i> Extensive Industry Insight for Adaptable Solutions</li>
