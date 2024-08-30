@@ -13,15 +13,16 @@
         <title>@yield('title') | {{ env('APP_NAME') }}</title>
     @endisset
 
-   
-    @isset($categoryObj->meta_desc)
-        <meta name="description" content="{{ $categoryObj->meta_desc }}">
-    @else
-        <meta name="description" content="@yield('meta_desc', 'Default description for the page')">
-    @endisset
+ 
 
+    <meta name="description" content="@yield('meta_desc')">
+    
+ 
+
+    
     <link rel="canonical" href="{{ url()->current() }}" />
 
+    <link rel="icon" type="image/webp" href="{{ asset('rfs-fav.webp') }}">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"

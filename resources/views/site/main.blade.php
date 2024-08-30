@@ -1871,7 +1871,7 @@
     <section class="logos-carousel-section py-5">
         <div class="container">
             <div class="text-center text-white mb-5">
-                <h1>We Have Logos For Everyone</h1>
+                <h2>We Have Logos For Everyone</h2>
             </div>
 
             <!-- Slider main container -->

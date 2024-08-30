@@ -2,6 +2,11 @@
 @extends('site.common')
 
 @section('title', 'About us')
+ 
+@section('meta_desc',"222222222")
+    
+
+
 
 @section('content')
 

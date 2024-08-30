@@ -2,6 +2,8 @@
 
 @section('title', 'Category ' . $categoryObj['name'] ?? '')
 
+@section('meta_desc'){{ $categoryObj['meta_desc'] }}@endsection
+
 @section('content')
 
     <style>
