@@ -11,6 +11,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"> --}}
 
     <style>
+        .section-heading-we h2 {
+    font-size: 36px; /* Adjust size as needed */
+    font-weight: 700; /* Make it bold */
+    color: #010935; /* Heading color */
+    margin-bottom: 1rem; /* Spacing below the heading */
+}
+.section-heading-we {
+    text-align: center !important; /* Center align the text */
+    margin-bottom: 2rem; /* Add space below the heading */
+}
+
+
         /* Start Image Box Sections */
         .price-small-business {
     font-size: 16px; /* Default size for other text */
@@ -1504,9 +1516,15 @@ display: flex;
 
 
 <!-- start plan section -->
+
 <section class="plan-section py-5">
+
     <div class="container">
+    
         <div class="row justify-content-center">
+        <div class="section-heading-we mb-4">
+            <h2>Plan Your Way to Success</h2>
+        </div>
             <!-- Card for Startups -->
             <div class="col-md-6 mb-4">
                 <div class="card card-startup p-4">
@@ -1568,7 +1586,7 @@ display: flex;
 
                     <!-- Button -->
                     <div class="text-center">
-                        <a href="{{ url('/logo-maker') }}">
+                        <a href="{{ url('/custom-logo') }}">
                             <button class="btn btn-primary btn-small-business">For Small Businesses</button>
                         </a>
                     </div>
