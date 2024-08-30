@@ -8,9 +8,9 @@
 
     <style>
         /* body {
-                                        font-family: Arial, sans-serif;
+                                            font-family: Arial, sans-serif;
 
-                                    } */
+                                        } */
 
         .col-md-2 {
             flex: 0 0 auto;
@@ -125,29 +125,29 @@
         /* custom css for editor */
 
         /* @font-face {
-                                font-family: 'Roboto';
-                                src: url('fonts/Roboto-Regular.ttf') format('truetype');
-                            }
+                                    font-family: 'Roboto';
+                                    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+                                }
 
-                            @font-face {
-                                font-family: 'Open Sans';
-                                src: url('fonts/OpenSans-Regular.ttf') format('truetype');
-                            }
+                                @font-face {
+                                    font-family: 'Open Sans';
+                                    src: url('fonts/OpenSans-Regular.ttf') format('truetype');
+                                }
 
-                            @font-face {
-                                font-family: 'Lato';
-                                src: url('fonts/Lato-Regular.ttf') format('truetype');
-                            }
+                                @font-face {
+                                    font-family: 'Lato';
+                                    src: url('fonts/Lato-Regular.ttf') format('truetype');
+                                }
 
-                            @font-face {
-                                font-family: 'Montserrat';
-                                src: url('fonts/Montserrat-Regular.ttf') format('truetype');
-                            }
+                                @font-face {
+                                    font-family: 'Montserrat';
+                                    src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+                                }
 
-                            @font-face {
-                                font-family: 'Poppins';
-                                src: url('fonts/Poppins-Regular.ttf') format('truetype');
-                            } */
+                                @font-face {
+                                    font-family: 'Poppins';
+                                    src: url('fonts/Poppins-Regular.ttf') format('truetype');
+                                } */
 
         #logo-canvas {
             border: 1px solid #ddd;
@@ -324,7 +324,7 @@
                             <label for="font-family" class="font-label">Font Family </label>
                             <select id="font-family" class="form-control">
                                 @foreach ($fonts as $font)
-                                    <option value="{{ preg_replace('/\.[^.\s]+$/', '', $font->slug) }}" 
+                                    <option value="{{ preg_replace('/\.[^.\s]+$/', '', $font->slug) }}"
                                         {{ session()->get('font') == $font->slug ? 'selected' : '' }}
                                         style="font-family: '{{ preg_replace('/\.[^.\s]+$/', '', $font->slug) }}';">
                                         {{ preg_replace('/\.[^.\s]+$/', '', $font->name) }}
@@ -361,7 +361,7 @@
 
                     <div class="col-md-8">
                         <h1 class="text-center" style="margin-top: 20px;">RFS Logo Editor</h1>
-                        <canvas id="logo-canvas" style="width: 100%; border: 1px solid;" ></canvas>
+                        <canvas id="logo-canvas" style="width: 100%; border: 1px solid;"></canvas>
                     </div>
                 </div>
             </div>
@@ -400,7 +400,7 @@
             // canvas.setHeight(440);
 
 
-            // load image 
+            // load image
 
             // Function to load and display car.svg from the root directory
             function loadCarSVG() {
@@ -432,26 +432,42 @@
                             @endphp
 
                             var canvasCenter = {
-                                left: canvas.width / {{$iconLeft}},
-                                top: canvas.height / {{$iconTop}}
+                                left: canvas.width / {{ $iconLeft }},
+                                top: canvas.height / {{ $iconTop }}
                             };
 
-                            // Calculate the bounding box of the combined objects
-                            var boundingBox = new fabric.Group(objects).getBoundingRect();
+                            // Create a temporary group to calculate the bounding box and center it
+                            var group = new fabric.Group(objects);
+                            canvas.add(group);
 
-                            // Calculate the offset to center the bounding box
-                            var offset = {
-                                left: canvasCenter.left - boundingBox.width / 2,
-                                top: canvasCenter.top - boundingBox.height / 2
-                            };
+                            // Center the group on the canvas
+                            group.originX = 'center';
+                            group.originY = 'center';
+                            group.left = canvasCenter.left;
+                            group.top = canvasCenter.top;
+                            group.setCoords();
+
+                            // Ungroup the objects and add them back to the canvas
+                            var ungroupedObjects = group.getObjects();
+                            group.destroy();
+                            canvas.remove(group);
+
+                            // // Calculate the bounding box of the combined objects
+                            // var boundingBox = new fabric.Group(objects).getBoundingRect();
+
+                            // // Calculate the offset to center the bounding box
+                            // var offset = {
+                            //     left: canvasCenter.left - boundingBox.width / 2,
+                            //     top: canvasCenter.top - boundingBox.height / 2
+                            // };
 
                             // Add each object to the canvas and adjust its position
-                            objects.forEach(function(obj, index) {
+                            ungroupedObjects.forEach(function(obj, index) {
                                 // Set the object position to center the bounding box
                                 obj.set({
-                                    left: obj.left + offset.left - boundingBox
-                                        .left,
-                                    top: obj.top + offset.top - boundingBox.top,
+                                    // left: obj.left + offset.left - boundingBox
+                                    //     .left,
+                                    // top: obj.top + offset.top - boundingBox.top,
                                     selectable: true,
                                     evented: true
                                 });
@@ -675,13 +691,11 @@
                         @php
                             $fontSlug = $selectedProduct->font->slug ?? null;
                             $font = $fontSlug ? pathinfo($fontSlug, PATHINFO_FILENAME) : '';
-                            $fontSize = (isset($selectedProduct->logomaker_font_size) && strlen($selectedProduct->logomaker_font_size) > 1) 
-                                    ? $selectedProduct->logomaker_font_size 
-                                    : 40;
-                                    
-                             $companyName = session('company') ? session('company') : $selectedProduct->category->name;
-                           
-                             $companyNameLength = strlen($companyName);
+                            $fontSize = isset($selectedProduct->logomaker_font_size) && strlen($selectedProduct->logomaker_font_size) > 1 ? $selectedProduct->logomaker_font_size : 40;
+
+                            $companyName = session('company') ? session('company') : $selectedProduct->category->name;
+
+                            $companyNameLength = strlen($companyName);
 
                             // Ensure fontSize is numeric
                             if (!is_numeric($fontSize)) {
@@ -698,49 +712,43 @@
                                 $fontSize -= 20;
                             }
 
+                            $leftPosition = isset($selectedProduct->canva_left) && strlen($selectedProduct->canva_left) > 1 ? floatval($selectedProduct->canva_left) : '3.8';
+                            $topPosition = isset($selectedProduct->canva_top) && strlen($selectedProduct->canva_top) > 1 ? floatval($selectedProduct->canva_top) : '2.2';
 
-                            $leftPosition = (isset($selectedProduct->canva_left) && strlen($selectedProduct->canva_left) > 1) 
-                                    ?  floatval($selectedProduct->canva_left)
-                                    : '3.8';   
-                            $topPosition = (isset($selectedProduct->canva_top) && strlen($selectedProduct->canva_top) > 1) 
-                                    ?  floatval($selectedProduct->canva_top)
-                                    : '2.2';   
-                            
                             $companyName = session('company') ? session('company') : $selectedProduct->category->name;
-                            
 
                             $companyNameLength = strlen($companyName);
 
-                            $textPosition='center';
+                            $textPosition = 'center';
                             if ($selectedProduct->logo_position == 'left') {
-                                $textPosition='left';
+                                $textPosition = 'left';
                             } elseif ($selectedProduct->logo_position == 'right') {
-                                $textPosition='right';
+                                $textPosition = 'right';
                             }
                             // if ($companyNameLength >= 1 && $companyNameLength <= 10) {
-                            //     $leftPosition =  $leftPosition + 0.8; 
+                            //     $leftPosition =  $leftPosition + 0.8;
                             // }else  if ($companyNameLength > 10 && $companyNameLength <= 20) {
-                            //     $leftPosition =  $leftPosition + 0.8 ; 
+                            //     $leftPosition =  $leftPosition + 0.8 ;
                             // }else  if ($companyNameLength > 20 && $companyNameLength <= 30) {
-                            //     $leftPosition =  $leftPosition + 0.8 ; 
+                            //     $leftPosition =  $leftPosition + 0.8 ;
                             // }
 
-                             // echo $leftPosition."SDDDDDDDDDDDDDDDDDDDDDD".$companyNameLength."-----".$selectedProduct->canva_left;
-
+                            // echo $leftPosition."SDDDDDDDDDDDDDDDDDDDDDD".$companyNameLength."-----".$selectedProduct->canva_left;
                         @endphp
-    
-                            // left: canvas.width / 2.2 - 57, // Position the text
-                            // top: canvas.height / 3.8 + 120, // Position the text
+
+                        // left: canvas.width / 2.2 - 57, // Position the text
+                        // top: canvas.height / 3.8 + 120, // Position the text
 
                         // Create the textbox with the session company value
                         var company = "{{ $companyName }}".replace(/&amp;/g, '&');
                         var sampleText1 = new fabric.Textbox(company, {
-                            left: canvas.width /  {{$leftPosition}} - 60, // Position the text
-                            top: canvas.height / {{$topPosition}} + 120, // Position the text
-                            fontSize: {{ $fontSize}}, // Adjust font size as needed
-                            fill: '{{$selectedProduct->color}}',
+                            left: canvas.width / {{ $leftPosition }} - 60, // Position the text
+                            top: canvas.height / {{ $topPosition }} +
+                            120, // Position the text
+                            fontSize: {{ $fontSize }}, // Adjust font size as needed
+                            fill: '{{ $selectedProduct->color }}',
                             fontFamily: "{{ $font }}",
-                            textAlign: '{{$textPosition}}',
+                            textAlign: '{{ $textPosition }}',
                             selectable: true,
                             width: 540,
                             evented: true
@@ -1133,7 +1141,9 @@
             $.ajax({
                 url: "{{ route('putImgStringIntoSession') }}",
                 method: 'POST',
-                data: { dataURL },
+                data: {
+                    dataURL
+                },
                 success: function() {
                     $.ajax({
                         url: "{{ route('saveLogo') }}",
@@ -1163,7 +1173,9 @@
                 $.ajax({
                     url: "{{ route('putImgStringIntoSession') }}",
                     method: 'POST',
-                    data: { dataURL },
+                    data: {
+                        dataURL
+                    },
                     success: function() {
                         sessionStorage.setItem('logoDataUrl', dataURL)
                         $.ajax({
@@ -1180,15 +1192,17 @@
             })
 
             $('#save-logo').click(function() {
-                let dataURL = canvas.toDataURL({
-                    format: 'png',
-                    quality: 1
-                });
-                @auth
+                    let dataURL = canvas.toDataURL({
+                        format: 'png',
+                        quality: 1
+                    });
+                    @auth
                     $.ajax({
                         url: "{{ route('putImgStringIntoSession') }}",
                         method: 'POST',
-                        data: { dataURL },
+                        data: {
+                            dataURL
+                        },
                         success: function() {
                             sessionStorage.setItem('logoDataUrl', dataURL)
                             $.ajax({
@@ -1207,10 +1221,8 @@
                 //     format: 'png',
                 //     quality: 1
                 // });
-                var link = document.createElement('a');
-                link.href = dataURL;
-                link.download = 'logo.png';
-                link.click();
+                var link = document.createElement('a'); link.href = dataURL; link.download = 'logo.png'; link
+                .click();
             })
         })
     </script>
