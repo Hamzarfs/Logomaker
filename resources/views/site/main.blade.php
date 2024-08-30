@@ -2086,7 +2086,7 @@
     </div>
     <!-- -------------------End FAQs --------------- -->
 
-
+    </div>
 
 
     <!-- <-----------------End 1M Happy Customers Counting---------------->
@@ -2198,3 +2198,4 @@
     <!-- Other scripts or libraries -->
 
 @endsection
+<<
