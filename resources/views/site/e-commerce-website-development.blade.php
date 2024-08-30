@@ -119,8 +119,8 @@
                     <img src="{{ asset('images/ecommerce.webp') }}" alt="E-commerce Website Development" class="img-fluid">
                 </div>
                 <div class="col-lg-6">
-                    <h1 class="mb-3">
-                        Best <span class="gradient-heading">eCommerce Website</span> Development</h1>
+                    <h2 class="mb-3">
+                        Best <span class="gradient-heading">eCommerce Website</span> Development</h2>
                     <p>
                         E-commerce Store
                         Best eCommerce Website Development
@@ -205,7 +205,7 @@
         <div class="container">
             <div class="row gallery">
                 <div class="col-12 text-center mb-4">
-                    <h1 class="gradient-heading">Our Award-Winning Company Website Portfolio</h1>
+                    <h2 class="gradient-heading">Our Award-Winning Company Website Portfolio</h2>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <img src="{{ asset('images/1-ecommerce.webp') }}">

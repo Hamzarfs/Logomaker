@@ -206,7 +206,7 @@
     <section class="custom-website container py-5 my-5">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <h1 class="mb-3"><span class="gradient-heading">Custom Website</span> Design & Development</h1>
+                <h2 class="mb-3"><span class="gradient-heading">Custom Website</span> Design & Development</h2>
                 <p>
                     Designing a one-of-a-kind website requires a thoughtful and deliberate approach to creating a tailored
                     online identity that aligns with your objectives. It begins by clearly defining the purpose, target
@@ -232,7 +232,7 @@
                     class="img-fluid">
             </div>
             <div class="col-lg-6">
-                <h1 class="mb-3"><span class="gradient-heading">WordPress Website</span> Design & Development</h1>
+                <h2 class="mb-3"><span class="gradient-heading">WordPress Website</span> Design & Development</h2>
                 <p>
                     Embark on the straightforward journey of building a WordPress website that seamlessly integrates with the dynamic WordPress ecosystem. Begin by selecting a theme that perfectly aligns with your site's goals and aesthetics. Personalize your chosen theme with ease using the user-friendly WordPress Customizer, making effortless visual adjustments to colors, fonts, and layout that reflect your unique brand.
                 </p>
@@ -247,7 +247,7 @@
     <section class="shopify-website container py-5 my-5">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <h1 class="mb-3"><span class="gradient-heading">Shopifiy Website</span> Developments</h1>
+                <h2 class="mb-3"><span class="gradient-heading">Shopifiy Website</span> Developments</h2>
                 <p>
                     Building a website on Shopify is just like opening up a charming boutique in a cozy, welcoming community. Start by claiming your very own personal corner in the virtual world by signing up for a Shopify account and browsing through the Shopify Theme Store to find the perfect design. Then, put the finishing touches on your space by customizing colors, fonts, and layout. Fill up your shelves with an array of products, thoughtfully arranged into categories for a delightful and inviting shopping experience.
                 </p>
@@ -269,7 +269,7 @@
                     class="img-fluid">
             </div>
             <div class="col-lg-6">
-                <h1 class="mb-3"><span class="gradient-heading">E-commerce Website</span> Development</h1>
+                <h2 class="mb-3"><span class="gradient-heading">E-commerce Website</span> Development</h2>
                 <p>
                     Revamp your digital presence with our top-notch e-commerce website development services. Our team specializes in creating attractive and streamlined shopping journeys that are specifically designed for your brand. With our attention to detail, your website will feature eye-catching product displays and effortless checkouts, effectively boosting conversions.
                 </p>
@@ -284,7 +284,7 @@
     <section class="graphics-designing container py-5 my-5">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <h1 class="mb-3"><span class="gradient-heading">Graphics</span> designing</h1>
+                <h2 class="mb-3"><span class="gradient-heading">Graphics</span> designing</h2>
                 <p>
                     Graphic design is an electrifying field that involves organizing visual elements to effectively communicate messages. With a seamless blend of inventiveness and technical skill, designers mold brand identities by using captivating logos, dynamic color palettes, and captivating aesthetics. Whether working in print or online, they craft powerful materials, including eye-catching brochures, striking posters, sleek web designs, and captivating social media graphics.
                 </p>

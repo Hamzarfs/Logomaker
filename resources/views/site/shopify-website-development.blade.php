@@ -119,7 +119,7 @@
                         class="img-fluid">
                 </div>
                 <div class="col-lg-6">
-                    <h1 class="mb-3"><span class="gradient-heading">Shopifiy Website</span> Developments</h1>
+                    <h2 class="mb-3"><span class="gradient-heading">Shopifiy Website</span> Developments</h2>
                     <p>
                         Building a website on Shopify is just like opening up a charming boutique in a cozy, welcoming community. Start by claiming your very own personal corner in the virtual world by signing up for a Shopify account and browsing through the Shopify Theme Store to find the perfect design. Then, put the finishing touches on your space by customizing colors, fonts, and layout. Fill up your shelves with an array of products, thoughtfully arranged into categories for a delightful and inviting shopping experience.
                     </p>
@@ -135,7 +135,7 @@
         <div class="container">
             <div class="row gallery">
                 <div class="col-12 text-center mb-4">
-                    <h1 class="gradient-heading">Our Award-Winning Company Website Portfolio</h1>
+                    <h2 class="gradient-heading">Our Award-Winning Company Website Portfolio</h2>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <img src="{{ asset('images/shopify-1.webp') }}">

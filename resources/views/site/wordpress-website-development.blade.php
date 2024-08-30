@@ -121,7 +121,7 @@
                         class="img-fluid">
                 </div>
                 <div class="col-lg-6">
-                    <h1 class="mb-3"><span class="gradient-heading">WordPress Website</span> Development</h1>
+                    <h2 class="mb-3"><span class="gradient-heading">WordPress Website</span> Development</h2>
                     <p>
                         Embark on the straightforward journey of building a WordPress website that seamlessly integrates
                         with the dynamic WordPress ecosystem. Begin by selecting a theme that perfectly aligns with your
@@ -140,9 +140,9 @@
     <section class="wp-projects py-5 my-5 bg-white">
         <div class="container">
             <div class="text-center mb-5">
-                <h1>
+                <h2>
                     Our Latest WordPress Web Design Projects
-                </h1>
+                </h2>
             </div>
             <!-- Slider main container -->
             <div class="swiper">
@@ -193,7 +193,7 @@
         <div class="container">
             <div class="row gallery">
                 <div class="col-12 text-center mb-4">
-                    <h1 class="gradient-heading">Our Award-Winning Company Website Portfolio</h1>
+                    <h2 class="gradient-heading">Our Award-Winning Company Website Portfolio</h2>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <img src="{{ asset('images/fundflow.webp') }}">

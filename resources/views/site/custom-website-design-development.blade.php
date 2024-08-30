@@ -127,9 +127,9 @@
     <section class="custom-web container py-5 my-5">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4">
-                <h1>
+                <h2>
                     Custom <span class="gradient-heading">Web Design & Development</span>
-                </h1>
+                </h2>
                 <p class="column-1">
                     At RFS logo design, we specialize in crafting exceptional websites that are customized to suit your
                     business’s needs. Our websites are not only optimized for mobile devices but also visually captivating,
@@ -194,7 +194,7 @@
         <div class="container">
             <div class="row gallery">
                 <div class="col-12 text-center mb-4">
-                    <h1 class="gradient-heading">Our Award-Winning Company Website Portfolio</h1>
+                    <h2 class="gradient-heading">Our Award-Winning Company Website Portfolio</h2>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <img src="{{ asset('images/1-1.webp') }}">

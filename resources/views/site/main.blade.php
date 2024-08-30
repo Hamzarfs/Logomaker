@@ -421,7 +421,8 @@
 
         .overlay1 {
             width: 70px;
-            position: absolute;
+            position: a    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+            bsolute;
             height: 70px;
             border-radius: 50%;
             background: #F7B318;
@@ -433,7 +434,8 @@
 
         .overlay2 {
             width: 70px;
-            position: absolute;
+            position: a    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+            bsolute;
             height: 70px;
             border-radius: 50%;
             background: #C32626;
@@ -682,7 +684,8 @@
             left: 37px;
         }
 
-        .slider {
+        .slider {    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
@@ -1068,7 +1071,7 @@
             }
         }
 
-        @media only screen and (min-width: 1920px) {
+        @media only screen and (max-width: 4520px) {
             .card11 {
                 color: #fff;
                 padding-left: 10px;
@@ -2388,7 +2391,7 @@
             });
         });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
     {{-- <script>
         $('.dropdown-menu').addClass('show');
 
