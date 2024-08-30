@@ -216,15 +216,19 @@
         }
 
         .new-banner h1 {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-align: start;
-        }
-
-        .new-banner p {
-            font-size: 1.25rem;
-            /* Font size for paragraph */
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: start;
+}
+.new-banner h2 {
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: start;
+}
+     .new-banner p {
+            font-size: 1.25rem; /* Font size for paragraph */
             margin-bottom: 30px;
         }
 
@@ -610,18 +614,19 @@
 
 
 
-        .new-card-design-section {
-            background-color: #f4f4f4;
+.new-card-design-section {
+
             padding: 20px;
         }
 
-        .new-card-design-title {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 24px;
-            font-weight: bold;
-        }
 
+        .new-card-design-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: bold;
+
+}
         .new-card-design-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -641,16 +646,17 @@
         }
 
         .new-card-design-card {
-            background-color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            position: relative;
-            text-align: center;
-            padding: 20px;
-            transition: transform 0.3s;
-        }
-
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    /* padding: 20px; */
+    transition: transform 0.3s;
+}
         .new-card-design-card img {
             max-width: 100%;
             height: auto;
@@ -683,7 +689,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: #6868D1;
             color: #fff;
             display: flex;
             align-items: center;
@@ -736,7 +742,7 @@
                 flex: 78% !important;
             }
         }
-
+        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
 
         @media only screen and (max-width: 767px) {
             .owl-carousel .owl-item img {
@@ -753,7 +759,15 @@
         }
 
         @media (max-width: 768px) {
+
+            img.trust-images {
+    width: 300px;
+}
             .new-banner h1 {
+                font-size: 2rem;
+                text-align: center;
+            }
+            .new-banner h2 {
                 font-size: 2rem;
                 text-align: center;
             }
@@ -973,8 +987,114 @@
     </div> --}}
 
 
+    {{-- <section class="new-banner">
+        <div class="row row-1">
+            <div class="col-1">
+                <h1>Free Logo Maker</h1>
+            </div>
+            <div class="col-2">
+                <img src="{{url('images/image 57.png')}}" alt="Image Description">
+            </div>
+        </div>
+        <div class="row row-2">
+            <div class="col-1">
+                <h2>Tailored for Every Industry</h2>
+            </div>
+        </div>
+        <div class="row row-3">
+            <div class="col-1">
+                <img src="your-image-path-2.jpg" alt="Image Description">
+            </div>
+            <div class="col-2">
+                <h3>Design Your Logo in Minutes</h3>
+            </div>
+        </div>
+        <div class="row row-4">
+            <p>Unleash your creativity and watch your logo come to life effortlessly. Get in touch with us now!</p>
+        </div>
+        <div class="row row-5">
+            <img src="your-image-path-3.jpg" alt="Image Description">
+            <div class="bottom-border"></div>
+        </div>
+        <div class="row row-6">
+            <form>
+
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section> --}}
 
     <section class="new-banner ptb-100">
+        <div class="container" style="border-right: 1px solid white; text-align: center;">
+            <!-- Row 1: Two Columns -->
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <h1 class="new-banner-title">Free Logo Maker</h1>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/Property 1=Default.png" alt="Logo 1" class="banner-image">
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+            <!-- Row 2: Single Column -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="banner-subtitle">Tailored for Every Industry</h2>
+                </div>
+            </div>
+
+            <!-- Row 3: Two Columns -->
+            <div class="row">
+                <div class="col-md-4 align-content-center">
+                    <img src="images/Property 1=Default (1).png" alt="Design Image" class="banner-image">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="banner-subtitle">Design Your Logo<br>in Minutes</h2>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+            <!-- Row 4: Paragraph Text -->
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="banner-paragraph">Unleash your creativity and watch your logo come to life effortlessly. <br> Get in touch with us now!</p>
+                </div>
+            </div>
+
+            <!-- Row 5: Image with Bottom Border -->
+            <div class="row">
+                <div class="col-md-12" style="text-align: -webkit-center;">
+                    <img src="images/Group 124.png" alt="Trust 1" class="trust-images">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 my-3">
+                    <div class="banner-divider" style="border-top: 1px solid white; width: 100%;"></div>
+                </div>
+            </div>
+
+            <!-- Row 6: Centered Form -->
+            <div class="row justify-content-center mt-3" >
+                <div class="col-md-8">
+                    <form id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
+                        @csrf
+                        <div class="input-group mb-3" >
+                            <input type="text" class="form-control" id="companyName11" name="company" placeholder="Enter your company name" aria-label="Enter your company name" maxlength="30">
+                            <input type="hidden" name="flow" value="home">
+                            <input type="submit" class="custom-button-banner" value="Get Started">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    {{-- <section class="new-banner ptb-100">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="row justify-content-center">
@@ -1010,7 +1130,7 @@
                     </div>
                 </div>
         </div>
-    </section>
+    </section> --}}
     <!----------------------------------------- End Banner Section ------------------------------->
 
 
@@ -1452,55 +1572,42 @@
 
 
 
-    <div style="padding-top: 70px; padding-bottom: 100px; background-color:#6868D1">
-        <div class="new-card-design-section">
-            <div class="new-card-design-container">
-                <h2 class="new-card-design-title">Designing The Perfect Logo Made Easy With Our Logo Creator</h2>
-                <p style="text-align: center;">Still unsure? Dive deeper or consult with our expert designers for tailored
-                    guidance.</p>
-            </div>
+    <div style="padding-top: 70px; padding-bottom: 100px; " >
+    <div class="new-card-design-section">
+        <div class="new-card-design-container">
+            <h2 class="new-card-design-title">Designing The Perfect Logo Made Easy <br>With Our Logo Creator</h2>
+            <p style="text-align: center;">Still unsure? Dive deeper or consult with our expert designers for tailored guidance.</p>
+        </div>
 
-            <div class="new-card-design-container">
-                <div class="new-card-design-row">
-                    <div class="new-card-design-col">
-                        <div class="new-card-design-card">
-                            <img src="{{ url('images/card-design1.png') }}" alt="Image 1">
-                            <h2>Card Title 1</h2>
-                            <i class="fas fa-arrow-up"></i>
-                            <div class="new-card-design-overlay">
-                                <div class="new-card-design-overlay-text">Logos come in various types, each serving
-                                    different purposes: emblem logos combine text and symbols within a badge-like shape;
-                                    wordmark logos focus on stylized text; lettermark logos use initials or abbreviations;
-                                    abstract logos represent ideas in a unique, non-literal way; and pictorial logos
-                                    illustrate the business with a visual icon.</div>
-                            </div>
+        <div class="new-card-design-container">
+            <div class="new-card-design-row">
+                <div class="new-card-design-col">
+                    <div class="new-card-design-card">
+                        <img src="{{url('images/card-design1.png')}}" alt="Image 1">
+                        <h2>Logo Type</h2>
+                        <i class="fas fa-arrow-up"></i>
+                        <div class="new-card-design-overlay">
+                            <div class="new-card-design-overlay-text">Logos come in various types, each serving different purposes: emblem logos combine text and symbols within a badge-like shape; wordmark logos focus on stylized text; lettermark logos use initials or abbreviations; abstract logos represent ideas in a unique, non-literal way; and pictorial logos illustrate the business with a visual icon.</div>
                         </div>
                     </div>
-                    <div class="new-card-design-col">
-                        <div class="new-card-design-card">
-                            <img src="{{ url('images/card-design2.png') }}" alt="Image 2">
-                            <h2>Card Title 2</h2>
-                            <i class="fas fa-arrow-up"></i>
-                            <div class="new-card-design-overlay">
-                                <div class="new-card-design-overlay-text">Colors are key to your brand’s identity, each
-                                    evoking distinct emotions. Red bursts with energy and passion, while blue signals trust
-                                    and professionalism. Use our logo maker tool to pick the perfect palette that captures
-                                    your brand’s essence and connects with your audience.</div>
-                            </div>
+                </div>
+                <div class="new-card-design-col">
+                    <div class="new-card-design-card">
+                        <img src="{{url('images/card-design2.png')}}" alt="Image 2">
+                        <h2>Logo Colors</h2>
+                        <i class="fas fa-arrow-up"></i>
+                        <div class="new-card-design-overlay">
+                            <div class="new-card-design-overlay-text">Colors are key to your brand’s identity, each evoking distinct emotions. Red bursts with energy and passion, while blue signals trust and professionalism. Use our logo maker tool to pick the perfect palette that captures your brand’s essence and connects with your audience.</div>
                         </div>
                     </div>
-                    <div class="new-card-design-col">
-                        <div class="new-card-design-card">
-                            <img src="{{ url('images/card-design3.png') }}" alt="Image 3">
-                            <h2>Card Title 3</h2>
-                            <i class="fas fa-arrow-up"></i>
-                            <div class="new-card-design-overlay">
-                                <div class="new-card-design-overlay-text">Choosing the right font is crucial for your brand
-                                    logo, as it reflects your brand’s personality and message. Here are some ideas for
-                                    you. Serif Fonts: Exude tradition and reliability. Sans-Serif Fonts: Suggest modernity
-                                    and simplicity. Script Fonts: Add a touch of elegance. Display Fonts: Command attention
-                                    and stand out.</div>
-                            </div>
+                </div>
+                <div class="new-card-design-col">
+                    <div class="new-card-design-card">
+                        <img src="{{url('images/card-design3.png')}}" alt="Image 3">
+                        <h2>Logo Fonts</h2>
+                        <i class="fas fa-arrow-up"></i>
+                        <div class="new-card-design-overlay">
+                            <div class="new-card-design-overlay-text">Choosing the right font is crucial for your brand logo, as it reflects your brand’s personality and message. Here are some ideas for you. Serif Fonts: Exude tradition and reliability. Sans-Serif Fonts: Suggest modernity and simplicity. Script Fonts: Add a touch of elegance. Display Fonts: Command attention and stand out.</div>
                         </div>
                     </div>
                 </div>
@@ -1511,10 +1618,10 @@
 
     <!------------Start Image Box Section ------------->
 
-    <section class="image-box"
+    {{-- <section class="image-box"
         style="padding-top: 100px; padding-bottom: 100px; background-image: url('images/plan.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="container">
-            <!-- First Row -->
+
             <div class="row mb-4">
                 <div class="col text-center">
                     <h2>Designing The Perfect Logo Made Easy With Our Logo Creator</h2>
@@ -1522,9 +1629,9 @@
                         designers for tailored guidance.</p>
                 </div>
             </div>
-            <!-- Second Row -->
+
             <div class="row">
-                <!-- First Column -->
+
                 <div class="col-md-4 image-column mb-3 mb-md-0">
                     <div class="text-center">
                         <img src="images/Imagebox1_bird.png" alt="Logo type">
@@ -1535,9 +1642,9 @@
                         focus on stylized text; lettermark logos use initials or abbreviations; abstract logos represent
                         ideas in a unique, non-literal way; and
                         pictorial logos illustrate the business with a visual icon.</p>
-                    <!-- <a href="#" style= "color:#646bd9;">Connect with an expert</a> -->
+
                 </div>
-                <!-- Second Column -->
+
                 <div class="col-md-4 image-column mb-3 mb-md-0">
                     <div class="text-center">
                         <img src="images/Imagebox2_color.png" alt="Logo colors">
@@ -1549,9 +1656,9 @@
                         trust and professionalism. Use our logo maker tool to pick the perfect
                         palette that captures your brand’s essence and connects with your audience.
                     </p>
-                    <!-- <a href="#" style= "color:#646bd9;">Connect with an expert</a> -->
+
                 </div>
-                <!-- Third Column -->
+
                 <div class="col-md-4 image-column mb-3 mb-md-0">
                     <div class="text-center">
                         <img src="images/Imagebox3_font.png" alt="Logo fonts">
@@ -1564,11 +1671,11 @@
                         <b>Script Fonts:</b> Add a touch of elegance.<br>
                         <b>Display Fonts:</b> Command attention and stand out.
                     </p>
-                    <!-- <a href="#" style= "color:#646bd9;">Connect with an expert</a> -->
+
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!------------end Image Box Section ------------->
 
