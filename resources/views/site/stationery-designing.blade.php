@@ -1,6 +1,7 @@
 @extends('site.common')
 
-@section('title', 'Stationery Designing')
+@section('title', 'Professional Stationery Designing Services - RFS Logo Design')
+@section('meta_desc', 'Elevate your brand identity with RFS Logo Design professional stationery designing services. Get creative branding materials for effective online presence. ')
 
 @section('content')
 

@@ -1,7 +1,7 @@
 @extends('site.common')
 
-@section('title', 'Welcome')
-
+@section('title', 'Custom Logo Design Company Texas  - RFS Logo Design')
+@section('meta_desc', 'At RFS Logo Design, we provide premier custom logo services in Texas. As the #1 ranked company, our expert designers specialize in impactful branding solutions.')
 @section('content')
 <!DOCTYPE html>
 <html lang="en">

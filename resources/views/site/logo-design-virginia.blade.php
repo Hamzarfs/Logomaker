@@ -1,7 +1,7 @@
 @extends('site.common')
 
-@section('title', 'Welcome')
-
+@section('title', 'Virginia Custom Logo Design Compnay - RFS Logo Design')
+@section('meta_desc', 'Explore superior custom logo design services in Virginia with RFS Logo Design company. Our expert team crafts impactful brand identities as a top-tier agency.')
 @section('content')
 <!DOCTYPE html>
 <html lang="en">

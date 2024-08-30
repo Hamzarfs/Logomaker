@@ -1,16 +1,16 @@
 @extends('site.common')
 
-@section('title', 'Graphics Designing')
-
+@section('title', 'Professional Graphic Designing Services - RFS Logo Design')
+@section('meta_desc', 'Transform your brand with RFS Logo Design professional graphic designing services. From logos to branding materials, we create visually stunning assets for your brand.')
 @section('content')
 
     <div class="banner-section">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 content-section">
-                    <h1>Design Just Got Easy</h1>
-                    <h2>Create impressive videos and images <span class="logo-design-color">designs in minutes.</span>
-                    </h2>
+                    <h2>Design Just Got Easy</h2>
+                    <h1>Create impressive videos and images <span class="logo-design-color">designs in minutes.</span>
+                    </h1>
                     <ul class="icon-list">
                         <li><i class="fas fa-trophy"></i> Graphic Designing In Digital Marketing</li>
                         <li><i class="fas fa-briefcase"></i> Multimedia & Print Media Services</li>

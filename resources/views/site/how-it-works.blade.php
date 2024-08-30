@@ -1,8 +1,8 @@
 <!-- resources/views/site/main.blade.php -->
 @extends('site.common')
 
-@section('title', 'How it works')
-
+@section('title', 'How Our Logo Maker Works for Logo Design - RFS Logo Design')
+@section('meta_desc', 'Discover how our logo maker simplifies logo creation. Learn how easy it is to design, customize, and download your perfect logo with RFS Logo Design in just a few steps.')
 @section('content')
 
     <!-- Bootstrap CSS -->

@@ -1,7 +1,7 @@
 @extends('site.common')
 
-@section('title', 'Shopify Website Development')
-
+@section('title', 'Shopify Website Development Services - RFS Logo Design')
+@section('meta_desc', 'Get Shopify Website Development Services for your web and boost your online business. RFS Logo Design has dedicated developers to create stunning Shopify Websites. ')
 @section('content')
 
 
