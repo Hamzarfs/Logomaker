@@ -2198,4 +2198,4 @@
     <!-- Other scripts or libraries -->
 
 @endsection
-<<
+ 
