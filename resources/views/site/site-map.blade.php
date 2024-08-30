@@ -1,6 +1,6 @@
 @extends('site.common')
 
-@section('title', 'sitemap')
+@section('title', 'Sitemap')
 
 @section('content')
 
@@ -99,9 +99,9 @@
                     <div class="sitemap-item">
                         <h4>Free Design Tool</h4>
                         <ul class="list-unstyled">
-                            <li><a href="#">Logo Maker</a></li>
-                            <li><a href="#">Custom Design</a></li>
-                            <li><a href="#">Print Services</a></li>
+                            <li><a href="{{ route('logo-maker') }}">Logo Maker</a></li>
+                            <li><a href="{{ url('custom-logo') }}">Custom Design</a></li>
+                            <li><a href="{{ url('printing') }}">Print Services</a></li>
                         </ul>
                     </div>
                 </div>
@@ -109,9 +109,9 @@
                     <div class="sitemap-item">
                         <h4>Information</h4>
                         <ul class="list-unstyled">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="{{ url('/') }}">Home</a></li>
+                            <li><a href="{{ url('about-us') }}">About Us</a></li>
+                            <li><a href="{{ url('contact-us') }}">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -146,7 +146,6 @@
                     <div class="sitemap-item">
                         <h4>Other services</h4>
                         <ul class="list-unstyled">
-                            <li><a href="{{ url('printing') }}">Printing</a></li>
                             <li><a href="{{ url('stationery-designing') }}">Stationery Designing</a></li>
                             <li><a href="{{ url('graphic-designing') }}">Graphic Designing</a></li>
                             <li><a href="{{ url('website-design-development') }}">Website Design Development</a></li>

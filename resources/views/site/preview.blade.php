@@ -18,10 +18,9 @@
 
         .heading {
             font-family: Poppins, sans-serif;
-            background-color: #3557BF;
-            color: white;
+            /* background-color: #3557BF; */
+            color: black;
         }
-
         .heading h1 {
             margin: 0;
         }
