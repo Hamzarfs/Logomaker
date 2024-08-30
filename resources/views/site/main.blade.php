@@ -1688,6 +1688,9 @@
         <div class="new-card-design-container">
             <h2 class="new-card-design-title">Designing The Perfect Logo Made Easy <br>With Our Logo Creator</h2>
             <p style="text-align: center;">Still unsure? Dive deeper or consult with our expert designers for tailored guidance.</p>
+            <div class="text-center">
+                    <a href="{{ url('/logo-maker') }}"><button class="search-button-online">Get Started</button></a>
+                </div>
         </div>
 
         <div class="new-card-design-container">
@@ -1830,7 +1833,7 @@
                     <!-- Button -->
                     <div class="text-center">
                         <a href="{{ url('/logo-maker') }}">
-                            <button class="btn btn-primary btn-startup">For Startups</button>
+                            <button class="btn btn-primary btn-startup">Get Started</button>
                         </a>
                     </div>
                 </div>
@@ -1864,7 +1867,7 @@
                     <!-- Button -->
                     <div class="text-center">
                         <a href="{{ url('/custom-logo') }}">
-                            <button class="btn btn-primary btn-small-business">For Small Businesses</button>
+                            <button class="btn btn-primary btn-small-business">Get Started</button>
                         </a>
                     </div>
                 </div>

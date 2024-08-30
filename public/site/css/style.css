@@ -317,17 +317,17 @@ p,
     height: 50px;
     border-radius: 5px;
     color: #fff;
-    background-color: #474065;
+    background-color: #512F90;
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
     text-align: center;
-    border-color: #474065;
+    border-color: #512F90;
 }
 
 .search-button-online:hover {
-    background-color: #474065;
-    border-color: #474065;
+    background-color: #512F90;
+    border-color: #512F90;
     color: #f8f9fa;
 }
 
@@ -620,19 +620,21 @@ p,
     padding: 10px;
     border-radius: 5px;
     color: #fff;
-    background-color: #646BD9;
+    background-color: #512f90;
     font-size: 15px;
     font-weight: 700;
     line-height: 24px;
     text-align: center;
-    border-color: #646BD9;
+    border-color: #512f90;
     margin-bottom: 60px;
 
 }
 
 .custom-button-online:hover {
-    background-color: #646BD9;
-    border-color: #646BD9;
+    background-color: #512f90;
+    border-color: #512f90;
+    color:white;
+    text-decoration: none;
 }
 
 
@@ -1093,6 +1095,11 @@ margin-bottom: 50px;
 .slider-button:hover {
      color: #fff; /* Darker background on hover */
      text-decoration: none;
+}
+@media (max-width: 767px) {
+    .text-slider .slide {
+        font-size: 32px; /* Adjust font size for mobile views */
+    }
 }
 
 

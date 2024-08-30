@@ -12,6 +12,10 @@
             text-align: justify !important;
             color: #fff;
         }
+        a{
+            text-decoration: none !important;
+        }
+        
     </style>
 
 <!------------- Start About Us Banner -------------->
@@ -41,7 +45,7 @@
                 <h2>Turn Your Visions Into Reality</h2>
                 <p style="text-align:justify;">
                 Welcome to RFS Logo Design, your ultimate destination for all things branding. Whether 
-                you are using our free logo maker or opting for <a href="{{ url('/logo-maker') }}" style="color:#512F90;"><b>custom logo design services</b></a>, we craft unique 
+                you are using our <a href="{{ url('/logo-maker') }}" style="color:#512F90;"><b>free logo maker</b></a> or opting for <a href="{{ url('/logo-maker') }}" style="color:#512F90;"><b>custom logo design services</b></a>, we craft unique 
                 and impactful logos tailored to your vision.
                 </p>
                 <p style = text-align:justify;>Our expert graphic designers are dedicated to bringing your ideas to life, while our top-notch 
@@ -60,7 +64,7 @@
 
     <div class="container our-work-section">
     <h3>Our Work</h3>
-    <p>Boost your business with a custom logo crafted by our expert freelance designers. After all,</p>
+    <p>Boost your business with a custom logo crafted by our expert in-house logo designers. After all,</p>
     <p style= margin-top:-15px;>great design drives success and allows you to differentiate yourself in the competitive market landscape of today.</p>
     <p style= margin-top:-15px;>market landscape of today.</p>
 
