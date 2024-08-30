@@ -19,6 +19,15 @@
     color: #010935; /* Heading color */
     margin-bottom: 1rem; /* Spacing below the heading */
 }
+
+.form-inline .form-control {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+        height: 50px;
+    }
+
+    
 .section-heading-we {
     text-align: center !important; /* Center align the text */
     margin-bottom: 2rem; /* Add space below the heading */
@@ -1914,10 +1923,10 @@
 
 
     <!-- Start Hire Section -->
-    <section class="hire-section-bg">
+    <!-- <section class="hire-section-bg">
         <div class="container hire-section">
             <div class="row align-items-center">
-                <!-- Left Column -->
+                
                 <div class="col-md-6 left-column">
                     <p>Share Your Unique Vision With Our</p>
                     <h2>Custom Logo Designer</h2>
@@ -1928,12 +1937,11 @@
 
 
                 </div>
-                <!-- Right Column -->
-                <div class="col-md-6 right-column">
+                 <div class="col-md-6 right-column">
                     <img src="images/hire-section-logos.png" class="hire-section-logo" alt="Logo">
                 </div>
             </div>
-    </section>
+    </section> -->
 
     <!-- End Hire Section -->
 
