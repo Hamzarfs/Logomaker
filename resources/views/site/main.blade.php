@@ -27,7 +27,7 @@
         height: 50px;
     }
 
-    
+
 .section-heading-we {
     text-align: center !important; /* Center align the text */
     margin-bottom: 2rem; /* Add space below the heading */
@@ -870,6 +870,9 @@
             height: 80px;
         }
 
+
+
+
         @media (max-width: 480px) {
             .new-card-design-col {
                 flex: 1 1 100%;
@@ -1065,7 +1068,7 @@
             }
         }
 
-        @media only screen and (max-width: 1920px) {
+        @media only screen and (min-width: 1920px) {
             .card11 {
                 color: #fff;
                 padding-left: 10px;
@@ -1791,7 +1794,7 @@
 <section class="plan-section py-5">
 
     <div class="container">
-    
+
         <div class="row justify-content-center">
         <div class="section-heading-we mb-4">
             <h2>Plan Your Way to Success</h2>
@@ -1926,7 +1929,7 @@
     <!-- <section class="hire-section-bg">
         <div class="container hire-section">
             <div class="row align-items-center">
-                
+
                 <div class="col-md-6 left-column">
                     <p>Share Your Unique Vision With Our</p>
                     <h2>Custom Logo Designer</h2>
@@ -2386,10 +2389,13 @@
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    {{-- <script>
+        $('.dropdown-menu').addClass('show');
+
+    </script> --}}
     {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> --}}
 
     <!-- Other scripts or libraries -->
 
 @endsection
- 
