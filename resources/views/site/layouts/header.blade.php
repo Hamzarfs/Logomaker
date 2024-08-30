@@ -131,6 +131,9 @@
         width: 200px;
     }
 
+
+
+
     /* For screen 1200px to 1399px */
     @media (max-width: 1399.98px) {
         .dropdown-menu.dropdown-menu-right.show {
@@ -239,7 +242,7 @@
             </div>
         </div>
     </nav>
-   
+
 
     <div class="mega-menu" style="display:none" >
         <div class="container">
@@ -255,7 +258,7 @@
                     </form>
                 </div>
             </div>
-            
+
             <div class="row mt-3 justify-content-center">
                 @foreach ($categories as $index => $category)
                     @if ($index % 10 == 0)
