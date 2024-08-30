@@ -307,6 +307,7 @@ p,
     /* Adjust input height */
     margin-right: 10px;
     font-size: 13px;
+    width: 50px;
 }
 
 .search-button-online {
