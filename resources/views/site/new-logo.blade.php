@@ -7,7 +7,7 @@
     <style>
         .category-top-section {
             padding: 60px 0;
-            background-color: #080A2D;
+            background-color: #6868D1;
         }
 
         .category-top-section h1 {

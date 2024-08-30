@@ -78,7 +78,7 @@
             font-weight: 700;
         }
 
-        .divider {
+        .divider-logo {
             height: 2px;
             background-color: #512f90;
             margin: 40px 0;
@@ -141,7 +141,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="divider"></div>
+                <div class="divider-logo"></div>
                 <div class="col-md-4">
                     <div class="sitemap-item">
                         <h4>Other services</h4>
@@ -157,7 +157,7 @@
                     </div>
                 </div>
             </div>
-            <div class="divider"></div>
+            <div class="divider-logo"></div>
             <!-- Logo Ideas Section -->
             <div class="sitemap-item">
                 <h4>Categories</h4>
