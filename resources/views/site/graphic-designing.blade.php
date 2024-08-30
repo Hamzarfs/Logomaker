@@ -1,17 +1,16 @@
-<!-- resources/views/site/main.blade.php -->
 @extends('site.common')
 
-@section('title', 'Welcome')
+@section('title', 'Graphics Designing')
 
 @section('content')
 
-<body>
     <div class="banner-section">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 content-section">
                     <h1>Design Just Got Easy</h1>
-                    <h2>Create impressive videos and images <span class="logo-design-color">designs in minutes.</span></h2>
+                    <h2>Create impressive videos and images <span class="logo-design-color">designs in minutes.</span>
+                    </h2>
                     <ul class="icon-list">
                         <li><i class="fas fa-trophy"></i> Graphic Designing In Digital Marketing</li>
                         <li><i class="fas fa-briefcase"></i> Multimedia & Print Media Services</li>
@@ -55,8 +54,8 @@
     </div>
 
 
-        <!--------------------- Start PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
-        <div class="logo-designs-ca">
+    <!--------------------- Start PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
+    <div class="logo-designs-ca">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 text-center">
@@ -64,117 +63,115 @@
                 </div>
                 <div class="col-lg-6">
                     <h3>Graphic Designing</h3>
-                    <p style="text-align: justify;">Graphic design is an electrifying field that involves organizing 
-                        visual elements to effectively communicate messages. With a seamless blend of inventiveness 
-                        and technical skill, designers mold brand identities by using captivating logos, dynamic color 
-                        palettes, and captivating aesthetics. Whether working in print or online, they craft powerful 
-                        materials, including eye-catching brochures, striking posters, sleek web designs, and captivating 
+                    <p style="text-align: justify;">Graphic design is an electrifying field that involves organizing
+                        visual elements to effectively communicate messages. With a seamless blend of inventiveness
+                        and technical skill, designers mold brand identities by using captivating logos, dynamic color
+                        palettes, and captivating aesthetics. Whether working in print or online, they craft powerful
+                        materials, including eye-catching brochures, striking posters, sleek web designs, and
+                        captivating
                         social media graphics.</p>
                 </div>
             </div>
         </div>
     </div>
     <!--------------------- End PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
-<!--------------------- Start PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
 
-<div class="services-section" style= padding:0px;>
-    <div class="container">
-        <h2>What Services Do We Offer?</h2>
-        <p>Our experts are dedicated to delivering excellence in every project.</p>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="service-card business-card-design">
-                    <img src="{{ url('images/Stationery.png') }}" alt="Business Card Design">
-                    <h4>Branding Design</h4>
-                    <p>A professional branding design service enhances a brand’s visual identity. It creates a positive ecosystem for the brand to grow amid competitors.</p>
+    <!--------------------- Start PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
+    <div class="services-section" style=padding:0px;>
+        <div class="container">
+            <h2>What Services Do We Offer?</h2>
+            <p>Our experts are dedicated to delivering excellence in every project.</p>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="service-card business-card-design">
+                        <img src="{{ url('images/Stationery.png') }}" alt="Business Card Design">
+                        <h4>Branding Design</h4>
+                        <p>A professional branding design service enhances a brand’s visual identity. It creates a
+                            positive ecosystem for the brand to grow amid competitors.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="service-card letterhead-design">
-                    <img src="{{ url('images/BRANDING.png') }}" alt="Letterhead Design">
-                    <h4>Stationery Design</h4>
-                    <p>Utilizing a custom stationery design service can facilitate the growth of your business. The professional designs will enhance your brand through direct.</p>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="service-card letterhead-design">
+                        <img src="{{ url('images/BRANDING.png') }}" alt="Letterhead Design">
+                        <h4>Stationery Design</h4>
+                        <p>Utilizing a custom stationery design service can facilitate the growth of your business. The
+                            professional designs will enhance your brand through direct.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="service-card envelope-design">
-                    <img src="{{ url('images/LOGODESIGN(1).png') }}" alt="Envelope Design">
-                    <h4>Logo Design</h4>
-                    <p>Grow your business with a professional, custom logo designed by our designer creative experts. Because good design makes great business.</p>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="service-card envelope-design">
+                        <img src="{{ url('images/LOGODESIGN(1).png') }}" alt="Envelope Design">
+                        <h4>Logo Design</h4>
+                        <p>Grow your business with a professional, custom logo designed by our designer creative
+                            experts. Because good design makes great business.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!--------------------- End PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
+    <!--------------------- End PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
 
-
-<!---------------------- Start Portfolio -------------------------->
-
+    <!---------------------- Start Portfolio -------------------------->
     <div class="logo-designs-portfolio">
-    <div class="container">
-        <div class="row filter-button-group">
-            <button class="btn filter-button active" data-filter="all">All</button>
-            <button class="btn filter-button" data-filter="iconic">Business Cards</button>
-            <button class="btn filter-button" data-filter="typography">Envelope Design</button>
-            <button class="btn filter-button" data-filter="illustrative">Letterhead Design</button>
+        <div class="container">
+            <div class="row filter-button-group">
+                <button class="btn filter-button active" data-filter="all">All</button>
+                <button class="btn filter-button" data-filter="iconic">Business Cards</button>
+                <button class="btn filter-button" data-filter="typography">Envelope Design</button>
+                <button class="btn filter-button" data-filter="illustrative">Letterhead Design</button>
+            </div>
+
+            <div class="row gallery">
+                <!-- Iconic Logos -->
+                <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
+                    <img src="{{ url('images/Business Cards01.png') }}" alt="Iconic Logo 1">
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
+                    <img src="{{ url('images/Business Cards02.png') }}" alt="Iconic Logo 2">
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
+                    <img src="{{ url('images/Business Cards03.png') }}" alt="Iconic Logo 3">
+                </div>
+
+                <!-- Typography Logos -->
+                <div class="col-lg-4 col-md-6 mb-4 filter all typography">
+                    <img src="{{ url('images/Envelope Design02.png') }}" alt="Typography Logo 1">
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 filter all typography">
+                    <img src="{{ url('images/Envelope Design01.png') }}" alt="Typography Logo 2">
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 filter all typography">
+                    <img src="{{ url('images/Envelope Design03.png') }}" alt="Typography Logo 2">
+                </div>
+
+
+                <!-- Illustrative Logos -->
+                <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
+                    <img src="{{ url('images/Letterhead Design.webp') }}" alt="Illustrative Logo 1">
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
+                    <img src="{{ url('images/Letterhead Design01.webp') }}" alt="Illustrative Logo 1">
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
+                    <img src="{{ url('images/Letterhead Design02.webp') }}" alt="Illustrative Logo 1">
+                </div>
+
+
+
+                <!-- Animated Logos -->
+                <div class="col-lg-4 col-md-6 mb-4 filter all animated">
+                    <img src="images/logo-animation-example-conversable.gif" alt="Animated Logo 1">
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 filter all animated">
+                    <img src="images/logo-design-animation.gif" alt="Animated Logo 2">
+                </div>
+            </div>
         </div>
+    </div>
+    <!---------------------- End Portfolio -------------------------->
 
-        <div class="row gallery">
-            <!-- Iconic Logos -->
-            <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
-                <img src="{{ url('images/Business Cards01.png') }}" alt="Iconic Logo 1">
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
-                <img src="{{ url('images/Business Cards02.png') }}" alt="Iconic Logo 2">
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
-                <img src="{{ url('images/Business Cards03.png') }}" alt="Iconic Logo 3">
-            </div>
-
-            <!-- Typography Logos -->
-            <div class="col-lg-4 col-md-6 mb-4 filter all typography">
-            <img src="{{ url('images/Envelope Design02.png') }}" alt="Typography Logo 1">
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 filter all typography">
-            <img src="{{ url('images/Envelope Design01.png') }}" alt="Typography Logo 2">
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 filter all typography">
-            <img src="{{ url('images/Envelope Design03.png') }}" alt="Typography Logo 2">
-            </div>
-
-
-            <!-- Illustrative Logos -->
-            <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
-                <img src="{{ url('images/Letterhead Design.webp') }}" alt="Illustrative Logo 1">
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
-                <img src="{{ url('images/Letterhead Design01.webp') }}" alt="Illustrative Logo 1">
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
-                <img src="{{ url('images/Letterhead Design02.webp') }}" alt="Illustrative Logo 1">
-            </div>
-           
-           
-
-            <!-- Animated Logos -->
-            <div class="col-lg-4 col-md-6 mb-4 filter all animated">
-                <img src="images/logo-animation-example-conversable.gif" alt="Animated Logo 1">
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 filter all animated">
-                <img src="images/logo-design-animation.gif" alt="Animated Logo 2">
-            </div>
-        </div>
-    </div>   
-   </div>
-<!---------------------- End Portfolio -------------------------->
-
-
-
- <!-- <-----------------Start Testimonial Section---------------->
-
-
- <section id="testimonial-section" class="pt-5 pb-5">
+    <!-- <-----------------Start Testimonial Section---------------->
+    <section id="testimonial-section" class="pt-5 pb-5">
         <div class="container">
             <h2 class="text-center mb-5">See What Our Clients Have to Say</h2>
             <div class="owl-carousel owl-theme">
@@ -182,83 +179,25 @@
             </div>
         </div>
     </section>
- <!-- {{----------------- End Testiomonial Section --}} -->
+    <!-- {{-- --------------- End Testiomonial Section --}} -->
 
-
-<!-------------------- Start Boxed Section ------------------>
-<section class="boxed-section">
+    <!-------------------- Start Boxed Section ------------------>
+    <section class="boxed-section">
         <div class="container">
-        <h2 style= font-size:1.6em;>Get Your Custom Stationery Designs Today!</h2>
-            <p>Enhance your brand with our professional stationery design services. We are your one stop shop 
-            for quality stationery designs & branding materials. Contact us at 
-            <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a> or 
+            <h2 style=font-size:1.6em;>Get Your Custom Graphics Designs Today!</h2>
+            <p>Enhance your brand with our professional graphics design services. We are your one stop shop for quality
+                graphics designs. Contact us at <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a> or
                 call us at <a href="tel:+15516665255">+1 (551) 666-5255</a>.</p>
-                <a href="{{ url('contact-us') }}" class="california-button-online">Get Started</a>
-
+            <a href="{{ url('contact-us') }}" class="california-button-online">Get Started</a>
         </div>
     </section>
     <!-------------------- End Boxed Section ------------------>
 
-    <!---------------------Start Crafting----------------->
-<!-- 
-    <section class="crafting-logos">
-        <div class="container">
-            <div class="row content">
-                <div class="col-md-6 image">
-                    <img src="images/Crafting Impactful Logos.png" alt="Crafting Impactful Logos">
-                </div>
-                <div class="col-md-6 text">
-                    <h2 style="font-weight: 800;">TAILORED LOGO SOLUTIONS FOR ARIZONA INDUSTRIES</h2>
-                    <p style="text-align: justify;">At RFS Logo Design, we offer tailored logo solutions for a wide range of industries in Arizona. 
-                        Our team of skilled designers collaborates closely with clients to understand their unique requirements and preferences, 
-                        ensuring that every design reflects the brand's identity and values. Whether you're in healthcare, technology, or retail, 
-                        we have the expertise to create logos that stand out in the market and resonate with your target audience. With our custom 
-                        logo design services, we help businesses across industries elevate their brand image and make a lasting impact in the Arizona 
-                        business landscape. Contact us today to explore how RFS Logo Design can help your business thrive.</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
-    <!---------------------End Crafting----------------->
-
-    <!-- jQuery and Owl Carousel JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script>
-        jQuery(document).ready(function($) {
-            "use strict";
-            // TESTIMONIALS CAROUSEL HOOK
-            $('#customers-testimonials').owlCarousel({
-                loop: true,
-                center: true,
-                items: 3,
-                margin: 30,
-                autoplay: true,
-                dots: true,
-                autoplayTimeout: 8500,
-                smartSpeed: 450,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    768: {
-                        items: 2
-                    },
-                    1170: {
-                        items: 3
-                    }
-                }
-            });
-        });
-    </script> -->
-    <!---------------------End Clients Have to Say ----------------->
-
-
- <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    {{-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> --}}
     <script>
         $(document).ready(function() {
             // Show only the first 9 items on page load

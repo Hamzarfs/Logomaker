@@ -170,11 +170,11 @@
 </div>
 
 
-<div class="container-fluid" style="background-color: #080A2D;">
+<div class="container-fluid" style="background-color: #6868D1; border-bottom: 1px solid #fff; /* White line at the bottom of the header */">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ asset('images/Footer logo.png') }}" alt="Logo" class="logo">
+                <img src="{{ asset('images/RFS.svg') }}" alt="Logo" class="logo">
             </a>
             <div class="d-flex align-items-center">
                 <a class="nav-link search-icon d-lg-none" href="javascript:void(0);" style="color:#fff;">
@@ -239,7 +239,9 @@
             </div>
         </div>
     </nav>
-    <div class="mega-menu" style="display:none">
+   
+
+    <div class="mega-menu" style="display:none" >
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -253,6 +255,7 @@
                     </form>
                 </div>
             </div>
+            
             <div class="row mt-3 justify-content-center">
                 @foreach ($categories as $index => $category)
                     @if ($index % 10 == 0)
@@ -279,6 +282,7 @@
 </div>
 </div>
 </div>
+
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>

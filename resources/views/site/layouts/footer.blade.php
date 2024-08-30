@@ -6,7 +6,7 @@
         <div class="row py-5">
             <div class="col-md-4">
                 <a href="{{ url('/') }}">
-                    <img src="{{ asset('images/Footer logo.png') }}" alt="Logo" class="footer-logo mb-6"></a>
+                    <img src="{{ asset('images/RFS.svg') }}" alt="Logo" class="footer-logo mb-6"></a>
                     <p class="footer-description" style="text-align:justify; font-size: 12px;">
                     At RFS Logo Design, we turn logo dreams into reality for clients worldwide.
                     With a knack for creating stunning, sophisticated logos at budget-friendly
@@ -54,9 +54,11 @@
                     <li><a href="{{ url('printing') }}">Printing</a></li>
                     <li><a href="{{ url('stationery-designing') }}">Stationery Designing</a></li>
                     <li><a href="{{ url('graphic-designing') }}">Graphic Designing</a></li>
-
-
-
+                    <li><a href="{{ url('website-design-development') }}">Website Design Development</a></li>
+                    <li><a href="{{ url('custom-website-design-development') }}">Custom Website Design Development</a></li>
+                    <li><a href="{{ url('wordpress-website-development') }}">Wordpress Website Development</a></li>
+                    <li><a href="{{ url('shopify-website-development') }}">Shopify Website Development</a></li>
+                    <li><a href="{{ url('e-commerce-website-development') }}">E-commerce Website Development</a></li>
                 </ul>
             </div>
 
