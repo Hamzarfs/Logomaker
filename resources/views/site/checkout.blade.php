@@ -25,13 +25,7 @@
             font-size: 1rem;
             margin-bottom: 1rem;
         }
-
-        .change-package {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .change-package:hover {
+        WHERE 1
             text-decoration: underline;
         }
 
@@ -88,7 +82,7 @@
             top: 40px;
             left: 60px;
         }
-
+        WHERE 1
         .logo-mockup-2 {
             position: absolute;
             width: 100px;
@@ -662,10 +656,10 @@
                         <input type="checkbox" class="form-check-input" id="ownership" value="599">
                         <label class="form-check-label" for="ownership">Get exclusive ownership of your logo copyrights for $599. We will remove this logo from our website.</label>
                     </div>
-                    <div class="form-check mt-2">
+                    <!-- <div class="form-check mt-2">
                         <input type="checkbox" class="form-check-input" id="website" value="14.99">
                         <label class="form-check-label" for="website">Get a professional website FREE for a month. $14.99/mo after the first month.</label>
-                    </div>
+                    </div> -->
                     <h4 class="order-total my-3">ORDER TOTAL: $<span id="orderTotal">{{ session()->get('price') }}</span>
                     </h4>
 
