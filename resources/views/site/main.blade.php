@@ -6,9 +6,11 @@
 @section('content')
 
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> --}}
     {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"> --}}
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <style>
         .free-logo-heading {
@@ -177,9 +179,9 @@
 
         .logotype-card img {
             /* padding: 20px;
-                        border-radius: 15px 15px 0 0;
-                        width: 160px;
-                        align-self: center; */
+                                                            border-radius: 15px 15px 0 0;
+                                                            width: 160px;
+                                                            align-self: center; */
 
             height: 120px;
             width: auto;
@@ -204,22 +206,25 @@
         }
 
 
-           /* New Banner Section CSS */
-           .new-banner {
-            background-color: #6868D1; /* Background color as per image */
+        /* New Banner Section CSS */
+        .new-banner {
+            background-color: #6868D1;
+            /* Background color as per image */
             color: white;
             padding: 40px 0;
             font-family: 'Arial', sans-serif;
         }
 
         .new-banner h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: start;
-}
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: start;
+        }
+
         .new-banner p {
-            font-size: 1.25rem; /* Font size for paragraph */
+            font-size: 1.25rem;
+            /* Font size for paragraph */
             margin-bottom: 30px;
         }
 
@@ -231,8 +236,10 @@
         }
 
         .new-banner .logo-images img {
-            max-width: 250px; /* Set image width */
-            margin-left: 20px; /* Space between text and image */
+            max-width: 250px;
+            /* Set image width */
+            margin-left: 20px;
+            /* Space between text and image */
         }
 
         .new-banner .trust-images {
@@ -242,9 +249,9 @@
         }
 
         /* .new-banner .trust-images img {
-            max-width: 150px;
-            margin: 10px;
-        } */
+                                                max-width: 150px;
+                                                margin: 10px;
+                                            } */
 
         .new-banner .divider {
             height: 1px;
@@ -257,7 +264,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px; /* Adds space between input and button */
+            gap: 10px;
+            /* Adds space between input and button */
         }
 
         .new-banner .form-control {
@@ -283,332 +291,349 @@
         }
 
         .ptb-100 {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
 
-  .education {
-    --bg-color: #ffd861;
-    --bg-color-light: #ffeeba;
-    --text-color-hover: #4C5656;
-    --box-shadow-color: rgba(255, 215, 97, 0.48);
-}
+        .education {
+            --bg-color: #ffd861;
+            --bg-color-light: #ffeeba;
+            --text-color-hover: #4C5656;
+            --box-shadow-color: rgba(255, 215, 97, 0.48);
+        }
 
-.overlay {
-    width: 70px;
-    position: absolute;
-    height: 70px;
-    border-radius: 50%;
-    background: linear-gradient(180deg, #1C8A82 0%, #0C6C6C 100%);
-    top: 7px;
-    left: 21px;
-    z-index: 0;
-    transition: transform 0.3s ease-out;
-}
+        .overlay {
+            width: 70px;
+            position: absolute;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(180deg, #1C8A82 0%, #0C6C6C 100%);
+            top: 7px;
+            left: 21px;
+            z-index: 0;
+            transition: transform 0.3s ease-out;
+        }
 
-.overlay1 {
-    width: 70px;
-    position: absolute;
-    height: 70px;
-    border-radius: 50%;
-    background: #F7B318;
-    top: 7px;
-    left: 21px;
-    z-index: 0;
-    transition: transform 0.3s ease-out;
-}
-.overlay2 {
-    width: 70px;
-    position: absolute;
-    height: 70px;
-    border-radius: 50%;
-    background: #C32626;
-    top: 7px;
-    left: 21px;
-    z-index: 0;
-    transition: transform 0.3s ease-out;
-}
+        .overlay1 {
+            width: 70px;
+            position: absolute;
+            height: 70px;
+            border-radius: 50%;
+            background: #F7B318;
+            top: 7px;
+            left: 21px;
+            z-index: 0;
+            transition: transform 0.3s ease-out;
+        }
 
-.overlay4 {
-    width: 70px;
-    position: absolute;
-    height: 70px;
-    border-radius: 50%;
-    background: #09525A;
-    top: 7px;
-    left: 21px;
-    z-index: 0;
-    transition: transform 0.3s ease-out;
-}
+        .overlay2 {
+            width: 70px;
+            position: absolute;
+            height: 70px;
+            border-radius: 50%;
+            background: #C32626;
+            top: 7px;
+            left: 21px;
+            z-index: 0;
+            transition: transform 0.3s ease-out;
+        }
 
-
-.education {
-    background: #152441;
-    border-radius: 9.95392px;
-}
-.col-md-8 span.headi {
-    position: relative;
-    top: 41px;
-}
-
-	span.headi {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 17.9171px;
-    line-height: 22px;
-    color: #ffffff;
-}
+        .overlay4 {
+            width: 70px;
+            position: absolute;
+            height: 70px;
+            border-radius: 50%;
+            background: #09525A;
+            top: 7px;
+            left: 21px;
+            z-index: 0;
+            transition: transform 0.3s ease-out;
+        }
 
 
-.card11 p {
-    font-size: 14px;
-    color: #fff;
-    margin-top: 50px;
-    z-index: 1000;
-    transition: color 0.3s ease-out;
-    font-family: 'Montserrat';
-}
+        .education {
+            background: #152441;
+            border-radius: 9.95392px;
+        }
 
-p.dettial {
-    position: absolute;
-    left: 25px;
-    top: 17px;
-}
+        .col-md-8 span.headi {
+            position: relative;
+            top: 41px;
+        }
 
-.opeer {
-    width: 37px;
-    height: 32px;
-    position: absolute;
-    z-index: 9;
-    display: block;
-    top: 23px;
-    left: 37px;
-}
-
-span.headi {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 17.9171px;
-    line-height: 22px;
-    color: #ffffff;
-}
+        span.headi {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 17.9171px;
+            line-height: 22px;
+            color: #ffffff;
+        }
 
 
+        .card11 p {
+            font-size: 14px;
+            color: #fff;
+            margin-top: 50px;
+            z-index: 1000;
+            transition: color 0.3s ease-out;
+            font-family: 'Montserrat';
+        }
 
-.card11:hover {
-  transform: translateY(-5px) scale(1.005) translateZ(0);
-  box-shadow: 0 24px 36px rgba(0,0,0,0.11),
-    0 24px 46px var(--box-shadow-color);
-}
+        p.dettial {
+            position: absolute;
+            left: 25px;
+            top: 17px;
+        }
 
-.card11:hover .overlay {
-  transform: scale(4) translateZ(0);
-}
-.card11:hover .overlay1 {
-  transform: scale(4) translateZ(0);
-}
-.card11:hover .overlay2 {
-  transform: scale(4) translateZ(0);
-}
-.card11:hover .overlay4 {
-  transform: scale(4) translateZ(0);
-}
+        .opeer {
+            width: 37px;
+            height: 32px;
+            position: absolute;
+            z-index: 9;
+            display: block;
+            top: 23px;
+            left: 37px;
+        }
 
-.card11:hover .circle {
-  border-color: var(--bg-color-light);
-  background: var(--bg-color);
-}
-
-.card:hover .circle:after {
-  background: var(--bg-color-light);
-}
-
-.card11:hover p {
-  color: var(--text-color-hover);
-}
-
-.card11:active {
-  transform: scale(1) translateZ(0);
-  box-shadow: 0 15px 24px rgba(0,0,0,0.11),
-    0 15px 24px var(--box-shadow-color);
-}
-
-
-.gt{
-    font-family: 'Montserrat';
-}
-.circle {
-  width: 131px;
-  height: 131px;
-  border-radius: 50%;
-  background: #fff;
-  border: 2px solid var(--bg-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-  transition: all 0.3s ease-out;
-}
-
-.circle:after {
-  content: "";
-  width: 118px;
-  height: 118px;
-  display: block;
-  position: absolute;
-  background: var(--bg-color);
-  border-radius: 50%;
-  top: 7px;
-  left: 7px;
-  transition: opacity 0.3s ease-out;
-}
-
-.circle svg {
-  z-index: 10000;
-  transform: translateZ(0);
-}
-
-.overlay {
-    width: 70px;
-    position: absolute;
-    height: 70px;
-    border-radius: 50%;
-    /* background: linear-gradient(180deg, #1C8A82 0%, #0C6C6C 100%); */
-    background: linear-gradient(180deg, #fff 0%, #fff 100%);
-    top: 7px;
-    left: 21px;
-    z-index: 0;
-    transition: transform 0.3s ease-out;
-}
-.education:hover .overlay {
-    color: #000;
-    width: 181px;
-    position: absolute;
-    height: 181px;
-    border-radius: 50%;
-    background: #f20000;
-    top: 14px;
-    left: 8px;
-    z-index: 0;
-    transition: transform 0.8s ease-out;
-    /* background: #FFFFFF; */
-    /* border-radius: 9.95392px; */
-    background: linear-gradient(180deg, #fff 0%, #fff 100%);
-}
-.education:hover .overlay1 {
-    width: 181px;
-    position: absolute;
-    height: 181px;
-    border-radius: 50%;
-    background: #f20000;
-    top: 14px;
-    left: 8px;
-    z-index: 0;
-    transition: transform 0.8s ease-out;
-    /* background: #FFFFFF; */
-    /* border-radius: 9.95392px; */
-    background: #F7B318;
-}
-
-.education:hover .overlay2 {
-    width: 181px;
-    position: absolute;
-    height: 181px;
-    border-radius: 50%;
-    background: #f20000;
-    top: 14px;
-    left: 8px;
-    z-index: 0;
-    transition: transform 0.8s ease-out;
-    /* background: #FFFFFF; */
-    /* border-radius: 9.95392px; */
-    background: #C32626;
-}
-.education:hover .overlay4 {
-    width: 181px;
-    position: absolute;
-    height: 181px;
-    border-radius: 50%;
-    background: #09525A;
-    top: 14px;
-    left: 8px;
-    z-index: 0;
-    transition: transform 0.8s ease-out;
-    /* background: #FFFFFF; */
-    /* border-radius: 9.95392px; */
-    background: #09525A;
-}
-.education:hover p.dettial {
-    color: #000000;
-}
-.education:hover span.headi {
-    color: #000000;
-}
-.opeer{
-width: 37px;
-    height: 32px;
-    position: absolute;
-    z-index: 9;
-    display: block;
-    top: 23px;
-    left: 37px;
-}
-.slider {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: stretch;
-    -webkit-align-items: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    background-color: transparent;
-    text-align: left;
-}
-
-.why-rfs{
-
-    color: #fff;
-}
-
-a.card11 {
-    text-decoration: none;
-}
+        span.headi {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 17.9171px;
+            line-height: 22px;
+            color: #ffffff;
+        }
 
 
 
-.new-card-design-section {
+        .card11:hover {
+            transform: translateY(-5px) scale(1.005) translateZ(0);
+            box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
+                0 24px 46px var(--box-shadow-color);
+        }
+
+        .card11:hover .overlay {
+            transform: scale(4) translateZ(0);
+        }
+
+        .card11:hover .overlay1 {
+            transform: scale(4) translateZ(0);
+        }
+
+        .card11:hover .overlay2 {
+            transform: scale(4) translateZ(0);
+        }
+
+        .card11:hover .overlay4 {
+            transform: scale(4) translateZ(0);
+        }
+
+        .card11:hover .circle {
+            border-color: var(--bg-color-light);
+            background: var(--bg-color);
+        }
+
+        .card:hover .circle:after {
+            background: var(--bg-color-light);
+        }
+
+        .card11:hover p {
+            color: var(--text-color-hover);
+        }
+
+        .card11:active {
+            transform: scale(1) translateZ(0);
+            box-shadow: 0 15px 24px rgba(0, 0, 0, 0.11),
+                0 15px 24px var(--box-shadow-color);
+        }
+
+
+        .gt {
+            font-family: 'Montserrat';
+        }
+
+        .circle {
+            width: 131px;
+            height: 131px;
+            border-radius: 50%;
+            background: #fff;
+            border: 2px solid var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease-out;
+        }
+
+        .circle:after {
+            content: "";
+            width: 118px;
+            height: 118px;
+            display: block;
+            position: absolute;
+            background: var(--bg-color);
+            border-radius: 50%;
+            top: 7px;
+            left: 7px;
+            transition: opacity 0.3s ease-out;
+        }
+
+        .circle svg {
+            z-index: 10000;
+            transform: translateZ(0);
+        }
+
+        .overlay {
+            width: 70px;
+            position: absolute;
+            height: 70px;
+            border-radius: 50%;
+            /* background: linear-gradient(180deg, #1C8A82 0%, #0C6C6C 100%); */
+            background: linear-gradient(180deg, #fff 0%, #fff 100%);
+            top: 7px;
+            left: 21px;
+            z-index: 0;
+            transition: transform 0.3s ease-out;
+        }
+
+        .education:hover .overlay {
+            color: #000;
+            width: 181px;
+            position: absolute;
+            height: 181px;
+            border-radius: 50%;
+            background: #f20000;
+            top: 14px;
+            left: 8px;
+            z-index: 0;
+            transition: transform 0.8s ease-out;
+            /* background: #FFFFFF; */
+            /* border-radius: 9.95392px; */
+            background: linear-gradient(180deg, #fff 0%, #fff 100%);
+        }
+
+        .education:hover .overlay1 {
+            width: 181px;
+            position: absolute;
+            height: 181px;
+            border-radius: 50%;
+            background: #f20000;
+            top: 14px;
+            left: 8px;
+            z-index: 0;
+            transition: transform 0.8s ease-out;
+            /* background: #FFFFFF; */
+            /* border-radius: 9.95392px; */
+            background: #F7B318;
+        }
+
+        .education:hover .overlay2 {
+            width: 181px;
+            position: absolute;
+            height: 181px;
+            border-radius: 50%;
+            background: #f20000;
+            top: 14px;
+            left: 8px;
+            z-index: 0;
+            transition: transform 0.8s ease-out;
+            /* background: #FFFFFF; */
+            /* border-radius: 9.95392px; */
+            background: #C32626;
+        }
+
+        .education:hover .overlay4 {
+            width: 181px;
+            position: absolute;
+            height: 181px;
+            border-radius: 50%;
+            background: #09525A;
+            top: 14px;
+            left: 8px;
+            z-index: 0;
+            transition: transform 0.8s ease-out;
+            /* background: #FFFFFF; */
+            /* border-radius: 9.95392px; */
+            background: #09525A;
+        }
+
+        .education:hover p.dettial {
+            color: #000000;
+        }
+
+        .education:hover span.headi {
+            color: #000000;
+        }
+
+        .opeer {
+            width: 37px;
+            height: 32px;
+            position: absolute;
+            z-index: 9;
+            display: block;
+            top: 23px;
+            left: 37px;
+        }
+
+        .slider {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: stretch;
+            -webkit-align-items: stretch;
+            -ms-flex-align: stretch;
+            align-items: stretch;
+            background-color: transparent;
+            text-align: left;
+        }
+
+        .why-rfs {
+
+            color: #fff;
+        }
+
+        a.card11 {
+            text-decoration: none;
+        }
+
+
+
+        .new-card-design-section {
             background-color: #f4f4f4;
             padding: 20px;
         }
+
         .new-card-design-title {
             text-align: center;
             margin-bottom: 30px;
             font-size: 24px;
             font-weight: bold;
         }
+
         .new-card-design-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
+
         .new-card-design-row {
             display: flex;
             flex-wrap: wrap;
             margin: -10px;
         }
+
         .new-card-design-col {
             padding: 10px;
             flex: 1 1 33.33%;
@@ -619,41 +644,46 @@ a.card11 {
             background-color: #fff;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             position: relative;
             text-align: center;
             padding: 20px;
             transition: transform 0.3s;
         }
+
         .new-card-design-card img {
             max-width: 100%;
             height: auto;
             margin: 0 auto;
             display: block;
         }
+
         .new-card-design-card h2 {
             font-size: 20px;
             margin: 15px 0;
             color: #333;
         }
+
         .new-card-design-card i {
-    font-size: 24px;
-    color: #ffffff;
-    margin-bottom: 15px;
-    background: #6868D1;
-    padding: 5px;
-    border-radius: 10px;
-}
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 15px;
+            background: #6868D1;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
         .new-card-design-card:hover {
             transform: translateY(-5px);
         }
+
         .new-card-design-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.7);
+            background-color: rgba(0, 0, 0, 0.7);
             color: #fff;
             display: flex;
             align-items: center;
@@ -661,13 +691,16 @@ a.card11 {
             opacity: 0;
             transition: opacity 0.3s;
         }
+
         .new-card-design-card:hover .new-card-design-overlay {
             opacity: 1;
         }
+
         .new-card-design-overlay-text {
             padding: 10px;
             text-align: center;
         }
+
         @media (max-width: 480px) {
             .new-card-design-col {
                 flex: 1 1 100%;
@@ -676,30 +709,33 @@ a.card11 {
 
 
 
-@media only screen and (max-width: 500px){
-    a.card11 {
-        height: 395px;
-    }
-    .card11.education .col-md-4 {
-        max-width: 30% !important;
-    }
-    a.card11.education .col-md-8 {
-        max-width: 70% !important;
-        flex: 70% !important;
-    }
-}
+        @media only screen and (max-width: 500px) {
+            a.card11 {
+                height: 395px;
+            }
+
+            .card11.education .col-md-4 {
+                max-width: 30% !important;
+            }
+
+            a.card11.education .col-md-8 {
+                max-width: 70% !important;
+                flex: 70% !important;
+            }
+        }
 
 
 
-@media only screen and (max-width: 722px) {
-    .card11.education .col-md-4 {
-        max-width: 22%;
-    }
-    .card11.education .col-md-8 {
-        max-width: 78% !important;
-        flex: 78% !important;
-    }
-}
+        @media only screen and (max-width: 722px) {
+            .card11.education .col-md-4 {
+                max-width: 22%;
+            }
+
+            .card11.education .col-md-8 {
+                max-width: 78% !important;
+                flex: 78% !important;
+            }
+        }
 
 
         @media only screen and (max-width: 767px) {
@@ -709,6 +745,7 @@ a.card11 {
                 width: auto;
             }
         }
+
         @media (max-width: 768px) {
             .new-card-design-col {
                 flex: 1 1 100%;
@@ -726,7 +763,8 @@ a.card11 {
                 max-width: 350px;
             }
 
-            .float-right, .float-left {
+            .float-right,
+            .float-left {
                 float: none;
                 display: inline;
                 margin: 0 auto 20px auto;
@@ -744,124 +782,164 @@ a.card11 {
 
 
 
-        @media only screen and (max-width:801px){
+        @media only screen and (max-width:801px) {
 
-p.dettial {
-position: absolute;
-left: 25px;
-top: 37px;
-}
-.education:hover .overlay {
-width: 381px;
-}
-.education:hover .overlay1 {
-width: 381px;
-}
-.edyy {
-flex: 0 0 100%;
-max-width: 100%;
-}
-.trrw{
-    max-width:100%;
-    flex: 0 0 100%;
-}
-.lightt {
-background: url(images/secc-light.png) #2D3446 no-repeat;
-height: 100%;
-}
-.card11 {
-width: 100%;
-height: 380px;
-margin-bottom: 20px;
-background: #fff;
-border-top-right-radius: 9.95392px;
-overflow: hidden;
-display: flex;
-}}
+            p.dettial {
+                position: absolute;
+                left: 25px;
+                top: 37px;
+            }
 
+            .education:hover .overlay {
+                width: 381px;
+            }
 
-@media only screen and (max-width: 802px){
-    a.card11 {
-        height: 269px;
-    }
-    div.col-md-3.edyy {
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-    }
-    .card11.education .col-md-4 {
-        max-width: 16%;
-    }
-    .card11.education .col-md-8 {
-        max-width: 84% !important;
-        flex: 84% !important;
-    }
-    div.col-md-8 span.headi {
-        left: 0 !important;
-    }
-}
+            .education:hover .overlay1 {
+                width: 381px;
+            }
 
-@media only screen and (max-width: 890px){
-     a.card11{
-        height: 380px;
-    }
-}
+            .edyy {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
 
-@media only screen and (max-width: 821px) {
-    div.col-md-8 span.headi {
-        left: 21px;
-    }}
+            .trrw {
+                max-width: 100%;
+                flex: 0 0 100%;
+            }
+
+            .lightt {
+                background: url(images/secc-light.png) #2D3446 no-repeat;
+                height: 100%;
+            }
+
+            .card11 {
+                width: 100%;
+                height: 380px;
+                margin-bottom: 20px;
+                background: #fff;
+                border-top-right-radius: 9.95392px;
+                overflow: hidden;
+                display: flex;
+            }
+        }
 
 
-@media only screen and (max-width: 992px) {
-    .card11 {
-        height: 262px;
-        margin-bottom: 20px;
-    }
-}
+        @media only screen and (max-width: 802px) {
+            a.card11 {
+                height: 269px;
+            }
+
+            div.col-md-3.edyy {
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+            }
+
+            .card11.education .col-md-4 {
+                max-width: 16%;
+            }
+
+            .card11.education .col-md-8 {
+                max-width: 84% !important;
+                flex: 84% !important;
+            }
+
+            div.col-md-8 span.headi {
+                left: 0 !important;
+            }
+        }
+
+        @media only screen and (max-width: 890px) {
+            a.card11 {
+                height: 380px;
+            }
+        }
+
+        @media only screen and (max-width: 821px) {
+            div.col-md-8 span.headi {
+                left: 21px;
+            }
+        }
 
 
-@media only screen and (max-width:1536px){
-.card11 {
-    height: 410px;
-    background: #152441;
-    border-top-right-radius: 9.95392px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: relative;
-    box-shadow: none;
-    transition: all 0.3s ease-out;
-    text-decoration: none;
-    border: 0px;
-}
-}
+        @media only screen and (max-width: 992px) {
+            .card11 {
+                height: 262px;
+                margin-bottom: 20px;
+            }
+        }
 
 
+        @media only screen and (max-width:1536px) {
+            .card11 {
+                height: 410px;
+                background: #152441;
+                border-top-right-radius: 9.95392px;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                position: relative;
+                box-shadow: none;
+                transition: all 0.3s ease-out;
+                text-decoration: none;
+                border: 0px;
+            }
+        }
 
+        @media only screen and (max-width: 1920px) {
+            .card11 {
+                color: #fff;
+                padding-left: 10px;
+                padding-right: 10px;
+                width: 100%;
+                height: 380px;
+                background: #152441;
+                border-top-right-radius: 9.95392px;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                position: relative;
+                box-shadow: none;
+                transition: all 0.3s ease-out;
+                text-decoration: none;
+                border: 0px;
+            }
+        }
 
-@media only screen and (max-width: 1920px) {
-    .card11 {
-        color: #fff;
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 100%;
-        height: 380px;
-        background: #152441;
-        border-top-right-radius: 9.95392px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        position: relative;
-        box-shadow: none;
-        transition: all 0.3s ease-out;
-        text-decoration: none;
-        border: 0px;
-    }
-}
+        .logos-carousel-section {
+            background-color: #6868D1;
+        }
+
+        .logos-carousel-section h1 {
+            font-weight: 700;
+        }
+
+        .logos-carousel-section img {
+            background-color: white;
+            border-radius: 10px;
+            width: 360px;
+            height: 310px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            background-color: white;
+            padding: 8px 16px;
+            border-radius: 100%;
+            border: 2px solid white;
+            color: white;
+            width: 50px;
+            height: 50px;
+            background-color: #6868D1;
+        }
+
+        .swiper-button-next:after, .swiper-button-prev:after {
+            font-size: 25px;
+        }
     </style>
 
     <!----------------------------------------- Start Banner Section ------------------------------->
@@ -898,36 +976,39 @@ display: flex;
 
     <section class="new-banner ptb-100">
         <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="row justify-content-center">
-                <div class="col-md-8 text-center">
-                    <div class="mb-4">
-                        <h1>Free Logo Maker
-                        <img src="images/Property 1=Default.png" alt="Logo 1" class="float-right"> <br>
-                        Tailored for Every Industry</h1>
-                    </div>
-
-                    <div class="mb-4">
-                        <img src="images/Property 1=Default (1).png" alt="Logo 1" class="float-left">
-                        <h1>Design Your Logo <br>in Minutes</h1>
-                    </div>
-
-                    <p>Unleash your creativity and watch your logo come to life effortlessly. Get in touch with us now!</p>
-                    <div class="trust-images">
-                        <img src="images/Group 124.png" alt="Trust 1">
-                    </div>
-                    <div class="divider"></div>
-                    <form id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
-                        @csrf
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="companyName11" name="company"
-                                placeholder="Enter your company name" aria-label="Enter your company name" maxlength="30">
-                            <input type="hidden" name="flow" value="home">
-                            <input type="submit" class="custom-button-banner" value="Get Started">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <div class="mb-4">
+                            <h1>Free Logo Maker
+                                <img src="images/Property 1=Default.png" alt="Logo 1" class="float-right"> <br>
+                                Tailored for Every Industry
+                            </h1>
                         </div>
-                    </form>
+
+                        <div class="mb-4">
+                            <img src="images/Property 1=Default (1).png" alt="Logo 1" class="float-left">
+                            <h1>Design Your Logo <br>in Minutes</h1>
+                        </div>
+
+                        <p>Unleash your creativity and watch your logo come to life effortlessly. Get in touch with us now!
+                        </p>
+                        <div class="trust-images">
+                            <img src="images/Group 124.png" alt="Trust 1">
+                        </div>
+                        <div class="divider"></div>
+                        <form id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
+                            @csrf
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" id="companyName11" name="company"
+                                    placeholder="Enter your company name" aria-label="Enter your company name"
+                                    maxlength="30">
+                                <input type="hidden" name="flow" value="home">
+                                <input type="submit" class="custom-button-banner" value="Get Started">
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
         </div>
     </section>
     <!----------------------------------------- End Banner Section ------------------------------->
@@ -1004,14 +1085,14 @@ display: flex;
 
     <!-- <------------------Make A logo------------------>
     <!--
-                    <section class="heroSection1">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12 mb-4">
-                                        <h1 class="heroTitle1">Ready To Turn Your Vision <br>Into A Logo Masterpiece?</h1>
-                                    </div>
-                                </div>
-                            </section> -->
+                                                        <section class="heroSection1">
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                        <div class="col-12 mb-4">
+                                                                            <h1 class="heroTitle1">Ready To Turn Your Vision <br>Into A Logo Masterpiece?</h1>
+                                                                        </div>
+                                                                    </div>
+                                                                </section> -->
 
     <!-- <------------------End Make A logo---------------->
 
@@ -1082,148 +1163,186 @@ display: flex;
 
     <!-----------------End  Portfolio ----------------------->
 
-    <div style="padding-top: 70px; padding-bottom: 100px; background-color:#6868D1" >
+    <div style="padding-top: 70px; padding-bottom: 100px; background-color:#6868D1">
 
 
         <div class="container">
             <div class="why-rfs">
-           <h2 class="portfolio-heading">  Why RFS Is Your Go-To Logo Designer</h2>
-            <p class="main-description-online">
-                Our team of concept-driven logo designers is passionate about crafting visually stunning and professional logos that truly elevate your brand and leave a lasting impression. Here is why RFS is the perfect choice for you:
-            </p>
-        </div>
+                <h2 class="portfolio-heading"> Why RFS Is Your Go-To Logo Designer</h2>
+                <p class="main-description-online">
+                    Our team of concept-driven logo designers is passionate about crafting visually stunning and
+                    professional logos that truly elevate your brand and leave a lasting impression. Here is why RFS is the
+                    perfect choice for you:
+                </p>
+            </div>
             <div class="row">
 
-            <div class="col-md-4 edyy">
-        <a class="card11 education">
-        <div class="row" style="WIDTH: 100%;">
-        <div class="col-md-4">
-             <div class="overlay"></div>
-        <div class="imgicon">
-        <img src="{{url('images/image 52.png')}}" class="opeer">
-          </div></div>
+                <div class="col-md-4 edyy">
+                    <a class="card11 education">
+                        <div class="row" style="WIDTH: 100%;">
+                            <div class="col-md-4">
+                                <div class="overlay"></div>
+                                <div class="imgicon">
+                                    <img src="{{ url('images/image 52.png') }}" class="opeer">
+                                </div>
+                            </div>
 
 
-          <div class="col-md-8">
-          <span class="headi">Bringing
-            Ideas To Life</span>
+                            <div class="col-md-8">
+                                <span class="headi">Bringing
+                                    Ideas To Life</span>
 
-          </div>
-          <div class="col-md-12">
-          <p class="dettial">At RFS, we get your vision. We are all about teamwork to craft logo designs that truly capture your business’s identity and values. With decades of experience, we turn your ideas into powerful brand symbols. Whether you are launching or revamping, our logo design services are here to give your business a standout boost.</p></div>
-          </div></a>
-          </div>
-          <div class="col-md-4 edyy">
-        <a class="card11 education">
-        <div class="row" style="WIDTH: 100%;">
-        <div class="col-md-4">
-             <div class="overlay"></div>
-        <div class="imgicon">
-        <img src="{{url('images/image 53.png')}}" class="opeer">
-          </div></div>
-
-
-          <div class="col-md-8">
-          <span class="headi">Conducting
-            Insightful Research</span>
-
-          </div>
-          <div class="col-md-12">
-          <p class="dettial">We mix your ideas with what your audience craves. Our custom logo design service fuses your brand vision with smart, research-driven elements to create a logo that catches your eyes and engages prospects. Get the best logo design company on your side to make your brand irresistible!</p></div>
-          </div></a>
-          </div>
-          <div class="col-md-4 edyy">
-        <a class="card11 education">
-        <div class="row" style="WIDTH: 100%;">
-        <div class="col-md-4">
-             <div class="overlay"></div>
-        <div class="imgicon">
-        <img src="{{url('images/image 54.png')}}" class="opeer">
-          </div></div>
+                            </div>
+                            <div class="col-md-12">
+                                <p class="dettial">At RFS, we get your vision. We are all about teamwork to craft logo
+                                    designs that truly capture your business’s identity and values. With decades of
+                                    experience, we turn your ideas into powerful brand symbols. Whether you are launching or
+                                    revamping, our logo design services are here to give your business a standout boost.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 edyy">
+                    <a class="card11 education">
+                        <div class="row" style="WIDTH: 100%;">
+                            <div class="col-md-4">
+                                <div class="overlay"></div>
+                                <div class="imgicon">
+                                    <img src="{{ url('images/image 53.png') }}" class="opeer">
+                                </div>
+                            </div>
 
 
-          <div class="col-md-8">
-          <span class="headi">Crafting
-            Value</span>
+                            <div class="col-md-8">
+                                <span class="headi">Conducting
+                                    Insightful Research</span>
 
-          </div>
-          <div class="col-md-12">
-          <p class="dettial">We infuse real value into every logo. Our meticulous design process starts with diving deep into your brand’s needs, enabling our top-notch designers to craft a logo packed with persuasive elements and audience appeal. Get ready to see your brand soar to new heights.</p></div>
-          </div></a>
-          </div>
+                            </div>
+                            <div class="col-md-12">
+                                <p class="dettial">We mix your ideas with what your audience craves. Our custom logo design
+                                    service fuses your brand vision with smart, research-driven elements to create a logo
+                                    that catches your eyes and engages prospects. Get the best logo design company on your
+                                    side to make your brand irresistible!</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 edyy">
+                    <a class="card11 education">
+                        <div class="row" style="WIDTH: 100%;">
+                            <div class="col-md-4">
+                                <div class="overlay"></div>
+                                <div class="imgicon">
+                                    <img src="{{ url('images/image 54.png') }}" class="opeer">
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-8">
+                                <span class="headi">Crafting
+                                    Value</span>
+
+                            </div>
+                            <div class="col-md-12">
+                                <p class="dettial">We infuse real value into every logo. Our meticulous design process
+                                    starts with diving deep into your brand’s needs, enabling our top-notch designers to
+                                    craft a logo packed with persuasive elements and audience appeal. Get ready to see your
+                                    brand soar to new heights.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
 
 
 
             </div>
 
-            </div>
+        </div>
 
-            <div class="container" style="padding-top: 50px">
-                <div class="row">
+        <div class="container" style="padding-top: 50px">
+            <div class="row">
 
                 <div class="col-md-4 edyy">
-            <a class="card11 education">
-            <div class="row" style="WIDTH: 100%;">
-            <div class="col-md-4">
-                 <div class="overlay"></div>
-            <div class="imgicon">
-            <img src="{{url('images/image 55.png')}}" class="opeer">
-              </div></div>
+                    <a class="card11 education">
+                        <div class="row" style="WIDTH: 100%;">
+                            <div class="col-md-4">
+                                <div class="overlay"></div>
+                                <div class="imgicon">
+                                    <img src="{{ url('images/image 55.png') }}" class="opeer">
+                                </div>
+                            </div>
 
 
-              <div class="col-md-8">
-              <span class="headi">Unique Design
-                Solutions</span>
+                            <div class="col-md-8">
+                                <span class="headi">Unique Design
+                                    Solutions</span>
 
-              </div>
-              <div class="col-md-12">
-              <p class="dettial">Explore our diverse graphic design solutions! Our portfolio showcases top-tier work across various industries, from eye-catching logos to complete branding and promotion services. Whether you need standout designs for your mobile app, website, or social media, we have got you covered.</p></div>
-              </div></a>
-              </div>
-              <div class="col-md-4 edyy">
-            <a class="card11 education">
-            <div class="row" style="WIDTH: 100%;">
-            <div class="col-md-4">
-                 <div class="overlay"></div>
-            <div class="imgicon">
-            <img src="{{url('images/image 56.png')}}" class="opeer">
-              </div></div>
-
-
-              <div class="col-md-8">
-              <span class="headi">At Your
-                Service 24/7</span>
-
-              </div>
-              <div class="col-md-12">
-              <p class="dettial">Get the support you deserve with our dedicated, 24/7 expert team. We are here to tackle your queries and offer proactive advice. At RFS, exceptional customer service is our priority, ensuring your branding journey is as smooth and successful as possible.</p></div>
-              </div></a>
-              </div>
-              <div class="col-md-4 edyy">
-            <a class="card11 education">
-            <div class="row" style="WIDTH: 100%;">
-            <div class="col-md-4">
-                 <div class="overlay"></div>
-            <div class="imgicon">
-            <img src="{{url('images/image 57.png')}}" class="opeer">
-              </div></div>
+                            </div>
+                            <div class="col-md-12">
+                                <p class="dettial">Explore our diverse graphic design solutions! Our portfolio showcases
+                                    top-tier work across various industries, from eye-catching logos to complete branding
+                                    and promotion services. Whether you need standout designs for your mobile app, website,
+                                    or social media, we have got you covered.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 edyy">
+                    <a class="card11 education">
+                        <div class="row" style="WIDTH: 100%;">
+                            <div class="col-md-4">
+                                <div class="overlay"></div>
+                                <div class="imgicon">
+                                    <img src="{{ url('images/image 56.png') }}" class="opeer">
+                                </div>
+                            </div>
 
 
-              <div class="col-md-8">
-              <span class="headi">Impactful Branding
-                For Growth</span>
+                            <div class="col-md-8">
+                                <span class="headi">At Your
+                                    Service 24/7</span>
 
-              </div>
-              <div class="col-md-12">
-              <p class="dettial">We stick to the best practices in logo design and branding to take your brand to new heights. With our tried-and-true design process, deep expertise, and top-tier designers, we will set your enterprise on the path to exponential growth. Join us now for branding that makes an impact!</p></div>
-              </div></a>
-              </div>
+                            </div>
+                            <div class="col-md-12">
+                                <p class="dettial">Get the support you deserve with our dedicated, 24/7 expert team. We are
+                                    here to tackle your queries and offer proactive advice. At RFS, exceptional customer
+                                    service is our priority, ensuring your branding journey is as smooth and successful as
+                                    possible.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 edyy">
+                    <a class="card11 education">
+                        <div class="row" style="WIDTH: 100%;">
+                            <div class="col-md-4">
+                                <div class="overlay"></div>
+                                <div class="imgicon">
+                                    <img src="{{ url('images/image 57.png') }}" class="opeer">
+                                </div>
+                            </div>
 
 
+                            <div class="col-md-8">
+                                <span class="headi">Impactful Branding
+                                    For Growth</span>
 
+                            </div>
+                            <div class="col-md-12">
+                                <p class="dettial">We stick to the best practices in logo design and branding to take your
+                                    brand to new heights. With our tried-and-true design process, deep expertise, and
+                                    top-tier designers, we will set your enterprise on the path to exponential growth. Join
+                                    us now for branding that makes an impact!</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
 
-                </div>
+
+
+            </div>
+
+        </div>
 
 
     </div>
@@ -1333,48 +1452,60 @@ display: flex;
 
 
 
-    <div style="padding-top: 70px; padding-bottom: 100px; background-color:#6868D1" >
-    <div class="new-card-design-section">
-        <div class="new-card-design-container">
-            <h2 class="new-card-design-title">Designing The Perfect Logo Made Easy With Our Logo Creator</h2>
-            <p style="text-align: center;">Still unsure? Dive deeper or consult with our expert designers for tailored guidance.</p>
-        </div>
+    <div style="padding-top: 70px; padding-bottom: 100px; background-color:#6868D1">
+        <div class="new-card-design-section">
+            <div class="new-card-design-container">
+                <h2 class="new-card-design-title">Designing The Perfect Logo Made Easy With Our Logo Creator</h2>
+                <p style="text-align: center;">Still unsure? Dive deeper or consult with our expert designers for tailored
+                    guidance.</p>
+            </div>
 
-        <div class="new-card-design-container">
-            <div class="new-card-design-row">
-                <div class="new-card-design-col">
-                    <div class="new-card-design-card">
-                        <img src="{{url('images/card-design1.png')}}" alt="Image 1">
-                        <h2>Card Title 1</h2>
-                        <i class="fas fa-arrow-up"></i>
-                        <div class="new-card-design-overlay">
-                            <div class="new-card-design-overlay-text">Logos come in various types, each serving different purposes: emblem logos combine text and symbols within a badge-like shape; wordmark logos focus on stylized text; lettermark logos use initials or abbreviations; abstract logos represent ideas in a unique, non-literal way; and pictorial logos illustrate the business with a visual icon.</div>
+            <div class="new-card-design-container">
+                <div class="new-card-design-row">
+                    <div class="new-card-design-col">
+                        <div class="new-card-design-card">
+                            <img src="{{ url('images/card-design1.png') }}" alt="Image 1">
+                            <h2>Card Title 1</h2>
+                            <i class="fas fa-arrow-up"></i>
+                            <div class="new-card-design-overlay">
+                                <div class="new-card-design-overlay-text">Logos come in various types, each serving
+                                    different purposes: emblem logos combine text and symbols within a badge-like shape;
+                                    wordmark logos focus on stylized text; lettermark logos use initials or abbreviations;
+                                    abstract logos represent ideas in a unique, non-literal way; and pictorial logos
+                                    illustrate the business with a visual icon.</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="new-card-design-col">
-                    <div class="new-card-design-card">
-                        <img src="{{url('images/card-design2.png')}}" alt="Image 2">
-                        <h2>Card Title 2</h2>
-                        <i class="fas fa-arrow-up"></i>
-                        <div class="new-card-design-overlay">
-                            <div class="new-card-design-overlay-text">Colors are key to your brand’s identity, each evoking distinct emotions. Red bursts with energy and passion, while blue signals trust and professionalism. Use our logo maker tool to pick the perfect palette that captures your brand’s essence and connects with your audience.</div>
+                    <div class="new-card-design-col">
+                        <div class="new-card-design-card">
+                            <img src="{{ url('images/card-design2.png') }}" alt="Image 2">
+                            <h2>Card Title 2</h2>
+                            <i class="fas fa-arrow-up"></i>
+                            <div class="new-card-design-overlay">
+                                <div class="new-card-design-overlay-text">Colors are key to your brand’s identity, each
+                                    evoking distinct emotions. Red bursts with energy and passion, while blue signals trust
+                                    and professionalism. Use our logo maker tool to pick the perfect palette that captures
+                                    your brand’s essence and connects with your audience.</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="new-card-design-col">
-                    <div class="new-card-design-card">
-                        <img src="{{url('images/card-design3.png')}}" alt="Image 3">
-                        <h2>Card Title 3</h2>
-                        <i class="fas fa-arrow-up"></i>
-                        <div class="new-card-design-overlay">
-                            <div class="new-card-design-overlay-text">Choosing the right font is crucial for your brand logo, as it reflects your brand’s personality and message. Here are some ideas for you. Serif Fonts: Exude tradition and reliability. Sans-Serif Fonts: Suggest modernity and simplicity. Script Fonts: Add a touch of elegance. Display Fonts: Command attention and stand out.</div>
+                    <div class="new-card-design-col">
+                        <div class="new-card-design-card">
+                            <img src="{{ url('images/card-design3.png') }}" alt="Image 3">
+                            <h2>Card Title 3</h2>
+                            <i class="fas fa-arrow-up"></i>
+                            <div class="new-card-design-overlay">
+                                <div class="new-card-design-overlay-text">Choosing the right font is crucial for your brand
+                                    logo, as it reflects your brand’s personality and message. Here are some ideas for
+                                    you. Serif Fonts: Exude tradition and reliability. Sans-Serif Fonts: Suggest modernity
+                                    and simplicity. Script Fonts: Add a touch of elegance. Display Fonts: Command attention
+                                    and stand out.</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
 
@@ -1494,6 +1625,59 @@ display: flex;
 
     <!-- End Plan Section -->
 
+    <section class="logos-carousel-section py-5">
+        <div class="container">
+            <div class="text-center text-white mb-5">
+                <h1>We Have Logos For Everyone</h1>
+            </div>
+
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="{{ asset('images/01-01.webp') }}" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('images/01-02.webp') }}" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('images/01-03.webp') }}" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('images/01-04.webp') }}" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('images/01-05.webp') }}" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('images/01-07.webp') }}" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('images/01-08.webp') }}" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('images/01-09.webp') }}" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('images/01-10.webp') }}" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('images/01-15.webp') }}" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('images/01-17.webp') }}" class="img-fluid">
+                    </div>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Start Hire Section -->
     <section class="hire-section-bg">
@@ -1516,9 +1700,6 @@ display: flex;
                 </div>
             </div>
     </section>
-
-
-
 
     <!-- End Hire Section -->
 
@@ -1641,7 +1822,7 @@ display: flex;
         <button>Trade & Logistics Logos</button>
         <button>Travel & Hotel Logos</button>
     </div>
-</div> --}}
+    </div> --}}
 
 
 
@@ -1803,6 +1984,26 @@ display: flex;
 
     <!-- <-----------------End 1M Happy Customers Counting---------------->
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        $(function() {
+            new Swiper('.swiper', {
+                autoplay: true,
+
+                // Optional parameters
+                loop: true,
+
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                slidesPerView: 3,
+                spaceBetween: 40,
+            });
+        })
+    </script>
 
     <script>
         window.onscroll = function() {
@@ -1854,7 +2055,7 @@ display: flex;
 
     <!-- jQuery library -->
     {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> --}}
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> --}}
 
     <script>
@@ -1884,8 +2085,8 @@ display: flex;
             // });
         });
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> --}}
 
     <!-- Other scripts or libraries -->
 
