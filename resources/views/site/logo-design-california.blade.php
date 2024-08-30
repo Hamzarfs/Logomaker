@@ -1,6 +1,7 @@
 @extends('site.common')
 
-@section('title', 'About Us')
+@section('title', 'Custom Logo Design Company in California - RFS Logo Design')
+@section('meta_desc', 'RFS Logo Design company provides custom logo design services in California. We are the ranked #1 professional logo design agency with expert logo designers.')
 
 @section('content')
 

@@ -1,7 +1,7 @@
 @extends('site.common')
 
-@section('title', 'E-commerce Website Development')
-
+@section('title', 'E-Commerce Website Development Services - RFS Logo Design')
+@section('meta_desc', 'Get your online store with RFS Logo Design e-commerce website development services. Expert solutions for seamless user experiences and secure transactions.')
 @section('content')
 
 

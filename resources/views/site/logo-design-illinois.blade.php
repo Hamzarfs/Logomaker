@@ -1,7 +1,7 @@
 @extends('site.common')
 
-@section('title', 'Welcome')
-
+@section('title', 'Illinois Custom Logo Design Company - RFS Logo Design')
+@section('meta_desc', 'At RFS Logo Design, we offer custom logo design services tailored for Illinois businesses. Our expert designers specialize in crafting impactful brand identities.')
 @section('content')
 <!DOCTYPE html>
 <html lang="en">

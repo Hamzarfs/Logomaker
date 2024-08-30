@@ -1,7 +1,7 @@
 @extends('site.common')
 
-@section('title', 'About Us')
-
+@section('title', 'Pennsylvania Custom Logo Design Compnay - RFS Logo Design')
+@section('meta_desc', 'At RFS Logo Design, we specialize in custom logo services in Pennsylvania. With our expert designers, we craft impactful branding solutions for businesses.')
 @section('content')
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">

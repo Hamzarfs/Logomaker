@@ -1,6 +1,8 @@
 @extends('site.common')
 
-@section('title', 'Contact Us')
+@section('title', 'Contact Us - RFS Logo Design')
+@section('meta_desc', 'Get in touch with RFS Logo Design for all your logo design needs. Contact our team for support, inquiries, or to start creating your custom logo today.')
+
 
 @section('content')
 

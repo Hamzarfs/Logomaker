@@ -1,7 +1,7 @@
 @extends('site.common')
 
-@section('title', 'Custom Website Design Development')
-
+@section('title', 'Custom Website Design and Development - RFS Logo Design')
+@section('meta_desc', 'Get custom website design and development services at RFS Logo Design. Our Web developers are professional and expert to craft custom website for your business.')
 @section('content')
 
     <style>

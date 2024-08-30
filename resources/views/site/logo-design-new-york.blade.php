@@ -1,7 +1,7 @@
 @extends('site.common')
 
-@section('title', 'Welcome')
-
+@section('title', 'New York Custom Logo Design Compnay - RFS Logo Design')
+@section('meta_desc', 'Experience exceptional custom logo design services in New York with RFS Logo Design. Our expert designers craft impactful brand identities as a top-tier agency.')
 @section('content')
 <!DOCTYPE html>
 <html lang="en">

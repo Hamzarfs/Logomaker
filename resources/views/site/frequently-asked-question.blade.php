@@ -1,7 +1,7 @@
 @extends('site.common')
 
-@section('title', 'FAQs')
-
+@section('title', 'Frequently Asked Questions - RFS Logo Design')
+@section('meta_desc', 'Find answers to common questions about Logo Design. Learn about logo making process, turnaround time, and how we can help you create the perfect logo for your brand.')
 @section('content')
 
     <!-- Bootstrap CSS -->

@@ -1,8 +1,8 @@
 <!-- resources/views/site/main.blade.php -->
 @extends('site.common')
 
-@section('title', 'About us')
-
+@section('title', 'About Us - RFS Logo Design')
+@section('meta_desc', 'Learn about RFS Logo Design, a trusted provider of professional logo creation services. Discover our mission, values, and commitment to helping brands stand out.')
 @section('content')
 
     <!-- Bootstrap CSS -->

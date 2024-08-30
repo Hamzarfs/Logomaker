@@ -1,7 +1,7 @@
 @extends('site.common')
 
-@section('title', 'Welcome')
-
+@section('title', 'New Jersey Custom Logo Design Compnay - RFS Logo Design')
+@section('meta_desc', 'RFS Logo Design specializes in custom logo services in New Jersey. With our expert designers, we are the premier choice for professional logo design solutions.')
 @section('content')
 <!DOCTYPE html>
 <html lang="en">

@@ -1,7 +1,7 @@
 @extends('site.common')
 
-@section('title', 'Wordpress Website Development')
-
+@section('title', 'Wordpress Website Development Services - RFS Logo Design')
+@section('meta_desc', 'Experience custom WordPress website development services with RFS Logo Design. From custom themes to seamless functionality, we bring your vision to life.')
 @section('content')
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />

@@ -1,6 +1,7 @@
 @extends('site.common')
 
-@section('title', 'Sitemap')
+@section('title', 'Sitemap - RFS Logo Design')
+@section('meta_desc', 'Explore the RFS Logo Design sitemap to easily navigate our website. Find links to all pages, including services, FAQs, contact information, and more.')
 
 @section('content')
 
