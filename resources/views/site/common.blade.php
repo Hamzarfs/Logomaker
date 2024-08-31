@@ -13,13 +13,8 @@
         <title>@yield('title') | {{ env('APP_NAME') }}</title>
     @endisset
 
- 
-
     <meta name="description" content="@yield('meta_desc')">
-    
- 
 
-    
     <link rel="canonical" href="{{ url()->current() }}" />
 
     <link rel="icon" type="image/webp" href="{{ asset('rfs-fav.webp') }}">
@@ -95,28 +90,7 @@
             top: 50%;
             right: -50px;
             transform: rotate(270deg) translateY(-50%);
-            tran"@context": "http://www.schema.org",
-  "@type": "Organization",
-  "name": " rfslogodesign.com",
-  "url": "https://rfslogodesign.com/",
-  "logo": "https://rfslogodesign.com/wp-content/uploads/2024/02/RFS-logo-2-2.png",
-  "foundingDate": "2022",
-  "founder": [
-    {
-      "@type": "Person",
-      "name": "Allan Smith"
-    }
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "customer support",
-    "telephone": "[+1 551 666 5255]",
-    "Email": "[support@rfslogodesign.com]",
-    "sameAs": [
-      "https://www.facebook.com/rfslogodesign/",
-      "https://www.instagram.com/rfs_logodesign/"
-    ]         
-  }sform-origin: center;
+            transform-origin: center;
             background-color: red;
             /* Red VIP tag background */
             color: white;
@@ -126,9 +100,9 @@
             border-radius: 5px 5px 0 0;
         }
 
-       
+
     </style>
-    
+
     {{-- @yield('styles') --}}
 
 

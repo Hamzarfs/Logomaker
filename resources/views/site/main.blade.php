@@ -1322,9 +1322,7 @@
                     captures your brand's identity. Create a unique and professional logo with
                     minimal effort on your part and watch your idea come to life.
                 </p>
-                <div class="text-center">
-                    <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Explore Logo</button></a>
-                </div>
+                <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Explore Logo</button></a>
                 <img src="images/Logo Pics.png" class="image-online">
             </div>
             <div class="col-md-2 center-image-online">
@@ -1338,9 +1336,8 @@
                     colors, fonts, icons, and taglines to fit your brand’s vibe. Our user-friendly
                     tools make it a breeze for anyone to design a standout, professional logo!
                 </p>
-                <div class="text-center">
-                    <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Try Design Studio</button></a>
-                </div>
+                <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Try Design Studio</button></a>
+
             </div>
             <div class="container my-5">
                 <div class="row">
@@ -1352,9 +1349,8 @@
                             media or print, ensure your logo shines consistently across your website,
                             social media, business cards, and brochures!
                         </p>
-                        <div class="text-center">
-                            <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Get Started</button></a>
-                        </div>
+
+                        <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Get Started</button></a>
                     </div>
                     <div class="col-md-2"></div>
                     <div class="col-md-5">
