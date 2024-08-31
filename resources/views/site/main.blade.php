@@ -923,6 +923,10 @@
 
         @media (max-width: 768px) {
 
+            .mob-center{
+                text-align: -webkit-center;
+            }
+
             .glassmorphism-background {
     background: rgba(255, 255, 255, 0.15);
     border-radius: 15px;
@@ -1238,7 +1242,7 @@
                 <div class="col-md-6 text-center">
                     <h1 class="new-banner-title">Free Logo Maker</h1>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mob-center">
                     <div class="glassmorphism-background">
                     <!-- Vertical Drop-Down Carousel -->
                     <div id="logoCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -1278,7 +1282,7 @@
             <!-- Row 3: Two Columns -->
             <div class="row">
                 <!-- Column with Glassmorphism and Carousel -->
-                <div class="col-md-4" style="align-content: center;">
+                <div class="col-md-4 mob-center" style="align-content: center;">
                     <div class="glassmorphism-background">
                         <!-- Vertical Drop-Down Carousel -->
                         <div id="logoCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -1289,12 +1293,7 @@
                                 <div class="carousel-item">
                                     <img src="images/image-removebg-preview (1) 1.png" alt="Logo 2" class="banner-image">
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="images/image 59.png" alt="Logo 3" class="banner-image">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/image 61.png" alt="Logo 4" class="banner-image">
-                                </div>
+
 
                             </div>
                         </div>
