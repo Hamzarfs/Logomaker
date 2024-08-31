@@ -260,6 +260,59 @@
                 /* Adjust height as needed */
             }
         }
+
+        #companyName2 {
+            width: 34%;
+        }
+
+        /* For screen 992px to 1199px */
+        @media (max-width: 1199.98px) {
+            #companyName2 {
+                width: 41%;
+            }
+        }
+
+        /* For screen 767px to 991px */
+        @media (max-width: 991.98px) {
+            #companyName2 {
+                width: 56%;
+            }
+        }
+
+        /* For screen 768px */
+        @media (max-width: 768.98px) {
+            #companyName2 {
+                width: 44%;
+            }
+        }
+
+        /* For screen 576px to 767px */
+        @media (max-width: 767.98px) {
+            #companyName2 {
+                width: 60%;
+            }
+        }
+
+        /* For screen 480px to 575px */
+        @media (max-width: 575.98px) {
+            #companyName2 {
+                width: 56%;
+            }
+        }
+
+        /* For screen 480px to 575px */
+        @media (max-width: 575.98px) {
+            #companyName2 {
+                width: 68%;
+            }
+        }
+
+        /* For screen 320px to 479px */
+        @media (max-width: 479.98px) {
+            #companyName2 {
+                width: 100%;
+            }
+        }
     </style>
 
     <!-- Top Section Start -->
@@ -346,130 +399,117 @@
 
             <div class="row logo-gallery">
                 @foreach ($products as $product)
+                    @php
 
+                        $fontSlug = $product->font->slug ?? null;
+                        $font = $fontSlug ? pathinfo($fontSlug, PATHINFO_FILENAME) : '';
 
-                @php
+                        // echo   $font;
 
+                        $color = $product->color;
 
+                        $fontSize =
+                            isset($product->logomaker_font_size) && strlen($product->logomaker_font_size) > 1
+                                ? $product->logomaker_font_size
+                                : '38px';
 
+                        $companyName = session('company') ? session('company') : $product->category->name;
 
-                    $fontSlug = $product->font->slug ?? null;
-                    $font = $fontSlug ? pathinfo($fontSlug, PATHINFO_FILENAME) : '';
-
-                   // echo   $font;
-
-                    $color=$product->color;
-
-                     $fontSize = (isset($product->logomaker_font_size) && strlen($product->logomaker_font_size) > 1)
-                                    ? $product->logomaker_font_size
-                                    : '38px';
-                   
-
-                    $companyName = session('company') ? session('company') : $product->category->name;
-
-                    $companyNameLength = strlen($companyName);
-                    if ($companyNameLength > 10 && $companyNameLength <= 15) {
-                        $fontSize = (int)str_replace('px', '', $fontSize) - 6 . 'px';
-                    }else  if ($companyNameLength > 15 && $companyNameLength <= 20) {
-                        $fontSize = (int)str_replace('px', '', $fontSize) - 12 . 'px';
-                    }else  if ($companyNameLength > 20 && $companyNameLength <= 25) {
-                        $fontSize = (int)str_replace('px', '', $fontSize) - 15 . 'px';
-                    }else  if ($companyNameLength > 25 && $companyNameLength <= 30) {
-                        $fontSize = (int)str_replace('px', '', $fontSize) - 20 . 'px';
-                    }
-
-
-
-                    $topPosition = (isset($product->logomaker_top) && strlen($product->logomaker_top) > 1)
-                                    ? $product->logomaker_top
-                                    : '170px';
-
-                    $leftPosition = (isset($product->logomaker_left) && strlen($product->logomaker_left) > 1)
-                                    ? $product->logomaker_left
-                                    : '-30px';
-
-
-
-
-                    $logoPosition = $product->logo_position ?? ''; // Use null coalescing operator to handle unset cases
-                    $logoPositionVertical='margin-top:10px';
-                    if (isset($logoPosition) && strlen($logoPosition) > 0) {
-                        switch ($logoPosition) {
-                            case 'left':
-                                 if($companyNameLength <= 5){
-                                     $leftPositionValue = (int) str_replace('px', '', $leftPosition);
-                                     $adjustedLeftPositionValue = $leftPositionValue  - 80;
-                                     $leftPosition = "{$adjustedLeftPositionValue}px";
-                                 }else if($companyNameLength >= 6 && $companyNameLength<=11){
-
-                                    $leftPositionValue = (int) str_replace('px', '', $leftPosition);
-                                     $adjustedLeftPositionValue = $leftPositionValue  - 20;
-                                     $leftPosition = "{$adjustedLeftPositionValue}px";
-
-                                }
-                               // die($companyNameLength."DDDDDDDDDDD".session('company'));
-                                //$logoPosition="margin-left:0px";
-                                break;
-                            case 'center':
-                                // Do something for 'center'
-                                $logoPositionVertical='margin-top:10px';
-                                break;
-                            case 'right':
-                                // Do something for 'right'
-                                $logoPosition="margin-left:-0px";
-                                if($companyNameLength<= 5){
-                                     $leftPositionValue = (int) str_replace('px', '', $leftPosition);
-                                     $adjustedLeftPositionValue = $leftPositionValue  + 130 ;
-                                     $leftPosition = "{$adjustedLeftPositionValue}px";
-                                 }elseif($companyNameLength >= 6 && $companyNameLength<=9){
-                                     $leftPositionValue = (int) str_replace('px', '', $leftPosition);
-                                     $adjustedLeftPositionValue = $leftPositionValue  + 60;
-                                     $leftPosition = "{$adjustedLeftPositionValue}px";
-
-                                }
-
-
-                                break;
-                            case 'top':
-                                // Do something for 'top'
-                                $logoPositionVertical='margin-top:-40px';
-                                break;
-                            case 'bottom':
-                                $logoPositionVertical='margin-top:140px';
-                                break;
-                            default:
-                            $logoPositionVertical='margin-top:-10px';
-                                // Optionally handle unexpected values
-                                //echo "Unexpected logo position.";
-                                break;
+                        $companyNameLength = strlen($companyName);
+                        if ($companyNameLength > 10 && $companyNameLength <= 15) {
+                            $fontSize = (int) str_replace('px', '', $fontSize) - 6 . 'px';
+                        } elseif ($companyNameLength > 15 && $companyNameLength <= 20) {
+                            $fontSize = (int) str_replace('px', '', $fontSize) - 12 . 'px';
+                        } elseif ($companyNameLength > 20 && $companyNameLength <= 25) {
+                            $fontSize = (int) str_replace('px', '', $fontSize) - 15 . 'px';
+                        } elseif ($companyNameLength > 25 && $companyNameLength <= 30) {
+                            $fontSize = (int) str_replace('px', '', $fontSize) - 20 . 'px';
                         }
-                    }
 
-                @endphp
-                <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
+                        $topPosition =
+                            isset($product->logomaker_top) && strlen($product->logomaker_top) > 1
+                                ? $product->logomaker_top
+                                : '170px';
+
+                        $leftPosition =
+                            isset($product->logomaker_left) && strlen($product->logomaker_left) > 1
+                                ? $product->logomaker_left
+                                : '-30px';
+
+                        $logoPosition = $product->logo_position ?? ''; // Use null coalescing operator to handle unset cases
+                        $logoPositionVertical = 'margin-top:10px';
+                        if (isset($logoPosition) && strlen($logoPosition) > 0) {
+                            switch ($logoPosition) {
+                                case 'left':
+                                    if ($companyNameLength <= 5) {
+                                        $leftPositionValue = (int) str_replace('px', '', $leftPosition);
+                                        $adjustedLeftPositionValue = $leftPositionValue - 80;
+                                        $leftPosition = "{$adjustedLeftPositionValue}px";
+                                    } elseif ($companyNameLength >= 6 && $companyNameLength <= 11) {
+                                        $leftPositionValue = (int) str_replace('px', '', $leftPosition);
+                                        $adjustedLeftPositionValue = $leftPositionValue - 20;
+                                        $leftPosition = "{$adjustedLeftPositionValue}px";
+                                    }
+                                    // die($companyNameLength."DDDDDDDDDDD".session('company'));
+                                    //$logoPosition="margin-left:0px";
+                                    break;
+                                case 'center':
+                                    // Do something for 'center'
+                                    $logoPositionVertical = 'margin-top:10px';
+                                    break;
+                                case 'right':
+                                    // Do something for 'right'
+                                    $logoPosition = 'margin-left:-0px';
+                                    if ($companyNameLength <= 5) {
+                                        $leftPositionValue = (int) str_replace('px', '', $leftPosition);
+                                        $adjustedLeftPositionValue = $leftPositionValue + 130;
+                                        $leftPosition = "{$adjustedLeftPositionValue}px";
+                                    } elseif ($companyNameLength >= 6 && $companyNameLength <= 9) {
+                                        $leftPositionValue = (int) str_replace('px', '', $leftPosition);
+                                        $adjustedLeftPositionValue = $leftPositionValue + 60;
+                                        $leftPosition = "{$adjustedLeftPositionValue}px";
+                                    }
+
+                                    break;
+                                case 'top':
+                                    // Do something for 'top'
+                                    $logoPositionVertical = 'margin-top:-40px';
+                                    break;
+                                case 'bottom':
+                                    $logoPositionVertical = 'margin-top:140px';
+                                    break;
+                                default:
+                                    $logoPositionVertical = 'margin-top:-10px';
+                                    // Optionally handle unexpected values
+                                    //echo "Unexpected logo position.";
+                                    break;
+                            }
+                        }
+
+                    @endphp
+                    <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
                         <div class="card-container">
                             <!-- <img src="{{ asset("category-image/$product->image") }}" class="img-fluid portfolio-image"
-                                alt="{{ $product->name }}"> -->
+                                                                alt="{{ $product->name }}"> -->
 
 
-                                <img src="{{ asset("category-image/$product->image") }}"
-                            style="xwidth: 35% !important; {{$logoPosition}}; position: absolute; {{$logoPositionVertical}}; z-index: 10;"
-                            class="img-fluid portfolio-image"
-                            alt="{{ $product->name }}"
-                            ondragstart="return false;"
-                            oncontextmenu="return false;">
+                            <img src="{{ asset("category-image/$product->image") }}"
+                                style="xwidth: 35% !important; {{ $logoPosition }}; position: absolute; {{ $logoPositionVertical }}; z-index: 10;"
+                                class="img-fluid portfolio-image" alt="{{ $product->name }}" ondragstart="return false;"
+                                oncontextmenu="return false;">
 
 
 
-                                <div class="text-placeholder"
-                            style=" z-index: 20;font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize}}; font-weight:500; margin-left:{{$leftPosition}}; margin-top:{{ $topPosition}}">
-                            {{ session('company') ? session('company') : $categoryObj['name'] }}
+                            <div class="text-placeholder"
+                                style=" z-index: 20;font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize }}; font-weight:500; margin-left:{{ $leftPosition }}; margin-top:{{ $topPosition }}">
+                                {{ session('company') ? session('company') : $categoryObj['name'] }}
                             </div>
 
 
 
                             <a href="{{ url('/store-session-data-image?image=' . $product->image . '&product-id=' . $product->id) }}"
-                                class="hover-button select-btn" style="z-index: 30;" data-product-id="{{ $product->id }}">Select </a>
+                                class="hover-button select-btn" style="z-index: 30;"
+                                data-product-id="{{ $product->id }}">Select </a>
                             @auth
                                 @php
                                     $i = array_search($product->id, array_column($favourites, 'product_id'));
@@ -556,13 +596,15 @@
                 </div>
             </div>
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Personalization.webp') }}" alt="personalized Logo Design" title="personalized Logo Design">
+                <img src="{{ asset('images/Personalization.webp') }}" alt="personalized Logo Design"
+                    title="personalized Logo Design">
             </div>
         </div>
 
         <div class="row custom-section">
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Start Branding.webp') }}" alt="Free Logo Download Maker" title="Free Logo Download Maker">
+                <img src="{{ asset('images/Start Branding.webp') }}" alt="Free Logo Download Maker"
+                    title="Free Logo Download Maker">
             </div>
             <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
@@ -576,8 +618,8 @@
             <h2>Start Making Custom {{ $categoryObj['name'] ?? '' }} Logos Now!</h2>
             <form class="form-inline" id="companyForm3" method="POST" action="{{ url('/store-session-data') }}">
                 @csrf
-                <input type="text" class="form-control custom-form-control" id="companyName2"
-                name="company" placeholder="Search" aria-label="Enter your company name" required  maxlength="30">
+                <input type="text" class="form-control custom-form-control" id="companyName2" name="company"
+                    placeholder="Search" aria-label="Enter your company name" required maxlength="30">
                 <input type="hidden" name="flow" value="category">
                 <input type="submit" class="btn custom-btn-generate" value="Generate Logo">
             </form>
@@ -593,18 +635,20 @@
         <div class="row custom-section">
             <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
-                <h2 style="font-weight:700;">{{ $cmsData[3]['title'] ?? '' }}</h2>
+                    <h2 style="font-weight:700;">{{ $cmsData[3]['title'] ?? '' }}</h2>
                     {!! $cmsData[3]['content'] ?? '' !!}
                 </div>
             </div>
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Logo Symbol.webp') }}" alt="Icon Creator for Logo" title="Icon Creator for Logo">
+                <img src="{{ asset('images/Logo Symbol.webp') }}" alt="Icon Creator for Logo"
+                    title="Icon Creator for Logo">
             </div>
         </div>
 
         <div class="row custom-section">
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Color Choices.webp') }}" alt="Color Choices for Logo" title="Color Choices for Logo">
+                <img src="{{ asset('images/Color Choices.webp') }}" alt="Color Choices for Logo"
+                    title="Color Choices for Logo">
             </div>
             <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
@@ -638,14 +682,14 @@
             </div>
         </div>
 
-        <div class="container custom-logo-section" >
+        <div class="container custom-logo-section">
 
             <h2>Start Making Custom {{ $categoryObj['name'] ?? '' }} Logos Now!</h2>
 
             <form class="form-inline" id="companyForm3" method="POST" action="{{ url('/store-session-data') }}">
                 @csrf
-                <input type="text" class="form-control custom-form-control" id="companyName11"
-                name="company" placeholder="Search" aria-label="Enter your company name"  maxlength="30" required>
+                <input type="text" class="form-control custom-form-control" id="companyName2" name="company"
+                    placeholder="Search" aria-label="Enter your company name" maxlength="30" required>
                 <input type="hidden" name="flow" value="category">
                 <input type="submit" class="btn custom-btn-generate" value="Generate Logo">
             </form>

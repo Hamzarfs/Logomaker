@@ -78,15 +78,11 @@
     <body>
         <div class="emailtemplate">
             <div class="header">
-                <img src="{{ asset('images/Logo.png') }}" alt="Logo">
+                <img src="{{ asset('images/RFS.svg') }}" alt="Logo">
             </div>
             <div class="content">
                 <div class="user-info">
                     @yield('content')
-                    {{-- <p><strong>Email:</strong> [User's Email]</p>
-                    <p><strong>Phone Number:</strong> [User's Phone Number]</p>
-                    <p><strong>Message:</strong></p>
-                    <p>[User's Message]</p> --}}
                 </div>
             </div>
             <div class="footer">
