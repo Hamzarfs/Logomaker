@@ -396,7 +396,7 @@
         }
 
         .ptb-100 {
-            padding-top: 100px;
+            padding-top: 50px;
             padding-bottom: 100px;
         }
 
@@ -922,6 +922,22 @@
         }
 
         @media (max-width: 768px) {
+
+            .mob-center{
+                text-align: -webkit-center;
+            }
+
+            .glassmorphism-background {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    width: 220px;
+}
             .new-card-design-col {
                 flex: 1 1 100%;
             }
@@ -933,7 +949,7 @@
     width: 300px;
 }
             .new-banner h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
                 text-align: center;
             }
             .new-banner h2 {
@@ -1071,7 +1087,7 @@
             }
         }
 
-        @media only screen and (max-width: 4520px) {
+        @media only screen and (max-width: 4020px) {
             .card11 {
                 color: #fff;
                 padding-left: 10px;
@@ -1123,6 +1139,30 @@
         .swiper-button-next:after, .swiper-button-prev:after {
             font-size: 25px;
         }
+
+        .carousel-item {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.glassmorphism-background {
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Padding inside the glassmorphic container */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border to enhance the glass effect */
+    color: #fff; /* Text color inside the glassmorphic element */
+}
+
+
     </style>
 
     <!----------------------------------------- Start Banner Section ------------------------------->
@@ -1202,9 +1242,33 @@
                 <div class="col-md-6 text-center">
                     <h1 class="new-banner-title">Free Logo Maker</h1>
                 </div>
-                <div class="col-md-4">
-                    <img src="images/Property 1=Default.png" alt="Logo 1" class="banner-image">
+                <div class="col-md-4 mob-center">
+                    <div class="glassmorphism-background">
+                    <!-- Vertical Drop-Down Carousel -->
+                    <div id="logoCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+                                <img src="images/Libbys Logo-01 1.png" alt="Logo 1" class="banner-image">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/Select-02 1.png" alt="Logo 2" class="banner-image">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/Frame 45.png" alt="Logo 3" class="banner-image">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/millers-15 1.png" alt="Logo 4" class="banner-image">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/SKYLINE GLASS-01 1.png" alt="Logo 5" class="banner-image">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
                 </div>
+
+
                 <div class="col-md-2"></div>
             </div>
 
@@ -1217,14 +1281,34 @@
 
             <!-- Row 3: Two Columns -->
             <div class="row">
-                <div class="col-md-4 align-content-center">
-                    <img src="images/Property 1=Default (1).png" alt="Design Image" class="banner-image">
+                <!-- Column with Glassmorphism and Carousel -->
+                <div class="col-md-4 mob-center" style="align-content: center;">
+                    <div class="glassmorphism-background">
+                        <!-- Vertical Drop-Down Carousel -->
+                        <div id="logoCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/image 21.png" alt="Logo 1" class="banner-image">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/image-removebg-preview (1) 1.png" alt="Logo 2" class="banner-image">
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Rest of the Content -->
                 <div class="col-md-6">
                     <h2 class="banner-subtitle">Design Your Logo<br>in Minutes</h2>
                 </div>
                 <div class="col-md-2"></div>
             </div>
+
+
+
 
             <!-- Row 4: Paragraph Text -->
             <div class="row">
@@ -1234,16 +1318,7 @@
             </div>
 
             <!-- Row 5: Image with Bottom Border -->
-            <div class="row">
-                <div class="col-md-12" style="text-align: -webkit-center;">
-                    <img src="images/Group 124.png" alt="Trust 1" class="trust-images">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 my-3">
-                    <div class="banner-divider" style="border-top: 1px solid white; width: 100%;"></div>
-                </div>
-            </div>
+
 
             <!-- Row 6: Centered Form -->
             <div class="row justify-content-center mt-3" >
@@ -1258,6 +1333,31 @@
                     </form>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-md-12 my-3">
+                    <div class="banner-divider" style="border-top: 1px solid white; width: 100%;"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12" style="text-align: -webkit-center;">
+                    <a href="https://clutch.co/profile/rfs-logo-design" target="_blank">
+                        <img src="{{ url('images/clutch.png') }}" alt="Trust 1" style="margin: 0 10px;">
+                    </a>
+                    <a href="https://www.goodfirms.co/company/rfs-logo-design" target="_blank">
+                        <img src="{{ url('images/goodfirm.png') }}" alt="Trust 2" style="margin: 0 10px;">
+                    </a>
+                    <a href="https://www.trustpilot.com/review/rfslogodesign.com" target="_blank">
+                        <img src="{{ url('images/trustpilot.png') }}" alt="Trust 3" style="margin: 0 10px;">
+                    </a>
+                    <a href="https://www.bark.com/en/gb/company/rfs-logo-design/oRvbN/" target="_blank">
+                        <img src="{{ url('images/barkreview.webp') }}" alt="Trust 4" style="margin: 0 10px;">
+                    </a>
+                </div>
+            </div>
+
+
         </div>
     </section>
 
@@ -1322,9 +1422,7 @@
                     captures your brand's identity. Create a unique and professional logo with
                     minimal effort on your part and watch your idea come to life.
                 </p>
-                <div class="text-center">
-                    <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Explore Logo</button></a>
-                </div>
+                <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Explore Logo</button></a>
                 <img src="images/Logo Pics.png" class="image-online">
             </div>
             <div class="col-md-2 center-image-online">
@@ -1338,9 +1436,8 @@
                     colors, fonts, icons, and taglines to fit your brand’s vibe. Our user-friendly
                     tools make it a breeze for anyone to design a standout, professional logo!
                 </p>
-                <div class="text-center">
-                    <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Try Design Studio</button></a>
-                </div>
+                <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Try Design Studio</button></a>
+
             </div>
             <div class="container my-5">
                 <div class="row">
@@ -1352,9 +1449,8 @@
                             media or print, ensure your logo shines consistently across your website,
                             social media, business cards, and brochures!
                         </p>
-                        <div class="text-center">
-                            <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Get Started</button></a>
-                        </div>
+
+                        <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Get Started</button></a>
                     </div>
                     <div class="col-md-2"></div>
                     <div class="col-md-5">

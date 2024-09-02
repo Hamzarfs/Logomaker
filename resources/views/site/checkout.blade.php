@@ -751,14 +751,14 @@
         let checkout
 
         let ownership = document.getElementById('ownership')
-        let website = document.getElementById('website')
+       // let website = document.getElementById('website')
 
         // Create a Checkout Session
         async function initialize(e, price = {{ session()->get('price') }}) {
             let total = price;
 
             if (ownership.checked) total += parseFloat(ownership.value);
-            if (website.checked) total += parseFloat(website.value);
+            //if (website.checked) total += parseFloat(website.value);
 
             document.getElementById('orderTotal').innerText = document.getElementById('totalPrice').innerText = total;
 
@@ -790,7 +790,7 @@
         }
 
         ownership.addEventListener('change', initialize);
-        website.addEventListener('change', initialize);
+      //  website.addEventListener('change', initialize);
         window.addEventListener('load', initialize);
     </script>
 

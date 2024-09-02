@@ -1,11 +1,11 @@
 @extends('site.common')
 
-@section('title', 'Payment Success')
+@section('title', 'Thank you')
 
 @section('content')
 
 
-<style>
+    <style>
         html,
         body {
             font-family: Arial, sans-serif;
@@ -15,7 +15,8 @@
 
         .thankyou-page {
             text-align: center;
-            background-image: linear-gradient(45deg, #253a4b, #666BC0);
+            background-color: #6868D1;
+            /* background-image: linear-gradient(45deg, #253a4b, #666BC0); */
             color: white;
             padding: 100px 100px 50px 100px;
 
