@@ -63,6 +63,8 @@ class CategoryController extends Controller
             $counter++;
         }
 
+        $imagePath = "";
+
         if (Arr::exists($data, 'image')) {
             $imageName = sprintf("%s.%s", $data['name'], $data['image']->getClientOriginalExtension());
             $data['image']->move(public_path('category'), $imageName);
@@ -169,6 +171,8 @@ class CategoryController extends Controller
             $uniqueSlug = $baseSlug . '-' . $counter;
             $counter++;
         }
+
+        $imagePath = "";
 
         if (Arr::exists($data, 'image')) {
             if ($category->image && file_exists($oldImage = public_path($category->image)))

@@ -1,6 +1,8 @@
     @extends('site.common')
 
-    @section('title', 'Custom Logo')
+    @section('title', "Hire a Logo Designer for Custom Logo Design - RFS Logo Design")
+
+    @section('meta_desc', "Hire a professional logo designer for custom logo design because your brand or company deserves the best logo. RFS Logo Design has expert logo designers team.")
 
     @section('content')
 
@@ -585,10 +587,10 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 custom-text-section-v3">
                     <h2>Same Premium Logos, Now Faster!</h2>
-                    <p>We have delivered top-notch designs to thousands of clients. With our free logo services, 
+                    <p>We have delivered top-notch designs to thousands of clients. With our free logo services,
                     get high-quality, customizable logos in minutes straight from our expert designers!</p>
-                    <p>We know you are eager to launch your business, so our simple and speedy customizable 
-                    logo design process is here to help. Below are a few simple steps we follow and produce 
+                    <p>We know you are eager to launch your business, so our simple and speedy customizable
+                    logo design process is here to help. Below are a few simple steps we follow and produce
                     a professional logo worthy of your brand in no time at all.</p>
                     <div class="custom-bold-text-v3">Let Us Create A Custom Logo With Ease!</div>
                 </div>
@@ -682,9 +684,9 @@
                 <h2 class="studioTitle">Uncover Versatile Logo Designs With Our Powerful Design Engine!</h2>
             </div>
         </div>
-        
 
-        
+
+
     <!----------------------start simple and fast --------------------->
     <section class="custom-logo-process">
         <div class="container">
@@ -706,7 +708,7 @@
                     <div class="box-content">
                         <span class="box-heading-number">01</span>
                         <h3 class="box-heading">Discovery and Research</h3>
-                        <p class="box-text">First up, we dive into learning all about your brand, audience, and competitors. This helps us get 
+                        <p class="box-text">First up, we dive into learning all about your brand, audience, and competitors. This helps us get
                             a feel for what your logo should say and how it should stand out. We’ll brainstorm, survey, and check out what others in your space are doing.</p>
                     </div>
                 </div>
@@ -717,7 +719,7 @@
                     <div class="box-content">
                         <span class="box-heading-number">02</span>
                         <h3 class="box-heading">Concept<br> Refinement</h3>
-                        <p class="box-text">We begin by sketching ideas and exploring different styles through rough drafts and mood boards. 
+                        <p class="box-text">We begin by sketching ideas and exploring different styles through rough drafts and mood boards.
                             Once the best concepts emerge, we refine them by finalizing colors, typography, and ensuring the logo works across all formats. Your feedback guides the final tweaks.</p>
                     </div>
                 </div>
@@ -728,7 +730,7 @@
                     <div class="box-content">
                         <span class="box-heading-number">03</span>
                         <h3 class="box-heading">Finalization and Delivery</h3>
-                        <p class="box-text">Finally, we prepare your logo for action. We create various formats for different uses and 
+                        <p class="box-text">Finally, we prepare your logo for action. We create various formats for different uses and
                             make sure they look great everywhere. Plus, we might put together a style guide to keep everything consistent.</p>
                     </div>
                 </div>
