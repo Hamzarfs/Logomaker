@@ -25,7 +25,13 @@
             font-size: 1rem;
             margin-bottom: 1rem;
         }
-        WHERE 1
+
+        .change-package {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .change-package:hover {
             text-decoration: underline;
         }
 
@@ -82,7 +88,7 @@
             top: 40px;
             left: 60px;
         }
-        WHERE 1
+
         .logo-mockup-2 {
             position: absolute;
             width: 100px;
@@ -650,16 +656,18 @@
                     <!-- Checkboxes for additional options -->
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="edits">
-                        <label class="form-check-label" for="edits">Unlimited FREE edits for all your designs for a month. $5/mo after the first month, charged quarterly.</label>
+                        <label class="form-check-label" for="edits">Unlimited FREE edits for all your designs for a
+                            month. $5/mo after the first month, charged quarterly.</label>
                     </div>
                     <div class="form-check mt-2">
                         <input type="checkbox" class="form-check-input" id="ownership" value="599">
-                        <label class="form-check-label" for="ownership">Get exclusive ownership of your logo copyrights for $599. We will remove this logo from our website.</label>
+                        <label class="form-check-label" for="ownership">Get exclusive ownership of your logo copyrights for
+                            $599. We will remove this logo from our website.</label>
                     </div>
                     <!-- <div class="form-check mt-2">
-                        <input type="checkbox" class="form-check-input" id="website" value="14.99">
-                        <label class="form-check-label" for="website">Get a professional website FREE for a month. $14.99/mo after the first month.</label>
-                    </div> -->
+                            <input type="checkbox" class="form-check-input" id="website" value="14.99">
+                            <label class="form-check-label" for="website">Get a professional website FREE for a month. $14.99/mo after the first month.</label>
+                        </div> -->
                     <h4 class="order-total my-3">ORDER TOTAL: $<span id="orderTotal">{{ session()->get('price') }}</span>
                     </h4>
 
@@ -751,7 +759,7 @@
         let checkout
 
         let ownership = document.getElementById('ownership')
-       // let website = document.getElementById('website')
+        // let website = document.getElementById('website')
 
         // Create a Checkout Session
         async function initialize(e, price = {{ session()->get('price') }}) {
@@ -774,12 +782,14 @@
                     }),
                 });
 
-                const { clientSecret } = await response.json();
+                const {
+                    clientSecret
+                } = await response.json();
 
                 return clientSecret;
             };
 
-            if(checkout) checkout.destroy()
+            if (checkout) checkout.destroy()
 
             checkout = await stripe.initEmbeddedCheckout({
                 fetchClientSecret,
@@ -790,7 +800,7 @@
         }
 
         ownership.addEventListener('change', initialize);
-      //  website.addEventListener('change', initialize);
+        //  website.addEventListener('change', initialize);
         window.addEventListener('load', initialize);
     </script>
 
