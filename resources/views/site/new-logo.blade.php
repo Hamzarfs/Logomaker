@@ -7,9 +7,9 @@
 @section('content')
 
     <style>
-        .category-top-section {
-            background-image: url("{{ asset('images/Main-Poster-1.webp') }}");
-        }
+        /* .category-top-section {
+                background-image: url("{{ asset('images/Main-Poster-1.webp') }}");
+            } */
 
         .category-top-section {
             padding: 60px 0;
@@ -320,12 +320,15 @@
     </style>
 
     <!-- Top Section Start -->
-    <section class="category-top-section py-5">
+    <section class="category-top-section">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-12">
+                <div class="col-lg-6">
                     <h1 style="color:#fff; font-weight:700;  font-size:26px;">Free {{ $categoryObj['name'] ?? '' }} <span
                             class="logo-design-color">Logo
+                            {{-- <div class="col-12">
+                    <h1 style="color:#fff; font-weight:700;  font-size:26px;">Free {{ $categoryObj['name'] ?? '' }} <span
+                            class="logo-design-color">Logo --}}
                             Maker</span><br>Design
                         Your Logo in Minutes</h1>
                     <p style="color:#fff;">Utilize our advanced {{ $categoryObj['name'] ?? '' }} logo creator tool to design
@@ -348,7 +351,7 @@
                         </div>
                     </form>
                 </div>
-                {{-- <div class="col-lg-6 d-none d-lg-block">
+                <div class="col-lg-6 d-none d-lg-block">
                     <div class="images-container">
                         <img src="{{ asset('images/lg-logo-gallery-blank.png') }}" class="background-image">
                         <span class="loader-item absolute-img-01">
@@ -362,7 +365,7 @@
                             <img src="{{ asset('images/vintage-law-scale-3135ld.png') }}" class="right-image">
                         </span>
                     </div>
-                </div> --}}
+                </div>
             </div>
         </div>
     </section>
@@ -496,7 +499,7 @@
                     <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
                         <div class="card-container">
                             <!-- <img src="{{ asset("category-image/$product->image") }}" class="img-fluid portfolio-image"
-                                                                    alt="{{ $product->name }}"> -->
+                                                                        alt="{{ $product->name }}"> -->
 
 
                             <img src="{{ asset("category-image/$product->image") }}"

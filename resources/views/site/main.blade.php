@@ -3,6 +3,9 @@
 
 @section('title', 'Welcome')
 
+@section('meta_desc', "Design your own logo for your business. RFS Logo Design offers free templates and a logo builder
+    for every company's logo design. Create and customize your logo!")
+
 @section('content')
 
 
@@ -14,106 +17,122 @@
 
     <style>
         .section-heading-we h2 {
-    font-size: 36px; /* Adjust size as needed */
-    font-weight: 700; /* Make it bold */
-    color: #010935; /* Heading color */
-    margin-bottom: 1rem; /* Spacing below the heading */
-}
+            font-size: 36px;
+            /* Adjust size as needed */
+            font-weight: 700;
+            /* Make it bold */
+            color: #010935;
+            /* Heading color */
+            margin-bottom: 1rem;
+            /* Spacing below the heading */
+        }
 
-.form-inline .form-control {
-        display: inline-block;
-        width: auto;
-        vertical-align: middle;
-        height: 50px;
-    }
+        .form-inline .form-control {
+            display: inline-block;
+            width: auto;
+            vertical-align: middle;
+            height: 50px;
+        }
 
 
-.section-heading-we {
-    text-align: center !important; /* Center align the text */
-    margin-bottom: 2rem; /* Add space below the heading */
-}
+        .section-heading-we {
+            text-align: center !important;
+            /* Center align the text */
+            margin-bottom: 2rem;
+            /* Add space below the heading */
+        }
 
 
         /* Start Image Box Sections */
         .price-small-business {
-    font-size: 16px; /* Default size for other text */
-}
+            font-size: 16px;
+            /* Default size for other text */
+        }
 
-.price-small-business span {
-    font-size: 44px; /* Adjust as needed */
-    font-weight: bold; /* Optional: makes the text bold */
-}
+        .price-small-business span {
+            font-size: 44px;
+            /* Adjust as needed */
+            font-weight: bold;
+            /* Optional: makes the text bold */
+        }
 
-.plan-section {
-    background-color: #fff;
-}
+        .plan-section {
+            background-color: #fff;
+        }
 
-.card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
 
-.card-startup {
-    background-color: #646BD9;
-    color: white;
-    text-align: left;
-}
+        .card-startup {
+            background-color: #646BD9;
+            color: white;
+            text-align: left;
+        }
 
-.card-startup:hover {
-    background-color: #152441;
-}
+        .card-startup:hover {
+            background-color: #152441;
+        }
 
-.card-small-business {
-    background-color: #646BD9;
-    color: white;
-    text-align: left;
-}
+        .card-small-business {
+            background-color: #646BD9;
+            color: white;
+            text-align: left;
+        }
 
-.card-small-business:hover {
-    background-color: #152441;
-}
+        .card-small-business:hover {
+            background-color: #152441;
+        }
 
-.card-logo-startup, .card-logo-small-business {
-    max-width: 150px;
-}
+        .card-logo-startup,
+        .card-logo-small-business {
+            max-width: 150px;
+        }
 
-.heading-startup, .heading-small-business {
-    font-weight: 700;
-    font-size: 1.75rem;
-}
+        .heading-startup,
+        .heading-small-business {
+            font-weight: 700;
+            font-size: 1.75rem;
+        }
 
-.description-startup, .description-small-business {
-    font-size: 1rem;
-}
+        .description-startup,
+        .description-small-business {
+            font-size: 1rem;
+        }
 
-.features-startup li, .features-small-business li {
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
+        .features-startup li,
+        .features-small-business li {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
 
-.price-startup, .price-small-business {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+        .price-startup,
+        .price-small-business {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
 
-.btn-startup, .btn-small-business {
-    color: #646BD9;
-    background-color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 5px;
-}
+        .btn-startup,
+        .btn-small-business {
+            color: #646BD9;
+            background-color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 5px;
+        }
 
-.btn-startup:hover, .btn-small-business:hover {
-    color: #152441;
-    background-color: #ffffff;
-}
+        .btn-startup:hover,
+        .btn-small-business:hover {
+            color: #152441;
+            background-color: #ffffff;
+        }
 
-/* End Plan Section */
+        /* End Plan Section */
         .free-logo-heading {
             font-weight: 700;
             font-size: 32px;
@@ -280,9 +299,9 @@
 
         .logotype-card img {
             /* padding: 20px;
-                                                            border-radius: 15px 15px 0 0;
-                                                            width: 160px;
-                                                            align-self: center; */
+                                                                border-radius: 15px 15px 0 0;
+                                                                width: 160px;
+                                                                align-self: center; */
 
             height: 120px;
             width: auto;
@@ -317,19 +336,22 @@
         }
 
         .new-banner h1 {
-    font-size: 56px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: start;
-}
-.new-banner h2 {
-    font-size: 56px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: start;
-}
-     .new-banner p {
-            font-size: 1.25rem; /* Font size for paragraph */
+            font-size: 56px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: start;
+        }
+
+        .new-banner h2 {
+            font-size: 56px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: start;
+        }
+
+        .new-banner p {
+            font-size: 1.25rem;
+            /* Font size for paragraph */
             margin-bottom: 30px;
         }
 
@@ -354,9 +376,9 @@
         }
 
         /* .new-banner .trust-images img {
-                                                max-width: 150px;
-                                                margin: 10px;
-                                            } */
+                                                    max-width: 150px;
+                                                    margin: 10px;
+                                                } */
 
         .new-banner .divider {
             height: 1px;
@@ -421,8 +443,7 @@
 
         .overlay1 {
             width: 70px;
-            position: a    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
-            bsolute;
+            position: a < !-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> --> bsolute;
             height: 70px;
             border-radius: 50%;
             background: #F7B318;
@@ -434,8 +455,7 @@
 
         .overlay2 {
             width: 70px;
-            position: a    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
-            bsolute;
+            position: a < !-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> --> bsolute;
             height: 70px;
             border-radius: 50%;
             background: #C32626;
@@ -684,9 +704,8 @@
             left: 37px;
         }
 
-        .slider {    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
-
-            display: -webkit-box;
+        .slider {
+            < !-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>-->display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
             display: flex;
@@ -717,29 +736,30 @@
         }
 
 
-.testimonial-card:hover{
-    color: #ffffff !important;
-}
+        .testimonial-card:hover {
+            color: #ffffff !important;
+        }
 
-.new-testimonial .ad:hover{
-    color: #ffffff !important;
+        .new-testimonial .ad:hover {
+            color: #ffffff !important;
 
-}
+        }
 
 
-.new-card-design-section {
+        .new-card-design-section {
 
             padding: 20px;
         }
 
 
         .new-card-design-title {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 36px;
-    font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 36px;
+            font-weight: bold;
 
-}
+        }
+
         .new-card-design-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -759,17 +779,18 @@
         }
 
         .new-card-design-card {
-    padding-top: 80px;
-    padding-bottom: 80px;
-    background-color: #F5F5F5;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    text-align: center;
-    /* padding: 20px; */
-    transition: transform 0.3s;
-}
+            padding-top: 80px;
+            padding-bottom: 80px;
+            background-color: #F5F5F5;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            text-align: center;
+            /* padding: 20px; */
+            transition: transform 0.3s;
+        }
+
         .new-card-design-card img {
             max-width: 100%;
             height: auto;
@@ -829,18 +850,19 @@
 
 
         .new-testimonial-carousel {
-    padding-top: 40px;
-    display: flex;
-    gap: 20px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    /* padding: 0 20px; */
-    scrollbar-width: none;
-    padding-bottom: 40px;
-}
+            padding-top: 40px;
+            display: flex;
+            gap: 20px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            /* padding: 0 20px; */
+            scrollbar-width: none;
+            padding-bottom: 40px;
+        }
 
         .new-testimonial-carousel::-webkit-scrollbar {
-            display: none; /* For Chrome, Safari, and Opera */
+            display: none;
+            /* For Chrome, Safari, and Opera */
         }
 
         .testimonial-card {
@@ -850,7 +872,8 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            transform: rotate(0deg); /* Ensure it starts straight */
+            transform: rotate(0deg);
+            /* Ensure it starts straight */
         }
 
         .rotate-left {
@@ -862,9 +885,12 @@
         }
 
         .testimonial-card:hover {
-            background-color: #646BD9; /* Purple background on hover */
-            color: white; /* White text on hover */
-            transform: rotate(0deg); /* Straighten on hover */
+            background-color: #646BD9;
+            /* Purple background on hover */
+            color: white;
+            /* White text on hover */
+            transform: rotate(0deg);
+            /* Straighten on hover */
             box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
         }
 
@@ -911,9 +937,8 @@
                 flex: 78% !important;
             }
         }
-        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
 
-        @media only screen and (max-width: 767px) {
+        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 @media only screen and (max-width: 767px) {
             .owl-carousel .owl-item img {
 
                 display: block;
@@ -923,21 +948,22 @@
 
         @media (max-width: 768px) {
 
-            .mob-center{
+            .mob-center {
                 text-align: -webkit-center;
             }
 
             .glassmorphism-background {
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 15px;
-    padding: 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #fff;
-    width: 220px;
-}
+                background: rgba(255, 255, 255, 0.15);
+                border-radius: 15px;
+                padding: 10px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                color: #fff;
+                width: 220px;
+            }
+
             .new-card-design-col {
                 flex: 1 1 100%;
             }
@@ -946,12 +972,14 @@
         @media (max-width: 768px) {
 
             img.trust-images {
-    width: 300px;
-}
+                width: 300px;
+            }
+
             .new-banner h1 {
                 font-size: 2.2rem;
                 text-align: center;
             }
+
             .new-banner h2 {
                 font-size: 2rem;
                 text-align: center;
@@ -1136,33 +1164,40 @@
             background-color: #6868D1;
         }
 
-        .swiper-button-next:after, .swiper-button-prev:after {
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
             font-size: 25px;
         }
 
         .carousel-item {
-    opacity: 0;
-    transform: translateY(-50px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
+            opacity: 0;
+            transform: translateY(-50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
 
-.carousel-item.active {
-    opacity: 1;
-    transform: translateY(0);
-}
+        .carousel-item.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-.glassmorphism-background {
-    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
-    border-radius: 15px; /* Rounded corners */
-    padding: 20px; /* Padding inside the glassmorphic container */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    backdrop-filter: blur(10px); /* Blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border to enhance the glass effect */
-    color: #fff; /* Text color inside the glassmorphic element */
-}
-
-
+        .glassmorphism-background {
+            background: rgba(255, 255, 255, 0.15);
+            /* Semi-transparent white */
+            border-radius: 15px;
+            /* Rounded corners */
+            padding: 20px;
+            /* Padding inside the glassmorphic container */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            /* Soft shadow for depth */
+            backdrop-filter: blur(10px);
+            /* Blur effect */
+            -webkit-backdrop-filter: blur(10px);
+            /* Blur effect for Safari */
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            /* Light border to enhance the glass effect */
+            color: #fff;
+            /* Text color inside the glassmorphic element */
+        }
     </style>
 
     <!----------------------------------------- Start Banner Section ------------------------------->
@@ -1244,26 +1279,26 @@
                 </div>
                 <div class="col-md-4 mob-center">
                     <div class="glassmorphism-background">
-                    <!-- Vertical Drop-Down Carousel -->
-                    <div id="logoCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
+                        <!-- Vertical Drop-Down Carousel -->
+                        <div id="logoCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
 
-                            <div class="carousel-item active">
-                                <img src="images/Libbys Logo-01 1.png" alt="Logo 1" class="banner-image">
+                                <div class="carousel-item active">
+                                    <img src="images/Libbys Logo-01 1.png" alt="Logo 1" class="banner-image">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Select-02 1.png" alt="Logo 2" class="banner-image">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Frame 45.png" alt="Logo 3" class="banner-image">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/millers-15 1.png" alt="Logo 4" class="banner-image">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/SKYLINE GLASS-01 1.png" alt="Logo 5" class="banner-image">
+                                </div>
                             </div>
-                            <div class="carousel-item">
-                                <img src="images/Select-02 1.png" alt="Logo 2" class="banner-image">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/Frame 45.png" alt="Logo 3" class="banner-image">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/millers-15 1.png" alt="Logo 4" class="banner-image">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/SKYLINE GLASS-01 1.png" alt="Logo 5" class="banner-image">
-                            </div>
-                        </div>
                         </div>
                     </div>
                 </div>
@@ -1313,7 +1348,8 @@
             <!-- Row 4: Paragraph Text -->
             <div class="row">
                 <div class="col-md-12">
-                    <p class="banner-paragraph">Unleash your creativity and watch your logo come to life effortlessly. <br> Get in touch with us now!</p>
+                    <p class="banner-paragraph">Unleash your creativity and watch your logo come to life effortlessly. <br>
+                        Get in touch with us now!</p>
                 </div>
             </div>
 
@@ -1321,12 +1357,13 @@
 
 
             <!-- Row 6: Centered Form -->
-            <div class="row justify-content-center mt-3" >
+            <div class="row justify-content-center mt-3">
                 <div class="col-md-8">
                     <form id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
                         @csrf
-                        <div class="input-group mb-3" >
-                            <input type="text" class="form-control" id="companyName11" name="company" placeholder="Enter your company name" aria-label="Enter your company name" maxlength="30">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="companyName11" name="company"
+                                placeholder="Enter your company name" aria-label="Enter your company name" maxlength="30">
                             <input type="hidden" name="flow" value="home">
                             <input type="submit" class="custom-button-banner" value="Get Started">
                         </div>
@@ -1470,14 +1507,14 @@
 
     <!-- <------------------Make A logo------------------>
     <!--
-                                                        <section class="heroSection1">
-                                                                <div class="container">
-                                                                    <div class="row">
-                                                                        <div class="col-12 mb-4">
-                                                                            <h1 class="heroTitle1">Ready To Turn Your Vision <br>Into A Logo Masterpiece?</h1>
+                                                            <section class="heroSection1">
+                                                                    <div class="container">
+                                                                        <div class="row">
+                                                                            <div class="col-12 mb-4">
+                                                                                <h1 class="heroTitle1">Ready To Turn Your Vision <br>Into A Logo Masterpiece?</h1>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                </section> -->
+                                                                    </section> -->
 
     <!-- <------------------End Make A logo---------------->
 
@@ -1490,7 +1527,8 @@
         <div class="container portfolio-section">
             <h2 class="portfolio-heading">We Have Logos For Everyone</h2>
             <p class="main-description-online">
-                Explore our <a href="{{ url('logo-maker') }}" style="font-weight: bold; color: inherit;">logo builder</a>'s
+                Explore our <a href="{{ url('logo-maker') }}" style="font-weight: bold; color: inherit;">logo
+                    builder</a>'s
                 vast template collection, from medical
                 to fashion, sports to food. RFS Logo Design helps you find the perfect
                 logo to match your business identity and branding needs.
@@ -1548,130 +1586,151 @@
 
     <!-----------------End  Portfolio ----------------------->
 
-    <div style="padding-top: 20px; padding-bottom:70px; background-color:#6868D1; background-image: url('images/RFS LOGO-02 2.png'); background-repeat: no-repeat; background-position: left;">
-    <div class="container">
-        <div class="why-rfs">
-            <h2 class="portfolio-heading">Why RFS Is Your Go-To Logo Designer</h2>
-            <p class="main-description-online">
-                Our team of concept-driven logo designers is passionate about crafting visually stunning and professional logos that truly elevate your brand and leave a lasting impression. Here is why RFS is the perfect choice for you:
-            </p>
+    <div
+        style="padding-top: 20px; padding-bottom:70px; background-color:#6868D1; background-image: url('images/RFS LOGO-02 2.png'); background-repeat: no-repeat; background-position: left;">
+        <div class="container">
+            <div class="why-rfs">
+                <h2 class="portfolio-heading">Why RFS Is Your Go-To Logo Designer</h2>
+                <p class="main-description-online">
+                    Our team of concept-driven logo designers is passionate about crafting visually stunning and
+                    professional logos that truly elevate your brand and leave a lasting impression. Here is why RFS is the
+                    perfect choice for you:
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 edyy">
+                    <a class="card11 education">
+                        <div class="row" style="width: 100%;">
+                            <div class="col-md-4">
+                                <div class="overlay"></div>
+                                <div class="imgicon">
+                                    <img src="{{ url('images/image 52.png') }}" class="opeer">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <span class="headi">Bringing Ideas To Life</span>
+                            </div>
+                            <div class="col-md-12">
+                                <p class="dettial">At RFS, we get your vision. We are all about teamwork to craft logo
+                                    designs that truly capture your business’s identity and values. With decades of
+                                    experience, we turn your ideas into powerful brand symbols. Whether you are launching or
+                                    revamping, our logo design services are here to give your business a standout boost.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 edyy">
+                    <a class="card11 education">
+                        <div class="row" style="width: 100%;">
+                            <div class="col-md-4">
+                                <div class="overlay"></div>
+                                <div class="imgicon">
+                                    <img src="{{ url('images/image 53.png') }}" class="opeer">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <span class="headi">Conducting Insightful Research</span>
+                            </div>
+                            <div class="col-md-12">
+                                <p class="dettial">We mix your ideas with what your audience craves. Our custom logo design
+                                    service fuses your brand vision with smart, research-driven elements to create a logo
+                                    that catches your eyes and engages prospects. Get the best logo design company on your
+                                    side to make your brand irresistible!</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 edyy">
+                    <a class="card11 education">
+                        <div class="row" style="width: 100%;">
+                            <div class="col-md-4">
+                                <div class="overlay"></div>
+                                <div class="imgicon">
+                                    <img src="{{ url('images/image 54.png') }}" class="opeer">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <span class="headi">Crafting Value</span>
+                            </div>
+                            <div class="col-md-12">
+                                <p class="dettial">We infuse real value into every logo. Our meticulous design process
+                                    starts with diving deep into your brand’s needs, enabling our top-notch designers to
+                                    craft a logo packed with persuasive elements and audience appeal. Get ready to see your
+                                    brand soar to new heights.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-md-4 edyy">
-                <a class="card11 education">
-                    <div class="row" style="width: 100%;">
-                        <div class="col-md-4">
-                            <div class="overlay"></div>
-                            <div class="imgicon">
-                                <img src="{{url('images/image 52.png')}}" class="opeer">
+        <div class="container" style="padding-top: 50px;">
+            <div class="row">
+                <div class="col-md-4 edyy">
+                    <a class="card11 education">
+                        <div class="row" style="width: 100%;">
+                            <div class="col-md-4">
+                                <div class="overlay"></div>
+                                <div class="imgicon">
+                                    <img src="{{ url('images/image 55.png') }}" class="opeer">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <span class="headi">Unique Design Solutions</span>
+                            </div>
+                            <div class="col-md-12">
+                                <p class="dettial">Explore our diverse graphic design solutions! Our portfolio showcases
+                                    top-tier work across various industries, from eye-catching logos to complete branding
+                                    and promotion services. Whether you need standout designs for your mobile app, website,
+                                    or social media, we have got you covered.</p>
                             </div>
                         </div>
-                        <div class="col-md-8">
-                            <span class="headi">Bringing Ideas To Life</span>
-                        </div>
-                        <div class="col-md-12">
-                            <p class="dettial">At RFS, we get your vision. We are all about teamwork to craft logo designs that truly capture your business’s identity and values. With decades of experience, we turn your ideas into powerful brand symbols. Whether you are launching or revamping, our logo design services are here to give your business a standout boost.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 edyy">
-                <a class="card11 education">
-                    <div class="row" style="width: 100%;">
-                        <div class="col-md-4">
-                            <div class="overlay"></div>
-                            <div class="imgicon">
-                                <img src="{{url('images/image 53.png')}}" class="opeer">
+                    </a>
+                </div>
+                <div class="col-md-4 edyy">
+                    <a class="card11 education">
+                        <div class="row" style="width: 100%;">
+                            <div class="col-md-4">
+                                <div class="overlay"></div>
+                                <div class="imgicon">
+                                    <img src="{{ url('images/image 56.png') }}" class="opeer">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <span class="headi">At Your Service 24/7</span>
+                            </div>
+                            <div class="col-md-12">
+                                <p class="dettial">Get the support you deserve with our dedicated, 24/7 expert team. We are
+                                    here to tackle your queries and offer proactive advice. At RFS, exceptional customer
+                                    service is our priority, ensuring your branding journey is as smooth and successful as
+                                    possible.</p>
                             </div>
                         </div>
-                        <div class="col-md-8">
-                            <span class="headi">Conducting Insightful Research</span>
-                        </div>
-                        <div class="col-md-12">
-                            <p class="dettial">We mix your ideas with what your audience craves. Our custom logo design service fuses your brand vision with smart, research-driven elements to create a logo that catches your eyes and engages prospects. Get the best logo design company on your side to make your brand irresistible!</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 edyy">
-                <a class="card11 education">
-                    <div class="row" style="width: 100%;">
-                        <div class="col-md-4">
-                            <div class="overlay"></div>
-                            <div class="imgicon">
-                                <img src="{{url('images/image 54.png')}}" class="opeer">
+                    </a>
+                </div>
+                <div class="col-md-4 edyy">
+                    <a class="card11 education">
+                        <div class="row" style="width: 100%;">
+                            <div class="col-md-4">
+                                <div class="overlay"></div>
+                                <div class="imgicon">
+                                    <img src="{{ url('images/image 57.png') }}" class="opeer">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <span class="headi">Impactful Branding For Growth</span>
+                            </div>
+                            <div class="col-md-12">
+                                <p class="dettial">We stick to the best practices in logo design and branding to take your
+                                    brand to new heights. With our tried-and-true design process, deep expertise, and
+                                    top-tier designers, we will set your enterprise on the path to exponential growth. Join
+                                    us now for branding that makes an impact!</p>
                             </div>
                         </div>
-                        <div class="col-md-8">
-                            <span class="headi">Crafting Value</span>
-                        </div>
-                        <div class="col-md-12">
-                            <p class="dettial">We infuse real value into every logo. Our meticulous design process starts with diving deep into your brand’s needs, enabling our top-notch designers to craft a logo packed with persuasive elements and audience appeal. Get ready to see your brand soar to new heights.</p>
-                        </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="container" style="padding-top: 50px;">
-        <div class="row">
-            <div class="col-md-4 edyy">
-                <a class="card11 education">
-                    <div class="row" style="width: 100%;">
-                        <div class="col-md-4">
-                            <div class="overlay"></div>
-                            <div class="imgicon">
-                                <img src="{{url('images/image 55.png')}}" class="opeer">
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <span class="headi">Unique Design Solutions</span>
-                        </div>
-                        <div class="col-md-12">
-                            <p class="dettial">Explore our diverse graphic design solutions! Our portfolio showcases top-tier work across various industries, from eye-catching logos to complete branding and promotion services. Whether you need standout designs for your mobile app, website, or social media, we have got you covered.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 edyy">
-                <a class="card11 education">
-                    <div class="row" style="width: 100%;">
-                        <div class="col-md-4">
-                            <div class="overlay"></div>
-                            <div class="imgicon">
-                                <img src="{{url('images/image 56.png')}}" class="opeer">
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <span class="headi">At Your Service 24/7</span>
-                        </div>
-                        <div class="col-md-12">
-                            <p class="dettial">Get the support you deserve with our dedicated, 24/7 expert team. We are here to tackle your queries and offer proactive advice. At RFS, exceptional customer service is our priority, ensuring your branding journey is as smooth and successful as possible.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 edyy">
-                <a class="card11 education">
-                    <div class="row" style="width: 100%;">
-                        <div class="col-md-4">
-                            <div class="overlay"></div>
-                            <div class="imgicon">
-                                <img src="{{url('images/image 57.png')}}" class="opeer">
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <span class="headi">Impactful Branding For Growth</span>
-                        </div>
-                        <div class="col-md-12">
-                            <p class="dettial">We stick to the best practices in logo design and branding to take your brand to new heights. With our tried-and-true design process, deep expertise, and top-tier designers, we will set your enterprise on the path to exponential growth. Join us now for branding that makes an impact!</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
     <!------------------start No.1 Choice for Businesses ------------->
 
@@ -1779,56 +1838,68 @@
 
 
 
-    <div style="padding-top: 70px; padding-bottom: 100px; " >
-    <div class="new-card-design-section">
-        <div class="new-card-design-container">
-            <h2 class="new-card-design-title">Designing The Perfect Logo Made Easy <br>With Our Logo Creator</h2>
-            <p style="text-align: center;">Still unsure? Dive deeper or consult with our expert designers for tailored guidance.</p>
-            <div class="text-center">
+    <div style="padding-top: 70px; padding-bottom: 100px; ">
+        <div class="new-card-design-section">
+            <div class="new-card-design-container">
+                <h2 class="new-card-design-title">Designing The Perfect Logo Made Easy <br>With Our Logo Creator</h2>
+                <p style="text-align: center;">Still unsure? Dive deeper or consult with our expert designers for tailored
+                    guidance.</p>
+                <div class="text-center">
                     <a href="{{ url('/logo-maker') }}"><button class="search-button-online">Get Started</button></a>
                 </div>
-        </div>
+            </div>
 
-        <div class="new-card-design-container">
-            <div class="new-card-design-row">
-                <div class="new-card-design-col">
-                    <div class="new-card-design-card">
-                        <img src="{{url('images/card-design1.png')}}" alt="Image 1">
-                        <h2>Logo Type</h2>
-                        <i class="fas fa-arrow-up"></i>
-                        <div class="new-card-design-overlay">
-                            <div class="new-card-design-overlay-text">Logos come in various types, each serving different purposes: emblem logos combine text and symbols within a badge-like shape; wordmark logos focus on stylized text; lettermark logos use initials or abbreviations; abstract logos represent ideas in a unique, non-literal way; and pictorial logos illustrate the business with a visual icon.</div>
+            <div class="new-card-design-container">
+                <div class="new-card-design-row">
+                    <div class="new-card-design-col">
+                        <div class="new-card-design-card">
+                            <img src="{{ url('images/card-design1.png') }}" alt="Image 1">
+                            <h2>Logo Type</h2>
+                            <i class="fas fa-arrow-up"></i>
+                            <div class="new-card-design-overlay">
+                                <div class="new-card-design-overlay-text">Logos come in various types, each serving
+                                    different purposes: emblem logos combine text and symbols within a badge-like shape;
+                                    wordmark logos focus on stylized text; lettermark logos use initials or abbreviations;
+                                    abstract logos represent ideas in a unique, non-literal way; and pictorial logos
+                                    illustrate the business with a visual icon.</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="new-card-design-col">
-                    <div class="new-card-design-card">
-                        <img src="{{url('images/card-design2.png')}}" alt="Image 2">
-                        <h2>Logo Colors</h2>
-                        <i class="fas fa-arrow-up"></i>
-                        <div class="new-card-design-overlay">
-                            <div class="new-card-design-overlay-text">Colors are key to your brand’s identity, each evoking distinct emotions. Red bursts with energy and passion, while blue signals trust and professionalism. Use our logo maker tool to pick the perfect palette that captures your brand’s essence and connects with your audience.</div>
+                    <div class="new-card-design-col">
+                        <div class="new-card-design-card">
+                            <img src="{{ url('images/card-design2.png') }}" alt="Image 2">
+                            <h2>Logo Colors</h2>
+                            <i class="fas fa-arrow-up"></i>
+                            <div class="new-card-design-overlay">
+                                <div class="new-card-design-overlay-text">Colors are key to your brand’s identity, each
+                                    evoking distinct emotions. Red bursts with energy and passion, while blue signals trust
+                                    and professionalism. Use our logo maker tool to pick the perfect palette that captures
+                                    your brand’s essence and connects with your audience.</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="new-card-design-col">
-                    <div class="new-card-design-card">
-                        <img src="{{url('images/card-design3.png')}}" alt="Image 3">
-                        <h2>Logo Fonts</h2>
-                        <i class="fas fa-arrow-up"></i>
-                        <div class="new-card-design-overlay">
-                            <div class="new-card-design-overlay-text">Choosing the right font is crucial for your brand logo, as it reflects your brand’s personality and message. Here are some ideas for you. Serif Fonts: Exude tradition and reliability. Sans-Serif Fonts: Suggest modernity and simplicity. Script Fonts: Add a touch of elegance. Display Fonts: Command attention and stand out.</div>
+                    <div class="new-card-design-col">
+                        <div class="new-card-design-card">
+                            <img src="{{ url('images/card-design3.png') }}" alt="Image 3">
+                            <h2>Logo Fonts</h2>
+                            <i class="fas fa-arrow-up"></i>
+                            <div class="new-card-design-overlay">
+                                <div class="new-card-design-overlay-text">Choosing the right font is crucial for your brand
+                                    logo, as it reflects your brand’s personality and message. Here are some ideas for
+                                    you. Serif Fonts: Exude tradition and reliability. Sans-Serif Fonts: Suggest modernity
+                                    and simplicity. Script Fonts: Add a touch of elegance. Display Fonts: Command attention
+                                    and stand out.</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
-    <!------------Start Image Box Section ------------->
+        <!------------Start Image Box Section ------------->
 
-    {{-- <section class="image-box"
+        {{-- <section class="image-box"
         style="padding-top: 100px; padding-bottom: 100px; background-image: url('images/plan.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="container">
 
@@ -1887,216 +1958,228 @@
         </div>
     </section> --}}
 
-    <!------------end Image Box Section ------------->
+        <!------------end Image Box Section ------------->
 
 
 
-<!-- start plan section -->
+        <!-- start plan section -->
 
-<section class="plan-section py-5">
+        <section class="plan-section py-5">
 
-    <div class="container">
+            <div class="container">
 
-        <div class="row justify-content-center">
-        <div class="section-heading-we mb-4">
-            <h2>Plan Your Way to Success</h2>
-        </div>
-            <!-- Card for Startups -->
-            <div class="col-md-6 mb-4">
-                <div class="card card-startup p-4">
-                    <!-- Logo -->
-                    <img src="images/logomaker001.png" alt="Logo" class="card-logo-startup mx-auto mb-3">
+                <div class="row justify-content-center">
+                    <div class="section-heading-we mb-4">
+                        <h2>Plan Your Way to Success</h2>
+                    </div>
+                    <!-- Card for Startups -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card card-startup p-4">
+                            <!-- Logo -->
+                            <img src="images/logomaker001.png" alt="Logo" class="card-logo-startup mx-auto mb-3">
 
-                    <!-- Heading -->
-                    <h3 class="heading-startup mb-3">Logo Maker<br>for Startups</h3>
+                            <!-- Heading -->
+                            <h3 class="heading-startup mb-3">Logo Maker<br>for Startups</h3>
 
-                    <!-- Description -->
-                    <p class="description-startup mb-4">Create eye-catching designs for social media, banners, promotional materials, logos, and beyond - all yours to use at no cost, forever.</p>
+                            <!-- Description -->
+                            <p class="description-startup mb-4">Create eye-catching designs for social media, banners,
+                                promotional materials, logos, and beyond - all yours to use at no cost, forever.</p>
 
-                    <!-- Features List -->
-                    <ul class="list-unstyled mb-4 features-startup">
-                        <li><i class="bi bi-check-circle me-2"></i> 10000+ logos to choose</li>
-                        <li><i class="bi bi-check-circle me-2"></i> Endless customization options</li>
-                        <li><i class="bi bi-check-circle me-2"></i> High-res design files</li>
-                        <li style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>(PDF, PNG, JPG)</small></li>
-                        <li><i class="bi bi-check-circle me-2"></i> Instant download</li>
-                        <li><i class="bi bi-check-circle me-2"></i> Ready brand identity designs</li>
-                    </ul>
+                            <!-- Features List -->
+                            <ul class="list-unstyled mb-4 features-startup">
+                                <li><i class="bi bi-check-circle me-2"></i> 10000+ logos to choose</li>
+                                <li><i class="bi bi-check-circle me-2"></i> Endless customization options</li>
+                                <li><i class="bi bi-check-circle me-2"></i> High-res design files</li>
+                                <li style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>(PDF, PNG,
+                                        JPG)</small></li>
+                                <li><i class="bi bi-check-circle me-2"></i> Instant download</li>
+                                <li><i class="bi bi-check-circle me-2"></i> Ready brand identity designs</li>
+                            </ul>
 
-                    <!-- Price -->
-                    <p class="price-small-business mb-4">As low as &nbsp;&nbsp;<span>$37</span></p>
+                            <!-- Price -->
+                            <p class="price-small-business mb-4">As low as &nbsp;&nbsp;<span>$37</span></p>
 
-                    <!-- Button -->
-                    <div class="text-center">
-                        <a href="{{ url('/logo-maker') }}">
-                            <button class="btn btn-primary btn-startup">Get Started</button>
+                            <!-- Button -->
+                            <div class="text-center">
+                                <a href="{{ url('/logo-maker') }}">
+                                    <button class="btn btn-primary btn-startup">Get Started</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card for Small Businesses -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card card-small-business p-4">
+                            <!-- Logo -->
+                            <img src="images/Mask group (3).png" alt="Logo"
+                                class="card-logo-small-business mx-auto mb-3">
+
+                            <!-- Heading -->
+                            <h3 class="heading-small-business mb-3">Logo Maker<br>for Small Businesses</h3>
+
+                            <!-- Description -->
+                            <p class="description-small-business mb-4">Get premium logo design to create eye-catching
+                                graphics for social media, banners, promotional materials, logos, and beyond - all yours to
+                                use at no cost, forever.</p>
+
+                            <!-- Features List -->
+                            <ul class="list-unstyled mb-4 features-small-business">
+                                <li><i class="bi bi-check-circle me-2"></i> Work directly with skilled designers</li>
+                                <li><i class="bi bi-check-circle me-2"></i> Fully bespoke solution</li>
+                                <li><i class="bi bi-check-circle me-2"></i> High-res design files</li>
+                                <li style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>(Ai, PSD, EPS, PNG,
+                                        JPG, PDF, SVG, TIFF)</small></li>
+                                <li><i class="bi bi-check-circle me-2"></i> Premium graphic design work</li>
+                                <li><i class="bi bi-check-circle me-2"></i> Dedicated account manager</li>
+                            </ul>
+
+                            <!-- Price -->
+                            <p class="price-small-business mb-4">As low as &nbsp;&nbsp;<span>$199</span></p>
+
+                            <!-- Button -->
+                            <div class="text-center">
+                                <a href="{{ url('/custom-logo') }}">
+                                    <button class="btn btn-primary btn-small-business">Get Started</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Plan Section -->
+
+        <section class="logos-carousel-section py-5">
+            <div class="container">
+                <div class="text-center text-white mb-5">
+                    <h2>We Have Logos For Everyone</h2>
+                </div>
+
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/01-01.webp') }}" class="img-fluid">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/01-02.webp') }}" class="img-fluid">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/01-03.webp') }}" class="img-fluid">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/01-04.webp') }}" class="img-fluid">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/01-05.webp') }}" class="img-fluid">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/01-07.webp') }}" class="img-fluid">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/01-08.webp') }}" class="img-fluid">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/01-09.webp') }}" class="img-fluid">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/01-10.webp') }}" class="img-fluid">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/01-15.webp') }}" class="img-fluid">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/01-17.webp') }}" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Start Hire Section -->
+        <!-- <section class="hire-section-bg">
+            <div class="container hire-section">
+                <div class="row align-items-center">
+
+                    <div class="col-md-6 left-column">
+                        <p>Share Your Unique Vision With Our</p>
+                        <h2>Custom Logo Designer</h2>
+                        <a class="toll_icon" href="tel:+15516665255" style="color: white;">
+                            <button class="hire-call-now-btn">Call Now</button>
                         </a>
+
+
+
+                    </div>
+                     <div class="col-md-6 right-column">
+                        <img src="images/hire-section-logos.png" class="hire-section-logo" alt="Logo">
+                    </div>
+                </div>
+        </section> -->
+
+        <!-- End Hire Section -->
+
+
+
+        <section class="new-testimonial my-5">
+            <div class="container-fluid">
+                <h2 class="text-center">Happy Customers and Counting</h2>
+                <div class="new-testimonial-carousel mt-4">
+                    <div class="testimonial-card rotate-left ad">
+                        <p>❇️❇️❇️❇️❇️</p>
+                        {{-- <img src="https://via.placeholder.com/80" alt="Customer 1" class="rounded-circle mb-3"> --}}
+                        <h5>Busted Knuckles</h5>
+                        <p>I dealt with Ed Harvey through my experience with RFS and he was great! Very polite and helpful.
+                            I had drawn a rough sketch of my logo and they brought it to life extremely fast and with
+                            perfect accuracy! I would recommend Ed and RFS for anyone looking into getting a logo made!</p>
+                    </div>
+                    <div class="testimonial-card rotate-right ad">
+                        <p>❇️❇️❇️❇️❇️</p>
+                        {{-- <img src="https://via.placeholder.com/80" alt="Customer 2" class="rounded-circle mb-3"> --}}
+                        <h5>Madelyn Weingarden</h5>
+                        <p>Brian Edwin provided me with excellent service. Anytime I asked him for any edits, he did it
+                            promptly. I was very happy with the logos and invoices he created for me. 5 Star Service. Thank
+                            you, Brian.</p>
+                    </div>
+                    <div class="testimonial-card rotate-left ad">
+                        {{-- <img src="https://via.placeholder.com/80" alt="Customer 3" class="rounded-circle mb-3"> --}}
+                        <p>❇️❇️❇️❇️❇️</p>
+                        <h5>Spanky</h5>
+                        <p>Brian Edwin is who I worked with. I made multiple revisions and he delivered on exactly what I
+                            wanted and quickly. Highly recommend him and will be using again in the future.</p>
+                    </div>
+                    <div class="testimonial-card rotate-right ad">
+                        <p>❇️❇️❇️❇️❇️</p>
+                        {{-- <img src="https://via.placeholder.com/80" alt="Customer 4" class="rounded-circle mb-3"> --}}
+                        <h5>Archelle Jenkins</h5>
+                        <p>LOVEEE MY LOGO ! Done exactly how I visioned it! I'll be back for my website !</p>
+                    </div>
+                    <div class="testimonial-card rotate-right ad">
+                        <p>❇️❇️❇️❇️❇️</p>
+                        {{-- <img src="https://via.placeholder.com/80" alt="Customer 4" class="rounded-circle mb-3"> --}}
+                        <h5>Kyle Bacon</h5>
+                        <p>Very helpful crew, I'm very picky with my designs and I was helped greatly with compliant people,
+                            I am very satisfied</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Card for Small Businesses -->
-            <div class="col-md-6 mb-4">
-                <div class="card card-small-business p-4">
-                    <!-- Logo -->
-                    <img src="images/Mask group (3).png" alt="Logo" class="card-logo-small-business mx-auto mb-3">
-
-                    <!-- Heading -->
-                    <h3 class="heading-small-business mb-3">Logo Maker<br>for Small Businesses</h3>
-
-                    <!-- Description -->
-                    <p class="description-small-business mb-4">Get premium logo design to create eye-catching graphics for social media, banners, promotional materials, logos, and beyond - all yours to use at no cost, forever.</p>
-
-                    <!-- Features List -->
-                    <ul class="list-unstyled mb-4 features-small-business">
-                        <li><i class="bi bi-check-circle me-2"></i> Work directly with skilled designers</li>
-                        <li><i class="bi bi-check-circle me-2"></i> Fully bespoke solution</li>
-                        <li><i class="bi bi-check-circle me-2"></i> High-res design files</li>
-                        <li style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>(Ai, PSD, EPS, PNG, JPG, PDF, SVG, TIFF)</small></li>
-                        <li><i class="bi bi-check-circle me-2"></i> Premium graphic design work</li>
-                        <li><i class="bi bi-check-circle me-2"></i> Dedicated account manager</li>
-                    </ul>
-
-                    <!-- Price -->
-                    <p class="price-small-business mb-4">As low as &nbsp;&nbsp;<span>$199</span></p>
-
-                    <!-- Button -->
-                    <div class="text-center">
-                        <a href="{{ url('/custom-logo') }}">
-                            <button class="btn btn-primary btn-small-business">Get Started</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Plan Section -->
-
-    <section class="logos-carousel-section py-5">
-        <div class="container">
-            <div class="text-center text-white mb-5">
-                <h2>We Have Logos For Everyone</h2>
-            </div>
-
-            <!-- Slider main container -->
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <img src="{{ asset('images/01-01.webp') }}" class="img-fluid">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('images/01-02.webp') }}" class="img-fluid">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('images/01-03.webp') }}" class="img-fluid">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('images/01-04.webp') }}" class="img-fluid">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('images/01-05.webp') }}" class="img-fluid">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('images/01-07.webp') }}" class="img-fluid">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('images/01-08.webp') }}" class="img-fluid">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('images/01-09.webp') }}" class="img-fluid">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('images/01-10.webp') }}" class="img-fluid">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('images/01-15.webp') }}" class="img-fluid">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('images/01-17.webp') }}" class="img-fluid">
-                    </div>
-                </div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Start Hire Section -->
-    <!-- <section class="hire-section-bg">
-        <div class="container hire-section">
-            <div class="row align-items-center">
-
-                <div class="col-md-6 left-column">
-                    <p>Share Your Unique Vision With Our</p>
-                    <h2>Custom Logo Designer</h2>
-                    <a class="toll_icon" href="tel:+15516665255" style="color: white;">
-                        <button class="hire-call-now-btn">Call Now</button>
-                    </a>
-
-
-
-                </div>
-                 <div class="col-md-6 right-column">
-                    <img src="images/hire-section-logos.png" class="hire-section-logo" alt="Logo">
-                </div>
-            </div>
-    </section> -->
-
-    <!-- End Hire Section -->
-
-
-
-    <section class="new-testimonial my-5">
-        <div class="container-fluid">
-            <h2 class="text-center">Happy Customers and Counting</h2>
-            <div class="new-testimonial-carousel mt-4">
-                <div class="testimonial-card rotate-left ad">
-                    <p>❇️❇️❇️❇️❇️</p>
-                    {{-- <img src="https://via.placeholder.com/80" alt="Customer 1" class="rounded-circle mb-3"> --}}
-                    <h5>Busted Knuckles</h5>
-                    <p >I dealt with Ed Harvey through my experience with RFS and he was great! Very polite and helpful. I had drawn a rough sketch of my logo and they brought it to life extremely fast and with perfect accuracy! I would recommend Ed and RFS for anyone looking into getting a logo made!</p>
-                </div>
-                <div class="testimonial-card rotate-right ad">
-                    <p>❇️❇️❇️❇️❇️</p>
-                    {{-- <img src="https://via.placeholder.com/80" alt="Customer 2" class="rounded-circle mb-3"> --}}
-                    <h5>Madelyn Weingarden</h5>
-                    <p >Brian Edwin provided me with excellent service. Anytime I asked him for any edits, he did it promptly. I was very happy with the logos and invoices he created for me. 5 Star Service. Thank you, Brian.</p>
-                </div>
-                <div class="testimonial-card rotate-left ad">
-                    {{-- <img src="https://via.placeholder.com/80" alt="Customer 3" class="rounded-circle mb-3"> --}}
-                    <p>❇️❇️❇️❇️❇️</p>
-                    <h5>Spanky</h5>
-                    <p >Brian Edwin is who I worked with. I made multiple revisions and he delivered on exactly what I wanted and quickly. Highly recommend him and will be using again in the future.</p>
-                </div>
-                <div class="testimonial-card rotate-right ad">
-                    <p>❇️❇️❇️❇️❇️</p>
-                    {{-- <img src="https://via.placeholder.com/80" alt="Customer 4" class="rounded-circle mb-3"> --}}
-                    <h5>Archelle Jenkins</h5>
-                    <p >LOVEEE MY LOGO ! Done exactly how I visioned it! I'll be back for my website !</p>
-                </div>
-                 <div class="testimonial-card rotate-right ad">
-                    <p>❇️❇️❇️❇️❇️</p>
-                    {{-- <img src="https://via.placeholder.com/80" alt="Customer 4" class="rounded-circle mb-3"> --}}
-                    <h5>Kyle Bacon</h5>
-                    <p >Very helpful crew, I'm very picky with my designs and I was helped greatly with compliant people, I am very satisfied</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
 
 
 
-    <!-- <-----------------Start Testimonial Section---------------->
+        <!-- <-----------------Start Testimonial Section---------------->
 
 
-    {{-- <section id="testimonial-section" class="pt-5 pb-5">
+        {{-- <section id="testimonial-section" class="pt-5 pb-5">
         <div class="container">
             <h2 class="text-center mb-5">Happy Customers and Counting</h2>
             <div class="owl-carousel owl-theme">
@@ -2154,15 +2237,15 @@
         </div>
     </div> --}}
 
-    {{-- End logo type  --}}
+        {{-- End logo type  --}}
 
 
 
-    {{-- Start Category List Section --}}
+        {{-- Start Category List Section --}}
 
 
 
-    {{-- <div class="container homepage-category-list">
+        {{-- <div class="container homepage-category-list">
     <h2>Try Free Logo Maker for Every Business</h2>
     <p>Explore company logos made easy with our free logo maker tool for all types of professionals and industries.</p>
     <div class="category-buttons">
@@ -2209,19 +2292,20 @@
 
 
 
-    <div class="container homepage-category-list">
-        <h2>Try Free Logo Maker for Every Business</h2>
-        <p>Explore company logos made easy with our free logo maker tool for all types of professionals and industries.</p>
-        <div class="category-buttons">
-            @foreach ($categories as $category)
-                @if ($category->products->isNotEmpty())
-                    <a href="{{ url('/logos/' . $category->slug) }}" class="logo-ideas-link">
+        <div class="container homepage-category-list">
+            <h2>Try Free Logo Maker for Every Business</h2>
+            <p>Explore company logos made easy with our free logo maker tool for all types of professionals and industries.
+            </p>
+            <div class="category-buttons">
+                @foreach ($categories as $category)
+                    @if ($category->products->isNotEmpty())
+                        <a href="{{ url('/logos/' . $category->slug) }}" class="logo-ideas-link">
 
-                        <button>{{ $category->name }} Logos</button></a>
-                @endif
-            @endforeach
+                            <button>{{ $category->name }} Logos</button></a>
+                    @endif
+                @endforeach
+            </div>
         </div>
-    </div>
 
 
 
@@ -2230,137 +2314,137 @@
 
 
 
-    {{-- End Category list section --}}
+        {{-- End Category list section --}}
 
 
 
 
-    <!-- -------------------start FAQs --------------- -->
+        <!-- -------------------start FAQs --------------- -->
 
 
-    <div class="container faq-section">
-        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
-        <div id="accordion">
-            <!-- <-Question 1 -->
-            <div class="card">
-                <div class="card-header" id="headingOne">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                            aria-expanded="true" aria-controls="collapseOne">
-                            <span class="faq-question">How can I effectively utilize a logo maker to create a unique
-                                logo design?</span>
+        <div class="container faq-section">
+            <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+            <div id="accordion">
+                <!-- <-Question 1 -->
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                <span class="faq-question">How can I effectively utilize a logo maker to create a unique
+                                    logo design?</span>
 
-                        </button>
-                    </h5>
-                </div>
+                            </button>
+                        </h5>
+                    </div>
 
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body">
-                        A logo maker is software that offers a selection of pre-made logo design templates from a
-                        database. Here’s how you can create a logo using one:
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            A logo maker is software that offers a selection of pre-made logo design templates from a
+                            database. Here’s how you can create a logo using one:
 
-                        Choose a Template: Browse and select a design template from the gallery that best suits your
-                        business or style.
+                            Choose a Template: Browse and select a design template from the gallery that best suits your
+                            business or style.
 
-                        Customize Your Design: Customize the font, colors, and add your company name or tagline. Many
-                        logo makers also offer advanced tools to apply effects like gradients, shadows, and more.
+                            Customize Your Design: Customize the font, colors, and add your company name or tagline. Many
+                            logo makers also offer advanced tools to apply effects like gradients, shadows, and more.
 
-                        Download Your Logo: After customizing, pay a nominal fee to download high-resolution files
-                        instantly. Some platforms offer free downloads with credit attribution.
+                            Download Your Logo: After customizing, pay a nominal fee to download high-resolution files
+                            instantly. Some platforms offer free downloads with credit attribution.
 
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Question 2 -->
-            <div class="card">
-                <div class="card-header" id="headingTwo">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                            aria-expanded="false" aria-controls="collapseTwo">
-                            <span class="faq-question">Can I use my logo for trademark and copyrights?</span>
+                <!-- Question 2 -->
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                                <span class="faq-question">Can I use my logo for trademark and copyrights?</span>
 
-                        </button>
-                    </h5>
-                </div>
+                            </button>
+                        </h5>
+                    </div>
 
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                    <div class="card-body">
-                        Ownership: Logos created using templates are owned by the RFS Logo Design. Exclusive rights can
-                        be purchased separately.
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            Ownership: Logos created using templates are owned by the RFS Logo Design. Exclusive rights can
+                            be purchased separately.
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Question 3 -->
-            <div class="card">
-                <div class="card-header" id="headingThree">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
-                            aria-expanded="false" aria-controls="collapseThree">
-                            <span class="faq-question">What are the distinctions between using a logo maker and opting
-                                for custom logo design services?</span>
-                        </button>
-                    </h5>
-                </div>
+                <!-- Question 3 -->
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">
+                                <span class="faq-question">What are the distinctions between using a logo maker and opting
+                                    for custom logo design services?</span>
+                            </button>
+                        </h5>
+                    </div>
 
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                    <div class="card-body">
-                        Logo Maker: Uses pre-made templates for customization. You can adjust fonts, colors, and effects
-                        without needing design skills. The design is not exclusive to you.
-                        Custom Design: Involves working with a dedicated designer who creates a unique logo based on
-                        your specific requirements. This design is exclusive to your brand.
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            Logo Maker: Uses pre-made templates for customization. You can adjust fonts, colors, and effects
+                            without needing design skills. The design is not exclusive to you.
+                            Custom Design: Involves working with a dedicated designer who creates a unique logo based on
+                            your specific requirements. This design is exclusive to your brand.
 
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Question 4 -->
-            <div class="card">
-                <div class="card-header" id="headingFour">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
-                            aria-expanded="false" aria-controls="collapseFour">
-                            <span class="faq-question">Is it possible to personalize my logo design using your logo
-                                maker tool?</span>
-                        </button>
-                    </h5>
-                </div>
+                <!-- Question 4 -->
+                <div class="card">
+                    <div class="card-header" id="headingFour">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                                aria-expanded="false" aria-controls="collapseFour">
+                                <span class="faq-question">Is it possible to personalize my logo design using your logo
+                                    maker tool?</span>
+                            </button>
+                        </h5>
+                    </div>
 
-                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                    <div class="card-body">
-                        Absolutely! With our logo maker, you have the flexibility to customize fonts, colors, text, and
-                        your company name. Additionally, you can enhance
-                        your logo with advanced features like strokes, reflections, shadows, and more, all without
-                        needing any design expertise. These tools empower you
-                        to generate countless unique design variations from a single logo template.
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body">
+                            Absolutely! With our logo maker, you have the flexibility to customize fonts, colors, text, and
+                            your company name. Additionally, you can enhance
+                            your logo with advanced features like strokes, reflections, shadows, and more, all without
+                            needing any design expertise. These tools empower you
+                            to generate countless unique design variations from a single logo template.
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Question 5 -->
-            <div class="card">
-                <div class="card-header" id="headingFive">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
-                            aria-expanded="false" aria-controls="collapseFive">
-                            <span class="faq-question">Are the logo design files suitable for printing business
-                                cards?</span>
-                        </button>
-                    </h5>
-                </div>
+                <!-- Question 5 -->
+                <div class="card">
+                    <div class="card-header" id="headingFive">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                                aria-expanded="false" aria-controls="collapseFive">
+                                <span class="faq-question">Are the logo design files suitable for printing business
+                                    cards?</span>
+                            </button>
+                        </h5>
+                    </div>
 
-                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                    <div class="card-body">
-                        File Availability: Once customized, download high-resolution files suitable for printing
-                        business cards, stationery, banners, and digital platforms.
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                        <div class="card-body">
+                            File Availability: Once customized, download high-resolution files suitable for printing
+                            business cards, stationery, banners, and digital platforms.
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
-    <!-- -------------------End FAQs --------------- -->
+        <!-- -------------------End FAQs --------------- -->
 
     </div>
 
