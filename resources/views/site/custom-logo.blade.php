@@ -289,7 +289,7 @@
             <div class="row custom-logo-page-section mx-0">
                 <div class="col-md-6 d-flex align-items-center">
                     <div class="custom-logo-page-content">
-                        <h1 class="custom-logo-page-heading">Custom Logo Design Services for Your Business</h1>
+                        <h2 class="custom-logo-page-heading">Custom Logo Design Services for Your Business</h2>
                         <p>Let our logo designs turn your ideas into professional magic!</p>
                         <div class="text-center">
                             <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#contact-modal"><button class="custom-logo-page-button">Get Started</button></a>
@@ -931,7 +931,7 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title text-center">Contact Form</h1>
+                        <!-- <h1 class="modal-title text-center">Contact Form</h1> -->
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">

@@ -10,7 +10,7 @@
     @isset($categoryObj->meta_title)
         <title>{{ $categoryObj->meta_title }}</title>
     @else
-        <title>@yield('title') | {{ env('APP_NAME') }}</title>
+        <title>@yield('title') </title>
     @endisset
 
     <meta name="description" content="@yield('meta_desc')">

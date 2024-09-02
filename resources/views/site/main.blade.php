@@ -1,7 +1,7 @@
 <!-- resources/views/site/main.blade.php -->
 @extends('site.common')
 
-@section('title', 'Welcome')
+@section('title', 'Professional Logo Design Company - RFS Logo Design')
 
 @section('content')
 
