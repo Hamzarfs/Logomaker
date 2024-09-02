@@ -1,10 +1,9 @@
 <!-- resources/views/site/main.blade.php -->
 @extends('site.common')
 
-@section('title', 'Welcome')
+@section('title', 'Professional Logo Design Company - RFS Logo Design')
 
-@section('meta_desc', "Design your own logo for your business. RFS Logo Design offers free templates and a logo builder
-    for every company's logo design. Create and customize your logo!")
+@section('meta_desc', "Design your own logo for your business. RFS Logo Design offers free templates and a logo builder for every company's logo design. Create and customize your logo!")
 
 @section('content')
 
@@ -1886,8 +1885,8 @@
                             <div class="new-card-design-overlay">
                                 <div class="new-card-design-overlay-text">Choosing the right font is crucial for your brand
                                     logo, as it reflects your brand’s personality and message. Here are some ideas for
-                                    you. Serif Fonts: Exude tradition and reliability. Sans-Serif Fonts: Suggest modernity
-                                    and simplicity. Script Fonts: Add a touch of elegance. Display Fonts: Command attention
+                                    you.Serif Fonts: Exude tradition and reliability.Sans-Serif Fonts: Suggest modernity
+                                    and simplicity.Script Fonts: Add a touch of elegance.Display Fonts: Command attention
                                     and stand out.</div>
                             </div>
                         </div>

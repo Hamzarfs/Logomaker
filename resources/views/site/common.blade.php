@@ -41,10 +41,10 @@
     <style>
         @foreach ($logoFonts as $font)
             @php // Extract the font name without the extension
-            $fontName =pathinfo($font->name, PATHINFO_FILENAME);
-            $fontSlug =pathinfo($font->slug, PATHINFO_FILENAME);
+                $fontName =pathinfo($font->name, PATHINFO_FILENAME);
+                $fontSlug =pathinfo($font->slug, PATHINFO_FILENAME);
 
-        @endphp
+            @endphp
         @font-face {
             font-family: '{{ $fontSlug }}';
             src: url('{{ asset('fonts/' . $font->name) }}') format('opentype');
@@ -58,7 +58,7 @@
                 font-family: 'Remon-Demo';
                 src: url('fonts/Remon Demo.ttf') format('truetype');
             }
- */
+        */
 
 
 
