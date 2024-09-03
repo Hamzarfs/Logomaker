@@ -210,7 +210,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img src="{{ asset($data->image) }}" alt="" class="w-full modal-img d-block m-auto">
+                    <img src="{{ asset($data->image) }}" alt="" class="w-full modal-img d-block m-auto img-fluid">
                 </div>
                 <div class="modal-footer">
                     <span class="text-muted">If you want to change image just add new image otherwise leave it.</span>
