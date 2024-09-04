@@ -52,7 +52,7 @@ Route::middleware(['role:user', 'auth'])->group(function () {
     Route::get('user-orders', [MainController::class, 'orders'])->name('orders');
     Route::get('account-details', [MainController::class, 'accountDetails'])->name('accountDetails');
 
-    Route::prefix('favourite')->name('favourite.')->group(function() {
+    Route::prefix('favourite')->name('favourite.')->group(function () {
         Route::post('', [FavouriteController::class, 'add'])->name('add');
         Route::delete('{favourite}', [FavouriteController::class, 'remove'])->name('remove');
         Route::get('', [FavouriteController::class, 'index'])->name('index');
@@ -151,7 +151,10 @@ Route::prefix('oauth/')->group(function () {
     });
 });
 
-
+Route::get('public', fn() => redirect()->to('/asdasd'));
+Route::get('public/{any?}', fn($path) => redirect()->to($path));
+Route::get('public/{any1?}/{any2?}', fn(...$paths) => redirect()->to(implode('/', $paths)));
+Route::get('public/{any1?}/{any2?}/{any3?}', fn(...$paths) => redirect()->to(implode('/', $paths)));
 
 // Auth routes
 require __DIR__ . '/auth.php';
