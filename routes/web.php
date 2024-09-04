@@ -151,10 +151,10 @@ Route::prefix('oauth/')->group(function () {
     });
 });
 
-Route::get('public', fn() => redirect()->to('/asdasd'));
-Route::get('public/{any?}', fn($path) => redirect()->to($path));
-Route::get('public/{any1?}/{any2?}', fn(...$paths) => redirect()->to(implode('/', $paths)));
-Route::get('public/{any1?}/{any2?}/{any3?}', fn(...$paths) => redirect()->to(implode('/', $paths)));
+// Route::get('public', fn() => redirect()->to('/asdasd'));
+// Route::get('public/{any?}', fn($path) => redirect()->to($path));
+// Route::get('public/{any1?}/{any2?}', fn(...$paths) => redirect()->to(implode('/', $paths)));
+// Route::get('public/{any1?}/{any2?}/{any3?}', fn(...$paths) => redirect()->to(implode('/', $paths)));
 
 // Auth routes
 require __DIR__ . '/auth.php';

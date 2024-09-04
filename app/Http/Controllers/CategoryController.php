@@ -215,16 +215,6 @@ class CategoryController extends Controller
             }
         });
 
-
-        // Category::where('id', $request->id)->update([
-        //     'name' => $request->name,
-        //     'slug' => $uniqueSlug,
-        //     'meta_title' => $request->meta_title,
-        //     'meta_desc' => $request->meta_desc,
-        //     'content' => $request->content,
-        //     'heading' => $request->heading,
-        //     'is_top' => $request->is_top,
-        // ]);
         return redirect()->route('admin.category.index')->with('info', 'Category updated successfully.');
     }
 

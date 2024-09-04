@@ -58,11 +58,11 @@
         </div>
 
         <div class="row logo-gallery">
-            @foreach ($favourites as $favourite)
+            @forelse ($favourites as $favourite)
                 <div class="col-md-4 logo-item" data-category="{{ $favourite->product->category_id }}">
                     <div class="card-container">
-                        <img src="{{ asset("category-image/{$favourite->product->image}") }}" class="img-fluid portfolio-image"
-                            alt="{{ $favourite->product->name }}">
+                        <img src="{{ asset("category-image/{$favourite->product->image}") }}"
+                            class="img-fluid portfolio-image" alt="{{ $favourite->product->name }}">
                         <a href="{{ url('/store-session-data-image?image=' . $favourite->product->image . '&product-id=' . $favourite->product->id) }}"
                             class="hover-button select-btn" data-product-id="{{ $favourite->product->id }}">Select </a>
                         <div class="fav-icon text-success" data-product-id="{{ $favourite->product->id }}"
@@ -71,7 +71,11 @@
                         </div>
                     </div>
                 </div>
-            @endforeach
+            @empty
+                <div class="text-center">
+                    <h1>You don't have any favourite logos.</h1>
+                </div>
+            @endforelse
         </div>
 
         {!! $favourites->links() !!}
@@ -84,31 +88,30 @@
     <script>
         $('.fav-icon').click(function() {
             const favIconEl = $(this)
-                const favId = favIconEl.attr('data-favourite-id')
-                $.ajax({
-                    url: "{{ route('favourite.remove', 11111) }}".replace('11111', favId),
-                    method: 'DELETE',
-                    success: function(response) {
-                        if (response.success) {
-                            swal.fire({
-                                icon: 'success',
-                                title: 'Success',
-                                text: "Logo removed from favourites!",
-                                timer: 1500,
-                                timerProgressBar: true
-                            }).then(() => {
-                                location.reload()
-                            })
-                        } else {
-                            swal.fire({
-                                icon: 'error',
-                                title: 'Error',
-                                text: "Unexpected error. Please try again later!!"
-                            })
-                        }
-                    },
-                })
+            const favId = favIconEl.attr('data-favourite-id')
+            $.ajax({
+                url: "{{ route('favourite.remove', 11111) }}".replace('11111', favId),
+                method: 'DELETE',
+                success: function(response) {
+                    if (response.success) {
+                        swal.fire({
+                            icon: 'success',
+                            title: 'Success',
+                            text: "Logo removed from favourites!",
+                            timer: 1500,
+                            timerProgressBar: true
+                        }).then(() => {
+                            location.reload()
+                        })
+                    } else {
+                        swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: "Unexpected error. Please try again later!!"
+                        })
+                    }
+                },
+            })
         })
-
     </script>
 @endsection
