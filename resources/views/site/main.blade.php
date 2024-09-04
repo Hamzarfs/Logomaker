@@ -133,8 +133,8 @@
 
         /* End Plan Section */
         .free-logo-heading {
-            font-weight: 700;
-            font-size: 32px;
+            font-weight: 900;
+            font-size: 42px;
             color: #fff;
         }
 
@@ -417,7 +417,7 @@
         }
 
         .ptb-100 {
-            padding-top: 50px;
+            padding-top: 100px;
             padding-bottom: 100px;
         }
 
@@ -899,6 +899,61 @@
         }
 
 
+        .reviews-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures the images wrap if there's not enough space */
+}
+
+.reviews-images a img {
+    max-width: 80%;
+    height: auto;
+    flex: 1;
+
+}
+
+.image-slider {
+    width: 350px; /* The width of the visible "window" */
+    height: 300px; /* The height of the visible "window" */
+    overflow: hidden;
+    position: relative;
+
+}
+
+.slider-content {
+    display: flex;
+    animation: slide 4s linear infinite;
+}
+
+.slider-content img {
+    width: 300px; /* Ensure each image is 300px wide */
+     height: 300px;/* Ensure each image is 300px tall */
+    flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+.col-lg-6.text-center.banner-image-sec.order-lg-2 {
+    padding-left: 50px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%); /* Start with the image off-screen to the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Slide the images all the way to the left */
+    }
+}
+
+.reviews-images.d-flex.justify-content-between.align-items-center {
+
+
+    flex-flow: nowrap;
+
+}
+
+
+
 
 
         @media (max-width: 480px) {
@@ -937,7 +992,7 @@
             }
         }
 
-        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 @media only screen and (max-width: 767px) {
+        /* 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 */ @media only screen and (max-width: 767px) {
             .owl-carousel .owl-item img {
 
                 display: block;
@@ -947,9 +1002,20 @@
 
         @media (max-width: 768px) {
 
+            .ptb-100 {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
             .mob-center {
                 text-align: -webkit-center;
             }
+
+
+    .reviews-images a img {
+        margin-bottom: 10px;
+    }
+
 
             .glassmorphism-background {
                 background: rgba(255, 255, 255, 0.15);
@@ -1201,15 +1267,12 @@
 
     <!----------------------------------------- Start Banner Section ------------------------------->
 
-    {{-- <div class="container-fluid position-relative overflow-hidden" style="background-color:#080a2d; padding-bottom: 100px;">
+    <div class="container-fluid position-relative overflow-hidden ptb-100" style="background-color:#6868D1;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 banner-left order-lg-1">
-                    <h1 class="free-logo-heading">Free <span class="logo-design-color">Logo Maker</span> Tailored for Every
-                        Industry - Design Your Logo in Minutes</h1>
-
-                    <p style="color:#fff;">Unleash your creativity and watch your logo come to life effortlessly. Get in
-                        touch with us now!</p>
+                    <h1 class="free-logo-heading">Quick and Robust Logo Maker For Logo Design</h1>
+                    <p style="color:#fff;">Unleash your creativity and watch your logo come to life effortlessly. Try it for free now!</p>
 
                     <form id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
                         @csrf
@@ -1220,17 +1283,54 @@
                             <input type="submit" class="custom-button-banner" value="Get Started">
                         </div>
                     </form>
+
+                    <div class="row pt-2">
+                        <div class="reviews-images d-flex justify-content-between align-items-center">
+                            <a href="https://clutch.co/profile/rfs-logo-design" target="_blank">
+                                <img src="{{ url('images/clutch.png') }}" alt="Trust 1">
+                            </a>
+                            <a href="https://www.goodfirms.co/company/rfs-logo-design" target="_blank">
+                                <img src="{{ url('images/goodfirm.png') }}" alt="Trust 2">
+                            </a>
+                            <a href="https://www.trustpilot.com/review/rfslogodesign.com" target="_blank">
+                                <img src="{{ url('images/trustpilot.png') }}" alt="Trust 3">
+                            </a>
+                            <a href="https://www.bark.com/en/gb/company/rfs-logo-design/oRvbN/" target="_blank">
+                                <img src="{{ url('images/barkreview.webp') }}" alt="Trust 4">
+                            </a>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="col-lg-6 text-center banner-image-sec order-lg-2">
-                    <img src="images/Logos pic.png" alt="Example" class="img-fluid">
+                    <div class="image-slider">
+                        <div class="slider-content">
+                            <img src="images/222-01.png" alt="Logo 1">
+                            <img src="images/MA-London-Logo-01.png" alt="Logo 2">
+                            <!-- Add more images if needed -->
+                        </div>
+                    </div>
+
+                    </div>
+
+                </div>
+
+
+                 {{-- <img src="images/222-01.png" alt="Example" class="img-fluid"> --}}
+
+
+            </div>
+            <div class="row pt-5">
+                <div class="col-md-12 my-3">
+                    <div class="banner-divider" style="border-top: 1px solid white; width: 100%;"></div>
                 </div>
             </div>
         </div>
-        <div class="wave"></div>
-    </div> --}}
+
+    </div>
 
 
-    {{-- <section class="new-banner">
+     {{-- <section class="new-banner">
         <div class="row row-1">
             <div class="col-1">
                 <h1>Free Logo Maker</h1>
@@ -1269,16 +1369,16 @@
         </div>
     </section> --}}
 
-    <section class="new-banner ptb-100">
+    {{-- <section class="new-banner ptb-100">
         <div class="container" style="border-right: 1px solid white; text-align: center;">
-            <!-- Row 1: Two Columns -->
+
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center">
                     <h1 class="new-banner-title">Free Logo Maker</h1>
                 </div>
                 <div class="col-md-4 mob-center">
                     <div class="glassmorphism-background">
-                        <!-- Vertical Drop-Down Carousel -->
+
                         <div id="logoCarousel" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
 
@@ -1306,19 +1406,19 @@
                 <div class="col-md-2"></div>
             </div>
 
-            <!-- Row 2: Single Column -->
+
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="banner-subtitle">Tailored for Every Industry</h2>
                 </div>
             </div>
 
-            <!-- Row 3: Two Columns -->
+
             <div class="row">
-                <!-- Column with Glassmorphism and Carousel -->
+
                 <div class="col-md-4 mob-center" style="align-content: center;">
                     <div class="glassmorphism-background">
-                        <!-- Vertical Drop-Down Carousel -->
+
                         <div id="logoCarousel" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
@@ -1334,17 +1434,13 @@
                     </div>
                 </div>
 
-                <!-- Rest of the Content -->
+
                 <div class="col-md-6">
                     <h2 class="banner-subtitle">Design Your Logo<br>in Minutes</h2>
                 </div>
                 <div class="col-md-2"></div>
             </div>
 
-
-
-
-            <!-- Row 4: Paragraph Text -->
             <div class="row">
                 <div class="col-md-12">
                     <p class="banner-paragraph">Unleash your creativity and watch your logo come to life effortlessly. <br>
@@ -1352,10 +1448,7 @@
                 </div>
             </div>
 
-            <!-- Row 5: Image with Bottom Border -->
 
-
-            <!-- Row 6: Centered Form -->
             <div class="row justify-content-center mt-3">
                 <div class="col-md-8">
                     <form id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
@@ -1395,7 +1488,7 @@
 
 
         </div>
-    </section>
+    </section> --}}
 
 
 
