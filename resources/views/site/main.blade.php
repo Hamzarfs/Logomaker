@@ -2051,9 +2051,9 @@
 
         <section class="logos-carousel-section py-5">
             <div class="container">
-                <div class="text-center text-white mb-5">
-                    <h2>We Have Logos For Everyone</h2>
-                </div>
+                <!-- <div class="text-center text-white mb-5">
+                            <h2>We Have Logos For Everyone</h2>
+                        </div> -->
 
                 <!-- Slider main container -->
                 <div class="swiper">
@@ -2488,7 +2488,8 @@
         };
 
         var form = document.getElementById("companyForm");
-        var sticky = form.offsetTop;
+        var sticky = 350 //form.offsetTop
+
 
         function makeSticky() {
             if (window.pageYOffset > sticky) {
