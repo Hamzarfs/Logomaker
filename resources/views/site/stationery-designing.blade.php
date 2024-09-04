@@ -1,7 +1,7 @@
 @extends('site.common')
 
 @section('title', 'Professional Stationery Designing Services - RFS Logo Design')
-@section('meta_desc', 'Elevate your brand identity with RFS Logo Design professional stationery designing services. Get creative branding materials for effective online presence. ')
+@section('meta_desc', 'Elevate your brand identity with RFS Logo Design professional stationery designing services. Get creative branding materials for effective online presence.')
 
 @section('content')
 
@@ -10,8 +10,8 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 content-section">
-                    <h1>Stationery Design Service in RFS logo Designing</h1>
-                    <h2>Professional Business <span class="logo-design-color">Stationery  Design</span> Services</h2>
+                    <p>Stationery Design Service in RFS logo Designing</p>
+                    <h1>Professional Business <span class="logo-design-color">Stationery  Design</span> Services</h1>
                     <ul class="icon-list">
                         <li><i class="fas fa-trophy"></i> Stand out with unique, customizable designs.</li>
                         <li><i class="fas fa-briefcase"></i> Integrate seamlessly into all content.</li>

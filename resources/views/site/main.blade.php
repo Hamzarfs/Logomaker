@@ -3,7 +3,8 @@
 
 @section('title', 'Professional Logo Design Company - RFS Logo Design')
 
-@section('meta_desc', "Design your own logo for your business. RFS Logo Design offers free templates and a logo builder for every company's logo design. Create and customize your logo!")
+@section('meta_desc', "Design your own logo for your business. RFS Logo Design offers free templates and a logo builder
+    for every company's logo design. Create and customize your logo!")
 
 @section('content')
 
@@ -298,9 +299,9 @@
 
         .logotype-card img {
             /* padding: 20px;
-                                                                border-radius: 15px 15px 0 0;
-                                                                width: 160px;
-                                                                align-self: center; */
+                                                                    border-radius: 15px 15px 0 0;
+                                                                    width: 160px;
+                                                                    align-self: center; */
 
             height: 120px;
             width: auto;
@@ -375,9 +376,9 @@
         }
 
         /* .new-banner .trust-images img {
-                                                    max-width: 150px;
-                                                    margin: 10px;
-                                                } */
+                                                        max-width: 150px;
+                                                        margin: 10px;
+                                                    } */
 
         .new-banner .divider {
             height: 1px;
@@ -900,57 +901,66 @@
 
 
         .reviews-images {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Ensures the images wrap if there's not enough space */
-}
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            /* Ensures the images wrap if there's not enough space */
+        }
 
-.reviews-images a img {
-    max-width: 80%;
-    height: auto;
-    flex: 1;
+        .reviews-images a img {
+            max-width: 80%;
+            height: auto;
+            flex: 1;
 
-}
+        }
 
-.image-slider {
-    width: 350px; /* The width of the visible "window" */
-    height: 300px; /* The height of the visible "window" */
-    overflow: hidden;
-    position: relative;
+        .image-slider {
+            width: 350px;
+            /* The width of the visible "window" */
+            height: 300px;
+            /* The height of the visible "window" */
+            overflow: hidden;
+            position: relative;
 
-}
+        }
 
-.slider-content {
-    display: flex;
-    animation: slide 4s linear infinite;
-}
+        .slider-content {
+            display: flex;
+            animation: slide 4s linear infinite;
+        }
 
-.slider-content img {
-    width: 300px; /* Ensure each image is 300px wide */
-     height: 300px;/* Ensure each image is 300px tall */
-    flex-shrink: 0; /* Prevent images from shrinking */
-}
+        .slider-content img {
+            width: 300px;
+            /* Ensure each image is 300px wide */
+            height: 300px;
+            /* Ensure each image is 300px tall */
+            flex-shrink: 0;
+            /* Prevent images from shrinking */
+        }
 
-.col-lg-6.text-center.banner-image-sec.order-lg-2 {
-    padding-left: 50px;
-}
+        .col-lg-6.text-center.banner-image-sec.order-lg-2 {
+            padding-left: 50px;
+        }
 
-@keyframes slide {
-    0% {
-        transform: translateX(100%); /* Start with the image off-screen to the right */
-    }
-    100% {
-        transform: translateX(-100%); /* Slide the images all the way to the left */
-    }
-}
+        @keyframes slide {
+            0% {
+                transform: translateX(100%);
+                /* Start with the image off-screen to the right */
+            }
 
-.reviews-images.d-flex.justify-content-between.align-items-center {
+            100% {
+                transform: translateX(-100%);
+                /* Slide the images all the way to the left */
+            }
+        }
+
+        .reviews-images.d-flex.justify-content-between.align-items-center {
 
 
-    flex-flow: nowrap;
+            flex-flow: nowrap;
 
-}
+        }
 
 
 
@@ -992,7 +1002,8 @@
             }
         }
 
-        /* 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 */ @media only screen and (max-width: 767px) {
+        /* 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 */
+        @media only screen and (max-width: 767px) {
             .owl-carousel .owl-item img {
 
                 display: block;
@@ -1003,18 +1014,18 @@
         @media (max-width: 768px) {
 
             .ptb-100 {
-            padding-top: 50px;
-            padding-bottom: 50px;
-        }
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
 
             .mob-center {
                 text-align: -webkit-center;
             }
 
 
-    .reviews-images a img {
-        margin-bottom: 10px;
-    }
+            .reviews-images a img {
+                margin-bottom: 10px;
+            }
 
 
             .glassmorphism-background {
@@ -1272,7 +1283,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 banner-left order-lg-1">
                     <h1 class="free-logo-heading">Quick and Robust Logo Maker For Logo Design</h1>
-                    <p style="color:#fff;">Unleash your creativity and watch your logo come to life effortlessly. Try it for free now!</p>
+                    <p style="color:#fff;">Unleash your creativity and watch your logo come to life effortlessly. Try it for
+                        free now!</p>
 
                     <form id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
                         @csrf
@@ -1311,26 +1323,26 @@
                         </div>
                     </div>
 
-                    </div>
-
                 </div>
-
-
-                 {{-- <img src="images/222-01.png" alt="Example" class="img-fluid"> --}}
-
 
             </div>
-            <div class="row pt-5">
-                <div class="col-md-12 my-3">
-                    <div class="banner-divider" style="border-top: 1px solid white; width: 100%;"></div>
-                </div>
+
+
+            {{-- <img src="images/222-01.png" alt="Example" class="img-fluid"> --}}
+
+
+        </div>
+        <div class="row pt-5">
+            <div class="col-md-12 my-3">
+                <div class="banner-divider" style="border-top: 1px solid white; width: 100%;"></div>
             </div>
         </div>
+    </div>
 
     </div>
 
 
-     {{-- <section class="new-banner">
+    {{-- <section class="new-banner">
         <div class="row row-1">
             <div class="col-1">
                 <h1>Free Logo Maker</h1>
@@ -1599,14 +1611,14 @@
 
     <!-- <------------------Make A logo------------------>
     <!--
-                                                            <section class="heroSection1">
-                                                                    <div class="container">
-                                                                        <div class="row">
-                                                                            <div class="col-12 mb-4">
-                                                                                <h1 class="heroTitle1">Ready To Turn Your Vision <br>Into A Logo Masterpiece?</h1>
+                                                                <section class="heroSection1">
+                                                                        <div class="container">
+                                                                            <div class="row">
+                                                                                <div class="col-12 mb-4">
+                                                                                    <h1 class="heroTitle1">Ready To Turn Your Vision <br>Into A Logo Masterpiece?</h1>
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                    </section> -->
+                                                                        </section> -->
 
     <!-- <------------------End Make A logo---------------->
 
@@ -1615,7 +1627,7 @@
     <!-- ---------------------start porfolio -------------------->
 
 
-    <div class="banner-section" style="background-color: #f2f6fe; padding-bottom: 100px;">
+    <div class="banner-section" style="background-color: #f2f6fe; padding-bottom:50px;">
         <div class="container portfolio-section">
             <h2 class="portfolio-heading">We Have Logos For Everyone</h2>
             <p class="main-description-online">
@@ -2144,9 +2156,9 @@
 
         <section class="logos-carousel-section py-5">
             <div class="container">
-                <div class="text-center text-white mb-5">
-                    <h2>We Have Logos For Everyone</h2>
-                </div>
+                <!-- <div class="text-center text-white mb-5">
+                        <h2>We Have Logos For Everyone</h2>
+                    </div> -->
 
                 <!-- Slider main container -->
                 <div class="swiper">
@@ -2198,24 +2210,24 @@
 
         <!-- Start Hire Section -->
         <!-- <section class="hire-section-bg">
-            <div class="container hire-section">
-                <div class="row align-items-center">
+                <div class="container hire-section">
+                    <div class="row align-items-center">
 
-                    <div class="col-md-6 left-column">
-                        <p>Share Your Unique Vision With Our</p>
-                        <h2>Custom Logo Designer</h2>
-                        <a class="toll_icon" href="tel:+15516665255" style="color: white;">
-                            <button class="hire-call-now-btn">Call Now</button>
-                        </a>
+                        <div class="col-md-6 left-column">
+                            <p>Share Your Unique Vision With Our</p>
+                            <h2>Custom Logo Designer</h2>
+                            <a class="toll_icon" href="tel:+15516665255" style="color: white;">
+                                <button class="hire-call-now-btn">Call Now</button>
+                            </a>
 
 
 
+                        </div>
+                         <div class="col-md-6 right-column">
+                            <img src="images/hire-section-logos.png" class="hire-section-logo" alt="Logo">
+                        </div>
                     </div>
-                     <div class="col-md-6 right-column">
-                        <img src="images/hire-section-logos.png" class="hire-section-logo" alt="Logo">
-                    </div>
-                </div>
-        </section> -->
+            </section> -->
 
         <!-- End Hire Section -->
 
@@ -2223,7 +2235,7 @@
 
         <section class="new-testimonial my-5">
             <div class="container-fluid">
-                <h2 class="text-center">Happy Customers and Counting</h2>
+                <h2 class="text-center">Happy Customers and Counting....</h2>
                 <div class="new-testimonial-carousel mt-4">
                     <div class="testimonial-card rotate-left ad">
                         <p>❇️❇️❇️❇️❇️</p>
@@ -2462,7 +2474,7 @@
 
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card-body">
-                            Ownership: Logos created using templates are owned by the RFS Logo Design. Exclusive rights can
+                            Logos created using templates are owned by the RFS Logo Design. Exclusive rights can
                             be purchased separately.
                         </div>
                     </div>
@@ -2482,7 +2494,7 @@
 
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                         <div class="card-body">
-                            Logo Maker: Uses pre-made templates for customization. You can adjust fonts, colors, and effects
+                            Uses pre-made templates for customization. You can adjust fonts, colors, and effects
                             without needing design skills. The design is not exclusive to you.
                             Custom Design: Involves working with a dedicated designer who creates a unique logo based on
                             your specific requirements. This design is exclusive to your brand.
@@ -2528,7 +2540,7 @@
 
                     <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
                         <div class="card-body">
-                            File Availability: Once customized, download high-resolution files suitable for printing
+                            Once customized, download high-resolution files suitable for printing
                             business cards, stationery, banners, and digital platforms.
                         </div>
                     </div>

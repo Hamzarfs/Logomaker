@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 content-section">
-                    <h2>Design Just Got Easy</h2>
+                    <p>Design Just Got Easy</p>
                     <h1>Create impressive videos and images <span class="logo-design-color">designs in minutes.</span>
                     </h1>
                     <ul class="icon-list">

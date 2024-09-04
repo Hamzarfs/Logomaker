@@ -3,36 +3,12 @@
 @section('title', 'New York Custom Logo Design Compnay - RFS Logo Design')
 @section('meta_desc', 'Experience exceptional custom logo design services in New York with RFS Logo Design. Our expert designers craft impactful brand identities as a top-tier agency.')
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <!-- Poppins Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="{{ asset('css/styles.css') }}" rel="stylesheet"> <!-- Link to the external CSS file -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-       
-       
-    </style>
-</head>
-<body>
     <div class="banner-section">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 content-section">
-                    <h2>Expert Logo Designers at RFS Logo Design</h2>
+                <p>Expert Logo Designers at RFS Logo Design</p>
                     <h1>Custom <span class="logo-design-color">Logo Design</span> Company in New York</h1>
                     <ul class="icon-list">
                         <li><i class="fas fa-trophy"></i> Ranked #1 Logo Design Agency in New York</li>
@@ -296,6 +272,5 @@
             });
         });
     </script>
-</body>
-</html>
+
 @endsection

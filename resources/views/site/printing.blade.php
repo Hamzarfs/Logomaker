@@ -1,32 +1,16 @@
 @extends('site.common')
 
-@section('title', 'printing')
+@section('title', 'Printing Plans for Business Cards and Flyers - RFS Logo Design')
+@section('meta_desc', 'Printing for business cards, flyers, brochures, stationery and merchandise at affordable price. Get your business printing materials for boosting your brand.')
 
 @section('content')
 
-    <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <!-- Poppins Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="{{ asset('css/styles.css') }}" rel="stylesheet"> <!-- Link to the external CSS file -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-
-
-    <!-- ------------------Start FAQs --------------- -->
-
+    
 <div class="container-fluid position-relative" style="background-color:#6868D1; padding-bottom: 100px;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 banner-left order-lg-1">
-                <h2 style="color:#fff; font-weight:700;"><span class="logo-design-color">Printing</span> Plans</h2>
+                <h1 style="color:#fff; font-weight:700;"><span class="logo-design-color">Printing Plans</span> for Business Materials</h1>
                 <p style="color:#fff;">Printing Made Easier</p>
             </div>
             <div class="col-lg-6 text-center banner-image-sec order-lg-2">

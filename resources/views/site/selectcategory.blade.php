@@ -1,7 +1,8 @@
 <!-- resources/views/site/main.blade.php -->
 @extends('site.common')
 
-@section('title', 'Welcome')
+@section('title', 'Professional Stationery Designing Services - RFS Logo Design')
+@section('meta_desc', 'Elevate your brand identity with RFS Logo Design professional stationery designing services. Get creative branding materials for effective online presence.')
 
 @section('content')
 

@@ -84,7 +84,7 @@
 
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                     <div class="card-body">
-                        Ownership: Logos created using templates are owned by the RFS Logo Design. Exclusive rights can
+                        Logos created using templates are owned by the RFS Logo Design. Exclusive rights can
                         be purchased separately.
                     </div>
                 </div>
@@ -104,7 +104,7 @@
 
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                     <div class="card-body">
-                        Logo Maker: Uses pre-made templates for customization. You can adjust fonts, colors, and effects
+                        Uses pre-made templates for customization. You can adjust fonts, colors, and effects
                         without needing design skills. The design is not exclusive to you.
                         Custom Design: Involves working with a dedicated designer who creates a unique logo based on
                         your specific requirements. This design is exclusive to your brand.
@@ -150,7 +150,7 @@
 
                 <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
                     <div class="card-body">
-                        File Availability: Once customized, download high-resolution files suitable for printing
+                        Once customized, download high-resolution files suitable for printing
                         business cards, stationery, banners, and digital platforms.
                     </div>
                 </div>

@@ -1,8 +1,8 @@
 <!-- resources/views/site/main.blade.php -->
 @extends('site.common')
 
-@section('title', 'Logo Maker')
-
+@section('title', 'Free Logo Maker Tool for Every Business - RFS Logo Design')
+@section('meta_desc', 'Use our free logo maker tool for creating custom business logos. With powerful logo generator, design logos in minutes with a variety of templates, fonts and icons')
 @section('content')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
