@@ -63,24 +63,24 @@ class CategoryController extends Controller
             $counter++;
         }
 
-        $imagePath = "";
-
-        if (Arr::exists($data, 'image')) {
-            $imageName = sprintf("%s.%s", $data['name'], $data['image']->getClientOriginalExtension());
-            $data['image']->move(public_path('category'), $imageName);
-            $imagePath = "category/$imageName";
-        }
-
-        $category = Category::create([
+        $storeData = [
             'name' => $request->name,
-            'image' => $imagePath,
             'slug' => $uniqueSlug,
             'meta_title' => $request->meta_title,
             'meta_desc' => $request->meta_desc,
             'content' => $request->content,
             'heading' => $request->heading,
             'is_top' => $request->is_top,
-        ]);
+        ];
+
+        if (Arr::exists($data, 'image')) {
+            $imageName = sprintf("%s.%s", $data['name'], $data['image']->getClientOriginalExtension());
+            $data['image']->move(public_path('category'), $imageName);
+            $imagePath = "category/$imageName";
+            $storeData['image'] = $imagePath;
+        }
+
+        $category = Category::create($storeData);
 
         $sectionsData = $request->input('section');
         $faqsData = $request->input('faq');
@@ -130,17 +130,6 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        // dd($request->all());
-        // return back()->withInput();
-
-        // $request->validate([
-        //     'name' => 'required|max:255',
-        //     'meta_title' => 'required|max:255',
-        //     'meta_desc' => 'required|max:255',
-        //     'content' => 'required',
-        //     'heading' => 'required',
-        // ]);
-
         $data = $request->validate([
             'name' => 'required|max:255',
             'image' => 'nullable|image|mimes:png,jpg,jpeg,svg',
@@ -172,7 +161,15 @@ class CategoryController extends Controller
             $counter++;
         }
 
-        $imagePath = "";
+        $updateData = [
+            'name' => $request->name,
+            'slug' => $uniqueSlug,
+            'meta_title' => $request->meta_title,
+            'meta_desc' => $request->meta_desc,
+            'content' => $request->content,
+            'heading' => $request->heading,
+            'is_top' => $request->is_top,
+        ];
 
         if (Arr::exists($data, 'image')) {
             if ($category->image && file_exists($oldImage = public_path($category->image)))
@@ -181,18 +178,10 @@ class CategoryController extends Controller
             $imageName = sprintf("%s.%s", $data['name'], $data['image']->getClientOriginalExtension());
             $data['image']->move(public_path('category'), $imageName);
             $imagePath = "category/$imageName";
+            $updateData['image'] = $imagePath;
         }
 
-        $category->update([
-            'name' => $request->name,
-            'image' => $imagePath,
-            'slug' => $uniqueSlug,
-            'meta_title' => $request->meta_title,
-            'meta_desc' => $request->meta_desc,
-            'content' => $request->content,
-            'heading' => $request->heading,
-            'is_top' => $request->is_top,
-        ]);
+        $category->update($updateData);
 
         $category->contents()->delete();
 
