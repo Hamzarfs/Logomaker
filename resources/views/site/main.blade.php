@@ -3,8 +3,7 @@
 
 @section('title', 'Professional Logo Design Company - RFS Logo Design')
 
-@section('meta_desc', "Design your own logo for your business. RFS Logo Design offers free templates and a logo builder
-    for every company's logo design. Create and customize your logo!")
+@section('meta_desc', "Design your own logo for your business. RFS Logo Design offers free templates and a logo builder for every company's logo design. Create and customize your logo!")
 
 @section('content')
 
@@ -916,43 +915,30 @@
         }
 
         .image-slider {
-            width: 350px;
-            /* The width of the visible "window" */
-            height: 300px;
-            /* The height of the visible "window" */
-            overflow: hidden;
-            position: relative;
-
+        width: 450px; /* The width of the visible "window" */
+        height: 400px; /* The height of the visible "window" */
+        overflow: hidden;
+        position: relative;
         }
-
         .slider-content {
-            display: flex;
-            animation: slide 4s linear infinite;
+        display: flex;
+        width: calc(300px * 8); /* Adjust width based on the number of images (8 images * 300px each) */
+        animation: slide 10s linear infinite; /* Adjust timing based on desired speed */
         }
-
         .slider-content img {
-            width: 300px;
-            /* Ensure each image is 300px wide */
-            height: 300px;
-            /* Ensure each image is 300px tall */
-            flex-shrink: 0;
-            /* Prevent images from shrinking */
+        flex-shrink: 0; /* Prevent images from shrinking */
+        margin-right:10px;
         }
-
-        .col-lg-6.text-center.banner-image-sec.order-lg-2 {
-            padding-left: 50px;
-        }
-
         @keyframes slide {
-            0% {
-                transform: translateX(100%);
-                /* Start with the image off-screen to the right */
-            }
-
-            100% {
-                transform: translateX(-100%);
-                /* Slide the images all the way to the left */
-            }
+        0% {
+        transform: translateX(0); /* Start with images in place */
+        }
+        100% {
+        transform: translateX(-100%); /* Move all images to the left by their combined width */
+        }
+        }
+        .col-lg-6.text-center.banner-image-sec.order-lg-2 {
+        padding-left: 100px;
         }
 
         .reviews-images.d-flex.justify-content-between.align-items-center {
@@ -1009,6 +995,9 @@
                 display: block;
                 width: auto;
             }
+            .col-lg-6.text-center.banner-image-sec.order-lg-2 {
+        padding-left: 0px;
+        }
         }
 
         @media (max-width: 768px) {
@@ -1317,8 +1306,16 @@
                 <div class="col-lg-6 text-center banner-image-sec order-lg-2">
                     <div class="image-slider">
                         <div class="slider-content">
-                            <img src="images/222-01.png" alt="Logo 1">
-                            <img src="images/MA-London-Logo-01.png" alt="Logo 2">
+                            <img src="{{ asset('images/banner.png') }}" alt="Logo 1">
+                            <img src="{{ asset('images/banner4.png') }}" alt="Logo 4">
+                            <img src="{{ asset('images/banner5.png') }}" alt="Logo 5">
+                            <img src="{{ asset('images/banner6.png') }}" alt="Logo 6">
+                            <img src="{{ asset('images/banner3.png') }}" alt="Logo 3">
+                            <img src="{{ asset('images/banner7.png') }}" alt="Logo 7">
+                            <img src="{{ asset('images/banner8.png') }}" alt="Logo 8">
+                            <img src="{{ asset('images/banner9.png') }}" alt="Logo 9">
+                            <img src="{{ asset('images/banner2.png') }}" alt="Logo 2">
+
                             <!-- Add more images if needed -->
                         </div>
                     </div>
