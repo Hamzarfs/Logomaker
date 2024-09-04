@@ -2593,7 +2593,8 @@
         };
 
         var form = document.getElementById("companyForm");
-        var sticky = form.offsetTop;
+        var sticky = 350 //form.offsetTop
+
 
         function makeSticky() {
             if (window.pageYOffset > sticky) {
