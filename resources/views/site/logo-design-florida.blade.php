@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 content-section">
-                    <h2>Modern Logo Designing at RFS Logo Design</h2>
+                <p>Modern Logo Designing at RFS Logo Design</p>
                     <h1>Custom <span class="logo-design-color">Logo Design</span> Agency in Florida</h1>
                     <ul class="icon-list">
                         <li><i class="fas fa-trophy"></i> Ranked #1 Logo Design Agency in Florida</li>

@@ -1,6 +1,7 @@
 @extends('site.common')
 
-@section('title', 'Register')
+@section('title', 'Create Your Account - RFS Logo Design')
+@section('meta_desc', 'Join RFS Logo Design today! Create an account to start your logo design journey, track progress, and collaborate with our expert design team.')
 
 @section('content')
     <div class="container my-5">

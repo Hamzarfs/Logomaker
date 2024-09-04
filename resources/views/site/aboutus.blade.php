@@ -45,7 +45,7 @@
                 <h2>Turn Your Visions Into Reality</h2>
                 <p style="text-align:justify;">
                 Welcome to RFS Logo Design, your ultimate destination for all things branding. Whether 
-                you are using our <a href="{{ url('/logo-maker') }}" style="color:#512F90;"><b>free logo maker</b></a> or opting for <a href="{{ url('/logo-maker') }}" style="color:#512F90;"><b>custom logo design services</b></a>, we craft unique 
+                you are using our <a href="{{ url('/logo-maker') }}" style="color:#512F90;"><b>free logo maker</b></a> or opting for <a href="{{ url('/custom-logo') }}" style="color:#512F90;"><b>custom logo design services</b></a>, we craft unique 
                 and impactful logos tailored to your vision.
                 </p>
                 <p style = text-align:justify;>Our expert graphic designers are dedicated to bringing your ideas to life, while our top-notch 

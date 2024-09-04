@@ -1,6 +1,7 @@
 @extends('site.common')
 
-@section('title', 'Login')
+@section('title', 'Login to Your Portal - RFS Logo Design')
+@section('meta_desc', 'Access your RFS Logo Design account. Log in to manage your projects, view updates, and communicate with our design team for a smooth experience.')
 
 @section('content')
     <div class="container my-5">

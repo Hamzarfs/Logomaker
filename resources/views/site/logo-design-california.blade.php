@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 content-section">
-                    <h2>Custom Logo Designing at RFS Logo Design</h2>
+                    <p>Custom Logo Designing at RFS Logo Design</p>
                     <h1>Best Custom <span class="logo-design-color">Logo Design</span> Company in California</h1>
                     <ul class="icon-list">
                         <li><i class="fas fa-trophy"></i> Ranked #1 Logo Design Agency in California</li>

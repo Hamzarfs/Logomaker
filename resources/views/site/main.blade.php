@@ -1226,7 +1226,6 @@
                 </div>
             </div>
         </div>
-        <div class="wave"></div>
     </div> --}}
 
 
@@ -1522,7 +1521,7 @@
     <!-- ---------------------start porfolio -------------------->
 
 
-    <div class="banner-section" style="background-color: #f2f6fe; padding-bottom: 100px;">
+    <div class="banner-section" style="background-color: #f2f6fe; padding-bottom:50px;">
         <div class="container portfolio-section">
             <h2 class="portfolio-heading">We Have Logos For Everyone</h2>
             <p class="main-description-online">
@@ -2051,9 +2050,9 @@
 
         <section class="logos-carousel-section py-5">
             <div class="container">
-                <div class="text-center text-white mb-5">
+                <!-- <div class="text-center text-white mb-5">
                     <h2>We Have Logos For Everyone</h2>
-                </div>
+                </div> -->
 
                 <!-- Slider main container -->
                 <div class="swiper">
@@ -2130,7 +2129,7 @@
 
         <section class="new-testimonial my-5">
             <div class="container-fluid">
-                <h2 class="text-center">Happy Customers and Counting</h2>
+                <h2 class="text-center">Happy Customers and Counting....</h2>
                 <div class="new-testimonial-carousel mt-4">
                     <div class="testimonial-card rotate-left ad">
                         <p>❇️❇️❇️❇️❇️</p>
@@ -2369,7 +2368,7 @@
 
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card-body">
-                            Ownership: Logos created using templates are owned by the RFS Logo Design. Exclusive rights can
+                            Logos created using templates are owned by the RFS Logo Design. Exclusive rights can
                             be purchased separately.
                         </div>
                     </div>
@@ -2389,7 +2388,7 @@
 
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                         <div class="card-body">
-                            Logo Maker: Uses pre-made templates for customization. You can adjust fonts, colors, and effects
+                            Uses pre-made templates for customization. You can adjust fonts, colors, and effects
                             without needing design skills. The design is not exclusive to you.
                             Custom Design: Involves working with a dedicated designer who creates a unique logo based on
                             your specific requirements. This design is exclusive to your brand.
@@ -2435,7 +2434,7 @@
 
                     <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
                         <div class="card-body">
-                            File Availability: Once customized, download high-resolution files suitable for printing
+                            Once customized, download high-resolution files suitable for printing
                             business cards, stationery, banners, and digital platforms.
                         </div>
                     </div>
