@@ -1299,21 +1299,22 @@
                     </form>
 
                     <div class="row pt-2">
-                        <div class="reviews-images d-flex justify-content-between align-items-center">
-                            <a href="https://clutch.co/profile/rfs-logo-design" target="_blank">
-                                <img src="{{ url('images/clutch.png') }}" alt="Trust 1">
-                            </a>
-                            <a href="https://www.goodfirms.co/company/rfs-logo-design" target="_blank">
-                                <img src="{{ url('images/goodfirm.png') }}" alt="Trust 2">
-                            </a>
-                            <a href="https://www.trustpilot.com/review/rfslogodesign.com" target="_blank">
-                                <img src="{{ url('images/trustpilot.png') }}" alt="Trust 3">
-                            </a>
-                            <a href="https://www.bark.com/en/gb/company/rfs-logo-design/oRvbN/" target="_blank">
-                                <img src="{{ url('images/barkreview.webp') }}" alt="Trust 4">
-                            </a>
-                        </div>
-                    </div>
+    <div class="reviews-images d-flex justify-content-between align-items-center">
+        <a href="https://clutch.co/profile/rfs-logo-design" target="_blank">
+            <img src="{{ url('images/image 93.svg') }}" alt="Trust 1" style="margin-left: 12px;">
+        </a>
+        <a href="https://www.goodfirms.co/company/rfs-logo-design" target="_blank">
+            <img src="{{ url('images/PngItem_3815748 3.svg') }}" alt="Trust 2" style="margin-left: 12px;">
+        </a>
+        <a href="https://www.trustpilot.com/review/rfslogodesign.com" target="_blank">
+            <img src="{{ url('images/Daco_1534091 3.svg') }}" alt="Trust 3" style="margin-left: 12px;">
+        </a>
+        <a href="https://www.bark.com/en/gb/company/rfs-logo-design/oRvbN/" target="_blank">
+            <img src="{{ url('images/Frame 63.svg') }}" alt="Trust 4"style="margin-left: 12px;">
+        </a>
+    </div>
+</div>
+
                 </div>
 
                 <div class="col-lg-6 text-center banner-image-sec order-lg-2">
