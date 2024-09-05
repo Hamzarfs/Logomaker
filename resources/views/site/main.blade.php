@@ -1705,7 +1705,7 @@
                             <div class="col-md-4">
                                 <div class="overlay"></div>
                                 <div class="imgicon">
-                                    <img src="{{ url('images/image 52.png') }}" class="opeer">
+                                    <img src="{{ url('images/success.gif') }}" class="opeer">
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -1726,7 +1726,7 @@
                             <div class="col-md-4">
                                 <div class="overlay"></div>
                                 <div class="imgicon">
-                                    <img src="{{ url('images/image 53.png') }}" class="opeer">
+                                    <img src="{{ url('images/best-quality.gif') }}" class="opeer">
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -1747,7 +1747,7 @@
                             <div class="col-md-4">
                                 <div class="overlay"></div>
                                 <div class="imgicon">
-                                    <img src="{{ url('images/image 54.png') }}" class="opeer">
+                                    <img src="{{ url('images/logo-design.gif') }}" class="opeer">
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -1772,7 +1772,7 @@
                             <div class="col-md-4">
                                 <div class="overlay"></div>
                                 <div class="imgicon">
-                                    <img src="{{ url('images/image 55.png') }}" class="opeer">
+                                    <img src="{{ url('images/digital-art.gif') }}" class="opeer">
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -1793,7 +1793,7 @@
                             <div class="col-md-4">
                                 <div class="overlay"></div>
                                 <div class="imgicon">
-                                    <img src="{{ url('images/image 56.png') }}" class="opeer">
+                                    <img src="{{ url('images/support.gif') }}" class="opeer">
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -1814,7 +1814,7 @@
                             <div class="col-md-4">
                                 <div class="overlay"></div>
                                 <div class="imgicon">
-                                    <img src="{{ url('images/image 57.png') }}" class="opeer">
+                                    <img src="{{ url('images/startup.gif') }}" class="opeer">
                                 </div>
                             </div>
                             <div class="col-md-8">
