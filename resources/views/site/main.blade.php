@@ -2590,7 +2590,7 @@
         };
 
         var form = document.getElementById("companyForm");
-        var sticky = 350 //form.offsetTop
+        var sticky = 400 //form.offsetTop
 
 
         function makeSticky() {

@@ -4,8 +4,6 @@
 @section('meta_desc', 'Elevate your brand identity with RFS Logo Design professional stationery designing services. Get creative branding materials for effective online presence.')
 
 @section('content')
-
-<body>
     <div class="banner-section">
         <div class="container">
             <div class="row align-items-center">

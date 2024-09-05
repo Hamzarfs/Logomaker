@@ -13,7 +13,7 @@
         <title>@yield('title')</title>
     @endisset
 
-    <meta name="description" content="@yield('meta_desc')">
+    <meta name="description" content="@yield('meta_desc')" />
 
     <link rel="canonical" href="{{ url()->current() }}" />
 
