@@ -947,6 +947,9 @@
             flex-flow: nowrap;
 
         }
+        .container-vh {
+            margin-bottom: -25px !important;
+        }
 
 
 
@@ -1069,7 +1072,17 @@
                 margin: 0 auto;
                 margin-top: 5px;
             }
+        
+    .image-slider {
+        height: 275px;
+    }
+}
+@media (max-width: 768px) {
+        .container-vh {
+            margin-top: 25px !important;
+            margin-bottom: -25px !important;
         }
+    }
 
 
 
@@ -1574,10 +1587,10 @@
                     colors, fonts, icons, and taglines to fit your brand’s vibe. Our user-friendly
                     tools make it a breeze for anyone to design a standout, professional logo!
                 </p>
-                <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Try Design Studio</button></a>
+                <a href="{{ url('/logo-maker') }}"><button class="california-button-online">Try Design Studio</button></a>
 
             </div>
-            <div class="container my-5">
+            <div class="container-vh my-5">
                 <div class="row">
                     <div class="col-md-5">
                         <h2 class="heading-online">Step 3. Download Your Logo</h2>
@@ -1588,7 +1601,7 @@
                             social media, business cards, and brochures!
                         </p>
 
-                        <a href="{{ url('/logo-maker') }}"><button class="custom-button-online">Get Started</button></a>
+                        <a href="{{ url('/logo-maker') }}"><button class="california-button-online">Get Started</button></a>
                     </div>
                     <div class="col-md-2"></div>
                     <div class="col-md-5">
