@@ -192,7 +192,7 @@
                         We have a dedicated customer support team ready to assist with any inquiries regarding our logo
                         design maker.
                         For custom logo design services by dedicated graphic designers, please contact us at
-                        551-666-2555, email us at support@rfslogodesign.com, or fill out a hiring a logo designer form
+                        551-666-5255, email us at support@rfslogodesign.com, or fill out a hiring a logo designer form
                         here.
 
                     </div>

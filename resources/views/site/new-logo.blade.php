@@ -7,68 +7,41 @@
 @section('content')
 
     <style>
-        /* .category-top-section {
-                background-image: url("{{ asset('images/Main-Poster-1.webp') }}");
-            } */
+       
 
-        .category-top-section {
-            padding: 60px 0;
-            background-color: #6868D1;
-        }
+    .education-logo-section {
+    background-image: url('/images/catagories2.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
 
-        .category-top-section h1 {
-            margin-bottom: 20px;
-        }
+.education-logo-section h1 {
+    font-weight: 700;
+    font-size: 44px;
+    text-align: center;
+    
+}
+.education-logo-section h2 {
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-        .category-top-section .cta-form {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
 
-        .category-top-section .cta-form input {
-            margin-right: 10px;
-            max-width: 300px;
-        }
+.education-logo-section p {
+    margin-bottom: 20px;
+}
 
-        .images-container {
-            position: relative;
-            text-align: center;
-        }
 
-        .images-container img {
-            position: absolute;
-        }
 
-        .images-container .background-image {
-            position: relative;
-            z-index: 1;
-            max-width: 100%;
-        }
-
-        .images-container .left-image-1 {
-            top: 80px;
-            left: 0;
-            z-index: 2;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        .images-container .left-image-2 {
-            top: 300px;
-            left: 80px;
-            z-index: 2;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        .images-container .right-image {
-            top: 180px;
-            left: 380px;
-            z-index: 4;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
 
         .category-top-textblock {
             padding: 40px 0;
@@ -108,6 +81,27 @@
             .images-container {
                 display: none;
             }
+            .education-logo-section h1 {
+    font-weight: 700;
+    font-size: 30px;
+    
+}
+.education-logo-section h2 {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+.education-logo-section p {
+    margin-bottom: 20px;
+    font-size: 18px;
+
+}
+
+
+
+
         }
 
         .custom-section {
@@ -320,28 +314,24 @@
     </style>
 
     <!-- Top Section Start -->
-    <section class="category-top-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 style="color:#fff; font-weight:700;  font-size:26px;">Free {{ $categoryObj['name'] ?? '' }} <span
-                            class="logo-design-color">Logo
-                            {{-- <div class="col-12">
-                    <h1 style="color:#fff; font-weight:700;  font-size:26px;">Free {{ $categoryObj['name'] ?? '' }} <span
-                            class="logo-design-color">Logo --}}
-                            Maker</span><br>Design
-                        Your Logo in Minutes</h1>
-                    <p style="color:#fff;">Utilize our advanced {{ $categoryObj['name'] ?? '' }} logo creator tool to design
-                        a professional logo for your
-                        business or company. Try it now!</p>
-                    <!-- <h1>Create Accounting Logos & CPA Logos Instantly</h1> -->
-                    {{-- <form class="cta-form" method="post" action="{{ url('/store-session-data') }}">
-                        <input type="text" name="company_name" class="form-control" placeholder="Enter your company name"
-                            maxlength="30">
+    
 
-                        <button type="submit" class="btn btn-primary">Get a Logo</button>
-                    </form> --}}
-                    <form id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
+
+
+
+
+
+
+
+    <section class="education-logo-section">
+    <div class="container">
+        <h1>Free {{ $categoryObj['name'] ?? '' }} Logo Maker</h1>
+        <h2>Design Your Logo in Minutes</h2>
+        <p class="text-center">Utilize our advanced {{ $categoryObj['name'] ?? '' }} logo creator tool to design a<br> professional logo for your business or company. Try it now!</p>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+           
+            <form id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
                         @csrf
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" id="companyName11" name="company"
@@ -350,25 +340,23 @@
                             <input type="submit" class="custom-button-banner" value="Get Started">
                         </div>
                     </form>
-                </div>
-                <div class="col-lg-6 d-none d-lg-block">
-                    <div class="images-container">
-                        <img src="{{ asset('images/lg-logo-gallery-blank.png') }}" class="background-image">
-                        <span class="loader-item absolute-img-01">
-                            <img src="{{ asset('images/text-in-pastel-flower-shape-8918ld.png') }}" class="left-image-1">
-                        </span>
-                        <span class="loader-item absolute-img-01">
-                            <img src="{{ asset('images/letter-h-incorporated-with-rounded-square-5234ld.png') }}"
-                                class="left-image-2">
-                        </span>
-                        <span class="loader-item absolute-img-01">
-                            <img src="{{ asset('images/vintage-law-scale-3135ld.png') }}" class="right-image">
-                        </span>
-                    </div>
-                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <section class="category-top-textblock">
         <div class="container">

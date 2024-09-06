@@ -1064,6 +1064,9 @@
                 display: inline;
                 margin: 0 auto 20px auto;
             }
+            .card-container, .card-container2 {
+    height: 227px;
+}
         }
 
         @media (max-width: 768px) {
@@ -1953,7 +1956,7 @@
 
 
 
-    <div style="padding-bottom: 100px; ">
+    <div style="padding-bottom: 0px; ">
         <div class="new-card-design-section">
             <div class="new-card-design-container">
                 <h2 class="new-card-design-title">Designing The Perfect Logo Made Easy <br>With Our Logo Creator</h2>
