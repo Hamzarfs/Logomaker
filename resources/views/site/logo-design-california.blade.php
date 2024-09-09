@@ -4,11 +4,70 @@
 @section('meta_desc', 'RFS Logo Design company provides custom logo design services in California. We are the ranked #1 professional logo design agency with expert logo designers.')
 
 @section('content')
+
+
+<style>
+       
+
+       .education-logo-section {
+       background-image: url('/images/california12.png');
+       background-size: cover;
+       background-position: center;
+       padding: 150px 0;
+       color: #fff;
+       text-align: center;
+       display: flex;
+       flex-direction: column;
+       justify-content: center; /* Center content vertically */
+       align-items: center; /* Center content horizontally */
+   }
+   
+   .education-logo-section h1 {
+       font-weight: 700;
+       font-size: 44px;
+       text-align: center;
+       
+   }
+   .education-logo-section h2 {
+       font-weight: 700;
+       font-size: 40px;
+       text-align: center;
+       margin-bottom: 20px;
+   }
+   
+   
+   .education-logo-section p {
+       margin-bottom: 20px;
+   }
+   
+   </style>
+
+
+
+
+
+
+
+
+<section class="education-logo-section">
+    <div class="container">
+    <p>Ranked #1 Logo Design Agency in California</p>
+        <h1>Best Custom Logo Design<br>
+        Company in California</h1>
+    </div>
+</section>
+
+
+
+
+<!-- 
+
+
     <div class="banner-section">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 content-section">
-                    <p>Custom Logo Designing at RFS Logo Design</p>
+                    <p>Ranked #1 Logo Design Agency in California</p>
                     <h1>Best Custom <span class="logo-design-color">Logo Design</span> Company in California</h1>
                     <ul class="icon-list">
                         <li><i class="fas fa-trophy"></i> Ranked #1 Logo Design Agency in California</li>
@@ -42,9 +101,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="logo-slider-section">
+    <!-- <div class="logo-slider-section">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -54,10 +113,10 @@
                         <img src="images/Group 17.png" alt="Logo 3">
                         <img src="images/Group 18.png" alt="Logo 4">
                         <img src="images/Group 21.png" alt="Logo 5">
-                        <img src="images/Group 22.png" alt="Logo 6">
+                        <img src="images/Group 22.png" alt="Logo 6"> -->
 
                         <!-- Repeat logos to ensure continuous animation -->
-                        <img src="images/Group 14.png" alt="Logo 1">
+                        <!-- <img src="images/Group 14.png" alt="Logo 1">
                         <img src="images/Group 16.png" alt="Logo 2">
                         <img src="images/Group 17.png" alt="Logo 3">
                         <img src="images/Group 18.png" alt="Logo 4">
@@ -67,17 +126,17 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!--------------------- Start PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
     <div class="logo-designs-ca">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 text-center">
-                    <img src="images/111 1.png" alt="Professional Logo Designs" class="professional-logo-image">
+                    <img src="images/side-view-man-designing-websites 1.png" alt="Professional Logo Designs" class="professional-logo-image">
                 </div>
                 <div class="col-lg-6">
-                    <h3>PROFESSIONAL LOGO DESIGNS IN CA</h3>
+                    <h2>PROFESSIONAL LOGO<br>DESIGNS IN CA</h2>
                     <p style="text-align: justify;">RFS Logo Design stands out as a premier logo design company
                         based in California, renowned for its exceptional services in custom logo design. With a
                         talented team of designers dedicated to crafting unique and impactful logos, RFS Logo Design
@@ -100,30 +159,34 @@
                 <button class="btn filter-button" data-filter="illustrative">Illustrative Logo</button>
                 <button class="btn filter-button" data-filter="animated">Animated Logo</button>
             </div>
+            
 
             <div class="row gallery">
+            <hr class="custom-divider-ca">
+
                 <!-- Iconic Logos -->
                 <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
-                    <img src="images/portfoliologo3.png" alt="Iconic Logo 1">
+                    <img src="images/portfoliologo1.png" alt="Iconic Logo 1">
+                </div>
+            
+                <div class="col-lg-4 col-md-6 mb-4 filter all typography">
+                    <img src="images/portfoliologo5.png" alt="Typography Logo 1">
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
-                    <img src="images/portfoliologo1.png" alt="Iconic Logo 2">
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
-                    <img src="images/portfoliologo6.png" alt="Iconic Logo 3">
+                    <img src="images/portfoliologo3.png" alt="Illustrative Logo 2">
                 </div>
 
                 <!-- Typography Logos -->
-                <div class="col-lg-4 col-md-6 mb-4 filter all typography">
-                    <img src="images/portfoliologo6.png" alt="Typography Logo 1">
+                <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
+                    <img src="images/portfoliologo2.png" alt="Iconic Logo 2">
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 filter all typography">
-                    <img src="images/portfoliologo5.png" alt="Typography Logo 2">
+                    <img src="images/portfoliologo6.png" alt="Typography Logo 2">
                 </div>
 
                 <!-- Illustrative Logos -->
                 <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
-                    <img src="images/Illustrative-Logo-Design3.webp" alt="Illustrative Logo 1">
+                    <img src="images/portfoliologo4.png" alt="Illustrative Logo 1">
                 </div>
                 <!-- <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
                         <img src="illustrative2.jpg" alt="Illustrative Logo 2">
@@ -144,14 +207,14 @@
      <!-- <-----------------Start Testimonial Section---------------->
 
 
- <section id="testimonial-section" class="pt-5 pb-5">
+ <!-- <section id="testimonial-section" class="pt-5 pb-5">
         <div class="container">
             <h2 class="text-center mb-5">See What Our Clients Have to Say</h2>
             <div class="owl-carousel owl-theme">
-                <!-- Reviews will be inserted here dynamically -->
-            </div>
+                 Reviews will be inserted here dynamically -->
+            <!-- </div>
         </div>
-    </section>
+    </section> --> 
  <!-- {{----------------- End Testiomonial Section --}} -->
 
     <!---------------------Start why-choose-rfs----------------->
@@ -160,9 +223,8 @@
     <section class="why-choose-rfs">
         <div class="container">
             <div class="row content">
-                <div class="col-md-6 text">
-                    <h2 class="Why-h2">Why Choose <span class="logo-choose-color">RFS Logo Design</span> In California?
-                    </h2>
+                <div class="col-md-7 text">
+                    <h2 class="Why-h2">Why Choose RFS Logo <br>Design In California?</h2>
                     <p style="text-align: justify;">As a leading design agency in California, RFS Logo Design excels in
                         providing comprehensive logo design services tailored to meet the specific needs of businesses
                         across various industries. Their expertise lies in translating clients' visions into captivating
@@ -176,7 +238,7 @@
                         needed to bring your vision to life. Experience the difference of working with a premier logo design
                         company in California—choose RFS Logo Design for all your logo design needs.</p>
                 </div>
-                <div class="col-md-6 image">
+                <div class="col-md-5 image">
                     <img src="images/hire-section-logos .png" alt="RFS Logo Design">
                 </div>
             </div>
@@ -189,30 +251,43 @@
 
     <!---------------------Start Crafting----------------->
 
-    <section class="crafting-logos">
-        <div class="container">
-            <div class="row content">
-                <div class="col-md-6 image">
-                    <img src="images/Crafting Impactful Logos.png" alt="Crafting Impactful Logos">
-                </div>
-                <div class="col-md-6 text">
-                    <h2 class="CRAFT-h2" style="font-weight: 800;">CRAFTING IMPACTFUL LOGOS ACROSS INDUSTRIES IN
-                        CALIFORNIA</h2>
-                    <p style="text-align: justify;">We serve a diverse array of industries with custom logo design
-                        solutions tailored to their unique needs.
-                        From small businesses, including cafes, boutiques, and local services, to professionals such as
-                        lawyers,
-                        doctors, and consultants, RFS Logo Design caters to a wide range of clients. Additionally, we extend
-                        our
-                        services to industries like technology, real estate, hospitality, fashion, and more. No matter the
-                        industry
-                        or profession, we are dedicated to crafting visually striking logos that effectively communicate the
-                        essence
-                        of each brand, leaving a lasting impression on customers and clients alike.</p>
-                </div>
-            </div>
+
+
+
+
+
+<section class="unique-section">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Left Side Image -->
+        <div class="col-md-5 unique-image-col">
+          <img src="images/unique.png" class="unique-image" alt="Image Description">
         </div>
-    </section>
+
+       
+        <!-- Right Side Content -->
+        <div class="col-md-5 unique-content-col">
+        <h2 class="CRAFT-h2" style="font-weight: 700;">Crafting impactful logos<br> across industries in<br> California</h2>
+        <p class="unique-paragraph">We serve a diverse array of industries with custom logo design solutions tailored to their 
+            unique needs. From small businesses, including cafes, boutiques, and local services, to professionals such as lawyers, 
+            doctors, and consultants, RFS Logo Design caters to a wide range of clients. Additionally, we extend our services to industries 
+            like technology, real estate, hospitality, fashion, and more. No matter the industry or profession, we are dedicated to crafting 
+            visually striking logos that effectively communicate the essence of each brand, leaving a lasting impression on customers and clients alike.</p>
+        </div>
+         <!-- Free space on right side -->
+         <div class="col-md-2"></div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+    
 
     <!---------------------End Crafting----------------->
 
