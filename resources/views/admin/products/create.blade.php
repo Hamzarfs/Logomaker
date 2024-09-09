@@ -49,14 +49,40 @@
                                 </div>
                             </div>
                             <!-- Here  -->
-
                             <div class="row">
-                                <div class="col-lg-4">
+                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="name" class="form-label">Color</label>
                                         <input type="color" name="color" id="color" value="{{ old('color') }}"
                                             class="form-control" required>
                                         <x-error>color</x-error>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="name" class="form-label">Color2</label>
+                                        <input type="color" name="color2" id="color2" value="{{ old('color2') }}"
+                                            class="form-control" required>
+                                        <x-error>color</x-error>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="background_color" class="form-label">Background Color</label>
+                                        <input type="color" name="background_color" id="background_color" 
+                                            value="{{ old('background_color', '#FFFFFF') }}" 
+                                            class="form-control" required>
+                                        <x-error>color</x-error>
+                                    </div>
+                                </div>
+
+ 
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_logo_size" class="form-label">Logo size</label>
+                                        <input type="text" name="logo_size" id="lm_logo_size" value="{{ old('logo_size') }}"
+                                            class="form-control" >
+                                        <x-error>logo_size</x-error>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
@@ -72,7 +98,11 @@
                                         <x-error>font</x-error>
                                     </div>
                                 </div>
-
+                                
+                            
+                            
+                               
+                                
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="logo_position" class="form-label">Logo Position</label>
@@ -88,6 +118,73 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <h4>Company Name</h4>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_left" class="form-label">Company Name</label>
+                                        <input type="text" name="company_name" id="lm_left" value="{{ old('company_name') }}"
+                                            class="form-control" >
+                                        <x-error>company_name</x-error>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_top" class="form-label">Spacing</label>
+                                        <input type="text" name="company_spacing" id="lm_top" value="{{ old('company_spacing') }}"
+                                            class="form-control" >
+                                        <x-error>company_spacing</x-error>
+                                    </div>
+                                </div>
+                               
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_font" class="form-label">Font Size</label>
+                                        <input type="text" name="company_font" id="lm_font" value="{{ old('company_font') }}"
+                                            class="form-control" >
+                                        <x-error>company_font</x-error>
+                                    </div>
+                                </div>
+
+                                
+                               
+
+                                
+                            </div>
+
+
+
+                            <h4>Slogan Name</h4>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_left" class="form-label">slogon Name</label>
+                                        <input type="text" name="slogan_name" id="lm_left" value="{{ old('slogan_name') }}"
+                                            class="form-control" >
+                                        <x-error>slogan_name</x-error>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_top" class="form-label">Spacing</label>
+                                        <input type="text" name="slogan_spacing" id="lm_top" value="{{ old('slogan_spacing') }}"
+                                            class="form-control" >
+                                        <x-error>slogan_spacing</x-error>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_font" class="form-label">Font Size</label>
+                                        <input type="text" name="slogan_font" id="lm_font" value="{{ old('slogan_font') }}"
+                                            class="form-control" >
+                                        <x-error>slogan_font</x-error>
+                                    </div>
+                                </div>
+ 
+                            </div>
+
                             <h4>Logo Maker</h4>
                             <div class="row">
                                 <div class="col-lg-4">
@@ -112,6 +209,22 @@
                                         <input type="text" name="logomaker[font]" id="lm_font" value="{{ old('logomaker.font') }}"
                                             class="form-control" >
                                         <x-error>logomaker[font]</x-error>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_left" class="form-label">Logo Left Position</label>
+                                        <input type="text" name="logomaker[logo_left]" id="lm_left" value="{{ old('logomaker.logo_left') }}"
+                                            class="form-control" >
+                                        <x-error>logomaker[logo_left]</x-error>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_top" class="form-label">Logo Top Position</label>
+                                        <input type="text" name="logomaker[logo_top]" id="lm_top" value="{{ old('logomaker.logo_top') }}"
+                                            class="form-control" >
+                                        <x-error>logomaker[logo_top]</x-error>
                                     </div>
                                 </div>
                             </div>
@@ -141,6 +254,22 @@
                                         <x-error>preview[font]</x-error>
                                     </div>
                                 </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_left" class="form-label">Logo Left Position</label>
+                                        <input type="text" name="preview[logo_left]" id="lm_left" value="{{ old('preview.logo_left') }}"
+                                            class="form-control" >
+                                        <x-error>preview[logo_left]</x-error>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_top" class="form-label">Logo Top Position</label>
+                                        <input type="text" name="preview[logo_top]" id="lm_top" value="{{ old('preview.logo_top') }}"
+                                            class="form-control" >
+                                        <x-error>preview[logo_top]</x-error>
+                                    </div>
+                                </div>
                             </div>
 
                             <h4>Canva</h4>
@@ -167,6 +296,22 @@
                                         <input type="text" name="canva[font]" id="can_font"
                                             value="{{ old('canva.font') }}" class="form-control" >
                                         <x-error>canva[font]</x-error>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_left" class="form-label">Logo Left Position</label>
+                                        <input type="text" name="canva[logo_left]" id="lm_left" value="{{ old('canva.logo_left') }}"
+                                            class="form-control" >
+                                        <x-error>canva[logo_left]</x-error>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_top" class="form-label">Logo Top Position</label>
+                                        <input type="text" name="canva[logo_top]" id="lm_top" value="{{ old('canva.logo_top') }}"
+                                            class="form-control" >
+                                        <x-error>canva[logo_top]</x-error>
                                     </div>
                                 </div>
                             </div>
