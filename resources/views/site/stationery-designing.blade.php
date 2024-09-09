@@ -172,11 +172,48 @@
  <!-- <-----------------Start Testimonial Section---------------->
 
 
- <section id="testimonial-section" class="pt-5 pb-5">
-        <div class="container">
-            <h2 class="text-center mb-5">See What Our Clients Have to Say</h2>
-            <div class="owl-carousel owl-theme">
-                <!-- Reviews will be inserted here dynamically -->
+    <section class="new-testimonial my-5">
+        <div class="container-fluid">
+            <h2 class="text-center">Happy Customers and Counting....</h2>
+            <div class="new-testimonial-carousel mt-4">
+                <div class="testimonial-card rotate-left ad">
+                    <p>❇️❇️❇️❇️❇️</p>
+                    {{-- <img src="https://via.placeholder.com/80" alt="Customer 1" class="rounded-circle mb-3"> --}}
+                    <h5>Busted Knuckles</h5>
+                    <p>I dealt with Ed Harvey through my experience with RFS and he was great! Very polite and helpful.
+                        I had drawn a rough sketch of my logo and they brought it to life extremely fast and with
+                        perfect accuracy! I would recommend Ed and RFS for anyone looking into getting a logo made!</p>
+                </div>
+                <div class="testimonial-card rotate-right ad">
+                    <p>❇️❇️❇️❇️❇️</p>
+                    {{-- <img src="https://via.placeholder.com/80" alt="Customer 2" class="rounded-circle mb-3"> --}}
+                    <h5>Madelyn Weingarden</h5>
+                    <p>Brian Edwin provided me with excellent service. Anytime I asked him for any edits, he did it
+                        promptly. I was very happy with the logos and invoices he created for me. 5 Star Service. Thank
+                        you, Brian.</p>
+                </div>
+                <div class="testimonial-card rotate-left ad">
+                    {{-- <img src="https://via.placeholder.com/80" alt="Customer 3" class="rounded-circle mb-3"> --}}
+                    <p>❇️❇️❇️❇️❇️</p>
+                    <h5>Spanky</h5>
+                    <p>Brian Edwin is who I worked with. I made multiple revisions and he delivered on exactly what I
+                        wanted and quickly. Highly recommend him and will be using again in the future.</p>
+                </div>
+                <div class="testimonial-card rotate-right ad">
+                    <p>❇️❇️❇️❇️❇️</p>
+                    {{-- <img src="https://via.placeholder.com/80" alt="Customer 4" class="rounded-circle mb-3"> --}}
+                    <h5>Archelle Jenkins</h5>
+                    <p>LOVEEE MY LOGO ! Done exactly how I visioned it! I'll be back for my website !</p>
+                </div>
+                <div class="testimonial-card rotate-right ad">
+                    <p>❇️❇️❇️❇️❇️</p>
+                    {{-- <img src="https://via.placeholder.com/80" alt="Customer 4" class="rounded-circle mb-3"> --}}
+                    <h5>Kyle Bacon</h5>
+                    <p>Very helpful crew, I'm very picky with my designs and I was helped greatly with compliant people,
+                        I am very satisfied</p>
+                </div>
+
+
             </div>
         </div>
     </section>
@@ -286,4 +323,16 @@
             });
         });
     </script>
+
+<script>
+    // Ensure carousel can be scrolled via mouse or touch gestures without a scrollbar
+    const carousel = document.querySelector('.new-testimonial-carousel');
+
+carousel.addEventListener('wheel', (e) => {
+e.preventDefault();
+carousel.scrollBy({
+  left: e.deltaY < 0 ? -30 : 30,
+});
+});
+</script>
 @endsection

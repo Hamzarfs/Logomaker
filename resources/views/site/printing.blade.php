@@ -5,7 +5,7 @@
 
 @section('content')
 
-    
+
 <div class="container-fluid position-relative" style="background-color:#6868D1; padding-bottom: 100px;">
     <div class="container">
         <div class="row align-items-center">
@@ -32,7 +32,7 @@
             <div class="col-md-7 content">
                 <h2 style= font-size:1.6em;> Is the cost of printing business cards, stationery, flyers, and other materials beyond your budget?</h2>
                 <p style = text-align:justify;>With the ever-rising prices of printing letterheads, brochures, t-shirts, and visiting cards, small businesses and startups don’t have it easy.</p>
-                <p style = text-align:justify;>We understand how important it is for you to have visiting cards for your clients, flyers to advertise, and letters to send everywhere. So, why even 
+                <p style = text-align:justify;>We understand how important it is for you to have visiting cards for your clients, flyers to advertise, and letters to send everywhere. So, why even
                 think of wasting your money on expensive printing materials that you can’t afford with your tight budget?</p>
             </div>
         </div>
@@ -50,7 +50,7 @@
             <div class="col-md-7 content">
             <h2 style= font-size:1.6em;>Stress-Free Printing </h2>
                 <p style = text-align:justify;>Still wondering how to get the best quality printing materials at the best prices? No need to worry, because we have got your back!</p>
-                <p style = text-align:justify;>With RFS Logo Design as your branding partner, rates and quality will be the least of your concerns. Our experience spans over more than 
+                <p style = text-align:justify;>With RFS Logo Design as your branding partner, rates and quality will be the least of your concerns. Our experience spans over more than
                 15 years, so we know about everything there is about the world of marketing material for print and branding for small businesses.</p>
             </div>
             <div class="col-md-5">
@@ -102,9 +102,9 @@
     <section class="boxed-section">
         <div class="container">
         <h2 style= font-size:1.6em;>Flexible Printing Options</h2>
-            <p>Choose your preferred quantity and quality, and get your materials printed without a worry. 
-            All you have to do is pick out a printing service and reach out to us at 
-            <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a> or 
+            <p>Choose your preferred quantity and quality, and get your materials printed without a worry.
+            All you have to do is pick out a printing service and reach out to us at
+            <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a> or
                 call us at <a href="tel:+15516665255">+1 (551) 666-5255</a>.</p>
                 <a href="{{ url('contact-us') }}" class="california-button-online">Get Started</a>
 
