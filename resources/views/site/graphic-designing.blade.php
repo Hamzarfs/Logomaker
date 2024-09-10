@@ -4,80 +4,65 @@
 @section('meta_desc', 'Transform your brand with RFS Logo Design professional graphic designing services. From logos to branding materials, we create visually stunning assets for your brand.')
 @section('content')
 
-    <div class="banner-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 content-section">
-                    <p>Design Just Got Easy</p>
-                    <h1>Create impressive videos and images <span class="logo-design-color">designs in minutes.</span>
-                    </h1>
-                    <ul class="icon-list">
-                        <li><i class="fas fa-trophy"></i> Graphic Designing In Digital Marketing</li>
-                        <li><i class="fas fa-briefcase"></i> Multimedia & Print Media Services</li>
-                        <li><i class="fas fa-sync-alt"></i> Character & Creative Design</li>
-                        <li><i class="fas fa-users"></i> Corporate Identity Design</li>
-                        <li><i class="fas fa-star"></i> Logo Design</li>
-                    </ul>
-                    <a href="{{ url('/') }}" class="california-button-online">Get Started</a>
-                </div>
-                <div class="col-lg-6 text-center about-us-image-sec order-lg-2">
-                    <img src="images/graphic designer.png" alt="About RFS Logo Design" title= "About RFS Logo Design"
-                        class="img-fluid">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="logo-slider-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="logo-slider">
-                        <img src="images/Group 14.png" alt="Logo 1">
-                        <img src="images/Group 16.png" alt="Logo 2">
-                        <img src="images/Group 17.png" alt="Logo 3">
-                        <img src="images/Group 18.png" alt="Logo 4">
-                        <img src="images/Group 21.png" alt="Logo 5">
-                        <img src="images/Group 22.png" alt="Logo 6">
-
-                        <!-- Repeat logos to ensure continuous animation -->
-                        <img src="images/Group 14.png" alt="Logo 1">
-                        <img src="images/Group 16.png" alt="Logo 2">
-                        <img src="images/Group 17.png" alt="Logo 3">
-                        <img src="images/Group 18.png" alt="Logo 4">
-                        <img src="images/Group 21.png" alt="Logo 5">
-                        <img src="images/Group 22.png" alt="Logo 6">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
-    <!--------------------- Start PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
-    <div class="logo-designs-ca">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 text-center">
-                    <img src="images/111 1.png" alt="Professional Logo Designs" class="professional-logo-image">
-                </div>
-                <div class="col-lg-6">
-                    <h3>Graphic Designing</h3>
-                    <p style="text-align: justify;">Graphic design is an electrifying field that involves organizing
-                        visual elements to effectively communicate messages. With a seamless blend of inventiveness
-                        and technical skill, designers mold brand identities by using captivating logos, dynamic color
-                        palettes, and captivating aesthetics. Whether working in print or online, they craft powerful
-                        materials, including eye-catching brochures, striking posters, sleek web designs, and
-                        captivating
-                        social media graphics.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--------------------- End PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
+
+
+ 
+<style>
+       
+
+       .education-logo-section {
+          background-image: url('/images/Graphic.png');
+          background-size: cover;
+          background-position: center;
+          padding: 150px 0;
+          color: #fff;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center; /* Center content vertically */
+          align-items: center; /* Center content horizontally */
+      }
+      
+       .education-logo-section h1 {
+          font-weight: 700;
+          font-size: 44px;
+          text-align: center;
+          
+      }
+       .education-logo-section h2 {
+          font-weight: 700;
+          font-size: 25px !important;
+          text-align: center;
+          margin-bottom: 20px;
+      }
+      
+      
+       .education-logo-section p {
+          margin-bottom: 20px;
+      }
+      @media (max-width: 768) {
+   
+       .new-testimonial{
+       margin-top:0px !important;
+   
+      }
+      }
+      
+      </style>
+      
+   <section class="education-logo-section">
+       <div class="container">
+       <p>Design Just Got Easy</p>
+           <h1>Create impressive videos and<br>
+           images designs in minutes.</h1>
+       </div>
+   </section>
+   
 
     <!--------------------- Start PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
-    <div class="services-section" style=padding:0px;>
+    <div class="services-section" style=padding:50px;>
         <div class="container">
             <h2>What Services Do We Offer?</h2>
             <p>Our experts are dedicated to delivering excellence in every project.</p>
@@ -170,26 +155,70 @@
     </div>
     <!---------------------- End Portfolio -------------------------->
 
-    <!-- <-----------------Start Testimonial Section---------------->
-    <section id="testimonial-section" class="pt-5 pb-5">
-        <div class="container">
-            <h2 class="text-center mb-5">See What Our Clients Have to Say</h2>
-            <div class="owl-carousel owl-theme">
-                <!-- Reviews will be inserted here dynamically -->
+     <!-- <-----------------Start Testimonial Section---------------->
+
+
+     <section class="new-testimonial my-5">
+            <div class="container-fluid">
+                <h2 class="text-center">Happy Customers and Counting....</h2>
+                <div class="new-testimonial-carousel mt-4">
+                    <div class="testimonial-card rotate-left ad">
+                        <p>❇️❇️❇️❇️❇️</p>
+                        {{-- <img src="https://via.placeholder.com/80" alt="Customer 1" class="rounded-circle mb-3"> --}}
+                        <h5>Busted Knuckles</h5>
+                        <p>I dealt with Ed Harvey through my experience with RFS and he was great! Very polite and helpful.
+                            I had drawn a rough sketch of my logo and they brought it to life extremely fast and with
+                            perfect accuracy! I would recommend Ed and RFS for anyone looking into getting a logo made!</p>
+                    </div>
+                    <div class="testimonial-card rotate-right ad">
+                        <p>❇️❇️❇️❇️❇️</p>
+                        {{-- <img src="https://via.placeholder.com/80" alt="Customer 2" class="rounded-circle mb-3"> --}}
+                        <h5>Madelyn Weingarden</h5>
+                        <p>Brian Edwin provided me with excellent service. Anytime I asked him for any edits, he did it
+                            promptly. I was very happy with the logos and invoices he created for me. 5 Star Service. Thank
+                            you, Brian.</p>
+                    </div>
+                    <div class="testimonial-card rotate-left ad">
+                        {{-- <img src="https://via.placeholder.com/80" alt="Customer 3" class="rounded-circle mb-3"> --}}
+                        <p>❇️❇️❇️❇️❇️</p>
+                        <h5>Spanky</h5>
+                        <p>Brian Edwin is who I worked with. I made multiple revisions and he delivered on exactly what I
+                            wanted and quickly. Highly recommend him and will be using again in the future.</p>
+                    </div>
+                    <div class="testimonial-card rotate-right ad">
+                        <p>❇️❇️❇️❇️❇️</p>
+                        {{-- <img src="https://via.placeholder.com/80" alt="Customer 4" class="rounded-circle mb-3"> --}}
+                        <h5>Archelle Jenkins</h5>
+                        <p>LOVEEE MY LOGO ! Done exactly how I visioned it! I'll be back for my website !</p>
+                    </div>
+                    <div class="testimonial-card rotate-right ad">
+                        <p>❇️❇️❇️❇️❇️</p>
+                        {{-- <img src="https://via.placeholder.com/80" alt="Customer 4" class="rounded-circle mb-3"> --}}
+                        <h5>Kyle Bacon</h5>
+                        <p>Very helpful crew, I'm very picky with my designs and I was helped greatly with compliant people,
+                            I am very satisfied</p>
+                    </div>
+
+
+                </div>
             </div>
-        </div>
-    </section>
-    <!-- {{-- --------------- End Testiomonial Section --}} -->
+        </section>
+
+
+     <!-- <-----------------End Testimonial Section---------------->
 
     <!-------------------- Start Boxed Section ------------------>
     <section class="boxed-section">
         <div class="container">
             <h2 style=font-size:1.6em;>Get Your Custom Graphics Designs Today!</h2>
-            <p>Enhance your brand with our professional graphics design services. We are your one stop shop for quality
-                graphics designs. Contact us at <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a> or
+            <p>Enhance your brand with our professional graphics design services. We are your one</p>
+            <p>stop shop for quality graphics designs. Contact us at</p> 
+            <p><a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a> or
                 call us at <a href="tel:+15516665255">+1 (551) 666-5255</a>.</p>
             <a href="{{ url('contact-us') }}" class="california-button-online">Get Started</a>
         </div>
+    </section>
+    <!-------------------- End Boxed Section ------------------>
     </section>
     <!-------------------- End Boxed Section ------------------>
 

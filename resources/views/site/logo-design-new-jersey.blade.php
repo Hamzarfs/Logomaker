@@ -4,195 +4,271 @@
 @section('meta_desc', 'RFS Logo Design specializes in custom logo services in New Jersey. With our expert designers, we are the premier choice for professional logo design solutions.')
 @section('content')
 
-    <div class="banner-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 content-section">
-                <p>Professional Logo Designers at RFS Logo Design</p>
-                    <h1>Full-Service Custom <span class="logo-design-color">Logo Design</span> Company in New Jersey</h1>
-                    <ul class="icon-list">
-                        <li><i class="fas fa-trophy"></i> Ranked #1 Logo Design Agency in New Jersey</li>
-                        <li><i class="fas fa-briefcase"></i> Comprehensive Industry Expertise for Versatile Solutions</li>
-                        <li><i class="fas fa-sync-alt"></i> Unlimited Revisions Available for Logo Design</li>
-                        <li><i class="fas fa-users"></i> Tailored Solutions to Meet Individual Client Preferences</li>
-                        <li><i class="fas fa-star"></i> 100% Satisfaction Guaranteed</li>
-                    </ul>
-                    <a href="{{ url('/') }}" class="california-button-online">Get Started</a>
-                </div>
-                <div class="col-lg-6 image-section text-center">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="images/Laptop-1-Image 1.png" alt="Logo Design 1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/Logo Pics.png" alt="Logo Design 2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/111 1.png" alt="Logo Design 3">
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+   
+<style>
+       .education-logo-section {
+       background-image: url('/images/Jersey.png');
+       background-size: cover;
+       background-position: center;
+       padding: 150px 0;
+       color: #fff;
+       text-align: center;
+       display: flex;
+       flex-direction: column;
+       justify-content: center; /* Center content vertically */
+       align-items: center; /* Center content horizontally */
+   }
+   
+   .education-logo-section h1 {
+       font-weight: 700;
+       font-size: 44px;
+       text-align: center;
+       
+   }
+   .education-logo-section h2 {
+       font-weight: 700;
+       font-size: 25px !important;
+       text-align: center;
+       margin-bottom: 20px;
+   }
+   
+   
+   .education-logo-section p {
+       margin-bottom: 20px;
+   }
+   @media (max-width: 768) {
+
+   .new-testimonial{
+    margin-top:0px !important;
+
+   }
+   }
+   
+   </style>
+   
+<section class="education-logo-section">
+    <div class="container">
+    <p>Professional Logo Designers at RFS Logo Design</p>
+        <h1>Full-Service Custom Logo Design<br>
+        Company in New Jersey</h1>
     </div>
-
-    <div class="logo-slider-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="logo-slider">
-                        <img src="images/Group 14.png" alt="Logo 1">
-                        <img src="images/Group 16.png" alt="Logo 2">
-                        <img src="images/Group 17.png" alt="Logo 3">
-                        <img src="images/Group 18.png" alt="Logo 4">
-                        <img src="images/Group 21.png" alt="Logo 5">
-                        <img src="images/Group 22.png" alt="Logo 6">
-
-                        <!-- Repeat logos to ensure continuous animation -->
-                        <img src="images/Group 14.png" alt="Logo 1">
-                        <img src="images/Group 16.png" alt="Logo 2">
-                        <img src="images/Group 17.png" alt="Logo 3">
-                        <img src="images/Group 18.png" alt="Logo 4">
-                        <img src="images/Group 21.png" alt="Logo 5">
-                        <img src="images/Group 22.png" alt="Logo 6">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!--------------------- Start PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
+</section>
+    <!--------------------- Start PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
     <div class="logo-designs-ca">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 text-center">
-                    <img src="images/111 1.png" alt="Professional Logo Designs" class="professional-logo-image">
+                    <img src="images/side-view-man-designing-websites 1.png" alt="Professional Logo Designs" class="professional-logo-image">
                 </div>
                 <div class="col-lg-6">
-                    <h3>PERSONALIZED LOGO SOLUTIONS FROM RFS LOGO DESIGN IN NEW JERSEY</h3>
-                    <p style="text-align: justify;">Elevate your brand's presence with RFS Logo Design, a full-service custom logo design company in New Jersey. Our expert logo designers specialize in creating unique and impactful logos tailored to your business needs. From startups to established enterprises, we offer comprehensive logo design services to ensure your brand stands out in the market. With a focus on quality and creativity, we collaborate closely with clients to understand their vision and deliver personalized solutions. With unlimited revisions and a commitment to excellence, trust RFS Logo Design to transform your brand identity. Contact us today for exceptional logo design services in New Jersey.</p>
+                    <h2>Personalized logo solutions from Rfs logo design<br> in New Jersey</h2>
+                    <p style="text-align: justify;">Elevate your brand's presence with RFS Logo Design, a full-service custom logo design company in New Jersey. 
+                        Our expert logo designers specialize in creating unique and impactful logos tailored to your business needs. From startups to established 
+                        enterprises, we offer comprehensive logo design services to ensure your brand stands out in the market.</p>
+                        <p style="text-align: justify;">With a focus on quality and creativity, we collaborate closely with clients to understand their vision and 
+                        deliver personalized solutions. With unlimited revisions and a commitment to excellence, trust RFS Logo Design to transform your brand 
+                        identity. Contact us today for exceptional logo design services in New Jersey.</p>
                 </div>
             </div>
         </div>
     </div>
-<!--------------------- End PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
+    <!--------------------- End PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
 
 
-<!---------------------- Start Portfolio -------------------------->
+    <!---------------------- Start Portfolio -------------------------->
 
     <div class="logo-designs-portfolio">
-    <div class="container">
-        <div class="row filter-button-group">
-            <button class="btn filter-button active" data-filter="all">All</button>
-            <button class="btn filter-button" data-filter="iconic">Iconic Logo</button>
-            <button class="btn filter-button" data-filter="typography">Typography Logo</button>
-            <button class="btn filter-button" data-filter="illustrative">Illustrative Logo</button>
-            <button class="btn filter-button" data-filter="animated">Animated Logo</button>
+        <div class="container">
+            <div class="row filter-button-group">
+                <button class="btn filter-button active" data-filter="all">All</button>
+                <button class="btn filter-button" data-filter="iconic">Iconic Logo</button>
+                <button class="btn filter-button" data-filter="typography">Typography Logo</button>
+                <button class="btn filter-button" data-filter="illustrative">Illustrative Logo</button>
+                <button class="btn filter-button" data-filter="animated">Animated Logo</button>
+            </div>
+            
+
+            <div class="row gallery">
+            <hr class="custom-divider-ca">
+
+                <!-- Iconic Logos -->
+                <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
+                    <img src="images/portfoliologo1.png" alt="Iconic Logo 1">
+                </div>
+            
+                <div class="col-lg-4 col-md-6 mb-4 filter all typography">
+                    <img src="images/portfoliologo5.png" alt="Typography Logo 1">
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
+                    <img src="images/portfoliologo3.png" alt="Illustrative Logo 2">
+                </div>
+
+                <!-- Typography Logos -->
+                <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
+                    <img src="images/portfoliologo2.png" alt="Iconic Logo 2">
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 filter all typography">
+                    <img src="images/portfoliologo6.png" alt="Typography Logo 2">
+                </div>
+
+                <!-- Illustrative Logos -->
+                <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
+                    <img src="images/portfoliologo4.png" alt="Illustrative Logo 1">
+                </div>
+                <!-- <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
+                        <img src="illustrative2.jpg" alt="Illustrative Logo 2">
+                    </div> -->
+
+                <!-- Animated Logos -->
+                <div class="col-lg-4 col-md-6 mb-4 filter all animated">
+                    <img src="images/logo-animation-example-conversable.gif" alt="Animated Logo 1">
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 filter all animated">
+                    <img src="images/logo-design-animation.gif" alt="Animated Logo 2">
+                </div>
+            </div>
         </div>
+    </div>
+    <!---------------------- End Portfolio -------------------------->
 
-        <div class="row gallery">
-            <!-- Iconic Logos -->
-            <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
-                <img src="images/portfoliologo3.png" alt="Iconic Logo 1">
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
-                <img src="images/portfoliologo1.png" alt="Iconic Logo 2">
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
-                <img src="images/portfoliologo6.png" alt="Iconic Logo 3">
-            </div>
-
-            <!-- Typography Logos -->
-            <div class="col-lg-4 col-md-6 mb-4 filter all typography">
-            <img src="images/portfoliologo6.png" alt="Typography Logo 1">
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 filter all typography">
-            <img src="images/portfoliologo5.png" alt="Typography Logo 2">
-            </div>
-
-            <!-- Illustrative Logos -->
-            <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
-                <img src="images/Illustrative-Logo-Design3.webp" alt="Illustrative Logo 1">
-            </div>
-            <!-- <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
-                <img src="illustrative2.jpg" alt="Illustrative Logo 2">
-            </div> -->
-
-            <!-- Animated Logos -->
-            <div class="col-lg-4 col-md-6 mb-4 filter all animated">
-                <img src="images/logo-animation-example-conversable.gif" alt="Animated Logo 1">
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 filter all animated">
-                <img src="images/logo-design-animation.gif" alt="Animated Logo 2">
-            </div>
-        </div>
-    </div>   
-   </div>
-<!---------------------- End Portfolio -------------------------->
-
- <!-- <-----------------Start Testimonial Section---------------->
+     <!-- <-----------------Start Testimonial Section---------------->
 
 
- <section id="testimonial-section" class="pt-5 pb-5">
+ <!-- <section id="testimonial-section" class="pt-5 pb-5">
         <div class="container">
             <h2 class="text-center mb-5">See What Our Clients Have to Say</h2>
             <div class="owl-carousel owl-theme">
-                <!-- Reviews will be inserted here dynamically -->
-            </div>
+                 Reviews will be inserted here dynamically -->
+            <!-- </div>
         </div>
-    </section>
+    </section> --> 
  <!-- {{----------------- End Testiomonial Section --}} -->
 
     <!---------------------Start why-choose-rfs----------------->
 
-<section class="why-choose-rfs">
-    <div class="container">
-        <div class="row content">
-            <div class="col-md-6 text">
-                <h2 class="Why-h2">Craft Your Distinct Brand Identity with <span class="logo-choose-color">RFS Logo Design</span> in New Jersey</h2>
-                <p>Elevate your brand's presence with RFS Logo Design, a premier logo design agency based in New Jersey. Our team of skilled designers specializes in crafting custom logos that capture the essence of your brand and resonate with your audience. From sleek and modern designs to timeless and elegant concepts, we tailor our services to meet your unique needs and preferences.</p>
-                <p>With a focus on creativity and innovation, we strive to create logos that set your brand apart and leave a lasting impression. Trust RFS Logo Design to bring your vision to life and establish a distinct identity for your business in New Jersey and beyond.</p>
-            </div>
-            <div class="col-md-6 image">
-                <img src="images/hire-section-logos.png" alt="RFS Logo Design">
+
+    <section class="why-choose-rfs">
+        <div class="container">
+            <div class="row content">
+                <div class="col-md-7 text">
+                    <h2 class="Why-h2">Craft Your Distinct Brand Identity with RFS Logo Design in New Jersey</h2>
+                    <p class="unique-paragraph">Elevate your brand's presence with RFS Logo Design, a premier logo design agency based in New Jersey. 
+                        Our team of skilled designers specializes in crafting custom logos that capture the essence of your brand and resonate with your 
+                        audience. From sleek and modern designs to timeless and elegant concepts, we tailor our services to meet your unique needs and 
+                        preferences.</p>
+                    <p class="unique-paragraph">With a focus on creativity and innovation, we strive to create logos that set your brand apart and leave a 
+                        lasting impression. Trust RFS Logo Design to bring your vision to life and establish a distinct identity for your business in New 
+                        Jersey and beyond.</p>
+                </div>
+                <div class="col-md-5 image">
+                    <img src="images/hire-section-logos .png" alt="RFS Logo Design">
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!---------------------End why-choose-rfs----------------->
 
 
 
+    <section class="unique-section">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Left Side Image -->
+        <div class="col-md-5 unique-image-col">
+          <img src="images/unique.png" class="unique-image" alt="Image Description">
+        </div>
+
+        <div class="col-md-1"></div>
+
+        <!-- Right Side Content -->
+        <div class="col-md-5 unique-content-col">
+        <h2 class="CRAFT-h2" style="font-weight: 800;">Unleash creativity and innovation <br>with RFS logo design services</h2>
+            <p class="unique-paragraph">At RFS Logo Design, we believe in the power of creativity to transform brands. Based in New Jersey, 
+            our team of experienced designers offers a range of logo design services tailored to your specific requirements. Whether you're 
+            a startup looking to make a bold statement or an established business in need of a logo refresh, we have the expertise to bring 
+            your vision to life.</p>
+            <p class="unique-paragraph">From initial concept development to final execution, we work closely with you to ensure your logo reflects 
+            your brand's personality and values. With our commitment to excellence and attention to detail, trust RFS Logo Design to deliver a 
+            logo that exceeds your expectations and helps your business stand out in the competitive marketplace.</p>
+        </div>
+         <!-- Free space on right side -->
+         <div class="col-md-1"></div>
+      </div>
+    </div>
+  </section>
+
+
+
+
     <!---------------------Start Crafting----------------->
 
-    <section class="crafting-logos">
-        <div class="container">
-            <div class="row content">
-                <div class="col-md-6 image">
-                    <img src="images/Crafting Impactful Logos.png" alt="Crafting Impactful Logos">
-                </div>
-                <div class="col-md-6 text">
-                    <h2 style="font-weight: 800;">UNLEASH CREATIVITY AND INNOVATION WITH RFS LOGO DESIGN SERVICES</h2>
-                    <p style="text-align: justify;">At RFS Logo Design, we believe in the power of creativity to transform brands. Based in New Jersey, our team of experienced designers offers a range of logo design services tailored to your specific requirements. Whether you're a startup looking to make a bold statement or an established business in need of a logo refresh, we have the expertise to bring your vision to life. From initial concept development to final execution, we work closely with you to ensure your logo reflects your brand's personality and values. With our commitment to excellence and attention to detail, trust RFS Logo Design to deliver a logo that exceeds your expectations and helps your business stand out in the competitive marketplace.</p>
+
+
+
+
+
+
+
+
+  <section class="new-testimonial my-5">
+            <div class="container-fluid">
+                <h2 class="text-center">Happy Customers and Counting....</h2>
+                <div class="new-testimonial-carousel mt-4">
+                    <div class="testimonial-card rotate-left ad">
+                        <p>❇️❇️❇️❇️❇️</p>
+                        {{-- <img src="https://via.placeholder.com/80" alt="Customer 1" class="rounded-circle mb-3"> --}}
+                        <h5>Busted Knuckles</h5>
+                        <p>I dealt with Ed Harvey through my experience with RFS and he was great! Very polite and helpful.
+                            I had drawn a rough sketch of my logo and they brought it to life extremely fast and with
+                            perfect accuracy! I would recommend Ed and RFS for anyone looking into getting a logo made!</p>
+                    </div>
+                    <div class="testimonial-card rotate-right ad">
+                        <p>❇️❇️❇️❇️❇️</p>
+                        {{-- <img src="https://via.placeholder.com/80" alt="Customer 2" class="rounded-circle mb-3"> --}}
+                        <h5>Madelyn Weingarden</h5>
+                        <p>Brian Edwin provided me with excellent service. Anytime I asked him for any edits, he did it
+                            promptly. I was very happy with the logos and invoices he created for me. 5 Star Service. Thank
+                            you, Brian.</p>
+                    </div>
+                    <div class="testimonial-card rotate-left ad">
+                        {{-- <img src="https://via.placeholder.com/80" alt="Customer 3" class="rounded-circle mb-3"> --}}
+                        <p>❇️❇️❇️❇️❇️</p>
+                        <h5>Spanky</h5>
+                        <p>Brian Edwin is who I worked with. I made multiple revisions and he delivered on exactly what I
+                            wanted and quickly. Highly recommend him and will be using again in the future.</p>
+                    </div>
+                    <div class="testimonial-card rotate-right ad">
+                        <p>❇️❇️❇️❇️❇️</p>
+                        {{-- <img src="https://via.placeholder.com/80" alt="Customer 4" class="rounded-circle mb-3"> --}}
+                        <h5>Archelle Jenkins</h5>
+                        <p>LOVEEE MY LOGO ! Done exactly how I visioned it! I'll be back for my website !</p>
+                    </div>
+                    <div class="testimonial-card rotate-right ad">
+                        <p>❇️❇️❇️❇️❇️</p>
+                        {{-- <img src="https://via.placeholder.com/80" alt="Customer 4" class="rounded-circle mb-3"> --}}
+                        <h5>Kyle Bacon</h5>
+                        <p>Very helpful crew, I'm very picky with my designs and I was helped greatly with compliant people,
+                            I am very satisfied</p>
+                    </div>
+
+
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+
+
+
+
+    
 
     <!---------------------End Crafting----------------->
 
     <!-- jQuery and Owl Carousel JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
     <script>
         jQuery(document).ready(function($) {
             "use strict";
@@ -220,10 +296,20 @@
             });
         });
     </script>
+     <script>
+          // Ensure carousel can be scrolled via mouse or touch gestures without a scrollbar
+          const carousel = document.querySelector('.new-testimonial-carousel');
+
+carousel.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    carousel.scrollBy({
+        left: e.deltaY < 0 ? -30 : 30,
+    });
+});
+    </script>
     <!---------------------End Clients Have to Say ----------------->
 
-
- <!-- Bootstrap JS and dependencies -->
+    <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -256,6 +342,4 @@
             });
         });
     </script>
-</body>
-</html>
 @endsection

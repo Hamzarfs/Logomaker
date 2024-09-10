@@ -170,13 +170,115 @@ a {
     background-color: #f0f0f0;
 }
 
+.new-testimonial h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+
+.new-testimonial-carousel {
+    padding-top: 40px;
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* padding: 0 20px; */
+    scrollbar-width: none;
+    padding-bottom: 40px;
+}
+
+/* .new-testimonial-carousel::-webkit-scrollbar {
+    display: none;
+
+} */
+
+
+.new-testimonial .ad:hover {
+    color: #ffffff !important;
+
+}
+
+.new-testimonial h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+
+.new-testimonial-carousel {
+    padding-top: 40px;
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* padding: 0 20px; */
+    scrollbar-width: none;
+    padding-bottom: 40px;
+}
+
+.new-testimonial-carousel::-webkit-scrollbar {
+    display: none;
+    /* For Chrome, Safari, and Opera */
+}
+
+
+.testimonial-card {
+    background-color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card.active {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card:hover {
+    color: #ffffff !important;
+}
+
+.testimonial-card {
+    min-width: 350px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    transform: rotate(0deg);
+    /* Ensure it starts straight */
+}
+
+.testimonial-card:hover {
+    background-color: #646BD9;
+    /* Purple background on hover */
+    color: white;
+    /* White text on hover */
+    transform: rotate(0deg);
+    /* Straighten on hover */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+}
+
+.rotate-left {
+    transform: rotate(-10deg);
+}
+
+.rotate-right {
+    transform: rotate(10deg);
+}
+
 /* Card Container Styling */
 
 /* Start Header and Banner Section */
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #fffdf6 !important;
 }
 
 .navbar {
@@ -876,7 +978,7 @@ margin-bottom: 50px;
 }
 
 .custom-text-section-v3 p {
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     color: #000000;
     margin-bottom: 20px;
@@ -1213,68 +1315,22 @@ margin-bottom: 50px;
 
 
 /* /------------------------------------------Start California---------------------------------------/ */
-.banner-section {
-    background-color: #6868D1;
-    /* Banner background color */
-    padding: 40px 0;
-    /* Adjust padding as needed */
-}
 
-.content-section {
-    padding: 20px;
-}
 
-.content-section p {
-    font-size: 20px;
-    /* Adjust as needed */
-    color: #ffffff;
-    /* Main heading color */
+
+.education-logo-section h2 {
     font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.content-section h1 {
-    font-size: 34px;
-    /* Adjust as needed */
-    color: #ffffff;
-    /* Subheading color */
-    margin-top: 10px;
-    font-weight: 700;
+
+.education-logo-section p {
+    margin-bottom: 20px;
 }
 
-.icon-list {
-    list-style: none;
-    /* Remove default list styles */
-    padding-left: 0;
-    margin-top: 20px;
-    line-height: 1.3em;
-}
 
-.icon-list li {
-    font-size: 16px;
-    color: #ffffff;
-    /* Text color for the list items */
-    margin-bottom: 10px;
-    display: flex;
-    /* Align items in a row */
-    font-weight: 700;
-    align-items: center;
-    /* Center items vertically */
-}
-
-.icon-list i {
-    font-size: 16px;
-    /* Size of the icons */
-    color: #512F90;
-    /* Icon color */
-    margin-right: 10px;
-    /* Space between icon and text */
-}
-
-.image-section img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
 
 .logo-design-color {
     color: #512f90;
@@ -1332,18 +1388,64 @@ margin-bottom: 50px;
     }
 }
 
+
+
+
+
+
+
+.unique-section {
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 20px;
+
+  }
+  .unique-image-col {
+    padding: 0 !important;
+  }
+  .unique-image {
+    width: 100%;
+    height: auto;
+  }
+  .unique-content-col {
+    padding: 50px;
+    padding-left: 75px ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%; /* Make sure the parent element has a defined height */
+    }
+
+  .unique-heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: #010935;
+  }
+  .unique-paragraph {
+    font-size: 16px;
+    text-align: justify;
+  }
+
 /* New section styling */
 .logo-designs-ca {
-    padding: 40px 0;
-    background-color: #F8F9FA;
+    padding: 70px 0;
     /* Light grey background */
 }
+.custom-divider-ca {
+        border-top: 3px solid #000; /* Custom color for the divider */
+        width: 90%; /* Adjust the width of the divider */
+        margin-top: 20px; /* Top margin */
+        margin-bottom: 30px; /* Bottom margin */
+        margin-left: auto;
+        margin-right: auto; /* Centers the divider horizontally */
+}
 
-.logo-designs-ca h3 {
-    font-size: 26px;
+
+.logo-designs-ca h2 {
+    font-size: 34px;
     /* Heading size */
-    color: #333;
-    font-weight: 700;
+    color: #000000;
+    font-weight: 800;
 }
 
 .logo-designs-ca p {
@@ -1354,12 +1456,11 @@ margin-bottom: 50px;
 
 .professional-logo-image {
     max-width: 100%;
-    height: auto;
+    height: 350px;
+    border-radius: 15px;
 }
 
 .logo-designs-portfolio {
-    background-color: #FFFDF6;
-    padding-top: 40px;
     padding-bottom: 40px;
 }
 
@@ -1369,7 +1470,6 @@ margin-bottom: 50px;
 }
 
 .filter-button-group {
-    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0);
@@ -1379,19 +1479,36 @@ margin-bottom: 50px;
 
 .filter-button-group button {
     margin: 5px;
+    padding: 0px 10px;
+    font: 24px;
+    font-weight: 700;
     width: auto;
-    background-color: white;
-    border: 1px solid #646BD9;
-    color: #646BD9;
+    border: none;
+    color: #000000;
     transition: all 0.3s ease;
 }
 
 .filter-button-group button.active,
 .filter-button-group button:hover {
-    background-color: #646BD9;
-    color: white;
+    /* background-color: #646BD9; */
+    font-weight: 700px;
+    border: none;
+
 
 }
+
+
+@media (max-width: 768) {
+    .unique-content-col{
+        padding-left: 0px !important; 
+    }
+    .logo-designs-ca h2 {
+        font-size: 30px;
+        color: #000000;
+    }
+}
+
+
 
 .load-more {
     display: none;
@@ -1502,7 +1619,8 @@ margin-bottom: 50px;
 /* ------------why-choose-rfs------------- */
 .why-choose-rfs {
     padding: 60px 0;
-    background-color: #6868D1;
+    color:#000;
+    background-color: #f2f6fe;
 }
 
 .why-choose-rfs img {
@@ -1514,7 +1632,6 @@ margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: white;
     padding-right: 20px;
 }
 
@@ -1529,6 +1646,7 @@ margin-bottom: 50px;
 
 .Why-h2 {
     font-weight: 800;
+    font-size: 34px;
 }
 
 .logo-choose-color {
@@ -1559,10 +1677,7 @@ margin-bottom: 50px;
         font-size: 34px;
     }
 
-    .Why-h2 {
-        font-weight: 800;
-        font-size: 34px;
-    }
+    
 }
 
 @media (max-width: 767px) {
@@ -1573,59 +1688,8 @@ margin-bottom: 50px;
 }
 
 /* ------------why-choose-rfs------------- */
-.CRAFT-h2 {
-    font-size: 28PX;
-}
-
-.crafting-logos {
-    padding: 60px 0;
-    background-color: #FFFFFF;
-}
-
-.crafting-logos img {
-    max-width: 100%;
-    height: auto;
-}
-
-.crafting-logos .content {
-    display: flex;
-    align-items: center;
-}
-
-.crafting-logos .text {
-    flex: 1;
-    padding-left: 20px;
-}
-
-.crafting-logos .image {
-    flex: 1;
-}
-
-@media (max-width: 767.98px) {
-    .crafting-logos .content {
-        flex-direction: column-reverse;
-    }
-
-    .crafting-logos .text {
-        padding-left: 0;
-        padding-top: 20px;
-    }
-}
-
-@media (max-width: 767px) {
-    .crafting-logos {
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-}
 
 
-
-.free-logo-heading {
-    font-weight: 900;
-    font-size: 42px;
-    color: #fff;
-}
 
 .owl-carousel .owl-item img {
     display: block;
@@ -1812,12 +1876,41 @@ form#companyForm {
     /* Box shadow on hover */
 }
 
+
+
+
 @media (max-width: 768px) {
     .sticky .input-group {
         max-width: 400px;
         margin: 0 auto;
         margin-top: 5px;
     }
+
+
+.CRAFT-h2 {
+        font-size: 34px; /* Adjust heading size for tablets */
+        font-weight: 800px !important;
+}
+.Why-h2 {
+    font-weight: 700;
+    font-size: 26px;
+}
+.logo-designs-ca h2 {
+    font-size: 32px;
+    margin-top: 20px;
+}
+.education-logo-section p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.education-logo-section {
+    padding: 100px 0 !important;
+}
+.education-logo-section h1 {
+    font-weight: 700;
+    font-size: 29px !important;
+    text-align: center;
+}
 }
 
 

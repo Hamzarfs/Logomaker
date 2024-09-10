@@ -15,7 +15,7 @@
         a{
             text-decoration: none !important;
         }
-        
+    
     </style>
 
 <!------------- Start About Us Banner -------------->
@@ -42,15 +42,15 @@
     <div class="container custom-container-margin-v3">
         <div class="row align-items-center">
             <div class="col-lg-6 custom-text-section-v3">
-                <h2>Turn Your Visions Into Reality</h2>
+                <h2>UNLEASH YOUR VISION</h2>
                 <p style="text-align:justify;">
-                Welcome to RFS Logo Design, your ultimate destination for all things branding. Whether 
-                you are using our <a href="{{ url('/logo-maker') }}" style="color:#512F90;"><b>free logo maker</b></a> or opting for <a href="{{ url('/custom-logo') }}" style="color:#512F90;"><b>custom logo design services</b></a>, we craft unique 
-                and impactful logos tailored to your vision.
-                </p>
-                <p style = text-align:justify;>Our expert graphic designers are dedicated to bringing your ideas to life, while our top-notch 
-                website development services ensure your online presence matches your brand's strength.</p>
-                <p>At RFS, we guarantee a smooth journey with responsive support at every turn.</p>
+                Welcome to your one-stop solution, RFS Logo Design, and watch your thoughts become a reality. 
+                Dive into making your free logo or opt for our expert graphic designers to transform your ideas 
+                into stunning visuals with our </a> or opting for <a href="{{ url('/custom-logo') }}" style="color:#512F90;"><b>custom logo design services</b></a>, we are here to create a lasting worthwhile impression on your client. We believe in creating a premier haven for your exceptional branding needs. 
+                Hence, this place is the ultimate hub for all your branding problems. </p>
+                <p style = text-align:justify;>At RFS, we’re committed to ensuring our top-tier website development services 
+                enhance your brand’s online presence and make your journey effortless, with a responsive support system ready 
+                to assist you at every step.</p>
             </div>
             <div class="col-lg-6 about-image-section-v3">
   <img src="images/laptops 1 (1).png" alt="Descriptive Image Text" class="slow-bounce small-image">
@@ -63,9 +63,9 @@
 
 
     <div class="container our-work-section">
-    <h3>Our Work</h3>
-    <p>Boost your business with a custom logo crafted by our expert in-house logo designers. After all,</p>
-    <p style= margin-top:-15px;>great design drives success and allows you to differentiate yourself in the competitive market landscape of today.</p>
+    <h3>Our Portfolio</h3>
+    <p>Through a creative fusion, RFS designs each logo to express the distinct character of your brand. </p>
+    <p style= margin-top:-15px;>Through a creative fusion, RFS designs each logo to express the distinct character of your brand. Our talented in-house logo designers combine a keen understanding of current marketing trends with artistic flair to create a wide variety of logo designs that will effectively connect with your target market. Explore our collection to see how we transform ideas into visual branding that make a powerful impact.</p>
     <p style= margin-top:-15px;>market landscape of today.</p>
 
 
@@ -78,10 +78,9 @@
             <img src="images/fun.png" alt="Fun and Easy Process" class="img-fluid">
         </div>
         <div class="col-md-6" style="padding-left: 50px;">
-            <h4>Fun and Easy<br>Process</h4>
+            <h4>SEAMLESS <br>EXPERIENCE</h4>
             <div class="divider"></div>
-            <p>Choose from a variety of options and enjoy a</p>
-            <p style= margin-top:-15px;>smooth design experience.</p>
+            <p style=text-align:justify;>Explore a vast range of cutting-edge, colorful, and dynamic options, providing a seamless design experience that makes achieving your vision effortless and enjoyable.</p>
 
         </div>
     </div>
@@ -93,10 +92,11 @@
             <img src="images/top design.png" alt="Top Designers" class="img-fluid">
         </div>
         <div class="col-md-6 order-md-1"style="padding-left: 50px;">
-            <h4>Top<br>Designers</h4>
+            <h4>TEAM <br>EXPERIENCE</h4>
             <div class="divider"></div>
-            <p>Work with vetted professionals who deliver</p>
-            <p style= margin-top:-15px;>high-quality results.</p>
+            <p style=text-align:justify;>RFS provides working with talented designers who merge innovative creative ideas with strategic insight to fulfill 
+            your needs. From sleek, modern designs to novel creations our expert team aims to create logos that will give your brand 
+            meaning and make a lasting impression.</p>
         </div>
     </div>
 </div>
@@ -109,7 +109,8 @@
         <div class="col-md-6" style="padding-left: 50px;">
             <h4>Full<br>Ownership</h4>
             <div class="divider"></div>
-            <p>Receive digital and print-ready files to use</p>
+            <p style=text-align:justify;>An instant download feature that gives you complete authority over your efforts and creativity. RFS provides you with digital files perfectly 
+            prepared for print one click away to be used in any manner you opt for.  </p>
             <p style= margin-top:-15px;>however you like.</p>
 
         </div>
