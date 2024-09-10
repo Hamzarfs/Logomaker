@@ -395,7 +395,9 @@
 
             canvas.setWidth(855);
             canvas.setHeight(590);
-
+            
+                
+          
             // canvas.setWidth(505);
             // canvas.setHeight(440);
 
@@ -469,7 +471,8 @@
                                     //     .left,
                                     // top: obj.top + offset.top - boundingBox.top,
                                     selectable: true,
-                                    evented: true
+                                    evented: true,
+                                     
                                 });
                                 canvas.add(obj);
 
@@ -506,6 +509,11 @@
 
                             canvas.renderAll();
                         });
+                        
+                        
+                        @if(isset($selectedProduct->background_color) && !empty($selectedProduct->background_color))
+                            canvas.setBackgroundColor('{{ $selectedProduct->background_color }}', canvas.renderAll.bind(canvas));
+                        @endif
 
                         // Update color picker and text settings when a layer is selected
                         canvas.on('object:selected', function(e) {

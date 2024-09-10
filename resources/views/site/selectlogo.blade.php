@@ -241,13 +241,10 @@
                 @endphp
 
                 <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
-                    <div class="card-container">
 
-                        <!-- <img src="{{ route('image.show', $product->image) }}"
-                                                                style="xwidth: 35% !important; {{ $logoPosition }}; position: absolute; {{ $logoPositionVertical }}; z-index: 10;"
-                                                                class="img-fluid portfolio-image"
-                                                                alt="{{ $product->name }}"> -->
+                    <div class="card-container" style="background-color:{{$product->background_color}}">
 
+                      
 
                         <!-- <img src="{{ asset("category-image/$product->image") }}" style="xwidth: 35% !important; {{ $logoPosition }}  ;position: absolute; {{ $logoPositionVertical }};   z-index: 10;" class="img-fluid portfolio-image"
                                                                 alt="{{ $product->name }}"> -->
@@ -268,8 +265,9 @@
 
 
                         <div class="text-placeholder"
-                            style=" z-index: 20;font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize }}; font-weight:500; margin-left:{{ $leftPosition }}; margin-top:{{ $topPosition }}">
-                            {{ session('company') ? session('company') : $product->category['name'] }}</div>
+                            style=" z-index: 20;font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize }}; font-weight:500; margin-left:{{ $leftPosition }}; margin-top:{{ $topPosition }};letter-spacing: {{ $product->company_spacing }};">
+                            {{ $product->company_name ?? session('company') ?? $product->category['name'] }}
+                            </div>
 
 
 

@@ -1131,15 +1131,21 @@
                                         top: (canvasHeight - boundingBox.height * scale) / 2,
                                         selectable: false, // Disable selection
                                         evented: false, // Disable events
+                                        
                                     });
 
                                     canvas.add(svgGroup);
+                                    
+                                    @if(isset($selectedProduct->background_color) && !empty($selectedProduct->background_color))
+                                        canvas.setBackgroundColor('{{ $selectedProduct->background_color }}', canvas.renderAll.bind(canvas));
+                                    @endif
 
                                     @php
 
                                         $fontSize = isset($selectedProduct->preview_font_size) && strlen($selectedProduct->preview_font_size) > 1 ? $selectedProduct->preview_font_size : '35';
 
-                                         $companyName = session('company') ? session('company') : $selectedProduct->category->name;
+                                          
+                                         $companyName = $selectedProduct->company_name ?? session('company') ?? $selectedProduct->category['name'];
 
                                          $companyNameLength = strlen($companyName);
                                         if ($companyNameLength > 10 && $companyNameLength <= 15) {
@@ -1222,6 +1228,7 @@
                                         selectable: false,
                                         evented: false,
                                         width: 340,
+                                        charSpacing: {{ 20 }}
 
                                     });
                                     canvas.add(sampleText1);
