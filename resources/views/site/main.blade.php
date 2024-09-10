@@ -200,17 +200,7 @@
             background-color: #f9f9f9;
         }
 
-        .testimonial-card {
-            background-color: #ffffff;
-            border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
 
-        .testimonial-card.active {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
 
         .testimonial-avatar {
             background-color: #5068A9;
@@ -735,15 +725,6 @@
         }
 
 
-        .testimonial-card:hover {
-            color: #ffffff !important;
-        }
-
-        .new-testimonial .ad:hover {
-            color: #ffffff !important;
-
-        }
-
 
         .new-card-design-section {
 
@@ -840,63 +821,6 @@
             text-align: center;
         }
 
-
-        .new-testimonial h2 {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-
-
-        .new-testimonial-carousel {
-            padding-top: 40px;
-            display: flex;
-            gap: 20px;
-            overflow-x: scroll;
-            overflow-y: hidden;
-            /* padding: 0 20px; */
-            scrollbar-width: none;
-            padding-bottom: 40px;
-        }
-
-        .new-testimonial-carousel::-webkit-scrollbar {
-            display: none;
-            /* For Chrome, Safari, and Opera */
-        }
-
-        .testimonial-card {
-            min-width: 350px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            transform: rotate(0deg);
-            /* Ensure it starts straight */
-        }
-
-        .rotate-left {
-            transform: rotate(-10deg);
-        }
-
-        .rotate-right {
-            transform: rotate(10deg);
-        }
-
-        .testimonial-card:hover {
-            background-color: #646BD9;
-            /* Purple background on hover */
-            color: white;
-            /* White text on hover */
-            transform: rotate(0deg);
-            /* Straighten on hover */
-            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .testimonial-card img {
-            width: 80px;
-            height: 80px;
-        }
 
 
         .reviews-images {
@@ -1075,7 +999,7 @@
                 margin: 0 auto;
                 margin-top: 5px;
             }
-        
+
     .image-slider {
         height: 275px;
     }
@@ -2287,6 +2211,8 @@
                         <p>Very helpful crew, I'm very picky with my designs and I was helped greatly with compliant people,
                             I am very satisfied</p>
                     </div>
+
+
                 </div>
             </div>
         </section>
@@ -2683,16 +2609,17 @@
         });
     </script>
     <script>
-        // Ensure carousel can be scrolled via mouse or touch gestures without a scrollbar
-        const carousel = document.querySelector('.new-testimonial-carousel');
+          // Ensure carousel can be scrolled via mouse or touch gestures without a scrollbar
+          const carousel = document.querySelector('.new-testimonial-carousel');
 
-        carousel.addEventListener('wheel', (e) => {
-            e.preventDefault();
-            carousel.scrollBy({
-                left: e.deltaY < 0 ? -30 : 30,
-            });
-        });
+carousel.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    carousel.scrollBy({
+        left: e.deltaY < 0 ? -30 : 30,
+    });
+});
     </script>
+
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
     {{-- <script>
         $('.dropdown-menu').addClass('show');

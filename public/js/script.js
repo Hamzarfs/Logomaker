@@ -1,5 +1,15 @@
 var canvas
 $(document).ready(function () {
+
+     // Ensure carousel can be scrolled via mouse or touch gestures without a scrollbar
+     const carousel = document.querySelector('.new-testimonial-carousel');
+
+     carousel.addEventListener('wheel', (e) => {
+         e.preventDefault();
+         carousel.scrollBy({
+             left: e.deltaY < 0 ? -30 : 30,
+         });
+     });
     canvas = new fabric.Canvas('logo-canvas');
 
 
@@ -10,7 +20,7 @@ $(document).ready(function () {
     // canvas.setHeight(440);
 
 
-    // load image 
+    // load image
 
     // Function to load and display car.svg from the root directory
     function loadCarSVG() {
@@ -634,4 +644,14 @@ $(document).ready(function () {
     });
 
 
+
+
+
+
+
+
+
+
 });
+
+

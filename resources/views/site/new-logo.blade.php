@@ -7,8 +7,7 @@
 @section('content')
 
     <style>
-       
-
+        
     .education-logo-section {
     background-image: url('/images/catagories2.jpg');
     background-size: cover;

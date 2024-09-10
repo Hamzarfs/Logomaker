@@ -170,6 +170,109 @@ a {
     background-color: #f0f0f0;
 }
 
+.new-testimonial h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+
+.new-testimonial-carousel {
+    padding-top: 40px;
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* padding: 0 20px; */
+    scrollbar-width: none;
+    padding-bottom: 40px;
+}
+
+/* .new-testimonial-carousel::-webkit-scrollbar {
+    display: none;
+
+} */
+
+
+.new-testimonial .ad:hover {
+    color: #ffffff !important;
+
+}
+
+.new-testimonial h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+
+.new-testimonial-carousel {
+    padding-top: 40px;
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* padding: 0 20px; */
+    scrollbar-width: none;
+    padding-bottom: 40px;
+}
+
+.new-testimonial-carousel::-webkit-scrollbar {
+    display: none;
+    /* For Chrome, Safari, and Opera */
+}
+
+
+.testimonial-card {
+    background-color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card.active {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card:hover {
+    color: #ffffff !important;
+}
+
+.testimonial-card {
+    min-width: 350px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    transform: rotate(0deg);
+    /* Ensure it starts straight */
+}
+
+.testimonial-card:hover {
+    background-color: #646BD9;
+    /* Purple background on hover */
+    color: white;
+    /* White text on hover */
+    transform: rotate(0deg);
+    /* Straighten on hover */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+}
+
+.rotate-left {
+    transform: rotate(-10deg);
+}
+
+.rotate-right {
+    transform: rotate(10deg);
+}
+
 /* Card Container Styling */
 
 /* Start Header and Banner Section */
@@ -875,7 +978,7 @@ margin-bottom: 50px;
 }
 
 .custom-text-section-v3 p {
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     color: #000000;
     margin-bottom: 20px;
@@ -1214,25 +1317,7 @@ margin-bottom: 50px;
 /* /------------------------------------------Start California---------------------------------------/ */
 
 
-.education-logo-section {
-    background-image: url('/images/catagories2.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0;
-    color: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-}
 
-.education-logo-section h1 {
-    font-weight: 700;
-    font-size: 44px;
-    text-align: center;
-    
-}
 .education-logo-section h2 {
     font-weight: 700;
     font-size: 40px;
@@ -1311,7 +1396,9 @@ margin-bottom: 50px;
 
 .unique-section {
     width: 100%;
-    padding: 70px 0;
+    padding-top: 70px;
+    padding-bottom: 20px;
+
   }
   .unique-image-col {
     padding: 0 !important;
@@ -1321,9 +1408,14 @@ margin-bottom: 50px;
     height: auto;
   }
   .unique-content-col {
-    padding: 20px;
-    padding-left: 75px !important;
-  }
+    padding: 50px;
+    padding-left: 75px ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%; /* Make sure the parent element has a defined height */
+    }
+
   .unique-heading {
     font-size: 24px;
     font-weight: 700;
@@ -1350,10 +1442,10 @@ margin-bottom: 50px;
 
 
 .logo-designs-ca h2 {
-    font-size: 38px;
+    font-size: 34px;
     /* Heading size */
     color: #000000;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .logo-designs-ca p {
@@ -1403,8 +1495,20 @@ margin-bottom: 50px;
     border: none;
 
 
-
 }
+
+
+@media (max-width: 768) {
+    .unique-content-col{
+        padding-left: 0px !important; 
+    }
+    .logo-designs-ca h2 {
+        font-size: 30px;
+        color: #000000;
+    }
+}
+
+
 
 .load-more {
     display: none;
@@ -1541,8 +1645,8 @@ margin-bottom: 50px;
 }
 
 .Why-h2 {
-    font-weight: 700;
-    font-size: 38px;
+    font-weight: 800;
+    font-size: 34px;
 }
 
 .logo-choose-color {
@@ -1573,10 +1677,7 @@ margin-bottom: 50px;
         font-size: 34px;
     }
 
-    .Why-h2 {
-        font-weight: 800;
-        font-size: 34px;
-    }
+    
 }
 
 @media (max-width: 767px) {
@@ -1587,10 +1688,6 @@ margin-bottom: 50px;
 }
 
 /* ------------why-choose-rfs------------- */
-.CRAFT-h2 {
-    font-size: 38PX;
-    line-height: 1.3em;
-}
 
 
 
@@ -1779,12 +1876,41 @@ form#companyForm {
     /* Box shadow on hover */
 }
 
+
+
+
 @media (max-width: 768px) {
     .sticky .input-group {
         max-width: 400px;
         margin: 0 auto;
         margin-top: 5px;
     }
+
+
+.CRAFT-h2 {
+        font-size: 34px; /* Adjust heading size for tablets */
+        font-weight: 800px !important;
+}
+.Why-h2 {
+    font-weight: 700;
+    font-size: 26px;
+}
+.logo-designs-ca h2 {
+    font-size: 32px;
+    margin-top: 20px;
+}
+.education-logo-section p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.education-logo-section {
+    padding: 100px 0 !important;
+}
+.education-logo-section h1 {
+    font-weight: 700;
+    font-size: 29px !important;
+    text-align: center;
+}
 }
 
 
