@@ -16,11 +16,12 @@
             text-decoration: none !important;
         }
     
+
     </style>
 
 <!------------- Start About Us Banner -------------->
 <div class="about-us-section">
-    
+
     <div class="container mt-5">
         <div class="row justify-content-center align-items-center">
             <div class="col-lg-12 text-center about-us-content">
@@ -29,7 +30,7 @@
                 <p style="color: #fff;">
                 Dedicated team, innovative solutions, customer-focused, driven by</p>
                 <p style= "margin-top:-15px; color: #fff;">passion and excellence.</p>
-                
+
             </div>
         </div>
     </div>
@@ -48,8 +49,8 @@
                 Dive into making your free logo or opt for our expert graphic designers to transform your ideas 
                 into stunning visuals with our </a> or opting for <a href="{{ url('/custom-logo') }}" style="color:#512F90;"><b>custom logo design services</b></a>, we are here to create a lasting worthwhile impression on your client. We believe in creating a premier haven for your exceptional branding needs. 
                 Hence, this place is the ultimate hub for all your branding problems. </p>
-                <p style = text-align:justify;>At RFS, we’re committed to ensuring our top-tier website development services 
-                enhance your brand’s online presence and make your journey effortless, with a responsive support system ready 
+                <p style = text-align:justify;>At RFS, we're committed to ensuring our top-tier website development services 
+                enhance your brand's online presence and make your journey effortless, with a responsive support system ready 
                 to assist you at every step.</p>
             </div>
             <div class="col-lg-6 about-image-section-v3">
@@ -69,7 +70,7 @@
     <p style= margin-top:-15px;>market landscape of today.</p>
 
 
-    
+
 </div>
 
 <div class="container fun-easy-process-section">
@@ -132,13 +133,13 @@
                     Our Vision
                 </div>
             </div>
-            
+
             <div id="mission" class="section-content">
                 <div class="section-divider"></div>
                 <p style=text-align:justify;>Our mission is to revolutionize design with accessible, high-quality solutions. Using our logo maker, we support businesses of all sizes, sparking creativity and innovation. Our user-friendly tools and top-notch customer service make the design process simple and boost your brand’s identity.</p>
                 <p style=text-align:justify;>To hit our mission, RFS focuses on using the latest tech for top-notch, accessible designs, and we back it up with great customer support. We keep our pricing reasonable, so you get the right bang for your buck, update our tools to spark creativity, and give complete creative freedom to our talented designers to craft unique logos that make brands shine!</p>
             </div>
-            
+
             <div id="vision" class="section-content">
                 <div class="section-divider"></div>
                 <p style=text-align:justify;>Our vision is to make top-notch graphic design accessible to everyone with our cutting-edge logo maker. We cater to entrepreneurs, small businesses, web designers, visual artists, and more, offering unlimited logo design concepts to spark creativity and elevate design standards across the board.</p>
@@ -147,10 +148,7 @@
     </div>
 
 
-
-
     <!-------------start Why Choose RFS Logo Design? ------------------ */ -->
-
 
 
     <div class="container custom-section-logo">
@@ -158,13 +156,13 @@
         <p>Our expert designers craft unique, impactful logos tailored to your brand.</p>
         <p>Experience top-notch creativity and support with RFS, your go-to branding partner.</p>
         <p>We strive to produce designs that are:</p>
-        
+
         <div class="text-slider">
             <div class="slide active">Reflective of your brand</div>
             <div class="slide">Crafted with precision</div>
             <div class="slide">Unique illustrations</div>
         </div>
-        
+
         <a href="{{ url('/logo-maker') }}" class="slider-button" >Learn More</a>
 
 

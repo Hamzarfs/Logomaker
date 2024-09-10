@@ -316,4 +316,16 @@
             });
         });
     </script>
+
+<script>
+    // Ensure carousel can be scrolled via mouse or touch gestures without a scrollbar
+    const carousel = document.querySelector('.new-testimonial-carousel');
+
+carousel.addEventListener('wheel', (e) => {
+e.preventDefault();
+carousel.scrollBy({
+  left: e.deltaY < 0 ? -30 : 30,
+});
+});
+</script>
 @endsection

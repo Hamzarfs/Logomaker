@@ -846,13 +846,15 @@
         }
         .slider-content {
         display: flex;
-        width: calc(300px * 8); /* Adjust width based on the number of images (8 images * 300px each) */
-        animation: slide 10s linear infinite; /* Adjust timing based on desired speed */
+        width: calc(300px * 16); /* Adjust width based on the number of images (8 images * 300px each) */
+        animation: slide 30s linear infinite; /* Adjust timing based on desired speed */
         }
         .slider-content img {
+
         flex-shrink: 0; /* Prevent images from shrinking */
         margin-right:10px;
         }
+
         @keyframes slide {
         0% {
         transform: translateX(0); /* Start with images in place */
@@ -990,10 +992,26 @@
             }
             .card-container, .card-container2 {
     height: 227px;
+    text-align: -webkit-center;
 }
         }
 
+
         @media (max-width: 768px) {
+
+            .card-container, .card-container2 .img {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 230px;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+}
             .sticky .input-group {
                 max-width: 400px;
                 margin: 0 auto;
@@ -1247,6 +1265,16 @@
                 <div class="col-lg-6 text-center banner-image-sec order-lg-2">
                     <div class="image-slider">
                         <div class="slider-content">
+                            <img src="{{ asset('images/banner.png') }}" alt="Logo 1">
+                            <img src="{{ asset('images/banner4.png') }}" alt="Logo 4">
+                            <img src="{{ asset('images/banner5.png') }}" alt="Logo 5">
+                            <img src="{{ asset('images/banner6.png') }}" alt="Logo 6">
+                            <img src="{{ asset('images/banner3.png') }}" alt="Logo 3">
+                            <img src="{{ asset('images/banner7.png') }}" alt="Logo 7">
+                            <img src="{{ asset('images/banner8.png') }}" alt="Logo 8">
+                            <img src="{{ asset('images/banner9.png') }}" alt="Logo 9">
+                            <img src="{{ asset('images/banner2.png') }}" alt="Logo 2">
+                            {{-- Duplicate --}}
                             <img src="{{ asset('images/banner.png') }}" alt="Logo 1">
                             <img src="{{ asset('images/banner4.png') }}" alt="Logo 4">
                             <img src="{{ asset('images/banner5.png') }}" alt="Logo 5">

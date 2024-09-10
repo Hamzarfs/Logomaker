@@ -279,6 +279,7 @@ a {
 
 body {
     font-family: 'Poppins', sans-serif;
+
 }
 
 .navbar {
@@ -945,6 +946,14 @@ p,
 
 .about-us-section {
     background-image: url('/images/Group 123.jpg'); /* Update with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 20px; /* Adjust padding as needed */
+}
+
+.printing-section {
+    background-image: url('/images/printingbg1.webp'); /* Update with your image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
