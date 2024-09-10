@@ -77,14 +77,7 @@
                                 </div>
 
  
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label for="lm_logo_size" class="form-label">Logo size</label>
-                                        <input type="text" name="logo_size" id="lm_logo_size" value="{{ old('logo_size') }}"
-                                            class="form-control" >
-                                        <x-error>logo_size</x-error>
-                                    </div>
-                                </div>
+                               
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="font" class="form-label">Font</label>
@@ -227,6 +220,14 @@
                                         <x-error>logomaker[logo_top]</x-error>
                                     </div>
                                 </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_logo_size" class="form-label">Logo size</label>
+                                        <input type="text" name="logomaker[logo_size]" id="lm_logo_size" value="{{ old('logomaker.logo_size') }}"
+                                            class="form-control" >
+                                        <x-error>logomaker[logo_size]</x-error>
+                                    </div>
+                                </div>
                             </div>
                             <h4>Preview</h4>
                             <div class="row">
@@ -268,6 +269,14 @@
                                         <input type="text" name="preview[logo_top]" id="lm_top" value="{{ old('preview.logo_top') }}"
                                             class="form-control" >
                                         <x-error>preview[logo_top]</x-error>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_logo_size" class="form-label">Logo size</label>
+                                        <input type="text" name="preview[logo_size]" id="lm_logo_size" value="{{ old('preview.logo_size') }}"
+                                            class="form-control" >
+                                        <x-error>preview[logo_size]</x-error>
                                     </div>
                                 </div>
                             </div>
@@ -312,6 +321,14 @@
                                         <input type="text" name="canva[logo_top]" id="lm_top" value="{{ old('canva.logo_top') }}"
                                             class="form-control" >
                                         <x-error>canva[logo_top]</x-error>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_logo_size" class="form-label">Logo size</label>
+                                        <input type="text" name="canva[logo_size]" id="lm_logo_size" value="{{ old('canva.logo_size') }}"
+                                            class="form-control" >
+                                        <x-error>canva[logo_size]</x-error>
                                     </div>
                                 </div>
                             </div>

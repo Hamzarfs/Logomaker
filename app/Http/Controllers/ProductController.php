@@ -89,7 +89,7 @@ class ProductController extends Controller
         $product->category_id = $request->category;
         $product->slug = $uniqueSlug;
         $product->color2 = $request->color2;
-        $product->logo_size =$request->logo_size;
+      
         $product->background_color = $request->background_color;
    	    $product->company_name = $request->company_name;
         $product->company_spacing = $request->company_spacing;
@@ -107,20 +107,23 @@ class ProductController extends Controller
         $product->logomaker_font_size = $data['logomaker']['font'];
         $product->logomaker_logo_left = $data['logomaker']['logo_left'];
         $product->logomaker_logo_top = $data['logomaker']['logo_top'];
-
+        $product->logomaker_logo_size = $data['logomaker']['logo_size'];
+ 
 
         $product->preview_left = $data['preview']['left'];
         $product->preview_top = $data['preview']['top'];
         $product->preview_font_size = $data['preview']['font'];
         $product->preview_logo_left = $data['preview']['logo_left'];
         $product->preview_logo_top = $data['preview']['logo_top'];
-
+        $product->preview_logo_size = $data['preview']['logo_size'];
+ 
         $product->canva_left = $data['canva']['left'];
         $product->canva_top = $data['canva']['top'];
         $product->canva_font_size = $data['canva']['font'];
         $product->canva_logo_left = $data['canva']['logo_left'];
         $product->canva_logo_top = $data['canva']['logo_top'];
-        
+        $product->canva_logo_size = $data['canva']['logo_size'];
+ 
 
         $product->save();
         $productId = $product->id;
@@ -231,7 +234,7 @@ class ProductController extends Controller
         $product->font_id = $data['font'];
         $product->color = $data['color'];
         $product->color2 = $request->color2;
-        $product->logo_size =$request->logo_size;
+       
         $product->background_color = $request->background_color;
         
         
@@ -250,18 +253,21 @@ class ProductController extends Controller
 
         $product->logomaker_logo_left = $data['logomaker']['logo_left'];
         $product->logomaker_logo_top = $data['logomaker']['logo_top'];
+        $product->logomaker_logo_size = $data['logomaker']['logo_size'];
 
         $product->preview_left = $data['preview']['left'];
         $product->preview_top = $data['preview']['top'];
         $product->preview_font_size = $data['preview']['font'];
         $product->preview_logo_left = $data['preview']['logo_left'];
         $product->preview_logo_top = $data['preview']['logo_top'];
-        
+        $product->preview_logo_size = $data['preview']['logo_size'];
+
         $product->canva_left = $data['canva']['left'];
         $product->canva_top = $data['canva']['top'];
         $product->canva_font_size = $data['canva']['font'];
         $product->canva_logo_left = $data['canva']['logo_left'];
         $product->canva_logo_top = $data['canva']['logo_top'];
+        $product->canva_logo_size = $data['canva']['logo_size'];
         
 
         $product->save();

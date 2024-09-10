@@ -94,16 +94,7 @@
                                              value="{{ old('background_color', $data->background_color ?? '#FFFFFF') }}"  class="form-control" required>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label for="lm_logo_size" class="form-label">Logo size</label>
-                                        <input type="text" name="logo_size" id="lm_logo_size"
-                                        
-                                            value="{{ old('logo_size', $data->logo_size) }}"
-                                            class="form-control" >
-                                        <x-error>logomaker[logo_size]</x-error>
-                                    </div>
-                                </div>
+                               
 
                                 <div class="col-lg-4">
                                     <div class="form-group">
@@ -247,6 +238,16 @@
                                         <x-error>logomaker[logo_top]</x-error>
                                     </div>
                                 </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_logo_size" class="form-label">Logo size</label>
+                                        <input type="text" name="logomaker[logo_size]" id="lm_logo_size"
+                                        
+                                            value="{{ old('logomaker.logo_size', $data->logomaker_logo_size) }}"
+                                            class="form-control" >
+                                        <x-error>logomaker[logo_size]</x-error>
+                                    </div>
+                                </div>
 
                             </div>
                             <h4>Preview</h4>
@@ -296,6 +297,16 @@
                                         <x-error>preview[logo_top]</x-error>
                                     </div>
                                 </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_logo_size" class="form-label">Logo size</label>
+                                        <input type="text" name="preview[logo_size]" id="lm_logo_size"
+                                        
+                                            value="{{ old('preview.logo_size', $data->preview_logo_size) }}"
+                                            class="form-control" >
+                                        <x-error>preview[logo_size]</x-error>
+                                    </div>
+                                </div>
 
                             </div>
 
@@ -343,6 +354,16 @@
                                          value="{{ old('canva.logo_top', $data->canva_logo_top) }}"
                                             class="form-control" >
                                         <x-error>canva[top]</x-error>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_logo_size" class="form-label">Logo size</label>
+                                        <input type="text" name="canva[logo_size]" id="lm_logo_size"
+                                        
+                                            value="{{ old('canva.logo_size', $data->canva_logo_size) }}"
+                                            class="form-control" >
+                                        <x-error>canva[logo_size]</x-error>
                                     </div>
                                 </div>
 
