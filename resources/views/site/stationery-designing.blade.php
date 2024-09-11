@@ -4,9 +4,9 @@
 @section('meta_desc', 'Elevate your brand identity with RFS Logo Design professional stationery designing services. Get creative branding materials for effective online presence.')
 
 @section('content')
-   
+
 <style>
-       
+
 
        .education-logo-section {
           background-image: url('/images/bannerStationery.png');
@@ -20,12 +20,12 @@
           justify-content: center; /* Center content vertically */
           align-items: center; /* Center content horizontally */
       }
-      
+
        .education-logo-section h1 {
           font-weight: 700;
           font-size: 44px;
           text-align: center;
-          
+
       }
        .education-logo-section h2 {
           font-weight: 700;
@@ -33,21 +33,19 @@
           text-align: center;
           margin-bottom: 20px;
       }
-      
-      
+
+
        .education-logo-section p {
           margin-bottom: 20px;
       }
       @media (max-width: 768) {
-   
        .new-testimonial{
        margin-top:0px !important;
-   
       }
       }
-      
+
       </style>
-      
+
    <section class="education-logo-section">
        <div class="container">
        <p>Stationery Design Service in RFS logo Designing</p>
@@ -55,7 +53,7 @@
            Stationery Design Services</h1>
        </div>
    </section>
-   
+
 
 <!--------------------- Start PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
 

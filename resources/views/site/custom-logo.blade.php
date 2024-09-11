@@ -933,7 +933,7 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <!-- <h1 class="modal-title text-center">Contact Form</h1> -->
+                        <h2 class="modal-title text-center">Get Started</h2>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -942,20 +942,23 @@
                             <div class="mb-3">
                                 <label for="name" class="form-label"><b>Name</b></label>
                                 <input type="text" class="form-control" name="name" id="name"
-                                    placeholder="John Doe">
+                                    placeholder="John Doe" required>
                             </div>
 
                             <div class="mb-3">
                                 <label for="email" class="form-label"><b>Email address</b></label>
                                 <input type="email" class="form-control" name="email" id="email"
-                                    placeholder="name@example.com">
+                                    placeholder="name@example.com" required
+                                    title="Please enter a valid email address">
                             </div>
+
 
                             <div class="mb-3">
                                 <label for="phone" class="form-label"><b>Phone number</b></label>
                                 <input type="tel" class="form-control" name="phone" id="phone"
-                                    placeholder="123456789">
+                                    placeholder="123456789" required pattern="^\d{15}$" title="Please enter phone number">
                             </div>
+
 
                             <div class="mb-3">
                                 <label for="comment" class="form-label"><b>Comment</b></label>
