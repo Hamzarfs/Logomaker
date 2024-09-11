@@ -162,7 +162,7 @@
         }
 
         .education-logo-section {
-       background-image: url('/images/ecoeco.png');
+       background-image: url('/images/contact2.jpg');
        background-size: cover;
        background-position: center;
        padding: 150px 0;
