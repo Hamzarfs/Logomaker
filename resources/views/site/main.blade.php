@@ -2372,20 +2372,11 @@
                 @foreach ($categories as $category)
                     @if ($category->products->isNotEmpty())
                         <a href="{{ url('/logos/' . $category->slug) }}" class="logo-ideas-link">
-
                             <button>{{ $category->name }} Logos</button></a>
                     @endif
                 @endforeach
             </div>
         </div>
-
-
-
-
-
-
-
-
         {{-- End Category list section --}}
 
 

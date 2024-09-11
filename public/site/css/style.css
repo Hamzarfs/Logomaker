@@ -51,6 +51,111 @@ a {
     }
 }
 
+
+
+/* Hover Card */
+
+.new-card-design-section {
+    padding: 20px;
+}
+
+.new-card-design-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.new-card-design-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.new-card-design-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+}
+
+.new-card-design-col {
+    padding: 10px;
+    flex: 1 1 25%; /* Default: 4 columns in a row */
+    box-sizing: border-box;
+}
+
+.new-card-design-card {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.new-card-design-card img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.new-card-design-card h2 {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #333;
+}
+
+.new-card-design-card i {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    background: #6868D1;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.new-card-design-card:hover {
+    transform: translateY(-5px);
+}
+
+.new-card-design-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #6868D1;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.new-card-design-card:hover .new-card-design-overlay {
+    opacity: 1;
+}
+
+.new-card-design-overlay-text {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .new-card-design-col {
+        flex: 1 1 100%; /* Stack columns vertically on mobile */
+    }
+}
+
+
+/* End Hover Card */
+
 .logo-design-color {
     color: #512f90;
     font-weight: 800px;
@@ -1437,7 +1542,7 @@ margin-bottom: 50px;
 
 /* New section styling */
 .logo-designs-ca {
-    padding: 70px 0;
+    padding-top: 50px;
     /* Light grey background */
 }
 .custom-divider-ca {
@@ -1507,13 +1612,25 @@ margin-bottom: 50px;
 }
 
 
+
+@media (max-width: 480px) {
+    .new-card-design-col {
+        flex: 1 1 100%;
+    }
+}
+
+
 @media (max-width: 768) {
     .unique-content-col{
-        padding-left: 0px !important; 
+        padding-left: 0px !important;
     }
     .logo-designs-ca h2 {
         font-size: 30px;
         color: #000000;
+        text-align: center;
+    }
+    .new-card-design-col {
+        flex: 1 1 100%;
     }
 }
 
@@ -1686,7 +1803,7 @@ margin-bottom: 50px;
         font-size: 34px;
     }
 
-    
+
 }
 
 @media (max-width: 767px) {
@@ -1905,8 +2022,9 @@ form#companyForm {
     font-size: 26px;
 }
 .logo-designs-ca h2 {
-    font-size: 32px;
+    font-size: 28px;
     margin-top: 20px;
+    text-align: center;
 }
 .education-logo-section p {
     margin-bottom: 10px;
@@ -2034,10 +2152,6 @@ h1,
 h2 {
     font-weight: bold;
 }
-
-
-
-
 
 
 @media (max-width: 768px) {
