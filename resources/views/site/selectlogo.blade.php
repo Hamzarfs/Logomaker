@@ -22,7 +22,8 @@
             width: 33%;
             margin-bottom: 20px;
             position: relative;
-            height: 300px;
+            height: auto;
+            /* height: 300px; */
             overflow: hidden;
         }
 
