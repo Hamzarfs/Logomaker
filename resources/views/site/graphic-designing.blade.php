@@ -10,8 +10,6 @@
 
  
 <style>
-       
-
        .education-logo-section {
           background-image: url('/images/Graphic.png');
           background-size: cover;
@@ -96,64 +94,59 @@
     </div>
     <!--------------------- End PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
 
-    <!---------------------- Start Portfolio -------------------------->
-    <div class="logo-designs-portfolio">
-        <div class="container">
-            <div class="row filter-button-group">
-                <button class="btn filter-button active" data-filter="all">All</button>
-                <button class="btn filter-button" data-filter="iconic">Business Cards</button>
-                <button class="btn filter-button" data-filter="typography">Envelope Design</button>
-                <button class="btn filter-button" data-filter="illustrative">Letterhead Design</button>
+   
+<!---------------------- Start Portfolio -------------------------->
+
+<div class="logo-designs-portfolio">
+    <div class="container">
+        <div class="row filter-button-group">
+            <button class="btn filter-button active" data-filter="all">All</button>
+            <button class="btn filter-button" data-filter="iconic">Business Cards</button>
+            <button class="btn filter-button" data-filter="typography">Envelope Design</button>
+            <button class="btn filter-button" data-filter="illustrative">Letterhead Design</button>
+        </div>
+        <div class="row gallery">
+        <hr class="custom-divider-ca">
+
+        <div class="row gallery">
+            <!-- Iconic Logos -->
+            <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
+                <img src="{{ url('images/Business Cards01.png') }}" alt="Iconic Logo 1">
             </div>
-
-            <div class="row gallery">
-                <!-- Iconic Logos -->
-                <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
-                    <img src="{{ url('images/Business Cards01.png') }}" alt="Iconic Logo 1">
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
-                    <img src="{{ url('images/Business Cards02.png') }}" alt="Iconic Logo 2">
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
-                    <img src="{{ url('images/Business Cards03.png') }}" alt="Iconic Logo 3">
-                </div>
-
-                <!-- Typography Logos -->
-                <div class="col-lg-4 col-md-6 mb-4 filter all typography">
-                    <img src="{{ url('images/Envelope Design02.png') }}" alt="Typography Logo 1">
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all typography">
-                    <img src="{{ url('images/Envelope Design01.png') }}" alt="Typography Logo 2">
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all typography">
-                    <img src="{{ url('images/Envelope Design03.png') }}" alt="Typography Logo 2">
-                </div>
-
-
-                <!-- Illustrative Logos -->
-                <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
-                    <img src="{{ url('images/Letterhead Design.webp') }}" alt="Illustrative Logo 1">
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
-                    <img src="{{ url('images/Letterhead Design01.webp') }}" alt="Illustrative Logo 1">
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
-                    <img src="{{ url('images/Letterhead Design02.webp') }}" alt="Illustrative Logo 1">
-                </div>
-
-
-
-                <!-- Animated Logos -->
-                <div class="col-lg-4 col-md-6 mb-4 filter all animated">
-                    <img src="images/logo-animation-example-conversable.gif" alt="Animated Logo 1">
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 filter all animated">
-                    <img src="images/logo-design-animation.gif" alt="Animated Logo 2">
-                </div>
+            <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
+                <img src="{{ url('images/Letterhead Design01.png') }}" alt="Illustrative Logo 1">
             </div>
+            <div class="col-lg-4 col-md-6 mb-4 filter all typography">
+            <img src="{{ url('images/Envelope Design03.png') }}" alt="Typography Logo 2">
+            </div>
+            <!-- Typography Logos -->
+            <div class="col-lg-4 col-md-6 mb-4 filter all typography">
+            <img src="{{ url('images/Envelope Design02.png') }}" alt="Typography Logo 1">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
+                <img src="{{ url('images/Business Cards02.png') }}" alt="Iconic Logo 2">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
+                <img src="{{ url('images/Letterhead Design02.png') }}" alt="Illustrative Logo 1">
+            </div>
+            <!-- Illustrative Logos -->
+            <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
+                <img src="{{ url('images/Letterhead Design.png') }}" alt="Illustrative Logo 1">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 filter all typography">
+            <img src="{{ url('images/Envelope Design01.png') }}" alt="Typography Logo 2">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
+                <img src="{{ url('images/Business Cards03.png') }}" alt="Iconic Logo 3">
+            </div>
+           
+        
         </div>
     </div>
-    <!---------------------- End Portfolio -------------------------->
+   </div>
+<!---------------------- End Portfolio -------------------------->
+
+
 
      <!-- <-----------------Start Testimonial Section---------------->
 

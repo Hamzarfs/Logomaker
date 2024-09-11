@@ -134,15 +134,6 @@
      <!-- <-----------------Start Testimonial Section---------------->
 
 
- <!-- <section id="testimonial-section" class="pt-5 pb-5">
-        <div class="container">
-            <h2 class="text-center mb-5">See What Our Clients Have to Say</h2>
-            <div class="owl-carousel owl-theme">
-                 Reviews will be inserted here dynamically -->
-            <!-- </div>
-        </div>
-    </section> --> 
- <!-- {{----------------- End Testiomonial Section --}} -->
 
     <!---------------------Start why-choose-rfs----------------->
 
@@ -209,6 +200,7 @@
 
 
 
+     <!-- <-----------------Start Testimonial Section---------------->
 
 
   <section class="new-testimonial my-5">
@@ -258,6 +250,7 @@
         </section>
 
 
+     <!-- <-----------------End Testimonial Section---------------->
 
 
 

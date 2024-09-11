@@ -279,7 +279,6 @@ a {
 
 body {
     font-family: 'Poppins', sans-serif;
-
 }
 
 .navbar {
@@ -367,10 +366,9 @@ p,
 }
 
 .boxed-section {
-    padding: 40px 20px;
+    padding: 20px 20px 40px;
     border-radius: 10px;
     text-align: center;
-    margin-top: 50px;
 }
 
 .boxed-section h2 {
@@ -446,12 +444,12 @@ p,
     height: 50px;
     border-radius: 5px;
     color: #fff;
-    background-color: #646BD9;
+    background-color: #512F90;
     font-size: 15px;
     font-weight: 700;
     line-height: 24px;
     text-align: center;
-    border-color: #646BD9;
+    border-color: #512F90;
 }
 
 .hire-section-bg {
@@ -952,14 +950,6 @@ p,
     padding: 80px 20px; /* Adjust padding as needed */
 }
 
-.printing-section {
-    background-image: url('/images/printingbg1.webp'); /* Update with your image path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 80px 20px; /* Adjust padding as needed */
-}
-
 .about-us-content {
     padding: 20px; /* Optional: Adjust padding for better spacing */
 }
@@ -978,7 +968,6 @@ h2 {
     font-weight: 800;
     font-family: 'Montserrat', sans-serif;
     font-size: 32px;
-    margin-bottom: 20px;
     color: #010935;
 }
 .custom-container-margin-v3 {
@@ -1898,7 +1887,6 @@ form#companyForm {
 
 .CRAFT-h2 {
         font-size: 34px; /* Adjust heading size for tablets */
-        font-weight: 800px !important;
 }
 .Why-h2 {
     font-weight: 700;
