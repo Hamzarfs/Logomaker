@@ -154,7 +154,7 @@
     <div class="container">
         <div class="row align-items-center">
 
-            <div class="col-8-md-12">
+            <div class="col-6-md-10">
                 <h2>Custom Web Design & Development</h2>
                 <p style="text-align: justify;">At RFS logo design, we specialize in crafting exceptional websites that are customized to suit your business’s needs. Our websites are not only optimized for mobile devices but also visually captivating, making them a powerful tool for achieving your objectives with excellence. Research shows that 85% of consumers visit a company’s website before making a purchase. <br> <br>Recognizing the profound influence of user experience, aesthetics, usability, and accessibility on website success, our adept team is dedicated to crafting a standout online presence for your brand. Elevate your business by turning logo concepts into reality—reach out to us today!</p>
                 <a href="{{ url('contact-us') }}" class="new-getstarted-button">Get Started</a>
