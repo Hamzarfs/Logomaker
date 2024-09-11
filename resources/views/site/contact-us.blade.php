@@ -161,53 +161,56 @@
             text-decoration: none; /* Remove any text decoration */
         }
 
-        .banner-section {
-            background-color: #6868D1;
-            padding: 50px 0;
-        }
+        .education-logo-section {
+       background-image: url('/images/contact2.jpg');
+       background-size: cover;
+       background-position: center;
+       padding: 150px 0;
+       color: #fff;
+       text-align: center;
+       display: flex;
+       flex-direction: column;
+       justify-content: center; /* Center content vertically */
+       align-items: center; /* Center content horizontally */
+   }
+   
+   .education-logo-section h1 {
+       font-weight: 700;
+       font-size: 44px;
+       text-align: center;
+       
+   }
+   .education-logo-section h2 {
+       font-weight: 700;
+       font-size: 25px !important;
+       text-align: center;
+       margin-bottom: 20px;
+   }
+   
+   
+   .education-logo-section p {
+       margin-bottom: 20px;
+   }
+   @media (max-width: 768) {
 
-        .banner-section h1 {
-            font-size: 34px;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 20px;
-        }
+   .new-testimonial{
+    margin-top:0px !important;
 
-        .banner-section p {
-            font-size: 1.2rem;
-            color: #fff;
-            margin-bottom: 30px;
-        }
+   }
+   }
+   
+   </style>
+   
+<section class="education-logo-section">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Your one-stop solution for all your design needs.</p>
 
-        .banner-section .btn {
-            background-color: #512f90;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-        }
-
-        .banner-section .btn:hover {
-            background-color: #6868D1;
-        }
-    </style>
-
-
-
-    <div class="banner-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h1>Contact Us</h1>
-                    <p>Your one-stop solution for all your design needs.</p>
-                    <a class="contact-button-online" href="{{ url('/logo-maker') }}">Get Started</a>
-                </div>
-                <div class="col-md-6">
-                    <img src="images/contect-us.webp" alt="Contact RFS Logo Design" title="Contact RFS Logo Design"
-                        class="img-fluid">
-                </div>
-            </div>
-        </div>
     </div>
+</section>
+
+
+
     <div class="container contact-section">
         <h2>Contact RFS Logo Design</h2>
         <p>If you have a unique idea that you can't find among our templates, chat with a live representative through
@@ -263,7 +266,7 @@
                         <label for="phone">Phone</label>
                         <i class="fas fa-phone form-icon"></i>
                         <input type="text" class="form-control" name="phone" id="phone"
-                            placeholder="Enter your phone number" required maxlength="10" minlength="10">
+                            placeholder="Enter your phone number" required maxlength="14" minlength="5">
                     </div>
                     <div class="form-group">
                         <label for="comment">Comment</label>
@@ -307,7 +310,7 @@
             }
 
             if (!phonePattern.test(phone)) {
-                alert('Please enter a valid phone number (10 digits).');
+                alert('Please enter a valid phone number (14 digits).');
                 event.preventDefault();
                 return;
             }
