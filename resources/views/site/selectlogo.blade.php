@@ -265,8 +265,8 @@
 
 
                         <div class="text-placeholder"
-                            style=" z-index: 20;font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize }}; font-weight:500; margin-left:{{ $leftPosition }}; margin-top:{{ $topPosition }};letter-spacing: {{ $product->company_spacing }};">
-                            {{ $product->company_name ?? session('company') ?? $product->category['name'] }}
+                            style=" z-index: 20;font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize }}; font-weight:500; margin-left:{{ $leftPosition }}; margin-top:{{ $topPosition }};letter-spacing: {{ $product->logomaker_spacing }};">
+                            {{  session('company')  ?? $product->company_name ?? $product->category['name'] }}
                             </div>
 
 

@@ -1144,8 +1144,8 @@
 
                                         $fontSize = isset($selectedProduct->preview_font_size) && strlen($selectedProduct->preview_font_size) > 1 ? $selectedProduct->preview_font_size : '35';
 
-                                          
-                                         $companyName = $selectedProduct->company_name ?? session('company') ?? $selectedProduct->category['name'];
+                                        
+                                         $companyName = session('company') ?? $selectedProduct->company_name  ?? $selectedProduct->category['name'];
 
                                          $companyNameLength = strlen($companyName);
                                         if ($companyNameLength > 10 && $companyNameLength <= 15) {
@@ -1228,7 +1228,9 @@
                                         selectable: false,
                                         evented: false,
                                         width: 340,
-                                        charSpacing: {{ 20 }}
+                                        charSpacing: {{$selectedProduct->preview_spacing}},
+                                        
+                                        fontSize: {{ $selectedProduct->preview_font_size ?? 36 }}
 
                                     });
                                     canvas.add(sampleText1);

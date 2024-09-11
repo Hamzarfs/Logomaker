@@ -110,10 +110,8 @@
                                         <x-error>logo_position</x-error>
                                     </div>
                                 </div>
-                            </div>
-
-                            <h4>Company Name</h4>
-                            <div class="row">
+                             
+                           
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_left" class="form-label">Company Name</label>
@@ -122,34 +120,16 @@
                                         <x-error>company_name</x-error>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label for="lm_top" class="form-label">Spacing</label>
-                                        <input type="text" name="company_spacing" id="lm_top" value="{{ old('company_spacing') }}"
-                                            class="form-control" >
-                                        <x-error>company_spacing</x-error>
-                                    </div>
-                                </div>
-                               
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label for="lm_font" class="form-label">Font Size</label>
-                                        <input type="text" name="company_font" id="lm_font" value="{{ old('company_font') }}"
-                                            class="form-control" >
-                                        <x-error>company_font</x-error>
-                                    </div>
-                                </div>
+                              
 
                                 
                                
 
                                 
-                            </div>
+                            
 
 
-
-                            <h4>Slogan Name</h4>
-                            <div class="row">
+                            
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_left" class="form-label">slogon Name</label>
@@ -158,23 +138,7 @@
                                         <x-error>slogan_name</x-error>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label for="lm_top" class="form-label">Spacing</label>
-                                        <input type="text" name="slogan_spacing" id="lm_top" value="{{ old('slogan_spacing') }}"
-                                            class="form-control" >
-                                        <x-error>slogan_spacing</x-error>
-                                    </div>
-                                </div>
-                                
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label for="lm_font" class="form-label">Font Size</label>
-                                        <input type="text" name="slogan_font" id="lm_font" value="{{ old('slogan_font') }}"
-                                            class="form-control" >
-                                        <x-error>slogan_font</x-error>
-                                    </div>
-                                </div>
+                                 
  
                             </div>
 
@@ -228,6 +192,14 @@
                                         <x-error>logomaker[logo_size]</x-error>
                                     </div>
                                 </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_top" class="form-label">Spacing</label>
+                                        <input type="text" name="logomaker[spacing]" id="lm_top" value="{{ old('logomaker.spacing') }}"
+                                            class="form-control" >
+                                        <x-error>logomaker[spacing]</x-error>
+                                    </div>
+                                </div>
                             </div>
                             <h4>Preview</h4>
                             <div class="row">
@@ -277,6 +249,14 @@
                                         <input type="text" name="preview[logo_size]" id="lm_logo_size" value="{{ old('preview.logo_size') }}"
                                             class="form-control" >
                                         <x-error>preview[logo_size]</x-error>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_top" class="form-label">Spacing</label>
+                                        <input type="text" name="preview[spacing]" id="lm_top" value="{{ old('preview.spacing') }}"
+                                            class="form-control" >
+                                        <x-error>preview[spacing]</x-error>
                                     </div>
                                 </div>
                             </div>
@@ -329,6 +309,14 @@
                                         <input type="text" name="canva[logo_size]" id="lm_logo_size" value="{{ old('canva.logo_size') }}"
                                             class="form-control" >
                                         <x-error>canva[logo_size]</x-error>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lm_top" class="form-label">Spacing</label>
+                                        <input type="text" name="canva[spacing]" id="lm_top" value="{{ old('canva.spacing') }}"
+                                            class="form-control" >
+                                        <x-error>canva[spacing]</x-error>
                                     </div>
                                 </div>
                             </div>

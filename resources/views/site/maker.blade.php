@@ -723,7 +723,8 @@
                             $leftPosition = isset($selectedProduct->canva_left) && strlen($selectedProduct->canva_left) > 1 ? floatval($selectedProduct->canva_left) : '3.8';
                             $topPosition = isset($selectedProduct->canva_top) && strlen($selectedProduct->canva_top) > 1 ? floatval($selectedProduct->canva_top) : '2.2';
 
-                            $companyName = session('company') ? session('company') : $selectedProduct->category->name;
+                             
+                            $companyName = session('company') ??  $selectedProduct->company_name  ?? $selectedProduct->category['name'];
 
                             $companyNameLength = strlen($companyName);
 
@@ -751,15 +752,16 @@
                         var company = "{{ $companyName }}".replace(/&amp;/g, '&');
                         var sampleText1 = new fabric.Textbox(company, {
                             left: canvas.width / {{ $leftPosition }} - 60, // Position the text
-                            top: canvas.height / {{ $topPosition }} +
-                            120, // Position the text
+                            top: canvas.height / {{ $topPosition }} + 120, // Position the text
                             fontSize: {{ $fontSize }}, // Adjust font size as needed
                             fill: '{{ $selectedProduct->color }}',
                             fontFamily: "{{ $font }}",
                             textAlign: '{{ $textPosition }}',
                             selectable: true,
                             width: 540,
-                            evented: true
+                            evented: true,
+                            charSpacing: {{$selectedProduct->canva_spacing}},
+                            fontSize: {{ $selectedProduct->canva_font_size ?? 44 }}
                         });
 
 
