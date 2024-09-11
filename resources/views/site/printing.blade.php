@@ -52,25 +52,57 @@
     background: #ffffff99;
 }
 }
+.print-material-section{
+    padding-top:50px;
+}
+   .education-logo-section {
+    background-image: url('/images/printingbg1.webp');
+    background-size: cover;
+       background-position: center;
+       padding: 150px 0;
+       color: #fff;
+       text-align: center;
+       display: flex;
+       flex-direction: column;
+       justify-content: center; /* Center content vertically */
+       align-items: center; /* Center content horizontally */
+   }
+   
+   .education-logo-section h1 {
+       font-weight: 700;
+       font-size: 44px;
+       text-align: center;
+       
+   }
+   .education-logo-section h2 {
+       font-weight: 700;
+       font-size: 25px !important;
+       text-align: center;
+       margin-bottom: 20px;
+   }
+   
+   
+   .education-logo-section p {
+       margin-bottom: 20px;
+   }
+   @media (max-width: 768) {
 
-  </style>
+   .new-testimonial{
+    margin-top:0px !important;
 
-<!------------- Start About Us Banner -------------->
-<div class="printing-section">
+   }
+   }
+   
+   </style>
+   
+<section class="education-logo-section">
+    <div class="container">
+        <h1>Printing Plans</h1>
+        <p>Printing Made Easier</p>
 
-  <div class="container mt-5">
-      <div class="row justify-content-center align-items-center">
-          <div class="col-lg-12 text-center about-us-content">
-            <p style="color: #fff;">   Printing Made Easier</p>
-              <h1 style="font-weight: 700; font-size: 42px; color: #fff;">Printing Plans
-                </h1>
+    </div>
+</section>
 
-          </div>
-      </div>
-  </div>
-</div>
-
-  <!-------------End Abouts Us Banner -------------->
 
 <!-------------------- Start 1st section ------------------>
 

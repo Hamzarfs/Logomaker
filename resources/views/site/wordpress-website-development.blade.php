@@ -7,26 +7,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <style>
-        .banner-section h1 {
-            font-size: 32px;
-            font-weight: 700;
-        }
-
-        .gradient-heading {
-            background: linear-gradient(209deg, #501e9c 0%, #8169f1 40%, #a44cee 75%, #ff847f 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .wp-website {
-            background-color: #fffdf6
-        }
-
-        .wp-website h1 {
-            font-size: 32px;
-            font-weight: 700;
-            line-height: 45px;
-            text-transform: uppercase;
+       
+        .wp-website h2 {
+            font-size: 34px;
+            font-weight: 800;
         }
 
         .wp-website p {
@@ -59,69 +43,64 @@
         .logo-designs-portfolio h1 {
             font-weight: 700;
         }
-    </style>
+    
+        
+        .education-logo-section {
+       background-image: url('/images/wordpresbanner.png');
+       background-size: cover;
+       background-position: center;
+       padding: 150px 0;
+       color: #fff;
+       text-align: center;
+       display: flex;
+       flex-direction: column;
+       justify-content: center; /* Center content vertically */
+       align-items: center; /* Center content horizontally */
+   }
+   
+   .education-logo-section h1 {
+       font-weight: 700;
+       font-size: 44px;
+       text-align: center;
+       
+   }
+   .education-logo-section h2 {
+       font-weight: 700;
+       font-size: 25px !important;
+       text-align: center;
+       margin-bottom: 20px;
+   }
+   
+   
+   .education-logo-section p {
+       margin-bottom: 20px;
+   }
+   @media (max-width: 768) {
 
-    <div class="banner-section text-white">
+   .new-testimonial{
+    margin-top:0px !important;
+
+   }
+   }
+   
+   </style>
+   
+<section class="education-logo-section">
+    <div class="container">
+        <h1>High-Quality WordPress<br>Web Design Services</h1>
+        <p>Running a thriving business with innovative concepts? Your website should<br>  mirror your success and
+        ingenuity. That’s where RFS Logo Design comes in. With<br>  our WordPress mastery, we’re primed to
+        transform your online presence.</p>
+
+    </div>
+</section>
+
+
+    <section class="wp-website my-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h1>High-Quality <br> <span class="logo-design-color">WordPress</span> Web Design Services</h1>
-                    <p>
-                        Running a thriving business with innovative concepts? Your website should mirror your success and
-                        ingenuity. That’s where RFS Logo Design comes in. With our WordPress mastery, we’re primed to
-                        transform your online presence.
-                    </p>
-                    <ul class="icon-list">
-                        <li><i class="fas fa-trophy"></i> Custom WordPress Development</li>
-                        <li><i class="fas fa-briefcase"></i> WordPress CMS Development</li>
-                        <li><i class="fas fa-sync-alt"></i> WordPress Theme Customization</li>
-                        <li><i class="fas fa-sync-alt"></i> WordPress Website Development</li>
-                        <li><i class="fas fa-sync-alt"></i> WordPress Maintenance & Migraion Services</li>
-                    </ul>
-                    <a href="{{ url('contact-us') }}" class="california-button-online">Get a Quote</a>
-                </div>
-                <div class="col-lg-6 text-center about-us-image-sec order-lg-2">
-                    <img src="{{ asset('images/wordpress.webp') }}" alt="Wordpress Development"
-                        title= "Wordpress Development" class="img-fluid">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="logo-slider-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="logo-slider">
-                        <img src="images/Group 14.png" alt="Logo 1">
-                        <img src="images/Group 16.png" alt="Logo 2">
-                        <img src="images/Group 17.png" alt="Logo 3">
-                        <img src="images/Group 18.png" alt="Logo 4">
-                        <img src="images/Group 21.png" alt="Logo 5">
-                        <img src="images/Group 22.png" alt="Logo 6">
-
-                        <!-- Repeat logos to ensure continuous animation -->
-                        <img src="images/Group 14.png" alt="Logo 1">
-                        <img src="images/Group 16.png" alt="Logo 2">
-                        <img src="images/Group 17.png" alt="Logo 3">
-                        <img src="images/Group 18.png" alt="Logo 4">
-                        <img src="images/Group 21.png" alt="Logo 5">
-                        <img src="images/Group 22.png" alt="Logo 6">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section class="wp-website py-5 my-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <img src="{{ asset('images/Shopify-Development.webp') }}" alt="WordPress Website Development"
-                        class="img-fluid">
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="mb-3"><span class="gradient-heading">WordPress Website</span> Development</h2>
+                <h2 class="gradient-heading">WordPress Website<br> Development</h2>
                     <p>
                         Embark on the straightforward journey of building a WordPress website that seamlessly integrates
                         with the dynamic WordPress ecosystem. Begin by selecting a theme that perfectly aligns with your
@@ -133,11 +112,15 @@
                         Learn more
                     </a>
                 </div>
+                <div class="col-lg-6">
+                    <img src="{{ asset('images/wordpresssec.png') }}" alt="WordPress Website Development"
+                        class="img-fluid">
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="wp-projects py-5 my-5 bg-white">
+    <section class="wp-projects my-5 bg-white">
         <div class="container">
             <div class="text-center mb-5">
                 <h2>

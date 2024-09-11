@@ -108,51 +108,42 @@
             <button class="btn filter-button" data-filter="typography">Envelope Design</button>
             <button class="btn filter-button" data-filter="illustrative">Letterhead Design</button>
         </div>
+        <div class="row gallery">
+        <hr class="custom-divider-ca">
 
         <div class="row gallery">
             <!-- Iconic Logos -->
             <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
                 <img src="{{ url('images/Business Cards01.png') }}" alt="Iconic Logo 1">
             </div>
-            <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
-                <img src="{{ url('images/Business Cards02.png') }}" alt="Iconic Logo 2">
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
-                <img src="{{ url('images/Business Cards03.png') }}" alt="Iconic Logo 3">
-            </div>
-
-            <!-- Typography Logos -->
-            <div class="col-lg-4 col-md-6 mb-4 filter all typography">
-            <img src="{{ url('images/Envelope Design02.png') }}" alt="Typography Logo 1">
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 filter all typography">
-            <img src="{{ url('images/Envelope Design01.png') }}" alt="Typography Logo 2">
+            <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
+                <img src="{{ url('images/Letterhead Design01.png') }}" alt="Illustrative Logo 1">
             </div>
             <div class="col-lg-4 col-md-6 mb-4 filter all typography">
             <img src="{{ url('images/Envelope Design03.png') }}" alt="Typography Logo 2">
             </div>
-
-
+            <!-- Typography Logos -->
+            <div class="col-lg-4 col-md-6 mb-4 filter all typography">
+            <img src="{{ url('images/Envelope Design02.png') }}" alt="Typography Logo 1">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
+                <img src="{{ url('images/Business Cards02.png') }}" alt="Iconic Logo 2">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
+                <img src="{{ url('images/Letterhead Design02.png') }}" alt="Illustrative Logo 1">
+            </div>
             <!-- Illustrative Logos -->
             <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
-                <img src="{{ url('images/Letterhead Design.webp') }}" alt="Illustrative Logo 1">
+                <img src="{{ url('images/Letterhead Design.png') }}" alt="Illustrative Logo 1">
             </div>
-            <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
-                <img src="{{ url('images/Letterhead Design01.webp') }}" alt="Illustrative Logo 1">
+            <div class="col-lg-4 col-md-6 mb-4 filter all typography">
+            <img src="{{ url('images/Envelope Design01.png') }}" alt="Typography Logo 2">
             </div>
-            <div class="col-lg-4 col-md-6 mb-4 filter all illustrative">
-                <img src="{{ url('images/Letterhead Design02.webp') }}" alt="Illustrative Logo 1">
+            <div class="col-lg-4 col-md-6 mb-4 filter all iconic">
+                <img src="{{ url('images/Business Cards03.png') }}" alt="Iconic Logo 3">
             </div>
-
-
-
-            <!-- Animated Logos -->
-            <div class="col-lg-4 col-md-6 mb-4 filter all animated">
-                <img src="images/logo-animation-example-conversable.gif" alt="Animated Logo 1">
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 filter all animated">
-                <img src="images/logo-design-animation.gif" alt="Animated Logo 2">
-            </div>
+           
+        
         </div>
     </div>
    </div>

@@ -6,26 +6,11 @@
 
 
     <style>
-        .banner-section h1 {
-            font-size: 32px;
-            font-weight: 700;
-        }
-
-        .gradient-heading {
-            background: linear-gradient(209deg, #501e9c 0%, #8169f1 40%, #a44cee 75%, #ff847f 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .wp-website {
-            background-color: #fffdf6
-        }
-
-        .wp-website h1 {
-            font-size: 32px;
-            font-weight: 700;
-            line-height: 45px;
-            text-transform: uppercase;
+       
+       
+        .wp-website h2 {
+            font-size: 34px;
+            font-weight: 800;
         }
 
         .wp-website p {
@@ -57,73 +42,74 @@
 
         .logo-designs-portfolio h1 {
             font-weight: 700;
-        }
-    </style>
+        } 
+        
+        
+        
+        
+    .education-logo-section {
+       background-image: url('/images/bannerShopifiy.png');
+       background-size: cover;
+       background-position: center;
+       padding: 150px 0;
+       color: #fff;
+       text-align: center;
+       display: flex;
+       flex-direction: column;
+       justify-content: center; /* Center content vertically */
+       align-items: center; /* Center content horizontally */
+   }
+   
+   .education-logo-section h1 {
+       font-weight: 700;
+       font-size: 44px;
+       text-align: center;
+       
+   }
+   .education-logo-section h2 {
+       font-weight: 700;
+       font-size: 25px !important;
+       text-align: center;
+       margin-bottom: 20px;
+   }
+   
+   
+   .education-logo-section p {
+       margin-bottom: 20px;
+   }
+   @media (max-width: 768) {
 
-    <div class="banner-section text-white">
+   .new-testimonial{
+    margin-top:0px !important;
+
+   }
+   }
+   
+   </style>
+   
+<section class="education-logo-section">
+    <div class="container">
+        <h1>Shopifiy Website Get <br>Started at $499</h1>
+        <p>Looking to take your online store to the next level? Our team of Shopify<br> developers has got you covered. We specialize in creating visually stunning<br> and user-friendly Shopify websites, complete with secure payment gateways.</p>
+
+    </div>
+</section>
+
+  
+
+    <section class="wp-website my-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h1><span class="logo-design-color">Shopifiy Website</span> Get<br>
-                        Started at <span class="logo-design-color">$499</span></h1>
-                    <p>
-                        Looking to take your online store to the next level? Our team of Shopify developers has got you covered. We specialize in creating visually stunning and user-friendly Shopify websites, complete with secure payment gateways.
-                    </p>
-                    <ul class="icon-list">
-                        <li><i class="fas fa-trophy"></i> Shopify Integration Services</li>
-                        <li><i class="fas fa-briefcase"></i> Website Development Services</li>
-                        <li><i class="fas fa-sync-alt"></i> Theme Development Services</li>
-                        <li><i class="fas fa-users"></i> Upgrading & Extension Services</li>
-                        <li><i class="fas fa-star"></i> Shopify Migration Services</li>
-                    </ul>
-                    <a href="{{ url('contact-us') }}" class="california-button-online">Get a Quote</a>
-                </div>
-                <div class="col-lg-6 text-center about-us-image-sec order-lg-2">
-                    <img src="{{ asset('images/shopify.webp') }}" alt="Shopify Development"
-                        title= "Shopify Development" class="img-fluid">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="logo-slider-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="logo-slider">
-                        <img src="images/Group 14.png" alt="Logo 1">
-                        <img src="images/Group 16.png" alt="Logo 2">
-                        <img src="images/Group 17.png" alt="Logo 3">
-                        <img src="images/Group 18.png" alt="Logo 4">
-                        <img src="images/Group 21.png" alt="Logo 5">
-                        <img src="images/Group 22.png" alt="Logo 6">
-
-                        <!-- Repeat logos to ensure continuous animation -->
-                        <img src="images/Group 14.png" alt="Logo 1">
-                        <img src="images/Group 16.png" alt="Logo 2">
-                        <img src="images/Group 17.png" alt="Logo 3">
-                        <img src="images/Group 18.png" alt="Logo 4">
-                        <img src="images/Group 21.png" alt="Logo 5">
-                        <img src="images/Group 22.png" alt="Logo 6">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section class="wp-website py-5 my-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <img src="{{ asset('images/Ecommerce-Development.webp') }}" alt="E-commerce Website Development"
+                    <img src="{{ asset('images/Shopify Developments.png') }}" alt="E-commerce Website Development"
                         class="img-fluid">
                 </div>
                 <div class="col-lg-6">
-                    <h2 class="mb-3"><span class="gradient-heading">Shopifiy Website</span> Developments</h2>
+                <h2 class="gradient-heading">Shopifiy Website<br> Developments</h2>
                     <p>
-                        Building a website on Shopify is just like opening up a charming boutique in a cozy, welcoming community. Start by claiming your very own personal corner in the virtual world by signing up for a Shopify account and browsing through the Shopify Theme Store to find the perfect design. Then, put the finishing touches on your space by customizing colors, fonts, and layout. Fill up your shelves with an array of products, thoughtfully arranged into categories for a delightful and inviting shopping experience.
+                    Building a website on Shopify is just like opening up a charming boutique in a cozy, welcoming community. Start by claiming your very own personal corner in the virtual world by signing up for a Shopify account and browsing through the Shopify Theme Store to find the perfect design. Then, put the finishing touches on your space by customizing colors, fonts, and layout. Fill up your shelves with an array of products, thoughtfully arranged into categories for a delightful and inviting shopping experience.
                     </p>
-                    <a class="btn btn-primary rounded-5" href="{{ route('packages')}}">
+                    <a class="custom-button-online" href="{{ route('packages')}}">
                         Learn more
                     </a>
                 </div>
