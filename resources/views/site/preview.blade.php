@@ -1131,11 +1131,9 @@
                                         top: (canvasHeight - boundingBox.height * scale) / 2,
                                         selectable: false, // Disable selection
                                         evented: false, // Disable events
-                                        
                                     });
 
                                     canvas.add(svgGroup);
-                                    
                                     @if(isset($selectedProduct->background_color) && !empty($selectedProduct->background_color))
                                         canvas.setBackgroundColor('{{ $selectedProduct->background_color }}', canvas.renderAll.bind(canvas));
                                     @endif
@@ -1144,8 +1142,9 @@
 
                                         $fontSize = isset($selectedProduct->preview_font_size) && strlen($selectedProduct->preview_font_size) > 1 ? $selectedProduct->preview_font_size : '35';
 
-                                        
-                                         $companyName = session('company') ?? $selectedProduct->company_name  ?? $selectedProduct->category['name'];
+                                          $companyName = session('company') ?? $selectedProduct->company_name  ?? $selectedProduct->category['name'];
+
+                                      
 
                                          $companyNameLength = strlen($companyName);
                                         if ($companyNameLength > 10 && $companyNameLength <= 15) {
@@ -1228,10 +1227,8 @@
                                         selectable: false,
                                         evented: false,
                                         width: 340,
-                                        charSpacing: {{$selectedProduct->preview_spacing}},
-                                        
-                                        fontSize: {{ $selectedProduct->preview_font_size ?? 36 }}
-
+                                        charSpacing: {{ $selectedProduct->canva_spacing ?? 100}},
+                                         
                                     });
                                     canvas.add(sampleText1);
 

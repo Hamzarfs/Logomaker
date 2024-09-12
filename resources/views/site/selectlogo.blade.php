@@ -22,8 +22,7 @@
             width: 33%;
             margin-bottom: 20px;
             position: relative;
-            height: auto;
-            /* height: 300px; */
+            height: 300px;
             overflow: hidden;
         }
 
@@ -242,10 +241,13 @@
                 @endphp
 
                 <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
+                    <div class="card-container">
 
-                    <div class="card-container" style="background-color:{{$product->background_color}}">
+                        <!-- <img src="{{ route('image.show', $product->image) }}"
+                                                                style="xwidth: 35% !important; {{ $logoPosition }}; position: absolute; {{ $logoPositionVertical }}; z-index: 10;"
+                                                                class="img-fluid portfolio-image"
+                                                                alt="{{ $product->name }}"> -->
 
-                      
 
                         <!-- <img src="{{ asset("category-image/$product->image") }}" style="xwidth: 35% !important; {{ $logoPosition }}  ;position: absolute; {{ $logoPositionVertical }};   z-index: 10;" class="img-fluid portfolio-image"
                                                                 alt="{{ $product->name }}"> -->
@@ -267,8 +269,7 @@
 
                         <div class="text-placeholder"
                             style=" z-index: 20;font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize }}; font-weight:500; margin-left:{{ $leftPosition }}; margin-top:{{ $topPosition }};letter-spacing: {{ $product->logomaker_spacing }};">
-                            {{  session('company')  ?? $product->company_name ?? $product->category['name'] }}
-                            </div>
+                            {{  session('company')  ?? $product->company_name ?? $product->category['name'] }}</div>
 
 
 

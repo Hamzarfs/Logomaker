@@ -760,8 +760,10 @@
                             selectable: true,
                             width: 540,
                             evented: true,
-                            charSpacing: {{$selectedProduct->canva_spacing}},
-                            fontSize: {{ $selectedProduct->canva_font_size ?? 44 }}
+                            charSpacing: {{ $selectedProduct->canva_spacing ?? 100}},
+                            @if(isset($selectedProduct->preview_font_size)  && strlen($selectedProduct->preview_font_size) > 1)
+                                fontSize: {{ $selectedProduct->preview_font_size }},
+                            @endif
                         });
 
 
