@@ -95,7 +95,7 @@
         </div>
     </div>
 </div>
-<!--------------------- End PROFESSIONAL LOGO DESIGNS IN CA ----------------------->
+<!--------------- End PROFESSIONAL LOGO DESIGNS IN CA ---------------->
 
 
 <!---------------------- Start Portfolio -------------------------->

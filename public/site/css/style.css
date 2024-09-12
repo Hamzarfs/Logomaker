@@ -431,6 +431,21 @@ p,
     border-color: #512F90;
     color: #f8f9fa;
 }
+/* .btn-back-arrow {
+    background: none;
+    border: none;
+    font-weight: bold;
+    color: #000; /* You can set this to your preferred color */
+    font-size: 16px;
+    padding: 0px 20px;
+}
+
+.btn-back-arrow:hover {
+    color: #000; /* Optional: Change text color on hover */
+    cursor: pointer;
+} */
+
+
 
 
 

@@ -1032,7 +1032,7 @@
     <div class="fifth-section dark-bg py-4 py-md-5">
         <div class="container text-center">
             <h3>Show off your new brand</h3>
-            <h2>MERCHANDISE & ACCESSORIES</h2>
+            <h2>BRANDED STATIONERY</h2>
 
             <div class="mockup-wrapper mt-md-4">
                 <div class="logo-wrapper-1">
@@ -1054,7 +1054,7 @@
     <div class="sixth-section py-4 py-md-5">
         <div class="container text-center">
             <h3>Get more buzz for your startup</h3>
-            <h2>SOCIAL MEDIA DESIGNS</h2>
+            <h2>MERCHANDISE & ACCESSORIES</h2>
 
             <div class="mockup-wrapper mt-md-4">
                 <div class="logo-wrapper">
