@@ -765,7 +765,7 @@
             <div class="col-md-4 mb-3 text-center">
                 <div class="contact-option">
                     <div class="icon-circle">
-                         <a href="tel:+15516665255"><i class="fas fa-phone fa-2x"></i></a>
+                        <i class="fas fa-phone fa-2x"></i>
                     </div>
                     <a href="tel:+15516665255"> +1(551)666-5255</a>
                 </div>
@@ -773,7 +773,7 @@
             <div class="col-md-4 mb-3 text-center">
                 <div class="contact-option">
                     <div class="icon-circle">
-                       <a href="mailto:support@rfslogodesign.com"> <i class="fas fa-envelope fa-2x"></i></a>
+                        <i class="fas fa-envelope fa-2x"></i>
                     </div>
                     <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a>
                 </div>
@@ -781,7 +781,7 @@
             <div class="col-md-4 mb-3 text-center">
                 <div class="contact-option">
                     <div class="icon-circle">
-                         <a href="{{ url('https://wa.me/+18482369397') }}"><i class="fas fa-comment-dots fa-2x"></i></a>
+                        <i class="fas fa-comment-dots fa-2x"></i>
                     </div>
                     <a href="{{ url('https://wa.me/+18482369397') }}">Live Chat</a>
                 </div>
