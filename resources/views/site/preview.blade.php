@@ -21,7 +21,7 @@
             /* background-color: #3557BF; */
             color: black;
         }
-        .heading h1 {
+        .heading h1 {MERCHANDISE & ACCESSORIES
             margin: 0;
         }
 
@@ -1016,23 +1016,23 @@
         </div>
     </div>
 
-    <div class="fourth-section pink-bg py-4 py-md-5">
-        <div class="container text-center">
-            <h3>Complete identity design</h3>
-            <h2>BRANDED STATIONERY</h2>
+    <!--<div class="fourth-section pink-bg py-4 py-md-5">-->
+    <!--    <div class="container text-center">-->
+    <!--        <h3>Complete identity design</h3>-->
+    <!--        <h2>BRANDED STATIONERY</h2>-->
 
-            <div class="mockup-wrapper mt-md-4">
-                <div class="logo-wrapper">
-                    <img class="logo-mockup" alt="logo">
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--        <div class="mockup-wrapper mt-md-4">-->
+    <!--            <div class="logo-wrapper">-->
+    <!--                <img class="logo-mockup" alt="logo">-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</div>-->
 
     <div class="fifth-section dark-bg py-4 py-md-5">
         <div class="container text-center">
             <h3>Show off your new brand</h3>
-            <h2>MERCHANDISE & ACCESSORIES</h2>
+            <h2>BRANDED STATIONERY</h2>
 
             <div class="mockup-wrapper mt-md-4">
                 <div class="logo-wrapper-1">
@@ -1054,7 +1054,7 @@
     <div class="sixth-section py-4 py-md-5">
         <div class="container text-center">
             <h3>Get more buzz for your startup</h3>
-            <h2>SOCIAL MEDIA DESIGNS</h2>
+            <h2>MERCHANDISE & ACCESSORIES</h2>
 
             <div class="mockup-wrapper mt-md-4">
                 <div class="logo-wrapper">

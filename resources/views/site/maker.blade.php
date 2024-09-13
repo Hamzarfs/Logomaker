@@ -762,8 +762,8 @@
                             evented: true,
                             charSpacing: {{ $selectedProduct->canva_spacing ?? 100}},
                             @if(isset($selectedProduct->preview_font_size)  && strlen($selectedProduct->preview_font_size) > 1)
-                                fontSize: {{ $selectedProduct->preview_font_size }},
-                            @endif
+                                            fontSize: {{ $selectedProduct->preview_font_size }},
+                                        @endif
                         });
 
 
