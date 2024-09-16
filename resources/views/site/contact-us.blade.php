@@ -173,12 +173,12 @@
        justify-content: center; /* Center content vertically */
        align-items: center; /* Center content horizontally */
    }
-   
+
    .education-logo-section h1 {
        font-weight: 700;
        font-size: 44px;
        text-align: center;
-       
+
    }
    .education-logo-section h2 {
        font-weight: 700;
@@ -186,8 +186,8 @@
        text-align: center;
        margin-bottom: 20px;
    }
-   
-   
+
+
    .education-logo-section p {
        margin-bottom: 20px;
    }
@@ -198,9 +198,9 @@
 
    }
    }
-   
+
    </style>
-   
+
 <section class="education-logo-section">
     <div class="container">
         <h1>Contact Us</h1>
@@ -252,7 +252,8 @@
                         <label for="name">Name</label>
                         <i class="fas fa-user form-icon"></i>
                         <input type="text" class="form-control" name="name" id="name"
-                            placeholder="Enter your name" required>
+                            placeholder="Enter your name" required
+                            title="Please enter a valid email address">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
@@ -266,7 +267,7 @@
                         <label for="phone">Phone</label>
                         <i class="fas fa-phone form-icon"></i>
                         <input type="text" class="form-control" name="phone" id="phone"
-                            placeholder="Enter your phone number" required maxlength="14" minlength="5">
+                            placeholder="Enter your phone number" required pattern="^\d{15}$" title="Please enter phone number">
                     </div>
                     <div class="form-group">
                         <label for="comment">Comment</label>
