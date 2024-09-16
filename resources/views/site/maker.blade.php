@@ -465,6 +465,30 @@
 
                             // Add each object to the canvas and adjust its position
                             ungroupedObjects.forEach(function(obj, index) {
+
+                                if (obj.type === 'text') {
+                                     
+                        // Create the fabric.Textbox for text layers
+                        var logoText = new fabric.Textbox( 'Red Feather Solution' || obj.text, {
+                            left: obj.left  ,
+                            top: obj.top  ,
+                            fontSize: obj.fontSize || 20,            // Use font size from SVG or default
+                            fill: obj.fill || '#353535',             // Use fill color from SVG or default
+                            fontFamily: obj.fontFamily || 'Arial',   // Use fontFamily from SVG or fallback
+                            selectable: true,                        // Make the text selectable and movable
+                            evented: true,                           // Enable events like dragging
+                            width: obj.width || canvas.width * 0.4   // Set width based on SVG or fallback
+                        });
+
+                        // Adjust position using the calculated offset
+                        // logoText.set({
+                           
+                        // });
+
+                        // Add the text object to the canvas
+                        canvas.add(logoText);
+                
+                    } else {
                                 // Set the object position to center the bounding box
                                 obj.set({
                                     // left: obj.left + offset.left - boundingBox
@@ -475,7 +499,7 @@
                                      
                                 });
                                 canvas.add(obj);
-
+                            }
                                 // Create a color picker for each layer
                                 var colorPicker = $('<input/>', {
                                     type: 'color',
