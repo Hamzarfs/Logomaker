@@ -21,7 +21,7 @@
             /* background-color: #3557BF; */
             color: black;
         }
-        .heading h1 {
+        .heading h1 {MERCHANDISE & ACCESSORIES
             margin: 0;
         }
 
@@ -1016,18 +1016,18 @@
         </div>
     </div>
 
-    <div class="fourth-section pink-bg py-4 py-md-5">
-        <div class="container text-center">
-            <h3>Complete identity design</h3>
-            <h2>BRANDED STATIONERY</h2>
+    <!--<div class="fourth-section pink-bg py-4 py-md-5">-->
+    <!--    <div class="container text-center">-->
+    <!--        <h3>Complete identity design</h3>-->
+    <!--        <h2>BRANDED STATIONERY</h2>-->
 
-            <div class="mockup-wrapper mt-md-4">
-                <div class="logo-wrapper">
-                    <img class="logo-mockup" alt="logo">
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--        <div class="mockup-wrapper mt-md-4">-->
+    <!--            <div class="logo-wrapper">-->
+    <!--                <img class="logo-mockup" alt="logo">-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</div>-->
 
     <div class="fifth-section dark-bg py-4 py-md-5">
         <div class="container text-center">
@@ -1134,12 +1134,17 @@
                                     });
 
                                     canvas.add(svgGroup);
+                                    @if(isset($selectedProduct->background_color) && !empty($selectedProduct->background_color))
+                                        canvas.setBackgroundColor('{{ $selectedProduct->background_color }}', canvas.renderAll.bind(canvas));
+                                    @endif
 
                                     @php
 
                                         $fontSize = isset($selectedProduct->preview_font_size) && strlen($selectedProduct->preview_font_size) > 1 ? $selectedProduct->preview_font_size : '35';
 
-                                         $companyName = session('company') ? session('company') : $selectedProduct->category->name;
+                                          $companyName = session('company') ?? $selectedProduct->company_name  ?? $selectedProduct->category['name'];
+
+                                      
 
                                          $companyNameLength = strlen($companyName);
                                         if ($companyNameLength > 10 && $companyNameLength <= 15) {
@@ -1222,7 +1227,8 @@
                                         selectable: false,
                                         evented: false,
                                         width: 340,
-
+                                        charSpacing: {{ $selectedProduct->canva_spacing ?? 100}},
+                                         
                                     });
                                     canvas.add(sampleText1);
 

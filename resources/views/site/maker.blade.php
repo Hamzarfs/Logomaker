@@ -395,7 +395,9 @@
 
             canvas.setWidth(855);
             canvas.setHeight(590);
-
+            
+                
+          
             // canvas.setWidth(505);
             // canvas.setHeight(440);
 
@@ -469,7 +471,8 @@
                                     //     .left,
                                     // top: obj.top + offset.top - boundingBox.top,
                                     selectable: true,
-                                    evented: true
+                                    evented: true,
+                                     
                                 });
                                 canvas.add(obj);
 
@@ -506,6 +509,11 @@
 
                             canvas.renderAll();
                         });
+                        
+                        
+                        @if(isset($selectedProduct->background_color) && !empty($selectedProduct->background_color))
+                            canvas.setBackgroundColor('{{ $selectedProduct->background_color }}', canvas.renderAll.bind(canvas));
+                        @endif
 
                         // Update color picker and text settings when a layer is selected
                         canvas.on('object:selected', function(e) {
@@ -715,7 +723,8 @@
                             $leftPosition = isset($selectedProduct->canva_left) && strlen($selectedProduct->canva_left) > 1 ? floatval($selectedProduct->canva_left) : '3.8';
                             $topPosition = isset($selectedProduct->canva_top) && strlen($selectedProduct->canva_top) > 1 ? floatval($selectedProduct->canva_top) : '2.2';
 
-                            $companyName = session('company') ? session('company') : $selectedProduct->category->name;
+                             
+                            $companyName = session('company') ??  $selectedProduct->company_name  ?? $selectedProduct->category['name'];
 
                             $companyNameLength = strlen($companyName);
 
@@ -743,15 +752,18 @@
                         var company = "{{ $companyName }}".replace(/&amp;/g, '&');
                         var sampleText1 = new fabric.Textbox(company, {
                             left: canvas.width / {{ $leftPosition }} - 60, // Position the text
-                            top: canvas.height / {{ $topPosition }} +
-                            120, // Position the text
+                            top: canvas.height / {{ $topPosition }} + 120, // Position the text
                             fontSize: {{ $fontSize }}, // Adjust font size as needed
                             fill: '{{ $selectedProduct->color }}',
                             fontFamily: "{{ $font }}",
                             textAlign: '{{ $textPosition }}',
                             selectable: true,
                             width: 540,
-                            evented: true
+                            evented: true,
+                            charSpacing: {{ $selectedProduct->canva_spacing ?? 100}},
+                            @if(isset($selectedProduct->preview_font_size)  && strlen($selectedProduct->preview_font_size) > 1)
+                                            fontSize: {{ $selectedProduct->preview_font_size }},
+                                        @endif
                         });
 
 

@@ -160,9 +160,7 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center button-container">
-                    <!-- <a href="{{ url('/') }}"> <button type="button" class="btn btn-secondary mx-2">Back</button></a> -->
-                    <a href="{{ url('/select-color') }}"> <button type="button" class="custom-button-online">Back</button></a>
-
+                    <a href="{{ url('/') }}"> <button type="button" class="custom-button-online">Back</button></a>
                     <button type="submit" class="custom-button-online" disabled>Next</button>
                 </div>
             </div>

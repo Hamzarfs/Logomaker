@@ -1613,12 +1613,10 @@
                             <div class="card-container2">
                                 <div class="card-inner">
                                     <div class="card-front">
-                                        {{-- <img src="{{ $category->image ? asset($category->image) : logo_asset_helper($category->latest_product->image) }}"
-                                            class="img-fluid" alt="{{ $category->name }}"> --}}
+
                                         <img src="{{ $category->image ? asset($category->image) : asset('category-image/' . $category->latest_product->image) }}"
                                             class="img-fluid" alt="{{ $category->name }}">
-                                        {{-- <img src="{{ asset($category->image ?: "category-image/{$category->latest_product->image}") }}" logo_asset_helper
-                                            class="img-fluid" alt="{{ $category->name }}"> --}}
+
                                     </div>
                                     <div class="card-back">
                                         <div class="category-name">{{ $category->name }}</div>
@@ -1630,7 +1628,10 @@
                     </div>
                 @endforeach
             </div>
-
+             {{-- <img src="{{ asset($category->image ?: "category-image/{$category->latest_product->image}") }}" logo_asset_helper
+                                            class="img-fluid" alt="{{ $category->name }}"> --}}
+  {{-- <img src="{{ $category->image ? asset($category->image) : logo_asset_helper($category->latest_product->image) }}"
+                                            class="img-fluid" alt="{{ $category->name }}"> --}}
 
             {{-- <div class="row">
                 @foreach ($products as $product)
@@ -2372,20 +2373,11 @@
                 @foreach ($categories as $category)
                     @if ($category->products->isNotEmpty())
                         <a href="{{ url('/logos/' . $category->slug) }}" class="logo-ideas-link">
-
                             <button>{{ $category->name }} Logos</button></a>
                     @endif
                 @endforeach
             </div>
         </div>
-
-
-
-
-
-
-
-
         {{-- End Category list section --}}
 
 

@@ -765,7 +765,7 @@
             <div class="col-md-4 mb-3 text-center">
                 <div class="contact-option">
                     <div class="icon-circle">
-                        <i class="fas fa-phone fa-2x"></i>
+                    <a href="tel:+15516665255"><i class="fas fa-phone fa-2x"></i></a>
                     </div>
                     <a href="tel:+15516665255"> +1(551)666-5255</a>
                 </div>
@@ -773,7 +773,7 @@
             <div class="col-md-4 mb-3 text-center">
                 <div class="contact-option">
                     <div class="icon-circle">
-                        <i class="fas fa-envelope fa-2x"></i>
+                    <a href="mailto:support@rfslogodesign.com"><i class="fas fa-envelope fa-2x"></i></a>
                     </div>
                     <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a>
                 </div>
@@ -781,7 +781,7 @@
             <div class="col-md-4 mb-3 text-center">
                 <div class="contact-option">
                     <div class="icon-circle">
-                        <i class="fas fa-comment-dots fa-2x"></i>
+                    <a href="{{ url('https://wa.me/+18482369397') }}"><i class="fas fa-comment-dots fa-2x"></i></a>
                     </div>
                     <a href="{{ url('https://wa.me/+18482369397') }}">Live Chat</a>
                 </div>
@@ -933,7 +933,7 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <!-- <h1 class="modal-title text-center">Contact Form</h1> -->
+                        <h2 class="modal-title text-center">Get Started</h2>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -942,20 +942,23 @@
                             <div class="mb-3">
                                 <label for="name" class="form-label"><b>Name</b></label>
                                 <input type="text" class="form-control" name="name" id="name"
-                                    placeholder="John Doe">
+                                    placeholder="John Doe" required>
                             </div>
 
                             <div class="mb-3">
                                 <label for="email" class="form-label"><b>Email address</b></label>
                                 <input type="email" class="form-control" name="email" id="email"
-                                    placeholder="name@example.com">
+                                    placeholder="name@example.com" required
+                                    title="Please enter a valid email address">
                             </div>
+
 
                             <div class="mb-3">
                                 <label for="phone" class="form-label"><b>Phone number</b></label>
                                 <input type="tel" class="form-control" name="phone" id="phone"
-                                    placeholder="123456789">
+                                    placeholder="123456789" required pattern="^\d{15}$" title="Please enter phone number">
                             </div>
+
 
                             <div class="mb-3">
                                 <label for="comment" class="form-label"><b>Comment</b></label>
