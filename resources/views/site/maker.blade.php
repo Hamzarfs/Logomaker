@@ -413,8 +413,10 @@
                         // Clear the canvas and color palettes
                         canvas.clear();
                         $('#color-palettes').empty();
-
-                        // Load the SVG
+@php
+$companyName = session('company') ??  $selectedProduct->company_name  ?? $selectedProduct->category['name'];
+@endphp
+                     // Load the SVG 
                         fabric.loadSVGFromString(svgString, function(objects, options) {
                             // Calculate the center of the canvas
                             @php
@@ -431,6 +433,8 @@
                                     $iconTop = 1.5;
                                 }
                                 //echo $iconLeft."DDDDDDDD".$iconTop;
+                                
+
                             @endphp
 
                             var canvasCenter = {
@@ -464,17 +468,37 @@
                             // };
 
                             // Add each object to the canvas and adjust its position
+
                             ungroupedObjects.forEach(function(obj, index) {
-                                // Set the object position to center the bounding box
-                                obj.set({
-                                    // left: obj.left + offset.left - boundingBox
-                                    //     .left,
-                                    // top: obj.top + offset.top - boundingBox.top,
-                                    selectable: true,
-                                    evented: true,
-                                     
-                                });
-                                canvas.add(obj);
+
+                                if (obj.type === 'text') {
+                                    var company = "{{ $companyName }}".replace(/&amp;/g, '&');
+                                    // Create the fabric.Textbox for text layers
+                                    var logoText = new fabric.Textbox(company , {
+                                        left: obj.left  ,
+                                        top: obj.top  ,
+                                        fontSize: "{{$selectedProduct->canva_font_size}}" || 40,            // Use font size from SVG or default
+                                        fill: "{{$selectedProduct->color}}" || '#353535',             // Use fill color from SVG or default
+                                        fontFamily: obj.fontFamily || 'Arial',   // Use fontFamily from SVG or fallback
+                                        selectable: true,                        // Make the text selectable and movable
+                                        evented: true,                           // Enable events like dragging
+                                        width: obj.width || canvas.width * 0.4   // Set width based on SVG or fallback
+                                    });
+
+                                    canvas.add(logoText);
+                            
+                                } else {
+                                    // Set the object position to center the bounding box
+                                    obj.set({
+                                        // left: obj.left + offset.left - boundingBox
+                                        //     .left,
+                                        // top: obj.top + offset.top - boundingBox.top,
+                                        selectable: true,
+                                        evented: true,
+                                        
+                                    });
+                                    canvas.add(obj);
+                                }
 
                                 // Create a color picker for each layer
                                 var colorPicker = $('<input/>', {
@@ -781,9 +805,9 @@
                         // });
 
                         // Add the text elements to the canvas
-                        canvas.add(sampleText1);
+                       // canvas.add(sampleText1);
                         // canvas.add(sampleText2);
-                        canvas.renderAll();
+                      //  canvas.renderAll();
                     },
                     error: function(xhr, status, error) {
                         console.error("Error loading SVG:", status, error);
