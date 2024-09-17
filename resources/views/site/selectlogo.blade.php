@@ -22,8 +22,7 @@
             width: 33%;
             margin-bottom: 20px;
             position: relative;
-            height: auto;
-            /* height: 300px; */
+            height: 300px;
             overflow: hidden;
         }
 
@@ -170,13 +169,13 @@
 
                     $companyNameLength = strlen($companyName);
                     if ($companyNameLength > 10 && $companyNameLength <= 15) {
-                        $fontSize = (int) str_replace('px', '', $fontSize) - 6 . 'px';
+                        $fontSize = (int) str_replace('px', '', $fontSize) - 4 . 'px';
                     } elseif ($companyNameLength > 15 && $companyNameLength <= 20) {
-                        $fontSize = (int) str_replace('px', '', $fontSize) - 12 . 'px';
+                        $fontSize = (int) str_replace('px', '', $fontSize) - 8 . 'px';
                     } elseif ($companyNameLength > 20 && $companyNameLength <= 25) {
-                        $fontSize = (int) str_replace('px', '', $fontSize) - 15 . 'px';
+                        $fontSize = (int) str_replace('px', '', $fontSize) - 12 . 'px';
                     } elseif ($companyNameLength > 25 && $companyNameLength <= 30) {
-                        $fontSize = (int) str_replace('px', '', $fontSize) - 20 . 'px';
+                        $fontSize = (int) str_replace('px', '', $fontSize) - 16 . 'px';
                     }
 
                     $topPosition =
@@ -242,10 +241,13 @@
                 @endphp
 
                 <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
-
                     <div class="card-container" style="background-color:{{$product->background_color}}">
 
-                      
+                        <!-- <img src="{{ route('image.show', $product->image) }}"
+                                                                style="xwidth: 35% !important; {{ $logoPosition }}; position: absolute; {{ $logoPositionVertical }}; z-index: 10;"
+                                                                class="img-fluid portfolio-image"
+                                                                alt="{{ $product->name }}"> -->
+
 
                         <!-- <img src="{{ asset("category-image/$product->image") }}" style="xwidth: 35% !important; {{ $logoPosition }}  ;position: absolute; {{ $logoPositionVertical }};   z-index: 10;" class="img-fluid portfolio-image"
                                                                 alt="{{ $product->name }}"> -->
@@ -266,10 +268,29 @@
 
 
                         <div class="text-placeholder"
-                            style=" z-index: 20;font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize }}; font-weight:500; margin-left:{{ $leftPosition }}; margin-top:{{ $topPosition }};letter-spacing: {{ $product->logomaker_spacing }};">
-                            {{  session('company')  ?? $product->company_name ?? $product->category['name'] }}
+                            style=" z-index: 20;font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize }}; font-weight:500; margin-left:{{ $leftPosition }};  margin-top:{{ $topPosition }};letter-spacing: {{ $product->logomaker_spacing }};">
+                                @if ($product->logo_position == 'right')
+                                @php
+                                    $text = session('company') ?? $product->company_name ?? $product->category['name'];
+                                    $words = explode(' ', $text); // Split the string into words
+                                @endphp
+    
+                                @if(count($words) > 2)
+                                    {!! implode(' ', array_slice($words, 0, 2)) . ' <br>' . implode(' ', array_slice($words, 2)) !!}
+                                @else
+                                    {{ $text }}
+                                @endif
+                            @else
+                                {{ session('company') ?? $product->company_name ?? $product->category['name'] }}
+                            @endif
+                            
+                                 @if ($product->slogan_name)
+                                    <div style=" z-index: 20;font-family: 'qhairo-regular'; color:{{ $color }}; font-size:12px; font-weight:0; ">
+                                         {{$product->slogan_name}}
+                                    </div>
+                                @endif
                             </div>
-
+                            
 
 
                         <a href="{{ url('/store-session-data-image?image=' . $product->image . '&product-id=' . $product->id . '&font=' . $font) }}"

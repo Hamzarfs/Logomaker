@@ -71,7 +71,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="service-card letterhead-design">
-                    <img src="{{ url('images/Letterhead Design.png') }}" alt="Letterhead Design">
+                    <img src="{{ url('images/latterhead01.webp') }}" alt="Letterhead Design">
                     <h4>Letterhead Design</h4>
                     <p>Our letterhead design service helps businesses and brands achieve a polished, professional identity effortlessly.</p>
                 </div>

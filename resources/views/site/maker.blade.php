@@ -753,15 +753,19 @@
                         var sampleText1 = new fabric.Textbox(company, {
                             left: canvas.width / {{ $leftPosition }} - 60, // Position the text
                             top: canvas.height / {{ $topPosition }} + 120, // Position the text
-                            fontSize: {{ $fontSize }}, // Adjust font size as needed
+                          
                             fill: '{{ $selectedProduct->color }}',
                             fontFamily: "{{ $font }}",
                             textAlign: '{{ $textPosition }}',
                             selectable: true,
-                            width: 540,
+                            width: 460,
                             evented: true,
-                            charSpacing: {{$selectedProduct->canva_spacing}},
-                            fontSize: {{ $selectedProduct->canva_font_size ?? 44 }}
+                            charSpacing: {{ $selectedProduct->canva_spacing ?? 100}},
+                            
+                           
+                            fontSize: {{ $selectedProduct->canva_font_size ?? $fontSize }},
+
+                                       
                         });
 
 

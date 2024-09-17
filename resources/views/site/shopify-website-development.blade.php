@@ -89,7 +89,7 @@
    
 <section class="education-logo-section">
     <div class="container">
-        <h1>Shopifiy Website Get <br>Started at $499</h1>
+        <h1>Shopifiy Website Design &<br>Development Services</h1>
         <p>Looking to take your online store to the next level? Our team of Shopify<br> developers has got you covered. We specialize in creating visually stunning<br> and user-friendly Shopify websites, complete with secure payment gateways.</p>
 
     </div>
@@ -109,7 +109,7 @@
                     <p>
                     Building a website on Shopify is just like opening up a charming boutique in a cozy, welcoming community. Start by claiming your very own personal corner in the virtual world by signing up for a Shopify account and browsing through the Shopify Theme Store to find the perfect design. Then, put the finishing touches on your space by customizing colors, fonts, and layout. Fill up your shelves with an array of products, thoughtfully arranged into categories for a delightful and inviting shopping experience.
                     </p>
-                    <a class="custom-button-online" href="{{ route('packages')}}">
+                    <a class="custom-button-online" href="{{ url('contact-us')}}">
                         Learn more
                     </a>
                 </div>

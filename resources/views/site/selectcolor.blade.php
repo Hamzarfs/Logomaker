@@ -256,7 +256,7 @@ body {
         <!-- Row 5: Footer -->
         <div class="row">
             <div class="col text-center">
-                <a href="{{ url('/') }}"> <button class="btn btn-secondary mx-2">Back</button></a>
+                <a href="{{ url('/') }}"> <button class="custom-button-online">Back</button></a>
          
                <a href="#"> <button class="custom-button-online">Next</button></a>
             </div>
