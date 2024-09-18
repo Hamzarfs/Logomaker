@@ -156,7 +156,9 @@
 
     </head>
 
-<body>
+    
+    <body @if (in_array(Route::currentRouteName(), ['logo-maker', 'logos'])) ondragstart="return false;" oncontextmenu="return false;" @endif>
+
 
 
 

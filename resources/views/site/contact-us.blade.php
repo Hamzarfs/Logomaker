@@ -266,7 +266,7 @@
                         <label for="phone">Phone</label>
                         <i class="fas fa-phone form-icon"></i>
                         <input type="text" class="form-control" name="phone" id="phone"
-                            placeholder="Enter your phone number" required maxlength="14" minlength="5">
+                            placeholder="Enter your phone number" required pattern="^\d{15}$" title="Please enter phone number">
                     </div>
                     <div class="form-group">
                         <label for="comment">Comment</label>
@@ -309,11 +309,11 @@
                 return;
             }
 
-            if (!phonePattern.test(phone)) {
-                alert('Please enter a valid phone number (14 digits).');
-                event.preventDefault();
-                return;
-            }
+            // if (!phonePattern.test(phone)) {
+            //     alert('Please enter a valid phone number (14 digits).');
+            //     event.preventDefault();
+            //     return;
+            // }
         });
 
         @if (session()->has('success'))

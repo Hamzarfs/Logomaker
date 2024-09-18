@@ -1,8 +1,9 @@
     @extends('site.common')
 
-    @section('title', "Hire a Logo Designer for Custom Logo Design - RFS Logo Design")
+    @section('title', 'Hire a Logo Designer for Custom Logo Design - RFS Logo Design')
 
-    @section('meta_desc', "Hire a professional logo designer for custom logo design because your brand or company deserves the best logo. RFS Logo Design has expert logo designers team.")
+    @section('meta_desc', 'Hire a professional logo designer for custom logo design because your brand or company
+        deserves the best logo. RFS Logo Design has expert logo designers team.')
 
     @section('content')
 
@@ -20,6 +21,7 @@
                 margin-bottom: 20px;
                 color: #010935;
             }
+
             .custom-container-margin-v3 {
                 margin-top: 50px;
                 margin-bottom: 50px;
@@ -42,19 +44,21 @@
             .custom-image-section-v3 {
                 display: flex;
                 justify-content: center;
-                align-items: center; /* Center the image vertically */
+                align-items: center;
+                /* Center the image vertically */
             }
 
             .custom-image-section-v3 img {
                 max-width: 100%;
                 height: auto;
             }
+
             .box {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
+                position: relative;
+                overflow: hidden;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease;
             }
 
             .box:hover {
@@ -62,11 +66,13 @@
             }
 
             .box:hover .box-content {
-                background-color: rgb(81, 47, 144); /* Purple background on hover */
+                background-color: rgb(81, 47, 144);
+                /* Purple background on hover */
             }
 
             .box:hover .box-text {
-                display: block; /* Show text on hover */
+                display: block;
+                /* Show text on hover */
             }
 
             .box-image {
@@ -77,10 +83,12 @@
 
             .box-content {
                 position: absolute;
-                top: 0; /* Ensure it covers the top of the box */
+                top: 0;
+                /* Ensure it covers the top of the box */
                 left: 0;
                 width: 100%;
-                height: 100%; /* Cover the entire box */
+                height: 100%;
+                /* Cover the entire box */
                 background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, #512f90f6);
                 color: #fff;
                 padding: 20px;
@@ -88,7 +96,8 @@
                 transition: background-color 1s ease;
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-end; /* Align text to the bottom */
+                justify-content: flex-end;
+                /* Align text to the bottom */
             }
 
             .box-heading {
@@ -100,33 +109,38 @@
             .box-text {
                 font-size: 16px;
                 margin-top: 10px;
-                display: none; /* Hide text initially */
+                display: none;
+                /* Hide text initially */
             }
 
             .box-heading-number {
-                display: block; /* Make sure the number is on a new line */
+                display: block;
+                /* Make sure the number is on a new line */
                 color: #fff;
                 padding: 2px 6px;
                 border-radius: 4px;
-                font-size: 58px; /* Adjust as needed */
+                font-size: 58px;
+                /* Adjust as needed */
                 font-weight: 900;
             }
+
             .custom-logo-process {
                 padding: 20px 0;
                 margin-bottom: -30px;
-                margin-top:50px;
+                margin-top: 50px;
             }
 
             .custom-logo-process h2 {
                 font-weight: 700;
                 color: #010935;
-                font-size:40px;
+                font-size: 40px;
             }
 
             .custom-logo-process p {
                 font-size: 18px;
                 color: #000;
             }
+
             .custom-section-v3 {
                 margin: 50px 0;
             }
@@ -158,17 +172,22 @@
 
             /* Unique class for contact section */
             .contact-section .icon-circle {
-                width: 60px; /* Adjust size as needed */
-                height: 60px; /* Adjust size as needed */
+                width: 60px;
+                /* Adjust size as needed */
+                height: 60px;
+                /* Adjust size as needed */
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: #6a70d6; /* Background color of the circle */
+                background-color: #6a70d6;
+                /* Background color of the circle */
                 border-radius: 50%;
                 margin: 0 auto 10px auto;
             }
+
             .contact-section .icon-circle i {
-                color: #ffffff; /* White color for icons */
+                color: #ffffff;
+                /* White color for icons */
             }
 
 
@@ -181,14 +200,19 @@
 
             /* Style for links in the contact section */
             .contact-section .contact-option a {
-                color: #010935; /* Black color for text */
-                font-weight: bold; /* Bold text */
-                text-decoration: none; /* Remove underline */
+                color: #010935;
+                /* Black color for text */
+                font-weight: bold;
+                /* Bold text */
+                text-decoration: none;
+                /* Remove underline */
             }
 
             .contact-section .contact-option a:hover {
-                color: #010935; /* Black color on hover */
-                text-decoration: none; /* Underline on hover (optional) */
+                color: #010935;
+                /* Black color on hover */
+                text-decoration: none;
+                /* Underline on hover (optional) */
             }
 
 
@@ -196,11 +220,13 @@
 
             @media (max-width: 1198px) and (min-width: 992px) {
                 .box-heading-number {
-                    font-size: 34px; /* Adjusted size for screens in this range */
+                    font-size: 34px;
+                    /* Adjusted size for screens in this range */
                 }
 
                 .box-heading {
-                    font-size: 22px; /* Adjusted size for screens in this range */
+                    font-size: 22px;
+                    /* Adjusted size for screens in this range */
                 }
             }
 
@@ -248,6 +274,7 @@
             }
 
             .custom-logo-page-form {
+                border-radius: 20px !important;
                 margin-top: 20px;
                 display: flex;
                 flex-direction: column;
@@ -257,7 +284,7 @@
             }
 
             .custom-logo-page-form label {
-                display: none;
+
                 font-weight: 600;
             }
 
@@ -294,7 +321,8 @@
                         <h1 class="custom-logo-page-heading">Custom Logo Design Services for Your Business</h1>
                         <p>Let our logo designs turn your ideas into professional magic!</p>
                         <div class="text-center">
-                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#contact-modal"><button class="custom-logo-page-button">Get Started</button></a>
+                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#contact-modal"><button
+                                    class="custom-logo-page-button">Get Started</button></a>
                         </div>
                     </div>
                 </div>
@@ -302,285 +330,60 @@
                     <div class="custom-logo-page-form bg-white border p-3 rounded">
                         <h3 class="custom-logo-page-form-heading text-center">Get a Free Quote</h3>
                         <form id="custom-form" method="POST" action="{{ route('customLogoSubmit') }}">
+
                             @csrf
+
                             <div class="form-group mb-2">
                                 <label for="name" class="custom-logo-page-label">Name:</label>
-                                <input type="text" class="form-control custom-logo-page-input" name="name" id="name"
-                                    placeholder="Enter your name" required>
+                                <input type="text"
+                                    class="form-control custom-logo-page-input @error('name') is-invalid @enderror"
+                                    name="name" id="name" placeholder="Enter your name" required
+                                    pattern="[A-Za-z\s]+" title="Name cannot contain special characters or numbers.">
+                                <div class="invalid-feedback">Please enter a valid name (letters and spaces only).</div>
+                                @error('name')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
+
                             <div class="form-group mb-2">
                                 <label for="email" class="custom-logo-page-label">Email:</label>
-                                <input type="email" class="form-control custom-logo-page-input" name="email" id="email"
-                                    placeholder="Enter your email" required>
+                                <input type="email"
+                                    class="form-control custom-logo-page-input @error('email') is-invalid @enderror"
+                                    name="email" id="email" placeholder="Enter your email" required>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                                @error('email')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
-                            <div class="form-group mb-2">
-                                <label for="country" class="custom-logo-page-label">Select Country:</label>
-                                <select class="form-control custom-logo-page-input" name="country" id="country" required>
-                                    <option value="" disabled selected>Select your country</option>
-                                    <!-- Include all countries here -->
-                                    <option value="ad">Andorra</option>
-                                    <option value="ae">United Arab Emirates</option>
-                                    <option value="af">Afghanistan</option>
-                                    <option value="ag">Antigua and Barbuda</option>
-                                    <option value="ai">Anguilla</option>
-                                    <option value="al">Albania</option>
-                                    <option value="am">Armenia</option>
-                                    <option value="ao">Angola</option>
-                                    <option value="ar">Argentina</option>
-                                    <option value="as">American Samoa</option>
-                                    <option value="at">Austria</option>
-                                    <option value="au">Australia</option>
-                                    <option value="aw">Aruba</option>
-                                    <option value="ax">Åland Islands</option>
-                                    <option value="az">Azerbaijan</option>
-                                    <option value="ba">Bosnia and Herzegovina</option>
-                                    <option value="bb">Barbados</option>
-                                    <option value="bd">Bangladesh</option>
-                                    <option value="be">Belgium</option>
-                                    <option value="bf">Burkina Faso</option>
-                                    <option value="bg">Bulgaria</option>
-                                    <option value="bh">Bahrain</option>
-                                    <option value="bi">Burundi</option>
-                                    <option value="bj">Benin</option>
-                                    <option value="bl">Saint Barthélemy</option>
-                                    <option value="bm">Bermuda</option>
-                                    <option value="bn">Brunei Darussalam</option>
-                                    <option value="bo">Bolivia</option>
-                                    <option value="bq">Bonaire, Sint Eustatius and Saba</option>
-                                    <option value="br">Brazil</option>
-                                    <option value="bs">Bahamas</option>
-                                    <option value="bt">Bhutan</option>
-                                    <option value="bv">Bouvet Island</option>
-                                    <option value="bw">Botswana</option>
-                                    <option value="by">Belarus</option>
-                                    <option value="bz">Belize</option>
-                                    <option value="ca">Canada</option>
-                                    <option value="cc">Cocos (Keeling) Islands</option>
-                                    <option value="cd">Congo, Democratic Republic of the</option>
-                                    <option value="cf">Central African Republic</option>
-                                    <option value="cg">Congo</option>
-                                    <option value="ch">Switzerland</option>
-                                    <option value="ci">Côte d'Ivoire</option>
-                                    <option value="ck">Cook Islands</option>
-                                    <option value="cl">Chile</option>
-                                    <option value="cm">Cameroon</option>
-                                    <option value="cn">China</option>
-                                    <option value="co">Colombia</option>
-                                    <option value="cr">Costa Rica</option>
-                                    <option value="cu">Cuba</option>
-                                    <option value="cv">Cabo Verde</option>
-                                    <option value="cw">Curaçao</option>
-                                    <option value="cx">Christmas Island</option>
-                                    <option value="cy">Cyprus</option>
-                                    <option value="cz">Czech Republic</option>
-                                    <option value="de">Germany</option>
-                                    <option value="dj">Djibouti</option>
-                                    <option value="dk">Denmark</option>
-                                    <option value="dm">Dominica</option>
-                                    <option value="do">Dominican Republic</option>
-                                    <option value="dz">Algeria</option>
-                                    <option value="ec">Ecuador</option>
-                                    <option value="ee">Estonia</option>
-                                    <option value="eg">Egypt</option>
-                                    <option value="eh">Western Sahara</option>
-                                    <option value="er">Eritrea</option>
-                                    <option value="es">Spain</option>
-                                    <option value="et">Ethiopia</option>
-                                    <option value="fi">Finland</option>
-                                    <option value="fj">Fiji</option>
-                                    <option value="fm">Federated States of Micronesia</option>
-                                    <option value="fo">Faroe Islands</option>
-                                    <option value="fr">France</option>
-                                    <option value="ga">Gabon</option>
-                                    <option value="gb">United Kingdom</option>
-                                    <option value="gd">Grenada</option>
-                                    <option value="ge">Georgia</option>
-                                    <option value="gf">French Guiana</option>
-                                    <option value="gg">Guernsey</option>
-                                    <option value="gh">Ghana</option>
-                                    <option value="gi">Gibraltar</option>
-                                    <option value="gl">Greenland</option>
-                                    <option value="gm">Gambia</option>
-                                    <option value="gn">Guinea</option>
-                                    <option value="gp">Guadeloupe</option>
-                                    <option value="gq">Equatorial Guinea</option>
-                                    <option value="gr">Greece</option>
-                                    <option value="gt">Guatemala</option>
-                                    <option value="gu">Guam</option>
-                                    <option value="gw">Guinea-Bissau</option>
-                                    <option value="gy">Guyana</option>
-                                    <option value="hk">Hong Kong</option>
-                                    <option value="hm">Heard Island and McDonald Islands</option>
-                                    <option value="hn">Honduras</option>
-                                    <option value="hr">Croatia</option>
-                                    <option value="ht">Haiti</option>
-                                    <option value="hu">Hungary</option>
-                                    <option value="id">Indonesia</option>
-                                    <option value="ie">Ireland</option>
-                                    <option value="il">Israel</option>
-                                    <option value="im">Isle of Man</option>
-                                    <option value="in">India</option>
-                                    <option value="io">British Indian Ocean Territory</option>
-                                    <option value="iq">Iraq</option>
-                                    <option value="ir">Iran</option>
-                                    <option value="is">Iceland</option>
-                                    <option value="it">Italy</option>
-                                    <option value="je">Jersey</option>
-                                    <option value="jm">Jamaica</option>
-                                    <option value="jo">Jordan</option>
-                                    <option value="jp">Japan</option>
-                                    <option value="ke">Kenya</option>
-                                    <option value="kg">Kyrgyzstan</option>
-                                    <option value="kh">Cambodia</option>
-                                    <option value="ki">Kiribati</option>
-                                    <option value="km">Comoros</option>
-                                    <option value="kn">Saint Kitts and Nevis</option>
-                                    <option value="kp">North Korea</option>
-                                    <option value="kr">South Korea</option>
-                                    <option value="kw">Kuwait</option>
-                                    <option value="ky">Cayman Islands</option>
-                                    <option value="kz">Kazakhstan</option>
-                                    <option value="la">Laos</option>
-                                    <option value="lb">Lebanon</option>
-                                    <option value="lc">Saint Lucia</option>
-                                    <option value="li">Liechtenstein</option>
-                                    <option value="lk">Sri Lanka</option>
-                                    <option value="lr">Liberia</option>
-                                    <option value="ls">Lesotho</option>
-                                    <option value="lt">Lithuania</option>
-                                    <option value="lu">Luxembourg</option>
-                                    <option value="lv">Latvia</option>
-                                    <option value="ly">Libya</option>
-                                    <option value="ma">Morocco</option>
-                                    <option value="mc">Monaco</option>
-                                    <option value="md">Moldova</option>
-                                    <option value="me">Montenegro</option>
-                                    <option value="mf">Saint Martin</option>
-                                    <option value="mg">Madagascar</option>
-                                    <option value="mh">Marshall Islands</option>
-                                    <option value="mk">North Macedonia</option>
-                                    <option value="ml">Mali</option>
-                                    <option value="mm">Myanmar</option>
-                                    <option value="mn">Mongolia</option>
-                                    <option value="mo">Macao</option>
-                                    <option value="mp">Northern Mariana Islands</option>
-                                    <option value="mq">Martinique</option>
-                                    <option value="mr">Mauritania</option>
-                                    <option value="ms">Montserrat</option>
-                                    <option value="mt">Malta</option>
-                                    <option value="mu">Mauritius</option>
-                                    <option value="mv">Maldives</option>
-                                    <option value="mw">Malawi</option>
-                                    <option value="mx">Mexico</option>
-                                    <option value="my">Malaysia</option>
-                                    <option value="mz">Mozambique</option>
-                                    <option value="na">Namibia</option>
-                                    <option value="nc">New Caledonia</option>
-                                    <option value="ne">Niger</option>
-                                    <option value="nf">Norfolk Island</option>
-                                    <option value="ng">Nigeria</option>
-                                    <option value="ni">Nicaragua</option>
-                                    <option value="nl">Netherlands</option>
-                                    <option value="no">Norway</option>
-                                    <option value="np">Nepal</option>
-                                    <option value="nr">Nauru</option>
-                                    <option value="nu">Niue</option>
-                                    <option value="nz">New Zealand</option>
-                                    <option value="om">Oman</option>
-                                    <option value="pa">Panama</option>
-                                    <option value="pe">Peru</option>
-                                    <option value="pf">French Polynesia</option>
-                                    <option value="pg">Papua New Guinea</option>
-                                    <option value="ph">Philippines</option>
-                                    <option value="pk">Pakistan</option>
-                                    <option value="pl">Poland</option>
-                                    <option value="pm">Saint Pierre and Miquelon</option>
-                                    <option value="pn">Pitcairn</option>
-                                    <option value="pr">Puerto Rico</option>
-                                    <option value="pt">Portugal</option>
-                                    <option value="pw">Palau</option>
-                                    <option value="py">Paraguay</option>
-                                    <option value="qa">Qatar</option>
-                                    <option value="re">Réunion</option>
-                                    <option value="ro">Romania</option>
-                                    <option value="rs">Serbia</option>
-                                    <option value="ru">Russia</option>
-                                    <option value="rw">Rwanda</option>
-                                    <option value="sa">Saudi Arabia</option>
-                                    <option value="sb">Solomon Islands</option>
-                                    <option value="sc">Seychelles</option>
-                                    <option value="sd">Sudan</option>
-                                    <option value="se">Sweden</option>
-                                    <option value="sg">Singapore</option>
-                                    <option value="sh">Saint Helena</option>
-                                    <option value="si">Slovenia</option>
-                                    <option value="sj">Svalbard and Jan Mayen</option>
-                                    <option value="sk">Slovakia</option>
-                                    <option value="sl">Sierra Leone</option>
-                                    <option value="sm">San Marino</option>
-                                    <option value="sn">Senegal</option>
-                                    <option value="so">Somalia</option>
-                                    <option value="sr">Suriname</option>
-                                    <option value="ss">South Sudan</option>
-                                    <option value="st">São Tomé and Príncipe</option>
-                                    <option value="sv">El Salvador</option>
-                                    <option value="sx">Sint Maarten</option>
-                                    <option value="sy">Syrian Arab Republic</option>
-                                    <option value="sz">Swaziland</option>
-                                    <option value="tc">Turks and Caicos Islands</option>
-                                    <option value="td">Chad</option>
-                                    <option value="tf">French Southern Territories</option>
-                                    <option value="tg">Togo</option>
-                                    <option value="th">Thailand</option>
-                                    <option value="tj">Tajikistan</option>
-                                    <option value="tk">Tokelau</option>
-                                    <option value="tl">Timor-Leste</option>
-                                    <option value="tm">Turkmenistan</option>
-                                    <option value="tn">Tunisia</option>
-                                    <option value="to">Tonga</option>
-                                    <option value="tr">Turkey</option>
-                                    <option value="tt">Trinidad and Tobago</option>
-                                    <option value="tv">Tuvalu</option>
-                                    <option value="tz">Tanzania</option>
-                                    <option value="ua">Ukraine</option>
-                                    <option value="ug">Uganda</option>
-                                    <option value="um">United States Minor Outlying Islands</option>
-                                    <option value="un">United Nations</option>
-                                    <option value="us">United States</option>
-                                    <option value="uy">Uruguay</option>
-                                    <option value="uz">Uzbekistan</option>
-                                    <option value="va">Vatican City</option>
-                                    <option value="vc">Saint Vincent and the Grenadines</option>
-                                    <option value="ve">Venezuela</option>
-                                    <option value="vg">British Virgin Islands</option>
-                                    <option value="vi">U.S. Virgin Islands</option>
-                                    <option value="vn">Viet Nam</option>
-                                    <option value="vu">Vanuatu</option>
-                                    <option value="wf">Wallis and Futuna</option>
-                                    <option value="ws">Samoa</option>
-                                    <option value="ye">Yemen</option>
-                                    <option value="yt">Mayotte</option>
-                                    <option value="za">South Africa</option>
-                                    <option value="zm">Zambia</option>
-                                    <option value="zw">Zimbabwe</option>
-                                </select>
-                            </div>
+
                             <div class="form-group mb-2">
                                 <label for="phone" class="custom-logo-page-label">Phone Number:</label>
-                                <input type="tel" class="form-control custom-logo-page-input iti" name="phone"
-                                    id="phone" placeholder="Enter your phone number" required>
+                                <input type="tel"
+                                    class="form-control custom-logo-page-input @error('phone') is-invalid @enderror"
+                                    name="phone" id="phone" placeholder="Enter your phone number" required
+                                    pattern="^\+?[0-9\s]{10,15}$"
+                                    title="Phone number should contain only numbers and spaces, and can start with a '+'."
+                                    maxlength="15">
+                                <div class="invalid-feedback">Please enter a valid phone number (max 15 digits).</div>
+                                @error('phone')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
+
                             <div class="form-group mb-2">
                                 <label for="message" class="custom-logo-page-label">Comments:</label>
                                 <textarea class="form-control custom-logo-page-textarea" name="message" id="message" rows="2"
                                     placeholder="Your comments" required></textarea>
                             </div>
-                            <form action="{{ url('/logo-maker') }}" method="POST">
-                            <button type="submit" class="btn btn-secondary custom-logo-page-submit align-left">Submit</button>
-                            </form>
+
+                            <button type="submit"
+                                class="btn btn-secondary custom-logo-page-submit align-left">Submit</button>
+                        </form>
+
                     </div>
                 </div>
             </div>
+        </div>
 
 
         <div class="container custom-container-margin-v3">
@@ -588,10 +391,10 @@
                 <div class="col-lg-6 custom-text-section-v3">
                     <h2>Same Premium Logos, Now Faster!</h2>
                     <p>We have delivered top-notch designs to thousands of clients. With our free logo services,
-                    get high-quality, customizable logos in minutes straight from our expert designers!</p>
+                        get high-quality, customizable logos in minutes straight from our expert designers!</p>
                     <p>We know you are eager to launch your business, so our simple and speedy customizable
-                    logo design process is here to help. Below are a few simple steps we follow and produce
-                    a professional logo worthy of your brand in no time at all.</p>
+                        logo design process is here to help. Below are a few simple steps we follow and produce
+                        a professional logo worthy of your brand in no time at all.</p>
                     <div class="custom-bold-text-v3">Let Us Create A Custom Logo With Ease!</div>
                 </div>
                 <div class="col-lg-6 custom-image-section-v3">
@@ -607,7 +410,8 @@
             <div class="container portfolio-section">
                 <h2 class="portfolio-heading">Hire Logo Designer for Custom Logo Design</h2>
                 <p class="main-description-online">
-                    Are you looking for a professional logo that truly represents your company? Hire an expert logo designer for
+                    Are you looking for a professional logo that truly represents your company? Hire an expert logo designer
+                    for
                     custom logo design at RFS Logo Design tailored to your business. Stand out with a unique and memorable
                     identity that leaves a lasting impression.
                 </p>
@@ -687,109 +491,122 @@
 
 
 
-    <!----------------------start simple and fast --------------------->
-    <section class="custom-logo-process">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h2>Simple and Fast<br>Customizable Logo<br>Design Process</h2>
-                </div>
-                <div class="col-md-6">
-                    <p style="text-align: justify;">We understand the rush to launch your business startup, and that’s why customizable logos make sense. Getting a professional logo design from our advance studio isn’t hard, just follow these steps.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <div class="box">
-                    <img src="images/Frame 20.png" class="box-image" alt="Image 1">
-                    <div class="box-content">
-                        <span class="box-heading-number">01</span>
-                        <h3 class="box-heading">Discovery and Research</h3>
-                        <p class="box-text">First up, we dive into learning all about your brand, audience, and competitors. This helps us get
-                            a feel for what your logo should say and how it should stand out. We’ll brainstorm, survey, and check out what others in your space are doing.</p>
+        <!----------------------start simple and fast --------------------->
+        <section class="custom-logo-process">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2>Simple and Fast<br>Customizable Logo<br>Design Process</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <p style="text-align: justify;">We understand the rush to launch your business startup, and that’s
+                            why customizable logos make sense. Getting a professional logo design from our advance studio
+                            isn’t hard, just follow these steps.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <div class="box">
-                    <img src="images/Frame 21.png" class="box-image" alt="Image 2">
-                    <div class="box-content">
-                        <span class="box-heading-number">02</span>
-                        <h3 class="box-heading">Concept<br> Refinement</h3>
-                        <p class="box-text">We begin by sketching ideas and exploring different styles through rough drafts and mood boards.
-                            Once the best concepts emerge, we refine them by finalizing colors, typography, and ensuring the logo works across all formats. Your feedback guides the final tweaks.</p>
+        </section>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="box">
+                        <img src="images/Frame 20.png" class="box-image" alt="Image 1">
+                        <div class="box-content">
+                            <span class="box-heading-number">01</span>
+                            <h3 class="box-heading">Discovery and Research</h3>
+                            <p class="box-text">First up, we dive into learning all about your brand, audience, and
+                                competitors. This helps us get
+                                a feel for what your logo should say and how it should stand out. We’ll brainstorm, survey,
+                                and check out what others in your space are doing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="box">
+                        <img src="images/Frame 21.png" class="box-image" alt="Image 2">
+                        <div class="box-content">
+                            <span class="box-heading-number">02</span>
+                            <h3 class="box-heading">Concept<br> Refinement</h3>
+                            <p class="box-text">We begin by sketching ideas and exploring different styles through rough
+                                drafts and mood boards.
+                                Once the best concepts emerge, we refine them by finalizing colors, typography, and ensuring
+                                the logo works across all formats. Your feedback guides the final tweaks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="box">
+                        <img src="images/Frame 22.png" class="box-image" alt="Image 3">
+                        <div class="box-content">
+                            <span class="box-heading-number">03</span>
+                            <h3 class="box-heading">Finalization and Delivery</h3>
+                            <p class="box-text">Finally, we prepare your logo for action. We create various formats for
+                                different uses and
+                                make sure they look great everywhere. Plus, we might put together a style guide to keep
+                                everything consistent.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <div class="box">
-                    <img src="images/Frame 22.png" class="box-image" alt="Image 3">
-                    <div class="box-content">
-                        <span class="box-heading-number">03</span>
-                        <h3 class="box-heading">Finalization and Delivery</h3>
-                        <p class="box-text">Finally, we prepare your logo for action. We create various formats for different uses and
-                            make sure they look great everywhere. Plus, we might put together a style guide to keep everything consistent.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-    <!----------------------end simple and fast --------------------->
-    <div class="container custom-section-v3">
-        <div class="row align-items-center">
-            <div class="col-lg-6 custom-image-v3"style = padding-right:50px;>
-                <img src="images/Mask group (1).png" alt="Affordable Logo Design">
+            <!----------------------end simple and fast --------------------->
+            <div class="container custom-section-v3">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 custom-image-v3"style=padding-right:50px;>
+                        <img src="images/Mask group (1).png" alt="Affordable Logo Design">
+                    </div>
+                    <div class="col-lg-6 custom-content-v3">
+                        <h2>We Craft Affordable Logo Designs To Boost Creativity</h2>
+                        <p style="text-align: justify;">Allow us to create logo designs with top-notch quality! We offer
+                            affordable, professional logos perfect for startups and small businesses. Get the same expert
+                            design style without the hefty price tag, thanks to our global team of skilled logo designers.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-6 custom-content-v3">
-                <h2>We Craft Affordable Logo Designs To Boost Creativity</h2>
-                <p style="text-align: justify;">Allow us to create logo designs with top-notch quality! We offer affordable, professional logos perfect for startups and small businesses. Get the same expert design style without the hefty price tag, thanks to our global team of skilled logo designers.</p>
-            </div>
-        </div>
-    </div>
 
-    </div>
+        </div>
 
 
         <!----------------------start need help--------------------->
 
 
 
-    <section class="container py-5 contact-section">
-        <div class="text-center mb-4">
-            <h2 class="font-weight-bold">Need help choosing a professional logo design?<br> Consult with our expert!</h2>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-4 mb-3 text-center">
-                <div class="contact-option">
-                    <div class="icon-circle">
-                         <a href="tel:+15516665255"><i class="fas fa-phone fa-2x"></i></a>
+        <section class="container py-5 contact-section">
+            <div class="text-center mb-4">
+                <h2 class="font-weight-bold">Need help choosing a professional logo design?<br> Consult with our expert!
+                </h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-3 text-center">
+                    <div class="contact-option">
+                        <div class="icon-circle">
+                            <a href="tel:+15516665255"><i class="fas fa-phone fa-2x"></i></a>
+                        </div>
+                        <a href="tel:+15516665255"> +1(551)666-5255</a>
                     </div>
-                    <a href="tel:+15516665255"> +1(551)666-5255</a>
+                </div>
+                <div class="col-md-4 mb-3 text-center">
+                    <div class="contact-option">
+                        <div class="icon-circle">
+                            <a href="mailto:support@rfslogodesign.com"><i class="fas fa-envelope fa-2x"></i></a>
+                        </div>
+                        <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 text-center">
+                    <div class="contact-option">
+                        <div class="icon-circle">
+                            <a href="{{ url('https://wa.me/+18482369397') }}"><i
+                                    class="fas fa-comment-dots fa-2x"></i></a>
+                        </div>
+                        <a href="{{ url('https://wa.me/+18482369397') }}">Live Chat</a>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-3 text-center">
-                <div class="contact-option">
-                    <div class="icon-circle">
-                       <a href="mailto:support@rfslogodesign.com"> <i class="fas fa-envelope fa-2x"></i></a>
-                    </div>
-                    <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a>
-                </div>
-            </div>
-            <div class="col-md-4 mb-3 text-center">
-                <div class="contact-option">
-                    <div class="icon-circle">
-                         <a href="{{ url('https://wa.me/+18482369397') }}"><i class="fas fa-comment-dots fa-2x"></i></a>
-                    </div>
-                    <a href="{{ url('https://wa.me/+18482369397') }}">Live Chat</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!----------------------start need help--------------------->
+        <!----------------------start need help--------------------->
 
 
 
@@ -937,42 +754,76 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form action="{{ route('contactUs') }}" method="post">
+                        <form action="{{ route('contactUs') }}" method="post" id="contactForm" novalidate>
                             @csrf
+
                             <div class="mb-3">
                                 <label for="name" class="form-label"><b>Name</b></label>
-                                <input type="text" class="form-control" name="name" id="name"
-                                    placeholder="John Doe" required>
+                                <input type="text" class="form-control @error('name') is-invalid @enderror"
+                                    name="name" id="name" placeholder="John Doe" required pattern="[A-Za-z\s]+"
+                                    title="Name cannot contain special characters or numbers.">
+                                <div class="invalid-feedback">Please enter a valid name (letters and spaces only).</div>
+                                @error('name')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="mb-3">
                                 <label for="email" class="form-label"><b>Email address</b></label>
-                                <input type="email" class="form-control" name="email" id="email"
-                                    placeholder="name@example.com" required
+                                <input type="email" class="form-control @error('email') is-invalid @enderror"
+                                    name="email" id="email" placeholder="name@example.com" required
                                     title="Please enter a valid email address">
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                                @error('email')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
-
 
                             <div class="mb-3">
                                 <label for="phone" class="form-label"><b>Phone number</b></label>
-                                <input type="tel" class="form-control" name="phone" id="phone"
-                                    placeholder="123456789" required pattern="^\d{15}$" title="Please enter phone number">
+                                <input type="tel" class="form-control @error('phone') is-invalid @enderror"
+                                    name="phone" id="phone" placeholder="123456789" required
+                                    pattern="^\+?[0-9\s]{11,15}$"
+                                    title="Phone number should be between 11 and 15 digits and may start with a '+'."
+                                    maxlength="15">
+                                <div class="invalid-feedback">Please enter a valid phone number (11 to 15 digits).</div>
+                                @error('phone')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
-
 
                             <div class="mb-3">
                                 <label for="comment" class="form-label"><b>Comment</b></label>
-                                <textarea name="comment" id="comment" rows="5" class="form-control" placeholder="Comments"></textarea>
+                                <textarea name="comment" id="comment" rows="5" class="form-control" placeholder="Comments" required></textarea>
                             </div>
 
                             <div class="text-center d-grid">
                                 <button type="submit" class="btn btn-lg btn-primary">Submit</button>
                             </div>
                         </form>
+
                     </div>
                 </div>
             </div>
         </div>
+
+        <script>
+            document.getElementById('email').addEventListener('input', function() {
+                var emailInput = this.value;
+                var emailError = document.getElementById('emailError');
+
+                // Regular expression to validate email with dot in domain
+                var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+                if (!emailPattern.test(emailInput)) {
+                    emailError.style.display = 'block'; // Show error
+                    this.classList.add('is-invalid'); // Add invalid class to input
+                } else {
+                    emailError.style.display = 'none'; // Hide error
+                    this.classList.remove('is-invalid'); // Remove invalid class
+                }
+            });
+        </script>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
@@ -1007,4 +858,88 @@
                 @endif
             @endif
         </script>
+
+        <script>
+            document.getElementById('custom-form').addEventListener('submit', function(event) {
+                let form = event.target;
+                let isValid = true;
+
+                // Name validation: no special characters
+                let nameField = form.querySelector('#name');
+                let nameRegex = /^[A-Za-z\s]+$/;
+                if (!nameRegex.test(nameField.value.trim())) {
+                    nameField.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    nameField.classList.remove('is-invalid');
+                }
+
+                // Email validation: proper email format
+                let emailField = form.querySelector('#email');
+                let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailField.value.trim())) {
+                    emailField.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    emailField.classList.remove('is-invalid');
+                }
+
+                // Phone validation: only numbers and spaces, and maximum 15 characters
+                let phoneField = form.querySelector('#phone');
+                let phoneRegex = /^\+?[0-9\s]{10,15}$/;
+                if (!phoneRegex.test(phoneField.value.trim())) {
+                    phoneField.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    phoneField.classList.remove('is-invalid');
+                }
+
+                if (!isValid) {
+                    event.preventDefault(); // Prevent form submission if validation fails
+                }
+            });
+        </script>
+        <script>
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                let form = event.target;
+                let isValid = true;
+
+                // Name validation: no special characters
+                let nameField = form.querySelector('#name');
+                let nameRegex = /^[A-Za-z\s]+$/;
+                if (!nameRegex.test(nameField.value.trim())) {
+                    nameField.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    nameField.classList.remove('is-invalid');
+                }
+
+                // Email validation: proper email format
+                let emailField = form.querySelector('#email');
+                let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailField.value.trim())) {
+                    emailField.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    emailField.classList.remove('is-invalid');
+                }
+
+                // Phone validation: between 11 to 15 digits
+                let phoneField = form.querySelector('#phone');
+                let phoneRegex = /^\+?[0-9\s]{11,15}$/;
+                if (!phoneRegex.test(phoneField.value.trim())) {
+                    phoneField.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    phoneField.classList.remove('is-invalid');
+                }
+
+                if (!isValid) {
+                    event.preventDefault(); // Prevent form submission if validation fails
+                }
+            });
+        </script>
+
+
+
     @endsection

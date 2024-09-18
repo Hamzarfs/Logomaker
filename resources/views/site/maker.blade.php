@@ -395,9 +395,9 @@
 
             canvas.setWidth(855);
             canvas.setHeight(590);
-            
-                
-          
+
+
+
             // canvas.setWidth(505);
             // canvas.setHeight(440);
 
@@ -416,7 +416,7 @@
 @php
 $companyName = session('company') ??  $selectedProduct->company_name  ?? $selectedProduct->category['name'];
 @endphp
-                     // Load the SVG 
+                     // Load the SVG
                         fabric.loadSVGFromString(svgString, function(objects, options) {
                             // Calculate the center of the canvas
                             @php
@@ -433,7 +433,7 @@ $companyName = session('company') ??  $selectedProduct->company_name  ?? $select
                                     $iconTop = 1.5;
                                 }
                                 //echo $iconLeft."DDDDDDDD".$iconTop;
-                                
+
 
                             @endphp
 
@@ -486,7 +486,7 @@ $companyName = session('company') ??  $selectedProduct->company_name  ?? $select
                                     });
 
                                     canvas.add(logoText);
-                            
+
                                 } else {
                                     // Set the object position to center the bounding box
                                     obj.set({
@@ -495,7 +495,7 @@ $companyName = session('company') ??  $selectedProduct->company_name  ?? $select
                                         // top: obj.top + offset.top - boundingBox.top,
                                         selectable: true,
                                         evented: true,
-                                        
+
                                     });
                                     canvas.add(obj);
                                 }
@@ -533,8 +533,8 @@ $companyName = session('company') ??  $selectedProduct->company_name  ?? $select
 
                             canvas.renderAll();
                         });
-                        
-                        
+
+
                         @if(isset($selectedProduct->background_color) && !empty($selectedProduct->background_color))
                             canvas.setBackgroundColor('{{ $selectedProduct->background_color }}', canvas.renderAll.bind(canvas));
                         @endif
@@ -747,7 +747,7 @@ $companyName = session('company') ??  $selectedProduct->company_name  ?? $select
                             $leftPosition = isset($selectedProduct->canva_left) && strlen($selectedProduct->canva_left) > 1 ? floatval($selectedProduct->canva_left) : '3.8';
                             $topPosition = isset($selectedProduct->canva_top) && strlen($selectedProduct->canva_top) > 1 ? floatval($selectedProduct->canva_top) : '2.2';
 
-                             
+
                             $companyName = session('company') ??  $selectedProduct->company_name  ?? $selectedProduct->category['name'];
 
                             $companyNameLength = strlen($companyName);
@@ -777,37 +777,40 @@ $companyName = session('company') ??  $selectedProduct->company_name  ?? $select
                         var sampleText1 = new fabric.Textbox(company, {
                             left: canvas.width / {{ $leftPosition }} - 60, // Position the text
                             top: canvas.height / {{ $topPosition }} + 120, // Position the text
-                            fontSize: {{ $fontSize }}, // Adjust font size as needed
+
                             fill: '{{ $selectedProduct->color }}',
                             fontFamily: "{{ $font }}",
                             textAlign: '{{ $textPosition }}',
                             selectable: true,
-                            width: 540,
+                            width: 460,
                             evented: true,
                             charSpacing: {{ $selectedProduct->canva_spacing ?? 100}},
-                            @if(isset($selectedProduct->preview_font_size)  && strlen($selectedProduct->preview_font_size) > 1)
-                                            fontSize: {{ $selectedProduct->preview_font_size }},
-                                        @endif
+
+
+                            fontSize: {{ $selectedProduct->canva_font_size ?? $fontSize }},
+
+
                         });
 
 
                         // // Add "Sample 2" text element
-                        // var sampleText2 = new fabric.Textbox('Slogan Here', {
-                        //     left: canvas.width / 2 - 40, // Position the text
-                        //     top: canvas.height / 2 + 180, // Position the text
-                        //     fontSize: 14,
-                        //     width: 80,
-                        //     fill: '#000000',
-                        //     fontFamily: 'Arial',
-                        //     textAlign: 'center',
-                        //     selectable: true,
-                        //     evented: true
-                        // });
+                        var sampleText2 = new fabric.Textbox('Slogan Here', {
+                            left: canvas.width / {{ $selectedProduct->canva_slogan_left ?? 2}} - 40, // Position the text
+                            top: canvas.height / {{ $selectedProduct->canva_slogan_top ?? 2}} + 180, // Position the text
+                            fontSize: {{ $selectedProduct->canva_slogan_size ?? 14}}  ,
+                            width: 180,
+                            fill: '{{ $selectedProduct->color }}',
+                            fontFamily: 'Arial',
+                            textAlign: 'center',
+                            selectable: true,
+                            evented: true,
+                            charSpacing: {{ $selectedProduct->canva_slogan_spacing ?? 100 }}
+                        });
 
                         // Add the text elements to the canvas
-                       // canvas.add(sampleText1);
-                        // canvas.add(sampleText2);
-                      //  canvas.renderAll();
+                        canvas.add(sampleText1);
+                         canvas.add(sampleText2);
+                        canvas.renderAll();
                     },
                     error: function(xhr, status, error) {
                         console.error("Error loading SVG:", status, error);

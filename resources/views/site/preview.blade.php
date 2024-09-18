@@ -1231,7 +1231,23 @@
                                          
                                     });
                                     canvas.add(sampleText1);
+                       
+                                    var sampleText2 = new fabric.Textbox('{{$selectedProduct->slogan_name}}', {
+                                        left: canvas.width / 2 - 40, // Position the text
+                                        top: canvas.height / 2 + 105, // Position the text
+                                        fontSize: 14,
+                                        width: 280,
+                                        fill:  '{{ $selectedProduct->color }}',
+                                        fontFamily: 'Arial',
+                                        textAlign: 'left',
+                                        selectable: true,
+                                        evented: true
+                                    });
 
+                      
+                        
+                                   // canvas.add(sampleText2);
+                                    
                                     canvas.renderAll();
 
                                     // Generate data URL and save to session storage

@@ -7,7 +7,7 @@
 @section('content')
 
     <style>
-        
+
     .education-logo-section {
     background-image: url('/images/catagories2.jpg');
     background-size: cover;
@@ -25,7 +25,7 @@
     font-weight: 700;
     font-size: 44px;
     text-align: center;
-    
+
 }
 .education-logo-section h2 {
     font-weight: 700;
@@ -83,7 +83,7 @@
             .education-logo-section h1 {
     font-weight: 700;
     font-size: 30px;
-    
+
 }
 .education-logo-section h2 {
     font-weight: 700;
@@ -313,7 +313,7 @@
     </style>
 
     <!-- Top Section Start -->
-    
+
 
 
 
@@ -329,7 +329,7 @@
         <p class="text-center">Utilize our advanced {{ $categoryObj['name'] ?? '' }} logo creator tool to design a<br> professional logo for your business or company. Try it now!</p>
         <div class="row justify-content-center">
             <div class="col-md-6">
-           
+
             <form id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
                         @csrf
                         <div class="input-group mb-3">
@@ -484,7 +484,7 @@
 
                     @endphp
                     <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
-                        <div class="card-container">
+                        <div class="card-container" style="background-color:{{$product->background_color}}">
                             <!-- <img src="{{ asset("category-image/$product->image") }}" class="img-fluid portfolio-image"
                                                                         alt="{{ $product->name }}"> -->
 
@@ -499,19 +499,25 @@
                             <div class="text-placeholder"
                                 style=" z-index: 20;font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize }}; font-weight:500; margin-left:{{ $leftPosition }}; margin-top:{{ $topPosition }}">
                                   @if ($product->logo_position == 'right')
-                            @php
-                                $text = session('company') ?? $product->company_name ?? $product->category['name'];
-                                $words = explode(' ', $text); // Split the string into words
-                            @endphp
+                                    @php
+                                        $text = session('company') ?? $product->company_name ?? $product->category['name'];
+                                        $words = explode(' ', $text); // Split the string into words
+                                    @endphp
 
-                            @if(count($words) > 2)
-                                {!! implode(' ', array_slice($words, 0, 2)) . ' <br>' . implode(' ', array_slice($words, 2)) !!}
-                            @else
-                                {{ $text }}
-                            @endif
-                        @else
-                            {{ session('company') ?? $product->company_name ?? $product->category['name'] }}
-                        @endif
+                                    @if(count($words) > 2)
+                                        {!! implode(' ', array_slice($words, 0, 2)) . ' <br>' . implode(' ', array_slice($words, 2)) !!}
+                                    @else
+                                        {{ $text }}
+                                    @endif
+                                @else
+                                    {{ session('company') ?? $product->company_name ?? $product->category['name'] }}
+                                @endif
+
+                                @if ($product->slogan_name)
+                                    <div style=" z-index: 20;font-family: 'qhairo-regular'; color:{{ $color }}; font-size:12px; font-weight:0; ">
+                                         {{$product->slogan_name}}
+                                    </div>
+                                @endif
 
                             </div>
 
