@@ -105,27 +105,27 @@ class ProductController extends Controller
         $product->logomaker_left = $data['logomaker']['left'];
         $product->logomaker_top = $data['logomaker']['top'];
         $product->logomaker_font_size = $data['logomaker']['font'];
-        $product->logomaker_logo_left = $data['logomaker']['logo_left'];
-        $product->logomaker_logo_top = $data['logomaker']['logo_top'];
-        $product->logomaker_logo_size = $data['logomaker']['logo_size'];
-        $product->logomaker_spacing = $data['logomaker']['spacing'];
+        $product->logomaker_slogan_left = $data['logomaker']['slogan_left'];
+        $product->logomaker_slogan_top = $data['logomaker']['slogan_top'];
+        $product->logomaker_slogan_size = $data['logomaker']['slogan_size'];
+        $product->logomaker_slogan_spacing = $data['logomaker']['slogan_spacing'];
  
 
         $product->preview_left = $data['preview']['left'];
         $product->preview_top = $data['preview']['top'];
         $product->preview_font_size = $data['preview']['font'];
-        $product->preview_logo_left = $data['preview']['logo_left'];
-        $product->preview_logo_top = $data['preview']['logo_top'];
-        $product->preview_logo_size = $data['preview']['logo_size'];
-        $product->preview_spacing = $data['preview']['spacing'];
+        $product->preview_slogan_left = $data['preview']['slogan_left'];
+        $product->preview_slogan_top = $data['preview']['slogan_top'];
+        $product->preview_slogan_size = $data['preview']['slogan_size'];
+        $product->preview_slogan_spacing = $data['preview']['slogan_spacing'];
 
         $product->canva_left = $data['canva']['left'];
         $product->canva_top = $data['canva']['top'];
         $product->canva_font_size = $data['canva']['font'];
-        $product->canva_logo_left = $data['canva']['logo_left'];
-        $product->canva_logo_top = $data['canva']['logo_top'];
-        $product->canva_logo_size = $data['canva']['logo_size'];
-        $product->canva_spacing = $data['canva']['spacing'];
+        $product->canva_slogan_left = $data['canva']['slogan_left'];
+        $product->canva_slogan_top = $data['canva']['slogan_top'];
+        $product->canva_slogan_size = $data['canva']['slogan_size'];
+        $product->canva_slogan_spacing = $data['canva']['slogan_spacing'];
 
         $product->save();
         $productId = $product->id;
@@ -253,27 +253,27 @@ class ProductController extends Controller
         // $product->slogan_font = $request->slogan_font;
  
 
-        $product->logomaker_logo_left = $data['logomaker']['logo_left'];
-        $product->logomaker_logo_top = $data['logomaker']['logo_top'];
-        $product->logomaker_logo_size = $data['logomaker']['logo_size'];
-        $product->logomaker_spacing = $data['logomaker']['spacing'];
+        $product->logomaker_slogan_left = $data['logomaker']['slogan_left'];
+        $product->logomaker_slogan_top = $data['logomaker']['slogan_top'];
+        $product->logomaker_slogan_size = $data['logomaker']['slogan_size'];
+        $product->logomaker_slogan_spacing = $data['logomaker']['slogan_spacing'];
 
         $product->preview_left = $data['preview']['left'];
         $product->preview_top = $data['preview']['top'];
         $product->preview_font_size = $data['preview']['font'];
-        $product->preview_logo_left = $data['preview']['logo_left'];
-        $product->preview_logo_top = $data['preview']['logo_top'];
-        $product->preview_logo_size = $data['preview']['logo_size'];
-        $product->preview_spacing = $data['preview']['spacing'];
+        $product->preview_slogan_left = $data['preview']['slogan_left'];
+        $product->preview_slogan_top = $data['preview']['slogan_top'];
+        $product->preview_slogan_size = $data['preview']['slogan_size'];
+        $product->preview_slogan_spacing = $data['preview']['slogan_spacing'];
 
 
         $product->canva_left = $data['canva']['left'];
         $product->canva_top = $data['canva']['top'];
         $product->canva_font_size = $data['canva']['font'];
-        $product->canva_logo_left = $data['canva']['logo_left'];
-        $product->canva_logo_top = $data['canva']['logo_top'];
-        $product->canva_logo_size = $data['canva']['logo_size'];
-        $product->canva_spacing = $data['canva']['spacing'];
+        $product->canva_slogan_left = $data['canva']['slogan_left'];
+        $product->canva_slogan_top = $data['canva']['slogan_top'];
+        $product->canva_slogan_size = $data['canva']['slogan_size'];
+        $product->canva_slogan_spacing = $data['canva']['slogan_spacing'];
 
 
         $product->save();

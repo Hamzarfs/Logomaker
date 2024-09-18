@@ -770,21 +770,21 @@
 
 
                         // // Add "Sample 2" text element
-                        // var sampleText2 = new fabric.Textbox('Slogan Here', {
-                        //     left: canvas.width / 2 - 40, // Position the text
-                        //     top: canvas.height / 2 + 180, // Position the text
-                        //     fontSize: 14,
-                        //     width: 80,
-                        //     fill: '#000000',
-                        //     fontFamily: 'Arial',
-                        //     textAlign: 'center',
-                        //     selectable: true,
-                        //     evented: true
-                        // });
+                        var sampleText2 = new fabric.Textbox('Slogan Here', {
+                            left: canvas.width / 2 - 40, // Position the text
+                            top: canvas.height / 2 + 180, // Position the text
+                            fontSize: 14,
+                            width: 80,
+                            fill: '#000000',
+                            fontFamily: 'Arial',
+                            textAlign: 'center',
+                            selectable: true,
+                            evented: true
+                        });
 
                         // Add the text elements to the canvas
                         canvas.add(sampleText1);
-                        // canvas.add(sampleText2);
+                         canvas.add(sampleText2);
                         canvas.renderAll();
                     },
                     error: function(xhr, status, error) {
