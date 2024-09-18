@@ -126,7 +126,8 @@
         </form>
     </div>
 
-    <div class="container">
+    <div class="container" ondragstart="return false;"
+    oncontextmenu="return false;">
         <!-- Gallery -->
         <div class="row logo-gallery">
             @php
@@ -240,28 +241,12 @@
 
                 @endphp
 
-                <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
+                <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}" >
                     <div class="card-container" style="background-color:{{$product->background_color}}">
-
-                        <!-- <img src="{{ route('image.show', $product->image) }}"
-                                                                style="xwidth: 35% !important; {{ $logoPosition }}; position: absolute; {{ $logoPositionVertical }}; z-index: 10;"
-                                                                class="img-fluid portfolio-image"
-                                                                alt="{{ $product->name }}"> -->
-
-
-                        <!-- <img src="{{ asset("category-image/$product->image") }}" style="xwidth: 35% !important; {{ $logoPosition }}  ;position: absolute; {{ $logoPositionVertical }};   z-index: 10;" class="img-fluid portfolio-image"
-                                                                alt="{{ $product->name }}"> -->
-
-                        <!-- <img src="{{ asset("category-image/$product->image") }}"
-                                                            style="xwidth: 35% !important; {{ $logoPosition }}  ;position: absolute; {{ $logoPositionVertical }};   z-index: 10;"
-                                                            class="img-fluid portfolio-image"
-                                                            alt="{{ $product->name }}"
-                                                            oncontextmenu="return false;"> -->
-
+ 
                         <img src="{{ asset("category-image/$product->image") }}"
                             style="xwidth: 35% !important; {{ $logoPosition }}; position: absolute; {{ $logoPositionVertical }}; z-index: 10;"
-                            class="img-fluid portfolio-image" alt="{{ $product->name }}" ondragstart="return false;"
-                            oncontextmenu="return false;">
+                            class="img-fluid portfolio-image" alt="{{ $product->name }}" >
 
 
 

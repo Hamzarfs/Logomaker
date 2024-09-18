@@ -771,15 +771,16 @@
 
                         // // Add "Sample 2" text element
                         var sampleText2 = new fabric.Textbox('Slogan Here', {
-                            left: canvas.width / 2 - 40, // Position the text
-                            top: canvas.height / 2 + 180, // Position the text
-                            fontSize: 14,
-                            width: 80,
-                            fill: '#000000',
+                            left: canvas.width / {{ $selectedProduct->canva_slogan_left ?? 2}} - 40, // Position the text
+                            top: canvas.height / {{ $selectedProduct->canva_slogan_top ?? 2}} + 180, // Position the text
+                            fontSize: {{ $selectedProduct->canva_slogan_size ?? 14}}  ,
+                            width: 180,
+                            fill: '{{ $selectedProduct->color }}',
                             fontFamily: 'Arial',
                             textAlign: 'center',
                             selectable: true,
-                            evented: true
+                            evented: true,
+                            charSpacing: {{ $selectedProduct->canva_slogan_spacing ?? 100 }} 
                         });
 
                         // Add the text elements to the canvas
