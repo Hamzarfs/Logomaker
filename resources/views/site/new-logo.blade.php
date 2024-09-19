@@ -494,7 +494,7 @@
                                                                             alt="{{ $product->name }}"> -->
 
 
-                            <img src="{{ asset("category-image/thumbnails/$product->thumbnail") }}"
+                            <img src="{{ asset($product->thumbnail ? "category-image/thumbnails/$product->thumbnail" : "category-image/$product->image") }}"
                                 style="xwidth: 35% !important; {{ $logoPosition }}; position: absolute; {{ $logoPositionVertical }}; z-index: 10;"
                                 class="img-fluid portfolio-image" alt="{{ $product->name }}" ondragstart="return false;"
                                 oncontextmenu="return false;">
