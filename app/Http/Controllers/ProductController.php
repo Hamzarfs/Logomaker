@@ -89,7 +89,7 @@ class ProductController extends Controller
         $product->category_id = $request->category;
         $product->slug = $uniqueSlug;
         $product->color2 = $request->color2;
-      
+
         $product->background_color = $request->background_color;
    	    $product->company_name = $request->company_name;
         // $product->company_spacing = $request->company_spacing;
@@ -109,7 +109,7 @@ class ProductController extends Controller
         $product->logomaker_slogan_top = $data['logomaker']['slogan_top'];
         $product->logomaker_slogan_size = $data['logomaker']['slogan_size'];
         $product->logomaker_slogan_spacing = $data['logomaker']['slogan_spacing'];
- 
+
 
         $product->preview_left = $data['preview']['left'];
         $product->preview_top = $data['preview']['top'];
@@ -127,9 +127,10 @@ class ProductController extends Controller
         $product->canva_slogan_size = $data['canva']['slogan_size'];
         $product->canva_slogan_spacing = $data['canva']['slogan_spacing'];
 
-        $product->save();
-        $productId = $product->id;
+        // $product->save();
+        // $productId = $product->id;
         $product->image = $this->imageService->compressAndStoreImage($request->file('image'), $uniqueSlug, 'product');
+        $product->thumbnail = $this->imageService->makeImageThumbnail($product->image);
         $product->save();
         return redirect()->route('admin.product.index')->with('success', 'Product created successfully.');
     }
@@ -183,9 +184,9 @@ class ProductController extends Controller
 
         // ]);
         // old();
-
+        // dd($request->all());
         $rules = [
-            'name' => 'required|max:255',
+            'name' => 'required|string|max:255',
             'category' => 'required',
             'color' => 'required|hex_color',
             'font' => 'required|exists:fonts,id',
@@ -221,25 +222,31 @@ class ProductController extends Controller
 
         if ($real_image = $request->file('image')) {
             // Old Image remove
-            $product = Product::where('id', $request->id)->first();
+            // $product = Product::where('id', $request->id)->first();
             $image_path = public_path('category-image/' . $product->image);
             if (file_exists($image_path)) {
                 unlink($image_path);
             }
             // Added new image
             $productRealImage = 'category-image/';
-            $realImage = $product->slug . "." . $real_image->getClientOriginalExtension();
+            $realImage = $product->slug . "." . $real_image->clientExtension();
             $real_image->move($productRealImage, $realImage);
             $product->image = $realImage;
+
+            $thumbnail_path = public_path('category-image/thumbnails/' . $product->thumbnail);
+            if (file_exists($thumbnail_path)) {
+                unlink($thumbnail_path);
+            }
+            $product->thumbnail = $this->imageService->makeImageThumbnail($product->image);
         }
 
         $product->font_id = $data['font'];
         $product->color = $data['color'];
         $product->color2 = $request->color2;
-       
+
         $product->background_color = $request->background_color;
-        
-         
+
+
         $product->logo_position = $data['logo_position'];
         $product->logomaker_left = $data['logomaker']['left'];
         $product->logomaker_top = $data['logomaker']['top'];
@@ -251,7 +258,7 @@ class ProductController extends Controller
         $product->slogan_name = $request->slogan_name;
         // $product->slogan_spacing = $request->slogan_spacing;
         // $product->slogan_font = $request->slogan_font;
- 
+
 
         $product->logomaker_slogan_left = $data['logomaker']['slogan_left'];
         $product->logomaker_slogan_top = $data['logomaker']['slogan_top'];

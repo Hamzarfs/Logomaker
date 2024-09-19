@@ -13,7 +13,7 @@
 
     <style>
 
- 
+
 
 
         .logo-gallery {
@@ -246,9 +246,9 @@
 
                 <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
                     <div class="card-container" style="background-color:{{$product->background_color}}">
- 
 
-                        <img src="{{ asset("category-image/$product->image") }}"
+
+                        <img src="{{ asset("category-image/thumbnails/$product->thumbnail") }}"
                             style="xwidth: 35% !important; {{ $logoPosition }}; position: absolute; {{ $logoPositionVertical }}; z-index: 10;"
                             class="img-fluid portfolio-image" alt="{{ $product->name }}" ondragstart="return false;"
                             oncontextmenu="return false;">
@@ -264,7 +264,7 @@
                                     $text = session('company') ?? $product->company_name ?? $product->category['name'];
                                     $words = explode(' ', $text); // Split the string into words
                                 @endphp
-    
+
                                 @if(count($words) > 2)
                                     {!! implode(' ', array_slice($words, 0, 2)) . ' <br>' . implode(' ', array_slice($words, 2)) !!}
                                 @else
@@ -273,14 +273,14 @@
                             @else
                                 {{ session('company') ?? $product->company_name ?? $product->category['name'] }}
                             @endif
-                            
+
                                  @if ($product->slogan_name)
                                     <div style=" z-index: 20;font-family: 'qhairo-regular'; color:{{ $color }}; font-size:12px; font-weight:0; ">
                                          {{$product->slogan_name}}
                                     </div>
                                 @endif
                             </div>
-                            
+
 
 
                         <a href="{{ url('/store-session-data-image?image=' . $product->image . '&product-id=' . $product->id . '&font=' . $font) }}"

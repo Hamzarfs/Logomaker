@@ -2,8 +2,10 @@
 
 namespace App\Services;
 
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\File;
+use Intervention\Image\Drivers\Imagick\Driver;
+use Intervention\Image\ImageManager as Image;
 
 class ImageService
 {
@@ -81,6 +83,15 @@ class ImageService
         imagewebp($compressedImage, $savePath, 100); // Adjust quality as needed
         imagedestroy($compressedImage);
 
+        return $filename;
+    }
+
+    public function makeImageThumbnail(string $file, string $directory = 'category-image') {
+        $imgManager = new Image(Driver::class);
+        $filename = str_replace('svg', 'png', $file);
+        $outputDirectory = "$directory/thumbnails";
+        File::ensureDirectoryExists(public_path($outputDirectory));
+        $imgManager->read(public_path("$directory/$file"))->resize(243, 160)->save(public_path("$outputDirectory/$filename"));
         return $filename;
     }
 }

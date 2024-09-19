@@ -7,37 +7,39 @@
 @section('content')
 
     <style>
+        .education-logo-section {
+            background-image: url('/images/catagories2.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* Center content vertically */
+            align-items: center;
+            /* Center content horizontally */
+        }
 
-    .education-logo-section {
-    background-image: url('/images/catagories2.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0;
-    color: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-}
+        .education-logo-section h1 {
+            font-weight: 700;
+            font-size: 44px;
+            text-align: center;
 
-.education-logo-section h1 {
-    font-weight: 700;
-    font-size: 44px;
-    text-align: center;
+        }
 
-}
-.education-logo-section h2 {
-    font-weight: 700;
-    font-size: 40px;
-    text-align: center;
-    margin-bottom: 20px;
-}
+        .education-logo-section h2 {
+            font-weight: 700;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
 
-.education-logo-section p {
-    margin-bottom: 20px;
-}
+        .education-logo-section p {
+            margin-bottom: 20px;
+        }
 
 
 
@@ -80,23 +82,25 @@
             .images-container {
                 display: none;
             }
+
             .education-logo-section h1 {
-    font-weight: 700;
-    font-size: 30px;
+                font-weight: 700;
+                font-size: 30px;
 
-}
-.education-logo-section h2 {
-    font-weight: 700;
-    font-size: 24px;
-    text-align: center;
-}
+            }
+
+            .education-logo-section h2 {
+                font-weight: 700;
+                font-size: 24px;
+                text-align: center;
+            }
 
 
-.education-logo-section p {
-    margin-bottom: 20px;
-    font-size: 18px;
+            .education-logo-section p {
+                margin-bottom: 20px;
+                font-size: 18px;
 
-}
+            }
 
 
 
@@ -323,14 +327,15 @@
 
 
     <section class="education-logo-section">
-    <div class="container">
-        <h1>Free {{ $categoryObj['name'] ?? '' }} Logo Maker</h1>
-        <h2>Design Your Logo in Minutes</h2>
-        <p class="text-center">Utilize our advanced {{ $categoryObj['name'] ?? '' }} logo creator tool to design a<br> professional logo for your business or company. Try it now!</p>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
+        <div class="container">
+            <h1>Free {{ $categoryObj['name'] ?? '' }} Logo Maker</h1>
+            <h2>Design Your Logo in Minutes</h2>
+            <p class="text-center">Utilize our advanced {{ $categoryObj['name'] ?? '' }} logo creator tool to design a<br>
+                professional logo for your business or company. Try it now!</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
 
-            <form id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
+                    <form id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
                         @csrf
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" id="companyName11" name="company"
@@ -339,10 +344,10 @@
                             <input type="submit" class="custom-button-banner" value="Get Started">
                         </div>
                     </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
@@ -484,12 +489,12 @@
 
                     @endphp
                     <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
-                        <div class="card-container" style="background-color:{{$product->background_color}}">
+                        <div class="card-container" style="background-color:{{ $product->background_color }}">
                             <!-- <img src="{{ asset("category-image/$product->image") }}" class="img-fluid portfolio-image"
-                                                                        alt="{{ $product->name }}"> -->
+                                                                            alt="{{ $product->name }}"> -->
 
 
-                            <img src="{{ asset("category-image/$product->image") }}"
+                            <img src="{{ asset("category-image/thumbnails/$product->thumbnail") }}"
                                 style="xwidth: 35% !important; {{ $logoPosition }}; position: absolute; {{ $logoPositionVertical }}; z-index: 10;"
                                 class="img-fluid portfolio-image" alt="{{ $product->name }}" ondragstart="return false;"
                                 oncontextmenu="return false;">
@@ -498,24 +503,27 @@
 
                             <div class="text-placeholder"
                                 style=" z-index: 20;font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize }}; font-weight:500; margin-left:{{ $leftPosition }}; margin-top:{{ $topPosition }}">
-                                  @if ($product->logo_position == 'right')
+                                @if ($product->logo_position == 'right')
                                     @php
-                                        $text = session('company') ?? $product->company_name ?? $product->category['name'];
+                                        $text =
+                                            session('company') ??
+                                            ($product->company_name ?? $product->category['name']);
                                         $words = explode(' ', $text); // Split the string into words
                                     @endphp
 
-                                    @if(count($words) > 2)
+                                    @if (count($words) > 2)
                                         {!! implode(' ', array_slice($words, 0, 2)) . ' <br>' . implode(' ', array_slice($words, 2)) !!}
                                     @else
                                         {{ $text }}
                                     @endif
                                 @else
-                                    {{ session('company') ?? $product->company_name ?? $product->category['name'] }}
+                                    {{ session('company') ?? ($product->company_name ?? $product->category['name']) }}
                                 @endif
 
                                 @if ($product->slogan_name)
-                                    <div style=" z-index: 20;font-family: 'qhairo-regular'; color:{{ $color }}; font-size:12px; font-weight:0; ">
-                                         {{$product->slogan_name}}
+                                    <div
+                                        style=" z-index: 20;font-family: 'qhairo-regular'; color:{{ $color }}; font-size:12px; font-weight:0; ">
+                                        {{ $product->slogan_name }}
                                     </div>
                                 @endif
 
