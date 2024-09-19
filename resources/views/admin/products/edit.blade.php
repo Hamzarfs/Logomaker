@@ -5,9 +5,13 @@
 <x-admin>
 
     @section('title', 'Products')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css" />
 
     @section('css')
         <style>
+             #color-picker-container {
+            margin-top: 20px;
+        }
             img.w-full.modal-img {
                 width: 100%;
                 height: auto;
@@ -87,14 +91,18 @@
                                             value="{{ old('color2', $data->color2) }}" class="form-control" >
                                     </div>
                                 </div>
+
+
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="name" class="form-label">Background Color</label>
-                                        <input type="color" name="background_color" id="background_color"
-                                             value="{{ old('background_color', $data->background_color ?? '#FFFFFF') }}"  class="form-control" required>
+                                        <input type="hidden" name="background_color" id="background_color" value="{{ old('background_color', $data->background_color ?? '#FFFFFF') }}" required>
+                                        <div id="color-picker-container">
+                                            <div id="color-picker"></div>
+                                        </div>
                                     </div>
                                 </div>
-                               
+
 
                                 <div class="col-lg-4">
                                     <div class="form-group">
@@ -124,21 +132,21 @@
                                     </div>
                                 </div>
 
-                             
+
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_left" class="form-label">Company Name</label>
-                                        <input type="text" name="company_name" id="lm_left"  value="{{ old('company_name', $data->company_name) }}"  
+                                        <input type="text" name="company_name" id="lm_left"  value="{{ old('company_name', $data->company_name) }}"
                                             class="form-control" >
                                         <x-error>company_name</x-error>
                                     </div>
                                 </div>
-                                
-                               
-                                
 
-                                
-                            
+
+
+
+
+
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_left" class="form-label">slogon Name</label>
@@ -147,8 +155,8 @@
                                         <x-error>slogan_name</x-error>
                                     </div>
                                 </div>
-                                 
- 
+
+
                             </div>
 
 
@@ -182,7 +190,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_left" class="form-label">Slogan Left Position</label>
-                                        <input type="text" name="logomaker[slogan_left]" id="lm_left" 
+                                        <input type="text" name="logomaker[slogan_left]" id="lm_left"
                                          value="{{ old('logomaker.slogan_left', $data->logomaker_slogan_left) }}"
                                             class="form-control" >
                                         <x-error>logomaker[slogan_left]</x-error>
@@ -191,7 +199,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_top" class="form-label">Slogan Top Position</label>
-                                        <input type="text" name="logomaker[slogan_top]" id="lm_top" 
+                                        <input type="text" name="logomaker[slogan_top]" id="lm_top"
                                          value="{{ old('logomaker.slogan_top', $data->logomaker_slogan_top) }}"
                                             class="form-control" >
                                         <x-error>logomaker[slogan_top]</x-error>
@@ -201,7 +209,7 @@
                                     <div class="form-group">
                                         <label for="lm_logo_size" class="form-label">Slogan size</label>
                                         <input type="text" name="logomaker[slogan_size]" id="lm_logo_size"
-                                        
+
                                             value="{{ old('logomaker.slogan_size', $data->logomaker_slogan_size) }}"
                                             class="form-control" >
                                         <x-error>logomaker[slogan_size]</x-error>
@@ -249,7 +257,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_left" class="form-label">Slogan Left Position</label>
-                                        <input type="text" name="preview[slogan_left]" id="lm_left" 
+                                        <input type="text" name="preview[slogan_left]" id="lm_left"
                                          value="{{ old('preview.slogan_left', $data->preview_slogan_left) }}"
                                             class="form-control" >
                                         <x-error>preview[slogan_left]</x-error>
@@ -259,7 +267,7 @@
                                     <div class="form-group">
                                         <label for="lm_top" class="form-label">Slogan Top Position</label>
                                         <input type="text" name="preview[slogan_top]" id="lm_top"
-                                         
+
                                           value="{{ old('preview.slogan_top', $data->preview_slogan_top) }}"
                                             class="form-control" >
                                         <x-error>preview[slogan_top]</x-error>
@@ -269,7 +277,7 @@
                                     <div class="form-group">
                                         <label for="lm_slogan_size" class="form-label">Logo size</label>
                                         <input type="text" name="preview[slogan_size]" id="lm_logo_size"
-                                        
+
                                             value="{{ old('preview.slogan_size', $data->preview_slogan_size) }}"
                                             class="form-control" >
                                         <x-error>preview[slogan_size]</x-error>
@@ -318,8 +326,8 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_left" class="form-label">Slogan Left Position</label>
-                                        <input type="text" name="canva[slogan_left]" id="lm_left" 
-                                       
+                                        <input type="text" name="canva[slogan_left]" id="lm_left"
+
                                          value="{{ old('canva.slogan_left', $data->canva_slogan_left) }}"
                                             class="form-control" >
                                         <x-error>canva[slogan_left]</x-error>
@@ -328,7 +336,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_top" class="form-label">Slogan Top Position</label>
-                                        <input type="text" name="canva[slogan_top]" id="lm_top" 
+                                        <input type="text" name="canva[slogan_top]" id="lm_top"
                                          value="{{ old('canva.slogan_top', $data->canva_slogan_top) }}"
                                             class="form-control" >
                                         <x-error>canva[slogan_top]</x-error>
@@ -338,7 +346,7 @@
                                     <div class="form-group">
                                         <label for="lm_logo_size" class="form-label">Slogo size</label>
                                         <input type="text" name="canva[slogan_size]" id="lm_logo_size"
-                                        
+
                                             value="{{ old('canva.slogan_size', $data->canva_slogan_size) }}"
                                             class="form-control" >
                                         <x-error>canva[slogan_size]</x-error>
@@ -386,6 +394,40 @@
     </div>
 
     @section('js')
-        <script></script>
+        <!-- Pickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr"></script>
+    <script>
+        const pickr = Pickr.create({
+            el: '#color-picker',
+            theme: 'classic', // or 'monolith', or 'nano'
+            default: '{{ old('background_color', $data->background_color ?? '#FFFFFF') }}',
+
+            components: {
+                // Main components
+                preview: true,
+                opacity: true,
+                hue: true,
+
+                // Input / output Options
+                interaction: {
+                    hex: true,
+                    rgba: true,
+                    hsla: false,
+                    hsva: false,
+                    cmyk: false,
+                    input: true,
+                    clear: true,
+                    save: true
+                }
+            }
+        });
+
+        // Update hidden input with the selected color
+        pickr.on('change', (color, instance) => {
+            const rgbaColor = color.toRGBA().toString(); // Get the color in RGBA format
+            console.log(rgbaColor); // Do something with the color value
+            document.getElementById('background_color').value = rgbaColor; // Set the value in the hidden input
+        });
+    </script>
     @endsection
 </x-admin>
