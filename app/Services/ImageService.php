@@ -4,8 +4,6 @@ namespace App\Services;
 
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\File;
-use Intervention\Image\Drivers\Imagick\Driver;
-use Intervention\Image\ImageManager as Image;
 
 class ImageService
 {
@@ -86,12 +84,28 @@ class ImageService
         return $filename;
     }
 
-    public function makeImageThumbnail(string $file, string $directory = 'category-image') {
-        $imgManager = new Image(Driver::class);
+    public function makeImageThumbnail(string $file, string $directory = 'category-image')
+    {
         $filename = str_replace('svg', 'png', $file);
         $outputDirectory = "$directory/thumbnails";
         File::ensureDirectoryExists(public_path($outputDirectory));
-        $imgManager->read(public_path("$directory/$file"))->resize(243, 160)->save(public_path("$outputDirectory/$filename"));
+
+        // Use Imagick to convert the SVG to PNG and resize
+        $imagick = new \Imagick();
+        $imagick->setBackgroundColor(new \ImagickPixel('transparent'));  // Set transparent background
+        $imagick->readImageBlob(file_get_contents(public_path("$directory/$file")));  // Load the SVG
+        $imagick->resizeImage(243, 160, \Imagick::FILTER_LANCZOS, 1);  // Resize the image
+        $imagick->setImageFormat("png32");  // Convert to PNG with 32-bit to retain transparency
+        // $imagick->trimImage(0);  // Optionally trim any extra white space
+
+        // Save the output PNG
+        $outputPath = public_path("$outputDirectory/$filename");
+        $imagick->writeImage($outputPath);
+
+        // Clean up
+        $imagick->clear();
+        $imagick->destroy();
+
         return $filename;
     }
 }

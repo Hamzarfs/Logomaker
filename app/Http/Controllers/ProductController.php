@@ -234,7 +234,7 @@ class ProductController extends Controller
             $product->image = $realImage;
 
             $thumbnail_path = public_path('category-image/thumbnails/' . $product->thumbnail);
-            if (file_exists($thumbnail_path)) {
+            if ($product->thumbnail && file_exists($thumbnail_path) ) {
                 unlink($thumbnail_path);
             }
             $product->thumbnail = $this->imageService->makeImageThumbnail($product->image);
