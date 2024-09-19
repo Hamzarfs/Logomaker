@@ -1,18 +1,6 @@
 <x-admin>
     @section('title', 'Products')
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css" />
 
-    @section('css')
-        <style>
-             #color-picker-container {
-            margin-top: 20px;
-        }
-             
-        </style>
-    @endsection
-
-
-    </style>
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
@@ -81,12 +69,9 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="background_color" class="form-label">Background Color</label>
-                                            <input type="hidden" name="background_color" id="background_color" value="{{ old('background_color') }}" required>
-                                        <div id="color-picker-container">
-                                            <div id="color-picker"></div>
-                                        </div>
-
-
+                                        <input type="color" name="background_color" id="background_color" 
+                                            value="{{ old('background_color', '#FFFFFF') }}" 
+                                            class="form-control" required>
                                         <x-error>color</x-error>
                                     </div>
                                 </div>
@@ -346,41 +331,26 @@
         </div>
     </div>
     @section('js')
-        <!-- Pickr JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr"></script>
-    <script>
-        const pickr = Pickr.create({
-            el: '#color-picker',
-            theme: 'classic', // or 'monolith', or 'nano'
-            default: '#ffc7c7',
-
-            components: {
-                // Main components
-                preview: true,
-                opacity: true,
-                hue: true,
-
-                // Input / output Options
-                interaction: {
-                    hex: true,
-                    rgba: true,
-                    hsla: false,
-                    hsva: false,
-                    cmyk: false,
-                    input: true,
-                    clear: true,
-                    save: true
-                
-                }
-            }
-        });
-
-        // Update hidden input with the selected color
-        pickr.on('change', (color, instance) => {
-            const rgbaColor = color.toRGBA().toString(); // Get the color in RGBA format
-            console.log(rgbaColor); // Do something with the color value
-            document.getElementById('background_color').value = rgbaColor; // Set the value in the hidden input
-        });
-    </script>
+        <script>
+            // $("#category").on('change', function() {
+            //     let category = $("#category").val();
+            //     $("#submit").attr('disabled', 'disabled');
+            //     $("#submit").html('Please wait');
+            //     $.ajax({
+            //         url: "{{ route('admin.getsubcategory') }}",
+            //         type: 'GET',
+            //         data: {
+            //             category: category,
+            //         },
+            //         success: function(data) {
+            //             $("#submit").removeAttr('disabled', 'disabled');
+            //             $("#submit").html('Save');
+            //             if (data) {
+            //                 $("#subcategory").html(data);
+            //             }
+            //         }
+            //     });
+            // });
+        </script>
     @endsection
 </x-admin>

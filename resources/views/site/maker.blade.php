@@ -768,10 +768,9 @@ $companyName = session('company') ??  $selectedProduct->company_name  ?? $select
                         // Create the textbox with the session company value
                         var company = "{{ $companyName }}".replace(/&amp;/g, '&');
                         var sampleText1 = new fabric.Textbox(company, {
-                            left: canvas.width / {{ $selectedProduct->canva_left ?? 2.5}} - 274, // Position the text
+                             left: canvas.width / {{ $selectedProduct->canva_left ?? 2.5}} - 274, // Position the text
                             top: canvas.height / {{ $selectedProduct->canva_top ?? 2}} + 120, // Position the text
 
-                           
                            
                             fill: '{{ $selectedProduct->color }}',
                             fontFamily: "{{ $font }}",
@@ -786,26 +785,29 @@ $companyName = session('company') ??  $selectedProduct->company_name  ?? $select
 
 
                         });
-
-
-                        // // Add "Sample 2" text element
-                        var sampleText2 = new fabric.Textbox('Slogan Here', {
-                            left: canvas.width / {{ $selectedProduct->canva_slogan_left ?? 2.2}} - 50, // Position the text
-                            top: canvas.height / {{ $selectedProduct->canva_slogan_top ?? 2.1}} + 180, // Position the text
-                            fontSize: {{ $selectedProduct->canva_slogan_size ?? 14}}  ,
-                            width: 180,
-                            fill: '{{ $selectedProduct->color }}',
-                            fontFamily: 'Arial',
-                            textAlign: 'center',
-                            selectable: true,
-                            evented: true,
-                            charSpacing: {{ $selectedProduct->canva_slogan_spacing ?? 100 }}
-                        });
-
-                        // Add the text elements to the canvas
                         canvas.add(sampleText1);
-                         canvas.add(sampleText2);
-                        canvas.renderAll();
+
+                        @if(!empty($selectedProduct->slogan_name))
+
+                            // // Add "Sample 2" text element
+                            var sampleText2 = new fabric.Textbox('{{$selectedProduct->slogan_name}}', {
+                                left: canvas.width / {{ $selectedProduct->canva_slogan_left ?? 2.2}} - 50, // Position the text
+                                top: canvas.height / {{ $selectedProduct->canva_slogan_top ?? 2.1}} + 180, // Position the text
+                                fontSize: {{ $selectedProduct->canva_slogan_size ?? 14}}  ,
+                                width: 180,
+                                fill: '{{ $selectedProduct->color }}',
+                                fontFamily: 'Arial',
+                                textAlign: 'center',
+                                selectable: true,
+                                evented: true,
+                                charSpacing: {{ $selectedProduct->canva_slogan_spacing ?? 100 }}
+                            });
+
+                            // Add the text elements to the canvas
+                        
+                            canvas.add(sampleText2);
+                         @endif
+                         canvas.renderAll();
                     },
                     error: function(xhr, status, error) {
                         console.error("Error loading SVG:", status, error);
