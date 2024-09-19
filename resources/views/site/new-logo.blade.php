@@ -221,9 +221,9 @@
 
         .logo-item {
             width: 33%;
-            margin-bottom: 20px;
+            margin-bottom: 0px;
             position: relative;
-            height: 300px;
+            height: 250px;
             overflow: hidden;
         }
 

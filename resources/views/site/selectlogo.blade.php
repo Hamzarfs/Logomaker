@@ -12,6 +12,10 @@
         href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
 
     <style>
+
+ 
+
+
         .logo-gallery {
             display: flex;
             flex-wrap: wrap;
@@ -20,9 +24,9 @@
 
         .logo-item {
             width: 33%;
-            margin-bottom: 20px;
+            margin-bottom:  0px;
             position: relative;
-            height: 300px;
+            height: 250px;
             overflow: hidden;
         }
 
@@ -126,11 +130,25 @@
         </form>
     </div>
 
-    <div class="container" ondragstart="return false;"
-    oncontextmenu="return false;">
+    <div class="container">
         <!-- Gallery -->
         <div class="row logo-gallery">
-
+            @php
+                $fonts = [
+                    'lazyp-eople',
+                    'Remon-Demo',
+                    'Stifly',
+                    'Brandes-Regular',
+                    'Rohgaz-Demo-VersionRegular',
+                    'Forest-Trophy-Textured',
+                    'Aesthetic-Wonder-DEMOBold',
+                    'Nerve-Brush-Regular',
+                    'Stander-DEMO',
+                    'Dasport-DEMO',
+                    'LightSport-DEMO',
+                ]; // List of fonts
+                $colors = ['#900C3F', '#36454F', '#343434', '#191970', '#581845'];
+            @endphp
 
 
 
@@ -226,12 +244,14 @@
 
                 @endphp
 
-                <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}" >
+                <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
                     <div class="card-container" style="background-color:{{$product->background_color}}">
+ 
 
                         <img src="{{ asset("category-image/$product->image") }}"
                             style="xwidth: 35% !important; {{ $logoPosition }}; position: absolute; {{ $logoPositionVertical }}; z-index: 10;"
-                            class="img-fluid portfolio-image" alt="{{ $product->name }}" >
+                            class="img-fluid portfolio-image" alt="{{ $product->name }}" ondragstart="return false;"
+                            oncontextmenu="return false;">
 
 
 
@@ -244,7 +264,7 @@
                                     $text = session('company') ?? $product->company_name ?? $product->category['name'];
                                     $words = explode(' ', $text); // Split the string into words
                                 @endphp
-
+    
                                 @if(count($words) > 2)
                                     {!! implode(' ', array_slice($words, 0, 2)) . ' <br>' . implode(' ', array_slice($words, 2)) !!}
                                 @else
@@ -253,14 +273,14 @@
                             @else
                                 {{ session('company') ?? $product->company_name ?? $product->category['name'] }}
                             @endif
-
+                            
                                  @if ($product->slogan_name)
                                     <div style=" z-index: 20;font-family: 'qhairo-regular'; color:{{ $color }}; font-size:12px; font-weight:0; ">
                                          {{$product->slogan_name}}
                                     </div>
                                 @endif
                             </div>
-
+                            
 
 
                         <a href="{{ url('/store-session-data-image?image=' . $product->image . '&product-id=' . $product->id . '&font=' . $font) }}"
@@ -295,44 +315,6 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.full.min.js"></script>
     <script src="{{ asset('js/ajaxSetup.js') }}"></script>
     <script>
-document.addEventListener("DOMContentLoaded", function() {
-    function updateTextInSVG(imageElement, newText) {
-        fetch(imageElement.src)
-            .then(response => response.text())
-            .then(svgText => {
-                // Parse SVG string into DOM
-                const parser = new DOMParser();
-                const svgDoc = parser.parseFromString(svgText, "image/svg+xml");
-
-                // Find all text elements and update their content while preserving styles
-                svgDoc.querySelectorAll('text').forEach(textElement => {
-                    // Only update text content
-                    textElement.textContent = newText;
-                });
-
-                // Serialize updated SVG back to string
-                const serializer = new XMLSerializer();
-                const updatedSVG = serializer.serializeToString(svgDoc);
-
-                // Update image source with the new SVG content
-                imageElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(updatedSVG);
-            })
-            .catch(err => console.error('Error updating SVG text:', err));
-    }
-
-    // Example: Update all SVG images with the class "svg-image"
-    document.querySelectorAll('.svg-image').forEach(img => {
-        updateTextInSVG(img, 'Sample Text');  // Change 'Sample Text' to the desired text
-    });
-});
-
-
-
-
-
-
-
-
         $('#industry1').select2({
             placeholder: "Select Your Industry",
             allowClear: true,

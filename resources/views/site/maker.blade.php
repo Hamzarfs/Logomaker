@@ -265,7 +265,7 @@
         .content {
             margin-left: 270px;
             padding: 20px;
-        }
+        }Sports & Fitness
 
         .btn-danger {
             background-color: #dc3545;
@@ -301,7 +301,7 @@
                         <div class="text-effects">
                             {{-- <div class="form-check">
                                 <input type="checkbox" id="text-curve" class="form-check-input">
-                                <label for="text-curve" class="form-check-label">Curve</label>
+                                <label for="text-curve" class="form-check-label">CurSports & Fitnessve</label>
                             </div> --}}
                             <div class="form-check">
                                 <input type="checkbox" id="text-outline" class="form-check-input">
@@ -417,122 +417,115 @@
 $companyName = session('company') ??  $selectedProduct->company_name  ?? $selectedProduct->category['name'];
 @endphp
                      // Load the SVG
-                        fabric.loadSVGFromString(svgString, function(objects, options) {
-                            // Calculate the center of the canvas
-                            @php
-                                $iconLeft = 2;
-                                $iconTop = 2;
+                     fabric.loadSVGFromString(svgString, function(objects, options) {
+    // Calculate the center of the canvas based on product's logo position
+    @php
+        $iconLeft = 2;
+        $iconTop = 2.7;
 
-                                if ($selectedProduct->logo_position == 'left') {
-                                    $iconLeft = 2.9;
-                                } elseif ($selectedProduct->logo_position == 'right') {
-                                    $iconLeft = 1.5;
-                                } elseif ($selectedProduct->logo_position == 'top') {
-                                    $iconTop = 2.5;
-                                } elseif ($selectedProduct->logo_position == 'bottom') {
-                                    $iconTop = 1.5;
-                                }
-                                //echo $iconLeft."DDDDDDDD".$iconTop;
+        if ($selectedProduct->logo_position == 'left') {
+            $iconLeft = 2.9;
+        } elseif ($selectedProduct->logo_position == 'right') {
+            $iconLeft = 1.5;
+        } elseif ($selectedProduct->logo_position == 'top') {
+            $iconTop = 2.5;
+        } elseif ($selectedProduct->logo_position == 'bottom') {
+            $iconTop = 1.5;
+        }
+    @endphp
 
+    var canvasCenter = {
+        left: canvas.width / {{ $iconLeft }},
+        top: canvas.height / {{ $iconTop }}
+    };
 
-                            @endphp
+    // Create a temporary group to calculate the bounding box and center it
+    var group = new fabric.Group(objects);
 
-                            var canvasCenter = {
-                                left: canvas.width / {{ $iconLeft }},
-                                top: canvas.height / {{ $iconTop }}
-                            };
+    // Determine the scale factor to upscale the SVG
+    var maxWidth = canvas.width * 0.6;  // Scale to 80% of canvas width
+    var maxHeight = canvas.height * 0.6; // Scale to 80% of canvas height
 
-                            // Create a temporary group to calculate the bounding box and center it
-                            var group = new fabric.Group(objects);
-                            canvas.add(group);
+    // Calculate scaling ratio
+    var scaleX = maxWidth / group.width;
+    var scaleY = maxHeight / group.height;
+    var scaleFactor = Math.min(scaleX, scaleY); // Ensure uniform scaling by choosing the smaller factor
 
-                            // Center the group on the canvas
-                            group.originX = 'center';
-                            group.originY = 'center';
-                            group.left = canvasCenter.left;
-                            group.top = canvasCenter.top;
-                            group.setCoords();
+    // Apply the scaling to the group
+    group.scale(scaleFactor);
+    
+    // Add the group to the canvas
+    canvas.add(group);
 
-                            // Ungroup the objects and add them back to the canvas
-                            var ungroupedObjects = group.getObjects();
-                            group.destroy();
-                            canvas.remove(group);
+    // Center the group on the canvas
+    group.originX = 'center';
+    group.originY = 'center';
+    group.left = canvasCenter.left;
+    group.top = canvasCenter.top;
+    group.setCoords();
 
-                            // // Calculate the bounding box of the combined objects
-                            // var boundingBox = new fabric.Group(objects).getBoundingRect();
+    // Ungroup the objects and add them back to the canvas
+    var ungroupedObjects = group.getObjects();
+    group.destroy();
+    canvas.remove(group);
 
-                            // // Calculate the offset to center the bounding box
-                            // var offset = {
-                            //     left: canvasCenter.left - boundingBox.width / 2,
-                            //     top: canvasCenter.top - boundingBox.height / 2
-                            // };
+    // Add each object to the canvas and adjust its position
+    ungroupedObjects.forEach(function(obj, index) {
+        if (obj.type === 'text') {
+            var company = "{{ $companyName }}".replace(/&amp;/g, '&');
 
-                            // Add each object to the canvas and adjust its position
+            // Create the fabric.Textbox for text layers with scaling applied
+            var logoText = new fabric.Textbox(company, {
+                left: obj.left,
+                top: obj.top,
+                fontSize: obj.fontSize * scaleFactor || 40,  // Scale the font size
+                fill: "{{$selectedProduct->color}}" || obj.fill || '#353535',  // Keep original color or default
+                fontFamily: obj.fontFamily || 'Arial',  // Keep original font
+                selectable: true,
+                evented: true,
+                width: obj.width * scaleFactor || canvas.width * 0.4 // Scale width
+            });
 
-                            ungroupedObjects.forEach(function(obj, index) {
+            //canvas.add(logoText);
+        } else {
+            obj.set({
+                selectable: true,
+                evented: true,
+            });
+            canvas.add(obj);
+        }
 
-                                if (obj.type === 'text') {
-                                    var company = "{{ $companyName }}".replace(/&amp;/g, '&');
-                                    // Create the fabric.Textbox for text layers
-                                    var logoText = new fabric.Textbox(company , {
-                                        left: obj.left  ,
-                                        top: obj.top  ,
-                                        fontSize: "{{$selectedProduct->canva_font_size}}" || 40,            // Use font size from SVG or default
-                                        fill: "{{$selectedProduct->color}}" || '#353535',             // Use fill color from SVG or default
-                                        fontFamily: obj.fontFamily || 'Arial',   // Use fontFamily from SVG or fallback
-                                        selectable: true,                        // Make the text selectable and movable
-                                        evented: true,                           // Enable events like dragging
-                                        width: obj.width || canvas.width * 0.4   // Set width based on SVG or fallback
-                                    });
+        // Create a color picker for each layer
+        var colorPicker = $('<input/>', {
+            type: 'color',
+            id: 'color-picker-' + index,
+            value: obj.fill || '#000000',
+            class: 'form-control mt-2 colorPicker'
+        });
 
-                                    canvas.add(logoText);
+        // Create a label for each color picker
+        var label = $('<label/>', {
+            for: 'color-picker-' + index,
+            class: 'color-picker-container'
+        });
 
-                                } else {
-                                    // Set the object position to center the bounding box
-                                    obj.set({
-                                        // left: obj.left + offset.left - boundingBox
-                                        //     .left,
-                                        // top: obj.top + offset.top - boundingBox.top,
-                                        selectable: true,
-                                        evented: true,
+        // Add the label and color picker to the color-palettes div
+        $('#color-palettes').append(label).append(colorPicker);
 
-                                    });
-                                    canvas.add(obj);
-                                }
+        // Add input event to update the color of the selected layer in real-time
+        colorPicker.on('input', function() {
+            var selectedLayerIndex = parseInt($(this).attr('id').split('-').pop());
+            var selectedLayer = canvas.getObjects()[selectedLayerIndex];
+            if (selectedLayer) {
+                selectedLayer.set('fill', $(this).val());
+                canvas.renderAll();
+            }
+        });
+    });
 
-                                // Create a color picker for each layer
-                                var colorPicker = $('<input/>', {
-                                    type: 'color',
-                                    id: 'color-picker-' + index,
-                                    value: obj.fill || '#000000',
-                                    class: 'form-control mt-2 colorPicker'
-                                });
-
-                                // Create a label for each color picker
-                                var label = $('<label/>', {
-                                    for: 'color-picker-' + index,
-                                    class: 'color-picker-container'
-                                });
-
-                                // Add the label and color picker to the color-palettes div
-                                $('#color-palettes').append(label).append(colorPicker);
-
-                                // Add input event to update the color of the selected layer in real-time
-                                colorPicker.on('input', function() {
-                                    var selectedLayerIndex = parseInt($(this)
-                                        .attr('id').split('-').pop());
-                                    var selectedLayer = canvas.getObjects()[
-                                        selectedLayerIndex];
-                                    if (selectedLayer) {
-                                        selectedLayer.set('fill', $(this)
-                                            .val());
-                                        canvas.renderAll();
-                                    }
-                                });
-                            });
-
-                            canvas.renderAll();
-                        });
+    // Render all objects on the canvas
+    canvas.renderAll();
+});
 
 
                         @if(isset($selectedProduct->background_color) && !empty($selectedProduct->background_color))
@@ -744,8 +737,8 @@ $companyName = session('company') ??  $selectedProduct->company_name  ?? $select
                                 $fontSize -= 20;
                             }
 
-                            $leftPosition = isset($selectedProduct->canva_left) && strlen($selectedProduct->canva_left) > 1 ? floatval($selectedProduct->canva_left) : '3.8';
-                            $topPosition = isset($selectedProduct->canva_top) && strlen($selectedProduct->canva_top) > 1 ? floatval($selectedProduct->canva_top) : '2.2';
+                            $leftPosition = isset($selectedProduct->canva_left) && strlen($selectedProduct->canva_left) > 1 ? floatval($selectedProduct->canva_left) : '3.2';
+                            $topPosition = isset($selectedProduct->canva_top) && strlen($selectedProduct->canva_top) > 1 ? floatval($selectedProduct->canva_top) : '2';
 
 
                             $companyName = session('company') ??  $selectedProduct->company_name  ?? $selectedProduct->category['name'];
@@ -775,19 +768,21 @@ $companyName = session('company') ??  $selectedProduct->company_name  ?? $select
                         // Create the textbox with the session company value
                         var company = "{{ $companyName }}".replace(/&amp;/g, '&');
                         var sampleText1 = new fabric.Textbox(company, {
-                            left: canvas.width / {{ $leftPosition }} - 60, // Position the text
-                            top: canvas.height / {{ $topPosition }} + 120, // Position the text
+                            left: canvas.width / {{ $selectedProduct->canva_left ?? 2.5}} - 274, // Position the text
+                            top: canvas.height / {{ $selectedProduct->canva_top ?? 2}} + 120, // Position the text
 
+                           
+                           
                             fill: '{{ $selectedProduct->color }}',
                             fontFamily: "{{ $font }}",
                             textAlign: '{{ $textPosition }}',
                             selectable: true,
-                            width: 460,
+                            width: 720,
                             evented: true,
                             charSpacing: {{ $selectedProduct->canva_spacing ?? 100}},
 
 
-                            fontSize: {{ $selectedProduct->canva_font_size ?? $fontSize }},
+                            fontSize: {{ $selectedProduct->canva_font_size ?? 40 }},
 
 
                         });
@@ -795,8 +790,8 @@ $companyName = session('company') ??  $selectedProduct->company_name  ?? $select
 
                         // // Add "Sample 2" text element
                         var sampleText2 = new fabric.Textbox('Slogan Here', {
-                            left: canvas.width / {{ $selectedProduct->canva_slogan_left ?? 2}} - 40, // Position the text
-                            top: canvas.height / {{ $selectedProduct->canva_slogan_top ?? 2}} + 180, // Position the text
+                            left: canvas.width / {{ $selectedProduct->canva_slogan_left ?? 2.2}} - 50, // Position the text
+                            top: canvas.height / {{ $selectedProduct->canva_slogan_top ?? 2.1}} + 180, // Position the text
                             fontSize: {{ $selectedProduct->canva_slogan_size ?? 14}}  ,
                             width: 180,
                             fill: '{{ $selectedProduct->color }}',
