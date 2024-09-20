@@ -339,7 +339,7 @@
                         @csrf
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" id="companyName11" name="company"
-                                placeholder="Enter your company name" aria-label="Enter your company name">
+                                placeholder="Enter your company name" aria-label="Enter your company name" maxlength="30">
                             <input type="hidden" name="flow" value="category">
                             <input type="submit" class="custom-button-banner" value="Get Started">
                         </div>
@@ -503,7 +503,7 @@
 
                             <div class="text-placeholder"
                                 style=" z-index: 20;font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize }}; font-weight:500; margin-left:{{ $leftPosition }}; margin-top:{{ $topPosition }}">
-                                @if ($product->logo_position == 'right')
+                                @if ($product->logo_position == 'right' || $product->logo_position == 'left')
                                     @php
                                         $text =
                                             session('company') ??
