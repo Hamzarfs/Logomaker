@@ -29,6 +29,14 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
+                            <label for="phonenumber" class="form-label">Phone Number:*</label>
+                            <input type="phonenumber" class="form-control" name="phonenumber" required
+                                value="{{ $user->phonenumber }}">
+                                <x-error>phonenumber</x-error>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
                             <label for="role" class="form-label">Role:*</label>
                             <select name="role" id="role" class="form-control" required>
                                 <option value="" selected disabled>selecte the role</option>
