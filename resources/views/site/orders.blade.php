@@ -58,6 +58,11 @@
                                         <td>{{ date('m-d-Y', strtotime($o->created_at)) }}</td>
                                         <td>
                                             <div class="d-flex align-items-center">
+                                            @if ($o->status === 'draft')
+                                                <button class="btn btn-warning resume-btn me-2" data-order-id="{{ $o->id }}">
+                                                    Resume
+                                                </button>
+                                            @elseif ($o->status === 'paid')
                                                 <button class="btn btn-primary preview-btn me-2"
                                                     data-file='{{ $user->id }}_{{ $o->product->id }}.png'
                                                     data-toggle="modal" data-target="#previewModal">
@@ -67,6 +72,7 @@
                                                     data-file='{{ $user->id }}_{{ $o->product->id }}.png'>
                                                     Download
                                                 </button>
+                                            @endif
                                             </div>
                                         </td>
                                     </tr>

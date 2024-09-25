@@ -297,6 +297,8 @@
                         <button id="bold-text" class="btn"><i class="fas fa-bold"></i> Bold</button>
                         <button id="delete-button" class="btn"><i class="fas fa-trash"></i> Delete</button>
                         <button id="redirect-button" class="btn"><i class="fas fa-redo"></i> Reset All</button>
+                        <button id="undo" class="btn"><i class="fas fa-redo"></i> Undo</button>
+                        <button id="redo" class="btn"><i class="fas fa-undo"></i> Redo</button>
 
                         <div class="text-effects">
                             {{-- <div class="form-check">
@@ -345,6 +347,9 @@
                                             class="fas fa-save"></i> Save</a>
                                 @endif
                             @endguest
+
+                            <button id="save-svg" class="btn btn-primary">Save SVG</button>
+
                             {{-- <button id="save-logo" class="btn"><i class="fas fa-save"></i> Save</button> --}}
                         </div>
                     </div>
@@ -389,21 +394,24 @@
     <script>
         var canvas
         $(document).ready(function() {
-
             canvas = new fabric.Canvas('logo-canvas');
-
-
             canvas.setWidth(855);
             canvas.setHeight(590);
 
 
+            // Initialize state management
+            let canvasState = [];
+            let currentStateIndex = -1;
+            let isUndoingRedoing = false;
 
-            // canvas.setWidth(505);
-            // canvas.setHeight(440);
+            function saveCanvasState() {
+                if (isUndoingRedoing) return;
+                canvasState = canvasState.slice(0, currentStateIndex + 1); // Remove future states
+                canvasState.push(JSON.stringify(canvas));
+                currentStateIndex++;
+            }
 
-
-            // load image
-
+            
             // Function to load and display car.svg from the root directory
             function loadCarSVG() {
                 $.ajax({
@@ -413,360 +421,442 @@
                         // Clear the canvas and color palettes
                         canvas.clear();
                         $('#color-palettes').empty();
-@php
-$companyName = session('company') ??  $selectedProduct->company_name  ?? $selectedProduct->category['name'];
-@endphp
+                        @php
+                        $companyName = session('company') ??  $selectedProduct->company_name  ?? $selectedProduct->category['name'];
+                        @endphp
                      // Load the SVG
                      fabric.loadSVGFromString(svgString, function(objects, options) {
-    // Calculate the center of the canvas based on product's logo position
-    @php
-        $iconLeft = 2;
-        $iconTop = 2.7;
-
-        if ($selectedProduct->logo_position == 'left') {
-            $iconLeft = 2.9;
-        } elseif ($selectedProduct->logo_position == 'right') {
-            $iconLeft = 1.5;
-        } elseif ($selectedProduct->logo_position == 'top') {
-            $iconTop = 2.5;
-        } elseif ($selectedProduct->logo_position == 'bottom') {
-            $iconTop = 1.5;
-        }
-    @endphp
-
-    var canvasCenter = {
-        left: canvas.width / {{ $iconLeft }},
-        top: canvas.height / {{ $iconTop }}
-    };
-
-    // Create a temporary group to calculate the bounding box and center it
-    var group = new fabric.Group(objects);
-
-    // Determine the scale factor to upscale the SVG
-    var maxWidth = canvas.width * 0.6;  // Scale to 80% of canvas width
-    var maxHeight = canvas.height * 0.6; // Scale to 80% of canvas height
-
-    // Calculate scaling ratio
-    var scaleX = maxWidth / group.width;
-    var scaleY = maxHeight / group.height;
-    var scaleFactor = Math.min(scaleX, scaleY); // Ensure uniform scaling by choosing the smaller factor
-
-    // Apply the scaling to the group
-    group.scale(scaleFactor);
+                    // Calculate the center of the canvas based on product's logo position
+                        @php
+                            $iconLeft = 2;
+                            $iconTop = 2.7;
+                            $textWidth= 720; 
+                            if ($selectedProduct->logo_position == 'left') {
+                                $iconLeft = 4.7;
+                                $textWidth= 400; 
+                                  $iconTop = 2.1;
+                            } elseif ($selectedProduct->logo_position == 'right') {
+                                $iconLeft = 1.3;
+                                $textWidth= 400; 
+                            } elseif ($selectedProduct->logo_position == 'top') {
+                                $iconTop = 2.5;
+                            } elseif ($selectedProduct->logo_position == 'bottom') {
+                                $iconTop = 1.5;
+                            }
+                        @endphp
     
-    // Add the group to the canvas
-    canvas.add(group);
 
-    // Center the group on the canvas
-    group.originX = 'center';
-    group.originY = 'center';
-    group.left = canvasCenter.left;
-    group.top = canvasCenter.top;
-    group.setCoords();
+                    var canvasCenter = {
+                        left: canvas.width / {{ $iconLeft }},
+                        top: canvas.height / {{ $iconTop }}
+                    };
 
-    // Ungroup the objects and add them back to the canvas
-    var ungroupedObjects = group.getObjects();
-    group.destroy();
-    canvas.remove(group);
+                    // Create a temporary group to calculate the bounding box and center it
+                    var group = new fabric.Group(objects);
 
-    // Add each object to the canvas and adjust its position
-    ungroupedObjects.forEach(function(obj, index) {
-        if (obj.type === 'text') {
-            var company = "{{ $companyName }}".replace(/&amp;/g, '&');
+                    // Determine the scale factor to upscale the SVG
+                    var maxWidth = canvas.width * 0.6;  // Scale to 80% of canvas width
+                    var maxHeight = canvas.height * 0.6; // Scale to 80% of canvas height
 
-            // Create the fabric.Textbox for text layers with scaling applied
-            var logoText = new fabric.Textbox(company, {
-                left: obj.left,
-                top: obj.top,
-                fontSize: obj.fontSize * scaleFactor || 40,  // Scale the font size
-                fill: "{{$selectedProduct->color}}" || obj.fill || '#353535',  // Keep original color or default
-                fontFamily: obj.fontFamily || 'Arial',  // Keep original font
-                selectable: true,
-                evented: true,
-                width: obj.width * scaleFactor || canvas.width * 0.4 // Scale width
-            });
+                    // Calculate scaling ratio
+                    var scaleX = maxWidth / group.width;
+                    var scaleY = maxHeight / group.height;
+                    var scaleFactor = Math.min(scaleX, scaleY); // Ensure uniform scaling by choosing the smaller factor
 
-            //canvas.add(logoText);
-        } else {
-            obj.set({
-                selectable: true,
-                evented: true,
-            });
-            canvas.add(obj);
-        }
+                    // Apply the scaling to the group
+                    group.scale(scaleFactor);
+                    
+                    // Add the group to the canvas
+                    canvas.add(group);
 
-        // Create a color picker for each layer
-        var colorPicker = $('<input/>', {
-            type: 'color',
-            id: 'color-picker-' + index,
-            value: obj.fill || '#000000',
-            class: 'form-control mt-2 colorPicker'
-        });
+                    // Center the group on the canvas
+                    group.originX = 'center';
+                    group.originY = 'center';
+                    group.left = canvasCenter.left;
+                    group.top = canvasCenter.top;
+                    group.setCoords();
 
-        // Create a label for each color picker
-        var label = $('<label/>', {
-            for: 'color-picker-' + index,
-            class: 'color-picker-container'
-        });
+                    // Ungroup the objects and add them back to the canvas
+                    var ungroupedObjects = group.getObjects();
+                    group.destroy();
+                    canvas.remove(group);
 
-        // Add the label and color picker to the color-palettes div
-        $('#color-palettes').append(label).append(colorPicker);
+                    // Add each object to the canvas and adjust its position
+                    ungroupedObjects.forEach(function(obj, index) {
+                        if (obj.type === 'text') {
+                            var company = "{{ $companyName }}".replace(/&amp;/g, '&');
 
-        // Add input event to update the color of the selected layer in real-time
-        colorPicker.on('input', function() {
-            var selectedLayerIndex = parseInt($(this).attr('id').split('-').pop());
-            var selectedLayer = canvas.getObjects()[selectedLayerIndex];
-            if (selectedLayer) {
-                selectedLayer.set('fill', $(this).val());
-                canvas.renderAll();
-            }
-        });
-    });
+                            // Create the fabric.Textbox for text layers with scaling applied
+                            var logoText = new fabric.Textbox(company, {
+                                left: obj.left,
+                                top: obj.top,
+                                fontSize: obj.fontSize * scaleFactor || 40,  // Scale the font size
+                                fill: "{{$selectedProduct->color}}" || obj.fill || '#353535',  // Keep original color or default
+                                fontFamily: obj.fontFamily || 'Arial',  // Keep original font
+                                selectable: true,
+                                evented: true,
+                                width: obj.width * scaleFactor || canvas.width * 0.4 // Scale width
+                            });
 
-    // Render all objects on the canvas
-    canvas.renderAll();
+                            //canvas.add(logoText);
+                        } else {
+                            obj.set({
+                                selectable: true,
+                                evented: true,
+                            });
+                            canvas.add(obj);
+                        }
+
+                        // Create a color picker for each layer
+                        var colorPicker = $('<input/>', {
+                            type: 'color',
+                            id: 'color-picker-' + index,
+                            value: obj.fill || '#000000',
+                            class: 'form-control mt-2 colorPicker'
+                        });
+
+                        // Create a label for each color picker
+                        var label = $('<label/>', {
+                            for: 'color-picker-' + index,
+                            class: 'color-picker-container'
+                        });
+
+                        // Add the label and color picker to the color-palettes div
+                        $('#color-palettes').append(label).append(colorPicker);
+
+                        // Add input event to update the color of the selected layer in real-time
+                      // Add input event to update the color of the selected layer in real-time
+colorPicker.on('input', function() {
+    var selectedLayerIndex = parseInt($(this).attr('id').split('-').pop());
+    var selectedLayer = canvas.getObjects()[selectedLayerIndex];
+    if (selectedLayer) {
+        selectedLayer.set('fill', $(this).val());
+        canvas.renderAll();
+        saveCanvasState(); // Save canvas state when a color change happens
+    }
 });
 
+                    });
 
-                        @if(isset($selectedProduct->background_color) && !empty($selectedProduct->background_color))
-                            canvas.setBackgroundColor('{{ $selectedProduct->background_color }}', canvas.renderAll.bind(canvas));
-                        @endif
+                    // Render all objects on the canvas
+                    canvas.renderAll();
+                });
 
-                        // Update color picker and text settings when a layer is selected
-                        canvas.on('object:selected', function(e) {
-                            var activeObject = e.target;
-                            var selectedIndex = canvas.getObjects().indexOf(activeObject);
 
-                            // Highlight the corresponding color picker
-                            $('#color-palettes input').each(function() {
-                                $(this).parent().removeClass('highlighted');
-                            });
 
-                            $('#color-picker-' + selectedIndex).parent().addClass(
-                                'highlighted');
+                function saveCanvasAsSVG() {
+                    // Export canvas to SVG string
+                    const svgData = canvas.toSVG();
 
-                            // Update the text, text color, and font family for the selected text layer
-                            if (activeObject.type === 'textbox') {
-                                $('#logo-text').val(activeObject.text || '');
-                                $('#text-color').val(activeObject.fill || '#000000');
-                                $('#font-family').val(activeObject.fontFamily || 'Arial');
-                                $('#italic-text').toggleClass('active', activeObject
-                                    .fontStyle === 'italic');
-                                $('#bold-text').toggleClass('active', activeObject
-                                    .fontWeight === 'bold');
-                                $('#small-text').toggleClass('active', activeObject.fontSize &&
-                                    activeObject.fontSize < 20);
-                                $('#caps-text').prop('checked', activeObject.textTransform ===
-                                    'uppercase');
-                                $('#text-curve').prop('checked', activeObject.get('path') ?
-                                    true : false);
-                                $('#text-outline').prop('checked', activeObject.stroke ? true :
-                                    false);
-                                $('#text-shadow').prop('checked', activeObject.shadow ? true :
-                                    false);
+                    // Create a blob from the SVG data
+                    const blob = new Blob([svgData], { type: "image/svg+xml;charset=utf-8" });
+
+                    // Create a link element to trigger the download
+                    const downloadLink = document.createElement("a");
+                    downloadLink.href = URL.createObjectURL(blob);
+                    downloadLink.download = "canvas.svg"; // Filename for the SVG file
+
+                    // Trigger the download
+                    downloadLink.click();
+
+                    // Clean up URL object
+                    URL.revokeObjectURL(downloadLink.href);
+                }
+
+                function saveCanvasAsSVGToServer() {
+                    // Export canvas to SVG string
+                    const svgData = canvas.toSVG();
+
+                    // Send the SVG data to the server using AJAX
+                    $.ajax({
+                        url: '{{url("/save-svg")}}', // Your endpoint to handle the SVG saving
+                        type: 'POST',
+                        data: {
+                            svg: svgData,
+                            _token: '{{ csrf_token() }}' // If using Laravel, pass the CSRF token
+                        },
+                        success: function (response) {
+                            if (response.success) {
+                                alert('SVG saved successfully!');
                             } else {
-                                $('#logo-text').val('');
-                                $('#text-color').val('');
-                                $('#font-family').val('Arial');
-                                $('#italic-text').removeClass('active');
-                                $('#bold-text').removeClass('active');
-                                $('#small-text').removeClass('active');
-                                $('#caps-text').prop('checked', false);
-                                $('#text-curve').prop('checked', false);
-                                $('#text-outline').prop('checked', false);
-                                $('#text-shadow').prop('checked', false);
+                                alert('Failed to save SVG.');
                             }
-                        });
+                        },
+                        error: function (xhr, status, error) {
+                            console.error('Error saving SVG:', error);
+                            alert('An error occurred while saving the SVG.');
+                        }
+                    });
+                }
 
-                        // Deselect object
-                        canvas.on('before:selection:cleared', function() {
-                            $('#logo-text').val('');
-                            $('#text-color').val('');
-                            $('#font-family').val('Arial');
-                            $('#color-palettes input').each(function() {
-                                $(this).parent().removeClass('highlighted');
+                // Attach the save function to the "Save SVG" button click event
+                $('#save-svg').on('click', saveCanvasAsSVGToServer);
+
+
+
+                @if(isset($selectedProduct->background_color) && !empty($selectedProduct->background_color))
+                    canvas.setBackgroundColor('{{ $selectedProduct->background_color }}', canvas.renderAll.bind(canvas));
+                @endif
+
+                // Update color picker and text settings when a layer is selected
+                canvas.on('object:selected', function(e) {
+                    var activeObject = e.target;
+                    var selectedIndex = canvas.getObjects().indexOf(activeObject);
+
+                    // Highlight the corresponding color picker
+                    $('#color-palettes input').each(function() {
+                        $(this).parent().removeClass('highlighted');
+                    });
+
+                    $('#color-picker-' + selectedIndex).parent().addClass(
+                        'highlighted');
+
+                    // Update the text, text color, and font family for the selected text layer
+                    if (activeObject.type === 'textbox') {
+                        $('#logo-text').val(activeObject.text || '');
+                        $('#text-color').val(activeObject.fill || '#000000');
+                        $('#font-family').val(activeObject.fontFamily || 'Arial');
+                        $('#italic-text').toggleClass('active', activeObject
+                            .fontStyle === 'italic');
+                        $('#bold-text').toggleClass('active', activeObject
+                            .fontWeight === 'bold');
+                        $('#small-text').toggleClass('active', activeObject.fontSize &&
+                            activeObject.fontSize < 20);
+                        $('#caps-text').prop('checked', activeObject.textTransform ===
+                            'uppercase');
+                        $('#text-curve').prop('checked', activeObject.get('path') ?
+                            true : false);
+                        $('#text-outline').prop('checked', activeObject.stroke ? true :
+                            false);
+                        $('#text-shadow').prop('checked', activeObject.shadow ? true :
+                            false);
+                    } else {
+                        $('#logo-text').val('');
+                        $('#text-color').val('');
+                        $('#font-family').val('Arial');
+                        $('#italic-text').removeClass('active');
+                        $('#bold-text').removeClass('active');
+                        $('#small-text').removeClass('active');
+                        $('#caps-text').prop('checked', false);
+                        $('#text-curve').prop('checked', false);
+                        $('#text-outline').prop('checked', false);
+                        $('#text-shadow').prop('checked', false);
+                    }
+                });
+
+                // Save state when an object is modified, added, or removed
+                canvas.on('object:added', saveCanvasState);
+                canvas.on('object:modified', saveCanvasState);
+                canvas.on('object:removed', saveCanvasState);
+                    // Undo function
+                function undo() {
+                    if (currentStateIndex > 0) {
+                        isUndoingRedoing = true;
+                        currentStateIndex--;
+                        canvas.loadFromJSON(canvasState[currentStateIndex], function() {
+                            canvas.renderAll();
+                            isUndoingRedoing = false;
+                        });
+                    }
+                }
+
+                // Redo function
+                function redo() {
+                    if (currentStateIndex < canvasState.length - 1) {
+                        isUndoingRedoing = true;
+                        currentStateIndex++;
+                        canvas.loadFromJSON(canvasState[currentStateIndex], function() {
+                            canvas.renderAll();
+                            isUndoingRedoing = false;
+                        });
+                    }
+                }
+
+                // Bind undo and redo buttons
+                $('#undo').on('click', undo);
+                $('#redo').on('click', redo);
+                // end undu redo
+
+                // Deselect object
+                canvas.on('before:selection:cleared', function() {
+                    $('#logo-text').val('');
+                    $('#text-color').val('');
+                    $('#font-family').val('Arial');
+                    $('#color-palettes input').each(function() {
+                        $(this).parent().removeClass('highlighted');
+                    });
+                    $('#italic-text').removeClass('active');
+                    $('#bold-text').removeClass('active');
+                    $('#small-text').removeClass('active');
+                    $('#caps-text').prop('checked', false);
+                    $('#text-curve').prop('checked', false);
+                    $('#text-outline').prop('checked', false);
+                    $('#text-shadow').prop('checked', false);
+                });
+
+                // Update the text for the selected textbox
+                $('#logo-text').on('input', function() {
+                    var activeObject = canvas.getActiveObject();
+                    if (activeObject && activeObject.type === 'textbox') {
+                        activeObject.set('text', $(this).val());
+                        canvas.renderAll();
+                    }
+                });
+
+                // Update the text color for the selected textbox
+              // Update the text color for the selected textbox
+$('#text-color').on('input', function() {
+    var activeObject = canvas.getActiveObject();
+    if (activeObject && activeObject.type === 'textbox') {
+        activeObject.set('fill', $(this).val());
+        canvas.renderAll();
+        saveCanvasState(); // Save canvas state when a text color change happens
+    }
+});
+
+                // Update the font family for the selected textbox
+                $('#font-family').change(function() {
+                    var activeObject = canvas.getActiveObject();
+                    if (activeObject && activeObject.type === 'textbox') {
+                        activeObject.set('fontFamily', $(this).val());
+                        canvas.renderAll();
+                    }
+                });
+
+                // Toggle italic text
+                $('#italic-text').click(function() {
+                    var activeObject = canvas.getActiveObject();
+                    if (activeObject && activeObject.type === 'textbox') {
+                        var newFontStyle = activeObject.fontStyle === 'italic' ? '' :
+                            'italic';
+                        activeObject.set('fontStyle', newFontStyle);
+                        $(this).toggleClass('active', newFontStyle === 'italic');
+                        canvas.renderAll();
+                    }
+                });
+
+                // Toggle bold text
+                $('#bold-text').click(function() {
+                    var activeObject = canvas.getActiveObject();
+                    if (activeObject && activeObject.type === 'textbox') {
+                        var newFontWeight = activeObject.fontWeight === 'bold' ? '' :
+                            'bold';
+                        activeObject.set('fontWeight', newFontWeight);
+                        $(this).toggleClass('active', newFontWeight === 'bold');
+                        canvas.renderAll();
+                    }
+                });
+
+                // Delete selected layer
+                $('#delete-button').click(function() {
+                    var activeObject = canvas.getActiveObject();
+                    if (activeObject) {
+                        canvas.remove(activeObject)
+                    }
+                });
+
+                // Toggle small text size
+                $('#small-text').click(function() {
+                    var activeObject = canvas.getActiveObject();
+                    if (activeObject && activeObject.type === 'textbox') {
+                        var newSize = activeObject.fontSize < 20 ? 14 : 24;
+                        activeObject.set('fontSize', newSize);
+                        $(this).toggleClass('active', newSize < 20);
+                        canvas.renderAll();
+                    }
+                });
+
+                // Toggle all caps
+                $('#caps-text').change(function() {
+                    var activeObject = canvas.getActiveObject();
+                    if (activeObject && activeObject.type === 'textbox') {
+                        var newTextTransform = $(this).is(':checked') ? 'uppercase' :
+                            'none';
+                        activeObject.set('textTransform', newTextTransform);
+                        canvas.renderAll();
+                    }
+                });
+
+                // Apply outline effect
+                $('#text-outline').change(function() {
+                    var activeObject = canvas.getActiveObject();
+                    if (activeObject && activeObject.type === 'textbox') {
+                        if ($(this).is(':checked')) {
+                            activeObject.set('stroke', $('#text-color').val());
+                            activeObject.set('strokeWidth', 2);
+                        } else {
+                            activeObject.set('stroke', null);
+                            activeObject.set('strokeWidth', 0);
+                        }
+                        canvas.renderAll();
+                    }
+                });
+
+                // Apply shadow effect
+                $('#text-shadow').change(function() {
+                    var activeObject = canvas.getActiveObject();
+                    if (activeObject && activeObject.type === 'textbox') {
+                        if ($(this).is(':checked')) {
+                            activeObject.set('shadow', {
+                                color: 'rgba(0,0,0,0.3)',
+                                offsetX: 2,
+                                offsetY: 2,
+                                blur: 5
                             });
-                            $('#italic-text').removeClass('active');
-                            $('#bold-text').removeClass('active');
-                            $('#small-text').removeClass('active');
-                            $('#caps-text').prop('checked', false);
-                            $('#text-curve').prop('checked', false);
-                            $('#text-outline').prop('checked', false);
-                            $('#text-shadow').prop('checked', false);
-                        });
+                        } else {
+                            activeObject.set('shadow', null);
+                        }
+                        canvas.renderAll();
+                    }
+                });
 
-                        // Update the text for the selected textbox
-                        $('#logo-text').on('input', function() {
-                            var activeObject = canvas.getActiveObject();
-                            if (activeObject && activeObject.type === 'textbox') {
-                                activeObject.set('text', $(this).val());
-                                canvas.renderAll();
-                            }
-                        });
-
-                        // Update the text color for the selected textbox
-                        $('#text-color').on('input', function() {
-                            var activeObject = canvas.getActiveObject();
-                            if (activeObject && activeObject.type === 'textbox') {
-                                activeObject.set('fill', $(this).val());
-                                canvas.renderAll();
-                            }
-                        });
-
-                        // Update the font family for the selected textbox
-                        $('#font-family').change(function() {
-                            var activeObject = canvas.getActiveObject();
-                            if (activeObject && activeObject.type === 'textbox') {
-                                activeObject.set('fontFamily', $(this).val());
-                                canvas.renderAll();
-                            }
-                        });
-
-                        // Toggle italic text
-                        $('#italic-text').click(function() {
-                            var activeObject = canvas.getActiveObject();
-                            if (activeObject && activeObject.type === 'textbox') {
-                                var newFontStyle = activeObject.fontStyle === 'italic' ? '' :
-                                    'italic';
-                                activeObject.set('fontStyle', newFontStyle);
-                                $(this).toggleClass('active', newFontStyle === 'italic');
-                                canvas.renderAll();
-                            }
-                        });
-
-                        // Toggle bold text
-                        $('#bold-text').click(function() {
-                            var activeObject = canvas.getActiveObject();
-                            if (activeObject && activeObject.type === 'textbox') {
-                                var newFontWeight = activeObject.fontWeight === 'bold' ? '' :
-                                    'bold';
-                                activeObject.set('fontWeight', newFontWeight);
-                                $(this).toggleClass('active', newFontWeight === 'bold');
-                                canvas.renderAll();
-                            }
-                        });
-
-                        // Delete selected layer
-                        $('#delete-button').click(function() {
-                            var activeObject = canvas.getActiveObject();
-                            if (activeObject) {
-                                canvas.remove(activeObject)
-                            }
-                        });
-
-                        // Toggle small text size
-                        $('#small-text').click(function() {
-                            var activeObject = canvas.getActiveObject();
-                            if (activeObject && activeObject.type === 'textbox') {
-                                var newSize = activeObject.fontSize < 20 ? 14 : 24;
-                                activeObject.set('fontSize', newSize);
-                                $(this).toggleClass('active', newSize < 20);
-                                canvas.renderAll();
-                            }
-                        });
-
-                        // Toggle all caps
-                        $('#caps-text').change(function() {
-                            var activeObject = canvas.getActiveObject();
-                            if (activeObject && activeObject.type === 'textbox') {
-                                var newTextTransform = $(this).is(':checked') ? 'uppercase' :
-                                    'none';
-                                activeObject.set('textTransform', newTextTransform);
-                                canvas.renderAll();
-                            }
-                        });
-
-                        // Apply outline effect
-                        $('#text-outline').change(function() {
-                            var activeObject = canvas.getActiveObject();
-                            if (activeObject && activeObject.type === 'textbox') {
-                                if ($(this).is(':checked')) {
-                                    activeObject.set('stroke', $('#text-color').val());
-                                    activeObject.set('strokeWidth', 2);
-                                } else {
-                                    activeObject.set('stroke', null);
-                                    activeObject.set('strokeWidth', 0);
-                                }
-                                canvas.renderAll();
-                            }
-                        });
-
-                        // Apply shadow effect
-                        $('#text-shadow').change(function() {
-                            var activeObject = canvas.getActiveObject();
-                            if (activeObject && activeObject.type === 'textbox') {
-                                if ($(this).is(':checked')) {
-                                    activeObject.set('shadow', {
-                                        color: 'rgba(0,0,0,0.3)',
-                                        offsetX: 2,
-                                        offsetY: 2,
-                                        blur: 5
-                                    });
-                                } else {
-                                    activeObject.set('shadow', null);
-                                }
-                                canvas.renderAll();
-                            }
-                        });
-
-                        // Add "Sample 1" text element
+                // Add "Sample 1" text element
 
 
-                        // Get the session company value and escape single quotes
-                        @php
-                            $fontSlug = $selectedProduct->font->slug ?? null;
-                            $font = $fontSlug ? pathinfo($fontSlug, PATHINFO_FILENAME) : '';
-                            $fontSize = isset($selectedProduct->logomaker_font_size) && strlen($selectedProduct->logomaker_font_size) > 1 ? $selectedProduct->logomaker_font_size : 40;
+                // Get the session company value and escape single quotes
+                @php
+                    $fontSlug = $selectedProduct->font->slug ?? null;
+                    $font = $fontSlug ? pathinfo($fontSlug, PATHINFO_FILENAME) : '';
+                    $fontSize = isset($selectedProduct->logomaker_font_size) && strlen($selectedProduct->logomaker_font_size) > 1 ? $selectedProduct->logomaker_font_size : 40;
 
-                            $companyName = session('company') ? session('company') : $selectedProduct->category->name;
+                    $companyName = session('company') ? session('company') : $selectedProduct->category->name;
 
-                            $companyNameLength = strlen($companyName);
+                    $companyNameLength = strlen($companyName);
 
-                            // Ensure fontSize is numeric
-                            if (!is_numeric($fontSize)) {
-                                $fontSize = 30; // or some other default numeric value
-                            }
+                    // Ensure fontSize is numeric
+                    if (!is_numeric($fontSize)) {
+                        $fontSize = 30; // or some other default numeric value
+                    }
 
-                            if ($companyNameLength > 10 && $companyNameLength <= 15) {
-                                $fontSize -= 6;
-                            } elseif ($companyNameLength > 15 && $companyNameLength <= 20) {
-                                $fontSize -= 12;
-                            } elseif ($companyNameLength > 20 && $companyNameLength <= 25) {
-                                $fontSize -= 15;
-                            } elseif ($companyNameLength > 25 && $companyNameLength <= 30) {
-                                $fontSize -= 20;
-                            }
+                    if ($companyNameLength > 10 && $companyNameLength <= 15) {
+                        $fontSize -= 6;
+                    } elseif ($companyNameLength > 15 && $companyNameLength <= 20) {
+                        $fontSize -= 12;
+                    } elseif ($companyNameLength > 20 && $companyNameLength <= 25) {
+                        $fontSize -= 15;
+                    } elseif ($companyNameLength > 25 && $companyNameLength <= 30) {
+                        $fontSize -= 20;
+                    }
 
-                            $leftPosition = isset($selectedProduct->canva_left) && strlen($selectedProduct->canva_left) > 1 ? floatval($selectedProduct->canva_left) : '3.2';
-                            $topPosition = isset($selectedProduct->canva_top) && strlen($selectedProduct->canva_top) > 1 ? floatval($selectedProduct->canva_top) : '2';
+                    $leftPosition = isset($selectedProduct->canva_left) && strlen($selectedProduct->canva_left) > 1 ? floatval($selectedProduct->canva_left) : '3.2';
+                    $topPosition = isset($selectedProduct->canva_top) && strlen($selectedProduct->canva_top) > 1 ? floatval($selectedProduct->canva_top) : '2';
 
 
-                            $companyName = session('company') ??  $selectedProduct->company_name  ?? $selectedProduct->category['name'];
+                    $companyName = session('company') ??  $selectedProduct->company_name  ?? $selectedProduct->category['name'];
 
-                            $companyNameLength = strlen($companyName);
+                    $companyNameLength = strlen($companyName);
 
-                            $textPosition = 'center';
-                            if ($selectedProduct->logo_position == 'left') {
-                                $textPosition = 'left';
-                            } elseif ($selectedProduct->logo_position == 'right') {
-                                $textPosition = 'right';
-                            }
-                            // if ($companyNameLength >= 1 && $companyNameLength <= 10) {
-                            //     $leftPosition =  $leftPosition + 0.8;
-                            // }else  if ($companyNameLength > 10 && $companyNameLength <= 20) {
-                            //     $leftPosition =  $leftPosition + 0.8 ;
-                            // }else  if ($companyNameLength > 20 && $companyNameLength <= 30) {
-                            //     $leftPosition =  $leftPosition + 0.8 ;
-                            // }
-
-                            // echo $leftPosition."SDDDDDDDDDDDDDDDDDDDDDD".$companyNameLength."-----".$selectedProduct->canva_left;
-                        @endphp
-
-                        // left: canvas.width / 2.2 - 57, // Position the text
-                        // top: canvas.height / 3.8 + 120, // Position the text
-
-                        // Create the textbox with the session company value
-                        var company = "{{ $companyName }}".replace(/&amp;/g, '&');
+                    $textPosition = 'center';
+                    if ($selectedProduct->logo_position == 'left') {
+                        $textPosition = 'left';
+                    } elseif ($selectedProduct->logo_position == 'right') {
+                        $textPosition = 'right';
+                    }
+                    
+                @endphp
+ 
+                // Create the textbox with the session company value
+                var company = "{{ $companyName }}".replace(/&amp;/g, '&');
                         var sampleText1 = new fabric.Textbox(company, {
                              left: canvas.width / {{ $selectedProduct->canva_left ?? 2.5}} - 274, // Position the text
                             top: canvas.height / {{ $selectedProduct->canva_top ?? 2}} + 120, // Position the text
@@ -776,7 +866,7 @@ $companyName = session('company') ??  $selectedProduct->company_name  ?? $select
                             fontFamily: "{{ $font }}",
                             textAlign: '{{ $textPosition }}',
                             selectable: true,
-                            width: 720,
+                            width: {{ $textWidth}},
                             evented: true,
                             charSpacing: {{ $selectedProduct->canva_spacing ?? 100}},
 
@@ -787,27 +877,30 @@ $companyName = session('company') ??  $selectedProduct->company_name  ?? $select
                         });
                         canvas.add(sampleText1);
 
-                        @if(!empty($selectedProduct->slogan_name))
+                @if(!empty($selectedProduct->slogan_name))
 
-                            // // Add "Sample 2" text element
-                            var sampleText2 = new fabric.Textbox('{{$selectedProduct->slogan_name}}', {
-                                left: canvas.width / {{ $selectedProduct->canva_slogan_left ?? 2.2}} - 50, // Position the text
-                                top: canvas.height / {{ $selectedProduct->canva_slogan_top ?? 2.1}} + 180, // Position the text
-                                fontSize: {{ $selectedProduct->canva_slogan_size ?? 14}}  ,
-                                width: 180,
-                                fill: '{{ $selectedProduct->color }}',
-                                fontFamily: 'Arial',
-                                textAlign: 'center',
-                                selectable: true,
-                                evented: true,
-                                charSpacing: {{ $selectedProduct->canva_slogan_spacing ?? 100 }}
-                            });
+                    // // Add "Sample 2" text element
+                    var sampleText2 = new fabric.Textbox('{{$selectedProduct->slogan_name}}', {
+                        left: canvas.width / {{ $selectedProduct->canva_slogan_left ?? 2.2}} - 50, // Position the text
+                        top: canvas.height / {{ $selectedProduct->canva_slogan_top ?? 2.1}} + 180, // Position the text
+                        fontSize: {{ $selectedProduct->canva_slogan_size ?? 14}}  ,
+                        width: 180,
+                        fill: '{{ $selectedProduct->color }}',
+                        fontFamily: 'Arial',
+                        textAlign: 'center',
+                        selectable: true,
+                        evented: true,
+                        charSpacing: {{ $selectedProduct->canva_slogan_spacing ?? 100 }}
+                    });
 
-                            // Add the text elements to the canvas
-                        
-                            canvas.add(sampleText2);
-                         @endif
-                         canvas.renderAll();
+                    // Add the text elements to the canvas
+                
+                    canvas.add(sampleText2);
+                    @endif
+
+
+
+                    canvas.renderAll();
                     },
                     error: function(xhr, status, error) {
                         console.error("Error loading SVG:", status, error);
@@ -819,287 +912,7 @@ $companyName = session('company') ??  $selectedProduct->company_name  ?? $select
 
             // load image
 
-            // Handle SVG file upload
-            $('#upload-logo').change(function(e) {
-                var reader = new FileReader();
-                reader.onload = function(event) {
-                    var svgString = event.target.result;
-
-                    // Clear the canvas and color palettes
-                    canvas.clear();
-                    $('#color-palettes').empty();
-
-                    // Load the SVG
-                    fabric.loadSVGFromString(svgString, function(objects, options) {
-                        // Calculate the center of the canvas
-                        var canvasCenter = {
-                            left: canvas.width / 2,
-                            top: canvas.height / 2
-                        };
-
-                        // Calculate the bounding box of the combined objects
-                        var boundingBox = new fabric.Group(objects).getBoundingRect();
-
-                        // Calculate the offset to center the bounding box
-                        var offset = {
-                            left: canvasCenter.left - boundingBox.width / 2,
-                            top: canvasCenter.top - boundingBox.height / 2
-                        };
-
-                        // Add each object to the canvas and adjust its position
-                        objects.forEach(function(obj, index) {
-                            // Set the object position to center the bounding box
-                            obj.set({
-                                left: obj.left + offset.left - boundingBox.left,
-                                top: obj.top + offset.top - boundingBox.top,
-                                selectable: true,
-                                evented: true
-                            });
-                            canvas.add(obj);
-
-                            // Create a color picker for each layer
-                            var colorPicker = $('<input/>', {
-                                type: 'color',
-                                id: 'color-picker-' + index,
-                                value: obj.fill || '#000000',
-                                class: 'form-control mt-2 colorPicker'
-                            });
-
-                            // Create a label for each color picker
-                            var label = $('<label/>', {
-                                for: 'color-picker-' + index,
-                                class: 'color-picker-container'
-                            });
-
-                            // Add the label and color picker to the color-palettes div
-                            $('#color-palettes').append(label).append(colorPicker);
-
-                            // Add input event to update the color of the selected layer in real-time
-                            colorPicker.on('input', function() {
-                                var selectedLayerIndex = parseInt($(this).attr(
-                                    'id').split('-').pop());
-                                var selectedLayer = canvas.getObjects()[
-                                    selectedLayerIndex];
-                                if (selectedLayer) {
-                                    selectedLayer.set('fill', $(this).val());
-                                    canvas.renderAll();
-                                }
-                            });
-                        });
-
-                        canvas.renderAll();
-                    });
-
-
-
-                    // Update color picker and text settings when a layer is selected
-                    canvas.on('object:selected', function(e) {
-                        var activeObject = e.target;
-                        var selectedIndex = canvas.getObjects().indexOf(activeObject);
-
-                        // Highlight the corresponding color picker
-                        $('#color-palettes input').each(function() {
-                            $(this).parent().removeClass('highlighted');
-                        });
-
-                        $('#color-picker-' + selectedIndex).parent().addClass('highlighted');
-
-                        // Update the text, text color, and font family for the selected text layer
-                        if (activeObject.type === 'textbox') {
-                            $('#logo-text').val(activeObject.text || '');
-                            $('#text-color').val(activeObject.fill || '#000000');
-                            $('#font-family').val(activeObject.fontFamily || 'Arial');
-                            $('#italic-text').toggleClass('active', activeObject.fontStyle ===
-                                'italic');
-                            $('#bold-text').toggleClass('active', activeObject.fontWeight ===
-                                'bold');
-                            $('#small-text').toggleClass('active', activeObject.fontSize &&
-                                activeObject.fontSize < 20);
-                            $('#caps-text').prop('checked', activeObject.textTransform ===
-                                'uppercase');
-                            $('#text-curve').prop('checked', activeObject.get('path') ? true :
-                                false);
-                            $('#text-outline').prop('checked', activeObject.stroke ? true :
-                                false);
-                            $('#text-shadow').prop('checked', activeObject.shadow ? true :
-                                false);
-                        } else {
-                            $('#logo-text').val('');
-                            $('#text-color').val('');
-                            $('#font-family').val('Arial');
-                            $('#italic-text').removeClass('active');
-                            $('#bold-text').removeClass('active');
-                            $('#small-text').removeClass('active');
-                            $('#caps-text').prop('checked', false);
-                            $('#text-curve').prop('checked', false);
-                            $('#text-outline').prop('checked', false);
-                            $('#text-shadow').prop('checked', false);
-                        }
-                    });
-
-                    // Deselect object
-                    canvas.on('before:selection:cleared', function() {
-                        $('#logo-text').val('');
-                        $('#text-color').val('');
-                        $('#font-family').val('Arial');
-                        $('#color-palettes input').each(function() {
-                            $(this).parent().removeClass('highlighted');
-                        });
-                        $('#italic-text').removeClass('active');
-                        $('#bold-text').removeClass('active');
-                        $('#small-text').removeClass('active');
-                        $('#caps-text').prop('checked', false);
-                        $('#text-curve').prop('checked', false);
-                        $('#text-outline').prop('checked', false);
-                        $('#text-shadow').prop('checked', false);
-                    });
-
-                    // Update the text for the selected textbox
-                    $('#logo-text').on('input', function() {
-                        var activeObject = canvas.getActiveObject();
-                        if (activeObject && activeObject.type === 'textbox') {
-                            activeObject.set('text', $(this).val());
-                            canvas.renderAll();
-                        }
-                    });
-
-                    // Update the text color for the selected textbox
-                    $('#text-color').on('input', function() {
-                        var activeObject = canvas.getActiveObject();
-                        if (activeObject && activeObject.type === 'textbox') {
-                            activeObject.set('fill', $(this).val());
-                            canvas.renderAll();
-                        }
-                    });
-
-                    // Update the font family for the selected textbox
-                    $('#font-family').change(function() {
-                        var activeObject = canvas.getActiveObject();
-                        if (activeObject && activeObject.type === 'textbox') {
-                            activeObject.set('fontFamily', $(this).val());
-                            canvas.renderAll();
-                        }
-                    });
-
-                    // Toggle italic text
-                    $('#italic-text').click(function() {
-                        var activeObject = canvas.getActiveObject();
-                        if (activeObject && activeObject.type === 'textbox') {
-                            var newFontStyle = activeObject.fontStyle === 'italic' ? '' :
-                                'italic';
-                            activeObject.set('fontStyle', newFontStyle);
-                            $(this).toggleClass('active', newFontStyle === 'italic');
-                            canvas.renderAll();
-                        }
-                    });
-
-                    // Toggle bold text
-                    $('#bold-text').click(function() {
-                        var activeObject = canvas.getActiveObject();
-                        if (activeObject && activeObject.type === 'textbox') {
-                            var newFontWeight = activeObject.fontWeight === 'bold' ? '' :
-                                'bold';
-                            activeObject.set('fontWeight', newFontWeight);
-                            $(this).toggleClass('active', newFontWeight === 'bold');
-                            canvas.renderAll();
-                        }
-                    });
-
-                    // Toggle small text size
-                    $('#small-text').click(function() {
-                        var activeObject = canvas.getActiveObject();
-                        if (activeObject && activeObject.type === 'textbox') {
-                            var newSize = activeObject.fontSize < 20 ? 14 : 24;
-                            activeObject.set('fontSize', newSize);
-                            $(this).toggleClass('active', newSize < 20);
-                            canvas.renderAll();
-                        }
-                    });
-
-                    // Toggle all caps
-                    $('#caps-text').change(function() {
-                        var activeObject = canvas.getActiveObject();
-                        if (activeObject && activeObject.type === 'textbox') {
-                            var newTextTransform = $(this).is(':checked') ? 'uppercase' :
-                                'none';
-                            activeObject.set('textTransform', newTextTransform);
-                            canvas.renderAll();
-                        }
-                    });
-
-                    // // Apply curve effect
-                    // $('#text-curve').change(function() {
-                    //     var activeObject = canvas.getActiveObject();
-                    //     if (activeObject && activeObject.type === 'textbox') {
-                    //         if ($(this).is(':checked')) {
-                    //             // Apply curve effect
-                    //             // Adjust these values to control the curve's appearance
-                    //             var curveRadius = 360; // Radius of the curve
-                    //             var curveFactor = 1.8; // The degree of the curve
-
-                    //             activeObject.set('angle', 0);
-                    //             var path = new fabric.Path('M 0 0 C 0 ' + (curveRadius * curveFactor) + ' ' + (activeObject.width * curveFactor) + ' ' + (activeObject.height * curveFactor) + ' ' + (activeObject.width) + ' 0', {
-                    //                 left: activeObject.left,
-                    //                 top: activeObject.top,
-                    //                 fill: '',
-                    //                 stroke: 'transparent',
-                    //                 selectable: false
-                    //             });
-
-                    //             canvas.add(path);
-                    //             canvas.bringToFront(path); // Ensure the path is behind the text
-
-                    //             // Apply the curve effect
-                    //             activeObject.set({
-                    //                 path: path
-                    //             });
-                    //         } else {
-                    //             // Remove the curve effect
-                    //             activeObject.set({
-                    //                 path: null
-                    //             });
-                    //         }
-                    //         canvas.renderAll();
-                    //     }
-                    // });
-
-
-                    // Apply outline effect
-                    $('#text-outline').change(function() {
-                        var activeObject = canvas.getActiveObject();
-                        if (activeObject && activeObject.type === 'textbox') {
-                            if ($(this).is(':checked')) {
-                                activeObject.set('stroke', $('#text-color').val());
-                                activeObject.set('strokeWidth', 2);
-                            } else {
-                                activeObject.set('stroke', null);
-                                activeObject.set('strokeWidth', 0);
-                            }
-                            canvas.renderAll();
-                        }
-                    });
-
-                    // Apply shadow effect
-                    $('#text-shadow').change(function() {
-                        var activeObject = canvas.getActiveObject();
-                        if (activeObject && activeObject.type === 'textbox') {
-                            if ($(this).is(':checked')) {
-                                activeObject.set('shadow', {
-                                    color: 'rgba(0,0,0,0.3)',
-                                    offsetX: 2,
-                                    offsetY: 2,
-                                    blur: 5
-                                });
-                            } else {
-                                activeObject.set('shadow', null);
-                            }
-                            canvas.renderAll();
-                        }
-                    });
-
-                };
-                reader.readAsText(e.target.files[0]);
-            });
+           
 
             // Add text to the canvas
             $('#add-text').click(function() {
@@ -1117,27 +930,7 @@ $companyName = session('company') ??  $selectedProduct->company_name  ?? $select
                 canvas.renderAll();
             });
 
-            // Save the canvas content as an image
-            // $('#save-logo').click(function() {
-            //     var dataURL = canvas.toDataURL({
-            //         format: 'png',
-            //         quality: 1
-            //     });
-            //     var link = document.createElement('a');
-            //     link.href = dataURL;
-            //     link.download = 'logo.png';
-            //     link.click();
-            // });
-
-            // $('.redirect-to-pckgs-btn').click(function() {
-            //     var dataURL = canvas.toDataURL({
-            //         format: 'png',
-            //         quality: 1
-            //     });
-            //     sessionStorage.setItem('logoDataUrl', dataURL)
-            //     location.assign("/packages")
-            // })
-
+           
             // Delete the current logo
             $('#delete-logo').click(function() {
                 canvas.clearmaker();
