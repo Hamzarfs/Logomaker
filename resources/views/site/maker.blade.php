@@ -417,7 +417,7 @@
             // Function to load and display car.svg from the root directory
             function loadCarSVG() {
                 $.ajax({
-                    url: 'svgs/' + image,
+                    url: 'category-image/' + image,
                     dataType: 'text',
                     success: function(svgString) {
                         // Clear the canvas and color palettes

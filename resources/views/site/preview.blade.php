@@ -71,13 +71,13 @@
 
         .first-section .mockup-wrapper .logo-wrapper-3 .logo-mockup {
             position: absolute;
-            width: 150px;
+            width: 145px;
             height: 100px;
         }
 
         .first-section .mockup-wrapper .logo-wrapper-4 .logo-mockup {
             position: absolute;
-            width: 115px;
+            width: 110px;
             height: 90px;
         }
 
@@ -1118,9 +1118,9 @@
 
                                         // Adjust the position based on the logo_position
                                         if ($selectedProduct->logo_position == 'left') {
-                                            $leftLogoPosition = '0'; // Align to the left edge of the canvas
+                                            $leftLogoPosition = '40'; // Align to the left edge of the canvas
                                         } elseif ($selectedProduct->logo_position == 'right') {
-                                            $leftLogoPosition = 'canvasWidth - boundingBox.width * scale'; // Align to the right edge of the canvas
+                                            $leftLogoPosition = '320'; //'canvasWidth - boundingBox.width  * scale'; // Align to the right edge of the canvas
                                         }
                                     @endphp
                                     svgGroup.set({
