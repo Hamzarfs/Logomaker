@@ -339,17 +339,17 @@ public function saveSVG(Request $request)
     file_put_contents($svgPath, $svgData);
 
     // Convert SVG to PNG using Imagick
-    try {
-        $imagick = new \Imagick();
-        $imagick->setBackgroundColor(new ImagickPixel('transparent')); // Set background to transparent
-        $imagick->readImageBlob($svgData); // Read the SVG data
-        $imagick->setImageFormat("png32"); // Set the image format to PNG
-        $imagick->writeImage($pngPath); // Save the PNG file
-        $imagick->clear();
-        $imagick->destroy();
-    } catch (Exception $e) {
-        return response()->json(['success' => false, 'message' => 'Failed to convert SVG to PNG: ' . $e->getMessage()], 500);
-    }
+    // try {
+    //     $imagick = new \Imagick();
+    //     $imagick->setBackgroundColor(new ImagickPixel('transparent')); // Set background to transparent
+    //     $imagick->readImageBlob($svgData); // Read the SVG data
+    //     $imagick->setImageFormat("png32"); // Set the image format to PNG
+    //     $imagick->writeImage($pngPath); // Save the PNG file
+    //     $imagick->clear();
+    //     $imagick->destroy();
+    // } catch (Exception $e) {
+    //     return response()->json(['success' => false, 'message' => 'Failed to convert SVG to PNG: ' . $e->getMessage()], 500);
+    // }
 
     // Insert the order into the database with status 'draft'
     $order = new Order();
