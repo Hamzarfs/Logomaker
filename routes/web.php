@@ -78,6 +78,7 @@ Route::post('/store-session-data', [SessionDataController::class, 'storeSessionD
 Route::post('/store-session-data-logo', [SessionDataController::class, 'storeSessionDataLogo']);
 Route::get('/store-session-data-image', [SessionDataController::class, 'storeSessionDataImage']);
 Route::get('/store-price', [SessionDataController::class, 'storePrice']);
+Route::get('/set-image', [SessionDataController::class, 'setSessionImage']);
 
 
 

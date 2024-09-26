@@ -23,6 +23,8 @@ use Illuminate\Support\Facades\Log;
 use Stripe\StripeClient;
 use Illuminate\Support\Facades\Session;
 use Imagick;
+use ImagickPixel;
+
 class MainController extends \App\Http\Controllers\Controller
 {
 
@@ -311,55 +313,67 @@ class MainController extends \App\Http\Controllers\Controller
 
    
 
-public function saveSVG(Request $request)
-{
-    // Validate the request
-    $request->validate([
-        'svg' => 'required|string'
-    ]);
+    public function saveSVG(Request $request)
+    {
 
-    // Get the SVG data
-    $svgData = $request->input('svg');
-    $userId = auth()->id();
-    $productId = session()->get('product-id');
-    
-    // Generate a unique filename without an extension
-    $fileName = $userId . '_' . $productId;
-    
-    // Define the paths where you want to save the files
-    $svgPath = public_path('svgs/' . $fileName . '.svg');
-    $pngPath = public_path('svgs/' . $fileName . '.png');
+      
 
-    // Make sure the directory exists
-    if (!file_exists(public_path('svgs'))) {
-        mkdir(public_path('svgs'), 0777, true);
+        // Validate the request
+        $request->validate([
+            'svg' => 'required|string'
+        ]);
+
+        // Get the SVG data
+        $svgData = $request->input('svg');
+        $userId = auth()->id();
+        $productId = session()->get('product-id');
+        
+        // Generate a unique filename without an extension
+        $fileName = $userId . '_' . $productId;
+        
+        // Define the paths where you want to save the files
+        $svgPath = public_path('svgs/' . $fileName . '.svg');
+        $pngPath = public_path('svgs/' . $fileName . '.png');
+
+        // Make sure the directory exists
+        if (!file_exists(public_path('svgs'))) {
+            mkdir(public_path('svgs'), 0777, true);
+        }
+      
+        // Save the SVG data to the file
+        file_put_contents($svgPath, $svgData);
+
+        // Convert SVG to PNG using Imagick
+        try {
+            $imagick = new Imagick();
+            $imagick->setBackgroundColor(new ImagickPixel('transparent')); // Set background to transparent
+            $imagick->readImageBlob($svgData); // Read the SVG data
+            $imagick->setImageFormat("png32"); // Set the image format to PNG
+            $imagick->writeImage($pngPath); // Save the PNG file
+            $imagick->clear();
+            $imagick->destroy();
+        } catch (Exception $e) {
+            return response()->json(['success' => false, 'message' => 'Failed to convert SVG to PNG: ' . $e->getMessage()], 500);
+        }
+
+        // Insert the order into the database with status 'draft'
+         
+
+        $existingOrder = Order::where('user_id', $userId)
+                      ->where('product_id', $productId)
+                      ->first();
+
+        if (!$existingOrder) {
+            $order = new Order();
+            $order->user_id = $userId;
+            $order->product_id = $productId;
+            $order->status = 'draft';
+            $order->save();
+        }
+
+        
+        return response()->json(['success' => true, 'message' => 'SVG and PNG saved successfully']);
     }
-
-    // Save the SVG data to the file
-    file_put_contents($svgPath, $svgData);
-
-    // Convert SVG to PNG using Imagick
-    // try {
-    //     $imagick = new \Imagick();
-    //     $imagick->setBackgroundColor(new ImagickPixel('transparent')); // Set background to transparent
-    //     $imagick->readImageBlob($svgData); // Read the SVG data
-    //     $imagick->setImageFormat("png32"); // Set the image format to PNG
-    //     $imagick->writeImage($pngPath); // Save the PNG file
-    //     $imagick->clear();
-    //     $imagick->destroy();
-    // } catch (Exception $e) {
-    //     return response()->json(['success' => false, 'message' => 'Failed to convert SVG to PNG: ' . $e->getMessage()], 500);
-    // }
-
-    // Insert the order into the database with status 'draft'
-    $order = new Order();
-    $order->user_id = $userId;
-    $order->product_id = $productId;
-    $order->status = 'draft';
-    $order->save();
-
-    return response()->json(['success' => true, 'message' => 'SVG and PNG saved successfully']);
-}
 
 
     function putImgStringIntoSession(Request $request)

@@ -338,17 +338,17 @@
                             <input type="text" id="logo-text" class="form-control">
                             <div id="color-palettes" class="mt-3"></div>
                             @guest
-                                <a href="{{ route('login') }}" class="btn mt-5"><i class="fas fa-save"></i> Save</a>
+                                <a href="{{ route('login') }}" class="btn mt-5"><i class="fas fa-save"></i> Download</a>
                             @else
                                 @if ($hasOrder)
-                                    <button id="save-logo" class="btn mt-5"><i class="fas fa-save"></i> Save</button>
+                                    <button id="save-logo" class="btn mt-5"><i class="fas fa-save"></i> Download</button>
                                 @else
                                     <a href="javascript:void(0)" class="btn mt-5 redirect-to-pckgs-btn"><i
-                                            class="fas fa-save"></i> Save</a>
+                                            class="fas fa-save"></i> Download</a>
                                 @endif
                             @endguest
 
-                            <button id="save-svg" class="btn btn-primary">Save SVG</button>
+                            <button id="save-svg" class="btn btn-primary">Save</button>
 
                             {{-- <button id="save-logo" class="btn"><i class="fas fa-save"></i> Save</button> --}}
                         </div>
@@ -389,6 +389,8 @@
     <script>
         var company = @json(session('company', []));
         var image = @json(session('image', []));
+
+        alert(image)
     </script>
     {{-- <script src="{{ asset('js/script.js') }}"></script> --}}
     <script>
@@ -415,7 +417,7 @@
             // Function to load and display car.svg from the root directory
             function loadCarSVG() {
                 $.ajax({
-                    url: 'category-image/' + image,
+                    url: 'svgs/' + image,
                     dataType: 'text',
                     success: function(svgString) {
                         // Clear the canvas and color palettes

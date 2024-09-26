@@ -84,6 +84,19 @@ class SessionDataController extends \App\Http\Controllers\Controller
         return redirect()->route('preview');
     }
 
+    // for draft svg to set for canva
+    public function setSessionImage(Request $request)
+    {
+        
+        if ($request->has('image')) {
+            $image = $request->query('image');
+            Session::put('image', $image);
+        }
+
+       
+        return redirect()->route('maker');
+    }
+
     public function storePrice(Request $request)
     {
 
