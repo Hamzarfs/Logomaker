@@ -265,7 +265,7 @@
         .content {
             margin-left: 270px;
             padding: 20px;
-        }Sports & Fitness
+        } 
 
         .btn-danger {
             background-color: #dc3545;
@@ -389,8 +389,13 @@
     <script>
         var company = @json(session('company', []));
         var image = @json(session('image', []));
-
-        alert(image)
+        var imageLoad = @json(session('image-load', []));
+        var dir="category-image/";
+        if(imageLoad=='order'){
+            dir="svgs/";
+        }
+      //  alert(dir+"---"+imageLoad)
+      
     </script>
     {{-- <script src="{{ asset('js/script.js') }}"></script> --}}
     <script>
@@ -417,7 +422,7 @@
             // Function to load and display car.svg from the root directory
             function loadCarSVG() {
                 $.ajax({
-                    url: 'category-image/' + image,
+                    url: dir + image,
                     dataType: 'text',
                     success: function(svgString) {
                         // Clear the canvas and color palettes
@@ -527,16 +532,15 @@
                         $('#color-palettes').append(label).append(colorPicker);
 
                         // Add input event to update the color of the selected layer in real-time
-                      // Add input event to update the color of the selected layer in real-time
-colorPicker.on('input', function() {
-    var selectedLayerIndex = parseInt($(this).attr('id').split('-').pop());
-    var selectedLayer = canvas.getObjects()[selectedLayerIndex];
-    if (selectedLayer) {
-        selectedLayer.set('fill', $(this).val());
-        canvas.renderAll();
-        saveCanvasState(); // Save canvas state when a color change happens
-    }
-});
+                         colorPicker.on('input', function() {
+                            var selectedLayerIndex = parseInt($(this).attr('id').split('-').pop());
+                            var selectedLayer = canvas.getObjects()[selectedLayerIndex];
+                            if (selectedLayer) {
+                                selectedLayer.set('fill', $(this).val());
+                                canvas.renderAll();
+                                saveCanvasState(); // Save canvas state when a color change happens
+                            }
+                        });
 
                     });
 
@@ -566,6 +570,44 @@ colorPicker.on('input', function() {
                 }
 
                 function saveCanvasAsSVGToServer() {
+
+                      // Get all objects from the canvas
+                const objects = canvas.getObjects();
+                let fillColor=null,font_family=null,font_size=null,textAlign=null,left=null,top=null,sample_text=null,text_width=null,font_weight=null,font_style=null,
+                outlineColor=null,outlineWidth=null,shadow=null,outline_color=null,outline_width=null,shadow_color=null,shadow_x=null,shadow_y=null,shadow_blur=null;
+                    objects.forEach(obj => {
+                        if (obj.type === 'textbox') { // Check if the object is a Textbox
+                            // Extract color, fontFamily, and fontSize
+                             fillColor = obj.fill;  // Text color
+                             fontFamily = obj.fontFamily; // Font family
+                             actualFontSize = obj.fontSize * obj.scaleY;
+                             textAlign = obj.textAlign;  // Text alignment
+                             left = obj.left;  // Get the 'left' position of the object
+                             top = obj.top;    // Get the 'top' position of the object
+                             text_width = obj.width * obj.scaleX;  // Get the scaled width of the text
+                             sample_text = obj.text;  // Get the actual text content
+
+                             font_weight = obj.fontWeight; // Get the font weight ('bold' or 'normal')
+                             font_style = obj.fontStyle; // Get the font style ('italic' or 'normal')
+
+                             outline_color = obj.stroke; // Get the stroke color
+                             outline_width = obj.strokeWidth, // Get the stroke width
+                             shadow_color= obj.shadow.color,
+                             shadow_x= obj.shadow.offsetX,
+                             shadow_y= obj.shadow.offsetY,
+                             shadow_blur= obj.shadow.blur,
+                                   
+
+                            console.log("Text Object Properties:");
+                            console.log("Color:", fillColor);
+                            console.log("Font Family:", fontFamily);
+                            console.log("Font Size:", actualFontSize);
+                            console.log("Left Position:", left);
+                             console.log("Top Position:", top);
+                             console.log("Text widht:", text_width);
+                             console.log("Text:", sample_text);
+                        }
+                    });
                     // Export canvas to SVG string
                     const svgData = canvas.toSVG();
 
@@ -575,6 +617,23 @@ colorPicker.on('input', function() {
                         type: 'POST',
                         data: {
                             svg: svgData,
+                            color: fillColor, 
+                            font_family: fontFamily,
+                            font_size: actualFontSize,
+                            left: left,
+                            top: top,
+                            sample_text: sample_text,
+                            text_width:text_width,
+                            font_weight:font_weight,
+                            font_style:font_style,
+                            outline_color:outline_color,
+                            outline_width:outline_width,
+                            shadow_color:shadow_color,
+                            shadow_x:shadow_x,
+                            shadow_y:shadow_y,
+                            
+                            shadow_blur:shadow_blur,
+                         
                             _token: '{{ csrf_token() }}' // If using Laravel, pass the CSRF token
                         },
                         success: function (response) {
@@ -857,9 +916,34 @@ $('#text-color').on('input', function() {
                     
                 @endphp
  
+                var imageLoad = @json(session('image-load', []));
+                
+               
                 // Create the textbox with the session company value
                 var company = "{{ $companyName }}".replace(/&amp;/g, '&');
-                        var sampleText1 = new fabric.Textbox(company, {
+
+                if(imageLoad=='order'){
+                        var tt='{{ isset($order) ? $order->sample_text :""}}'
+                        var sampleText1 = new fabric.Textbox(tt.replace(/&amp;/g, '&'), {
+                            left: {{ isset($order) ? $order->left : 0 }}, // Use 0 as default if $order->left is not set
+                            top: {{ isset($order) ? $order->top : 0 }}, // Use 0 as default if $order->top is not set
+                            fill: '{{ isset($order) ? $order->color : "#000000" }}', // Default to black color
+                            fontFamily: '{{ isset($order) ? $order->font_family : "robboto" }}', // Default to Arial if not set
+                            textAlign: '{{ $textPosition ?? "left" }}', // Default to left alignment
+                            selectable: true,
+                            width: {{ isset($order) ? $order->text_width : 0 }}, // Provide a default width
+                            evented: true,
+                            charSpacing: {{ $selectedProduct->canva_spacing ?? 100 }},
+                            fontSize: {{ isset($order) ? $order->font_size : 16 }}, // Default to 16px if not set
+                            fontWeight: '{{ isset($order) && $order->font_weight ? $order->font_weight : "normal" }}', // Set bold if $order->font_weight is set to 'bold'
+                            fontStyle: '{{ isset($order) && $order->font_style ? $order->font_style : "normal" }}' // Set italic if $order->font_style is set to 'italic'
+                            //stroke: '{{ isset($order) && $order->outline_color ? $order->outline_color : "" }}', // Set the outline color if available
+                            // strokeWidth: {{ isset($order) && $order->outline_width ? $order->outline_width : 0 }}, // Set the outline width if available, default to 0 (no outline)
+   
+                         });
+                        canvas.add(sampleText1);
+                }else{
+                            var sampleText1 = new fabric.Textbox(company, {
                              left: canvas.width / {{ $selectedProduct->canva_left ?? 2.5}} - 274, // Position the text
                             top: canvas.height / {{ $selectedProduct->canva_top ?? 2}} + 120, // Position the text
 
@@ -878,6 +962,9 @@ $('#text-color').on('input', function() {
 
                         });
                         canvas.add(sampleText1);
+
+                }
+
 
                 @if(!empty($selectedProduct->slogan_name))
 
@@ -1042,7 +1129,7 @@ $('#text-color').on('input', function() {
                                 data: {
                                     userId: {{ auth()->id() }},
                                     productId: {{ session()->get('product-id') }},
-                                },
+                                },font_weight
                             })
                         },
                     })
