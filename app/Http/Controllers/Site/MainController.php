@@ -368,7 +368,7 @@ class MainController extends \App\Http\Controllers\Controller
         $order->shadow_x = $request->input('shadow_x');
         $order->shadow_y = $request->input('shadow_y');
         $order->shadow_blur = $request->input('shadow_blur');
-        
+        $order->pic=$svgData;
          
 
         $order->status = 'draft';
@@ -380,20 +380,20 @@ class MainController extends \App\Http\Controllers\Controller
         $existingOrder->font_size = $request->input('font_size');
         $existingOrder->left = $request->input('left');
         $existingOrder->top = $request->input('top');
-        $order->sample_text = $request->input('sample_text');
-        $order->text_width = $request->input('text_width');
-        $order->font_weight = $request->input('font_weight');
-        $order->font_style = $request->input('font_style');
+        $existingOrder->sample_text = $request->input('sample_text');
+        $existingOrder->text_width = $request->input('text_width');
+        $existingOrder->font_weight = $request->input('font_weight');
+        $existingOrder->font_style = $request->input('font_style');
       
-        $order->outline_color = $request->input('outline_color');
-        $order->outline_width = $request->input('outline_width');
-        $order->shadow_color = $request->input('shadow_color');
-        $order->shadow_x = $request->input('shadow_x');
-        $order->shadow_y = $request->input('shadow_y');
-        $order->shadow_blur = $request->input('shadow_blur');
-        
-        $order->status = 'draft';
-        $existingOrder->save();
+        $existingOrder->outline_color = $request->input('outline_color');
+        $existingOrder->outline_width = $request->input('outline_width');
+        $existingOrder->shadow_color = $request->input('shadow_color');
+        $existingOrder->shadow_x = $request->input('shadow_x');
+        $existingOrder->shadow_y = $request->input('shadow_y');
+        $existingOrder->shadow_blur = $request->input('shadow_blur');
+        $existingOrder->pic=$svgData;
+         $existingOrder->status = 'draft';
+         $existingOrder->save();
          
     }
 
