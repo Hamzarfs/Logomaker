@@ -325,7 +325,7 @@ class MainController extends \App\Http\Controllers\Controller
 
     // Modify the SVG data to set width and height correctly, ensuring styles are not affected
     $updatedSvgData = preg_replace('/<svg([^>]*?)width="[^"]*"([^>]*?)height="[^"]*"/', '<svg$1$2', $svgData);
-    $updatedSvgData = preg_replace('/<svg([^>]*?)>/', '<svg$1 width="350" height="230">', $updatedSvgData);
+    $updatedSvgData = preg_replace('/<svg([^>]*?)>/', '<svg$1 width="855" height="590">', $updatedSvgData);
 
     // Save the SVG data to the file
     file_put_contents($svgPath, $updatedSvgData);
