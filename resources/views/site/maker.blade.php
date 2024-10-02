@@ -559,6 +559,7 @@
                             }
 
                             if (obj.type === 'path') {
+                                
                                 // Create a color picker for each layer
                                 var colorPicker = $('<input/>', {
                                     type: 'color',
@@ -831,9 +832,11 @@
                     $('#bold-text').click(function() {
                         var activeObject = canvas.getActiveObject();
                         if (activeObject && activeObject.type === 'textbox') {
-                            var newFontWeight = activeObject.fontWeight === 'bold' ? '' :
-                                'bold';
+                          
+                            var newFontWeight = activeObject.fontWeight === 'bold' ? '' :'bold';
+                         
                             activeObject.set('fontWeight', newFontWeight);
+                         
                             $(this).toggleClass('active', newFontWeight === 'bold');
                             canvas.renderAll();
                         }
