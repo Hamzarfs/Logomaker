@@ -366,10 +366,11 @@
 
                         <div class="col-md-8">
                             <h1 class="text-center" style="margin-top: 20px;">RFS Logo Editor</h1>
-                            <canvas id="logo-canvas" style="width: 100%; border: 1px solid;"></canvas>
+                            <canvas id="logo-canvas" style="width: 80%; border:red 1px solid; z-index:1000000 !important"></canvas>
                         </div>
                     </div>
                 </div>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             </div>
         </div>
 
@@ -402,8 +403,112 @@
             var canvas
             $(document).ready(function() {
                 canvas = new fabric.Canvas('logo-canvas');
-                canvas.setWidth(855);
-                canvas.setHeight(590);
+                
+                
+                
+                //  responsive start
+
+
+
+
+
+                var originalWidth = 855;
+    var originalHeight = 590;
+
+    // Set the original canvas size
+    canvas.setWidth(originalWidth);
+    canvas.setHeight(originalHeight);
+
+    // Add sample objects (for demonstration)
+    var rect = new fabric.Rect({
+        left: 100,
+        top: 100,
+        fill: 'red',
+        width: 50,
+        height: 50
+    });
+    var text = new fabric.Text('Sample Text', {
+        left: 200,
+        top: 200,
+        fontSize: 20
+    });
+    canvas.add(rect);
+    canvas.add(text);
+
+    // Function to resize the canvas without moving the objects
+    function resizeCanvas() {
+        var windowWidth = $(window).width();
+        var windowHeight =  $(window).height();
+
+        // alert(windowWidth+"DDDDDDDDDDD"+windowHeight)
+
+        // Maintain aspect ratio
+        var newWidth = Math.min(windowWidth * 0.92, originalWidth);  // 92% of window width or originalWidth
+        var newHeight = (newWidth / originalWidth) * originalHeight; // Keep aspect ratio
+
+        // Cap the height if it exceeds the window height
+        if (newHeight > windowHeight * 0.95) {
+            newHeight = Math.min(windowHeight * 0.95, originalHeight);
+            newWidth = (newHeight / originalHeight) * originalWidth;
+        }
+
+        // Set the new canvas dimensions
+        canvas.setWidth(newWidth);
+        canvas.setHeight(newHeight);
+
+        // Adjust the scaling factor for positioning the text correctly
+        var scaleX = newWidth / originalWidth;
+        var scaleY = newHeight / originalHeight;
+
+        // Reposition all objects
+        canvas.getObjects().forEach(function(obj) {
+            // For non-text objects, we can maintain their current positions
+            if (obj.type !== 'text') {
+                obj.left *= scaleX; 
+                obj.top *= scaleY; 
+                obj.setCoords(); // Update object coordinates
+            } else {
+                
+                //alert( obj.left +"/"+ originalWidth  +"*"+newWidth)
+                // For text objects, maintain their position relative to the new size
+                // Set new positions based on the scaling
+                var newLeft = (obj.left / originalWidth) * newWidth;  // Calculate new left position
+                var newTop = (obj.top / originalHeight) * newHeight;  // Calculate new top position
+
+                // Update the position
+                obj.left = newLeft;
+                obj.top = newTop;
+
+                obj.setCoords(); // Update
+            }
+        });
+
+        // Render the canvas
+        canvas.renderAll();
+    }
+
+    // Initial resize
+    resizeCanvas();
+
+    // Handle window resize events
+    $(window).on('resize', function() {
+        resizeCanvas();
+    });
+
+
+
+
+
+
+
+
+       
+                // responsive end
+
+
+
+
+
 
 
                 // Initialize state management
