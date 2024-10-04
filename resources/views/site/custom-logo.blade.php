@@ -1,8 +1,9 @@
     @extends('site.common')
 
-    @section('title', "Hire a Logo Designer for Custom Logo Design - RFS Logo Design")
+    @section('title', 'Hire a Logo Designer for Custom Logo Design - RFS Logo Design')
 
-    @section('meta_desc', "Hire a professional logo designer for custom logo design because your brand or company deserves the best logo. RFS Logo Design has expert logo designers team.")
+    @section('meta_desc', 'Hire a professional logo designer for custom logo design because your brand or company
+        deserves the best logo. RFS Logo Design has expert logo designers team.')
 
     @section('content')
 
@@ -20,6 +21,7 @@
                 margin-bottom: 20px;
                 color: #010935;
             }
+
             .custom-container-margin-v3 {
                 margin-top: 50px;
                 margin-bottom: 50px;
@@ -42,19 +44,21 @@
             .custom-image-section-v3 {
                 display: flex;
                 justify-content: center;
-                align-items: center; /* Center the image vertically */
+                align-items: center;
+                /* Center the image vertically */
             }
 
             .custom-image-section-v3 img {
                 max-width: 100%;
                 height: auto;
             }
+
             .box {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
+                position: relative;
+                overflow: hidden;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease;
             }
 
             .box:hover {
@@ -62,11 +66,13 @@
             }
 
             .box:hover .box-content {
-                background-color: rgb(81, 47, 144); /* Purple background on hover */
+                background-color: rgb(81, 47, 144);
+                /* Purple background on hover */
             }
 
             .box:hover .box-text {
-                display: block; /* Show text on hover */
+                display: block;
+                /* Show text on hover */
             }
 
             .box-image {
@@ -77,10 +83,12 @@
 
             .box-content {
                 position: absolute;
-                top: 0; /* Ensure it covers the top of the box */
+                top: 0;
+                /* Ensure it covers the top of the box */
                 left: 0;
                 width: 100%;
-                height: 100%; /* Cover the entire box */
+                height: 100%;
+                /* Cover the entire box */
                 background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, #512f90f6);
                 color: #fff;
                 padding: 20px;
@@ -88,7 +96,8 @@
                 transition: background-color 1s ease;
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-end; /* Align text to the bottom */
+                justify-content: flex-end;
+                /* Align text to the bottom */
             }
 
             .box-heading {
@@ -100,33 +109,38 @@
             .box-text {
                 font-size: 16px;
                 margin-top: 10px;
-                display: none; /* Hide text initially */
+                display: none;
+                /* Hide text initially */
             }
 
             .box-heading-number {
-                display: block; /* Make sure the number is on a new line */
+                display: block;
+                /* Make sure the number is on a new line */
                 color: #fff;
                 padding: 2px 6px;
                 border-radius: 4px;
-                font-size: 58px; /* Adjust as needed */
+                font-size: 58px;
+                /* Adjust as needed */
                 font-weight: 900;
             }
+
             .custom-logo-process {
                 padding: 20px 0;
                 margin-bottom: -30px;
-                margin-top:50px;
+                margin-top: 50px;
             }
 
             .custom-logo-process h2 {
                 font-weight: 700;
                 color: #010935;
-                font-size:40px;
+                font-size: 40px;
             }
 
             .custom-logo-process p {
                 font-size: 18px;
                 color: #000;
             }
+
             .custom-section-v3 {
                 margin: 50px 0;
             }
@@ -158,17 +172,22 @@
 
             /* Unique class for contact section */
             .contact-section .icon-circle {
-                width: 60px; /* Adjust size as needed */
-                height: 60px; /* Adjust size as needed */
+                width: 60px;
+                /* Adjust size as needed */
+                height: 60px;
+                /* Adjust size as needed */
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: #6a70d6; /* Background color of the circle */
+                background-color: #6a70d6;
+                /* Background color of the circle */
                 border-radius: 50%;
                 margin: 0 auto 10px auto;
             }
+
             .contact-section .icon-circle i {
-                color: #ffffff; /* White color for icons */
+                color: #ffffff;
+                /* White color for icons */
             }
 
 
@@ -181,14 +200,19 @@
 
             /* Style for links in the contact section */
             .contact-section .contact-option a {
-                color: #010935; /* Black color for text */
-                font-weight: bold; /* Bold text */
-                text-decoration: none; /* Remove underline */
+                color: #010935;
+                /* Black color for text */
+                font-weight: bold;
+                /* Bold text */
+                text-decoration: none;
+                /* Remove underline */
             }
 
             .contact-section .contact-option a:hover {
-                color: #010935; /* Black color on hover */
-                text-decoration: none; /* Underline on hover (optional) */
+                color: #010935;
+                /* Black color on hover */
+                text-decoration: none;
+                /* Underline on hover (optional) */
             }
 
 
@@ -196,11 +220,13 @@
 
             @media (max-width: 1198px) and (min-width: 992px) {
                 .box-heading-number {
-                    font-size: 34px; /* Adjusted size for screens in this range */
+                    font-size: 34px;
+                    /* Adjusted size for screens in this range */
                 }
 
                 .box-heading {
-                    font-size: 22px; /* Adjusted size for screens in this range */
+                    font-size: 22px;
+                    /* Adjusted size for screens in this range */
                 }
             }
 
@@ -295,48 +321,33 @@
                         <h1 class="custom-logo-page-heading">Custom Logo Design Services for Your Business</h1>
                         <p>Let our logo designs turn your ideas into professional magic!</p>
                         <div class="text-center">
-                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#contact-modal"><button class="custom-logo-page-button">Get Started</button></a>
+                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#contact-modal"><button
+                                    class="custom-logo-page-button">Get Started</button></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex justify-content-center align-items-center">
                     <div class="custom-logo-page-form bg-white border p-3 rounded">
                         <h3 class="custom-logo-page-form-heading text-center">Get a Free Quote</h3>
-
-                        <form id="custom-form" method="POST" action="{{ route('customLogoSubmit') }}" novalidate>
+                        <form id="custom-form" method="POST" action="{{ route('customLogoSubmit') }}">
                             @csrf
 
                             <div class="form-group mb-2">
                                 <label for="name" class="custom-logo-page-label">Name:</label>
-                                <input type="text" class="form-control custom-logo-page-input @error('name') is-invalid @enderror" name="name" id="name"
-                                    placeholder="Enter your name" required
-                                    pattern="[A-Za-z\s]+" title="Name cannot contain special characters or numbers.">
-                                <div class="invalid-feedback">Please enter a valid name (letters and spaces only).</div>
-                                @error('name')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
+                                <input type="text" class="form-control custom-logo-page-input" name="name" id="name"
+                                    placeholder="Enter your name" required>
                             </div>
 
                             <div class="form-group mb-2">
                                 <label for="email" class="custom-logo-page-label">Email:</label>
-                                <input type="email" class="form-control custom-logo-page-input @error('email') is-invalid @enderror" name="email" id="email"
+                                <input type="email" class="form-control custom-logo-page-input" name="email" id="email"
                                     placeholder="Enter your email" required>
-                                <div class="invalid-feedback">Please enter a valid email address.</div>
-                                @error('email')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
                             </div>
 
                             <div class="form-group mb-2">
                                 <label for="phone" class="custom-logo-page-label">Phone Number:</label>
-                                <input type="tel" class="form-control custom-logo-page-input @error('phone') is-invalid @enderror" name="phone"
-                                    id="phone" placeholder="Enter your phone number" required
-                                    pattern="^\+?[0-9\s]{10,15}$" title="Phone number should contain only numbers and spaces, and can start with a '+'."
-                                    maxlength="15">
-                                <div class="invalid-feedback">Please enter a valid phone number (max 15 digits).</div>
-                                @error('phone')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
+                                <input type="tel" class="form-control custom-logo-page-input iti" name="phone"
+                                    id="phone" placeholder="Enter your phone number" required>
                             </div>
 
                             <div class="form-group mb-2">
@@ -344,13 +355,12 @@
                                 <textarea class="form-control custom-logo-page-textarea" name="message" id="message" rows="2"
                                     placeholder="Your comments" required></textarea>
                             </div>
-
+                            <form action="{{ url('/logo-maker') }}" method="POST">
                             <button type="submit" class="btn btn-secondary custom-logo-page-submit align-left">Submit</button>
-                        </form>
-
+                            </form>
                     </div>
                 </div>
-            </div></div>
+            </div>
 
 
         <div class="container custom-container-margin-v3">
@@ -358,10 +368,10 @@
                 <div class="col-lg-6 custom-text-section-v3">
                     <h2>Same Premium Logos, Now Faster!</h2>
                     <p>We have delivered top-notch designs to thousands of clients. With our free logo services,
-                    get high-quality, customizable logos in minutes straight from our expert designers!</p>
+                        get high-quality, customizable logos in minutes straight from our expert designers!</p>
                     <p>We know you are eager to launch your business, so our simple and speedy customizable
-                    logo design process is here to help. Below are a few simple steps we follow and produce
-                    a professional logo worthy of your brand in no time at all.</p>
+                        logo design process is here to help. Below are a few simple steps we follow and produce
+                        a professional logo worthy of your brand in no time at all.</p>
                     <div class="custom-bold-text-v3">Let Us Create A Custom Logo With Ease!</div>
                 </div>
                 <div class="col-lg-6 custom-image-section-v3">
@@ -377,7 +387,8 @@
             <div class="container portfolio-section">
                 <h2 class="portfolio-heading">Hire Logo Designer for Custom Logo Design</h2>
                 <p class="main-description-online">
-                    Are you looking for a professional logo that truly represents your company? Hire an expert logo designer for
+                    Are you looking for a professional logo that truly represents your company? Hire an expert logo designer
+                    for
                     custom logo design at RFS Logo Design tailored to your business. Stand out with a unique and memorable
                     identity that leaves a lasting impression.
                 </p>
@@ -457,70 +468,81 @@
 
 
 
-    <!----------------------start simple and fast --------------------->
-    <section class="custom-logo-process">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h2>Simple and Fast<br>Customizable Logo<br>Design Process</h2>
-                </div>
-                <div class="col-md-6">
-                    <p style="text-align: justify;">We understand the rush to launch your business startup, and that’s why customizable logos make sense. Getting a professional logo design from our advance studio isn’t hard, just follow these steps.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <div class="box">
-                    <img src="images/Frame 20.png" class="box-image" alt="Image 1">
-                    <div class="box-content">
-                        <span class="box-heading-number">01</span>
-                        <h3 class="box-heading">Discovery and Research</h3>
-                        <p class="box-text">First up, we dive into learning all about your brand, audience, and competitors. This helps us get
-                            a feel for what your logo should say and how it should stand out. We’ll brainstorm, survey, and check out what others in your space are doing.</p>
+        <!----------------------start simple and fast --------------------->
+        <section class="custom-logo-process">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2>Simple and Fast<br>Customizable Logo<br>Design Process</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <p style="text-align: justify;">We understand the rush to launch your business startup, and that’s
+                            why customizable logos make sense. Getting a professional logo design from our advance studio
+                            isn’t hard, just follow these steps.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <div class="box">
-                    <img src="images/Frame 21.png" class="box-image" alt="Image 2">
-                    <div class="box-content">
-                        <span class="box-heading-number">02</span>
-                        <h3 class="box-heading">Concept<br> Refinement</h3>
-                        <p class="box-text">We begin by sketching ideas and exploring different styles through rough drafts and mood boards.
-                            Once the best concepts emerge, we refine them by finalizing colors, typography, and ensuring the logo works across all formats. Your feedback guides the final tweaks.</p>
+        </section>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="box">
+                        <img src="images/Frame 20.png" class="box-image" alt="Image 1">
+                        <div class="box-content">
+                            <span class="box-heading-number">01</span>
+                            <h3 class="box-heading">Discovery and Research</h3>
+                            <p class="box-text">First up, we dive into learning all about your brand, audience, and
+                                competitors. This helps us get
+                                a feel for what your logo should say and how it should stand out. We’ll brainstorm, survey,
+                                and check out what others in your space are doing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="box">
+                        <img src="images/Frame 21.png" class="box-image" alt="Image 2">
+                        <div class="box-content">
+                            <span class="box-heading-number">02</span>
+                            <h3 class="box-heading">Concept<br> Refinement</h3>
+                            <p class="box-text">We begin by sketching ideas and exploring different styles through rough
+                                drafts and mood boards.
+                                Once the best concepts emerge, we refine them by finalizing colors, typography, and ensuring
+                                the logo works across all formats. Your feedback guides the final tweaks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="box">
+                        <img src="images/Frame 22.png" class="box-image" alt="Image 3">
+                        <div class="box-content">
+                            <span class="box-heading-number">03</span>
+                            <h3 class="box-heading">Finalization and Delivery</h3>
+                            <p class="box-text">Finally, we prepare your logo for action. We create various formats for
+                                different uses and
+                                make sure they look great everywhere. Plus, we might put together a style guide to keep
+                                everything consistent.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <div class="box">
-                    <img src="images/Frame 22.png" class="box-image" alt="Image 3">
-                    <div class="box-content">
-                        <span class="box-heading-number">03</span>
-                        <h3 class="box-heading">Finalization and Delivery</h3>
-                        <p class="box-text">Finally, we prepare your logo for action. We create various formats for different uses and
-                            make sure they look great everywhere. Plus, we might put together a style guide to keep everything consistent.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-    <!----------------------end simple and fast --------------------->
-    <div class="container custom-section-v3">
-        <div class="row align-items-center">
-            <div class="col-lg-6 custom-image-v3"style = padding-right:50px;>
-                <img src="images/Mask group (1).png" alt="Affordable Logo Design">
+            <!----------------------end simple and fast --------------------->
+            <div class="container custom-section-v3">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 custom-image-v3"style=padding-right:50px;>
+                        <img src="images/Mask group (1).png" alt="Affordable Logo Design">
+                    </div>
+                    <div class="col-lg-6 custom-content-v3">
+                        <h2>We Craft Affordable Logo Designs To Boost Creativity</h2>
+                        <p style="text-align: justify;">Allow us to create logo designs with top-notch quality! We offer
+                            affordable, professional logos perfect for startups and small businesses. Get the same expert
+                            design style without the hefty price tag, thanks to our global team of skilled logo designers.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-6 custom-content-v3">
-                <h2>We Craft Affordable Logo Designs To Boost Creativity</h2>
-                <p style="text-align: justify;">Allow us to create logo designs with top-notch quality! We offer affordable, professional logos perfect for startups and small businesses. Get the same expert design style without the hefty price tag, thanks to our global team of skilled logo designers.</p>
-            </div>
-        </div>
-    </div>
 
-    </div>
+        </div>
 
 
         <!----------------------start need help--------------------->
@@ -535,11 +557,7 @@
             <div class="col-md-4 mb-3 text-center">
                 <div class="contact-option">
                     <div class="icon-circle">
-<<<<<<< HEAD
-                        <a href="tel:+15516665255"><i class="fas fa-phone fa-2x"></i></a>
-=======
                          <a href="tel:+15516665255"><i class="fas fa-phone fa-2x"></i></a>
->>>>>>> bb18d312224f636cdd9f3f513e26e8dd021c0e1d
                     </div>
                     <a href="tel:+15516665255"> +1(551)666-5255</a>
                 </div>
@@ -547,11 +565,7 @@
             <div class="col-md-4 mb-3 text-center">
                 <div class="contact-option">
                     <div class="icon-circle">
-<<<<<<< HEAD
-                        <a href="mailto:support@rfslogodesign.com"><i class="fas fa-envelope fa-2x"></i></a>
-=======
                        <a href="mailto:support@rfslogodesign.com"> <i class="fas fa-envelope fa-2x"></i></a>
->>>>>>> bb18d312224f636cdd9f3f513e26e8dd021c0e1d
                     </div>
                     <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a>
                 </div>
@@ -559,11 +573,7 @@
             <div class="col-md-4 mb-3 text-center">
                 <div class="contact-option">
                     <div class="icon-circle">
-<<<<<<< HEAD
-                        <a href="{{ url('https://wa.me/+18482369397') }}"> <i class="fas fa-comment-dots fa-2x"></i></a>
-=======
                          <a href="{{ url('https://wa.me/+18482369397') }}"><i class="fas fa-comment-dots fa-2x"></i></a>
->>>>>>> bb18d312224f636cdd9f3f513e26e8dd021c0e1d
                     </div>
                     <a href="{{ url('https://wa.me/+18482369397') }}">Live Chat</a>
                 </div>
@@ -571,7 +581,7 @@
         </div>
     </section>
 
-    <!----------------------start need help--------------------->
+        <!----------------------start need help--------------------->
 
 
 
@@ -724,18 +734,13 @@
 
                             <div class="mb-3">
                                 <label for="name" class="form-label"><b>Name</b></label>
-                                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name"
-                                    placeholder="John Doe" required
-                                    pattern="[A-Za-z\s]+" title="Name cannot contain special characters or numbers.">
-                                <div class="invalid-feedback">Please enter a valid name (letters and spaces only).</div>
-                                @error('name')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
+                                <input type="text" class="form-control" name="name" id="name"
+                                    placeholder="John Doe" required>
                             </div>
 
                             <div class="mb-3">
                                 <label for="email" class="form-label"><b>Email address</b></label>
-                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email"
+                                <input type="email" class="form-control" name="email" id="email"
                                     placeholder="name@example.com" required
                                     title="Please enter a valid email address">
                                 <div class="invalid-feedback">Please enter a valid email address.</div>
@@ -746,14 +751,8 @@
 
                             <div class="mb-3">
                                 <label for="phone" class="form-label"><b>Phone number</b></label>
-                                <input type="tel" class="form-control @error('phone') is-invalid @enderror" name="phone" id="phone"
-                                    placeholder="123456789" required
-                                    pattern="^\+?[0-9\s]{11,15}$" title="Phone number should be between 11 and 15 digits and may start with a '+'."
-                                    maxlength="15">
-                                <div class="invalid-feedback">Please enter a valid phone number (11 to 15 digits).</div>
-                                @error('phone')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
+                                <input type="tel" class="form-control" name="phone" id="phone"
+                                    placeholder="123456789" required pattern="^\d{15}$" title="Please enter phone number">
                             </div>
 
                             <div class="mb-3">
@@ -770,24 +769,6 @@
                 </div>
             </div>
         </div>
-
-        <script>
-            document.getElementById('email').addEventListener('input', function() {
-                var emailInput = this.value;
-                var emailError = document.getElementById('emailError');
-
-                // Regular expression to validate email with dot in domain
-                var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-                if (!emailPattern.test(emailInput)) {
-                    emailError.style.display = 'block'; // Show error
-                    this.classList.add('is-invalid');  // Add invalid class to input
-                } else {
-                    emailError.style.display = 'none';  // Hide error
-                    this.classList.remove('is-invalid');  // Remove invalid class
-                }
-            });
-        </script>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
@@ -822,88 +803,4 @@
                 @endif
             @endif
         </script>
-
-<script>
-    document.getElementById('custom-form').addEventListener('submit', function(event) {
-        let form = event.target;
-        let isValid = true;
-
-        // Name validation: no special characters
-        let nameField = form.querySelector('#name');
-        let nameRegex = /^[A-Za-z\s]+$/;
-        if (!nameRegex.test(nameField.value.trim())) {
-            nameField.classList.add('is-invalid');
-            isValid = false;
-        } else {
-            nameField.classList.remove('is-invalid');
-        }
-
-        // Email validation: proper email format
-        let emailField = form.querySelector('#email');
-        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(emailField.value.trim())) {
-            emailField.classList.add('is-invalid');
-            isValid = false;
-        } else {
-            emailField.classList.remove('is-invalid');
-        }
-
-        // Phone validation: only numbers and spaces, and maximum 15 characters
-        let phoneField = form.querySelector('#phone');
-        let phoneRegex = /^\+?[0-9\s]{10,15}$/;
-        if (!phoneRegex.test(phoneField.value.trim())) {
-            phoneField.classList.add('is-invalid');
-            isValid = false;
-        } else {
-            phoneField.classList.remove('is-invalid');
-        }
-
-        if (!isValid) {
-            event.preventDefault(); // Prevent form submission if validation fails
-        }
-    });
-</script>
-<script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        let form = event.target;
-        let isValid = true;
-
-        // Name validation: no special characters
-        let nameField = form.querySelector('#name');
-        let nameRegex = /^[A-Za-z\s]+$/;
-        if (!nameRegex.test(nameField.value.trim())) {
-            nameField.classList.add('is-invalid');
-            isValid = false;
-        } else {
-            nameField.classList.remove('is-invalid');
-        }
-
-        // Email validation: proper email format
-        let emailField = form.querySelector('#email');
-        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(emailField.value.trim())) {
-            emailField.classList.add('is-invalid');
-            isValid = false;
-        } else {
-            emailField.classList.remove('is-invalid');
-        }
-
-        // Phone validation: between 11 to 15 digits
-        let phoneField = form.querySelector('#phone');
-        let phoneRegex = /^\+?[0-9\s]{11,15}$/;
-        if (!phoneRegex.test(phoneField.value.trim())) {
-            phoneField.classList.add('is-invalid');
-            isValid = false;
-        } else {
-            phoneField.classList.remove('is-invalid');
-        }
-
-        if (!isValid) {
-            event.preventDefault(); // Prevent form submission if validation fails
-        }
-    });
-</script>
-
-
-
     @endsection

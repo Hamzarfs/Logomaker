@@ -48,6 +48,9 @@ Route::middleware(['role:user', 'auth'])->group(function () {
     Route::get('checkPaymentStatus', [MainController::class, 'checkPaymentStatusView'])->name('checkPaymentStatusView');
     Route::post('orderComplete', [MainController::class, 'orderComplete'])->name('orderComplete');
     Route::get('/maker', [MainController::class, 'maker'])->name('maker');
+    
+    Route::post('save-svg', [MainController::class, 'saveSvg'])->name('save-svg');
+
     Route::post('saveLogo', [MainController::class, 'saveLogo'])->name('saveLogo');
     Route::get('user-orders', [MainController::class, 'orders'])->name('orders');
     Route::get('account-details', [MainController::class, 'accountDetails'])->name('accountDetails');
@@ -75,6 +78,7 @@ Route::post('/store-session-data', [SessionDataController::class, 'storeSessionD
 Route::post('/store-session-data-logo', [SessionDataController::class, 'storeSessionDataLogo']);
 Route::get('/store-session-data-image', [SessionDataController::class, 'storeSessionDataImage']);
 Route::get('/store-price', [SessionDataController::class, 'storePrice']);
+Route::get('/set-image', [SessionDataController::class, 'setSessionImage']);
 
 
 

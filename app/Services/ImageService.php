@@ -2,8 +2,8 @@
 
 namespace App\Services;
 
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\File;
 
 class ImageService
 {
@@ -80,6 +80,31 @@ class ImageService
 
         imagewebp($compressedImage, $savePath, 100); // Adjust quality as needed
         imagedestroy($compressedImage);
+
+        return $filename;
+    }
+
+    public function makeImageThumbnail(string $file, string $directory = 'category-image')
+    {
+        $filename = str_replace('svg', 'png', $file);
+        $outputDirectory = "$directory/thumbnails";
+        File::ensureDirectoryExists(public_path($outputDirectory));
+
+        // Use Imagick to convert the SVG to PNG and resize
+        $imagick = new \Imagick();
+        $imagick->setBackgroundColor(new \ImagickPixel('transparent'));  // Set transparent background
+        $imagick->readImageBlob(file_get_contents(public_path("$directory/$file")));  // Load the SVG
+        $imagick->resizeImage(243, 160, \Imagick::FILTER_LANCZOS, 1);  // Resize the image
+        $imagick->setImageFormat("png32");  // Convert to PNG with 32-bit to retain transparency
+        // $imagick->trimImage(0);  // Optionally trim any extra white space
+
+        // Save the output PNG
+        $outputPath = public_path("$outputDirectory/$filename");
+        $imagick->writeImage($outputPath);
+
+        // Clean up
+        $imagick->clear();
+        $imagick->destroy();
 
         return $filename;
     }

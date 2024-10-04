@@ -40,6 +40,7 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Logo</th>
+                                    <th>Status</th>
                                     <th>User</th>
                                     <th>Product</th>
                                     <th>Date</th>
@@ -51,13 +52,29 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>
-                                            <img src="{{ asset("orders/{$user->id}_{$o->product->id}.png") }}" alt="Logo thumbnail" class="thumbnail">
+                                             @if ($o->status === 'draft')
+                                             
+                                                <img src="{{ asset("svgs/{$user->id}_{$o->product->id}.png") }}" alt="Logo thumbnail" class="thumbnail">
+                                             @elseif ($o->status === 'paid')
+                                                <img src="{{ asset("orders/{$user->id}_{$o->product->id}.png") }}" alt="Logo thumbnail" class="thumbnail">
+                                             @endif
                                         </td>
+                                        <td>{{ $o->status }}</td>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $o->product->name }}</td>
                                         <td>{{ date('m-d-Y', strtotime($o->created_at)) }}</td>
                                         <td>
                                             <div class="d-flex align-items-center">
+                                            @if ($o->status === 'draft')
+
+                                            
+                                            <a href="{{ url('/set-image?image=' . $o->user_id.'_' . $o->product_id.'.svg') }}" >
+                      
+                                                <button class="btn btn-warning resume-btn me-2" data-order-id="{{ $o->id }}">
+                                                    Resume {{$o->product->image}}
+                                                </button>
+                                            </a>    
+                                            @elseif ($o->status === 'paid')
                                                 <button class="btn btn-primary preview-btn me-2"
                                                     data-file='{{ $user->id }}_{{ $o->product->id }}.png'
                                                     data-toggle="modal" data-target="#previewModal">
@@ -67,6 +84,7 @@
                                                     data-file='{{ $user->id }}_{{ $o->product->id }}.png'>
                                                     Download
                                                 </button>
+                                            @endif
                                             </div>
                                         </td>
                                     </tr>

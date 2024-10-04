@@ -1,7 +1,8 @@
 @extends('site.common')
 
 @section('title', 'Create Your Account - RFS Logo Design')
-@section('meta_desc', 'Join RFS Logo Design today! Create an account to start your logo design journey, track progress,
+@section('meta_desc',
+    'Join RFS Logo Design today! Create an account to start your logo design journey, track progress,
     and collaborate with our expert design team.')
 
 @section('content')
@@ -79,16 +80,16 @@
 
 
 
-span.fa.fa-fw.field-icon.toggle-password.fa-eye {
+        span.fa.fa-fw.field-icon.toggle-password.fa-eye {
 
-  margin-right: 20px !important;
-  margin-top: 5px !important;
-}
+            margin-right: 20px !important;
+            margin-top: 5px !important;
+        }
 
-.fa-fw {
-    margin-right: 20px !important;
-margin-top: 5px !important;
-}
+        .fa-fw {
+            margin-right: 20px !important;
+            margin-top: 5px !important;
+        }
 
         @media (max-width: 768px) {
             .col-md-6 {

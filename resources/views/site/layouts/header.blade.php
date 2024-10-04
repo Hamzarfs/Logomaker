@@ -252,7 +252,7 @@
                         action="{{ url('/store-session-data') }}">
                         @csrf
                         <input type="text" id="industry" class="form-control mr-sm-2" type="search"
-                            placeholder="arts, beauty, cleaning etc" aria-label="Search">
+                            placeholder="Search Category" aria-label="Search">
                         <input type="hidden" id="industryId" name="category">
                         <button class="custom-button-banner my-2 my-sm-0 " id="nextButton">Search</button>
                     </form>

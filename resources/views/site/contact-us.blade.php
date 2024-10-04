@@ -310,11 +310,11 @@
                 return;
             }
 
-            if (!phonePattern.test(phone)) {
-                alert('Please enter a valid phone number (14 digits).');
-                event.preventDefault();
-                return;
-            }
+            // if (!phonePattern.test(phone)) {
+            //     alert('Please enter a valid phone number (14 digits).');
+            //     event.preventDefault();
+            //     return;
+            // }
         });
 
         @if (session()->has('success'))
