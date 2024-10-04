@@ -413,90 +413,57 @@
 
 
                 var originalWidth = 855;
-    var originalHeight = 590;
+                var originalHeight = 590;
 
-    // Set the original canvas size
-    canvas.setWidth(originalWidth);
-    canvas.setHeight(originalHeight);
+                // Set the original canvas size
+                canvas.setWidth(originalWidth);
+                canvas.setHeight(originalHeight);
 
-    // Add sample objects (for demonstration)
-    var rect = new fabric.Rect({
-        left: 100,
-        top: 100,
-        fill: 'red',
-        width: 50,
-        height: 50
-    });
-    var text = new fabric.Text('Sample Text', {
-        left: 200,
-        top: 200,
-        fontSize: 20
-    });
-    canvas.add(rect);
-    canvas.add(text);
-
-    // Function to resize the canvas without moving the objects
-    function resizeCanvas() {
-        var windowWidth = $(window).width();
-        var windowHeight =  $(window).height();
-
-        // alert(windowWidth+"DDDDDDDDDDD"+windowHeight)
-
-        // Maintain aspect ratio
-        var newWidth = Math.min(windowWidth * 0.92, originalWidth);  // 92% of window width or originalWidth
-        var newHeight = (newWidth / originalWidth) * originalHeight; // Keep aspect ratio
-
-        // Cap the height if it exceeds the window height
-        if (newHeight > windowHeight * 0.95) {
-            newHeight = Math.min(windowHeight * 0.95, originalHeight);
-            newWidth = (newHeight / originalHeight) * originalWidth;
-        }
-
-        // Set the new canvas dimensions
-        canvas.setWidth(newWidth);
-        canvas.setHeight(newHeight);
-
-        // Adjust the scaling factor for positioning the text correctly
-        var scaleX = newWidth / originalWidth;
-        var scaleY = newHeight / originalHeight;
-
-        // Reposition all objects
-        canvas.getObjects().forEach(function(obj) {
-            // For non-text objects, we can maintain their current positions
-            if (obj.type !== 'text') {
-                obj.left *= scaleX; 
-                obj.top *= scaleY; 
-                obj.setCoords(); // Update object coordinates
-            } else {
+                // Add sample objects (for demonstration)
+                var rect = new fabric.Rect({
+                    left: 100,
+                    top: 100,
+                    fill: 'red',
+                    width: 50,
+                    height: 50
+                });
+                var text = new fabric.Text('Sample Text', {
+                    left: 200,
+                    top: 200,
+                    fontSize: 20
+                });
+                canvas.add(rect);
+                canvas.add(text);
                 
-                //alert( obj.left +"/"+ originalWidth  +"*"+newWidth)
-                // For text objects, maintain their position relative to the new size
-                // Set new positions based on the scaling
-                var newLeft = (obj.left / originalWidth) * newWidth;  // Calculate new left position
-                var newTop = (obj.top / originalHeight) * newHeight;  // Calculate new top position
+                        
+                // Function to resize the canvas without moving the objects
+                function resizeCanvas() {
+                    var windowWidth = $(window).width();
+                    var windowHeight =  $(window).height();
+                    // alert(windowWidth+"DDDDDDDDDDD"+windowHeight)
+                    // Maintain aspect ratio
+                    var newWidth = Math.min(windowWidth * 0.92, originalWidth);  // 92% of window width or originalWidth
+                    var newHeight = (newWidth / originalWidth) * originalHeight; // Keep aspect ratio
+                    // Cap the height if it exceeds the window height
+                    if (newHeight > windowHeight * 0.95) {
+                        newHeight = Math.min(windowHeight * 0.95, originalHeight);
+                        newWidth = (newHeight / originalHeight) * originalWidth;
+                    }
+                    // Set the new canvas dimensions
+                    canvas.setWidth(newWidth);
+                    canvas.setHeight(newHeight);
 
-                // Update the position
-                obj.left = newLeft;
-                obj.top = newTop;
+ 
 
-                obj.setCoords(); // Update
-            }
-        });
+                    // Render the canvas
+                    canvas.renderAll();
 
-        // Render the canvas
-        canvas.renderAll();
-    }
+                     
+                }
 
-    // Initial resize
-    resizeCanvas();
-
-    // Handle window resize events
-    $(window).on('resize', function() {
-        resizeCanvas();
-    });
-
-
-
+                // Initial resize
+                resizeCanvas();
+            
 
 
 
@@ -1153,10 +1120,7 @@
 
                 // here i am testing for save logo
 
-                
-
-
-
+   
 
 // Function to load the SVG exactly as it is without changing position or scale
 function loadCarSVGSave() {
@@ -1201,6 +1165,9 @@ function loadCarSVGSave() {
                 // Add the group to the canvas
                 canvas.add(group);
 
+
+
+                
                 // // Only add the sample text if necessary
                 // var tt = '{{ isset($order) ? $order->sample_text :""}}';
                 // if (tt.trim() !== '') {
@@ -1255,6 +1222,8 @@ function loadCarSVGSave() {
                 loadCarSVG();
 
            // }
+
+           
 
                 // Add text to the canvas
                 $('#add-text').click(function() {
