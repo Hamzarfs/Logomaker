@@ -448,22 +448,38 @@
                         
                 // Function to resize the canvas without moving the objects
                 function resizeCanvas() {
-                    const outerCanvasContainer = $('.fabric-canvas-wrapper')[0];
-                    console.log(outerCanvasContainer);
-                    const ratio = canvas.getWidth() / canvas.getHeight();
-                    const containerWidth = outerCanvasContainer.clientWidth;
-                    const containerHeight = outerCanvasContainer.clientHeight;
-                    const scale = containerWidth / canvas.getWidth();
-                    const zoom = canvas.getZoom() * scale;
-                    canvas.setDimensions({
-                        width: containerWidth,
-                        height: containerWidth / ratio
-                    });
-                    canvas.setViewportTransform([zoom, 0, 0, zoom, 0, 0]);
+                 // Check if the window width is less than 768px
+                    if ($(window).width() < 768) {
+                        const outerCanvasContainer = $('.fabric-canvas-wrapper')[0];
+                        //console.log(outerCanvasContainer);
+
+                        const ratio = canvas.getWidth() / canvas.getHeight();
+                        const containerWidth = outerCanvasContainer.clientWidth;
+                        const containerHeight = outerCanvasContainer.clientHeight;
+
+                        // Scale canvas based on the container width
+                        const scale = containerWidth / canvas.getWidth();
+                        const zoom = canvas.getZoom() * scale;
+
+                        // Set new dimensions for the canvas
+                        canvas.setDimensions({
+                            width: containerWidth,
+                            height: containerWidth / ratio
+                        });
+
+                        // Apply zoom and viewport transformation
+                        canvas.setViewportTransform([zoom, 0, 0, zoom, 0, 0]);
+
+                        // Render the updated canvas
+                        canvas.renderAll();
+                    }
                 }
 
                 
-                //$(window).resize(resizeCanvas);
+
+
+                
+                 $(window).resize(resizeCanvas);
 
                 $(window).on('load', resizeCanvas); // Call resizeCanvas on window load
 
