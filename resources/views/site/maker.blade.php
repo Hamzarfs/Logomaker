@@ -366,7 +366,15 @@
 
                         <div class="col-md-8">
                             <h1 class="text-center" style="margin-top: 20px;">RFS Logo Editor</h1>
-                            <canvas id="logo-canvas" style="width: 80%; border:red 1px solid; z-index:1000000 !important"></canvas>
+                            <!-- <canvas id="logo-canvas" style="width: 80%; border:red 1px solid; z-index:1000000 !important"></canvas> -->
+
+                            <div class="fabric-canvas-wrapper">
+                                <canvas id="logo-canvas"
+                                    style="width: 80%; border:red 1px solid; z-index:1000000 !important"></canvas>
+                            </div>
+
+
+
                         </div>
                     </div>
                 </div>
@@ -419,52 +427,45 @@
                 canvas.setWidth(originalWidth);
                 canvas.setHeight(originalHeight);
 
-                // Add sample objects (for demonstration)
-                var rect = new fabric.Rect({
-                    left: 100,
-                    top: 100,
-                    fill: 'red',
-                    width: 50,
-                    height: 50
-                });
-                var text = new fabric.Text('Sample Text', {
-                    left: 200,
-                    top: 200,
-                    fontSize: 20
-                });
-                canvas.add(rect);
-                canvas.add(text);
+ 
+      
+                // // Add sample objects (for demonstration)
+                // var rect = new fabric.Rect({
+                //     left: 100,
+                //     top: 100,
+                //     fill: 'red',
+                //     width: 50,
+                //     height: 50
+                // });
+                // var text = new fabric.Text('Sample Text', {
+                //     left: 200,
+                //     top: 200,
+                //     fontSize: 20
+                // });
+                // canvas.add(rect);
+                // canvas.add(text);
                 
                         
                 // Function to resize the canvas without moving the objects
                 function resizeCanvas() {
-                    var windowWidth = $(window).width();
-                    var windowHeight =  $(window).height();
-                    // alert(windowWidth+"DDDDDDDDDDD"+windowHeight)
-                    // Maintain aspect ratio
-                    var newWidth = Math.min(windowWidth * 0.92, originalWidth);  // 92% of window width or originalWidth
-                    var newHeight = (newWidth / originalWidth) * originalHeight; // Keep aspect ratio
-                    // Cap the height if it exceeds the window height
-                    if (newHeight > windowHeight * 0.95) {
-                        newHeight = Math.min(windowHeight * 0.95, originalHeight);
-                        newWidth = (newHeight / originalHeight) * originalWidth;
-                    }
-                    // Set the new canvas dimensions
-                    canvas.setWidth(newWidth);
-                    canvas.setHeight(newHeight);
-
- 
-
-                    // Render the canvas
-                    canvas.renderAll();
-
-                     
+                    const outerCanvasContainer = $('.fabric-canvas-wrapper')[0];
+                    console.log(outerCanvasContainer);
+                    const ratio = canvas.getWidth() / canvas.getHeight();
+                    const containerWidth = outerCanvasContainer.clientWidth;
+                    const containerHeight = outerCanvasContainer.clientHeight;
+                    const scale = containerWidth / canvas.getWidth();
+                    const zoom = canvas.getZoom() * scale;
+                    canvas.setDimensions({
+                        width: containerWidth,
+                        height: containerWidth / ratio
+                    });
+                    canvas.setViewportTransform([zoom, 0, 0, zoom, 0, 0]);
                 }
 
-                // Initial resize
-                resizeCanvas();
-            
+                
+                //$(window).resize(resizeCanvas);
 
+                $(window).on('load', resizeCanvas); // Call resizeCanvas on window load
 
 
 
