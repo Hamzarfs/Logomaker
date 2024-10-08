@@ -282,6 +282,106 @@
                 background-repeat: repeat;
                 z-index: 10;
             }
+
+
+            /* responsive start */
+
+            .mobilebar {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            gap: 15px; /* Space between items */
+            margin-right: 30px;
+            max-width: 100%; /* Maximum width for the sidebar */
+            margin: auto; /* Center the sidebar */
+            border-radius: 10px; /* Rounded corners for sidebar */
+            padding-top:15px;
+            padding-bottom:15px;
+           
+
+        }
+
+        .mobilebar .mobile-button-row {
+            padding-left:15px;
+            padding-right:5px;
+            
+            display: flex; /* Row layout for buttons */
+            justify-content: space-between; /* Evenly space buttons */
+            gap: 10px; /* Space between buttons */
+        }
+
+        .mobilebar .mobile-btn, 
+        .mobilebar .mobile-form-check, 
+        .mobilebar .mobile-form-group {
+            margin: 0; /* Remove default margin for uniform spacing */
+            width: 100%; /* Full width for form groups and inputs */
+        }
+
+        .mobilebar .mobile-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center button text and icons */
+            padding: 10px; /* Padding for buttons */
+            background-color: #343A40; /* Primary button color */
+            color: white; /* Button text color */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Rounded button corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s; /* Transition effect on hover */
+            font-size: 16px; /* Font size */
+        }
+
+        .mobilebar .mobile-btn:hover {
+            background-color: #6C757D; /* Darker shade on hover */
+        }
+
+        .mobile-form-check {
+            display: flex;
+            align-items: center; /* Center checkbox and label */
+            gap: 5px; /* Space between checkbox and label */
+            margin-left:25px !important;
+        }
+
+        .mobile-form-group {
+            display: flex;
+            flex-direction: column; /* Stack label and input vertically */
+            gap: 5px; /* Space between label and input */
+        }
+
+        .colorPickerContainer {
+            display: flex; /* Use flexbox for the container */
+            justify-content: space-between; /* Space elements evenly */
+            gap: 10px; /* Space between color pickers */
+        }
+
+        .colorPicker {
+            width: 40px; /* Adjust width to fit side by side */
+            padding: 0px; /* Padding for color inputs */
+            border: 1px solid #ced4da; /* Border color */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        /* Style for the input field */
+        .mobile-form-control {
+            border: 1px solid #ced4da; /* 8px border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 8px; /* Padding for the input */
+            font-size: 16px; /* Font size */
+        }
+         
+        /* Media queries for mobile responsiveness */
+        @media (max-width: 480px) {
+            .mobilebar {
+                width: 100%;
+                margin-right: 30px;
+            }
+
+            .mobilebar .mobile-btn {
+                font-size: 14px; /* Smaller font size for buttons */
+                padding: 8px; /* Smaller padding */
+            }
+        }
+
+            /* responsive end  */
         </style>
         <!----------------------------------------- Banner Section ------------------------------->
 
@@ -350,7 +450,7 @@
 
                                 <button id="save-svg" class="btn btn-primary">Save</button>
 
-                                {{-- <button id="save-logo" class="btn"><i class="fas fa-save"></i> Save</button> --}}
+                                
                             </div>
                         </div>
 
@@ -359,18 +459,36 @@
 
 
                     </div>
+                </div>
+
+
+                <div class="mobilebar">
+                    <div class="mobile-button-row">
+                        <button id="mobile-italic-text" class="mobile-btn"><i class="fas fa-italic"></i></button>
+                        <button id="mobile-bold-text" class="mobile-btn"><i class="fas fa-bold"></i></button>
+                        <button id="mobile-undo" class="mobile-btn"><i class="fas fa-arrow-left"></i></button> <!-- Updated icon for Undo -->
+                        <button id="mobile-redo" class="mobile-btn"><i class="fas fa-arrow-right"></i></button> <!-- Updated icon for Redo -->
+                        <button id="mobile-redirect-button" class="mobile-btn"><i class="fas fa-redo"></i></button>
+                        <button id="mobile-delete-button" class="mobile-btn"><i class="fas fa-trash"></i></button>
+                    </div>
+                    
+                    <div class="mobile-button-row">
+                        <button id="mobile-add-text" class="mobile-btn" style="width: 10%;"><i class="fas fa-plus"></i></button>
+                        <input type="text" id="mobile-logo-text" class="mobile-form-control" placeholder="Enter Logo Text" style="width: 90%;">
+                    </div>
+
                 </div>
 
                 <div class="col-md-8">
                     <div class="container-custom">
 
                         <div class="col-md-8">
-                            <h1 class="text-center" style="margin-top: 20px;">RFS Logo Editor</h1>
+                            <h1 class="text-center rfs-heading" style="margin-top: 20px;">RFS Logo Editor</h1>
                             <!-- <canvas id="logo-canvas" style="width: 80%; border:red 1px solid; z-index:1000000 !important"></canvas> -->
 
                             <div class="fabric-canvas-wrapper">
                                 <canvas id="logo-canvas"
-                                    style="width: 80%; border:red 1px solid; z-index:1000000 !important"></canvas>
+                                    style="width: 80%; "></canvas>
                             </div>
 
 
@@ -378,7 +496,41 @@
                         </div>
                     </div>
                 </div>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+                <div class="mobilebar">
+                    <div class="text-effects">
+                    <div class="mobile-form-check">
+                        <input type="checkbox" id="mobile-text-outline" class="mobile-form-check-input">
+                        <label for="text-outline" class="mobile-form-check-label">Outline</label>
+                        <input type="checkbox" id="mobile-text-shadow" class="mobile-form-check-input">
+                        <label for="text-shadow" class="mobile-form-check-label">Shadow</label>
+                    </div>
+                </div>
+
+                <div class="mobile-form-group colorPickerContainer">
+                    <div class="color-picker" style="display: flex; align-items: center; gap: 20px;">
+                        <div style="display: flex; align-items: center;">
+                            <i class="fas fa-paint-brush"></i>
+                            <label for="text-color" style="margin: 0 5px;">Text Color:</label>
+                            <input type="color" id="mobile-text-color" class="colorPicker">
+                        </div>
+
+                        <div style="display: flex; align-items: center;">
+                            <i class="fas fa-fill-drip"></i>
+                            <label for="background-color" style="margin: 0 5px;">BG Color:</label>
+                            <input type="color" id="mobile-background-color" class="colorPicker">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mobile-button-row">
+                    <button id="mobile-save-logo" class="mobile-btn"><i class="fas fa-save" style="margin-right: 5px;"></i> Download</button>
+                    <button id="mobile-save-svg" class="mobile-btn btn-primary"><i class="fas fa-file-download" style="margin-right: 5px;"></i> Save</button>
+                </div>
+                
+                </div>
+
+                <br> 
             </div>
         </div>
 
@@ -387,7 +539,12 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script>
+            
             document.getElementById('redirect-button').addEventListener('click', function() {
+                window.location.href = "{{ url('/maker') }}";
+            });
+
+            document.getElementById('mobile-redirect-button').addEventListener('click', function() {
                 window.location.href = "{{ url('/maker') }}";
             });
         </script>
@@ -450,6 +607,12 @@
                 function resizeCanvas() {
                  // Check if the window width is less than 768px
                     if ($(window).width() < 768) {
+                        $('.mobilebar').show();
+                        $('.sidebar').hide();
+                        $('.rfs-heading').hide();
+                        
+                       
+                        
                         const outerCanvasContainer = $('.fabric-canvas-wrapper')[0];
                         //console.log(outerCanvasContainer);
 
@@ -472,6 +635,10 @@
 
                         // Render the updated canvas
                         canvas.renderAll();
+                    }else{
+                        $('.sidebar').show();
+                        $('.mobilebar').hide();
+                        $('.rfs-heading').show();
                     }
                 }
 
@@ -772,7 +939,7 @@
                     }
 
                     // Attach the save function to the "Save SVG" button click event
-                    $('#save-svg').on('click', saveCanvasAsSVGToServer);
+                    $('#save-svg, #mobile-save-svg').on('click', saveCanvasAsSVGToServer);
 
 
 
@@ -796,11 +963,11 @@
                         // Update the text, text color, and font family for the selected text layer
                         if (activeObject.type === 'textbox') {
                             $('#logo-text').val(activeObject.text || '');
-                            $('#text-color').val(activeObject.fill || '#000000');
+                            $('#text-color, #mobile-text-color').val(activeObject.fill || '#000000');
                             $('#font-family').val(activeObject.fontFamily || 'Arial');
-                            $('#italic-text').toggleClass('active', activeObject
+                            $('#italic-text, #mobile-italic-text').toggleClass('active', activeObject
                                 .fontStyle === 'italic');
-                            $('#bold-text').toggleClass('active', activeObject
+                            $('#bold-text , #mobile-bold-text').toggleClass('active', activeObject
                                 .fontWeight === 'bold');
                             $('#small-text').toggleClass('active', activeObject.fontSize &&
                                 activeObject.fontSize < 20);
@@ -808,21 +975,21 @@
                                 'uppercase');
                             $('#text-curve').prop('checked', activeObject.get('path') ?
                                 true : false);
-                            $('#text-outline').prop('checked', activeObject.stroke ? true :
+                            $('#text-outline , #mobile-text-outline').prop('checked', activeObject.stroke ? true :
                                 false);
-                            $('#text-shadow').prop('checked', activeObject.shadow ? true :
+                            $('#text-shadow, #mobile-text-shadow').prop('checked', activeObject.shadow ? true :
                                 false);
                         } else {
                             $('#logo-text').val('');
-                            $('#text-color').val('');
+                            $('#text-color, #mobile-text-color').val('');
                             $('#font-family').val('Arial');
-                            $('#italic-text').removeClass('active');
-                            $('#bold-text').removeClass('active');
+                            $('#italic-text , #mobile-italic-text').removeClass('active');
+                            $('#bold-text, #mobile-bold-text').removeClass('active');
                             $('#small-text').removeClass('active');
                             $('#caps-text').prop('checked', false);
                             $('#text-curve').prop('checked', false);
-                            $('#text-outline').prop('checked', false);
-                            $('#text-shadow').prop('checked', false);
+                            $('#text-outline, #mobile-text-outline').prop('checked', false);
+                            $('#text-shadow, #mobile-text-shadow').prop('checked', false);
                         }
                     });
 
@@ -855,25 +1022,25 @@
                     }
 
                     // Bind undo and redo buttons
-                    $('#undo').on('click', undo);
-                    $('#redo').on('click', redo);
+                    $('#undo , #mobile-undo').on('click', undo);
+                    $('#redo, #mobile-redo').on('click', redo);
                     // end undu redo
 
                     // Deselect object
                     canvas.on('before:selection:cleared', function() {
                         $('#logo-text').val('');
-                        $('#text-color').val('');
+                        $('#text-color, #mobile-text-color').val('');
                         $('#font-family').val('Arial');
                         $('#color-palettes input').each(function() {
                             $(this).parent().removeClass('highlighted');
                         });
-                        $('#italic-text').removeClass('active');
-                        $('#bold-text').removeClass('active');
+                        $('#italic-text , #mobile-italic-text').removeClass('active');
+                        $('#bold-text, #mobile-bold-text').removeClass('active');
                         $('#small-text').removeClass('active');
                         $('#caps-text').prop('checked', false);
                         $('#text-curve').prop('checked', false);
-                        $('#text-outline').prop('checked', false);
-                        $('#text-shadow').prop('checked', false);
+                        $('#text-outline, #mobile-text-outline').prop('checked', false);
+                        $('#text-shadow, #mobile-text-shadow').prop('checked', false);
                     });
 
                     // Update the text for the selected textbox
@@ -887,7 +1054,7 @@
 
                     // Update the text color for the selected textbox
                 
-                    $('#text-color').on('input', function() {
+                    $('#text-color , #mobile-text-color').on('input', function() {
                         var activeObject = canvas.getActiveObject();
                         if (activeObject && activeObject.type === 'textbox') {
                             activeObject.set('fill', $(this).val());
@@ -906,7 +1073,7 @@
                     });
 
                     // Toggle italic text
-                    $('#italic-text').click(function() {
+                    $('#italic-text , #mobile-italic-text').click(function() {
                         var activeObject = canvas.getActiveObject();
                         if (activeObject && activeObject.type === 'textbox') {
                             var newFontStyle = activeObject.fontStyle === 'italic' ? '' :
@@ -918,7 +1085,7 @@
                     });
 
                     // Toggle bold text
-                    $('#bold-text').click(function() {
+                    $('#bold-text ,#mobile-bold-text').click(function() {
                         var activeObject = canvas.getActiveObject();
                         if (activeObject && activeObject.type === 'textbox') {
                           
@@ -932,7 +1099,7 @@
                     });
 
                     // Delete selected layer
-                    $('#delete-button').click(function() {
+                    $('#delete-button, #mobile-delete-button').click(function() {
                         var activeObject = canvas.getActiveObject();
                         if (activeObject) {
                             canvas.remove(activeObject)
@@ -962,11 +1129,11 @@
                     });
 
                     // Apply outline effect
-                    $('#text-outline').change(function() {
+                    $('#text-outline , #mobile-text-outline').change(function() {
                         var activeObject = canvas.getActiveObject();
                         if (activeObject && activeObject.type === 'textbox') {
                             if ($(this).is(':checked')) {
-                                activeObject.set('stroke', $('#text-color').val());
+                                activeObject.set('stroke', $('#text-color, #mobile-text-color').val());
                                 activeObject.set('strokeWidth', 2);
                             } else {
                                 activeObject.set('stroke', null);
@@ -977,7 +1144,7 @@
                     });
 
                     // Apply shadow effect
-                    $('#text-shadow').change(function() {
+                    $('#text-shadow, #mobile-text-shadow').change(function() {
                         var activeObject = canvas.getActiveObject();
                         if (activeObject && activeObject.type === 'textbox') {
                             if ($(this).is(':checked')) {
@@ -1243,15 +1410,18 @@ function loadCarSVGSave() {
            
 
                 // Add text to the canvas
-                $('#add-text').click(function() {
-                    var text = new fabric.Textbox($('#logo-text').val(), {
+                $('#add-text, #mobile-add-text').click(function() {
+                        var textField = $(this).is('#add-text') ? '#logo-text' : '#mobile-logo-text';
+
+                        // Create a new fabric text box with the selected text input
+                        var text = new fabric.Textbox($(textField).val(), {
                         left: 100,
                         top: 100,
-                        fill: $('#text-color').val(),
+                        fill: $('#text-color, #mobile-text-color').val(),
                         fontFamily: $('#font-family').val(),
                         fontSize: $('#small-text').hasClass('active') ? 14 : 24,
-                        fontWeight: $('#bold-text').hasClass('active') ? 'bold' : '',
-                        fontStyle: $('#italic-text').hasClass('active') ? 'italic' : '',
+                        fontWeight: $('#bold-text ,#mobile-bold-text').hasClass('active') ? 'bold' : '',
+                        fontStyle: $('#italic-text, #mobile-italic-text').hasClass('active') ? 'italic' : '',
                         textTransform: $('#caps-text').is(':checked') ? 'uppercase' : 'none',
                     });
                     canvas.add(text);
@@ -1287,7 +1457,7 @@ function loadCarSVGSave() {
                 });
 
                 // Update the background color for the canvas
-                $('#background-color').on('input', function() {
+                $('#background-color, #mobile-background-color').on('input', function() {
                     canvas.setBackgroundColor($(this).val(), canvas.renderAll.bind(canvas));
                 });
             });
@@ -1348,7 +1518,7 @@ function loadCarSVGSave() {
                     })
                 })
 
-                $('#save-logo').click(function() {
+                $('#save-logo , #mobile-save-logo').click(function() {
                         let dataURL = canvas.toDataURL({
                             format: 'png',
                             quality: 1
