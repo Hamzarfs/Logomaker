@@ -462,7 +462,7 @@
                 </div>
 
 
-                <div class="mobilebar">
+                <div class="mobilebar" style="display:none">
                     <div class="mobile-button-row">
                         <button id="mobile-italic-text" class="mobile-btn"><i class="fas fa-italic"></i></button>
                         <button id="mobile-bold-text" class="mobile-btn"><i class="fas fa-bold"></i></button>
@@ -472,6 +472,19 @@
                         <button id="mobile-delete-button" class="mobile-btn"><i class="fas fa-trash"></i></button>
                     </div>
                     
+                    <div class="mobile-button-row">
+                                <label for="font-family" class="font-label">Font &nbsp;&nbsp;</label>
+                                <select id="mobile-font-family" class="form-control mobile-form-control">
+                                    @foreach ($fonts as $font)
+                                        <option value="{{ preg_replace('/\.[^.\s]+$/', '', $font->slug) }}"
+                                            {{ session()->get('font') == $font->slug ? 'selected' : '' }}
+                                            style="font-family: '{{ preg_replace('/\.[^.\s]+$/', '', $font->slug) }}';">
+                                            {{ preg_replace('/\.[^.\s]+$/', '', $font->name) }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                    </div>
+
                     <div class="mobile-button-row">
                         <button id="mobile-add-text" class="mobile-btn" style="width: 10%;"><i class="fas fa-plus"></i></button>
                         <input type="text" id="mobile-logo-text" class="mobile-form-control" placeholder="Enter Logo Text" style="width: 90%;">
@@ -496,9 +509,10 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="mobilebar">
+               
+                <div class="mobilebar" style="display:none">
                     <div class="text-effects">
+                    <div id="mobile-color-palettes" class="mt-3"></div>
                     <div class="mobile-form-check">
                         <input type="checkbox" id="mobile-text-outline" class="mobile-form-check-input">
                         <label for="text-outline" class="mobile-form-check-label">Outline</label>
@@ -683,7 +697,7 @@
                         success: function(svgString) {
                             // Clear the canvas and color palettes
                             canvas.clear();
-                            $('#color-palettes').empty();
+                            $('#color-palettes, #mobile-color-palettes').empty();
                             @php
                             $companyName = session('company') ??  $selectedProduct->company_name  ?? $selectedProduct->category['name'];
                             @endphp
@@ -830,7 +844,14 @@
                                     class: 'color-picker-container'
                                 });
                                 // Add the label and color picker to the color-palettes div
-                                $('#color-palettes').append(label).append(colorPicker);
+                                if ($(window).width() < 768) {
+                                    $('#mobile-color-palettes').append(label).append(colorPicker);
+                                }else{
+                                    $('#color-palettes').append(label).append(colorPicker);
+                                }
+
+                                
+                               
 
                                 // Add input event to update the color of the selected layer in real-time
                                 colorPicker.on('input', function() {
@@ -953,7 +974,7 @@
                         var selectedIndex = canvas.getObjects().indexOf(activeObject);
 
                         // Highlight the corresponding color picker
-                        $('#color-palettes input').each(function() {
+                        $('#color-palettes input,#mobile-color-palettes input').each(function() {
                             $(this).parent().removeClass('highlighted');
                         });
 
@@ -964,7 +985,7 @@
                         if (activeObject.type === 'textbox') {
                             $('#logo-text').val(activeObject.text || '');
                             $('#text-color, #mobile-text-color').val(activeObject.fill || '#000000');
-                            $('#font-family').val(activeObject.fontFamily || 'Arial');
+                            $('#font-family, #mobile-font-family').val(activeObject.fontFamily || 'Arial');
                             $('#italic-text, #mobile-italic-text').toggleClass('active', activeObject
                                 .fontStyle === 'italic');
                             $('#bold-text , #mobile-bold-text').toggleClass('active', activeObject
@@ -982,7 +1003,7 @@
                         } else {
                             $('#logo-text').val('');
                             $('#text-color, #mobile-text-color').val('');
-                            $('#font-family').val('Arial');
+                            $('#font-family, #mobile-font-family').val('Arial');
                             $('#italic-text , #mobile-italic-text').removeClass('active');
                             $('#bold-text, #mobile-bold-text').removeClass('active');
                             $('#small-text').removeClass('active');
@@ -1030,8 +1051,8 @@
                     canvas.on('before:selection:cleared', function() {
                         $('#logo-text').val('');
                         $('#text-color, #mobile-text-color').val('');
-                        $('#font-family').val('Arial');
-                        $('#color-palettes input').each(function() {
+                        $('#font-family, #mobile-font-family').val('Arial');
+                        $('#color-palettes input,#mobile-color-palettes input').each(function() {
                             $(this).parent().removeClass('highlighted');
                         });
                         $('#italic-text , #mobile-italic-text').removeClass('active');
@@ -1064,7 +1085,7 @@
                     });
 
                     // Update the font family for the selected textbox
-                    $('#font-family').change(function() {
+                    $('#font-family, #mobile-font-family').change(function() {
                         var activeObject = canvas.getActiveObject();
                         if (activeObject && activeObject.type === 'textbox') {
                             activeObject.set('fontFamily', $(this).val());
@@ -1314,7 +1335,7 @@ function loadCarSVGSave() {
         success: function(svgString) {
             // Clear the canvas and color palettes
             canvas.clear();
-            $('#color-palettes').empty();
+            $('#color-palettes, #mobile-color-palettes').empty();
 
             // Load the SVG without modifying left, top, or scaling properties
             fabric.loadSVGFromString(svgString, function(objects, options) {
@@ -1418,7 +1439,7 @@ function loadCarSVGSave() {
                         left: 100,
                         top: 100,
                         fill: $('#text-color, #mobile-text-color').val(),
-                        fontFamily: $('#font-family').val(),
+                        fontFamily: $('#font-family, #mobile-font-family').val(),
                         fontSize: $('#small-text').hasClass('active') ? 14 : 24,
                         fontWeight: $('#bold-text ,#mobile-bold-text').hasClass('active') ? 'bold' : '',
                         fontStyle: $('#italic-text, #mobile-italic-text').hasClass('active') ? 'italic' : '',
