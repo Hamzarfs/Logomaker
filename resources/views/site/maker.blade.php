@@ -538,7 +538,23 @@
                 </div>
 
                 <div class="mobile-button-row">
-                    <button id="mobile-save-logo" class="mobile-btn"><i class="fas fa-save" style="margin-right: 5px;"></i> Download</button>
+                                
+                              
+                                @guest
+                                    <a href="{{ route('login') }}" class="btn mt-5"><i class="fas fa-save"></i> Download</a>
+                                @else
+                                    @if ($hasOrder)
+                                        <button id="mobile-save-logo" class="mobile-btn"><i class="fas fa-save" style="margin-right: 5px;"></i> Download</button>
+
+                                    @else
+                                    <a href="javascript:void(0)" class="mobile-btn   redirect-to-pckgs-btn"><i
+                                    class="fas fa-save"></i> Download</a>
+
+                                    
+                                      
+                                    @endif
+                                @endguest
+
                     <button id="mobile-save-svg" class="mobile-btn btn-primary"><i class="fas fa-file-download" style="margin-right: 5px;"></i> Save</button>
                 </div>
                 
@@ -584,6 +600,12 @@
                 canvas = new fabric.Canvas('logo-canvas');
                 
                 
+                
+                 // Automatically trigger click event on page load for #save-svg or #mobile-save-svg
+                    //$('#save-svg, #mobile-save-svg').trigger('click');
+                
+                    // Attach the click handler for future manual clicks
+                 //  $('#save-svg, #mobile-save-svg').on('click', saveCanvasAsSVGToServer);
                 
                 //  responsive start
 
@@ -954,7 +976,7 @@
                             },
                             error: function (xhr, status, error) {
                                 console.error('Error saving SVG:', error);
-                                alert('An error occurred while saving the SVG.');
+                                alert('You are trying to save without changes, Please try again');
                             }
                         });
                     }
