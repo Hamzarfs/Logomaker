@@ -266,7 +266,11 @@
                         <label for="phone">Phone</label>
                         <i class="fas fa-phone form-icon"></i>
                         <input type="text" class="form-control" name="phone" id="phone"
-                            placeholder="Enter your phone number" required pattern="^\d{15}$" title="Please enter phone number">
+                            placeholder="+1 2345678901" 
+                            required 
+                            pattern="^\+1\s\d{10}$" 
+                            title="Please enter a valid phone number in the format +1 2345678901">
+
                     </div>
                     <div class="form-group">
                         <label for="comment">Comment</label>
@@ -289,7 +293,7 @@
     <script>
         document.querySelectorAll('.form-control').forEach(input => {
             input.addEventListener('input', function() {
-                if (this.value) {
+                if (this.value) {dd
                     this.parentElement.classList.add('filled');
                 } else {
                     this.parentElement.classList.remove('filled');
