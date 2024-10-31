@@ -266,7 +266,8 @@
                             </ul>
             </div>
             @endif
-            <div class="col-md-2">
+            {{-- <div class="col-md-2"> --}}
+                <div class="col-12 col-sm-12 col-lg-2 col-xl-2">
                 <ul class="list-unstyled">
                     @endif
                     <li>

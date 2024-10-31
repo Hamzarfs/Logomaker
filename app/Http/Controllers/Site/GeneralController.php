@@ -104,6 +104,12 @@ class GeneralController extends \App\Http\Controllers\Controller
     {
         return view('site/thanks');
     }
+
+    public function lppage()
+    {
+        return view('site/lp-page');
+    }
+
     public function customlogo()
     {
         $categories = Category::where('is_top', 1)
@@ -116,6 +122,7 @@ class GeneralController extends \App\Http\Controllers\Controller
             ->map(fn(Category $category) => $category->image ? $category : $category->append('latest_product'));
         return view('site/custom-logo', compact('categories'));
     }
+
 
     public function printing()
     {

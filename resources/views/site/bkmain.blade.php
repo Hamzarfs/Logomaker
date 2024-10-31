@@ -1607,7 +1607,7 @@
                         <h2>Logo Fonts</h2>
                         <i class="fas fa-arrow-up"></i>
                         <div class="new-card-design-overlay">
-                            <div class="new-card-design-overlay-text">Choosing the right font is crucial for your brand logo, as it reflects your brand’s personality and message. Here are some ideas for you. Serif Fonts: Exude tradition and reliability. Sans-Serif Fonts: Suggest modernity and simplicity. Script Fonts: Add a touch of elegance. Display Fonts: Command attention and stand out.</div>
+                            <div class="new-card-design-overlay-text">Choosing the right font is crucial for your brand logo, as it reflects your brand’s personality and message. Here are some ideas for you.Serif Fonts: Exude tradition and reliability.Sans-Serif Fonts: Suggest modernity and simplicity.Script Fonts: Add a touch of elegance.Display Fonts: Command attention and stand out.</div>
                         </div>
                     </div>
                 </div>

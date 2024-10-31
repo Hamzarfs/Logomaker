@@ -118,6 +118,7 @@ Route::get('custom-website-design-development', [GeneralController::class, 'cust
 Route::get('wordpress-website-development', [GeneralController::class, 'wordpressWebsiteDevelopment']);
 Route::get('shopify-website-development', [GeneralController::class, 'shopifyWebsiteDevelopment']);
 Route::get('e-commerce-website-development', [GeneralController::class, 'eCommerceWebsiteDevelopment']);
+Route::get('/lp-page', [GeneralController::class, 'lppage']);
 
 
 
