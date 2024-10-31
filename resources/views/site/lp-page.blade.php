@@ -362,6 +362,7 @@
     font-weight: bold;
     /* display: flex; */
     align-items: center;
+    margin-left: 50px;
   }
 
 
@@ -395,6 +396,13 @@
     color: #FFBD35;
   }
 
+  .col-md-6.lp-left-column {
+    align-content: center;
+}
+
+.top-rightlp.col-md-8 {
+    align-content: center;
+}
 
 
 
@@ -562,7 +570,98 @@
 
         /**************** End Pricing Section *****************/
 
+        .top-head {
+    color: white;
+	background: #6868D1;
+	
+   
+}
+
+.top-head-logo {
+    color: white;
+	background: #080A2D;
+	padding: 20px 0;
+   
+}
+
+
+.top-head a{
+    
+    text-decoration: none;
+}
+
+.top-head a{
+    
+    text-decoration: none;
+}
+
+.avail-discount-btn {
+	margin-right: 10px;
+	background: linear-gradient(to right, #9053F5, #6226EE);
+
+	color: #ffffff;
+}
+
+.top-rightlp a {
+    background: #ffba00;
+    padding: 5px 20px;
+    color: #000;
+    font-weight: bold;
+    border-radius: 2px;
+    font-size: 15px;
+        margin-left: 20px;
+}
+
+.lp-banner-margin{
+    margin-left: 50px;
+}
+
+
+.custom-btn {
+	padding: 10px;
+	border-radius: 10px;
+	display: inline-block;
+	font-size: 18px;
+	text-decoration: none;
+	text-align: center;
+}
+
+
+.top-left.col-md-8 {
+	display: flex;
+	align-items: center;
+}
+
+
+
+        @media(max-width: 376px) {
+
+
+.top-head {
+    background: #6868D1;
+    padding: 5px 0;
+    font-size: 10px;
+}
+
+}
+
 @media only screen and (max-width: 768px) {
+    .lp-banner-margin {
+    margin-left: 0px;
+}
+    .top-rightlp.col-md-8 {
+    display: none;
+}
+.top-left.col-md-4 {
+   
+    text-align-last: center;
+}
+
+    .top-head {
+		background: #6868D1;
+		padding: 5px 0;
+		font-size: 12px;
+	}
 
     .cta-heading {
       font-size: 1.5rem;
@@ -600,6 +699,64 @@
 
 /* end languagelogos */
         </style>
+
+
+<div class="top-head">
+    <div class="container">
+        <div class="row">
+            <div class="top-left col-md-7">
+              
+            </div>
+            <div class="top-right col-md-5">
+                <ul class="list-unstyled text-center" style="margin-top: 8px;">
+                    <li class="d-inline-block mr-4">
+                        <a 
+                            class="toll_icon text-white d-flex align-items-center" 
+                            href="tel:+02045112054"
+                        >
+                            <i class="fas fa-phone mr-2"></i>
+                            0204-511-2054
+                        </a>
+                    </li>
+                    <li class="d-inline-block">
+                        <a 
+                            class="chat_icon chat text-white d-flex align-items-center" 
+                            href="https://wa.me/+447380100492"
+                        >
+                            <i class="fas fa-comment mr-2"></i>
+                            Live Chat with Expert
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="top-head-logo">
+    <div class="container">
+        <div class="row">
+            <div class="top-left col-md-4">
+                <img src={{ asset('images/rfswhitelogolp.png') }} alt="logo" />
+            </div>
+            <div class="top-rightlp col-md-8">
+                <h5>
+                    Limited Time Offer - Activate Your 70% off Coupon!
+                    <a 
+                        href="#" 
+                        title="Get Free Consultancy" 
+                        class="avail-discount-btn custom-btn common-popup mb-3 mb-md-0" 
+                        onclick="openPopupForm('Get free consultancy')"
+                    >
+                        Get free consultancy
+                    </a>
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+
 
         <div class="container mt-5">
             <div class="row custom-logo-page-section mx-0">
@@ -1349,6 +1506,13 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            function openPopupForm(title) {
+                // Logic to open the popup form can go here
+                console.log(`Opening popup for: ${title}`);
+            }
+        </script>
 
         <script>
             document.getElementById('email').addEventListener('input', function() {
