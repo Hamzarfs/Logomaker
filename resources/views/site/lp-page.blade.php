@@ -690,7 +690,7 @@
 
             .portfoliogallerylp-gallery {
                 /* gap: 3px
-                         */
+                                 */
             }
 
             .portfoliogallerylp-image {
@@ -1073,6 +1073,13 @@
                 }
             }
 
+            /* For screen 576px to 767px */
+            @media (max-width: 767.98px) {
+                .custom-logo-page-form {
+                    width: 100%;
+                }
+            }
+
 
             /* end languagelogos */
         </style>
@@ -1175,9 +1182,9 @@
 
 
                             <div class="form-group mb-2">
-                                <label for="message" class="custom-logo-page-label">Comments:</label>
+                                <label for="message" class="custom-logo-page-label">Message:</label>
                                 <textarea class="form-control custom-logo-page-textarea" name="message" id="message" rows="2"
-                                    placeholder="Your comments" required></textarea>
+                                    placeholder="Your message..." required></textarea>
                             </div>
 
                             <button type="submit"
@@ -1223,8 +1230,10 @@
                         </p>
                         <div class="cta-buttons">
 
-                            <a href="{{ url('https://wa.me/+18482369397') }}"> <button  class="btn btn-primary leave-message-btn">Message Us</button></a>
-                            <a href="tel:+15516665255"> <button class="btn btn-outline-light live-chat-btn">Call Us</button></a>
+                            <a href="{{ url('https://wa.me/+18482369397') }}"> <button
+                                    class="btn btn-primary leave-message-btn">Message Us</button></a>
+                            <a href="tel:+15516665255"> <button class="btn btn-outline-light live-chat-btn">Call
+                                    Us</button></a>
                         </div>
                     </div>
                 </div>
@@ -1237,9 +1246,9 @@
                 <div class="row mb-4">
                     <div class="col">
                         <h2>Professional Logo Design Services</h2>
-                        <p>Our professional logo design services in the UK offer captivating and timeless custom logos. Our
-                            expert designers at Creative Logo Design ensure your company stands out uniquely and memorably
-                            in the market.</p>
+                        <p>Our professional logo design services in the US offer captivating and timeless custom logos. Our
+                            expert designers at RFS Logo Design ensure your company stands out uniquely and memorably in the
+                            market.</p>
                         <h2>Logo Design Packages</h2>
                     </div>
                 </div>
@@ -1262,9 +1271,9 @@
                                 <li>4 Revisions</li>
                                 <li>Dedicated Project Manager</li>
                                 <li>24 - 48 Hours Delivery</li>
-                                <li>What will you get?</li>
-                                <li>High-Resolution</li>
-                                <li>3 File Formats (JPG, PNG, PDF)</li>
+                                <div class="text-center"><b>What will you get?</b></div>
+                                <li>1 Finalized Logo</li>
+                                <li>2 File Formats (PNG, JPG)</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
                                 data-title="Basic Logo Package - $49">Start Project</button>
@@ -1287,8 +1296,8 @@
                                 <li>8 Revisions</li>
                                 <li>Dedicated Project Manager</li>
                                 <li>24 - 48 Hours Delivery</li>
-                                <li>What will you get?</li>
-                                <li>High-Resolution</li>
+                                <div class="text-center"><b>What will you get?</b></div>
+                                <li>1 Finalized Logo</li>
                                 <li>3 File Formats (JPG, PNG, PDF)</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
@@ -1310,12 +1319,12 @@
                             <div class="separator"></div>
                             <ul class="feature-list">
                                 <li>6 Logo Design Concepts</li>
-                                <li>10 Revisions</li>
+                                <li>Unlimited Revisions</li>
                                 <li>Dedicated Project Manager</li>
                                 <li>24 - 48 Hours Delivery</li>
-                                <li>What will you get?</li>
-                                <li>All File Formats</li>
-                                <li>High-Resolution</li>
+                                <div class="text-center"><b>What will you get?</b></div>
+                                <li>1 Finalized Logo</li>
+                                <li>All File Formats (Ai, PSD, EPS, PNG, JPG, PDF)</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
                                 data-title="Elite Logo Package">Start Project</button>
@@ -1345,13 +1354,17 @@
                             <p>Only</p>
                             <div class="separator"></div>
                             <ul class="feature-list">
-                                <li>2 Logo Design Concepts</li>
-                                <li>4 Revisions</li>
-                                <li>Dedicated Project Manager</li>
-                                <li>24 - 48 Hours Delivery</li>
-                                <li>What will you get?</li>
-                                <li>High-Resolution</li>
-                                <li>3 File Formats (JPG, PNG, PDF)</li>
+                                <li>Business Card Design</li>
+                                <li>Letter head Design</li>
+                                <li>Envelope Design</li>
+                                <li>MS Word Letterhead</li>
+                                <li>Email Signature Design</li>
+                                <li>Invoice Design</li>
+                                <li>Facebook Banner Design</li>
+                                <li>YouTube Banner Design</li>
+                                <li>Twitter Banner Design</li>
+                                <li>LinkedIn Banner Design</li>
+                                <li>Logo Watermark</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
                                 data-title="Starter Package - $149">Start Project</button>
@@ -1370,13 +1383,20 @@
                             <p>Only</p>
                             <div class="separator"></div>
                             <ul class="feature-list">
-                                <li>4 Logo Design Concepts</li>
-                                <li>8 Revisions</li>
-                                <li>Dedicated Project Manager</li>
-                                <li>24 - 48 Hours Delivery</li>
-                                <li>What will you get?</li>
-                                <li>High-Resolution</li>
-                                <li>3 File Formats (JPG, PNG, PDF)</li>
+                                <li>Business Card Design</li>
+                                <li>Letter head Design</li>
+                                <li>Envelope Design</li>
+                                <li>MS Word Letterhead</li>
+                                <li>Email Signature Design</li>
+                                <li>Invoice Design</li>
+                                <li>Facebook Banner Design</li>
+                                <li>YouTube Banner Design</li>
+                                <li>Twitter Banner Design</li>
+                                <li>LinkedIn Banner Design</li>
+                                <li>Logo Watermark</li>
+                                <li>Favicon Design</li>
+                                <li>Polo/T-Shirt Design</li>
+                                <li>Cap/Hat Design</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
                                 data-title="Premium Package - $199">Start Project</button>
@@ -1396,13 +1416,23 @@
                             {{-- <p>Only</p> --}}
                             <div class="separator"></div>
                             <ul class="feature-list">
-                                <li>6 Logo Design Concepts</li>
-                                <li>10 Revisions</li>
-                                <li>Dedicated Project Manager</li>
-                                <li>24 - 48 Hours Delivery</li>
-                                <li>What will you get?</li>
-                                <li>All File Formats</li>
-                                <li>High-Resolution</li>
+                                <li>Business Card Design</li>
+                                <li>Letter head Design</li>
+                                <li>Envelope Design</li>
+                                <li>MS Word Letterhead</li>
+                                <li>Email Signature Design</li>
+                                <li>Invoice Design</li>
+                                <li>Facebook Banner Design</li>
+                                <li>YouTube Banner Design</li>
+                                <li>Twitter Banner Design</li>
+                                <li>LinkedIn Banner Design</li>
+                                <li>Logo Watermark</li>
+                                <li>Favicon Design</li>
+                                <li>Polo/T-Shirt Design</li>
+                                <li>Cap/Hat Design</li>
+                                <li>Bag Design</li>
+                                <li>Signage Design</li>
+                                <li>Flyer Design</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
                                 data-title="Professional Package">Start Project</button>
@@ -1433,13 +1463,17 @@
                             <p>Only</p>
                             <div class="separator"></div>
                             <ul class="feature-list">
-                                <li>2 Logo Design Concepts</li>
-                                <li>4 Revisions</li>
-                                <li>Dedicated Project Manager</li>
-                                <li>24 - 48 Hours Delivery</li>
-                                <li>What will you get?</li>
-                                <li>High-Resolution</li>
-                                <li>3 File Formats (JPG, PNG, PDF)</li>
+                                <li>3 Page Website</li>
+                                <li>5 Revisions</li>
+                                <li>2 Stock Images</li>
+                                <li>1 jQuery Slider Banner</li>
+                                <li>2 Banner Designs</li>
+                                <li>Any two social media designs</li>
+                                <li>48 to 72 hours TAT</li>
+                                <li>Complete Deployment</li>
+                                <li>100% Satisfaction Guarantee</li>
+                                <li>100% Unique Design Guarantee</li>
+                                <li>100% Money Back Guarantee</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
                                 data-title="Basic Package - $199">Start Project</button>
@@ -1458,13 +1492,21 @@
                             <p>Only</p>
                             <div class="separator"></div>
                             <ul class="feature-list">
-                                <li>4 Logo Design Concepts</li>
-                                <li>8 Revisions</li>
-                                <li>Dedicated Project Manager</li>
+                                <li>10 Unique Pages Website</li>
+                                <li>Unlimited Revisions</li>
+                                <li>CMS / Admin Panel Support</li>
                                 <li>24 - 48 Hours Delivery</li>
-                                <li>What will you get?</li>
-                                <li>High-Resolution</li>
-                                <li>3 File Formats (JPG, PNG, PDF)</li>
+                                <li>12 Stock images</li>
+                                <li>8 Banner Designs</li>
+                                <li>1 jQuery Slider Banner</li>
+                                <li>Any Three Social Media Integration</li>
+                                <li>FREE Google Friendly Sitemap</li>
+                                <li>Mobile Responsive</li>
+                                <li>48 to 72 hours TAT</li>
+                                <li>Complete Deployment</li>
+                                <li>100% Satisfaction Guarantee</li>
+                                <li>100% Unique Design Guarantee</li>
+                                <li>100% Money Back Guarantee</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
                                 data-title="Elite Package - $500">Start Project</button>
@@ -1483,13 +1525,23 @@
                             <p>Only</p>
                             <div class="separator"></div>
                             <ul class="feature-list">
-                                <li>6 Logo Design Concepts</li>
-                                <li>10 Revisions</li>
-                                <li>Dedicated Project Manager</li>
-                                <li>24 - 48 Hours Delivery</li>
-                                <li>What will you get?</li>
-                                <li>All File Formats</li>
-                                <li>High-Resolution</li>
+                                <li>Up to 30 Web Pages Design and HTML</li>
+                                <li>1 Contact Form</li>
+                                <li>Content Management System</li>
+                                <li>Google Sitemap Integration</li>
+                                <li>Unlimited Revisions and Design Layout</li>
+                                <li>3 Sliding Banners</li>
+                                <li>Up to 10 Stock Photos</li>
+                                <li>SEO Friendly</li>
+                                <li>Responsive Layout</li>
+                                <li>Payment Gateway Integration</li>
+                                <li>Shopping Cart</li>
+                                <li>1 Shared Design</li>
+                                <li>Dedicated Account Manager</li>
+                                <li>Email & Phone Support</li>
+                                <li>100% Satisfaction Guarantee</li>
+                                <li>100% Unique Design Guarantee</li>
+                                <li>100% Money Back Guarantee</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
                                 data-title="Ecommerce Package - $1199">Start Project</button>
@@ -1511,7 +1563,8 @@
                     <p>We know that you’re anxious to launch your startup and bring your brand to life, so our minimalistic
                         and rapid custom logo design process is of great assistance. We follow a few steps below to give a
                         dream logo fast that is the envy of many organizations. </p>
-                    <button class="btn btn-primary leave-message-btn" data-bs-toggle="modal" data-bs-target="#contact-modal" data-title="Basic Logo Package - $49">Get Started</button>
+                    <button class="btn btn-primary leave-message-btn" data-bs-toggle="modal"
+                        data-bs-target="#contact-modal" data-title="Basic Logo Package - $49">Get Started</button>
                 </div>
                 <div class="col-lg-6 custom-image-section-v3">
                     <img src="images/Mask group.png" alt="Descriptive Image Text">
@@ -1527,7 +1580,8 @@
                     <div class="col-md-6 cta-buttons">
                         <h2 class="text-white">Build your brand identity with a perfect logo, premium branding material,
                             and standout stationery design!</h2>
-                            <a href="{{ url('https://wa.me/+18482369397') }}" class="btn btn-primary leave-message-btn">Leave a Message</a>
+                        <a href="{{ url('https://wa.me/+18482369397') }}" class="btn btn-primary leave-message-btn">Leave
+                            a Message</a>
                     </div>
                     <div class="col-md-6">
                         <img src={{ asset('images/lpcta3secimg.png') }} alt="Description" class="img-fluid">
@@ -1582,8 +1636,10 @@
                             Connect with us, and our experts will turn your ideas of business logo designs into reality!
                         </p>
                         <div class="cta-buttons">
-                            <a href="{{ url('https://wa.me/+18482369397') }}"> <button class="btn btn-primary leave-message-btn">Schedule a Call</button></a>
-                            <a href="tel:+15516665255"> <button class="btn btn-outline-light live-chat-btn">Chat with Expert</button></a>
+                            <a href="{{ url('https://wa.me/+18482369397') }}"> <button
+                                    class="btn btn-primary leave-message-btn">Schedule a Call</button></a>
+                            <a href="tel:+15516665255"> <button class="btn btn-outline-light live-chat-btn">Chat with
+                                    Expert</button></a>
                         </div>
                     </div>
                 </div>
@@ -1820,16 +1876,17 @@
                         @csrf
                         <div class="row mb-3">
                             <div class="col">
-                                <input type="text" class="form-control" id="name" placeholder="Your full name" name="name"
-                                    required>
+                                <input type="text" class="form-control" id="name" placeholder="Your full name"
+                                    name="name" required>
                             </div>
                             <div class="col">
-                                <input type="email" class="form-control" id="email" placeholder="E-mail address" name="email"
-                                    required>
+                                <input type="email" class="form-control" id="email" placeholder="E-mail address"
+                                    name="email" required>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <input type="tel" class="form-control" id="phone" placeholder="Phone number" required name="phone">
+                            <input type="tel" class="form-control" id="phone" placeholder="Phone number"
+                                required name="phone">
                         </div>
                         <div class="mb-3">
                             <textarea class="form-control" id="message" rows="5" placeholder="Your message" required name="message"></textarea>
@@ -2068,7 +2125,8 @@
 
                 // Phone validation: only numbers and spaces, and maximum 15 characters
                 let phoneField = form.querySelector('#phone');
-                let phoneRegex = /^\+?[0-9\s]{10,15}$/;
+                let phoneRegex = /^(?:\+?1[-.\s]?)?(?:\(?\d{3}\)?[-.\s]?)?\d{3}[-.\s]?\d{4}$/;
+                // let phoneRegex = /^\+?[0-9\s]{10,15}$/;
                 if (!phoneRegex.test(phoneField.value.trim())) {
                     phoneField.classList.add('is-invalid');
                     isValid = false;
@@ -2106,7 +2164,8 @@
 
                 // Phone validation: only numbers and spaces, and maximum 15 characters
                 let phoneField = form.querySelector('#phone');
-                let phoneRegex = /^\+?[0-9\s]{10,15}$/;
+                let phoneRegex = /^(?:\+?1[-.\s]?)?(?:\(?\d{3}\)?[-.\s]?)?\d{3}[-.\s]?\d{4}$/;
+                // let phoneRegex = /^\+?[0-9\s]{10,15}$/;
                 if (!phoneRegex.test(phoneField.value.trim())) {
                     phoneField.classList.add('is-invalid');
                     isValid = false;
@@ -2146,7 +2205,8 @@
 
                 // Phone validation: between 11 to 15 digits
                 let phoneField = form.querySelector('#phone');
-                let phoneRegex = /^\+?[0-9\s]{11,15}$/;
+                let phoneRegex = /^(?:\+?1[-.\s]?)?(?:\(?\d{3}\)?[-.\s]?)?\d{3}[-.\s]?\d{4}$/;
+                // let phoneRegex = /^\+?[0-9\s]{11,15}$/;
                 if (!phoneRegex.test(phoneField.value.trim())) {
                     phoneField.classList.add('is-invalid');
                     isValid = false;

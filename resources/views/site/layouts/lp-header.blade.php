@@ -80,7 +80,7 @@
             </div>
             <div class="top-rightlp col-md-8">
                 <h5>
-                    Limited Time Offer - Activate Your 70% off Coupon!
+                    Need a logo? Let’s Discuss Your Idea with Logo Expert
                     <a href="javascript:void(0)" title="Get Free Consultancy" data-title="Get Free Consultancy"
                         class="avail-discount-btn custom-btn common-popup mb-3 mb-md-0" data-bs-toggle="modal"
                         data-bs-target="#contact-modal">
