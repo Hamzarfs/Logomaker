@@ -156,13 +156,15 @@
 
     </head>
 
-    
+
     <body >
 
 
 
 
-    @include('site.layouts.header')
+    @includeWhen(!request()->is('lp-page'), 'site.layouts.header')
+
+    @includeWhen(request()->is('lp-page'), 'site.layouts.lp-header')
 
     @yield('content')
 
