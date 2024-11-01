@@ -41,10 +41,10 @@
     <style>
         @foreach ($logoFonts as $font)
             @php // Extract the font name without the extension
-                $fontName =pathinfo($font->name, PATHINFO_FILENAME);
-                $fontSlug =pathinfo($font->slug, PATHINFO_FILENAME);
+            $fontName =pathinfo($font->name, PATHINFO_FILENAME);
+            $fontSlug =pathinfo($font->slug, PATHINFO_FILENAME);
 
-            @endphp
+        @endphp
         @font-face {
             font-family: '{{ $fontSlug }}';
             src: url('{{ asset('fonts/' . $font->name) }}') format('opentype');
@@ -99,8 +99,6 @@
             font-weight: bold;
             border-radius: 5px 5px 0 0;
         }
-
-
     </style>
 
     {{-- @yield('styles') --}}
@@ -111,18 +109,25 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8EQZ5SK5PS"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8EQZ5SK5PS');
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-8EQZ5SK5PS');
     </script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16485766646"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date()); gtag('config', 'AW-16485766646');
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'AW-16485766646');
     </script>
 
     <!-- Brevo Conversations {literal} -->
@@ -154,21 +159,28 @@
         }
     </script>
 
-    </head>
+</head>
 
 
-    <body >
+<body>
 
 
 
 
-    @includeWhen(!request()->is('lp-page'), 'site.layouts.header')
+    @includeWhen(!request()->is('custom-logo-design'), 'site.layouts.header')
 
-    @includeWhen(request()->is('lp-page'), 'site.layouts.lp-header')
+    @includeWhen(request()->is('custom-logo-design'), 'site.layouts.lp-header')
 
     @yield('content')
 
-    @include('site.layouts.footer')
+ 
+
+    @includeWhen(!request()->is('custom-logo-design'), 'site.layouts.footer')
+
+    @includeWhen(request()->is('custom-logo-design'), 'site.layouts.lp-footer')
+
+
+
     <!-- Add your JS scripts here -->
 
     {{-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script> --}}

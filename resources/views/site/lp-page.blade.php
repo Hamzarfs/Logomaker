@@ -2,7 +2,9 @@
 
     @section('title', 'Custom Logo Design Starting from $49 - (551) 666-5255')
 
-    @section('meta_desc', 'Get top notch custom logo design services from US top logo designer team at RFS Logo Design. We create stunning logos for your business on affordable price.')
+    @section('meta_desc',
+        'Get top notch custom logo design services from US top logo designer team at RFS Logo Design.
+        We create stunning logos for your business on affordable price.')
 
     @section('content')
 
@@ -218,14 +220,14 @@
 
 
 
-        
+
 
             .custom-logo-page-section {
-    background-color: #6868d1;
-    border-radius: 25px;
-    padding: 10px 0 20px 0;
-    color: white;
-}
+                background-color: #6868d1;
+                border-radius: 25px;
+                padding: 10px 0 20px 0;
+                color: white;
+            }
 
             .custom-logo-page-content {
                 display: flex;
@@ -309,724 +311,748 @@
 
 
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.languagelogos {
-  overflow: hidden;
-  padding: 20px 0;
-  background: #ffffff;
-  white-space: nowrap;
-  position: relative;
-}
-
-.languagelogos:before,
-.languagelogos:after {
-  position: absolute;
-  top: 0;
-  width: 250px;
-  height: 100%;
-  content: "";
-  z-index: 2;
-}
-
-
-.languagelogos:hover .languagelogos-slide {
-  animation-play-state: paused;
-}
-
-.languagelogos-slide {
-  display: inline-block;
-  animation: 35s slide infinite linear;
-}
-
-.languagelogos-slide img {
-  height: 100%;
-  margin: 0 40px;
-  border-radius: 15px;
-}
-
-.lpbanner-heading {
-    padding-top: 20px;
-    font-size: 2.5rem;
-    color: #fff;
-    font-weight: bold;
-    /* display: flex; */
-    align-items: center;
-    margin-left: 50px;
-  }
-
-
-  .lpbanner-buttons .lpbanner-btn {
-    margin-right: 15px;
-    padding: 10px 20px;
-    border-radius: 5px;
-  }
-  
-  .lpbanner-btn.btn-outline-light {
-    border-color: #fff;
-    color: #fff;
-  }
-
-  .lpbanner-btn.btn-dark {
-    color: #fff;
-    background-color: #0f04ad;
-  }
-
-  .lpbanner-btn.btn-outline-light:hover {
-    color: darkblue; /* Change text color to dark blue on hover */
-}
-
-
-.lpbanner-badges img {
-    margin-top: 20px;
-    width: 120px;
-    margin-right: 10px;
-}
-.lpbanner-price {
-    color: #FFBD35;
-  }
-
-  .col-md-6.lp-left-column {
-    align-content: center;
-}
-
-.top-rightlp.col-md-8 {
-    align-content: center;
-}
-
-
-
-  /* Landing Page CTA */
-
-.lp-cta1 {
-    /* background-image: var(cta1bg.png); */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 60px 0;
-    text-align: center;
-  }
-  
-  
-  .cta-heading {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .cta-text {
-    font-size: 1rem;
-    margin-bottom: 30px;
-  }
-  
-  .cta-buttons .leave-message-btn {
-    background-color: white;
-    color: #4B0082;
-    border: none;
-    padding: 10px 20px;
-    font-weight: bold;
-    margin-right: 15px;
-  }
-  
-  .cta-buttons .live-chat-btn {
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-    padding: 10px 20px;
-    font-weight: bold;
-  }
-  
-
-/* End Landing Page CTA */
-
-
-
-/**************** Start Pricing Section *****************/
-
-    /* Unique section CSS */
-      /* Unique section CSS */
-      .logopackages-sec {
-            padding: 40px 20px;
-            text-align: center;
-            background-color: #f9f9f9;
-        }
-
-        .logopackages-sec h2 {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .logopackages-sec p {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        /* Price Box Styling */
-        .price-box {
-    border: 2px solid #fbb040;
-    padding: 20px;
-    border-radius: 8px;
-    transition: transform 0.3s;
-    background-color: #fff;
-}
-
-        .price-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .price-box h3 {
-    font-size: 22px;
-    color: #9E1F63;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
-        .price-box .price {
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .price-box .original-price {
-            text-decoration: line-through;
-            color: #666;
-            font-size: 14px;
-            margin-left: 5px;
-        }
-
-        .price-box .separator {
-            width: 80%;
-            height: 2px;
-            background-color: #fbb040;
-            margin: 15px auto;
-        }
-
-        /* Feature List Styling with Bullets */
-        .price-box .feature-list {
-            max-height: 120px;
-            overflow-y: auto;
-            text-align: left;
-            padding-left: 20px; /* Adjust padding for bullets */
-            list-style-type: disc; /* Add bullet style */
-            margin: 0;
-            font-size: 14px;
-            color: #1f1e1e;
-        }
-
-        .feature-list li {
-            padding: 5px 0;
-        }
-
-        .feature-list::-webkit-scrollbar {
-            width: 5px;
-        }
-
-        .feature-list::-webkit-scrollbar-thumb {
-            background: #9E1F63;
-            border-radius: 5px;
-        }
-
-        .price-box .start-project-btn {
-    margin-top: 20px;
-    background-color: #3b3fa1;
-    color: #fff;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-}
-        .price-box .start-project-btn:hover {
-            background-color: #5a0b9a;
-        }
-
-
-        /* Best Seller Badge Styling */
-.price-box.best-seller::before {
-    content: "BEST SELLER";
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    background-color: #FF2300; /* Red background color */
-    color: #fff;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transform: rotate(10deg); /* Rotate to make it look stylish */
-}
-
-
-        /**************** End Pricing Section *****************/
-
-        .top-head {
-    color: white;
-	background: #6868D1;
-	
-   
-}
-
-.top-head-logo {
-    color: white;
-	background: #080A2D;
-	padding: 20px 0;
-   
-}
-
-
-.top-head a{
-    
-    text-decoration: none;
-}
-
-.top-head a{
-    
-    text-decoration: none;
-}
-
-.avail-discount-btn {
-	margin-right: 10px;
-	background: linear-gradient(to right, #9053F5, #6226EE);
-
-	color: #ffffff;
-}
-
-.top-rightlp a {
-    background: #ffba00;
-    padding: 5px 20px;
-    color: #000;
-    font-weight: bold;
-    border-radius: 2px;
-    font-size: 15px;
-        margin-left: 20px;
-}
-
-.lp-banner-margin{
-    margin-left: 50px;
-}
-
-
-.custom-btn {
-	padding: 10px;
-	border-radius: 10px;
-	display: inline-block;
-	font-size: 18px;
-	text-decoration: none;
-	text-align: center;
-}
-
-
-.top-left.col-md-8 {
-	display: flex;
-	align-items: center;
-}
-
-/* Start Cta Section 3  */
-
-
-.lpcta3sec {
-    background-image: url(http://127.0.0.1:8000/images/lpcta3bg.png);
-    background-size: cover;
-    background-position: center;
-    padding: 10px 0;
-}
-
-.btn-custom {
-    color: blue;
-    background-color: white;
-    border: 1px solid blue;
-}
-
-.btn-custom:hover {
-    background-color: blue;
-    color: white;
-}
-
-
-/* End Cta Section 3  */
-
-
-/************************* Start Portfolio Gallery ******************/
-.portfoliogallerylp {
-    padding: 30px 0;
-}
-
-.portfoliogallerylp h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.portfoliogallerylp-separator {
-    width: 50px;
-    height: 3px;
-    background-color: #333;
-    margin: 0 auto 20px auto;
-}
-
-.portfoliogallerylp-gallery {
-    /* gap: 3px 
-     */
-    }
-.portfoliogallerylp-image {
-    width: 100%;
-    padding: 3px;
-    height: auto;
-}
-
-.portfoliogallerylp .col-md-4 {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-
-.portfoliogallerylp-image:hover {
-    transform: scale(0.98);
-}
-
-/************************* End Portfolio Gallery ******************/
-
-
-
-section.ebook-contact-form.container
-{
-  padding: 100px;
-}
-
-
-.ebook-contact-form {
-          padding: 50px 20px;
-         
-         
-      }
-
-      .ebook-contact-form .left-column {
-          text-align: left;
-          padding-right: 30px;
-      }
-
-      .ebook-contact-form h2 {
-          font-weight: bold;
-          color: black;
-          font-size: 2.5rem;
-      }
-
-      .ebook-contact-form .highlight-text {
-          color: #6A48FF; /* Orange color */
-      }
-
-      .ebook-contact-form .btn-custom {
-          background: linear-gradient(90deg, #2302B1, #6A48FF);
-          color: white;
-          border: none;
-          border-radius: 30px;
-          padding: 10px 25px;
-          font-size: 18px;
-          margin-bottom: 20px;
-      }
-
-      .ebook-contact-form .form-control {
-          border-radius: 10px;
-      }
-
-      .ebook-contact-form .btn-submit {
-          background: linear-gradient(90deg, #2302B1, #6A48FF);
-          border: none;
-          border-radius: 30px;
-          padding: 10px 30px;
-          color: white;
-          font-size: 18px;
-          margin-top: 15px;
-      }
-
-      .form-control {
-        background-color: #f9f9f9;
-        border: 1px solid #2302B1;
-        height: 50px;
-        font-size: 16px;
-        border-radius: 8px;
-    }
-
-      section.ebook-contact-form.container
-        {
-        padding: 30px;
-       
-        }
-      
-        .ebook-contact-form {
-          flex-direction: column;
-        }
-      
-        .ebook-contact-form .left-column {
-          padding-right: 0;
-        
-        }
-      
-      
-        .ebook-second-section {
-          padding-bottom: 0; /* Remove bottom padding in mobile view */
-        }
-
-
-        /* ContactForm.css */
-/* ContactForm.css */
-.left-column {
-    margin-bottom: 20px;
-  }
-  
-  .contact-info {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  .contact-info li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .contact-icon {
-    background-color: #eaf2fc; /* Light blue background for the icon circle */
-    border-radius: 50%;
-    color: #007bff; /* Icon color */
-    padding: 12px; /* Padding to give circular shape */
-    font-size: 18px; /* Size of the icon */
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
-  }
-
-  textarea.form-control {
-    height: 100px;
-}
-  
-  .contact-info a,
-  .contact-info span {
-    color: #333;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  .contact-info a:hover {
-    color: #007bff;
-    text-decoration: underline;
-  }
-  
-  .btn-submit {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .btn-submit:hover {
-    background-color: #0056b3;
-  }
-  
-  
-      
-
-
-/*****************  Start LP Contact ************/
-
-.lp-contact-sec {
-  padding: 30px 0;
-  color: white;
-}
-
-.lp-contact-sec .icon-image {
-  width: 60px;
-  height: 60px;
-}
-
-.lp-contact-sec .contact-link {
-  color: inherit;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  transition: color 0.3s ease;
-}
-
-.lp-contact-sec .contact-link:hover {
-  color: #f0f0f0; /* Adjust hover color as needed */
-}
-
-.lp-contact-sec p {
-  font-size: 1rem;
-  margin: 0;
-}
-
-.lp-contact-sec h4 {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-
-/*****************  Start LP Footer ************/
-
-.lp-footer-sec {
-  padding: 20px 0;
-  color: white;
-}
-
-.lp-footer-sec .footer-logo {
-  width: 180px; /* Adjust size as needed */
-  height: auto;
-}
-
-.lp-footer-sec p {
-  font-size: 0.9rem;
-  margin: 0;
-}
-
-.lp-footer-sec .footer-link {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.lp-footer-sec .footer-link:hover {
-  color: #f0f0f0; /* Adjust hover color as needed */
-}
-
-
-
-
-/*****************  End LP Footer ************/
-
-
-/*****************  End LP Contact ************/
-  
-
-
-
-
-        @media(max-width: 376px) {
-
-
-.top-head {
-    background: #6868D1;
-    padding: 5px 0;
-    font-size: 10px;
-}
-
-}
-
-@media (max-width: 658px) 
-{
-section.ebook-contact-form.container
-        {
-        padding: 30px;
-        text-align-last: center;
-        }
-    }
-
-    
-
-@media only screen and (max-width: 768px) {
-
-    .custom-text-section-v3 h2 {
-    font-weight: 800;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 23px;
-    margin-bottom: 20px;
-    color: #010935;
-}
-
-    a.toll_icon.text-white.d-flex.align-items-center {
-    font-size: 1.3rem;
-}
-
-a.chat_icon.chat.text-white.d-flex.align-items-center {
-    font-size: 1.3rem;
-}
-    .lpbanner-heading {
-    padding-top: 20px;
-    font-size: 2.5rem;
-    color: #fff;
-    font-weight: bold;
-    /* display: flex; */
-    align-items: center;
-     margin-left: 0px; 
-}
-    .col-md-6.text-md-end.text-center.ft-names {
-    font-size: 1rem;
-}
-    .col-md-6.cta-buttons {
-    padding-bottom: 20px;
-    place-items: center;
-}
-
-.text-white {
-    --bs-text-opacity: 1;
-    color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
-    font-size: 2rem;
-    text-align: center;
-}
-    .portfoliogallerylp-gallery {
-        flex-direction: column;
-    }
-    .lp-banner-margin {
-    margin-left: 0px;
-}
-    .top-rightlp.col-md-8 {
-    display: none;
-}
-.top-left.col-md-4 {
-   
-    text-align-last: center;
-}
-
-    .top-head {
-		background: #6868D1;
-		padding: 5px 0;
-		font-size: 12px;
-	}
-
-    .cta-heading {
-      font-size: 1.5rem;
-    }
-    .lpbanner-badges img {
-        width: 80px !important;
-    margin-top: 20px;
-    margin-right: 0px;
-    }
-    .lpbanner-heading {
-        font-size: 1.8rem;
-        color: #fff;
-        font-weight: bold;
-        /* display: flex; */
-        align-items: center;
-    }
-    .lpbanner-badges img {
-        width: 100px !important;
-    }
-
-}
-
-
-    @media (max-width: 1198px) and (min-width: 992px) {
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            @keyframes slide {
+                from {
+                    transform: translateX(0);
+                }
+
+                to {
+                    transform: translateX(-100%);
+                }
+            }
+
+            .languagelogos {
+                overflow: hidden;
+                padding: 20px 0;
+                background: #ffffff;
+                white-space: nowrap;
+                position: relative;
+            }
+
+            .languagelogos:before,
+            .languagelogos:after {
+                position: absolute;
+                top: 0;
+                width: 250px;
+                height: 100%;
+                content: "";
+                z-index: 2;
+            }
+
+
+            .languagelogos:hover .languagelogos-slide {
+                animation-play-state: paused;
+            }
+
+            .languagelogos-slide {
+                display: inline-block;
+                animation: 35s slide infinite linear;
+            }
+
+            .languagelogos-slide img {
+                height: 100%;
+                margin: 0 40px;
+                border-radius: 15px;
+            }
+
+            .lpbanner-heading {
+                padding-top: 20px;
+                font-size: 2.5rem;
+                color: #fff;
+                font-weight: bold;
+                /* display: flex; */
+                align-items: center;
+                margin-left: 50px;
+            }
+
+
+            .lpbanner-buttons .lpbanner-btn {
+                margin-right: 15px;
+                padding: 10px 20px;
+                border-radius: 5px;
+            }
+
+            .lpbanner-btn.btn-outline-light {
+                border-color: #fff;
+                color: #fff;
+            }
+
+            .lpbanner-btn.btn-dark {
+                color: #fff;
+                background-color: #0f04ad;
+            }
+
+            .lpbanner-btn.btn-outline-light:hover {
+                color: darkblue;
+                /* Change text color to dark blue on hover */
+            }
+
+
+            .lpbanner-badges img {
+                margin-top: 20px;
+                width: 120px;
+                margin-right: 10px;
+            }
+
+            .lpbanner-price {
+                color: #FFBD35;
+            }
+
+            .col-md-6.lp-left-column {
+                align-content: center;
+            }
+
+            .top-rightlp.col-md-8 {
+                align-content: center;
+            }
+
+
+
+            /* Landing Page CTA */
+
+            .lp-cta1 {
+                /* background-image: var(cta1bg.png); */
+                background-size: cover;
+                background-position: center;
+                color: white;
+                padding: 60px 0;
+                text-align: center;
+            }
+
+
+            .cta-heading {
+                font-size: 2rem;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            .cta-text {
+                font-size: 1rem;
+                margin-bottom: 30px;
+            }
+
+            .cta-buttons .leave-message-btn {
+                background-color: white;
+                color: #4B0082;
+                border: none;
+                padding: 10px 20px;
+                font-weight: bold;
+                margin-right: 15px;
+            }
+
+            .cta-buttons .live-chat-btn {
+                background-color: transparent;
+                color: white;
+                border: 2px solid white;
+                padding: 10px 20px;
+                font-weight: bold;
+            }
+
+
+            /* End Landing Page CTA */
+
+
+
+            /**************** Start Pricing Section *****************/
+
+            /* Unique section CSS */
+            /* Unique section CSS */
+            .logopackages-sec {
+                padding: 40px 20px;
+                text-align: center;
+                background-color: #f9f9f9;
+            }
+
+            .logopackages-sec h2 {
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .logopackages-sec p {
+                font-size: 16px;
+                color: #666;
+                margin-bottom: 20px;
+            }
+
+            /* Price Box Styling */
+            .price-box {
+                border: 2px solid #fbb040;
+                padding: 20px;
+                border-radius: 8px;
+                transition: transform 0.3s;
+                background-color: #fff;
+            }
+
+            .price-box:hover {
+                transform: translateY(-5px);
+                box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .price-box h3 {
+                font-size: 22px;
+                color: #9E1F63;
+                margin-bottom: 10px;
+                font-weight: 700;
+            }
+
+            .price-box .price {
+                font-size: 24px;
+                font-weight: bold;
+                color: #333;
+            }
+
+            .price-box .original-price {
+                text-decoration: line-through;
+                color: #666;
+                font-size: 14px;
+                margin-left: 5px;
+            }
+
+            .price-box .separator {
+                width: 80%;
+                height: 2px;
+                background-color: #fbb040;
+                margin: 15px auto;
+            }
+
+            /* Feature List Styling with Bullets */
+            .price-box .feature-list {
+                max-height: 120px;
+                overflow-y: auto;
+                text-align: left;
+                padding-left: 20px;
+                /* Adjust padding for bullets */
+                list-style-type: disc;
+                /* Add bullet style */
+                margin: 0;
+                font-size: 14px;
+                color: #1f1e1e;
+            }
+
+            .feature-list li {
+                padding: 5px 0;
+            }
+
+            .feature-list::-webkit-scrollbar {
+                width: 5px;
+            }
+
+            .feature-list::-webkit-scrollbar-thumb {
+                background: #9E1F63;
+                border-radius: 5px;
+            }
+
+            .price-box .start-project-btn {
+                margin-top: 20px;
+                background-color: #3b3fa1;
+                color: #fff;
+                font-weight: bold;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+            }
+
+            .price-box .start-project-btn:hover {
+                background-color: #5a0b9a;
+            }
+
+
+            /* Best Seller Badge Styling */
+            .price-box.best-seller::before {
+                content: "BEST SELLER";
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                background-color: #FF2300;
+                /* Red background color */
+                color: #fff;
+                font-size: 12px;
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 5px;
+                transform: rotate(10deg);
+                /* Rotate to make it look stylish */
+            }
+
+
+            /**************** End Pricing Section *****************/
+
+            .top-head {
+                color: white;
+                background: #6868D1;
+
+
+            }
+
+            .top-head-logo {
+                color: white;
+                background: #080A2D;
+                padding: 20px 0;
+
+            }
+
+
+            .top-head a {
+
+                text-decoration: none;
+            }
+
+            .top-head a {
+
+                text-decoration: none;
+            }
+
+            .avail-discount-btn {
+                margin-right: 10px;
+                background: linear-gradient(to right, #9053F5, #6226EE);
+
+                color: #ffffff;
+            }
+
+            .top-rightlp a {
+                background: #ffba00;
+                padding: 5px 20px;
+                color: #000;
+                font-weight: bold;
+                border-radius: 2px;
+                font-size: 15px;
+                margin-left: 20px;
+            }
+
+            .lp-banner-margin {
+                margin-left: 50px;
+            }
+
+
+            .custom-btn {
+                padding: 10px;
+                border-radius: 10px;
+                display: inline-block;
+                font-size: 18px;
+                text-decoration: none;
+                text-align: center;
+            }
+
+
+            .top-left.col-md-8 {
+                display: flex;
+                align-items: center;
+            }
+
+            /* Start Cta Section 3  */
+
+
+            .lpcta3sec {
+                background-image: url(http://127.0.0.1:8000/images/lpcta3bg.png);
+                background-size: cover;
+                background-position: center;
+                padding: 10px 0;
+            }
+
+            .btn-custom {
+                color: blue;
+                background-color: white;
+                border: 1px solid blue;
+            }
+
+            .btn-custom:hover {
+                background-color: blue;
+                color: white;
+            }
+
+
+            /* End Cta Section 3  */
+
+
+            /************************* Start Portfolio Gallery ******************/
+            .portfoliogallerylp {
+                padding: 30px 0;
+            }
+
+            .portfoliogallerylp h2 {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .portfoliogallerylp-separator {
+                width: 50px;
+                height: 3px;
+                background-color: #333;
+                margin: 0 auto 20px auto;
+            }
+
+            .portfoliogallerylp-gallery {
+                /* gap: 3px
+                     */
+            }
+
+            .portfoliogallerylp-image {
+                width: 100%;
+                padding: 3px;
+                height: auto;
+            }
+
+            .portfoliogallerylp .col-md-4 {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+
+            .portfoliogallerylp-image:hover {
+                transform: scale(0.98);
+            }
+
+            /************************* End Portfolio Gallery ******************/
+
+
+
+            section.ebook-contact-form.container {
+                padding: 100px;
+            }
+
+
+            .ebook-contact-form {
+                padding: 50px 20px;
+
+
+            }
+
+            .ebook-contact-form .left-column {
+                text-align: left;
+                padding-right: 30px;
+            }
+
+            .ebook-contact-form h2 {
+                font-weight: bold;
+                color: black;
+                font-size: 2.5rem;
+            }
+
+            .ebook-contact-form .highlight-text {
+                color: #6A48FF;
+                /* Orange color */
+            }
+
+            .ebook-contact-form .btn-custom {
+                background: linear-gradient(90deg, #2302B1, #6A48FF);
+                color: white;
+                border: none;
+                border-radius: 30px;
+                padding: 10px 25px;
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+
+            .ebook-contact-form .form-control {
+                border-radius: 10px;
+            }
+
+            .ebook-contact-form .btn-submit {
+                background: linear-gradient(90deg, #2302B1, #6A48FF);
+                border: none;
+                border-radius: 30px;
+                padding: 10px 30px;
+                color: white;
+                font-size: 18px;
+                margin-top: 15px;
+            }
+
+            .form-control {
+                background-color: #f9f9f9;
+                border: 1px solid #2302B1;
+                height: 50px;
+                font-size: 16px;
+                border-radius: 8px;
+            }
+
+            section.ebook-contact-form.container {
+                padding: 30px;
+
+            }
+
+            .ebook-contact-form {
+                flex-direction: column;
+            }
+
+            .ebook-contact-form .left-column {
+                padding-right: 0;
+
+            }
+
+
+            .ebook-second-section {
+                padding-bottom: 0;
+                /* Remove bottom padding in mobile view */
+            }
+
+
+            /* ContactForm.css */
+            /* ContactForm.css */
+            .left-column {
+                margin-bottom: 20px;
+            }
+
+            .contact-info {
+                list-style: none;
+                padding-left: 0;
+            }
+
+            .contact-info li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+
+            .contact-icon {
+                background-color: #eaf2fc;
+                /* Light blue background for the icon circle */
+                border-radius: 50%;
+                color: #007bff;
+                /* Icon color */
+                padding: 12px;
+                /* Padding to give circular shape */
+                font-size: 18px;
+                /* Size of the icon */
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 15px;
+            }
+
+            textarea.form-control {
+                height: 100px;
+            }
+
+            .contact-info a,
+            .contact-info span {
+                color: #333;
+                font-size: 16px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            .contact-info a:hover {
+                color: #007bff;
+                text-decoration: underline;
+            }
+
+            .btn-submit {
+                background-color: #007bff;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .btn-submit:hover {
+                background-color: #0056b3;
+            }
+
+
+
+
+
+            /*****************  Start LP Contact ************/
+
+            .lp-contact-sec {
+                padding: 30px 0;
+                color: white;
+            }
+
+            .lp-contact-sec .icon-image {
+                width: 60px;
+                height: 60px;
+            }
+
+            .lp-contact-sec .contact-link {
+                color: inherit;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                transition: color 0.3s ease;
+            }
+
+            .lp-contact-sec .contact-link:hover {
+                color: #f0f0f0;
+                /* Adjust hover color as needed */
+            }
+
+            .lp-contact-sec p {
+                font-size: 1rem;
+                margin: 0;
+            }
+
+            .lp-contact-sec h4 {
+                font-size: 1.25rem;
+                font-weight: bold;
+                margin: 0;
+            }
+
+
+            /*****************  Start LP Footer ************/
+
+            .lp-footer-sec {
+                padding: 20px 0;
+                color: white;
+            }
+
+            .lp-footer-sec .footer-logo {
+                width: 180px;
+                /* Adjust size as needed */
+                height: auto;
+            }
+
+            .lp-footer-sec p {
+                font-size: 0.9rem;
+                margin: 0;
+            }
+
+            .lp-footer-sec .footer-link {
+                color: white;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+            .lp-footer-sec .footer-link:hover {
+                color: #f0f0f0;
+                /* Adjust hover color as needed */
+            }
+
+
+
+
+            /*****************  End LP Footer ************/
+
+
+            /*****************  End LP Contact ************/
+
+
+
+
+
+            @media(max-width: 376px) {
+
+
+                .top-head {
+                    background: #6868D1;
+                    padding: 5px 0;
+                    font-size: 10px;
+                }
+
+            }
+
+            @media (max-width: 658px) {
+                section.ebook-contact-form.container {
+                    padding: 30px;
+                    text-align-last: center;
+                }
+            }
+
+
+
+            @media only screen and (max-width: 768px) {
+
+                .custom-text-section-v3 h2 {
+                    font-weight: 800;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 23px;
+                    margin-bottom: 20px;
+                    color: #010935;
+                }
+
+                a.toll_icon.text-white.d-flex.align-items-center {
+                    font-size: 1.3rem;
+                }
+
+                a.chat_icon.chat.text-white.d-flex.align-items-center {
+                    font-size: 1.3rem;
+                }
+
+                .lpbanner-heading {
+                    padding-top: 20px;
+                    font-size: 2.5rem;
+                    color: #fff;
+                    font-weight: bold;
+                    /* display: flex; */
+                    align-items: center;
+                    margin-left: 0px;
+                }
+
+                .col-md-6.text-md-end.text-center.ft-names {
+                    font-size: 1rem;
+                }
+
+                .col-md-6.cta-buttons {
+                    padding-bottom: 20px;
+                    place-items: center;
+                }
+
+                .text-white {
+                    --bs-text-opacity: 1;
+                    color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+                    font-size: 2rem;
+                    text-align: center;
+                }
+
+                .portfoliogallerylp-gallery {
+                    flex-direction: column;
+                }
+
+                .lp-banner-margin {
+                    margin-left: 0px;
+                }
+
+                .top-rightlp.col-md-8 {
+                    display: none;
+                }
+
+                .top-left.col-md-4 {
+
+                    text-align-last: center;
+                }
+
+                .top-head {
+                    background: #6868D1;
+                    padding: 5px 0;
+                    font-size: 12px;
+                }
+
+                .cta-heading {
+                    font-size: 1.5rem;
+                }
+
+                .lpbanner-badges img {
+                    width: 80px !important;
+                    margin-top: 20px;
+                    margin-right: 0px;
+                }
+
+                .lpbanner-heading {
+                    font-size: 1.8rem;
+                    color: #fff;
+                    font-weight: bold;
+                    /* display: flex; */
+                    align-items: center;
+                }
+
+                .lpbanner-badges img {
+                    width: 100px !important;
+                }
+
+            }
+
+
+            @media (max-width: 1198px) and (min-width: 992px) {
                 .box-heading-number {
                     font-size: 34px;
                     /* Adjusted size for screens in this range */
@@ -1038,95 +1064,41 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
                 }
             }
 
-            @media (max-width: 1000px) 
+            @media (max-width: 1000px) {
 
-{
-
-  .ebook-contact-form h2 {
-    font-weight: bold;
-    color: black;
-    font-size: 1.5rem;
-}
-}
+                .ebook-contact-form h2 {
+                    font-weight: bold;
+                    color: black;
+                    font-size: 1.5rem;
+                }
+            }
 
 
-/* end languagelogos */
+            /* end languagelogos */
         </style>
 
 
-<div class="top-head">
-    <div class="container">
-        <div class="row">
-            <div class="top-left col-md-7">
-              
-            </div>
-            <div class="top-right col-md-5">
-                <ul class="list-unstyled text-center" style="margin-top: 8px;">
-                    <li class="d-inline-block mr-4">
-                        <a 
-                            class="toll_icon text-white d-flex align-items-center" 
-                            href="tel:+02045112054"
-                        >
-                            <i class="fas fa-phone mr-2"></i>
-                            0204-511-2054
-                        </a>
-                    </li>
-                    <li class="d-inline-block">
-                        <a 
-                            class="chat_icon chat text-white d-flex align-items-center" 
-                            href="https://wa.me/+447380100492"
-                        >
-                            <i class="fas fa-comment mr-2"></i>
-                            Live Chat with Expert
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
 
-
-<div class="top-head-logo">
-    <div class="container">
-        <div class="row">
-            <div class="top-left col-md-4">
-                <img src={{ asset('images/rfswhitelogolp.png') }} alt="logo" />
-            </div>
-            <div class="top-rightlp col-md-8">
-                <h5>
-                    Need a logo? Let’s Discuss Your Idea with Logo Expert
-                    <a 
-                        href="#" 
-                        title="Get Free Consultancy" 
-                        class="avail-discount-btn custom-btn common-popup mb-3 mb-md-0" 
-                        onclick="openPopupForm('Get free consultancy')"
-                    >
-                        Get free consultancy
-                    </a>
-                </h5>
-            </div>
-        </div>
-    </div>
-</div>
 
 
         <div class="container mt-5">
             <div class="row custom-logo-page-section mx-0">
                 <div class="col-md-6 lp-left-column">
-                 
+
                     <div class="lpbanner-heading-container" style="display: flex; align-items: center;">
-                        
+
                         <h1 class="lpbanner-heading">
-                            Custom Logo Design  <br />
-                            Starting from  <span class="lpbanner-price">$49</span>
+                            Custom Logo Design <br />
+                            Starting from <span class="lpbanner-price">$49</span>
                         </h1>
                     </div>
                     <div class="lp-banner-margin">
-                        <p class="lpbanner-text">At RFS, our top-tier in-house logo designers create unique, eye-catching brand identities that make your business stand out and leave a lasting impression.</p>
+                        <p class="lpbanner-text">At RFS, our top-tier in-house logo designers create unique, eye-catching
+                            brand identities that make your business stand out and leave a lasting impression.</p>
                         <div class="lpbanner-buttons">
-                            <button class="btn btn-dark lpbanner-btn">Get Started</button>
-                            <button class="btn btn-outline-light lpbanner-btn">View Pricing</button>
+                            <button class="btn btn-dark lpbanner-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
+                                data-title="Basic Logo Package - $49">Get Started</button>
+                            <a href="#pricing" class="btn btn-outline-light lpbanner-btn">View Pricing</a>
                         </div>
                         <div class="lpbanner-badges">
                             <a href="https://clutch.co/profile/rfs-logo-design" target="_blank">
@@ -1138,11 +1110,11 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
                             <a href="https://www.bark.com/en/us/company/rfs-logo-design/oRvbN/" target="_blank">
                                 <img src="{{ asset('images/barkicon.png') }}" alt="Bark" />
                             </a>
-                            
+
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-6 d-flex justify-content-center align-items-center">
                     <div class="custom-logo-page-form bg-white border p-3 rounded">
                         <h3 class="custom-logo-page-form-heading text-center">Get a Free Quote</h3>
@@ -1200,7 +1172,7 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
-                            
+
 
                             <div class="form-group mb-2">
                                 <label for="message" class="custom-logo-page-label">Comments:</label>
@@ -1216,313 +1188,328 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
                 </div>
             </div>
         </div>
-       
-<div class="container-fluid">
-        <div class="languagelogos py-5">
-            <div class="languagelogos-slide">
-                <img src={{ asset('images/logoslide1.png') }} alt="React Logo" />
-                <img src={{ asset('images/logoslide2.png') }} alt="NOP Logo" />
-                <img src={{ asset('images/logoslide3.png') }} alt="Woo Logo" />
-                <img src={{ asset('images/logoslide4.png') }} alt="WordPress Logo" />
-                <img src={{ asset('images/logoslide5.png') }} alt="Shopify Logo" />
-                <img src={{ asset('images/logoslide6.png') }} alt="PHP Logo" />
-                <img src={{ asset('images/logoslide7.png') }} alt="Laravel Logo" />
-                <img src={{ asset('images/logoslide8.png') }} alt="Laravel Logo" />
-                <img src={{ asset('images/logoslide9.png') }} alt="Laravel Logo" />
-                <img src={{ asset('images/logoslide10.png') }} alt="Laravel Logo" />
-            </div>
-        </div>
-    </div>
 
-
-
-    
-
-
-
-    <section class="lp-cta1 d-flex align-items-center justify-content-center text-center" style="background-image: url('{{ asset('images/cta1bg.png') }}');">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="cta-heading">Are you looking for a logo that truly captures your brand? </h2>
-                    <p class="cta-text">
-                        Please message us, and let our designers bring your vision to life.
-                    </p>
-                    <div class="cta-buttons">
-                        <button class="btn btn-primary leave-message-btn">Message Us</button>
-                        <button class="btn btn-outline-light live-chat-btn">Call Us</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="logopackages-sec">
-        <div class="container">
-            <!-- Row 1: Heading -->
-            <div class="row mb-4">
-                <div class="col">
-                    <h2>Professional Logo Design Services</h2>
-                    <p>Our professional logo design services in the US offer captivating and timeless custom logos. Our expert designers at RFS Logo Design ensure your company stands out uniquely and memorably in the market.</p>
-                    <h2>Logo Design Packages</h2>
-                </div>
-            </div>
-            
-            <!-- Row 2: Price Boxes -->
-            <div class="row g-4">
-                <!-- Basic Logo Package -->
-                <div class="col-md-4">
-                    <div class="price-box">
-                        <h3>Basic Logo Package</h3>
-                        <p>Best Value for Money Guaranteed!</p>
-                        <div class="price-section">
-                            <span class="price">£35</span>
-                            <span class="original-price">£50</span>
-                        </div>
-                        <p>Only</p>
-                        <div class="separator"></div>
-                        <ul class="feature-list">
-                            <li>2 Logo Design Concepts</li>
-                            <li>4 Revisions</li>
-                            <li>Dedicated Project Manager</li>
-                            <li>24 - 48 Hours Delivery</li>
-                            <li>What will you get?</li>
-                            <li>High-Resolution</li>
-                            <li>3 File Formats (JPG, PNG, PDF)</li>
-                        </ul>
-                        <button class="start-project-btn">Start Project</button>
-                    </div>
-                </div>
-                
-                <!-- Standard Logo Package -->
-                <div class="col-md-4">
-                    <div class="price-box best-seller">
-                        <h3>Standard Logo Package</h3>
-                        <p>Best Value for Money Guaranteed!</p>
-                        <div class="price-section">
-                            <span class="price">£69</span>
-                            <span class="original-price">£99</span>
-                        </div>
-                        <p>Only</p>
-                        <div class="separator"></div>
-                        <ul class="feature-list">
-                            <li>4 Logo Design Concepts</li>
-                            <li>8 Revisions</li>
-                            <li>Dedicated Project Manager</li>
-                            <li>24 - 48 Hours Delivery</li>
-                            <li>What will you get?</li>
-                            <li>High-Resolution</li>
-                            <li>3 File Formats (JPG, PNG, PDF)</li>
-                        </ul>
-                        <button class="start-project-btn">Start Project</button>
-                    </div>
-                </div>
-                
-                <!-- Elite Logo Package -->
-                <div class="col-md-4">
-                    <div class="price-box">
-                        <h3>Elite Logo Package</h3>
-                        <p>Best Value for Money Guaranteed!</p>
-                        <div class="price-section">
-                            <span class="price">£119</span>
-                            <span class="original-price">£149</span>
-                        </div>
-                        <p>Only</p>
-                        <div class="separator"></div>
-                        <ul class="feature-list">
-                            <li>6 Logo Design Concepts</li>
-                            <li>10 Revisions</li>
-                            <li>Dedicated Project Manager</li>
-                            <li>24 - 48 Hours Delivery</li>
-                            <li>What will you get?</li>
-                            <li>All File Formats</li>
-                            <li>High-Resolution</li>
-                        </ul>
-                        <button class="start-project-btn">Start Project</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <!-- Row 1: Heading -->
-            <div class="row mb-4 pt-4">
-                <div class="col">
-                
-                    <h2>Branding Packages</h2>
-                </div>
-            </div>
-            
-            <!-- Row 2: Price Boxes -->
-            <div class="row g-4">
-                <!-- Basic Logo Package -->
-                <div class="col-md-4">
-                    <div class="price-box">
-                        <h3>Basic Logo Package</h3>
-                        <p>Best Value for Money Guaranteed!</p>
-                        <div class="price-section">
-                            <span class="price">£35</span>
-                            <span class="original-price">£50</span>
-                        </div>
-                        <p>Only</p>
-                        <div class="separator"></div>
-                        <ul class="feature-list">
-                            <li>2 Logo Design Concepts</li>
-                            <li>4 Revisions</li>
-                            <li>Dedicated Project Manager</li>
-                            <li>24 - 48 Hours Delivery</li>
-                            <li>What will you get?</li>
-                            <li>High-Resolution</li>
-                            <li>3 File Formats (JPG, PNG, PDF)</li>
-                        </ul>
-                        <button class="start-project-btn">Start Project</button>
-                    </div>
-                </div>
-                
-                <!-- Standard Logo Package -->
-                <div class="col-md-4">
-                    <div class="price-box best-seller">
-                        <h3>Standard Logo Package</h3>
-                        <p>Best Value for Money Guaranteed!</p>
-                        <div class="price-section">
-                            <span class="price">£69</span>
-                            <span class="original-price">£99</span>
-                        </div>
-                        <p>Only</p>
-                        <div class="separator"></div>
-                        <ul class="feature-list">
-                            <li>4 Logo Design Concepts</li>
-                            <li>8 Revisions</li>
-                            <li>Dedicated Project Manager</li>
-                            <li>24 - 48 Hours Delivery</li>
-                            <li>What will you get?</li>
-                            <li>High-Resolution</li>
-                            <li>3 File Formats (JPG, PNG, PDF)</li>
-                        </ul>
-                        <button class="start-project-btn">Start Project</button>
-                    </div>
-                </div>
-                
-                <!-- Elite Logo Package -->
-                <div class="col-md-4">
-                    <div class="price-box">
-                        <h3>Elite Logo Package</h3>
-                        <p>Best Value for Money Guaranteed!</p>
-                        <div class="price-section">
-                            <span class="price">£119</span>
-                            <span class="original-price">£149</span>
-                        </div>
-                        <p>Only</p>
-                        <div class="separator"></div>
-                        <ul class="feature-list">
-                            <li>6 Logo Design Concepts</li>
-                            <li>10 Revisions</li>
-                            <li>Dedicated Project Manager</li>
-                            <li>24 - 48 Hours Delivery</li>
-                            <li>What will you get?</li>
-                            <li>All File Formats</li>
-                            <li>High-Resolution</li>
-                        </ul>
-                        <button class="start-project-btn">Start Project</button>
-                    </div>
+        <div class="container-fluid">
+            <div class="languagelogos py-5">
+                <div class="languagelogos-slide">
+                    <img src={{ asset('images/logoslide1.png') }} alt="React Logo" />
+                    <img src={{ asset('images/logoslide2.png') }} alt="NOP Logo" />
+                    <img src={{ asset('images/logoslide3.png') }} alt="Woo Logo" />
+                    <img src={{ asset('images/logoslide4.png') }} alt="WordPress Logo" />
+                    <img src={{ asset('images/logoslide5.png') }} alt="Shopify Logo" />
+                    <img src={{ asset('images/logoslide6.png') }} alt="PHP Logo" />
+                    <img src={{ asset('images/logoslide7.png') }} alt="Laravel Logo" />
+                    <img src={{ asset('images/logoslide8.png') }} alt="Laravel Logo" />
+                    <img src={{ asset('images/logoslide9.png') }} alt="Laravel Logo" />
+                    <img src={{ asset('images/logoslide10.png') }} alt="Laravel Logo" />
                 </div>
             </div>
         </div>
 
-        <div class="container">
-            <!-- Row 1: Heading -->
-            <div class="row mb-4 pt-4">
-                <div class="col">
-                
-                    <h2>Website Packages</h2>
-                </div>
-            </div>
-            
-            <!-- Row 2: Price Boxes -->
-            <div class="row g-4">
-                <!-- Basic Logo Package -->
-                <div class="col-md-4">
-                    <div class="price-box">
-                        <h3>Basic Logo Package</h3>
-                        <p>Best Value for Money Guaranteed!</p>
-                        <div class="price-section">
-                            <span class="price">£35</span>
-                            <span class="original-price">£50</span>
+
+
+
+
+
+
+        <section class="lp-cta1 d-flex align-items-center justify-content-center text-center"
+            style="background-image: url('{{ asset('images/cta1bg.png') }}');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="cta-heading">Are you looking for a logo that truly captures your brand? </h2>
+                        <p class="cta-text">
+                            Please message us, and let our designers bring your vision to life.
+                        </p>
+                        <div class="cta-buttons">
+                            <button class="btn btn-primary leave-message-btn">Message Us</button>
+                            <button class="btn btn-outline-light live-chat-btn">Call Us</button>
                         </div>
-                        <p>Only</p>
-                        <div class="separator"></div>
-                        <ul class="feature-list">
-                            <li>2 Logo Design Concepts</li>
-                            <li>4 Revisions</li>
-                            <li>Dedicated Project Manager</li>
-                            <li>24 - 48 Hours Delivery</li>
-                            <li>What will you get?</li>
-                            <li>High-Resolution</li>
-                            <li>3 File Formats (JPG, PNG, PDF)</li>
-                        </ul>
-                        <button class="start-project-btn">Start Project</button>
-                    </div>
-                </div>
-                
-                <!-- Standard Logo Package -->
-                <div class="col-md-4">
-                    <div class="price-box best-seller">
-                        <h3>Standard Logo Package</h3>
-                        <p>Best Value for Money Guaranteed!</p>
-                        <div class="price-section">
-                            <span class="price">£69</span>
-                            <span class="original-price">£99</span>
-                        </div>
-                        <p>Only</p>
-                        <div class="separator"></div>
-                        <ul class="feature-list">
-                            <li>4 Logo Design Concepts</li>
-                            <li>8 Revisions</li>
-                            <li>Dedicated Project Manager</li>
-                            <li>24 - 48 Hours Delivery</li>
-                            <li>What will you get?</li>
-                            <li>High-Resolution</li>
-                            <li>3 File Formats (JPG, PNG, PDF)</li>
-                        </ul>
-                        <button class="start-project-btn">Start Project</button>
-                    </div>
-                </div>
-                
-                <!-- Elite Logo Package -->
-                <div class="col-md-4">
-                    <div class="price-box">
-                        <h3>Elite Logo Package</h3>
-                        <p>Best Value for Money Guaranteed!</p>
-                        <div class="price-section">
-                            <span class="price">£119</span>
-                            <span class="original-price">£149</span>
-                        </div>
-                        <p>Only</p>
-                        <div class="separator"></div>
-                        <ul class="feature-list">
-                            <li>6 Logo Design Concepts</li>
-                            <li>10 Revisions</li>
-                            <li>Dedicated Project Manager</li>
-                            <li>24 - 48 Hours Delivery</li>
-                            <li>What will you get?</li>
-                            <li>All File Formats</li>
-                            <li>High-Resolution</li>
-                        </ul>
-                        <button class="start-project-btn">Start Project</button>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-   
+        </section>
+
+        <section class="logopackages-sec" id="pricing">
+            <div class="container">
+                <!-- Row 1: Heading -->
+                <div class="row mb-4">
+                    <div class="col">
+                        <h2>Professional Logo Design Services</h2>
+                        <p>Our professional logo design services in the UK offer captivating and timeless custom logos. Our
+                            expert designers at Creative Logo Design ensure your company stands out uniquely and memorably
+                            in the market.</p>
+                        <h2>Logo Design Packages</h2>
+                    </div>
+                </div>
+
+                <!-- Row 2: Price Boxes -->
+                <div class="row g-4">
+                    <!-- Basic Logo Package -->
+                    <div class="col-md-4">
+                        <div class="price-box">
+                            <h3>Basic Logo Package</h3>
+                            <p>Best Value for Money Guaranteed!</p>
+                            <div class="price-section">
+                                <span class="price">$49</span>
+                                <span class="original-price">$99</span>
+                            </div>
+                            <p>Only</p>
+                            <div class="separator"></div>
+                            <ul class="feature-list">
+                                <li>2 Logo Design Concepts</li>
+                                <li>4 Revisions</li>
+                                <li>Dedicated Project Manager</li>
+                                <li>24 - 48 Hours Delivery</li>
+                                <li>What will you get?</li>
+                                <li>High-Resolution</li>
+                                <li>3 File Formats (JPG, PNG, PDF)</li>
+                            </ul>
+                            <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
+                                data-title="Basic Logo Package - $49">Start Project</button>
+                        </div>
+                    </div>
+
+                    <!-- Standard Logo Package -->
+                    <div class="col-md-4">
+                        <div class="price-box best-seller">
+                            <h3>Standard Logo Package</h3>
+                            <p>Best Value for Money Guaranteed!</p>
+                            <div class="price-section">
+                                <span class="price">$99</span>
+                                <span class="original-price">$149</span>
+                            </div>
+                            <p>Only</p>
+                            <div class="separator"></div>
+                            <ul class="feature-list">
+                                <li>4 Logo Design Concepts</li>
+                                <li>8 Revisions</li>
+                                <li>Dedicated Project Manager</li>
+                                <li>24 - 48 Hours Delivery</li>
+                                <li>What will you get?</li>
+                                <li>High-Resolution</li>
+                                <li>3 File Formats (JPG, PNG, PDF)</li>
+                            </ul>
+                            <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
+                                data-title="Standard Logo Package - $99">Start Project</button>
+                        </div>
+                    </div>
+
+                    <!-- Elite Logo Package -->
+                    <div class="col-md-4">
+                        <div class="price-box">
+                            <h3>Elite Logo Package</h3>
+                            <p>Best Value for Money Guaranteed!</p>
+                            <div class="price-section">
+                                <span class="price">Let's Talk</span>
+                                {{-- <span class="price">$199</span>
+                                <span class="original-price">$249</span> --}}
+                            </div>
+                            {{-- <p>Only</p> --}}
+                            <div class="separator"></div>
+                            <ul class="feature-list">
+                                <li>6 Logo Design Concepts</li>
+                                <li>10 Revisions</li>
+                                <li>Dedicated Project Manager</li>
+                                <li>24 - 48 Hours Delivery</li>
+                                <li>What will you get?</li>
+                                <li>All File Formats</li>
+                                <li>High-Resolution</li>
+                            </ul>
+                            <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
+                                data-title="Elite Logo Package">Start Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <!-- Row 1: Heading -->
+                <div class="row mb-4 pt-4">
+                    <div class="col">
+                        <h2>Branding Packages</h2>
+                    </div>
+                </div>
+
+                <!-- Row 2: Price Boxes -->
+                <div class="row g-4">
+                    <!-- Basic Logo Package -->
+                    <div class="col-md-4">
+                        <div class="price-box">
+                            <h3>Starter Package</h3>
+                            <p>Best Value for Money Guaranteed!</p>
+                            <div class="price-section">
+                                <span class="price">$149</span>
+                                <span class="original-price">$199</span>
+                            </div>
+                            <p>Only</p>
+                            <div class="separator"></div>
+                            <ul class="feature-list">
+                                <li>2 Logo Design Concepts</li>
+                                <li>4 Revisions</li>
+                                <li>Dedicated Project Manager</li>
+                                <li>24 - 48 Hours Delivery</li>
+                                <li>What will you get?</li>
+                                <li>High-Resolution</li>
+                                <li>3 File Formats (JPG, PNG, PDF)</li>
+                            </ul>
+                            <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
+                                data-title="Starter Package - $149">Start Project</button>
+                        </div>
+                    </div>
+
+                    <!-- Standard Logo Package -->
+                    <div class="col-md-4">
+                        <div class="price-box best-seller">
+                            <h3>Premium Package</h3>
+                            <p>Best Value for Money Guaranteed!</p>
+                            <div class="price-section">
+                                <span class="price">$199</span>
+                                <span class="original-price">$249</span>
+                            </div>
+                            <p>Only</p>
+                            <div class="separator"></div>
+                            <ul class="feature-list">
+                                <li>4 Logo Design Concepts</li>
+                                <li>8 Revisions</li>
+                                <li>Dedicated Project Manager</li>
+                                <li>24 - 48 Hours Delivery</li>
+                                <li>What will you get?</li>
+                                <li>High-Resolution</li>
+                                <li>3 File Formats (JPG, PNG, PDF)</li>
+                            </ul>
+                            <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
+                                data-title="Premium Package - $199">Start Project</button>
+                        </div>
+                    </div>
+
+                    <!-- Elite Logo Package -->
+                    <div class="col-md-4">
+                        <div class="price-box">
+                            <h3>Professional Package</h3>
+                            <p>Best Value for Money Guaranteed!</p>
+                            <div class="price-section">
+                                <span class="price">Let's Talk</span>
+                                {{-- <span class="price">$249</span>
+                                <span class="original-price">$299</span> --}}
+                            </div>
+                            {{-- <p>Only</p> --}}
+                            <div class="separator"></div>
+                            <ul class="feature-list">
+                                <li>6 Logo Design Concepts</li>
+                                <li>10 Revisions</li>
+                                <li>Dedicated Project Manager</li>
+                                <li>24 - 48 Hours Delivery</li>
+                                <li>What will you get?</li>
+                                <li>All File Formats</li>
+                                <li>High-Resolution</li>
+                            </ul>
+                            <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
+                                data-title="Professional Package">Start Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <!-- Row 1: Heading -->
+                <div class="row mb-4 pt-4">
+                    <div class="col">
+                        <h2>Website Packages</h2>
+                    </div>
+                </div>
+
+                <!-- Row 2: Price Boxes -->
+                <div class="row g-4">
+                    <!-- Basic Logo Package -->
+                    <div class="col-md-4">
+                        <div class="price-box">
+                            <h3>Basic Package</h3>
+                            <p>Best Value for Money Guaranteed!</p>
+                            <div class="price-section">
+                                <span class="price">$199</span>
+                                <span class="original-price">$349</span>
+                            </div>
+                            <p>Only</p>
+                            <div class="separator"></div>
+                            <ul class="feature-list">
+                                <li>2 Logo Design Concepts</li>
+                                <li>4 Revisions</li>
+                                <li>Dedicated Project Manager</li>
+                                <li>24 - 48 Hours Delivery</li>
+                                <li>What will you get?</li>
+                                <li>High-Resolution</li>
+                                <li>3 File Formats (JPG, PNG, PDF)</li>
+                            </ul>
+                            <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
+                                data-title="Basic Package - $199">Start Project</button>
+                        </div>
+                    </div>
+
+                    <!-- Standard Logo Package -->
+                    <div class="col-md-4">
+                        <div class="price-box best-seller">
+                            <h3>Elite Package</h3>
+                            <p>Best Value for Money Guaranteed!</p>
+                            <div class="price-section">
+                                <span class="price">$500</span>
+                                <span class="original-price">$999</span>
+                            </div>
+                            <p>Only</p>
+                            <div class="separator"></div>
+                            <ul class="feature-list">
+                                <li>4 Logo Design Concepts</li>
+                                <li>8 Revisions</li>
+                                <li>Dedicated Project Manager</li>
+                                <li>24 - 48 Hours Delivery</li>
+                                <li>What will you get?</li>
+                                <li>High-Resolution</li>
+                                <li>3 File Formats (JPG, PNG, PDF)</li>
+                            </ul>
+                            <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
+                                data-title="Elite Package - $500">Start Project</button>
+                        </div>
+                    </div>
+
+                    <!-- Elite Logo Package -->
+                    <div class="col-md-4">
+                        <div class="price-box">
+                            <h3>Ecommerce Package</h3>
+                            <p>Best Value for Money Guaranteed!</p>
+                            <div class="price-section">
+                                <span class="price">$1199</span>
+                                <span class="original-price">$2100</span>
+                            </div>
+                            <p>Only</p>
+                            <div class="separator"></div>
+                            <ul class="feature-list">
+                                <li>6 Logo Design Concepts</li>
+                                <li>10 Revisions</li>
+                                <li>Dedicated Project Manager</li>
+                                <li>24 - 48 Hours Delivery</li>
+                                <li>What will you get?</li>
+                                <li>All File Formats</li>
+                                <li>High-Resolution</li>
+                            </ul>
+                            <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
+                                data-title="Ecommerce Package - $1199">Start Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
 
 
         <div class="container custom-container-margin-v3">
             <div class="row align-items-center">
                 <div class="col-lg-6 custom-text-section-v3">
                     <h2>Same Top-Quality Logos Are Now Delivered Quicker Than Ever!</h2>
-                    <p>Trusted by thousands, our logo design company offers top-tier modern Graphic Designs. Enjoy an affordable custom logo from our experts – ready in hours!</p>
-                    <p>We know that you’re anxious to launch your startup and bring your brand to life, so our minimalistic and rapid custom logo design process is of great assistance. We follow a few steps below to give a dream logo fast that is the envy of many organizations. </p>
+                    <p>Trusted by thousands, our logo design company offers top-tier modern Graphic Designs. Enjoy an
+                        affordable custom logo from our experts – ready in hours!</p>
+                    <p>We know that you’re anxious to launch your startup and bring your brand to life, so our minimalistic
+                        and rapid custom logo design process is of great assistance. We follow a few steps below to give a
+                        dream logo fast that is the envy of many organizations. </p>
                     <button class="btn btn-primary leave-message-btn">Get Started</button>
                 </div>
                 <div class="col-lg-6 custom-image-section-v3">
@@ -1537,7 +1524,8 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6 cta-buttons">
-                        <h2 class="text-white">Build your brand identity with a perfect logo, premium branding material, and standout stationery design!</h2>
+                        <h2 class="text-white">Build your brand identity with a perfect logo, premium branding material,
+                            and standout stationery design!</h2>
                         <a href="#" class="btn btn-primary leave-message-btn">Leave a Message</a>
                     </div>
                     <div class="col-md-6">
@@ -1547,64 +1535,66 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
             </div>
         </section>
 
-<!-- HTML Code -->
-<section class="portfoliogallerylp container">
-    <div class="row">
-        <!-- Heading and Separator -->
-        <div class="col-12 text-center">
-            <h2>Stunning Logos and Designs in Action</h2>
-            <p>Our talented logo designers create impactful custom logos that elevate your business and leave a memorable impression on your audience. </p>
-            <hr class="portfoliogallerylp-separator">
-        </div>
-    </div>
-
-    <div class="row portfoliogallerylp-gallery">
-        <!-- Column 1 -->
-        <div class="col-md-4 col-sm-12">
-            <img src={{ asset('images/gallery1.png') }} alt="Portfolio Image 1" class="portfoliogallerylp-image">
-            <img src={{ asset('images/gallery2.png') }} alt="Portfolio Image 2" class="portfoliogallerylp-image">
-            <img src={{ asset('images/gallery3.png') }} alt="Portfolio Image 3" class="portfoliogallerylp-image">
-        </div>
-        
-        <!-- Column 2 -->
-        <div class="col-md-4 col-sm-12">
-            <img src={{ asset('images/gallery4.png') }} alt="Portfolio Image 4" class="portfoliogallerylp-image">
-            <img src={{ asset('images/gallery5.png') }} alt="Portfolio Image 5" class="portfoliogallerylp-image">
-            <img src={{ asset('images/gallery6.png') }} alt="Portfolio Image 6" class="portfoliogallerylp-image">
-        </div>
-        
-        <!-- Column 3 -->
-        <div class="col-md-4 col-sm-12">
-            <img src={{ asset('images/gallery7.png') }} alt="Portfolio Image 7" class="portfoliogallerylp-image">
-            <img src={{ asset('images/gallery8.png') }} alt="Portfolio Image 8" class="portfoliogallerylp-image">
-            <img src={{ asset('images/gallery9.png') }} alt="Portfolio Image 9" class="portfoliogallerylp-image">
-        </div>
-    </div>
-</section>
-
-<section class="lp-cta1 d-flex align-items-center justify-content-center text-center" style="background-image: url('{{ asset('images/cta1bg.png') }}');">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="cta-heading">Dreaming of the perfect modern logo? </h2>
-                <p class="cta-text">
-                    Connect with us, and our experts will turn your ideas of business logo designs into reality!
-                </p>
-                <div class="cta-buttons">
-                    <button class="btn btn-primary leave-message-btn">Schedule a Call</button>
-                    <button class="btn btn-outline-light live-chat-btn">Chat with Expert</button>
+        <!-- HTML Code -->
+        <section class="portfoliogallerylp container">
+            <div class="row">
+                <!-- Heading and Separator -->
+                <div class="col-12 text-center">
+                    <h2>Stunning Logos and Designs in Action</h2>
+                    <p>Our talented logo designers create impactful custom logos that elevate your business and leave a
+                        memorable impression on your audience. </p>
+                    <hr class="portfoliogallerylp-separator">
                 </div>
             </div>
+
+            <div class="row portfoliogallerylp-gallery">
+                <!-- Column 1 -->
+                <div class="col-md-4 col-sm-12">
+                    <img src={{ asset('images/gallery1.png') }} alt="Portfolio Image 1" class="portfoliogallerylp-image">
+                    <img src={{ asset('images/gallery2.png') }} alt="Portfolio Image 2" class="portfoliogallerylp-image">
+                    <img src={{ asset('images/gallery3.png') }} alt="Portfolio Image 3" class="portfoliogallerylp-image">
+                </div>
+
+                <!-- Column 2 -->
+                <div class="col-md-4 col-sm-12">
+                    <img src={{ asset('images/gallery4.png') }} alt="Portfolio Image 4" class="portfoliogallerylp-image">
+                    <img src={{ asset('images/gallery5.png') }} alt="Portfolio Image 5" class="portfoliogallerylp-image">
+                    <img src={{ asset('images/gallery6.png') }} alt="Portfolio Image 6" class="portfoliogallerylp-image">
+                </div>
+
+                <!-- Column 3 -->
+                <div class="col-md-4 col-sm-12">
+                    <img src={{ asset('images/gallery7.png') }} alt="Portfolio Image 7" class="portfoliogallerylp-image">
+                    <img src={{ asset('images/gallery8.png') }} alt="Portfolio Image 8" class="portfoliogallerylp-image">
+                    <img src={{ asset('images/gallery9.png') }} alt="Portfolio Image 9" class="portfoliogallerylp-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="lp-cta1 d-flex align-items-center justify-content-center text-center"
+            style="background-image: url('{{ asset('images/cta1bg.png') }}');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="cta-heading">Dreaming of the perfect modern logo? </h2>
+                        <p class="cta-text">
+                            Connect with us, and our experts will turn your ideas of business logo designs into reality!
+                        </p>
+                        <div class="cta-buttons">
+                            <button class="btn btn-primary leave-message-btn">Schedule a Call</button>
+                            <button class="btn btn-outline-light live-chat-btn">Chat with Expert</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
         </div>
-    </div>
-</section>
-
-        
 
 
-        </div>
-
-     
         </div>
 
 
@@ -1617,7 +1607,10 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
                         <h2>Custom Logo Design <br>Process by Our <br>Top Designers</h2>
                     </div>
                     <div class="col-md-6">
-                        <p style="text-align: justify;">Our top designers follow a seamless custom logo design process tailored to your brand. We start by understanding your vision, creating unique concepts, and refining them based on your feedback. The result is a striking, professional logo that resonates with your audience and embodies your brand’s identity perfectly.    </p>
+                        <p style="text-align: justify;">Our top designers follow a seamless custom logo design process
+                            tailored to your brand. We start by understanding your vision, creating unique concepts, and
+                            refining them based on your feedback. The result is a striking, professional logo that resonates
+                            with your audience and embodies your brand’s identity perfectly. </p>
                     </div>
                 </div>
             </div>
@@ -1743,19 +1736,24 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
             <div class="container-fluid">
                 <p class="text-center">Testimonials</p>
                 <h2 class="text-center">Chosen by experts, crafted for success</h2>
-                <p class="text-center">Let’s turn your vision into a digital marvel. Ready to make waves? Let’s dive in!</p>
+                <p class="text-center">Let’s turn your vision into a digital marvel. Ready to make waves? Let’s dive in!
+                </p>
                 <div class="new-testimonial-carousel mt-4">
                     <div class="testimonial-card rotate-left ad">
                         <p>❇️❇️❇️❇️❇️</p>
                         {{-- <img src="https://via.placeholder.com/80" alt="Customer 1" class="rounded-circle mb-3"> --}}
                         <h5>Tony Ballew</h5>
-                        <p>I had a business logo created by AI. There was some errors and I had no idea how to fix it. I absolutely loved the logo, but needed those small mistakes fixed! RFS recreated the logo with the corrections made. I freaking love it! Now I have all the files and I can edit it in the future if I ever need to (which I do t think I will)!</p>
+                        <p>I had a business logo created by AI. There was some errors and I had no idea how to fix it. I
+                            absolutely loved the logo, but needed those small mistakes fixed! RFS recreated the logo with
+                            the corrections made. I freaking love it! Now I have all the files and I can edit it in the
+                            future if I ever need to (which I do t think I will)!</p>
                     </div>
                     <div class="testimonial-card rotate-right ad">
                         <p>❇️❇️❇️❇️❇️</p>
                         {{-- <img src="https://via.placeholder.com/80" alt="Customer 1" class="rounded-circle mb-3"> --}}
                         <h5>Joseph Tenney</h5>
-                        <p>Daniel was a breeze to work with and was johny on the spot with everything. Even after I approved the final draft and it was done I seen an adjustment the next day. He quickly corrected it.</p>
+                        <p>Daniel was a breeze to work with and was johny on the spot with everything. Even after I approved
+                            the final draft and it was done I seen an adjustment the next day. He quickly corrected it.</p>
                     </div>
                     <div class="testimonial-card rotate-left ad">
                         <p>❇️❇️❇️❇️❇️</p>
@@ -1821,16 +1819,18 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
                         </li>
                     </ul>
                 </div>
-        
+
                 <div class="col-md-7">
                     <div id="thank-you" class="alert alert-success d-none">Thank you! Your message has been sent.</div>
                     <form id="contactForm">
                         <div class="row mb-3">
                             <div class="col">
-                                <input type="text" class="form-control" id="name" placeholder="Your full name" required>
+                                <input type="text" class="form-control" id="name" placeholder="Your full name"
+                                    required>
                             </div>
                             <div class="col">
-                                <input type="email" class="form-control" id="email" placeholder="E-mail address" required>
+                                <input type="email" class="form-control" id="email" placeholder="E-mail address"
+                                    required>
                             </div>
                         </div>
                         <div class="mb-3">
@@ -1846,87 +1846,62 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
         </section>
 
 
-        <section 
-    class="lp-contact-sec d-flex align-items-center pt-4" 
-    style="background-image: url('{{ asset('images/lpcontactsecbg.png') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"
->
-    <div class="container">
-        <div class="row text-center">
-            <!-- Column 1 - Support Team -->
-            <div class="col-md-4">
-                <a href="/support" class="contact-link d-flex align-items-center">
-                    <img src="{{ asset('images/lpcontactsec1.png') }}" alt="Support Team Icon" class="me-3"/>
-                    <div>
-                        <p>Our Support Team</p>
-                        <h4>24/7 Online</h4>
+        <section class="lp-contact-sec d-flex align-items-center pt-4"
+            style="background-image: url('{{ asset('images/lpcontactsecbg.png') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <div class="container">
+                <div class="row text-center">
+                    <!-- Column 1 - Support Team -->
+                    <div class="col-md-4">
+                        <a href="/support" class="contact-link d-flex align-items-center">
+                            <img src="{{ asset('images/lpcontactsec1.png') }}" alt="Support Team Icon" class="me-3" />
+                            <div>
+                                <p>Our Support Team</p>
+                                <h4>24/7 Online</h4>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
 
-            <!-- Column 2 - Phone Number -->
-            <div class="col-md-4">
-                <a href="tel:+15515543283" class="contact-link d-flex align-items-center">
-                    <img src="{{ asset('images/lpcontactsec2.png') }}" alt="Consult Expert Icon" class="me-3"/>
-                    <div>
-                        <p>Consult Our Expert</p>
-                        <h4>+1 (551) 554-3283</h4>
+                    <!-- Column 2 - Phone Number -->
+                    <div class="col-md-4">
+                        <a href="tel:+15515543283" class="contact-link d-flex align-items-center">
+                            <img src="{{ asset('images/lpcontactsec2.png') }}" alt="Consult Expert Icon"
+                                class="me-3" />
+                            <div>
+                                <p>Consult Our Expert</p>
+                                <h4>+1 (551) 554-3283</h4>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
 
-            <!-- Column 3 - Live Chat -->
-            <div class="col-md-4">
-                <a href="/live-chat" class="contact-link d-flex align-items-center">
-                    <img src="{{ asset('images/lpcontactsec3.png') }}" alt="Live Support Icon" class="me-3"/>
-                    <div>
-                        <p>Live Support</p>
-                        <h4>Chat Now</h4>
+                    <!-- Column 3 - Live Chat -->
+                    <div class="col-md-4">
+                        <a href="/live-chat" class="contact-link d-flex align-items-center">
+                            <img src="{{ asset('images/lpcontactsec3.png') }}" alt="Live Support Icon" class="me-3" />
+                            <div>
+                                <p>Live Support</p>
+                                <h4>Chat Now</h4>
+                            </div>
+                        </a>
                     </div>
-                </a>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
 
 
-<section class="lp-footer-sec text-white d-flex flex-column justify-content-center" style="background-color: #080A2D;">
-    <div class="container">
-        <!-- First Row - Logo Centered -->
-        <div class="row justify-content-center py-3">
-            <div class="col-12 text-center">
-                <img src="{{ asset('images/rfslogowhiteft.png') }}" alt="RFS Logo Design Logo" class="footer-logo" />
-            </div>
-        </div>
-
-        <!-- Second Row - Copyright and Links -->
-        <div class="row align-items-center pt-3" style="border-top: 1px solid white;">
-            <div class="col-md-6 text-md-start text-center">
-                <p class="mb-0">
-                    &copy; Copyright 2024, <strong>RFS Logo Design</strong>. Powered by RFS
-                </p>
-            </div>
-            <div class="col-md-6 text-md-end text-center">
-                <a href="/terms-condition" class="footer-link me-3">Terms & Conditions</a>
-                <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
-            </div>
-        </div>
-    </div>
-</section>
         
-
         {{-- Contact us Modal --}}
         <div class="modal fade" id="contact-modal" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h2 class="modal-title text-center">Get Started</h2>
+                    <div class="modal-header border-0 pb-0">
+                        <h2 class="modal-title text-center"></h2>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        <form action="{{ route('contactUs') }}" method="post" id="contactForm" novalidate>
+                    <div class="modal-body pt-2 px-4">
+                        <form action="{{ route('contactUsLP') }}" method="post" id="contactForm">
                             @csrf
-
+                            <input type="hidden" name="title" value>
                             <div class="mb-3">
                                 <label for="name" class="form-label"><b>Name</b></label>
                                 <input type="text" class="form-control @error('name') is-invalid @enderror"
@@ -1937,7 +1912,6 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
-
                             <div class="mb-3">
                                 <label for="email" class="form-label"><b>Email address</b></label>
                                 <input type="email" class="form-control @error('email') is-invalid @enderror"
@@ -1948,7 +1922,6 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
-
                             <div class="mb-3">
                                 <label for="phone" class="form-label"><b>Phone number</b></label>
                                 <input type="tel" class="form-control @error('phone') is-invalid @enderror"
@@ -1961,17 +1934,14 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
-
                             <div class="mb-3">
                                 <label for="comment" class="form-label"><b>Comment</b></label>
                                 <textarea name="comment" id="comment" rows="5" class="form-control" placeholder="Comments" required></textarea>
                             </div>
-
                             <div class="text-center d-grid">
                                 <button type="submit" class="btn btn-lg btn-primary">Submit</button>
                             </div>
                         </form>
-
                     </div>
                 </div>
             </div>
@@ -1980,82 +1950,50 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
         <script>
             // Ensure carousel can be scrolled via mouse or touch gestures without a scrollbar
             const carousel = document.querySelector('.new-testimonial-carousel');
-  
-  carousel.addEventListener('wheel', (e) => {
-      e.preventDefault();
-      carousel.scrollBy({
-          left: e.deltaY < 0 ? -30 : 30,
-      });
-  });
-      </script>
-        <!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-<script>
-  // Initialize Swiper
-  const swiper = new Swiper('.swiper-container', {
-    slidesPerView: 5,
-    spaceBetween: 20,
-    loop: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 2,
-      },
-      576: {
-        slidesPerView: 3,
-      },
-      768: {
-        slidesPerView: 4,
-      },
-      992: {
-        slidesPerView: 5,
-      },
-    }
-  });
-</script>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script>
-    document.getElementById('contactForm').addEventListener('submit', async function(e) {
-        e.preventDefault();
 
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            subject: document.getElementById('subject').value,
-            message: document.getElementById('message').value
-        };
-
-        try {
-            const response = await fetch('http://study.loc/PHPMailer/index.php', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
+            carousel.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                carousel.scrollBy({
+                    left: e.deltaY < 0 ? -30 : 30,
+                });
             });
+        </script>
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
-            if (response.ok) {
-                const data = await response.json();
-                if (data.status === 'success') {
-                    document.getElementById('thank-you').classList.remove('d-none');
-                    document.getElementById('contactForm').reset();
-                } else {
-                    console.error('Server error:', data.message);
+        <script>
+            // Initialize Swiper
+            const swiper = new Swiper('.swiper-container', {
+                slidesPerView: 5,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 2,
+                    },
+                    576: {
+                        slidesPerView: 3,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                    },
+                    992: {
+                        slidesPerView: 5,
+                    },
                 }
-            } else {
-                console.error('Network error:', response.statusText);
-            }
-        } catch (error) {
-            console.error('Fetch error:', error);
-        }
-    });
-</script>
+            });
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
 
 
 
@@ -2084,14 +2022,14 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
             });
         </script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const logosSlide = document.querySelector('.languagelogos-slide');
-        const copy = logosSlide.cloneNode(true);
-        document.querySelector('.languagelogos').appendChild(copy);
-    });
-    </script>
-    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const logosSlide = document.querySelector('.languagelogos-slide');
+                const copy = logosSlide.cloneNode(true);
+                document.querySelector('.languagelogos').appendChild(copy);
+            });
+        </script>
+
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
@@ -2128,6 +2066,15 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
         </script>
 
         <script>
+            $(function() {
+                $('#contact-modal').on('show.bs.modal', function(event) {
+                    $(this).find('.modal-header .modal-title').text(event.relatedTarget.dataset.title)
+                    $(this).find('form input[name=title]').val(event.relatedTarget.dataset.title)
+                })
+            })
+        </script>
+
+        <script>
             document.getElementById('custom-form').addEventListener('submit', function(event) {
                 let form = event.target;
                 let isValid = true;
@@ -2142,7 +2089,7 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
                     nameField.classList.remove('is-invalid');
                 }
 
-                // Email validation: proper email format
+                // Email validation: properresources/views/site/layouts/footer.blade.php email format
                 let emailField = form.querySelector('#email');
                 let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailRegex.test(emailField.value.trim())) {
