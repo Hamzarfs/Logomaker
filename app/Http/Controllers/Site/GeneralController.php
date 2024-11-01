@@ -134,7 +134,7 @@ class GeneralController extends \App\Http\Controllers\Controller
     {
         $data = $request->all();
         $users = User::role('admin')->pluck('email');
-        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com'];
+        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'nomanrfs@gmail.com'];
         try {
             Mail::to($users)->send(new ContactUs($data));
         } catch (\Throwable $th) {
@@ -154,7 +154,7 @@ class GeneralController extends \App\Http\Controllers\Controller
     {
         $data = $request->all();
         $users = User::role('admin')->pluck('email');
-        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com'];
+        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'nomanrfs@gmail.com'];
         try {
             Mail::to($users)->send(new ContactUsLP($data));
         } catch (\Throwable $th) {
@@ -175,7 +175,7 @@ class GeneralController extends \App\Http\Controllers\Controller
     {
         $data = $request->all();
         $users = User::role('admin')->pluck('email');
-        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com'];
+        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'nomanrfs@gmail.com'];
         try {
             Mail::to($users)->send(new CustomLogo($data));
         } catch (\Throwable $th) {

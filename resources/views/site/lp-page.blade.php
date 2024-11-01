@@ -1222,7 +1222,7 @@
                             Please message us, and let our designers bring your vision to life.
                         </p>
                         <div class="cta-buttons">
-                            
+
                             <a href="{{ url('https://wa.me/+18482369397') }}"> <button  class="btn btn-primary leave-message-btn">Message Us</button></a>
                             <a href="tel:+15516665255"> <button class="btn btn-outline-light live-chat-btn">Call Us</button></a>
                         </div>
@@ -1608,6 +1608,7 @@
                 </div>
             </div>
         </section>
+
         <div class="container mt-5">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
@@ -1816,6 +1817,7 @@
                 <div class="col-md-7">
                     <div id="thank-you" class="alert alert-success d-none">Thank you! Your message has been sent.</div>
                     <form id="contactForm" method="POST" action="{{ route('customLogoSubmit') }}">
+                        @csrf
                         <div class="row mb-3">
                             <div class="col">
                                 <input type="text" class="form-control" id="name" placeholder="Your full name" name="name"
@@ -1865,7 +1867,7 @@
                             </div>
                         </a>
                     </div>
-                    
+
                     <!-- Column 3 - Live Chat -->
                     <div class="col-md-4">
                         <a href="{{ url('https://wa.me/+18482369397') }}" class="contact-link d-flex align-items-center">
@@ -2041,6 +2043,44 @@
 
         <script>
             document.getElementById('custom-form').addEventListener('submit', function(event) {
+                let form = event.target;
+                let isValid = true;
+
+                // Name validation: no special characters
+                let nameField = form.querySelector('#name');
+                let nameRegex = /^[A-Za-z\s]+$/;
+                if (!nameRegex.test(nameField.value.trim())) {
+                    nameField.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    nameField.classList.remove('is-invalid');
+                }
+
+                // Email validation: properresources/views/site/layouts/footer.blade.php email format
+                let emailField = form.querySelector('#email');
+                let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailField.value.trim())) {
+                    emailField.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    emailField.classList.remove('is-invalid');
+                }
+
+                // Phone validation: only numbers and spaces, and maximum 15 characters
+                let phoneField = form.querySelector('#phone');
+                let phoneRegex = /^\+?[0-9\s]{10,15}$/;
+                if (!phoneRegex.test(phoneField.value.trim())) {
+                    phoneField.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    phoneField.classList.remove('is-invalid');
+                }
+
+                if (!isValid) {
+                    event.preventDefault(); // Prevent form submission if validation fails
+                }
+            });
+            document.getElementById('contact-modal').addEventListener('submit', function(event) {
                 let form = event.target;
                 let isValid = true;
 
