@@ -1224,7 +1224,7 @@
                         <div class="cta-buttons">
                             
                             <a href="{{ url('https://wa.me/+18482369397') }}"> <button  class="btn btn-primary leave-message-btn">Message Us</button></a>
-                            <a href="tel:+15515543283"> <button class="btn btn-outline-light live-chat-btn">Call Us</button></a>
+                            <a href="tel:+15516665255"> <button class="btn btn-outline-light live-chat-btn">Call Us</button></a>
                         </div>
                     </div>
                 </div>
@@ -1583,7 +1583,7 @@
                         </p>
                         <div class="cta-buttons">
                             <a href="{{ url('https://wa.me/+18482369397') }}"> <button class="btn btn-primary leave-message-btn">Schedule a Call</button></a>
-                            <a href="tel:+15515543283"> <button class="btn btn-outline-light live-chat-btn">Chat with Expert</button></a>
+                            <a href="tel:+15516665255"> <button class="btn btn-outline-light live-chat-btn">Chat with Expert</button></a>
                         </div>
                     </div>
                 </div>
@@ -1808,7 +1808,7 @@
                     <ul class="contact-info">
                         <li>
                             <i class="fas fa-phone-alt contact-icon"></i>
-                            <a href="tel:+15515543283">+1 (551) 554-3283</a>
+                            <a href="tel:+15516665255">+1 (551) 554-3283</a>
                         </li>
                         <li>
                             <i class="fas fa-envelope contact-icon"></i>
@@ -1864,7 +1864,7 @@
 
                     <!-- Column 2 - Phone Number -->
                     <div class="col-md-4">
-                        <a href="tel:+15515543283" class="contact-link d-flex align-items-center">
+                        <a href="tel:+15516665255" class="contact-link d-flex align-items-center">
                             <img src="{{ asset('images/lpcontactsec2.png') }}" alt="Consult Expert Icon"
                                 class="me-3" />
                             <div>
