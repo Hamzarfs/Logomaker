@@ -639,7 +639,7 @@
 
 
 .lpcta3sec {
-    background-image: url(http://127.0.0.1:8000/images/lpcta3bg.png);
+    background-image: url(/images/lpcta3bg.png);
     background-size: cover;
     background-position: center;
     padding: 10px 0;
