@@ -17,8 +17,8 @@
                         </p>
                     </div>
                     <div class="col-md-6 text-md-end text-center">
-                        <a href="/terms-condition" class="footer-link me-3">Terms & Conditions</a>
-                        <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
+                        <a href="/terms-condition" target="_blank" class="footer-link me-3">Terms & Conditions</a>
+                        <a href="/privacy-policy"  target="_blank"  class="footer-link">Privacy Policy</a>
                     </div>
                 </div>
             </div>

@@ -1808,7 +1808,7 @@
                     <ul class="contact-info">
                         <li>
                             <i class="fas fa-phone-alt contact-icon"></i>
-                            <a href="tel:+15516665255">+1 (551) 554-3283</a>
+                            <a href="tel:+15516665255">+1 (551) 666-5255</a>
                         </li>
                         <li>
                             <i class="fas fa-envelope contact-icon"></i>
@@ -1869,7 +1869,7 @@
                                 class="me-3" />
                             <div>
                                 <p>Consult Our Expert</p>
-                                <h4>+1 (551) 554-3283</h4>
+                                <h4>+1 (551) 666-5255</h4>
                             </div>
                         </a>
                     </div>
