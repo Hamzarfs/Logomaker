@@ -186,9 +186,10 @@ class GeneralController extends \App\Http\Controllers\Controller
                 'message' => $th->getMessage()
             ]);
         }
-        return back()->with([
-            'success' => true,
-        ]);
+        return redirect('thanks');
+        // return back()->with([
+        //     'success' => true,
+        // ]);
     }
 
     // general pages

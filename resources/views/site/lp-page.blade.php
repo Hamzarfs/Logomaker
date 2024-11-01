@@ -271,7 +271,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-
+                width: 70%;
                 color: black;
             }
 
@@ -523,7 +523,7 @@
 
             /* Feature List Styling with Bullets */
             .price-box .feature-list {
-                max-height: 120px;
+                max-height: 150px;
                 overflow-y: auto;
                 text-align: left;
                 padding-left: 20px;
@@ -690,7 +690,7 @@
 
             .portfoliogallerylp-gallery {
                 /* gap: 3px
-                     */
+                         */
             }
 
             .portfoliogallerylp-image {
@@ -1117,7 +1117,7 @@
 
                 <div class="col-md-6 d-flex justify-content-center align-items-center">
                     <div class="custom-logo-page-form bg-white border p-3 rounded">
-                        <h3 class="custom-logo-page-form-heading text-center">Get a Free Quote</h3>
+                        <h3 class="custom-logo-page-form-heading text-center">Get a Logo Quote</h3>
                         <form id="custom-form" method="POST" action="{{ route('customLogoSubmit') }}">
 
                             @csrf
@@ -1248,7 +1248,7 @@
                 <div class="row g-4">
                     <!-- Basic Logo Package -->
                     <div class="col-md-4">
-                        <div class="price-box">
+                        <div class="price-box h-100">
                             <h3>Basic Logo Package</h3>
                             <p>Best Value for Money Guaranteed!</p>
                             <div class="price-section">
@@ -1273,7 +1273,7 @@
 
                     <!-- Standard Logo Package -->
                     <div class="col-md-4">
-                        <div class="price-box best-seller">
+                        <div class="price-box h-100 best-seller">
                             <h3>Standard Logo Package</h3>
                             <p>Best Value for Money Guaranteed!</p>
                             <div class="price-section">
@@ -1298,7 +1298,7 @@
 
                     <!-- Elite Logo Package -->
                     <div class="col-md-4">
-                        <div class="price-box">
+                        <div class="price-box h-100">
                             <h3>Elite Logo Package</h3>
                             <p>Best Value for Money Guaranteed!</p>
                             <div class="price-section">
@@ -1335,8 +1335,8 @@
                 <div class="row g-4">
                     <!-- Basic Logo Package -->
                     <div class="col-md-4">
-                        <div class="price-box">
-                            <h3>Starter Package</h3>
+                        <div class="price-box h-100">
+                            <h3>Starter Branding Package</h3>
                             <p>Best Value for Money Guaranteed!</p>
                             <div class="price-section">
                                 <span class="price">$149</span>
@@ -1360,8 +1360,8 @@
 
                     <!-- Standard Logo Package -->
                     <div class="col-md-4">
-                        <div class="price-box best-seller">
-                            <h3>Premium Package</h3>
+                        <div class="price-box h-100 best-seller">
+                            <h3>Premium Branding Package</h3>
                             <p>Best Value for Money Guaranteed!</p>
                             <div class="price-section">
                                 <span class="price">$199</span>
@@ -1385,8 +1385,8 @@
 
                     <!-- Elite Logo Package -->
                     <div class="col-md-4">
-                        <div class="price-box">
-                            <h3>Professional Package</h3>
+                        <div class="price-box h-100">
+                            <h3>Professional Branding Package</h3>
                             <p>Best Value for Money Guaranteed!</p>
                             <div class="price-section">
                                 <span class="price">Let's Talk</span>
@@ -1423,8 +1423,8 @@
                 <div class="row g-4">
                     <!-- Basic Logo Package -->
                     <div class="col-md-4">
-                        <div class="price-box">
-                            <h3>Basic Package</h3>
+                        <div class="price-box h-100">
+                            <h3>Basic Website Package</h3>
                             <p>Best Value for Money Guaranteed!</p>
                             <div class="price-section">
                                 <span class="price">$199</span>
@@ -1448,8 +1448,8 @@
 
                     <!-- Standard Logo Package -->
                     <div class="col-md-4">
-                        <div class="price-box best-seller">
-                            <h3>Elite Package</h3>
+                        <div class="price-box h-100 best-seller">
+                            <h3>Elite Website Package</h3>
                             <p>Best Value for Money Guaranteed!</p>
                             <div class="price-section">
                                 <span class="price">$500</span>
@@ -1473,8 +1473,8 @@
 
                     <!-- Elite Logo Package -->
                     <div class="col-md-4">
-                        <div class="price-box">
-                            <h3>Ecommerce Package</h3>
+                        <div class="price-box h-100">
+                            <h3>Ecommerce Website Package</h3>
                             <p>Best Value for Money Guaranteed!</p>
                             <div class="price-section">
                                 <span class="price">$1199</span>
@@ -1511,7 +1511,7 @@
                     <p>We know that you’re anxious to launch your startup and bring your brand to life, so our minimalistic
                         and rapid custom logo design process is of great assistance. We follow a few steps below to give a
                         dream logo fast that is the envy of many organizations. </p>
-                    <button class="btn btn-primary leave-message-btn">Get Started</button>
+                    <button class="btn btn-primary leave-message-btn" data-bs-toggle="modal" data-bs-target="#contact-modal" data-title="Basic Logo Package - $49">Get Started</button>
                 </div>
                 <div class="col-lg-6 custom-image-section-v3">
                     <img src="images/Mask group.png" alt="Descriptive Image Text">
@@ -1589,14 +1589,6 @@
                 </div>
             </div>
         </section>
-
-
-
-
-        </div>
-
-
-        </div>
 
 
 
@@ -1823,22 +1815,22 @@
 
                 <div class="col-md-7">
                     <div id="thank-you" class="alert alert-success d-none">Thank you! Your message has been sent.</div>
-                    <form id="contactForm">
+                    <form id="contactForm" method="POST" action="{{ route('customLogoSubmit') }}">
                         <div class="row mb-3">
                             <div class="col">
-                                <input type="text" class="form-control" id="name" placeholder="Your full name"
+                                <input type="text" class="form-control" id="name" placeholder="Your full name" name="name"
                                     required>
                             </div>
                             <div class="col">
-                                <input type="email" class="form-control" id="email" placeholder="E-mail address"
+                                <input type="email" class="form-control" id="email" placeholder="E-mail address" name="email"
                                     required>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                            <input type="tel" class="form-control" id="phone" placeholder="Phone number" required name="phone">
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control" id="message" rows="5" placeholder="Your message" required></textarea>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Your message" required name="message"></textarea>
                         </div>
                         <button type="submit" class="btn btn-submit">Submit Now</button>
                     </form>
@@ -1890,7 +1882,7 @@
 
 
 
-        
+
         {{-- Contact us Modal --}}
         <div class="modal fade" id="contact-modal" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
@@ -2037,34 +2029,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-        <script>
-            // Initialize phone input
-            const input = document.querySelector("#phone");
-            intlTelInput(input, {
-                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-            });
-
-            @if (session()->has('success'))
-                @if (session()->get('success'))
-                    swal.fire({
-                        icon: 'success',
-                        title: 'Success',
-                        text: 'Custom logo form submitted successfully!',
-                        timer: 1500,
-                        timerProgressBar: true
-                    }).then(() => {
-                        location.assign("{{ url('thanks') }}")
-                    })
-                @else
-                    swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: 'Unexpected error occured. Please try again later!'
-                    })
-                @endif
-            @endif
-        </script>
 
         <script>
             $(function() {
