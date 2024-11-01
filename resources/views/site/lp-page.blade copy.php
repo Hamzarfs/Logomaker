@@ -1,8 +1,9 @@
     @extends('site.common')
 
-    @section('title', 'Custom Logo Design Starting from $49 - (551) 666-5255')
+    @section('title', 'Hire a Logo Designer for Custom Logo Design - RFS Logo Design')
 
-    @section('meta_desc', 'Get top notch custom logo design services from US top logo designer team at RFS Logo Design. We create stunning logos for your business on affordable price.')
+    @section('meta_desc', 'Hire a professional logo designer for custom logo design because your brand or company
+        deserves the best logo. RFS Logo Design has expert logo designers team.')
 
     @section('content')
 
@@ -946,14 +947,6 @@ section.ebook-contact-form.container
 
 @media only screen and (max-width: 768px) {
 
-    .custom-text-section-v3 h2 {
-    font-weight: 800;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 23px;
-    margin-bottom: 20px;
-    color: #010935;
-}
-
     a.toll_icon.text-white.d-flex.align-items-center {
     font-size: 1.3rem;
 }
@@ -1095,7 +1088,7 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
             </div>
             <div class="top-rightlp col-md-8">
                 <h5>
-                    Need a logo? Let’s Discuss Your Idea with Logo Expert
+                    Limited Time Offer - Activate Your 70% off Coupon!
                     <a 
                         href="#" 
                         title="Get Free Consultancy" 
@@ -1118,27 +1111,20 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
                     <div class="lpbanner-heading-container" style="display: flex; align-items: center;">
                         
                         <h1 class="lpbanner-heading">
-                            Custom Logo Design  <br />
-                            Starting from  <span class="lpbanner-price">$49</span>
+                            Custom Web Design <br />
+                            Starts just <span class="lpbanner-price">$199</span>
                         </h1>
                     </div>
                     <div class="lp-banner-margin">
-                        <p class="lpbanner-text">At RFS, our top-tier in-house logo designers create unique, eye-catching brand identities that make your business stand out and leave a lasting impression.</p>
+                        <p class="lpbanner-text">Is your brand getting lost in a sea of online noise? Looking for a way to make waves and drive growth?</p>
                         <div class="lpbanner-buttons">
                             <button class="btn btn-dark lpbanner-btn">Get Started</button>
                             <button class="btn btn-outline-light lpbanner-btn">View Pricing</button>
                         </div>
                         <div class="lpbanner-badges">
-                            <a href="https://clutch.co/profile/rfs-logo-design" target="_blank">
-                                <img src="{{ asset('images/clutchicon.png') }}" alt="Clutch" />
-                            </a>
-                            <a href="https://www.trustpilot.com/review/rfslogodesign.com" target="_blank">
-                                <img src="{{ asset('images/truspiloticon.png') }}" alt="Trustpilot" />
-                            </a>
-                            <a href="https://www.bark.com/en/us/company/rfs-logo-design/oRvbN/" target="_blank">
-                                <img src="{{ asset('images/barkicon.png') }}" alt="Bark" />
-                            </a>
-                            
+                            <img src={{ asset('images/clutchicon.png') }} alt="Clutch" />
+                            <img src={{ asset('images/truspiloticon.png') }} alt="Trustpilot" />
+                            <img src={{ asset('images/barkicon.png') }} alt="Bark" />
                         </div>
                     </div>
                 </div>
@@ -1244,13 +1230,13 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="cta-heading">Are you looking for a logo that truly captures your brand? </h2>
+                    <h2 class="cta-heading">Looking For A Creative Web Design?</h2>
                     <p class="cta-text">
-                        Please message us, and let our designers bring your vision to life.
+                        Drop Us A Message, And Our Experts Will Get Back To You Shortly
                     </p>
                     <div class="cta-buttons">
-                        <button class="btn btn-primary leave-message-btn">Message Us</button>
-                        <button class="btn btn-outline-light live-chat-btn">Call Us</button>
+                        <button class="btn btn-primary leave-message-btn">Leave A Message</button>
+                        <button class="btn btn-outline-light live-chat-btn">Live Chat</button>
                     </div>
                 </div>
             </div>
@@ -1263,7 +1249,7 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
             <div class="row mb-4">
                 <div class="col">
                     <h2>Professional Logo Design Services</h2>
-                    <p>Our professional logo design services in the US offer captivating and timeless custom logos. Our expert designers at RFS Logo Design ensure your company stands out uniquely and memorably in the market.</p>
+                    <p>Our professional logo design services in the UK offer captivating and timeless custom logos. Our expert designers at Creative Logo Design ensure your company stands out uniquely and memorably in the market.</p>
                     <h2>Logo Design Packages</h2>
                 </div>
             </div>
@@ -1514,16 +1500,34 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
         </div>
     </section>
     
-   
+    <section class="lp-cta1 d-flex align-items-center justify-content-center text-center" style="background-image: url('{{ asset('images/cta1bg.png') }}');">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="cta-heading">Looking For A Creative Web Design?</h2>
+                    <p class="cta-text">
+                        Drop Us A Message, And Our Experts Will Get Back To You Shortly
+                    </p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary leave-message-btn">Leave A Message</button>
+                        <button class="btn btn-outline-light live-chat-btn">Live Chat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
         <div class="container custom-container-margin-v3">
             <div class="row align-items-center">
                 <div class="col-lg-6 custom-text-section-v3">
-                    <h2>Same Top-Quality Logos Are Now Delivered Quicker Than Ever!</h2>
-                    <p>Trusted by thousands, our logo design company offers top-tier modern Graphic Designs. Enjoy an affordable custom logo from our experts – ready in hours!</p>
-                    <p>We know that you’re anxious to launch your startup and bring your brand to life, so our minimalistic and rapid custom logo design process is of great assistance. We follow a few steps below to give a dream logo fast that is the envy of many organizations. </p>
-                    <button class="btn btn-primary leave-message-btn">Get Started</button>
+                    <h2>Same Premium Logos, Now Faster!</h2>
+                    <p>We have delivered top-notch designs to thousands of clients. With our free logo services,
+                        get high-quality, customizable logos in minutes straight from our expert designers!</p>
+                    <p>We know you are eager to launch your business, so our simple and speedy customizable
+                        logo design process is here to help. Below are a few simple steps we follow and produce
+                        a professional logo worthy of your brand in no time at all.</p>
+                    <div class="custom-bold-text-v3">Let Us Create A Custom Logo With Ease!</div>
                 </div>
                 <div class="col-lg-6 custom-image-section-v3">
                     <img src="images/Mask group.png" alt="Descriptive Image Text">
@@ -1537,7 +1541,7 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6 cta-buttons">
-                        <h2 class="text-white">Build your brand identity with a perfect logo, premium branding material, and standout stationery design!</h2>
+                        <h2 class="text-white">Get The Perfect Logo This Christmas</h2>
                         <a href="#" class="btn btn-primary leave-message-btn">Leave a Message</a>
                     </div>
                     <div class="col-md-6">
@@ -1552,8 +1556,8 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
     <div class="row">
         <!-- Heading and Separator -->
         <div class="col-12 text-center">
-            <h2>Stunning Logos and Designs in Action</h2>
-            <p>Our talented logo designers create impactful custom logos that elevate your business and leave a memorable impression on your audience. </p>
+            <h2>Our Logo Design Portfolio</h2>
+            <p>Explore our logo builder’s vast template collection, from medical to fashion, sports to food. RFS Logo Design helps you find the perfect logo to match your business identity and branding needs.</p>
             <hr class="portfoliogallerylp-separator">
         </div>
     </div>
@@ -1582,23 +1586,6 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
     </div>
 </section>
 
-<section class="lp-cta1 d-flex align-items-center justify-content-center text-center" style="background-image: url('{{ asset('images/cta1bg.png') }}');">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="cta-heading">Dreaming of the perfect modern logo? </h2>
-                <p class="cta-text">
-                    Connect with us, and our experts will turn your ideas of business logo designs into reality!
-                </p>
-                <div class="cta-buttons">
-                    <button class="btn btn-primary leave-message-btn">Schedule a Call</button>
-                    <button class="btn btn-outline-light live-chat-btn">Chat with Expert</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
         
 
 
@@ -1614,10 +1601,12 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <h2>Custom Logo Design <br>Process by Our <br>Top Designers</h2>
+                        <h2>Simple and Fast<br>Customizable Logo<br>Design Process</h2>
                     </div>
                     <div class="col-md-6">
-                        <p style="text-align: justify;">Our top designers follow a seamless custom logo design process tailored to your brand. We start by understanding your vision, creating unique concepts, and refining them based on your feedback. The result is a striking, professional logo that resonates with your audience and embodies your brand’s identity perfectly.    </p>
+                        <p style="text-align: justify;">We understand the rush to launch your business startup, and that’s
+                            why customizable logos make sense. Getting a professional logo design from our advance studio
+                            isn’t hard, just follow these steps.</p>
                     </div>
                 </div>
             </div>
@@ -1741,22 +1730,8 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
 
         <section class="new-testimonial my-5">
             <div class="container-fluid">
-                <p class="text-center">Testimonials</p>
-                <h2 class="text-center">Chosen by experts, crafted for success</h2>
-                <p class="text-center">Let’s turn your vision into a digital marvel. Ready to make waves? Let’s dive in!</p>
+                <h2 class="text-center">Happy Customers and Counting....</h2>
                 <div class="new-testimonial-carousel mt-4">
-                    <div class="testimonial-card rotate-left ad">
-                        <p>❇️❇️❇️❇️❇️</p>
-                        {{-- <img src="https://via.placeholder.com/80" alt="Customer 1" class="rounded-circle mb-3"> --}}
-                        <h5>Tony Ballew</h5>
-                        <p>I had a business logo created by AI. There was some errors and I had no idea how to fix it. I absolutely loved the logo, but needed those small mistakes fixed! RFS recreated the logo with the corrections made. I freaking love it! Now I have all the files and I can edit it in the future if I ever need to (which I do t think I will)!</p>
-                    </div>
-                    <div class="testimonial-card rotate-right ad">
-                        <p>❇️❇️❇️❇️❇️</p>
-                        {{-- <img src="https://via.placeholder.com/80" alt="Customer 1" class="rounded-circle mb-3"> --}}
-                        <h5>Joseph Tenney</h5>
-                        <p>Daniel was a breeze to work with and was johny on the spot with everything. Even after I approved the final draft and it was done I seen an adjustment the next day. He quickly corrected it.</p>
-                    </div>
                     <div class="testimonial-card rotate-left ad">
                         <p>❇️❇️❇️❇️❇️</p>
                         {{-- <img src="https://via.placeholder.com/80" alt="Customer 1" class="rounded-circle mb-3"> --}}
@@ -1977,17 +1952,7 @@ a.chat_icon.chat.text-white.d-flex.align-items-center {
             </div>
         </div>
 
-        <script>
-            // Ensure carousel can be scrolled via mouse or touch gestures without a scrollbar
-            const carousel = document.querySelector('.new-testimonial-carousel');
-  
-  carousel.addEventListener('wheel', (e) => {
-      e.preventDefault();
-      carousel.scrollBy({
-          left: e.deltaY < 0 ? -30 : 30,
-      });
-  });
-      </script>
+
         <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
