@@ -1168,10 +1168,9 @@
 
                             <div class="form-group mb-2">
                                 <label for="phone" class="custom-logo-page-label">Phone Number:</label>
-                                <input type="text"
+                                <input type="tel"
                                     class="form-control custom-logo-page-input @error('phone') is-invalid @enderror"
-                                    name="phone" id="phone" placeholder="Enter your phone number" required
-                                    pattern="^\+?[0-9\s]{10,15}$"
+                                    name="phone" id="phone" placeholder="+15554443322" required
                                     title="Phone number should contain only numbers and spaces, and can start with a '+'."
                                     maxlength="15">
                                 <div class="invalid-feedback">Please enter a valid phone number (max 15 digits).</div>
@@ -1885,7 +1884,7 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <input type="tel" class="form-control" id="phone" placeholder="Phone number"
+                            <input type="tel" class="form-control" id="phone" placeholder="+15554443322"
                                 required name="phone">
                         </div>
                         <div class="mb-3">
@@ -1977,8 +1976,7 @@
                             <div class="mb-3">
                                 <label for="phone" class="form-label"><b>Phone number</b></label>
                                 <input type="tel" class="form-control @error('phone') is-invalid @enderror"
-                                    name="phone" id="phone" placeholder="123456789" required
-                                    pattern="^\+?[0-9\s]{11,15}$"
+                                    name="phone" id="phone" placeholder="+15554443322" required
                                     title="Phone number should be between 11 and 15 digits and may start with a '+'."
                                     maxlength="15">
                                 <div class="invalid-feedback">Please enter a valid phone number (11 to 15 digits).</div>
