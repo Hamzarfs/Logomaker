@@ -971,11 +971,11 @@
                 }
 
                 a.toll_icon.text-white.d-flex.align-items-center {
-                    font-size: 1.3rem;
+                    font-size: 1.0rem;
                 }
 
                 a.chat_icon.chat.text-white.d-flex.align-items-center {
-                    font-size: 1.3rem;
+                    font-size: 1.0rem;
                 }
 
                 .lpbanner-heading {
@@ -1222,8 +1222,9 @@
                             Please message us, and let our designers bring your vision to life.
                         </p>
                         <div class="cta-buttons">
-                            <button class="btn btn-primary leave-message-btn">Message Us</button>
-                            <button class="btn btn-outline-light live-chat-btn">Call Us</button>
+                            
+                            <a href="{{ url('https://wa.me/+18482369397') }}"> <button  class="btn btn-primary leave-message-btn">Message Us</button></a>
+                            <a href="tel:+15515543283"> <button class="btn btn-outline-light live-chat-btn">Call Us</button></a>
                         </div>
                     </div>
                 </div>
@@ -1526,7 +1527,7 @@
                     <div class="col-md-6 cta-buttons">
                         <h2 class="text-white">Build your brand identity with a perfect logo, premium branding material,
                             and standout stationery design!</h2>
-                        <a href="#" class="btn btn-primary leave-message-btn">Leave a Message</a>
+                            <a href="{{ url('https://wa.me/+18482369397') }}" class="btn btn-primary leave-message-btn">Leave a Message</a>
                     </div>
                     <div class="col-md-6">
                         <img src={{ asset('images/lpcta3secimg.png') }} alt="Description" class="img-fluid">
@@ -1581,8 +1582,8 @@
                             Connect with us, and our experts will turn your ideas of business logo designs into reality!
                         </p>
                         <div class="cta-buttons">
-                            <button class="btn btn-primary leave-message-btn">Schedule a Call</button>
-                            <button class="btn btn-outline-light live-chat-btn">Chat with Expert</button>
+                            <a href="{{ url('https://wa.me/+18482369397') }}"> <button class="btn btn-primary leave-message-btn">Schedule a Call</button></a>
+                            <a href="tel:+15515543283"> <button class="btn btn-outline-light live-chat-btn">Chat with Expert</button></a>
                         </div>
                     </div>
                 </div>
@@ -1811,7 +1812,7 @@
                         </li>
                         <li>
                             <i class="fas fa-envelope contact-icon"></i>
-                            <a href="mailto:info@webdesignmania.com">info@webdesignmania.com</a>
+                            <a href="mailto:support@rfslogodesign.com">support@rfslogodesign.com</a>
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt contact-icon"></i>
@@ -1852,7 +1853,7 @@
                 <div class="row text-center">
                     <!-- Column 1 - Support Team -->
                     <div class="col-md-4">
-                        <a href="/support" class="contact-link d-flex align-items-center">
+                        <a href="{{ url('https://wa.me/+18482369397') }}" class="contact-link d-flex align-items-center">
                             <img src="{{ asset('images/lpcontactsec1.png') }}" alt="Support Team Icon" class="me-3" />
                             <div>
                                 <p>Our Support Team</p>
@@ -1872,10 +1873,10 @@
                             </div>
                         </a>
                     </div>
-
+                    
                     <!-- Column 3 - Live Chat -->
                     <div class="col-md-4">
-                        <a href="/live-chat" class="contact-link d-flex align-items-center">
+                        <a href="{{ url('https://wa.me/+18482369397') }}" class="contact-link d-flex align-items-center">
                             <img src="{{ asset('images/lpcontactsec3.png') }}" alt="Live Support Icon" class="me-3" />
                             <div>
                                 <p>Live Support</p>

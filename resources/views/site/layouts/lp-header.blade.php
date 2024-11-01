@@ -39,6 +39,9 @@
             padding: 5px 0;
             font-size: 12px;
         }
+        a.toll_icon.text-white.d-flex.align-items-center {
+        font-size: 1.0rem;
+    }
     }
 </style>
 
@@ -51,14 +54,14 @@
             <div class="top-right col-md-5">
                 <ul class="list-unstyled text-center" style="margin-top: 8px;">
                     <li class="d-inline-block mr-4">
-                        <a class="toll_icon text-white d-flex align-items-center" href="tel:+02045112054">
+                        <a class="toll_icon text-white d-flex align-items-center" href="tel:+15515543283">
                             <i class="fas fa-phone mr-2"></i>
-                            0204-511-2054
+                            +1 (551) 666-5255
                         </a>
                     </li>
                     <li class="d-inline-block">
                         <a class="chat_icon chat text-white d-flex align-items-center"
-                            href="https://wa.me/+447380100492">
+                        href="{{ url('https://wa.me/+18482369397') }}">
                             <i class="fas fa-comment mr-2"></i>
                             Live Chat with Expert
                         </a>

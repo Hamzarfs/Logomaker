@@ -948,11 +948,11 @@ section.ebook-contact-form.container
 @media only screen and (max-width: 768px) {
 
     a.toll_icon.text-white.d-flex.align-items-center {
-    font-size: 1.3rem;
+    font-size: 1.0rem;
 }
 
 a.chat_icon.chat.text-white.d-flex.align-items-center {
-    font-size: 1.3rem;
+    font-size: 1.0rem;
 }
     .lpbanner-heading {
     padding-top: 20px;
