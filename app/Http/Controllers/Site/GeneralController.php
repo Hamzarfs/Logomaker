@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Site;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Mail\ContactUs;
+use App\Mail\ContactUsLP;
 use App\Mail\CustomLogo;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Builder;
@@ -147,6 +148,27 @@ class GeneralController extends \App\Http\Controllers\Controller
         return back()->with([
             'success' => true,
         ]);
+    }
+
+    public function contactUsSubmitLP(Request $request)
+    {
+        $data = $request->all();
+        $users = User::role('admin')->pluck('email');
+        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com'];
+        try {
+            Mail::to($users)->send(new ContactUsLP($data));
+        } catch (\Throwable $th) {
+            Log::error($th->getMessage());
+            Log::error($th->getTraceAsString());
+            return back()->with([
+                'success' => false,
+                'message' => $th->getMessage()
+            ]);
+        }
+        return redirect('thanks');
+        // return back()->with([
+        //     'success' => true,
+        // ]);
     }
 
     public function customLogoSubmit(Request $request)
