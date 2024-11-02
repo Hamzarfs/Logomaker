@@ -1,6 +1,6 @@
     @extends('site.common')
 
-    @section('title', 'Custom Logo Design Starting from $49 - (551) 666-5255')
+    @section('title', 'Custom Logo Design Starting from $49 - +1 (551) 666-5255')
 
     @section('meta_desc',
         'Get top notch custom logo design services from US top logo designer team at RFS Logo Design.
@@ -19,7 +19,7 @@
 
           <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-        
+
         <style>
             .custom-text-section-v3 h2 {
                 font-weight: 800;
@@ -960,7 +960,7 @@
 }
 
 .swiper-slide img {
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
 }
 
@@ -987,7 +987,7 @@
 
 
 
- 
+
 
 
             @media(max-width: 376px) {
@@ -1005,7 +1005,7 @@
         font-size: 18px;
     }
 
-   
+
 
     .award-arrow-left, .award-arrow-right {
         font-size: 18px;
@@ -1776,7 +1776,7 @@
 
             <!----------------------end simple and fast --------------------->
         </div>
-{{-- 
+{{--
         <section class="awardimgslide py-5">
             <div class="container text-center">
                 <h2 class="award-heading">Award-Winning Logo Design Company</h2>
@@ -1813,7 +1813,7 @@
                         <h2>Award-Winning Web Design Company</h2>
                     </div>
                 </div>
-        
+
                 <!-- Swiper with Custom Navigation Buttons -->
                 <div class="row position-relative align-items-center">
                     <!-- Custom Previous Button -->
@@ -1822,7 +1822,7 @@
                             <i class="fas fa-arrow-left"></i>
                         </button>
                     </div> --}}
-        
+
                     <!-- Swiper for Logos -->
                     <div class="col-12">
                         <div class="swiper-container">
@@ -1846,7 +1846,7 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <!-- Custom Next Button -->
                     {{-- <div class="col-2 text-start">
                         <button class="custom-carousel-control custom-carousel-control-next">
@@ -2121,7 +2121,7 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-      
+
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -2141,7 +2141,7 @@
 
 
 
-      
+
         <!-- Custom JS for Swiper Initialization -->
 <script>
     const swiper = new Swiper('.swiper-container', {
