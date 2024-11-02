@@ -119,7 +119,7 @@
     </script>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16744151824"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16485766646"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -127,8 +127,7 @@
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
-
-        gtag('config', 'AW-16744151824');
+        gtag('config', 'AW-16485766646');
     </script>
 
     <!-- Brevo Conversations {literal} -->
@@ -174,7 +173,7 @@
 
     @yield('content')
 
-
+ 
 
     @includeWhen(!request()->is('custom-logo-design'), 'site.layouts.footer')
 

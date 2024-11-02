@@ -134,7 +134,7 @@ class GeneralController extends \App\Http\Controllers\Controller
     {
         $data = $request->all();
         $users = User::role('admin')->pluck('email');
-        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'nomanrfs@gmail.com'];
+        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com'];
         try {
             Mail::to($users)->send(new ContactUs($data));
         } catch (\Throwable $th) {
@@ -154,9 +154,10 @@ class GeneralController extends \App\Http\Controllers\Controller
     {
         $data = $request->all();
         $users = User::role('admin')->pluck('email');
-        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'nomanrfs@gmail.com'];
+        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com'];
         try {
             Mail::to($users)->send(new ContactUsLP($data));
+            $this->hubspotAPI($data);
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             Log::error($th->getTraceAsString());
@@ -166,18 +167,16 @@ class GeneralController extends \App\Http\Controllers\Controller
             ]);
         }
         return redirect('thanks');
-        // return back()->with([
-        //     'success' => true,
-        // ]);
     }
 
     public function customLogoSubmit(Request $request)
     {
         $data = $request->all();
         $users = User::role('admin')->pluck('email');
-        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'nomanrfs@gmail.com'];
+        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com'];
         try {
             Mail::to($users)->send(new CustomLogo($data));
+            $this->hubspotAPI($data);
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             Log::error($th->getTraceAsString());
@@ -187,9 +186,75 @@ class GeneralController extends \App\Http\Controllers\Controller
             ]);
         }
         return redirect('thanks');
-        // return back()->with([
-        //     'success' => true,
-        // ]);
+    }
+
+    private function hubspotAPI(array $data)
+    {
+        $hubspot_url = 'https://api.hsforms.com/submissions/v3/integration/submit/47721008/cabd4e2f-166b-47a5-b896-c59224703cdc';
+
+        $postData = [
+            'fields' => [
+                [
+                    'name' => 'email',
+                    'value' => $data['email']
+                ],
+                [
+                    'name' => 'firstname',
+                    'value' => $data['name']
+                ],
+                [
+                    'name' => 'phone',
+                    'value' => $data['phone'] // Corrected to phone
+                ],
+                [
+                    'name' => 'message',
+                    'value' => $data['message']
+                ],
+            ],
+            'context' => [
+                // Only include hutk if it exists
+                'hutk' => isset($_COOKIE['hubspotutk']) && !empty($_COOKIE['hubspotutk']) ? $_COOKIE['hubspotutk'] : null,
+                'pageUri' => 'https://rfslogodesign.com', // Current page URL
+                'pageName' => $data['title'] ?? 'RFS Inquiry'
+            ]
+        ];
+
+        if (isset($data['title'])) {
+            $postData['fields'][] = [
+                'name' => 'package_name',
+                'value' => $data['title']
+            ];
+        }
+
+        // Remove null values from the context
+        if (empty($postData['context']['hutk'])) {
+            unset($postData['context']['hutk']); // Remove hutk if it is empty or missing
+        }
+        // Send data to HubSpot
+        $ch = curl_init($hubspot_url);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'Content-Type: application/json'
+        ));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // Execute the request
+        $response = curl_exec($ch);
+        // Check for errors
+        if (curl_errno($ch)) {
+            Log::error('HubSpot API request error: ' . curl_error($ch));
+            // echo 'HubSpot API request error: ' . curl_error($ch);
+        } else {
+            $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            if ($status_code == 200) {
+                //echo "Data successfully sent to HubSpot";
+            } else {
+                // Display the response to debug the error
+                //echo "Failed to send data to HubSpot. Status code: $status_code. Response: " . $response;
+            }
+        }
+        // Close the connection
+        curl_close($ch);
     }
 
     // general pages
@@ -199,23 +264,28 @@ class GeneralController extends \App\Http\Controllers\Controller
         return view('site.site-map', compact('categories'));
     }
 
-    public function websiteDesignDevelopment() {
+    public function websiteDesignDevelopment()
+    {
         return view('site.website-design-development');
     }
 
-    public function customWebsiteDesignDevelopment() {
+    public function customWebsiteDesignDevelopment()
+    {
         return view('site.custom-website-design-development');
     }
 
-    public function wordpressWebsiteDevelopment() {
+    public function wordpressWebsiteDevelopment()
+    {
         return view('site.wordpress-website-development');
     }
 
-    public function shopifyWebsiteDevelopment() {
+    public function shopifyWebsiteDevelopment()
+    {
         return view('site.shopify-website-development');
     }
 
-    public function eCommerceWebsiteDevelopment() {
+    public function eCommerceWebsiteDevelopment()
+    {
         return view('site.e-commerce-website-development');
     }
 }
