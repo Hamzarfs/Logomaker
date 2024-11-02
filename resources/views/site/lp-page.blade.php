@@ -1024,10 +1024,18 @@
                     text-align-last: center;
                 }
             }
-
+    /* For screen 576px to 767px */
+    @media (max-width: 767.98px) {
+                .custom-logo-page-form {
+                    width: 100%;
+                }
+            }
 
 
             @media only screen and (max-width: 768px) {
+                .top-right.col-md-5 {
+    width: 100%;
+}
 
                 .custom-text-section-v3 h2 {
                     font-weight: 800;
@@ -1118,8 +1126,36 @@
 
             }
 
+           
+
 
             @media (max-width: 1198px) and (min-width: 992px) {
+                .custom-logo-page-form {
+    border-radius: 20px !important;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    color: black;
+}
+
+.lpbanner-heading {
+    padding-top: 20px;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    /* display: flex; */
+    align-items: center;
+    margin-left: 50px;
+}
+
+.lpbanner-badges img {
+    width: 95px;
+}
+                .top-right.col-md-5 {
+    width: 100%;
+}
                 .box-heading-number {
                     font-size: 34px;
                     /* Adjusted size for screens in this range */
@@ -1130,7 +1166,43 @@
                     /* Adjusted size for screens in this range */
                 }
             }
+            @media (min-width: 768px) and (max-width: 1200px) {
+                .custom-logo-page-form {
+    border-radius: 20px !important;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    color: black;
+}
 
+.lpbanner-heading {
+    padding-top: 20px;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    /* display: flex; */
+    align-items: center;
+    margin-left: 50px;
+}
+
+.lpbanner-badges img {
+    width: 95px;
+}
+                .top-right.col-md-5 {
+    width: 100%;
+}
+                .box-heading-number {
+                    font-size: 34px;
+                    /* Adjusted size for screens in this range */
+                }
+
+                .box-heading {
+                    font-size: 22px;
+                    /* Adjusted size for screens in this range */
+                }
+            }
             @media (max-width: 1000px) {
 
                 .ebook-contact-form h2 {
@@ -1140,12 +1212,7 @@
                 }
             }
 
-            /* For screen 576px to 767px */
-            @media (max-width: 767.98px) {
-                .custom-logo-page-form {
-                    width: 100%;
-                }
-            }
+        
 
 
             /* end languagelogos */
