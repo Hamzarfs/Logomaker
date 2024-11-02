@@ -1810,7 +1810,7 @@
                 <!-- Heading -->
                 <div class="row text-center mb-4">
                     <div class="col-12">
-                        <h2>Award-Winning Web Design Company</h2>
+                        <h2>Award-Winning Logo Design Company</h2>
                     </div>
                 </div>
 
