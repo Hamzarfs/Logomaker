@@ -17,8 +17,8 @@
 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 
-          <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
         <style>
             .custom-text-section-v3 h2 {
@@ -692,7 +692,7 @@
 
             .portfoliogallerylp-gallery {
                 /* gap: 3px
-                                     */
+                                         */
             }
 
             .portfoliogallerylp-image {
@@ -940,49 +940,51 @@
             /*****************  End LP Contact ************/
 
             .awardimgslide {
-    background-color: #f9f9f9;
-}
+                background-color: #f9f9f9;
+            }
 
-.award-heading {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-}
+            .award-heading {
+                font-size: 24px;
+                font-weight: bold;
+                color: #333;
+            }
 
-.swiper-container {
-    padding: 10px 0;
-}
+            .swiper-container {
+                padding: 10px 0;
+            }
 
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+            .swiper-slide {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
 
-.swiper-slide img {
-    max-width: 100%;
-    height: auto;
-}
+            .swiper-slide img {
+                max-width: 100%;
+                height: auto;
+            }
 
-.award-arrow-left, .award-arrow-right {
-    font-size: 24px;
-    color: #333;
-    cursor: pointer;
-}
+            .award-arrow-left,
+            .award-arrow-right {
+                font-size: 24px;
+                color: #333;
+                cursor: pointer;
+            }
 
-@media (max-width: 576px) {
-    .award-heading {
-        font-size: 18px;
-    }
+            @media (max-width: 576px) {
+                .award-heading {
+                    font-size: 18px;
+                }
 
-    .swiper-slide img {
-        max-width: 100px;
-    }
+                .swiper-slide img {
+                    max-width: 100px;
+                }
 
-    .award-arrow-left, .award-arrow-right {
-        font-size: 18px;
-    }
-}
+                .award-arrow-left,
+                .award-arrow-right {
+                    font-size: 18px;
+                }
+            }
 
 
 
@@ -1000,25 +1002,28 @@
                 }
 
             }
+
             @media (max-width: 576px) {
-    .award-heading {
-        font-size: 18px;
-    }
+                .award-heading {
+                    font-size: 18px;
+                }
 
 
 
-    .award-arrow-left, .award-arrow-right {
-        font-size: 18px;
-    }
-}
+                .award-arrow-left,
+                .award-arrow-right {
+                    font-size: 18px;
+                }
+            }
 
             @media (max-width: 658px) {
                 .lp-footer-sec .footer-link {
-                font-size: 12px;
-                color: white;
-                text-decoration: none;
-                transition: color 0.3s ease;
-            }
+                    font-size: 12px;
+                    color: white;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                }
+
                 section.ebook-contact-form.container {
                     padding: 30px;
                     text-align-last: center;
@@ -1702,9 +1707,10 @@
                             Connect with us, and our experts will turn your ideas of business logo designs into reality!
                         </p>
                         <div class="cta-buttons">
-                            <a href="tel:+15516665255">  <button
-                                    class="btn btn-primary leave-message-btn">Schedule a Call</button></a>
-                            <a href="{{ url('https://wa.me/+18482369397') }}"> <button class="btn btn-outline-light live-chat-btn">Chat with
+                            <a href="tel:+15516665255"> <button class="btn btn-primary leave-message-btn">Schedule a
+                                    Call</button></a>
+                            <a href="{{ url('https://wa.me/+18482369397') }}"> <button
+                                    class="btn btn-outline-light live-chat-btn">Chat with
                                     Expert</button></a>
                         </div>
                     </div>
@@ -1776,34 +1782,6 @@
 
             <!----------------------end simple and fast --------------------->
         </div>
-{{--
-        <section class="awardimgslide py-5">
-            <div class="container text-center">
-                <h2 class="award-heading">Award-Winning Logo Design Company</h2>
-                <div class="row justify-content-center mt-4">
-                    <div class="col-1 d-flex align-items-center justify-content-center">
-                        <i class="fas fa-arrow-left award-arrow-left"></i>
-                    </div>
-                    <div class="col-10">
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                <!-- Slide Items (add more as needed) -->
-                                <div class="swiper-slide"><img src={{ asset('images/award1.png') }} class="img-fluid" alt="Award 1"></div>
-                                <div class="swiper-slide"><img src={{ asset('images/award2.png') }} class="img-fluid" alt="Award 2"></div>
-                                <div class="swiper-slide"><img src={{ asset('images/award3.png') }} class="img-fluid" alt="Award 3"></div>
-                                <div class="swiper-slide"><img src={{ asset('images/award4.png') }} class="img-fluid" alt="Award 4"></div>
-                                <div class="swiper-slide"><img src={{ asset('images/award5.png') }} class="img-fluid" alt="Award 5"></div>
-                                <div class="swiper-slide"><img src={{ asset('images/award6.png') }} class="img-fluid" alt="Award 5"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-1 d-flex align-items-center justify-content-center">
-                        <i class="fas fa-arrow-right award-arrow-right"></i>
-                    </div>
-                </div>
-            </div>
-        </section> --}}
-
 
         <section class="lp-logo-slider py-5">
             <div class="container position-relative">
@@ -1816,20 +1794,16 @@
 
                 <!-- Swiper with Custom Navigation Buttons -->
                 <div class="row position-relative align-items-center">
-                    <!-- Custom Previous Button -->
-                    {{-- <div class="col-2 text-end">
-                        <button class="custom-carousel-control custom-carousel-control-prev">
-                            <i class="fas fa-arrow-left"></i>
-                        </button>
-                    </div> --}}
-
                     <!-- Swiper for Logos -->
                     <div class="col-12">
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
                                 <!-- Slide Items (Repeat for each logo) -->
                                 <div class="swiper-slide">
-                                    <img src="images/award1.png" alt="Award 1" class="logo-image img-fluid">
+                                    <a target="_blank"
+                                        href="https://www.designrush.com/agency/website-design-development/new-jersey">
+                                        <img src="images/award1.png" alt="Award 1" class="logo-image img-fluid">
+                                    </a>
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="images/award2.png" alt="Award 2" class="logo-image img-fluid">
@@ -2117,15 +2091,15 @@
         </div>
 
 
-                  <!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <!-- Bootstrap JS Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
         <script>
             // Ensure carousel can be scrolled via mouse or touch gestures without a scrollbar
@@ -2143,28 +2117,38 @@
 
 
         <!-- Custom JS for Swiper Initialization -->
-<script>
-    const swiper = new Swiper('.swiper-container', {
-        slidesPerView: 5,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        navigation: {
-            nextEl: '.custom-carousel-control-next',
-            prevEl: '.custom-carousel-control-prev',
-        },
-        breakpoints: {
-            320: { slidesPerView: 1 },
-            576: { slidesPerView: 2 },
-            768: { slidesPerView: 3 },
-            992: { slidesPerView: 4 },
-            1200: { slidesPerView: 5 },
-        }
-    });
-</script>
+        <script>
+            const swiper = new Swiper('.swiper-container', {
+                slidesPerView: 5,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: '.custom-carousel-control-next',
+                    prevEl: '.custom-carousel-control-prev',
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1
+                    },
+                    576: {
+                        slidesPerView: 2
+                    },
+                    768: {
+                        slidesPerView: 3
+                    },
+                    992: {
+                        slidesPerView: 4
+                    },
+                    1200: {
+                        slidesPerView: 5
+                    },
+                }
+            });
+        </script>
 
 
 
