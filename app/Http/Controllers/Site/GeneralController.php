@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Mail\ContactUs;
 use App\Mail\ContactUsLP;
+use App\Mail\CustomerMail;
 use App\Mail\CustomLogo;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Builder;
@@ -134,9 +135,10 @@ class GeneralController extends \App\Http\Controllers\Controller
     {
         $data = $request->all();
         $users = User::role('admin')->pluck('email');
-        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com'];
+        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com', 'info@rfslogodesign.com'];
         try {
             Mail::to($users)->send(new ContactUs($data));
+            Mail::to($data['email'])->send(new CustomerMail($data));
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             Log::error($th->getTraceAsString());
@@ -154,9 +156,10 @@ class GeneralController extends \App\Http\Controllers\Controller
     {
         $data = $request->all();
         $users = User::role('admin')->pluck('email');
-        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com'];
+        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com', 'info@rfslogodesign.com'];
         try {
             Mail::to($users)->send(new ContactUsLP($data));
+            Mail::to($data['email'])->send(new CustomerMail($data));
             $this->hubspotAPI($data);
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
@@ -173,9 +176,10 @@ class GeneralController extends \App\Http\Controllers\Controller
     {
         $data = $request->all();
         $users = User::role('admin')->pluck('email');
-        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com'];
+        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com', 'info@rfslogodesign.com'];
         try {
             Mail::to($users)->send(new CustomLogo($data));
+            Mail::to($data['email'])->send(new CustomerMail($data));
             $this->hubspotAPI($data);
         } catch (\Throwable $th) {
             Log::error($th->getMessage());

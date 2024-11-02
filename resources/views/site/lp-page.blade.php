@@ -1433,7 +1433,7 @@
                                 <li>Logo Watermark</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
-                                data-title="Starter Package - $179">Start Project</button>
+                                data-title="Starter Branding Package - $179">Start Project</button>
                         </div>
                     </div>
 
@@ -1465,7 +1465,7 @@
                                 <li>Cap/Hat Design</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
-                                data-title="Premium Package - $249">Start Project</button>
+                                data-title="Premium Branding Package - $249">Start Project</button>
                         </div>
                     </div>
 
@@ -1501,7 +1501,7 @@
                                 <li>Flyer Design</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
-                                data-title="Professional Package">Start Project</button>
+                                data-title="Professional Branding Package">Start Project</button>
                         </div>
                     </div>
                 </div>
@@ -1542,7 +1542,7 @@
                                 <li>100% Money Back Guarantee</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
-                                data-title="Basic Package - $199">Start Project</button>
+                                data-title="Basic Website Package - $199">Start Project</button>
                         </div>
                     </div>
 
@@ -1575,7 +1575,7 @@
                                 <li>100% Money Back Guarantee</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
-                                data-title="Elite Package - $599">Start Project</button>
+                                data-title="Elite Website Package - $599">Start Project</button>
                         </div>
                     </div>
 
@@ -1610,7 +1610,7 @@
                                 <li>100% Money Back Guarantee</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
-                                data-title="Ecommerce Package">Start Project</button>
+                                data-title="Ecommerce Website Package">Start Project</button>
                         </div>
                     </div>
                 </div>
