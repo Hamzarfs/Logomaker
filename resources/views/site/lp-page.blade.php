@@ -690,7 +690,7 @@
 
             .portfoliogallerylp-gallery {
                 /* gap: 3px
-                                 */
+                                     */
             }
 
             .portfoliogallerylp-image {
@@ -1347,8 +1347,8 @@
                             <h3>Starter Branding Package</h3>
                             <p>Best Value for Money Guaranteed!</p>
                             <div class="price-section">
-                                <span class="price">$149</span>
-                                <span class="original-price">$199</span>
+                                <span class="price">$179</span>
+                                <span class="original-price">$249</span>
                             </div>
                             <p>Only</p>
                             <div class="separator"></div>
@@ -1366,7 +1366,7 @@
                                 <li>Logo Watermark</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
-                                data-title="Starter Package - $149">Start Project</button>
+                                data-title="Starter Package - $179">Start Project</button>
                         </div>
                     </div>
 
@@ -1376,8 +1376,8 @@
                             <h3>Premium Branding Package</h3>
                             <p>Best Value for Money Guaranteed!</p>
                             <div class="price-section">
-                                <span class="price">$199</span>
-                                <span class="original-price">$249</span>
+                                <span class="price">$249</span>
+                                <span class="original-price">$299</span>
                             </div>
                             <p>Only</p>
                             <div class="separator"></div>
@@ -1398,7 +1398,7 @@
                                 <li>Cap/Hat Design</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
-                                data-title="Premium Package - $199">Start Project</button>
+                                data-title="Premium Package - $249">Start Project</button>
                         </div>
                     </div>
 
@@ -1485,7 +1485,7 @@
                             <h3>Elite Website Package</h3>
                             <p>Best Value for Money Guaranteed!</p>
                             <div class="price-section">
-                                <span class="price">$500</span>
+                                <span class="price">$599</span>
                                 <span class="original-price">$999</span>
                             </div>
                             <p>Only</p>
@@ -1508,7 +1508,7 @@
                                 <li>100% Money Back Guarantee</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
-                                data-title="Elite Package - $500">Start Project</button>
+                                data-title="Elite Package - $599">Start Project</button>
                         </div>
                     </div>
 
@@ -1518,10 +1518,10 @@
                             <h3>Ecommerce Website Package</h3>
                             <p>Best Value for Money Guaranteed!</p>
                             <div class="price-section">
-                                <span class="price">$1199</span>
-                                <span class="original-price">$2100</span>
+                                <span class="price">Let's Talk</span>
+                                {{-- <span class="price">$249</span>
+                                <span class="original-price">$299</span> --}}
                             </div>
-                            <p>Only</p>
                             <div class="separator"></div>
                             <ul class="feature-list">
                                 <li>Up to 30 Web Pages Design and HTML</li>
@@ -1543,7 +1543,7 @@
                                 <li>100% Money Back Guarantee</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
-                                data-title="Ecommerce Package - $1199">Start Project</button>
+                                data-title="Ecommerce Package">Start Project</button>
                         </div>
                     </div>
                 </div>
@@ -1985,8 +1985,8 @@
                                 @enderror
                             </div>
                             <div class="mb-3">
-                                <label for="comment" class="form-label"><b>Comment</b></label>
-                                <textarea name="comment" id="comment" rows="5" class="form-control" placeholder="Comments" required></textarea>
+                                <label for="message" class="form-label"><b>Message</b></label>
+                                <textarea name="message" id="message" rows="5" class="form-control" placeholder="Your message..." required></textarea>
                             </div>
                             <div class="text-center d-grid">
                                 <button type="submit" class="btn btn-lg btn-primary">Submit</button>
