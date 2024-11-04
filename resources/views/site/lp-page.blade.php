@@ -359,7 +359,7 @@
 
             .languagelogos-slide img {
                 height: 100%;
-                
+
                 border-radius: 15px;
             }
 
@@ -951,6 +951,7 @@
 
             .swiper-container {
                 padding: 10px 0;
+                overflow-x: hidden;
             }
 
             .swiper-slide {
@@ -1891,7 +1892,7 @@
 
 
         <section class="lp-logo-slider py-5">
-            <div class="container position-relative">
+            <div class="container">
                 <!-- Heading -->
                 <div class="row text-center mb-4">
                     <div class="col-12">
@@ -1900,7 +1901,7 @@
                 </div>
 
                 <!-- Swiper with Custom Navigation Buttons -->
-                <div class="row position-relative align-items-center">
+                <div class="row align-items-center">
                     <!-- Custom Previous Button -->
                     {{-- <div class="col-2 text-end">
                         <button class="custom-carousel-control custom-carousel-control-prev">
@@ -2232,7 +2233,7 @@
         <script>
             const swiper = new Swiper('.swiper-container', {
                 slidesPerView: 5,
-                spaceBetween: 30,
+                // spaceBetween: 30,
                 loop: true,
                 autoplay: {
                     delay: 3000,
