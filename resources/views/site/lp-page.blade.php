@@ -359,7 +359,7 @@
 
             .languagelogos-slide img {
                 height: 100%;
-                margin: 0 40px;
+                
                 border-radius: 15px;
             }
 
@@ -692,7 +692,7 @@
 
             .portfoliogallerylp-gallery {
                 /* gap: 3px
-                                         */
+                                                 */
             }
 
             .portfoliogallerylp-image {
@@ -976,9 +976,9 @@
                     font-size: 18px;
                 }
 
-                .swiper-slide img {
+                /* .swiper-slide img {
                     max-width: 100px;
-                }
+                } */
 
                 .award-arrow-left,
                 .award-arrow-right {
@@ -1029,8 +1029,9 @@
                     text-align-last: center;
                 }
             }
-    /* For screen 576px to 767px */
-    @media (max-width: 767.98px) {
+
+            /* For screen 576px to 767px */
+            @media (max-width: 767.98px) {
                 .custom-logo-page-form {
                     width: 100%;
                 }
@@ -1039,8 +1040,8 @@
 
             @media only screen and (max-width: 768px) {
                 .top-right.col-md-5 {
-    width: 100%;
-}
+                    width: 100%;
+                }
 
                 .custom-text-section-v3 h2 {
                     font-weight: 800;
@@ -1080,7 +1081,8 @@
                 .text-white {
                     --bs-text-opacity: 1;
                     color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
-                    font-size: 2rem;
+                    font-size: 1.2rem;
+                    font-family: 'Poppins';
                     text-align: center;
                 }
 
@@ -1131,36 +1133,38 @@
 
             }
 
-           
+
 
 
             @media (max-width: 1198px) and (min-width: 992px) {
                 .custom-logo-page-form {
-    border-radius: 20px !important;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 90%;
-    color: black;
-}
+                    border-radius: 20px !important;
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 90%;
+                    color: black;
+                }
 
-.lpbanner-heading {
-    padding-top: 20px;
-    font-size: 2rem;
-    color: #fff;
-    font-weight: bold;
-    /* display: flex; */
-    align-items: center;
-    margin-left: 50px;
-}
+                .lpbanner-heading {
+                    padding-top: 20px;
+                    font-size: 2rem;
+                    color: #fff;
+                    font-weight: bold;
+                    /* display: flex; */
+                    align-items: center;
+                    margin-left: 50px;
+                }
 
-.lpbanner-badges img {
-    width: 95px;
-}
+                .lpbanner-badges img {
+                    width: 95px;
+                }
+
                 .top-right.col-md-5 {
-    width: 100%;
-}
+                    width: 100%;
+                }
+
                 .box-heading-number {
                     font-size: 34px;
                     /* Adjusted size for screens in this range */
@@ -1171,33 +1175,36 @@
                     /* Adjusted size for screens in this range */
                 }
             }
+
             @media (min-width: 768px) and (max-width: 1200px) {
                 .custom-logo-page-form {
-    border-radius: 20px !important;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 90%;
-    color: black;
-}
+                    border-radius: 20px !important;
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 90%;
+                    color: black;
+                }
 
-.lpbanner-heading {
-    padding-top: 20px;
-    font-size: 2rem;
-    color: #fff;
-    font-weight: bold;
-    /* display: flex; */
-    align-items: center;
-    margin-left: 50px;
-}
+                .lpbanner-heading {
+                    padding-top: 20px;
+                    font-size: 2rem;
+                    color: #fff;
+                    font-weight: bold;
+                    /* display: flex; */
+                    align-items: center;
+                    margin-left: 50px;
+                }
 
-.lpbanner-badges img {
-    width: 95px;
-}
+                .lpbanner-badges img {
+                    width: 95px;
+                }
+
                 .top-right.col-md-5 {
-    width: 100%;
-}
+                    width: 100%;
+                }
+
                 .box-heading-number {
                     font-size: 34px;
                     /* Adjusted size for screens in this range */
@@ -1208,6 +1215,7 @@
                     /* Adjusted size for screens in this range */
                 }
             }
+
             @media (max-width: 1000px) {
 
                 .ebook-contact-form h2 {
@@ -1217,7 +1225,7 @@
                 }
             }
 
-        
+
 
 
             /* end languagelogos */
@@ -1347,6 +1355,10 @@
                     <img src={{ asset('images/logoslide8.png') }} alt="Laravel Logo" />
                     <img src={{ asset('images/logoslide9.png') }} alt="Laravel Logo" />
                     <img src={{ asset('images/logoslide10.png') }} alt="Laravel Logo" />
+                    <img src={{ asset('images/logoslide11.png') }} alt="Laravel Logo" />
+                    <img src={{ asset('images/logoslide12.png') }} alt="Laravel Logo" />
+                    <img src={{ asset('images/logoslide13.png') }} alt="Laravel Logo" />
+                    <img src={{ asset('images/logoslide14.png') }} alt="Laravel Logo" />
                 </div>
             </div>
         </div>
@@ -1716,8 +1728,8 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6 cta-buttons">
-                        <h2 class="text-white">Build your brand identity with a perfect logo, premium branding material,
-                            and standout stationery design!</h2>
+                        <h4 class="text-white">Build your brand identity with a perfect logo, premium branding material,
+                            and standout stationery design!</h4>
                         <a href="{{ url('https://wa.me/+18482369397') }}" class="btn btn-primary leave-message-btn">Leave
                             a Message</a>
                     </div>
@@ -1849,6 +1861,34 @@
 
             <!----------------------end simple and fast --------------------->
         </div>
+        {{--
+        <section class="awardimgslide py-5">
+            <div class="container text-center">
+                <h2 class="award-heading">Award-Winning Logo Design Company</h2>
+                <div class="row justify-content-center mt-4">
+                    <div class="col-1 d-flex align-items-center justify-content-center">
+                        <i class="fas fa-arrow-left award-arrow-left"></i>
+                    </div>
+                    <div class="col-10">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <!-- Slide Items (add more as needed) -->
+                                <div class="swiper-slide"><img src={{ asset('images/award1.png') }} class="img-fluid" alt="Award 1"></div>
+                                <div class="swiper-slide"><img src={{ asset('images/award2.png') }} class="img-fluid" alt="Award 2"></div>
+                                <div class="swiper-slide"><img src={{ asset('images/award3.png') }} class="img-fluid" alt="Award 3"></div>
+                                <div class="swiper-slide"><img src={{ asset('images/award4.png') }} class="img-fluid" alt="Award 4"></div>
+                                <div class="swiper-slide"><img src={{ asset('images/award5.png') }} class="img-fluid" alt="Award 5"></div>
+                                <div class="swiper-slide"><img src={{ asset('images/award6.png') }} class="img-fluid" alt="Award 5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1 d-flex align-items-center justify-content-center">
+                        <i class="fas fa-arrow-right award-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </section> --}}
+
 
         <section class="lp-logo-slider py-5">
             <div class="container position-relative">
@@ -1861,17 +1901,22 @@
 
                 <!-- Swiper with Custom Navigation Buttons -->
                 <div class="row position-relative align-items-center">
+                    <!-- Custom Previous Button -->
+                    {{-- <div class="col-2 text-end">
+                        <button class="custom-carousel-control custom-carousel-control-prev">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                    </div> --}}
+
                     <!-- Swiper for Logos -->
                     <div class="col-12">
                         <div class="swiper-container">
-                            <div class="swiper-wrapper">
+                            <div class="swiper-wrapper logo-awards">
                                 <!-- Slide Items (Repeat for each logo) -->
-                                <div class="swiper-slide">
-                                    <a target="_blank"
-                                        href="https://www.designrush.com/agency/website-design-development/new-jersey">
-                                        <img src="images/award1.png" alt="Award 1" class="logo-image img-fluid">
-                                    </a>
-                                </div>
+                                <a target="_blank"
+                                    href="https://www.designrush.com/agency/website-design-development/new-jersey">
+                                    <img src="images/award1.png" alt="Award 1" class="logo-image img-fluid">
+                                </a>
                                 <div class="swiper-slide">
                                     <img src="images/award2.png" alt="Award 2" class="logo-image img-fluid">
                                 </div>
@@ -1903,7 +1948,7 @@
 
 
 
-        <section class="container py-5 contact-section">
+        <section class="container contact-section">
             <div class="text-center mb-4">
                 <h2 class="font-weight-bold">Need help choosing a professional logo design?<br> Consult with our expert!
                 </h2>
