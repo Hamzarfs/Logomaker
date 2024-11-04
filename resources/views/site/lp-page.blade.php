@@ -674,7 +674,7 @@
 
             /************************* Start Portfolio Gallery ******************/
             .portfoliogallerylp {
-                padding: 30px 0;
+                /* padding: 30px 0; */
             }
 
             .portfoliogallerylp h2 {
@@ -1742,7 +1742,7 @@
         </section>
 
         <!-- HTML Code -->
-        <section class="portfoliogallerylp container">
+        <section class="portfoliogallerylp py-5 container">
             <div class="row">
                 <!-- Heading and Separator -->
                 <div class="col-12 text-center">
