@@ -93,10 +93,6 @@ class GeneralController extends \App\Http\Controllers\Controller
     }
     public function contactUs()
     {
-        session([
-            'secret' => bcrypt('abcd1234'),
-        ]);
-
         return view('site/contact-us');
     }
     public function termscondition()
