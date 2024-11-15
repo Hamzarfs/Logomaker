@@ -71,13 +71,13 @@
 
         .first-section .mockup-wrapper .logo-wrapper-3 .logo-mockup {
             position: absolute;
-            width: 150px;
+            width: 145px;
             height: 100px;
         }
 
         .first-section .mockup-wrapper .logo-wrapper-4 .logo-mockup {
             position: absolute;
-            width: 115px;
+            width: 110px;
             height: 90px;
         }
 
@@ -938,7 +938,7 @@
         </div>
 
         <div class="d-flex justify-content-center align-items-center">
-            <img src="" alt="logo" class="logo-mockup" ondragstart="return false;" oncontextmenu="return false;">
+            <img src="" alt="logo" class="logo-mockup-main" ondragstart="return false;" oncontextmenu="return false;">
         </div>
 
         <div class="d-flex justify-content-center align-items-center mt-4">
@@ -1118,9 +1118,9 @@
 
                                         // Adjust the position based on the logo_position
                                         if ($selectedProduct->logo_position == 'left') {
-                                            $leftLogoPosition = '0'; // Align to the left edge of the canvas
+                                            $leftLogoPosition = '40'; // Align to the left edge of the canvas
                                         } elseif ($selectedProduct->logo_position == 'right') {
-                                            $leftLogoPosition = 'canvasWidth - boundingBox.width * scale'; // Align to the right edge of the canvas
+                                            $leftLogoPosition = '320'; //'canvasWidth - boundingBox.width  * scale'; // Align to the right edge of the canvas
                                         }
                                     @endphp
                                     svgGroup.set({
@@ -1134,9 +1134,7 @@
                                     });
 
                                     canvas.add(svgGroup);
-                                    @if(isset($selectedProduct->background_color) && !empty($selectedProduct->background_color))
-                                        canvas.setBackgroundColor('{{ $selectedProduct->background_color }}', canvas.renderAll.bind(canvas));
-                                    @endif
+                                   
 
                                     @php
 
@@ -1231,17 +1229,64 @@
                                          
                                     });
                                     canvas.add(sampleText1);
+                       
+                                    var sampleText2 = new fabric.Textbox('{{$selectedProduct->slogan_name}}', {
+                                        left: canvas.width / 2 - 40, // Position the text
+                                        top: canvas.height / 2 + 105, // Position the text
+                                        fontSize: 14,
+                                        width: 280,
+                                        fill:  '{{ $selectedProduct->color }}',
+                                        fontFamily: 'Arial',
+                                        textAlign: 'left',
+                                        selectable: true,
+                                        evented: true
+                                    });
 
+                      
+                        
+                                   // canvas.add(sampleText2);
+                                    
                                     canvas.renderAll();
-
+                                    
+                                    @if(isset($selectedProduct->background_color) && !empty($selectedProduct->background_color))
+                                        canvas.setBackgroundColor('{{ $selectedProduct->background_color }}', canvas.renderAll.bind(canvas));
+                                    @endif
+                                    
                                     // Generate data URL and save to session storage
                                     const dataUrl = canvas.toDataURL();
                                     sessionStorage.setItem('logoDataUrl', dataUrl);
 
-                                    $('.logo-mockup').each(function() {
+                                    $('.logo-mockup-main').each(function() {
                                         this.src = dataUrl;
                                     });
 
+                                    @if(isset($selectedProduct->background_color) && !empty($selectedProduct->background_color))
+                                        // Set background color only for canvas to use with logo-mockup-main
+                                        canvas.setBackgroundColor('{{ $selectedProduct->background_color }}', canvas.renderAll.bind(canvas));
+
+                                        // Generate data URL with the background color and save it to session storage
+                                        const dataUrlWithBg = canvas.toDataURL();
+                                        sessionStorage.setItem('logoDataUrlWithBg', dataUrlWithBg);
+
+                                        // Set the source for all elements with the class 'logo-mockup-main'
+                                        $('.logo-mockup-main').each(function() {
+                                            this.src = dataUrlWithBg;
+                                        });
+                                    @endif
+
+                                    // Now remove the background color to create a transparent background for 'logo-mockup'
+                                    canvas.setBackgroundColor('rgba(255,255,255,0)', canvas.renderAll.bind(canvas));
+
+                                    // Generate data URL without background (transparent)
+                                    const dataUrlNoBg = canvas.toDataURL();
+                                    sessionStorage.setItem('logoDataUrlNoBg', dataUrlNoBg);
+
+                                    // Set the source for all elements with the class 'logo-mockup'
+                                    $('.logo-mockup').each(function() {
+                                        this.src = dataUrlNoBg;
+                                    });
+
+                                     
                                     // Optionally send data URL to server
                                     $.ajax({
                                             url: "{{ route('putImgStringIntoSession') }}",

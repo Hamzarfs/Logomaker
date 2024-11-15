@@ -22,6 +22,10 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Stripe\StripeClient;
 use Illuminate\Support\Facades\Session;
+use Imagick;
+use ImagickPixel;
+use DOMDocument;
+
 
 class MainController extends \App\Http\Controllers\Controller
 {
@@ -89,6 +93,23 @@ class MainController extends \App\Http\Controllers\Controller
     {
         $userId = auth()->user()?->id;
         $image = session('image');
+        
+        $orderSession = session::get('image-load');
+        $order=null;
+        if($orderSession=='order'){
+            // Split the composite ID into user_id and product_id
+            list($userId, $productId) = explode('_', $image);
+            $userId = (int) $userId;
+            $productId = (int) $productId;
+            // Retrieve the order based on user_id and product_id
+            // echo $userId."====". $productId;
+            $order = Order::where('user_id', $userId)
+                ->where('product_id', $productId)
+                ->first();
+        }
+         
+        //var_dump($order); exit;
+
         $productId = Product::where('image', $image)->value('id');
         // if ($product) {
         //     $productId = $product->id;
@@ -99,7 +120,7 @@ class MainController extends \App\Http\Controllers\Controller
             ->exists();
         $selectedProduct = Product::find(Session::get('product-id'));
         $fonts = Font::all();
-        return view('site/maker', compact('hasOrder', 'selectedProduct','fonts'));
+        return view('site/maker', compact('hasOrder', 'selectedProduct','fonts','order'));
     }
 
     public function thankYou()
@@ -272,6 +293,186 @@ class MainController extends \App\Http\Controllers\Controller
         // $this->sessionService->clearSessionData();
     }
 
+    
+ 
+    public function saveSVG(Request $request)
+{
+    // Validate the request
+    $request->validate([
+        'svg' => 'required|string'
+    ]);
+
+    // Get the SVG data
+    $svgData = $request->input('svg');
+   
+    // echo "DDDDDD".$request->input('color');; exit;
+
+
+    $userId = auth()->id();
+    $productId = session()->get('product-id');
+    
+    // Generate a unique filename without an extension
+    $fileName = $userId . '_' . $productId;
+    
+    // Define the paths where you want to save the files
+    $svgPath = public_path('svgs/' . $fileName . '.svg');
+    $pngPath = public_path('svgs/' . $fileName . '.png');
+
+    // Make sure the directory exists
+    if (!file_exists(public_path('svgs'))) {
+        mkdir(public_path('svgs'), 0777, true);
+    }
+
+    // Modify the SVG data to set width and height correctly, ensuring styles are not affected
+    $updatedSvgData = preg_replace('/<svg([^>]*?)width="[^"]*"([^>]*?)height="[^"]*"/', '<svg$1$2', $svgData);
+    $updatedSvgData = preg_replace('/<svg([^>]*?)>/', '<svg$1 width="855" height="590">', $updatedSvgData);
+
+    // Save the SVG data to the file
+    file_put_contents($svgPath, $updatedSvgData);
+
+    // Convert SVG to PNG using Imagick
+    try {
+        $imagick = new Imagick();
+        $imagick->setBackgroundColor(new ImagickPixel('transparent')); // Set background to transparent
+        $imagick->readImageBlob($updatedSvgData); // Read the updated SVG data
+        $imagick->setImageFormat("png32"); // Set the image format to PNG
+        $imagick->writeImage($pngPath); // Save the PNG file
+        $imagick->clear();
+        $imagick->destroy();
+    } catch (Exception $e) {
+        return response()->json(['success' => false, 'message' => 'Failed to convert SVG to PNG: ' . $e->getMessage()], 500);
+    }
+
+     // Insert the order into the database with status 'draft' and include additional properties
+     $existingOrder = Order::where('user_id', $userId)
+     ->where('product_id', $productId)
+     ->first();
+
+    if (!$existingOrder) {
+        $order = new Order();
+        $order->user_id = $userId;
+        $order->product_id = $productId;
+        $order->color = $request->input('color');
+        $order->font_family = $request->input('font_family');
+        $order->font_size = $request->input('font_size');
+        $order->left = $request->input('left');
+        $order->top = $request->input('top');
+        $order->sample_text = $request->input('sample_text');
+        $order->text_width = $request->input('text_width');
+        $order->font_weight = $request->input('font_weight');
+        $order->font_style = $request->input('font_style');
+        
+        $order->outline_color = $request->input('outline_color');
+        $order->outline_width = $request->input('outline_width');
+        $order->shadow_color = $request->input('shadow_color');
+        $order->shadow_x = $request->input('shadow_x');
+        $order->shadow_y = $request->input('shadow_y');
+        $order->shadow_blur = $request->input('shadow_blur');
+        $order->pic=$svgData;
+         
+
+        $order->status = 'draft';
+        $order->save();
+    } else {
+
+        $existingOrder->color = $request->input('color');
+        $existingOrder->font_family = $request->input('font_family');
+        $existingOrder->font_size = $request->input('font_size');
+        $existingOrder->left = $request->input('left');
+        $existingOrder->top = $request->input('top');
+        $existingOrder->sample_text = $request->input('sample_text');
+        $existingOrder->text_width = $request->input('text_width');
+        $existingOrder->font_weight = $request->input('font_weight');
+        $existingOrder->font_style = $request->input('font_style');
+      
+        $existingOrder->outline_color = $request->input('outline_color');
+        $existingOrder->outline_width = $request->input('outline_width');
+        $existingOrder->shadow_color = $request->input('shadow_color');
+        $existingOrder->shadow_x = $request->input('shadow_x');
+        $existingOrder->shadow_y = $request->input('shadow_y');
+        $existingOrder->shadow_blur = $request->input('shadow_blur');
+        $existingOrder->pic=$svgData;
+         $existingOrder->status = 'draft';
+         $existingOrder->save();
+         
+    }
+
+    return response()->json(['success' => true, 'message' => 'SVG and PNG saved successfully']);
+}
+
+    
+     
+
+
+    public function bkkkksaveSVG(Request $request)    {
+    // Validate the request
+    $request->validate([
+        'svg' => 'required|string'
+    ]);
+
+    // Get the SVG data
+    $svgData = $request->input('svg');
+    $userId = auth()->id();
+    $productId = session()->get('product-id');
+    
+    // Generate a unique filename without an extension
+    $fileName = $userId . '_' . $productId;
+    
+    // Define the paths where you want to save the files
+    $svgPath = public_path('svgs/' . $fileName . '.svg');
+    $pngPath = public_path('svgs/' . $fileName . '.png');
+
+    // Make sure the directory exists
+    if (!file_exists(public_path('svgs'))) {
+        mkdir(public_path('svgs'), 0777, true);
+    }
+
+    // Use DOMDocument to manipulate the SVG data and set the width and height
+    $dom = new DOMDocument();
+    $dom->loadXML($svgData);
+
+    // Set the width and height attributes
+    $svgElement = $dom->documentElement;
+    $svgElement->setAttribute('width', '350');
+    $svgElement->setAttribute('height', '230');
+
+    // Save the updated SVG data back to a string
+    $updatedSvgData = $dom->saveXML();
+
+    // Save the updated SVG data to the file
+    file_put_contents($svgPath, $updatedSvgData);
+
+    // Convert SVG to PNG using Imagick
+    try {
+        $imagick = new Imagick();
+        $imagick->setBackgroundColor(new ImagickPixel('transparent')); // Set background to transparent
+        $imagick->readImageBlob($updatedSvgData); // Read the updated SVG data
+        $imagick->setImageFormat("png32"); // Set the image format to PNG
+        $imagick->writeImage($pngPath); // Save the PNG file
+        $imagick->clear();
+        $imagick->destroy();
+    } catch (Exception $e) {
+        return response()->json(['success' => false, 'message' => 'Failed to convert SVG to PNG: ' . $e->getMessage()], 500);
+    }
+
+    // Insert the order into the database with status 'draft'
+    $existingOrder = Order::where('user_id', $userId)
+                  ->where('product_id', $productId)
+                  ->first();
+
+    if (!$existingOrder) {
+        $order = new Order();
+        $order->user_id = $userId;
+        $order->product_id = $productId;
+        $order->status = 'draft';
+        $order->save();
+    }
+
+    return response()->json(['success' => true, 'message' => 'SVG and PNG saved successfully']);
+    }
+
+
+
     function putImgStringIntoSession(Request $request)
     {
         session()->put('imgDataURL', $request->dataURL);
@@ -354,7 +555,17 @@ class MainController extends \App\Http\Controllers\Controller
 
     public function orders()
     {
-        $userWithOrders = transformArrayToObject(auth()->user()->load(['orders' => fn($query) => $query->with('product')->where('status', 'paid')])->toArray());
+        //$userWithOrders = transformArrayToObject(auth()->user()->load(['orders' => fn($query) => $query->with('product')->where('status', 'paid')])->toArray());
+        $userWithOrders = transformArrayToObject(
+            auth()->user()
+                ->load([
+                    'orders' => fn($query) => $query
+                        ->with('product')
+                        ->whereIn('status', ['paid', 'draft']) // Fetch orders with both 'paid' and 'draft' statuses
+                ])
+                ->toArray()
+        );
+        
         return view('site.orders', [
             'user' => $userWithOrders
         ]);

@@ -806,7 +806,7 @@
 
     <script>
         $(document).ready(function() {
-            const dataUrl = sessionStorage.getItem('logoDataUrl')
+            const dataUrl = sessionStorage.getItem('logoDataUrlNoBg')
 
             $('.logo-mockup').each(function() {
                 this.src = dataUrl

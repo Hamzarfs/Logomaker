@@ -119,8 +119,8 @@
     }
 
     .navbar-light .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
-}
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
+    }
 
 
     .navbar-light .navbar-toggler {
@@ -173,7 +173,8 @@
 </div>
 
 
-<div class="container-fluid" style="background-color: #6868D1; border-bottom: 1px solid #fff; /* White line at the bottom of the header */">
+<div class="container-fluid"
+    style="background-color: #6868D1; border-bottom: 1px solid #fff; /* White line at the bottom of the header */">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
@@ -244,7 +245,7 @@
     </nav>
 
 
-    <div class="mega-menu" style="display:none" >
+    <div class="mega-menu" style="display:none">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -252,7 +253,7 @@
                         action="{{ url('/store-session-data') }}">
                         @csrf
                         <input type="text" id="industry" class="form-control mr-sm-2" type="search"
-                            placeholder="arts, beauty, cleaning etc" aria-label="Search">
+                            placeholder="Search Category" aria-label="Search">
                         <input type="hidden" id="industryId" name="category">
                         <button class="custom-button-banner my-2 my-sm-0 " id="nextButton">Search</button>
                     </form>
@@ -266,7 +267,8 @@
                             </ul>
             </div>
             @endif
-            <div class="col-md-2">
+            {{-- <div class="col-md-2"> --}}
+            <div class="col-12 col-sm-12 col-lg-2 col-xl-2">
                 <ul class="list-unstyled">
                     @endif
                     <li>

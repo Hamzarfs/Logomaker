@@ -1,46 +1,68 @@
 @extends('site.common')
 
-@section('title', $categoryObj['meta_title'])
-
-@section('meta_desc', $categoryObj['meta_desc'])
+@section('title', 'Category ' . $categoryObj['name'] ?? '')
 
 @section('content')
 
     <style>
-        
-    .education-logo-section {
-    background-image: url('/images/catagories2.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0;
-    color: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-}
+        .category-top-section {
+            padding: 60px 0;
+            background-color: #080A2D;
+        }
 
-.education-logo-section h1 {
-    font-weight: 700;
-    font-size: 44px;
-    text-align: center;
-    
-}
-.education-logo-section h2 {
-    font-weight: 700;
-    font-size: 40px;
-    text-align: center;
-    margin-bottom: 20px;
-}
+        .category-top-section h1 {
+            margin-bottom: 20px;
+        }
 
+        .category-top-section .cta-form {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
 
-.education-logo-section p {
-    margin-bottom: 20px;
-}
+        .category-top-section .cta-form input {
+            margin-right: 10px;
+            max-width: 300px;
+        }
 
+        .images-container {
+            position: relative;
+            text-align: center;
+        }
 
+        .images-container img {
+            position: absolute;
+        }
 
+        .images-container .background-image {
+            position: relative;
+            z-index: 1;
+            max-width: 100%;
+        }
+
+        .images-container .left-image-1 {
+            top: 80px;
+            left: 0;
+            z-index: 2;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .images-container .left-image-2 {
+            top: 300px;
+            left: 80px;
+            z-index: 2;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .images-container .right-image {
+            top: 180px;
+            left: 380px;
+            z-index: 4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
 
         .category-top-textblock {
             padding: 40px 0;
@@ -80,27 +102,6 @@
             .images-container {
                 display: none;
             }
-            .education-logo-section h1 {
-    font-weight: 700;
-    font-size: 30px;
-    
-}
-.education-logo-section h2 {
-    font-weight: 700;
-    font-size: 24px;
-    text-align: center;
-}
-
-
-.education-logo-section p {
-    margin-bottom: 20px;
-    font-size: 18px;
-
-}
-
-
-
-
         }
 
         .custom-section {
@@ -257,80 +258,26 @@
                 /* Adjust height as needed */
             }
         }
-
-        #companyName2 {
-            width: 34%;
-        }
-
-        /* For screen 992px to 1199px */
-        @media (max-width: 1199.98px) {
-            #companyName2 {
-                width: 41%;
-            }
-        }
-
-        /* For screen 767px to 991px */
-        @media (max-width: 991.98px) {
-            #companyName2 {
-                width: 56%;
-            }
-        }
-
-        /* For screen 768px */
-        @media (max-width: 768.98px) {
-            #companyName2 {
-                width: 44%;
-            }
-        }
-
-        /* For screen 576px to 767px */
-        @media (max-width: 767.98px) {
-            #companyName2 {
-                width: 60%;
-            }
-        }
-
-        /* For screen 480px to 575px */
-        @media (max-width: 575.98px) {
-            #companyName2 {
-                width: 56%;
-            }
-        }
-
-        /* For screen 480px to 575px */
-        @media (max-width: 575.98px) {
-            #companyName2 {
-                width: 68%;
-            }
-        }
-
-        /* For screen 320px to 479px */
-        @media (max-width: 479.98px) {
-            #companyName2 {
-                width: 100%;
-            }
-        }
     </style>
 
     <!-- Top Section Start -->
-    
+    <section class="category-top-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 style="color:#fff; font-weight:700;">Free <span class="logo-design-color">Logo
+                            Maker</span><br>Design
+                        Your Logo in Minutes</h2>
+                    <p style="color:#fff;">Utilize our advanced logo creator tool to design a professional logo for your
+                        business or company. Try it now!</p>
+                    <!-- <h1>Create Accounting Logos & CPA Logos Instantly</h1> -->
+                    {{-- <form class="cta-form" method="post" action="{{ url('/store-session-data') }}">
+                        <input type="text" name="company_name" class="form-control" placeholder="Enter your company name"
+                            maxlength="30">
 
-
-
-
-
-
-
-
-    <section class="education-logo-section">
-    <div class="container">
-        <h1>Free {{ $categoryObj['name'] ?? '' }} Logo Maker</h1>
-        <h2>Design Your Logo in Minutes</h2>
-        <p class="text-center">Utilize our advanced {{ $categoryObj['name'] ?? '' }} logo creator tool to design a<br> professional logo for your business or company. Try it now!</p>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-           
-            <form id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
+                        <button type="submit" class="btn btn-primary">Get a Logo</button>
+                    </form> --}}
+                    <form id="companyForm" method="POST" action="{{ url('/store-session-data') }}">
                         @csrf
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" id="companyName11" name="company"
@@ -339,23 +286,25 @@
                             <input type="submit" class="custom-button-banner" value="Get Started">
                         </div>
                     </form>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="images-container">
+                        <img src="{{ asset('images/lg-logo-gallery-blank.png') }}" class="background-image">
+                        <span class="loader-item absolute-img-01">
+                            <img src="{{ asset('images/text-in-pastel-flower-shape-8918ld.png') }}" class="left-image-1">
+                        </span>
+                        <span class="loader-item absolute-img-01">
+                            <img src="{{ asset('images/letter-h-incorporated-with-rounded-square-5234ld.png') }}"
+                                class="left-image-2">
+                        </span>
+                        <span class="loader-item absolute-img-01">
+                            <img src="{{ asset('images/vintage-law-scale-3135ld.png') }}" class="right-image">
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </section>
 
     <section class="category-top-textblock">
         <div class="container">
@@ -374,152 +323,14 @@
             </p>
 
 
-
-            @php
-                $fonts = [
-                    'lazyp-eople',
-                    'Remon-Demo',
-                    'Stifly',
-                    'Brandes-Regular',
-                    'Rohgaz-Demo-VersionRegular',
-                    'Forest-Trophy-Textured',
-                    'Aesthetic-Wonder-DEMOBold',
-                    'Nerve-Brush-Regular',
-                    'Stander-DEMO',
-                    'Dasport-DEMO',
-                    'LightSport-DEMO',
-                ]; // List of fonts
-                $colors = ['#900C3F', '#36454F', '#343434', '#191970', '#581845'];
-            @endphp
-
-
             <div class="row logo-gallery">
                 @foreach ($products as $product)
-                    @php
-
-                        $fontSlug = $product->font->slug ?? null;
-                        $font = $fontSlug ? pathinfo($fontSlug, PATHINFO_FILENAME) : '';
-
-                        // echo   $font;
-
-                        $color = $product->color;
-
-                        $fontSize =
-                            isset($product->logomaker_font_size) && strlen($product->logomaker_font_size) > 1
-                                ? $product->logomaker_font_size
-                                : '38px';
-
-                        $companyName = session('company') ? session('company') : $product->category->name;
-
-                        $companyNameLength = strlen($companyName);
-                        if ($companyNameLength > 10 && $companyNameLength <= 15) {
-                            $fontSize = (int) str_replace('px', '', $fontSize) - 4 . 'px';
-                        } elseif ($companyNameLength > 15 && $companyNameLength <= 20) {
-                            $fontSize = (int) str_replace('px', '', $fontSize) - 8 . 'px';
-                        } elseif ($companyNameLength > 20 && $companyNameLength <= 25) {
-                            $fontSize = (int) str_replace('px', '', $fontSize) - 12 . 'px';
-                        } elseif ($companyNameLength > 25 && $companyNameLength <= 30) {
-                            $fontSize = (int) str_replace('px', '', $fontSize) - 16 . 'px';
-                        }
-
-                        $topPosition =
-                            isset($product->logomaker_top) && strlen($product->logomaker_top) > 1
-                                ? $product->logomaker_top
-                                : '170px';
-
-                        $leftPosition =
-                            isset($product->logomaker_left) && strlen($product->logomaker_left) > 1
-                                ? $product->logomaker_left
-                                : '-30px';
-
-                        $logoPosition = $product->logo_position ?? ''; // Use null coalescing operator to handle unset cases
-                        $logoPositionVertical = 'margin-top:10px';
-                        if (isset($logoPosition) && strlen($logoPosition) > 0) {
-                            switch ($logoPosition) {
-                                case 'left':
-                                    if ($companyNameLength <= 5) {
-                                        $leftPositionValue = (int) str_replace('px', '', $leftPosition);
-                                        $adjustedLeftPositionValue = $leftPositionValue - 80;
-                                        $leftPosition = "{$adjustedLeftPositionValue}px";
-                                    } elseif ($companyNameLength >= 6 && $companyNameLength <= 11) {
-                                        $leftPositionValue = (int) str_replace('px', '', $leftPosition);
-                                        $adjustedLeftPositionValue = $leftPositionValue - 20;
-                                        $leftPosition = "{$adjustedLeftPositionValue}px";
-                                    }
-                                    // die($companyNameLength."DDDDDDDDDDD".session('company'));
-                                    //$logoPosition="margin-left:0px";
-                                    break;
-                                case 'center':
-                                    // Do something for 'center'
-                                    $logoPositionVertical = 'margin-top:10px';
-                                    break;
-                                case 'right':
-                                    // Do something for 'right'
-                                    $logoPosition = 'margin-left:-0px';
-                                    if ($companyNameLength <= 5) {
-                                        $leftPositionValue = (int) str_replace('px', '', $leftPosition);
-                                        $adjustedLeftPositionValue = $leftPositionValue + 130;
-                                        $leftPosition = "{$adjustedLeftPositionValue}px";
-                                    } elseif ($companyNameLength >= 6 && $companyNameLength <= 9) {
-                                        $leftPositionValue = (int) str_replace('px', '', $leftPosition);
-                                        $adjustedLeftPositionValue = $leftPositionValue + 60;
-                                        $leftPosition = "{$adjustedLeftPositionValue}px";
-                                    }
-
-                                    break;
-                                case 'top':
-                                    // Do something for 'top'
-                                    $logoPositionVertical = 'margin-top:-40px';
-                                    break;
-                                case 'bottom':
-                                    $logoPositionVertical = 'margin-top:140px';
-                                    break;
-                                default:
-                                    $logoPositionVertical = 'margin-top:-10px';
-                                    // Optionally handle unexpected values
-                                    //echo "Unexpected logo position.";
-                                    break;
-                            }
-                        }
-
-                    @endphp
                     <div class="col-md-4 logo-item" data-category="{{ $product->category_id }}">
                         <div class="card-container">
-                            <!-- <img src="{{ asset("category-image/$product->image") }}" class="img-fluid portfolio-image"
-                                                                        alt="{{ $product->name }}"> -->
-
-
-                            <img src="{{ asset("category-image/$product->image") }}"
-                                style="xwidth: 35% !important; {{ $logoPosition }}; position: absolute; {{ $logoPositionVertical }}; z-index: 10;"
-                                class="img-fluid portfolio-image" alt="{{ $product->name }}" ondragstart="return false;"
-                                oncontextmenu="return false;">
-
-
-
-                            <div class="text-placeholder"
-                                style=" z-index: 20;font-family: {{ $font }}; color:{{ $color }}; font-size:{{ $fontSize }}; font-weight:500; margin-left:{{ $leftPosition }}; margin-top:{{ $topPosition }}">
-                                  @if ($product->logo_position == 'right')
-                            @php
-                                $text = session('company') ?? $product->company_name ?? $product->category['name'];
-                                $words = explode(' ', $text); // Split the string into words
-                            @endphp
-
-                            @if(count($words) > 2)
-                                {!! implode(' ', array_slice($words, 0, 2)) . ' <br>' . implode(' ', array_slice($words, 2)) !!}
-                            @else
-                                {{ $text }}
-                            @endif
-                        @else
-                            {{ session('company') ?? $product->company_name ?? $product->category['name'] }}
-                        @endif
-
-                            </div>
-
-
-
+                            <img src="{{ asset("category-image/$product->image") }}" class="img-fluid portfolio-image"
+                                alt="{{ $product->name }}">
                             <a href="{{ url('/store-session-data-image?image=' . $product->image . '&product-id=' . $product->id) }}"
-                                class="hover-button select-btn" style="z-index: 30;"
-                                data-product-id="{{ $product->id }}">Select </a>
+                                class="hover-button select-btn" data-product-id="{{ $product->id }}">Select </a>
                             @auth
                                 @php
                                     $i = array_search($product->id, array_column($favourites, 'product_id'));
@@ -588,7 +399,7 @@
 
         <div class="row custom-section">
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/select1.webp') }}" alt="Find Logo" title="Find Logo">
+                <img src="{{ asset('images/select1.png') }}" alt="Placeholder Image">
             </div>
             <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
@@ -606,15 +417,13 @@
                 </div>
             </div>
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Personalization.webp') }}" alt="personalized Logo Design"
-                    title="personalized Logo Design">
+                <img src="{{ asset('images/Personalization.png') }}" alt="Placeholder Image">
             </div>
         </div>
 
         <div class="row custom-section">
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Start Branding.webp') }}" alt="Free Logo Download Maker"
-                    title="Free Logo Download Maker">
+                <img src="{{ asset('images/Start Branding.png') }}" alt="Placeholder Image">
             </div>
             <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
@@ -628,8 +437,8 @@
             <h2>Start Making Custom {{ $categoryObj['name'] ?? '' }} Logos Now!</h2>
             <form class="form-inline" id="companyForm3" method="POST" action="{{ url('/store-session-data') }}">
                 @csrf
-                <input type="text" class="form-control custom-form-control" id="companyName2" name="company"
-                    placeholder="Search" aria-label="Enter your company name" required maxlength="30">
+                <input type="text" class="form-control custom-form-control" id="companyName2"
+                name="company" placeholder="Search" aria-label="Enter your company name" required>
                 <input type="hidden" name="flow" value="category">
                 <input type="submit" class="btn custom-btn-generate" value="Generate Logo">
             </form>
@@ -645,20 +454,18 @@
         <div class="row custom-section">
             <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
-                    <h2 style="font-weight:700;">{{ $cmsData[3]['title'] ?? '' }}</h2>
+                <h2 style="font-weight:700;">{{ $cmsData[3]['title'] ?? '' }}</h2>
                     {!! $cmsData[3]['content'] ?? '' !!}
                 </div>
             </div>
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Logo Symbol.webp') }}" alt="Icon Creator for Logo"
-                    title="Icon Creator for Logo">
+                <img src="{{ asset('images/Logo Symbol.png') }}" alt="Placeholder Image">
             </div>
         </div>
 
         <div class="row custom-section">
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Color Choices.webp') }}" alt="Color Choices for Logo"
-                    title="Color Choices for Logo">
+                <img src="{{ asset('images/Color Choices.png') }}" alt="Placeholder Image">
             </div>
             <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
@@ -676,13 +483,13 @@
                 </div>
             </div>
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Fonts.webp') }}" alt="logo Font Generator" title="logo Font Generator">
+                <img src="{{ asset('images/Fonts.png') }}" alt="Placeholder Image">
             </div>
         </div>
 
         <div class="row custom-section">
             <div class="col-md-6 custom-image-container">
-                <img src="{{ asset('images/Logo Styles.webp') }}" alt="Logotype Generator" title="Logotype Generator">
+                <img src="{{ asset('images/Logo Styles.png') }}" alt="Placeholder Image">
             </div>
             <div class="col-md-6 custom-content-container">
                 <div class="custom-content">
@@ -692,14 +499,14 @@
             </div>
         </div>
 
-        <div class="container custom-logo-section">
+        <div class="container custom-logo-section" >
 
             <h2>Start Making Custom {{ $categoryObj['name'] ?? '' }} Logos Now!</h2>
 
             <form class="form-inline" id="companyForm3" method="POST" action="{{ url('/store-session-data') }}">
                 @csrf
-                <input type="text" class="form-control custom-form-control" id="companyName2" name="company"
-                    placeholder="Search" aria-label="Enter your company name" maxlength="30" required>
+                <input type="text" class="form-control custom-form-control" id="companyName11"
+                name="company" placeholder="Search" aria-label="Enter your company name" required>
                 <input type="hidden" name="flow" value="category">
                 <input type="submit" class="btn custom-btn-generate" value="Generate Logo">
             </form>

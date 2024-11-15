@@ -5,9 +5,10 @@
 <x-admin>
 
     @section('title', 'Products')
-
+   
     @section('css')
         <style>
+              
             img.w-full.modal-img {
                 width: 100%;
                 height: auto;
@@ -87,14 +88,19 @@
                                             value="{{ old('color2', $data->color2) }}" class="form-control" >
                                     </div>
                                 </div>
+
+
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="name" class="form-label">Background Color</label>
-                                        <input type="color" name="background_color" id="background_color"
-                                             value="{{ old('background_color', $data->background_color ?? '#FFFFFF') }}"  class="form-control" required>
+                                    <label for="background_color" class="form-label">Background Color</label>
+                                        <input type="color" name="background_color" id="background_color" 
+                                            value="{{ old('background_color', $data->background_color ?? '#FFFFFF') }}" 
+                                            class="form-control" required>
+
+ 
                                     </div>
                                 </div>
-                               
+
 
                                 <div class="col-lg-4">
                                     <div class="form-group">
@@ -124,21 +130,21 @@
                                     </div>
                                 </div>
 
-                             
+
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_left" class="form-label">Company Name</label>
-                                        <input type="text" name="company_name" id="lm_left"  value="{{ old('company_name', $data->company_name) }}"  
+                                        <input type="text" name="company_name" id="lm_left"  value="{{ old('company_name', $data->company_name) }}"
                                             class="form-control" >
                                         <x-error>company_name</x-error>
                                     </div>
                                 </div>
-                                
-                               
-                                
 
-                                
-                            
+
+
+
+
+
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="lm_left" class="form-label">slogon Name</label>
@@ -147,8 +153,8 @@
                                         <x-error>slogan_name</x-error>
                                     </div>
                                 </div>
-                                 
- 
+
+
                             </div>
 
 
@@ -181,39 +187,39 @@
 
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="lm_left" class="form-label">Logo Left Position</label>
-                                        <input type="text" name="logomaker[logo_left]" id="lm_left" 
-                                         value="{{ old('logomaker.logo_left', $data->logomaker_logo_left) }}"
+                                        <label for="lm_left" class="form-label">Slogan Left Position</label>
+                                        <input type="text" name="logomaker[slogan_left]" id="lm_left"
+                                         value="{{ old('logomaker.slogan_left', $data->logomaker_slogan_left) }}"
                                             class="form-control" >
-                                        <x-error>logomaker[logo_left]</x-error>
+                                        <x-error>logomaker[slogan_left]</x-error>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="lm_top" class="form-label">Logo Top Position</label>
-                                        <input type="text" name="logomaker[logo_top]" id="lm_top" 
-                                         value="{{ old('logomaker.logo_top', $data->logomaker_logo_top) }}"
+                                        <label for="lm_top" class="form-label">Slogan Top Position</label>
+                                        <input type="text" name="logomaker[slogan_top]" id="lm_top"
+                                         value="{{ old('logomaker.slogan_top', $data->logomaker_slogan_top) }}"
                                             class="form-control" >
-                                        <x-error>logomaker[logo_top]</x-error>
+                                        <x-error>logomaker[slogan_top]</x-error>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="lm_logo_size" class="form-label">Logo size</label>
-                                        <input type="text" name="logomaker[logo_size]" id="lm_logo_size"
-                                        
-                                            value="{{ old('logomaker.logo_size', $data->logomaker_logo_size) }}"
+                                        <label for="lm_logo_size" class="form-label">Slogan size</label>
+                                        <input type="text" name="logomaker[slogan_size]" id="lm_logo_size"
+
+                                            value="{{ old('logomaker.slogan_size', $data->logomaker_slogan_size) }}"
                                             class="form-control" >
-                                        <x-error>logomaker[logo_size]</x-error>
+                                        <x-error>logomaker[slogan_size]</x-error>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="lm_top" class="form-label">Spacing</label>
-                                        <input type="text" name="logomaker[spacing]" id="lm_top" value="{{ old('logomaker.spacing', $data->logomaker_spacing) }}"
+                                        <label for="lm_top" class="form-label">Slogan Spacing</label>
+                                        <input type="text" name="logomaker[slogan_spacing]" id="lm_top" value="{{ old('logomaker.slogan_spacing', $data->logomaker_slogan_spacing) }}"
                                             class="form-control" >
-                                        <x-error>logomaker[spacing]</x-error>
+                                        <x-error>logomaker[slogan_spacing]</x-error>
                                     </div>
                                 </div>
 
@@ -248,40 +254,40 @@
 
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="lm_left" class="form-label">Logo Left Position</label>
-                                        <input type="text" name="preview[logo_left]" id="lm_left" 
-                                         value="{{ old('preview.logo_left', $data->preview_logo_left) }}"
+                                        <label for="lm_left" class="form-label">Slogan Left Position</label>
+                                        <input type="text" name="preview[slogan_left]" id="lm_left"
+                                         value="{{ old('preview.slogan_left', $data->preview_slogan_left) }}"
                                             class="form-control" >
-                                        <x-error>preview[logo_left]</x-error>
+                                        <x-error>preview[slogan_left]</x-error>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="lm_top" class="form-label">Logo Top Position</label>
-                                        <input type="text" name="preview[logo_top]" id="lm_top"
-                                         
-                                          value="{{ old('preview.logo_top', $data->preview_logo_top) }}"
+                                        <label for="lm_top" class="form-label">Slogan Top Position</label>
+                                        <input type="text" name="preview[slogan_top]" id="lm_top"
+
+                                          value="{{ old('preview.slogan_top', $data->preview_slogan_top) }}"
                                             class="form-control" >
-                                        <x-error>preview[logo_top]</x-error>
+                                        <x-error>preview[slogan_top]</x-error>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="lm_logo_size" class="form-label">Logo size</label>
-                                        <input type="text" name="preview[logo_size]" id="lm_logo_size"
-                                        
-                                            value="{{ old('preview.logo_size', $data->preview_logo_size) }}"
+                                        <label for="lm_slogan_size" class="form-label">Logo size</label>
+                                        <input type="text" name="preview[slogan_size]" id="lm_logo_size"
+
+                                            value="{{ old('preview.slogan_size', $data->preview_slogan_size) }}"
                                             class="form-control" >
-                                        <x-error>preview[logo_size]</x-error>
+                                        <x-error>preview[slogan_size]</x-error>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="lm_top" class="form-label">Spacing</label>
-                                        <input type="text" name="preview[spacing]" id="lm_top" value="{{ old('preview.spacing', $data->preview_spacing) }}"
+                                        <label for="lm_top" class="form-label">Slogan Spacing</label>
+                                        <input type="text" name="preview[slogan_spacing]" id="lm_top" value="{{ old('preview.slogan_spacing', $data->preview_slogan_spacing) }}"
                                             class="form-control" >
-                                        <x-error>preview[spacing]</x-error>
+                                        <x-error>preview[slogan_spacing]</x-error>
                                     </div>
                                 </div>
 
@@ -317,39 +323,39 @@
 
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="lm_left" class="form-label">Logo Left Position</label>
-                                        <input type="text" name="canva[logo_left]" id="lm_left" 
-                                       
-                                         value="{{ old('canva.logo_left', $data->canva_logo_left) }}"
+                                        <label for="lm_left" class="form-label">Slogan Left Position</label>
+                                        <input type="text" name="canva[slogan_left]" id="lm_left"
+
+                                         value="{{ old('canva.slogan_left', $data->canva_slogan_left) }}"
                                             class="form-control" >
-                                        <x-error>canva[left]</x-error>
+                                        <x-error>canva[slogan_left]</x-error>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="lm_top" class="form-label">Logo Top Position</label>
-                                        <input type="text" name="canva[logo_top]" id="lm_top" 
-                                         value="{{ old('canva.logo_top', $data->canva_logo_top) }}"
+                                        <label for="lm_top" class="form-label">Slogan Top Position</label>
+                                        <input type="text" name="canva[slogan_top]" id="lm_top"
+                                         value="{{ old('canva.slogan_top', $data->canva_slogan_top) }}"
                                             class="form-control" >
-                                        <x-error>canva[top]</x-error>
+                                        <x-error>canva[slogan_top]</x-error>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="lm_logo_size" class="form-label">Logo size</label>
-                                        <input type="text" name="canva[logo_size]" id="lm_logo_size"
-                                        
-                                            value="{{ old('canva.logo_size', $data->canva_logo_size) }}"
+                                        <label for="lm_logo_size" class="form-label">Slogo size</label>
+                                        <input type="text" name="canva[slogan_size]" id="lm_logo_size"
+
+                                            value="{{ old('canva.slogan_size', $data->canva_slogan_size) }}"
                                             class="form-control" >
-                                        <x-error>canva[logo_size]</x-error>
+                                        <x-error>canva[slogan_size]</x-error>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="lm_top" class="form-label">Spacing</label>
-                                        <input type="text" name="canva[spacing]" id="lm_top" value="{{ old('canva.spacing', $data->canva_spacing) }}"
+                                        <label for="lm_top" class="form-label">Slogan Spacing</label>
+                                        <input type="text" name="canva[slogan_spacing]" id="lm_top" value="{{ old('canva.slogan_spacing', $data->canva_slogan_spacing) }}"
                                             class="form-control" >
-                                        <x-error>canva[spacing]</x-error>
+                                        <x-error>canva[slogan_spacing]</x-error>
                                     </div>
                                 </div>
                             </div>
@@ -386,6 +392,10 @@
     </div>
 
     @section('js')
-        <script></script>
+        <!-- Pickr JS -->
+    
+    <script>
+         
+    </script>
     @endsection
 </x-admin>

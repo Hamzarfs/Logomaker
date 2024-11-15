@@ -19,7 +19,8 @@
                     {{-- <a href="#"><i class="bi bi-linkedin"></i></a> --}}
                 </div>
             </div>
-            <div class="col-md-2">
+            {{-- <div class="col-md-2"> --}}
+                <div class="col-12 col-sm-12 col-lg-2 col-xl-2">
                 <h5>About Company</h5>
                 <ul class="list-unstyled">
                     <li><a href="{{ url('/about-us') }}">About Us</a></li>
@@ -31,7 +32,8 @@
             </div>
 
 
-            <div class="col-md-2">
+            {{-- <div class="col-md-2"> --}}
+                <div class="col-12 col-sm-12 col-lg-2 col-xl-2">
                 <h5>Top Locations</h5>
                 <ul class="list-unstyled">
                     <li><a href="{{ url('/logo-design-california') }}">California Logo Design</a></li>
@@ -48,7 +50,8 @@
             </div>
 
 
-            <div class="col-md-2">
+            {{-- <div class="col-md-2"> --}}
+                <div class="col-12 col-sm-12 col-lg-2 col-xl-2">
                 <h5>Other Services</h5>
                 <ul class="list-unstyled">
                     <li><a href="{{ url('printing') }}">Printing</a></li>
@@ -67,7 +70,8 @@
 
 
 <!-- Logo Ideas Section -->
-<div class="col-md-2">
+{{-- <div class="col-md-2"> --}}
+    <div class="col-12 col-sm-12 col-lg-2 col-xl-2">
     <h5>Logo Ideas</h5>
     <ul class="list-unstyled">
         @foreach ($categories as $index => $category)

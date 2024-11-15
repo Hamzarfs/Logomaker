@@ -48,6 +48,9 @@ Route::middleware(['role:user', 'auth'])->group(function () {
     Route::get('checkPaymentStatus', [MainController::class, 'checkPaymentStatusView'])->name('checkPaymentStatusView');
     Route::post('orderComplete', [MainController::class, 'orderComplete'])->name('orderComplete');
     Route::get('/maker', [MainController::class, 'maker'])->name('maker');
+
+    Route::post('save-svg', [MainController::class, 'saveSvg'])->name('save-svg');
+
     Route::post('saveLogo', [MainController::class, 'saveLogo'])->name('saveLogo');
     Route::get('user-orders', [MainController::class, 'orders'])->name('orders');
     Route::get('account-details', [MainController::class, 'accountDetails'])->name('accountDetails');
@@ -75,6 +78,7 @@ Route::post('/store-session-data', [SessionDataController::class, 'storeSessionD
 Route::post('/store-session-data-logo', [SessionDataController::class, 'storeSessionDataLogo']);
 Route::get('/store-session-data-image', [SessionDataController::class, 'storeSessionDataImage']);
 Route::get('/store-price', [SessionDataController::class, 'storePrice']);
+Route::get('/set-image', [SessionDataController::class, 'setSessionImage']);
 
 
 
@@ -104,7 +108,8 @@ Route::get('/contact-us', [GeneralController::class, 'contactUs']);
 Route::get('/terms-condition', [GeneralController::class, 'termsCondition'])->name('termsCondition');
 Route::get('/privacy-policy', [GeneralController::class, 'PrivacyPolicy']);
 Route::get('/custom-logo', [GeneralController::class, 'customLogo']);
-Route::post('contact-us', [GeneralController::class, 'contactUsSubmit'])->name('contactUs');
+Route::post('contact-us', [GeneralController::class, 'contactUsSubmit'])->name('contactUs')->middleware('throttle:contactUsPOST');
+Route::post('contact-us-lp', [GeneralController::class, 'contactUsSubmitLP'])->name('contactUsLP');
 Route::post('custom-logo', [GeneralController::class, 'customLogoSubmit'])->name('customLogoSubmit');
 Route::get('/site-map', [GeneralController::class, 'siteMap']);
 Route::get('/printing', [GeneralController::class, 'printing']);
@@ -114,6 +119,7 @@ Route::get('custom-website-design-development', [GeneralController::class, 'cust
 Route::get('wordpress-website-development', [GeneralController::class, 'wordpressWebsiteDevelopment']);
 Route::get('shopify-website-development', [GeneralController::class, 'shopifyWebsiteDevelopment']);
 Route::get('e-commerce-website-development', [GeneralController::class, 'eCommerceWebsiteDevelopment']);
+Route::get('/custom-logo-design', [GeneralController::class, 'lppage']);
 
 
 
