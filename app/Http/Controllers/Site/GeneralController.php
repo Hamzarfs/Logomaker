@@ -9,7 +9,9 @@ use App\Mail\ContactUsLP;
 use App\Mail\CustomerMail;
 use App\Mail\CustomLogo;
 use App\Models\Category;
+use Exception;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
@@ -92,6 +94,10 @@ class GeneralController extends \App\Http\Controllers\Controller
     }
     public function contactUs()
     {
+        session([
+            'secret' => bcrypt('abcd1234'),
+        ]);
+
         return view('site/contact-us');
     }
     public function termscondition()
@@ -133,6 +139,9 @@ class GeneralController extends \App\Http\Controllers\Controller
 
     public function contactUsSubmit(Request $request)
     {
+        if(!Hash::check('abcd1234', session('secret')))
+            throw new Exception('Invalid request');
+
         $data = $request->all();
         $users = User::role('admin')->pluck('email');
         $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com', 'info@rfslogodesign.com'];
