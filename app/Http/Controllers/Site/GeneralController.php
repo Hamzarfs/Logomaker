@@ -9,9 +9,8 @@ use App\Mail\ContactUsLP;
 use App\Mail\CustomerMail;
 use App\Mail\CustomLogo;
 use App\Models\Category;
-use Exception;
+use App\Rules\Recaptcha;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
@@ -139,8 +138,9 @@ class GeneralController extends \App\Http\Controllers\Controller
 
     public function contactUsSubmit(Request $request)
     {
-        if(!Hash::check('abcd1234', session('secret')))
-            throw new Exception('Invalid request');
+        $request->validate([
+            'g-recaptcha-response' => ['required', new Recaptcha],
+        ]);
 
         $data = $request->all();
         $users = User::role('admin')->pluck('email');
@@ -183,6 +183,9 @@ class GeneralController extends \App\Http\Controllers\Controller
 
     public function customLogoSubmit(Request $request)
     {
+        $request->validate([
+            'g-recaptcha-response' => ['required', new Recaptcha],
+        ]);
         $data = $request->all();
         $users = User::role('admin')->pluck('email');
         $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com', 'info@rfslogodesign.com'];

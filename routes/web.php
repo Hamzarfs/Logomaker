@@ -108,7 +108,7 @@ Route::get('/contact-us', [GeneralController::class, 'contactUs']);
 Route::get('/terms-condition', [GeneralController::class, 'termsCondition'])->name('termsCondition');
 Route::get('/privacy-policy', [GeneralController::class, 'PrivacyPolicy']);
 Route::get('/custom-logo', [GeneralController::class, 'customLogo']);
-Route::post('contact-us', [GeneralController::class, 'contactUsSubmit'])->name('contactUs')->middleware('throttle:contactUsPOST');
+Route::post('contact-us', [GeneralController::class, 'contactUsSubmit'])->name('contactUs')/*->middleware('throttle:contactUsPOST')*/;
 Route::post('contact-us-lp', [GeneralController::class, 'contactUsSubmitLP'])->name('contactUsLP');
 Route::post('custom-logo', [GeneralController::class, 'customLogoSubmit'])->name('customLogoSubmit');
 Route::get('/site-map', [GeneralController::class, 'siteMap']);

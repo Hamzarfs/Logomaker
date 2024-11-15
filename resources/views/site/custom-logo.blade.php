@@ -13,6 +13,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <style>
             .custom-text-section-v3 h2 {
                 font-weight: 800;
@@ -376,8 +378,10 @@
                                     placeholder="Your comments" required></textarea>
                             </div>
 
+                            <div class="g-recaptcha" data-sitekey="{{ env('GOOGLE_RECAPTCHA_SITE_KEY') }}"></div>
+
                             <button type="submit"
-                                class="btn btn-secondary custom-logo-page-submit align-left">Submit</button>
+                                class="btn btn-secondary custom-logo-page-submit align-left mt-3">Submit</button>
                         </form>
 
                     </div>
