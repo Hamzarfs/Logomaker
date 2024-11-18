@@ -10,6 +10,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SubCateoryController;
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->name('admin.')->middleware(['auth', 'verified', 'role:admin'])->group(function () {
@@ -23,6 +24,8 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'verified', 'role:ad
     Route::resource('role', RoleController::class);
     Route::resource('permission', PermissionController::class);
     Route::resource('category', CategoryController::class);
+    Route::resource('blog', BlogController::class);
+
     Route::resource('subcategory', SubCateoryController::class);
     Route::resource('collection', CollectionController::class);
     Route::resource('product', ProductController::class);

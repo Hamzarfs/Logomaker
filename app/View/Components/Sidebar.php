@@ -3,6 +3,7 @@
 namespace App\View\Components;
 
 use App\Models\Category;
+use App\Models\Blog;
 use App\Models\Collection;
 use App\Models\Font;
 use App\Models\Order;
@@ -26,6 +27,7 @@ class Sidebar extends Component
         $RoleCount = Role::count();
         $PermissionCount = Permission::count();
         $CategoryCount = Category::count();
+        $BlogCount = Blog::count();
         $SubCategoryCount = SubCategory::count();
         $CollectionCount = Collection::count();
         $ProductCount = Product::count();
@@ -38,6 +40,7 @@ class Sidebar extends Component
             'PermissionCount',
             'CategoryCount',
             'SubCategoryCount',
+            'BlogCount',
             'CollectionCount',
             'ProductCount',
             'OrdersCount',

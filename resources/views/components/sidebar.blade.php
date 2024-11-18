@@ -35,6 +35,16 @@
                 </a>
             </li>
             <li class="nav-item">
+               <a href="{{ route('admin.blog.index') }}"
+                    class="nav-link {{ Route::is('admin.blog.index') ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-blog"></i>
+                    <p>Blogs
+                        <span class="badge badge-warning right">{{ $BlogCount }}</span>
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a href="{{ route('admin.category.index') }}"
                     class="nav-link {{ Route::is('admin.category.index') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-list-alt"></i>
