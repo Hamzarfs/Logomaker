@@ -27,6 +27,7 @@
                     <li><a href="{{ url('/how-it-works') }}">How it Works</a></li>
                     <li><a href="{{ url('/frequently-asked-question') }}">FAQ</a></li>
                     <li><a href="{{ url('contact-us') }}">Contact Us</a></li>
+                    <li><a href="{{ url('blogs') }}">Blogs</a></li>
                     <li><a href="{{ url('site-map') }}">Sitemap</a></li>
                 </ul>
             </div>

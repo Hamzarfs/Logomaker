@@ -118,6 +118,11 @@ class GeneralController extends \App\Http\Controllers\Controller
         return view('site/lp-page');
     }
 
+    public function blog()
+    {
+        return view('site/blog');
+    }
+
     public function customlogo()
     {
         $categories = Category::where('is_top', 1)

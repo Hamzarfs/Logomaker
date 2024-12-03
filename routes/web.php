@@ -120,6 +120,8 @@ Route::get('wordpress-website-development', [GeneralController::class, 'wordpres
 Route::get('shopify-website-development', [GeneralController::class, 'shopifyWebsiteDevelopment']);
 Route::get('e-commerce-website-development', [GeneralController::class, 'eCommerceWebsiteDevelopment']);
 Route::get('/custom-logo-design', [GeneralController::class, 'lppage']);
+Route::get('/blogs', [GeneralController::class, 'blog']);
+
 
 
 
