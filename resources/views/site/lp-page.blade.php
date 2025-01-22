@@ -360,6 +360,7 @@
             .languagelogos-slide img {
                 height: 100%;
                 
+
                 border-radius: 15px;
             }
 
@@ -675,6 +676,7 @@
             /************************* Start Portfolio Gallery ******************/
             .portfoliogallerylp {
                 /*padding: 30px 0;*/
+                /* padding: 30px 0; */
             }
 
             .portfoliogallerylp h2 {
