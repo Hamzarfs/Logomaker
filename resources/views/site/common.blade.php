@@ -107,12 +107,12 @@
 
     <meta name="google-site-verification" content="PCblVwSUWCzACg0raNR0v7VHp7F1haeuavWupNiKPhk" />
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16485766646"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8EQZ5SK5PS"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'AW-16485766646');
+  gtag('config', 'G-8EQZ5SK5PS');
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16744151824"></script>
 <script>

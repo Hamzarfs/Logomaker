@@ -1,4 +1,4 @@
-    @extends('site.common')
+     @extends('site.common')
 
     @section('title', 'Custom Logo Design Starting from $39 - +1 (551) 666-5255')
 
@@ -975,6 +975,17 @@
             }
 
             @media (max-width: 576px) {
+
+                .custom-logo-process h2 {
+                
+                font-size: 28px;
+            }
+
+                .cta-buttons .live-chat-btn {
+                    margin-top:20px;
+                     
+                }
+
                 .award-heading {
                     font-size: 18px;
                 }
@@ -1133,6 +1144,12 @@
                 .lpbanner-badges img {
                     width: 200px !important;
                 }
+
+
+        @media (max-width: 1024px) and (min-width: 768px) {
+            .portfoliogallerylp-gallery {
+        flex-direction: row;
+    }
 
             }
 
@@ -2099,7 +2116,7 @@
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt contact-icon"></i>
-                            <span>43 3rd Ave 2nd Floor, Edison, NJ 08837</span>
+                            <span>41 Winthrop Rd, Edison, NJ 08817</span>
                         </li>
                     </ul>
                 </div>
