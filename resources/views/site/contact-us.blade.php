@@ -200,7 +200,7 @@
    }
    
    </style>
-   
+   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <section class="education-logo-section">
     <div class="container">
         <h1>Contact Us</h1>
@@ -277,7 +277,8 @@
                         <i class="fas fa-comment form-icon"></i>
                         <textarea class="form-control" name="comment" id="comment" rows="1" placeholder="Enter your comment" required></textarea>
                     </div>
-                    <button type="submit" class="contact-button-online">Submit</button>
+                    <!--<div class="g-recaptcha" data-sitekey=""></div>-->
+                    <button type="submit" class="contact-button-online mt-3">Submit</button>
                 </form>
             </div>
         </div>
@@ -293,7 +294,7 @@
     <script>
         document.querySelectorAll('.form-control').forEach(input => {
             input.addEventListener('input', function() {
-                if (this.value) {dd
+                if (this.value) {
                     this.parentElement.classList.add('filled');
                 } else {
                     this.parentElement.classList.remove('filled');

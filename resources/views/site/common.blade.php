@@ -118,17 +118,15 @@
         gtag('config', 'G-8EQZ5SK5PS');
     </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16485766646"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+     <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16744151824"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'AW-16485766646');
-    </script>
+  gtag('config', 'AW-16744151824');
+</script>
 
     <!-- Brevo Conversations {literal} -->
     <script>
@@ -167,19 +165,25 @@
 
 
 
-    @includeWhen(!request()->is('custom-logo-design'), 'site.layouts.header')
+    @if(request()->is('custom-logo-design') || request()->is('thanks')  || request()->is('terms-condition')  || request()->is('privacy-policy') )
+        @include('site.layouts.lp-header')
+    @else
+        @include('site.layouts.header')
+    @endif
 
-    @includeWhen(request()->is('custom-logo-design'), 'site.layouts.lp-header')
+
 
     @yield('content')
 
  
+        @if(request()->is('custom-logo-design') || request()->is('thanks')  || request()->is('terms-condition')  || request()->is('privacy-policy') )
+                @include('site.layouts.lp-footer')
+            @else
+                @include('site.layouts.footer')
+            @endif
 
-    @includeWhen(!request()->is('custom-logo-design'), 'site.layouts.footer')
 
-    @includeWhen(request()->is('custom-logo-design'), 'site.layouts.lp-footer')
-
-
+ 
 
     <!-- Add your JS scripts here -->
 

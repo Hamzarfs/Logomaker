@@ -5,4 +5,9 @@
     RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
     
     RewriteRule ^(.*)$ public/$1 [L]
+    
+    RewriteCond %{REQUEST_URI} ^/category-image/
+    RewriteRule ^ /logo-maker [R=301,L]
+
+    
 </IfModule>

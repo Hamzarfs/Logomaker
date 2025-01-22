@@ -17,9 +17,9 @@
 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Swiper CSS -->
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
+          <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        
         <style>
             .custom-text-section-v3 h2 {
                 font-weight: 800;
@@ -359,7 +359,7 @@
 
             .languagelogos-slide img {
                 height: 100%;
-                
+                margin: 0 40px;
                 border-radius: 15px;
             }
 
@@ -674,7 +674,7 @@
 
             /************************* Start Portfolio Gallery ******************/
             .portfoliogallerylp {
-                /*padding: 30px 0;*/
+                padding: 30px 0;
             }
 
             .portfoliogallerylp h2 {
@@ -692,7 +692,7 @@
 
             .portfoliogallerylp-gallery {
                 /* gap: 3px
-                                                 */
+                                     */
             }
 
             .portfoliogallerylp-image {
@@ -940,57 +940,54 @@
             /*****************  End LP Contact ************/
 
             .awardimgslide {
-                background-color: #f9f9f9;
-            }
+    background-color: #f9f9f9;
+}
 
-            .award-heading {
-                font-size: 24px;
-                font-weight: bold;
-                color: #333;
-            }
+.award-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
 
-            .swiper-container {
-                padding: 10px 0;
-                overflow-x: hidden;
-            }
+.swiper-container {
+    padding: 10px 0;
+}
 
-            .swiper-slide {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-            .swiper-slide img {
-                max-width: 100%;
-                height: auto;
-            }
+.swiper-slide img {
+    max-width: 100%; 
+    height: auto;
+}
 
-            .award-arrow-left,
-            .award-arrow-right {
-                font-size: 24px;
-                color: #333;
-                cursor: pointer;
-            }
+.award-arrow-left, .award-arrow-right {
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
 
-            @media (max-width: 576px) {
-                .award-heading {
-                    font-size: 18px;
-                }
+@media (max-width: 576px) {
+    .award-heading {
+        font-size: 18px;
+    }
 
-                /* .swiper-slide img {
-                    max-width: 100px;
-                } */
+    .swiper-slide img {
+        max-width: 100px;
+    }
 
-                .award-arrow-left,
-                .award-arrow-right {
-                    font-size: 18px;
-                }
-            }
+    .award-arrow-left, .award-arrow-right {
+        font-size: 18px;
+    }
+}
 
 
 
 
-
+ 
 
 
             @media(max-width: 376px) {
@@ -1003,46 +1000,34 @@
                 }
 
             }
-
             @media (max-width: 576px) {
-                .award-heading {
-                    font-size: 18px;
-                }
+    .award-heading {
+        font-size: 18px;
+    }
 
+   
 
-
-                .award-arrow-left,
-                .award-arrow-right {
-                    font-size: 18px;
-                }
-            }
+    .award-arrow-left, .award-arrow-right {
+        font-size: 18px;
+    }
+}
 
             @media (max-width: 658px) {
                 .lp-footer-sec .footer-link {
-                    font-size: 12px;
-                    color: white;
-                    text-decoration: none;
-                    transition: color 0.3s ease;
-                }
-
+                font-size: 12px;
+                color: white;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
                 section.ebook-contact-form.container {
                     padding: 30px;
                     text-align-last: center;
                 }
             }
 
-            /* For screen 576px to 767px */
-            @media (max-width: 767.98px) {
-                .custom-logo-page-form {
-                    width: 100%;
-                }
-            }
 
 
             @media only screen and (max-width: 768px) {
-                .top-right.col-md-5 {
-                    width: 100%;
-                }
 
                 .custom-text-section-v3 h2 {
                     font-weight: 800;
@@ -1082,8 +1067,7 @@
                 .text-white {
                     --bs-text-opacity: 1;
                     color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
-                    font-size: 1.2rem;
-                    font-family: 'Poppins';
+                    font-size: 2rem;
                     text-align: center;
                 }
 
@@ -1135,77 +1119,7 @@
             }
 
 
-
-
             @media (max-width: 1198px) and (min-width: 992px) {
-                .custom-logo-page-form {
-                    border-radius: 20px !important;
-                    margin-top: 20px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    width: 90%;
-                    color: black;
-                }
-
-                .lpbanner-heading {
-                    padding-top: 20px;
-                    font-size: 2rem;
-                    color: #fff;
-                    font-weight: bold;
-                    /* display: flex; */
-                    align-items: center;
-                    margin-left: 50px;
-                }
-
-                .lpbanner-badges img {
-                    width: 95px;
-                }
-
-                .top-right.col-md-5 {
-                    width: 100%;
-                }
-
-                .box-heading-number {
-                    font-size: 34px;
-                    /* Adjusted size for screens in this range */
-                }
-
-                .box-heading {
-                    font-size: 22px;
-                    /* Adjusted size for screens in this range */
-                }
-            }
-
-            @media (min-width: 768px) and (max-width: 1200px) {
-                .custom-logo-page-form {
-                    border-radius: 20px !important;
-                    margin-top: 20px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    width: 90%;
-                    color: black;
-                }
-
-                .lpbanner-heading {
-                    padding-top: 20px;
-                    font-size: 2rem;
-                    color: #fff;
-                    font-weight: bold;
-                    /* display: flex; */
-                    align-items: center;
-                    margin-left: 50px;
-                }
-
-                .lpbanner-badges img {
-                    width: 95px;
-                }
-
-                .top-right.col-md-5 {
-                    width: 100%;
-                }
-
                 .box-heading-number {
                     font-size: 34px;
                     /* Adjusted size for screens in this range */
@@ -1226,7 +1140,12 @@
                 }
             }
 
-
+            /* For screen 576px to 767px */
+            @media (max-width: 767.98px) {
+                .custom-logo-page-form {
+                    width: 100%;
+                }
+            }
 
 
             /* end languagelogos */
@@ -1356,10 +1275,6 @@
                     <img src={{ asset('images/logoslide8.png') }} alt="Laravel Logo" />
                     <img src={{ asset('images/logoslide9.png') }} alt="Laravel Logo" />
                     <img src={{ asset('images/logoslide10.png') }} alt="Laravel Logo" />
-                    <img src={{ asset('images/logoslide11.png') }} alt="Laravel Logo" />
-                    <img src={{ asset('images/logoslide12.png') }} alt="Laravel Logo" />
-                    <img src={{ asset('images/logoslide13.png') }} alt="Laravel Logo" />
-                    <img src={{ asset('images/logoslide14.png') }} alt="Laravel Logo" />
                 </div>
             </div>
         </div>
@@ -1729,8 +1644,8 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6 cta-buttons">
-                        <h4 class="text-white">Build your brand identity with a perfect logo, premium branding material,
-                            and standout stationery design!</h4>
+                        <h2 class="text-white">Build your brand identity with a perfect logo, premium branding material,
+                            and standout stationery design!</h2>
                         <a href="{{ url('https://wa.me/+18482369397') }}" class="btn btn-primary leave-message-btn">Leave
                             a Message</a>
                     </div>
@@ -1742,7 +1657,7 @@
         </section>
 
         <!-- HTML Code -->
-        <section class="portfoliogallerylp py-5 container">
+        <section class="portfoliogallerylp container">
             <div class="row">
                 <!-- Heading and Separator -->
                 <div class="col-12 text-center">
@@ -1787,10 +1702,9 @@
                             Connect with us, and our experts will turn your ideas of business logo designs into reality!
                         </p>
                         <div class="cta-buttons">
-                            <a href="tel:+15516665255"> <button class="btn btn-primary leave-message-btn">Schedule a
-                                    Call</button></a>
-                            <a href="{{ url('https://wa.me/+18482369397') }}"> <button
-                                    class="btn btn-outline-light live-chat-btn">Chat with
+                            <a href="tel:+15516665255">  <button
+                                    class="btn btn-primary leave-message-btn">Schedule a Call</button></a>
+                            <a href="{{ url('https://wa.me/+18482369397') }}"> <button class="btn btn-outline-light live-chat-btn">Chat with
                                     Expert</button></a>
                         </div>
                     </div>
@@ -1862,7 +1776,7 @@
 
             <!----------------------end simple and fast --------------------->
         </div>
-        {{--
+{{-- 
         <section class="awardimgslide py-5">
             <div class="container text-center">
                 <h2 class="award-heading">Award-Winning Logo Design Company</h2>
@@ -1899,7 +1813,7 @@
                         <h2>Award-Winning Logo Design Company</h2>
                     </div>
                 </div>
-
+        
                 <!-- Swiper with Custom Navigation Buttons -->
                 <div class="row position-relative align-items-center">
                     <!-- Custom Previous Button -->
@@ -1908,16 +1822,17 @@
                             <i class="fas fa-arrow-left"></i>
                         </button>
                     </div> --}}
-
+        
                     <!-- Swiper for Logos -->
                     <div class="col-12">
                         <div class="swiper-container">
-                            <div class="swiper-wrapper logo-awards">
+                            <div class="swiper-wrapper">
                                 <!-- Slide Items (Repeat for each logo) -->
-                                <a target="_blank"
-                                    href="https://www.designrush.com/agency/website-design-development/new-jersey">
-                                    <img src="images/award1.png" alt="Award 1" class="logo-image img-fluid">
-                                </a>
+                                <div class="swiper-slide">
+                                    <a target="_blank" href="https://www.designrush.com/agency/website-design-development/new-jersey">
+                                        <img src="images/award1.png" alt="Award 1" class="logo-image img-fluid">
+                                    </a>
+                                </div>
                                 <div class="swiper-slide">
                                     <img src="images/award2.png" alt="Award 2" class="logo-image img-fluid">
                                 </div>
@@ -1933,7 +1848,7 @@
                             </div>
                         </div>
                     </div>
-
+        
                     <!-- Custom Next Button -->
                     {{-- <div class="col-2 text-start">
                         <button class="custom-carousel-control custom-carousel-control-next">
@@ -1949,7 +1864,7 @@
 
 
 
-        <section class="container contact-section">
+        <section class="container py-5 contact-section">
             <div class="text-center mb-4">
                 <h2 class="font-weight-bold">Need help choosing a professional logo design?<br> Consult with our expert!
                 </h2>
@@ -2204,15 +2119,15 @@
         </div>
 
 
-        <!-- Swiper JS -->
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <!-- Bootstrap JS Bundle -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
+                  <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+      
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
         <script>
             // Ensure carousel can be scrolled via mouse or touch gestures without a scrollbar
@@ -2228,40 +2143,30 @@
 
 
 
-
+      
         <!-- Custom JS for Swiper Initialization -->
-        <script>
-            const swiper = new Swiper('.swiper-container', {
-                slidesPerView: 5,
-                spaceBetween: 30,
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                navigation: {
-                    nextEl: '.custom-carousel-control-next',
-                    prevEl: '.custom-carousel-control-prev',
-                },
-                breakpoints: {
-                    320: {
-                        slidesPerView: 1
-                    },
-                    576: {
-                        slidesPerView: 2
-                    },
-                    768: {
-                        slidesPerView: 3
-                    },
-                    992: {
-                        slidesPerView: 4
-                    },
-                    1200: {
-                        slidesPerView: 5
-                    },
-                }
-            });
-        </script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 5,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.custom-carousel-control-next',
+            prevEl: '.custom-carousel-control-prev',
+        },
+        breakpoints: {
+            320: { slidesPerView: 1 },
+            576: { slidesPerView: 2 },
+            768: { slidesPerView: 3 },
+            992: { slidesPerView: 4 },
+            1200: { slidesPerView: 5 },
+        }
+    });
+</script>
 
 
 
