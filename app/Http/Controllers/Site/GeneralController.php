@@ -14,8 +14,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Hash;
-use App\Rules\Recaptcha;
+ use App\Rules\Recaptcha;
 
 class GeneralController extends \App\Http\Controllers\Controller
 {

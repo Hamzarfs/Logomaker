@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://rfslogodesign.com/sitemap.xml
+
