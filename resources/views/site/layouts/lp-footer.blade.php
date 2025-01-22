@@ -13,7 +13,7 @@
                 <div class="row align-items-center pt-3" style="border-top: 1px solid white;">
                     <div class="col-md-6 text-md-start text-center">
                         <p class="mb-0">
-                            &copy; Copyright 2024, <strong>RFS Logo Design</strong>. Powered by RFS
+                            &copy; Copyright 2025, <strong>RFS Logo Design</strong>. Powered by RFS
                         </p>
                     </div>
                     <div class="col-md-6 text-md-end text-center">

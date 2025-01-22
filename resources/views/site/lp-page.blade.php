@@ -1,6 +1,6 @@
     @extends('site.common')
 
-    @section('title', 'Custom Logo Design Starting from $49 - +1 (551) 666-5255')
+    @section('title', 'Custom Logo Design Starting from $39 - +1 (551) 666-5255')
 
     @section('meta_desc',
         'Get top notch custom logo design services from US top logo designer team at RFS Logo Design.
@@ -399,7 +399,7 @@
 
             .lpbanner-badges img {
                 margin-top: 20px;
-                width: 120px;
+                width: 300px;
                 margin-right: 10px;
             }
 
@@ -1117,7 +1117,7 @@
                 }
 
                 .lpbanner-badges img {
-                    width: 80px !important;
+                    width: 120px !important;
                     margin-top: 20px;
                     margin-right: 0px;
                 }
@@ -1131,7 +1131,7 @@
                 }
 
                 .lpbanner-badges img {
-                    width: 100px !important;
+                    width: 200px !important;
                 }
 
             }
@@ -1229,6 +1229,25 @@
             }
 
 
+/* Center align the content inside the swiper slide */
+.swiper-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Optional if there’s text */
+}
+
+.logo-image {
+    max-width: 100%; /* Responsive sizing */
+    xmax-height: 80px; /* Adjust based on your design */
+    object-fit: contain; /* Maintain aspect ratio */
+}
 
 
             /* end languagelogos */
@@ -1246,7 +1265,7 @@
 
                         <h1 class="lpbanner-heading">
                             Custom Logo Design <br />
-                            Starting from <span class="lpbanner-price">$49</span>
+                            Starting from <span class="lpbanner-price">$39</span>
                         </h1>
                     </div>
                     <div class="lp-banner-margin">
@@ -1254,19 +1273,19 @@
                             brand identities that make your business stand out and leave a lasting impression.</p>
                         <div class="lpbanner-buttons">
                             <button class="btn btn-dark lpbanner-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
-                                data-title="Basic Logo Package - $49">Get Started</button>
+                                data-title="Basic Logo Package - $39">Get Started</button>
                             <a href="#pricing" class="btn btn-outline-light lpbanner-btn">View Pricing</a>
                         </div>
                         <div class="lpbanner-badges">
-                            <a href="https://clutch.co/profile/rfs-logo-design" target="_blank">
+                            <!-- <a href="https://clutch.co/profile/rfs-logo-design" target="_blank">
                                 <img src="{{ asset('images/clutchicon.png') }}" alt="Clutch" />
-                            </a>
+                            </a> -->
                             <a href="https://www.trustpilot.com/review/rfslogodesign.com" target="_blank">
-                                <img src="{{ asset('images/truspiloticon.png') }}" alt="Trustpilot" />
+                                <img src="{{ asset('images/trust.png') }}" alt="Trustpilot" />
                             </a>
-                            <a href="https://www.bark.com/en/us/company/rfs-logo-design/oRvbN/" target="_blank">
+                            <!-- <a href="https://www.bark.com/en/us/company/rfs-logo-design/oRvbN/" target="_blank">
                                 <img src="{{ asset('images/barkicon.png') }}" alt="Bark" />
-                            </a>
+                            </a> -->
 
                         </div>
                     </div>
@@ -1379,7 +1398,7 @@
                     <div class="col-12">
                         <h2 class="cta-heading">Are you looking for a logo that truly captures your brand? </h2>
                         <p class="cta-text">
-                            Please message us, and let our designers bring your vision to life.
+                             Message Us Today, and let our designers bring your vision to life.
                         </p>
                         <div class="cta-buttons">
 
@@ -1414,8 +1433,8 @@
                             <h3>Basic Logo Package</h3>
                             <p>Best Value for Money Guaranteed!</p>
                             <div class="price-section">
-                                <span class="price">$49</span>
-                                <span class="original-price">$99</span>
+                                <span class="price">$39</span>
+                                <span class="original-price">$119</span>
                             </div>
                             <p>Only</p>
                             <div class="separator"></div>
@@ -1429,7 +1448,7 @@
                                 <li>2 File Formats (PNG, JPG)</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
-                                data-title="Basic Logo Package - $49">Start Project</button>
+                                data-title="Basic Logo Package - $39">Start Project</button>
                         </div>
                     </div>
 
@@ -1439,13 +1458,13 @@
                             <h3>Standard Logo Package</h3>
                             <p>Best Value for Money Guaranteed!</p>
                             <div class="price-section">
-                                <span class="price">$99</span>
+                                <span class="price">$119</span>
                                 <span class="original-price">$149</span>
                             </div>
                             <p>Only</p>
                             <div class="separator"></div>
                             <ul class="feature-list">
-                                <li>4 Logo Design Concepts</li>
+                                <li>5 Logo Design Concepts</li>
                                 <li>8 Revisions</li>
                                 <li>Dedicated Project Manager</li>
                                 <li>24 - 48 Hours Delivery</li>
@@ -1454,7 +1473,7 @@
                                 <li>3 File Formats (JPG, PNG, PDF)</li>
                             </ul>
                             <button class="start-project-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
-                                data-title="Standard Logo Package - $99">Start Project</button>
+                                data-title="Standard Logo Package - $119">Start Project</button>
                         </div>
                     </div>
 
@@ -1465,13 +1484,15 @@
                             <p>Best Value for Money Guaranteed!</p>
                             <div class="price-section">
                                 <span class="price">Let's Talk</span>
+                                <br>
+                                <br>
                                 {{-- <span class="price">$199</span>
                                 <span class="original-price">$249</span> --}}
                             </div>
                             {{-- <p>Only</p> --}}
                             <div class="separator"></div>
                             <ul class="feature-list">
-                                <li>6 Logo Design Concepts</li>
+                                <li>8 Logo Design Concepts</li>
                                 <li>Unlimited Revisions</li>
                                 <li>Dedicated Project Manager</li>
                                 <li>24 - 48 Hours Delivery</li>
@@ -1490,7 +1511,9 @@
                 <div class="row mb-4 pt-4">
                     <div class="col">
                         <h2>Branding Packages</h2>
+                        
                     </div>
+                    
                 </div>
 
                 <!-- Row 2: Price Boxes -->
@@ -1717,7 +1740,7 @@
                         and rapid custom logo design process is of great assistance. We follow a few steps below to give a
                         dream logo fast that is the envy of many organizations. </p>
                     <button class="btn btn-primary leave-message-btn" data-bs-toggle="modal"
-                        data-bs-target="#contact-modal" data-title="Basic Logo Package - $49">Get Started</button>
+                        data-bs-target="#contact-modal" data-title="Basic Logo Package - $39">Get Started</button>
                 </div>
                 <div class="col-lg-6 custom-image-section-v3">
                     <img src="images/Mask group.png" alt="Descriptive Image Text">
@@ -1733,8 +1756,11 @@
                     <div class="col-md-6 cta-buttons">
                         <h4 class="text-white">Build your brand identity with a perfect logo, premium branding material,
                             and standout stationery design!</h4>
-                        <a href="{{ url('https://wa.me/+18482369397') }}" class="btn btn-primary leave-message-btn">Leave
-                            a Message</a>
+                        <!-- <a href="{{ url('https://wa.me/+18482369397') }}" class="btn btn-primary leave-message-btn">Leave
+                            a Message</a> -->
+
+                            <button class="btn btn-primary leave-message-btn" data-bs-toggle="modal"
+                            data-bs-target="#contact-modal" data-title="Starter Branding Package - $179">Get Started</button>
                     </div>
                     <div class="col-md-6">
                         <img src={{ asset('images/lpcta3secimg.png') }} alt="Description" class="img-fluid">
@@ -1916,10 +1942,11 @@
                         <div class="swiper-container">
                             <div class="swiper-wrapper logo-awards">
                                 <!-- Slide Items (Repeat for each logo) -->
-                                <a target="_blank"
-                                    href="https://www.designrush.com/agency/website-design-development/new-jersey">
-                                    <img src="images/award1.png" alt="Award 1" class="logo-image img-fluid">
-                                </a>
+                                <div class="swiper-slide">
+                                    <a target="_blank" href="https://www.designrush.com/agency/website-design-development/new-jersey">
+                                        <img src="images/award1.png" alt="Award 1" class="logo-image img-fluid">
+                                    </a>
+                                </div>
                                 <div class="swiper-slide">
                                     <img src="images/award2.png" alt="Award 2" class="logo-image img-fluid">
                                 </div>
@@ -1991,7 +2018,7 @@
 
         <section class="new-testimonial my-5">
             <div class="container-fluid">
-                <p class="text-center">Testimonials</p>
+                <p class="text-center">Hear From Our Clients</p>
                 <h2 class="text-center">Chosen by experts, crafted for success</h2>
                 <p class="text-center">Let’s turn your vision into a digital marvel. Ready to make waves? Let’s dive in!
                 </p>

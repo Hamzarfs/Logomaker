@@ -91,7 +91,7 @@
         <!-- Second Row -->
         <div class="row border-top py-3">
             <div class="col-md-6">
-                <p>&copy; 2024 RFSLogoDesign</p>
+                <p>&copy; 2025 RFSLogoDesign</p>
             </div>
 
             <div class="col-md-6 text-md-end">

@@ -107,18 +107,13 @@
 
     <meta name="google-site-verification" content="PCblVwSUWCzACg0raNR0v7VHp7F1haeuavWupNiKPhk" />
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8EQZ5SK5PS"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-8EQZ5SK5PS');
-    </script>
-
-     <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16485766646"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-16485766646');
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16744151824"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -162,7 +157,16 @@
 
 <body>
 
-
+        <!--  ClickCease.com tracking aaa-->
+        <script type='text/javascript'>var script = document.createElement('script');
+      script.async = true; script.type = 'text/javascript';
+      var target = 'https://www.clickcease.com/monitor/stat.js';
+      script.src = target;var elem = document.head;elem.appendChild(script);
+      </script>
+      <noscript>
+      <a href='https://www.clickcease.com' rel='nofollow'><img src='https://monitor.clickcease.com' alt='ClickCease'/></a>
+      </noscript>
+      <!--  ClickCease.com tracking-->
 
 
     @if(request()->is('custom-logo-design') || request()->is('thanks')  || request()->is('terms-condition')  || request()->is('privacy-policy') )
