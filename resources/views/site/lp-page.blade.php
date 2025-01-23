@@ -440,14 +440,15 @@
                 margin-bottom: 30px;
             }
 
-            .cta-buttons .leave-message-btn {
-                background-color: white;
-                color: #4B0082;
-                border: none;
-                padding: 10px 20px;
-                font-weight: bold;
-                margin-right: 15px;
-            }
+           .cta-buttons .leave-message-btn {
+    background-color: white;
+    color: #4B0082;
+    border: none;
+    margin-top: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin-right: 15px;
+}
 
             .cta-buttons .live-chat-btn {
                 background-color: transparent;
@@ -1311,70 +1312,138 @@
                 <div class="col-md-6 d-flex justify-content-center align-items-center">
                     <div class="custom-logo-page-form bg-white border p-3 rounded">
                         <h3 class="custom-logo-page-form-heading text-center">Get a Logo Quote</h3>
+                        <!--<form id="custom-form" method="POST" action="{{ route('customLogoSubmit') }}">-->
+
+                        <!--    @csrf-->
+
+                        <!--    <div class="form-group mb-2">-->
+                        <!--        <label for="name" class="custom-logo-page-label">Name:</label>-->
+                        <!--        <input type="text"-->
+                        <!--            class="form-control custom-logo-page-input @error('name') is-invalid @enderror"-->
+                        <!--            name="name" id="name" placeholder="Enter your name" required-->
+                        <!--            pattern="[A-Za-z\s]+" title="Name cannot contain special characters or numbers.">-->
+                        <!--        <div class="invalid-feedback">Please enter a valid name (letters and spaces only).</div>-->
+                        <!--        @error('name')-->
+                        <!--            <div class="invalid-feedback">{{ $message }}</div>-->
+                        <!--        @enderror-->
+                        <!--    </div>-->
+
+                        <!--    <div class="form-group mb-2">-->
+                        <!--        <label for="email" class="custom-logo-page-label">Email:</label>-->
+                        <!--        <input type="email"-->
+                        <!--            class="form-control custom-logo-page-input @error('email') is-invalid @enderror"-->
+                        <!--            name="email" id="email" placeholder="Enter your email" required>-->
+                        <!--        <div class="invalid-feedback">Please enter a valid email address.</div>-->
+                        <!--        @error('email')-->
+                        <!--            <div class="invalid-feedback">{{ $message }}</div>-->
+                        <!--        @enderror-->
+                        <!--    </div>-->
+
+                        <!--    {{-- <div class="form-group mb-2">-->
+                        <!--        <label for="phone" class="custom-logo-page-label">Phone Number:</label>-->
+                        <!--        <input type="tel"-->
+                        <!--            class="form-control custom-logo-page-input @error('phone') is-invalid @enderror"-->
+                        <!--            name="phone" id="phone" placeholder="Enter your phone number" required-->
+                        <!--            pattern="^\+?[0-9\s]{10,15}$"-->
+                        <!--            title="Phone number should contain only numbers and spaces, and can start with a '+'."-->
+                        <!--            maxlength="15">-->
+                        <!--        <div class="invalid-feedback">Please enter a valid phone number (max 15 digits).</div>-->
+                        <!--        @error('phone')-->
+                        <!--            <div class="invalid-feedback">{{ $message }}</div>-->
+                        <!--        @enderror-->
+                        <!--    </div> --}}-->
+
+                        <!--    <div class="form-group mb-2">-->
+                        <!--        <label for="phone" class="custom-logo-page-label">Phone Number:</label>-->
+                        <!--        <input type="tel"-->
+                        <!--            class="form-control custom-logo-page-input @error('phone') is-invalid @enderror"-->
+                        <!--            name="phone" id="phone" placeholder="+15554443322" required-->
+                        <!--            title="Phone number should contain only numbers and spaces, and can start with a '+'."-->
+                        <!--            maxlength="15">-->
+                        <!--        <div class="invalid-feedback">Please enter a valid phone number (max 15 digits).</div>-->
+                        <!--        @error('phone')-->
+                        <!--            <div class="invalid-feedback">{{ $message }}</div>-->
+                        <!--        @enderror-->
+                        <!--    </div>-->
+
+
+                        <!--    <div class="form-group mb-2">-->
+                        <!--        <label for="message" class="custom-logo-page-label">Message:</label>-->
+                        <!--        <textarea class="form-control custom-logo-page-textarea" name="message" id="message" rows="2"-->
+                        <!--            placeholder="Your message..." required></textarea>-->
+                        <!--    </div>-->
+
+                        <!--    <button type="submit"-->
+                        <!--        class="btn btn-secondary custom-logo-page-submit align-left">Submit</button>-->
+                        <!--</form>-->
+                        
                         <form id="custom-form" method="POST" action="{{ route('customLogoSubmit') }}">
 
-                            @csrf
+                        @csrf
+                    
+                        <div class="form-group mb-2">
+                            <label for="name" class="custom-logo-page-label">Name*</label>
+                            <input type="text"
+                                class="form-control custom-logo-page-input @error('name') is-invalid @enderror"
+                                name="name" id="name" placeholder="Enter your name" required
+                                title="First letter must be alphabetic; name can contain spaces but no special characters or numbers."
+                                 maxlength="51"
+                                oninput="validateName(this)">
+                                <div class="invalid-feedback"></div>
+                            @error('name')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    
+                        <div class="form-group mb-2">
+                            <label for="email" class="custom-logo-page-label">Email*</label>
+                            <input type="email"
+                                class="form-control custom-logo-page-input @error('email') is-invalid @enderror"
+                                name="email" id="email" placeholder="Enter your email" required title="Please enter a valid email address."
+                                oninput="validateEmail(this)">
+                                <div class="invalid-feedback"></div>
+                       
+                            @error('email')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    
+                        <div class="form-group mb-2">
+                            <label for="phone" class="custom-logo-page-label">Phone Number*</label>
+                            <input type="tel"
+                                class="form-control custom-logo-page-input @error('phone') is-invalid @enderror"
+                                name="phone" id="phone" required placeholder="E.g. 07123 456789"
+                                title="Phone number format: +3334445555 (10 to 15 digits, optional '+')"
+                                maxlength="15" oninput="validatePhone(this)">
+                                <div class="invalid-feedback"></div>
+                
+                            @error('phone')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    
+                        <div class="form-group mb-2">
+                            <label for="message" class="custom-logo-page-label">Message*</label>
+                            <textarea
+                                class="form-control custom-logo-page-textarea @error('message') is-invalid @enderror"
+                                name="message"
+                                id="message"
+                                rows="2"
+                                placeholder="Your message..."
+                                required
+                                maxlength="2001"
+                                title="Not allowed more than 2000 characters in message text field"
+                                oninput="validateMessage(this)"
+                            ></textarea>
+                            <div class="invalid-feedback"></div>
+                            @error('message')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    
+                        <button type="submit" class="btn btn-secondary custom-logo-page-submit align-left">Submit</button>
+                    </form>
 
-                            <div class="form-group mb-2">
-                                <label for="name" class="custom-logo-page-label">Name:</label>
-                                <input type="text"
-                                    class="form-control custom-logo-page-input @error('name') is-invalid @enderror"
-                                    name="name" id="name" placeholder="Enter your name" required
-                                    pattern="[A-Za-z\s]+" title="Name cannot contain special characters or numbers.">
-                                <div class="invalid-feedback">Please enter a valid name (letters and spaces only).</div>
-                                @error('name')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
-
-                            <div class="form-group mb-2">
-                                <label for="email" class="custom-logo-page-label">Email:</label>
-                                <input type="email"
-                                    class="form-control custom-logo-page-input @error('email') is-invalid @enderror"
-                                    name="email" id="email" placeholder="Enter your email" required>
-                                <div class="invalid-feedback">Please enter a valid email address.</div>
-                                @error('email')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
-
-                            {{-- <div class="form-group mb-2">
-                                <label for="phone" class="custom-logo-page-label">Phone Number:</label>
-                                <input type="tel"
-                                    class="form-control custom-logo-page-input @error('phone') is-invalid @enderror"
-                                    name="phone" id="phone" placeholder="Enter your phone number" required
-                                    pattern="^\+?[0-9\s]{10,15}$"
-                                    title="Phone number should contain only numbers and spaces, and can start with a '+'."
-                                    maxlength="15">
-                                <div class="invalid-feedback">Please enter a valid phone number (max 15 digits).</div>
-                                @error('phone')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div> --}}
-
-                            <div class="form-group mb-2">
-                                <label for="phone" class="custom-logo-page-label">Phone Number:</label>
-                                <input type="tel"
-                                    class="form-control custom-logo-page-input @error('phone') is-invalid @enderror"
-                                    name="phone" id="phone" placeholder="+15554443322" required
-                                    title="Phone number should contain only numbers and spaces, and can start with a '+'."
-                                    maxlength="15">
-                                <div class="invalid-feedback">Please enter a valid phone number (max 15 digits).</div>
-                                @error('phone')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
-
-
-                            <div class="form-group mb-2">
-                                <label for="message" class="custom-logo-page-label">Message:</label>
-                                <textarea class="form-control custom-logo-page-textarea" name="message" id="message" rows="2"
-                                    placeholder="Your message..." required></textarea>
-                            </div>
-
-                            <button type="submit"
-                                class="btn btn-secondary custom-logo-page-submit align-left">Submit</button>
-                        </form>
 
                     </div>
                 </div>
@@ -2128,19 +2197,49 @@
                         <div class="row mb-3">
                             <div class="col">
                                 <input type="text" class="form-control" id="name" placeholder="Your full name"
-                                    name="name" required>
+                                    name="name"
+                                       maxlength="51"
+                                oninput="validateName(this)" required>
+                                         <div class="invalid-feedback"></div>
+                            @error('message')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                                
                             </div>
                             <div class="col">
                                 <input type="email" class="form-control" id="email" placeholder="E-mail address"
-                                    name="email" required>
+                                    name="email" 
+                                    oninput="validateEmail(this)" required>
+                                             <div class="invalid-feedback"></div>
+                            @error('message')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                                
                             </div>
                         </div>
                         <div class="mb-3">
                             <input type="tel" class="form-control" id="phone" placeholder="+15554443322"
-                                required name="phone">
+                                required name="phone"
+                                  maxlength="15" oninput="validatePhone(this)">
+                                           <div class="invalid-feedback"></div>
+                            @error('message')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                                
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control" id="message" rows="5" placeholder="Your message" required name="message"></textarea>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Your message" required name="message"
+                             maxlength="2001" 
+                                oninput="validateMessage(this)"
+                                 title="Not allowed more than 2000 characters in message text field"
+                                required></textarea>
+                                   <div class="invalid-feedback"></div>
+                            @error('message')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                                
+                                
+                                
                         </div>
                         <button type="submit" class="btn btn-submit">Submit Now</button>
                     </form>
@@ -2209,7 +2308,9 @@
                                 <label for="name" class="form-label"><b>Name</b></label>
                                 <input type="text" class="form-control @error('name') is-invalid @enderror"
                                     name="name" id="name" placeholder="John Doe" required pattern="[A-Za-z\s]+"
-                                    title="Name cannot contain special characters or numbers.">
+                                    title="Name cannot contain special characters or numbers."
+                                     maxlength="51"
+                                oninput="validateName(this)">
                                 <div class="invalid-feedback">Please enter a valid name (letters and spaces only).</div>
                                 @error('name')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -2219,7 +2320,8 @@
                                 <label for="email" class="form-label"><b>Email address</b></label>
                                 <input type="email" class="form-control @error('email') is-invalid @enderror"
                                     name="email" id="email" placeholder="name@example.com" required
-                                    title="Please enter a valid email address">
+                                    title="Please enter a valid email address"
+                                      oninput="validateEmail(this)">
                                 <div class="invalid-feedback">Please enter a valid email address.</div>
                                 @error('email')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -2230,7 +2332,8 @@
                                 <input type="tel" class="form-control @error('phone') is-invalid @enderror"
                                     name="phone" id="phone" placeholder="+15554443322" required
                                     title="Phone number should be between 11 and 15 digits and may start with a '+'."
-                                    maxlength="15">
+                                    
+                                    maxlength="15" oninput="validatePhone(this)">
                                 <div class="invalid-feedback">Please enter a valid phone number (11 to 15 digits).</div>
                                 @error('phone')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -2238,8 +2341,23 @@
                             </div>
                             <div class="mb-3">
                                 <label for="message" class="form-label"><b>Message</b></label>
-                                <textarea name="message" id="message" rows="5" class="form-control" placeholder="Your message..." required></textarea>
+                                <textarea name="message" id="message" rows="5" class="form-control" placeholder="Your message..."
+                                
+                                maxlength="2001" 
+                                oninput="validateMessage(this)"
+                                 title="Not allowed more than 2000 characters in message text field"
+                                required></textarea>
+                                   <div class="invalid-feedback"></div>
+                            @error('message')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                             </div>
+                            
+                            
+               
+                            
+                            
+                            
                             <div class="text-center d-grid">
                                 <button type="submit" class="btn btn-lg btn-primary">Submit</button>
                             </div>
@@ -2388,7 +2506,10 @@
 
                 // Phone validation: only numbers and spaces, and maximum 15 characters
                 let phoneField = form.querySelector('#phone');
-                let phoneRegex = /^(?:\+?1[-.\s]?)?(?:\(?\d{3}\)?[-.\s]?)?\d{3}[-.\s]?\d{4}$/;
+                // let phoneRegex = /^(?:\+?1[-.\s]?)?(?:\(?\d{3}\)?[-.\s]?)?\d{3}[-.\s]?\d{4}$/;
+               let phoneRegex = /^(?:\+?\d{1,4}[-.\s]?)?(?:\(?\d{1,4}\)?[-.\s]?)?\d{9,15}$/;
+
+
                 // let phoneRegex = /^\+?[0-9\s]{10,15}$/;
                 if (!phoneRegex.test(phoneField.value.trim())) {
                     phoneField.classList.add('is-invalid');
@@ -2482,6 +2603,82 @@
                 }
             });
         </script>
+        
+        {{-- New Validation of banner form --}}
+
+
+<script>
+    // Name Validation
+// Name Validation
+function validateName(input) {
+    const namePattern = /^[A-Za-z][A-Za-z\s]*$/;
+    const errorMessage = input.parentElement.querySelector('.invalid-feedback');
+    
+    // Check if name exceeds 50 characters
+    if (input.value.length > 50) {
+        errorMessage.textContent = "Not allowed more than 50 characters and it must be in alphabet";
+        input.classList.add('is-invalid');
+        return false;
+    }
+
+    // Check if name is valid (only letters and spaces, starts with a letter)
+    if (!namePattern.test(input.value)) {
+        errorMessage.textContent = "Not allowed more than 50 characters and it must be in alphabet";
+        input.classList.add('is-invalid');
+        return false;
+    } else {
+        errorMessage.textContent = "Not allowed more than 50 characters and it must be in alphabet";
+        input.classList.remove('is-invalid');
+        return true;
+    }
+}
+
+
+    // Email Validation
+    function validateEmail(input) {
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const errorMessage = input.parentElement.querySelector('.invalid-feedback');
+        if (!emailPattern.test(input.value)) {
+            errorMessage.textContent = "Please enter a valid email address.";
+            input.classList.add('is-invalid');
+            return false;
+        } else {
+            errorMessage.textContent = "";
+            input.classList.remove('is-invalid');
+            return true;
+        }
+    }
+
+    // Phone Validation
+    function validatePhone(input) {
+        const phonePattern = /^\+?\d{10,15}$/;
+        const errorMessage = input.parentElement.querySelector('.invalid-feedback');
+        if (!phonePattern.test(input.value)) {
+            errorMessage.textContent = "Please enter a valid phone number (10 - 15 digits, optional '+').";
+            input.classList.add('is-invalid');
+            return false;
+        } else {
+            errorMessage.textContent = "";
+            input.classList.remove('is-invalid');
+            return true;
+        }
+    }
+
+    function validateMessage(textarea) {
+        const maxLength = 2000;
+        const errorMessage = textarea.parentElement.querySelector('.invalid-feedback');
+
+        if (textarea.value.length > maxLength) {
+            errorMessage.textContent = "Not allowed more than 2000 characters in message text field";
+            textarea.classList.add('is-invalid');
+            return false;
+        } else {
+            errorMessage.textContent = "";
+            textarea.classList.remove('is-invalid');
+            return true
+        }
+    }
+</script>
 
 
 
