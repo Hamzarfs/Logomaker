@@ -1,7 +1,8 @@
 @extends('site.common')
 
 @section('title', 'Contact Us - RFS Logo Design')
-@section('meta_desc', 'Get in touch with RFS Logo Design for all your logo design needs. Contact our team for support, inquiries, or to start creating your custom logo today.')
+@section('meta_desc', 'Get in touch with RFS Logo Design for all your logo design needs. Contact our team for support,
+    inquiries, or to start creating your custom logo today.')
 
 
 @section('content')
@@ -157,57 +158,61 @@
         .contact-button-online:hover {
             background-color: #512f90;
             background-color: #512f90;
-            color:#fff;
-            text-decoration: none; /* Remove any text decoration */
+            color: #fff;
+            text-decoration: none;
+            /* Remove any text decoration */
         }
 
         .education-logo-section {
-       background-image: url('/images/contact2.jpg');
-       background-size: cover;
-       background-position: center;
-       padding: 150px 0;
-       color: #fff;
-       text-align: center;
-       display: flex;
-       flex-direction: column;
-       justify-content: center; /* Center content vertically */
-       align-items: center; /* Center content horizontally */
-   }
-   
-   .education-logo-section h1 {
-       font-weight: 700;
-       font-size: 44px;
-       text-align: center;
-       
-   }
-   .education-logo-section h2 {
-       font-weight: 700;
-       font-size: 25px !important;
-       text-align: center;
-       margin-bottom: 20px;
-   }
-   
-   
-   .education-logo-section p {
-       margin-bottom: 20px;
-   }
-   @media (max-width: 768) {
+            background-image: url('/images/contact2.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* Center content vertically */
+            align-items: center;
+            /* Center content horizontally */
+        }
 
-   .new-testimonial{
-    margin-top:0px !important;
+        .education-logo-section h1 {
+            font-weight: 700;
+            font-size: 44px;
+            text-align: center;
 
-   }
-   }
-   
-   </style>
-   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<section class="education-logo-section">
-    <div class="container">
-        <h1>Contact Us</h1>
-        <p>Your one-stop solution for all your design needs.</p>
+        }
 
-    </div>
-</section>
+        .education-logo-section h2 {
+            font-weight: 700;
+            font-size: 25px !important;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+
+        .education-logo-section p {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768) {
+
+            .new-testimonial {
+                margin-top: 0px !important;
+
+            }
+        }
+    </style>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <section class="education-logo-section">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Your one-stop solution for all your design needs.</p>
+
+        </div>
+    </section>
 
 
 
@@ -265,10 +270,8 @@
                     <div class="form-group">
                         <label for="phone">Phone</label>
                         <i class="fas fa-phone form-icon"></i>
-                        <input type="text" class="form-control" name="phone" id="phone"
-                            placeholder="+1 2345678901" 
-                            required 
-                            pattern="^\+1\s\d{10}$" 
+                        <input type="text" class="form-control" name="phone" id="phone" placeholder="+1 2345678901"
+                            required pattern="^\+1\s\d{10}$"
                             title="Please enter a valid phone number in the format +1 2345678901">
 
                     </div>

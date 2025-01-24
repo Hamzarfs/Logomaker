@@ -8,13 +8,13 @@ use App\Mail\ContactUs;
 use App\Mail\ContactUsLP;
 use App\Mail\CustomerMail;
 use App\Mail\CustomLogo;
+use App\Models\Blog;
 use App\Models\Category;
-use Exception;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
- use App\Rules\Recaptcha;
+use Illuminate\Support\Facades\Hash;
+use App\Rules\Recaptcha;
 
 class GeneralController extends \App\Http\Controllers\Controller
 {
@@ -94,10 +94,6 @@ class GeneralController extends \App\Http\Controllers\Controller
     }
     public function contactUs()
     {
-        session([
-            'secret' => bcrypt('abcd1234'),
-        ]);
-
         return view('site/contact-us');
     }
     public function termscondition()
@@ -139,13 +135,10 @@ class GeneralController extends \App\Http\Controllers\Controller
 
     public function contactUsSubmit(Request $request)
     {
-        
+
         // $request->validate([
         //     'g-recaptcha-response' => ['required', new Recaptcha],
         // ]);
-        if(!Hash::check('abcd1234', session('secret')))
-            throw new Exception('Invalid request');
-
         $data = $request->all();
         $users = User::role('admin')->pluck('email');
         $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com', 'info@rfslogodesign.com'];
@@ -169,8 +162,8 @@ class GeneralController extends \App\Http\Controllers\Controller
     {
         $data = $request->all();
         $users = User::role('admin')->pluck('email');
-        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com', 'info@rfslogodesign.com', 'brian@redfsol.com' ];
-        
+        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com', 'info@rfslogodesign.com', 'brian@redfsol.com'];
+
         try {
             Mail::to($users)->send(new ContactUsLP($data));
             Mail::to($data['email'])->send(new CustomerMail($data));
@@ -312,5 +305,21 @@ class GeneralController extends \App\Http\Controllers\Controller
     public function eCommerceWebsiteDevelopment()
     {
         return view('site.e-commerce-website-development');
+    }
+    public function blogs()
+    {
+        $blogs = Blog::where('is_archived', false)->with(['tags', 'category'])->get();
+
+        return view('site.blogs', [
+            'blogs' => $blogs
+        ]);
+    }
+    public function showBlog(Blog $blog)
+    {
+        $blog->load(['tags', 'category']);
+
+        return view('site.blog', [
+            'blog' => $blog
+        ]);
     }
 }

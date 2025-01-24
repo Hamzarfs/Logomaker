@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BlogCategoryController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\FontController;
@@ -10,6 +12,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SubCateoryController;
+use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->name('admin.')->middleware(['auth', 'verified', 'role:admin'])->group(function () {
@@ -32,4 +35,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'verified', 'role:ad
     Route::prefix('orders')->name('orders.')->group(function() {
         Route::get('', [OrderController::class, 'index'])->name('index');
     });
+    Route::resource('blogCategories', BlogCategoryController::class);
+    Route::resource('tags', TagController::class);
+    Route::resource('blogs', BlogController::class);
 });

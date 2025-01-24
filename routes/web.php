@@ -121,6 +121,11 @@ Route::get('shopify-website-development', [GeneralController::class, 'shopifyWeb
 Route::get('e-commerce-website-development', [GeneralController::class, 'eCommerceWebsiteDevelopment']);
 Route::get('/custom-logo-design', [GeneralController::class, 'lppage']);
 
+Route::prefix('blogs')->controller(GeneralController::class)->name('blogs.')->group(function() {
+    Route::get('', 'blogs')->name('all');
+    Route::get('{blog:slug}', 'showBlog')->name('show');
+});
+
 
 
 //  End general pages

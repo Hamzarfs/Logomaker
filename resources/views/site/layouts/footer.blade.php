@@ -28,6 +28,7 @@
                     <li><a href="{{ url('/frequently-asked-question') }}">FAQ</a></li>
                     <li><a href="{{ url('contact-us') }}">Contact Us</a></li>
                     <li><a href="{{ url('site-map') }}">Sitemap</a></li>
+                    <li><a href="{{ route('blogs.all') }}">Blogs</a></li>
                 </ul>
             </div>
 

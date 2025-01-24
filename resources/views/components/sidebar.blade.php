@@ -77,6 +77,39 @@
                     <p>Fonts <span class="badge badge-warning right">{{ $FontsCount }}</span></p>
                 </a>
             </li>
+            <li class="nav-item {{ Route::is('admin.blogCategories.*', 'admin.tags.*', 'admin.blogs.*') ? 'menu-open' : '' }}">
+                <a href="javascript:void(0)"
+                    class="nav-link {{ Route::is('admin.blogCategories.*', 'admin.tags.*', 'admin.blogs.*') ? 'active' : '' }}">
+                    <i class="nav-icon fab fa-blogger-b"></i>
+                    <p>
+                        Blog Management
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{ route('admin.blogCategories.index') }}"
+                            class="nav-link {{ Route::is('admin.blogCategories.*') ? 'active' : '' }}">
+                            <i class="{{ Route::is('admin.blogCategories.*') ? 'fa' : 'far' }} fa-circle nav-icon"></i>
+                            <p>Categories <span class="badge badge-success right">{{ $blogCategories }}</span></p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('admin.tags.index') }}"
+                            class="nav-link {{ Route::is('admin.tags.*') ? 'active' : '' }}">
+                            <i class="{{ Route::is('admin.tags.*') ? 'fa' : 'far' }} fa-circle nav-icon"></i>
+                            <p>Tags <span class="badge badge-success right">{{ $blogTags }}</span></p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('admin.blogs.index') }}"
+                            class="nav-link {{ Route::is('admin.blogs.*') ? 'active' : '' }}">
+                            <i class="{{ Route::is('admin.blogs.*') ? 'fa' : 'far' }} fa-circle nav-icon"></i>
+                            <p>Blogs <span class="badge badge-success right">{{ $blogs }}</span></p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         @endrole
         <li class="nav-item">
             <a href="{{ route('admin.orders.index') }}"

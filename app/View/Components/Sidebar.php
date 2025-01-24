@@ -2,12 +2,15 @@
 
 namespace App\View\Components;
 
+use App\Models\Blog;
+use App\Models\BlogCategory;
 use App\Models\Category;
 use App\Models\Collection;
 use App\Models\Font;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\SubCategory;
+use App\Models\Tag;
 use App\Models\User;
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -32,6 +35,10 @@ class Sidebar extends Component
         $OrdersCount = Order::count();
         $FontsCount = Font::count();
 
+        $blogCategories = BlogCategory::count();
+        $blogTags = Tag::count();
+        $blogs = Blog::count();
+
         view()->share(compact(
             'userCount',
             'RoleCount',
@@ -42,6 +49,9 @@ class Sidebar extends Component
             'ProductCount',
             'OrdersCount',
             'FontsCount',
+            'blogCategories',
+            'blogTags',
+            'blogs',
         ));
     }
 
