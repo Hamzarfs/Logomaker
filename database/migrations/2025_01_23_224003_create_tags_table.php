@@ -27,3 +27,7 @@ return new class extends Migration
         Schema::dropIfExists('tags');
     }
 };
+
+/**
+ * php artisan migrate --path="database\migrations\2025_01_23_224003_create_tags_table.php" --path="database\migrations\2025_01_23_224039_create_blog_categories_table.php" --path="database\migrations\2025_01_23_224046_create_blogs_table.php" --path="database\migrations\2025_01_23_224229_create_blog_tag_table.php"
+ */
