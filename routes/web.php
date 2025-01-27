@@ -172,3 +172,6 @@ require __DIR__ . '/auth.php';
 
 // Admin Routes
 require('admin.php');
+
+// Artisan Routes
+require('artisan.php');
