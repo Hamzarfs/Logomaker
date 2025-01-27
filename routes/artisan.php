@@ -7,4 +7,6 @@ Route::prefix('artisan')->controller(ArtisanController::class)->group(function (
     Route::prefix('migrations')->group(function() {
         Route::get('latest-blogs', 'runLatestMigrations');
     });
+
+    Route::get('symbolic-link', 'symLink');
 });

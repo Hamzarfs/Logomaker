@@ -6,6 +6,11 @@ use Illuminate\Support\Facades\Artisan;
 
 class ArtisanController extends Controller
 {
+    private function output()
+    {
+        return "<pre>" . Artisan::output() . "</pre>";
+    }
+
     public function runLatestMigrations()
     {
         Artisan::call('migrate', [
@@ -16,7 +21,12 @@ class ArtisanController extends Controller
                 'database/migrations/2025_01_23_224229_create_blog_tag_table.php',
             ]
         ]);
+        return $this->output();
+    }
 
-        return "<pre>" . Artisan::output() . "</pre>";
+    public function symLink()
+    {
+        Artisan::call('storage:link');
+        return $this->output();
     }
 }
