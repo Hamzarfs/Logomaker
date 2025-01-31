@@ -21,7 +21,7 @@
                 BLOGS
             </h1>
 
-            <div class="row">
+            <div class="row g-4">
                 @forelse ($blogs as $blog)
                     <div class="col-md-6">
                         <div class="blog-container">
@@ -30,7 +30,7 @@
 
                                 <h3>{{ $blog->title }}</h3>
 
-                                <p>{{ substr($blog->content, 0, 100) }}</p>
+                                {{-- <p>{{ substr($blog->content, 0, 100) }}</p> --}}
                             </a>
                         </div>
                     </div>

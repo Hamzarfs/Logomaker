@@ -44,6 +44,7 @@ class BlogController extends Controller
             'title' => ['required', 'string'],
             'slug' => ['nullable', 'string', Rule::unique('blogs')],
             'content' => ['required', 'string'],
+            'meta_tags' => ['required', 'string'],
             'category' => ['required', 'exists:blog_categories,id'],
             'tags' => ['required', 'array'],
             'tags.*' => ['required', 'exists:tags,id'],
@@ -58,6 +59,7 @@ class BlogController extends Controller
             'title' => $data['title'],
             'slug' => Str::slug($data['slug'] ? Str::lower($data['slug']) : $data['title']),
             'content' => $data['content'],
+            'meta_tags' => $data['meta_tags'],
             'is_archived' => Arr::exists($data, 'is_archived') && $data['is_archived'] == 1,
             'is_featured' => Arr::exists($data, 'is_featured') && $data['is_featured'] == 1,
             'image' => $imagePath,
@@ -109,6 +111,7 @@ class BlogController extends Controller
             'title' => ['required', 'string'],
             'slug' => ['nullable', 'string', Rule::unique('blogs')->ignoreModel($blog)],
             'content' => ['required', 'string'],
+            'meta_tags' => ['required', 'string'],
             'category' => ['required', 'exists:categories,id'],
             'tags' => ['required', 'array'],
             'tags.*' => ['required', 'exists:tags,id'],
@@ -122,6 +125,7 @@ class BlogController extends Controller
             'title' => $data['title'],
             'slug' => Str::slug($data['slug'] ? Str::lower($data['slug']) : $data['title']),
             'content' => $data['content'],
+            'meta_tags' => $data['meta_tags'],
             'is_archived' => Arr::exists($data, 'is_archived') && $data['is_archived'] == 1,
             'is_featured' => Arr::exists($data, 'is_featured') && $data['is_featured'] == 1,
         ];
@@ -176,5 +180,18 @@ class BlogController extends Controller
         $blog->delete();
 
         return redirect()->route('admin.blogs.index')->with('success', 'Blog deleted successfully!');
+    }
+
+    /**
+     * Image uploader for blog content images uploaded by TinyMCE editor
+     */
+    public function uploadBlogContentImage(Request $request)
+    {
+        $data = $request->validate([
+            'file' => "required|image|max:2048"
+        ]);
+
+        $path = $data['file']->store('blogs/tinymceUploads', 'public');
+        return response()->json(['location' => $path]);
     }
 }

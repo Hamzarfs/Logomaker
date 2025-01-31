@@ -6,8 +6,9 @@
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js" defer></script>
         <link href="https://cdn.jsdelivr.net/npm/@ttskch/select2-bootstrap4-theme@1.5.2/dist/select2-bootstrap4.min.css"
             rel="stylesheet">
-        {{-- <link href="https://cdn.jsdelivr.net/npm/@ttskch/select2-bootstrap4-theme@x.x.x/dist/select2-bootstrap4.min.css"
-            rel="stylesheet"> --}}
+
+        {{-- Import Tinymce script --}}
+        <script src="{{ asset('admin/plugins/tinymce/tinymce.min.js') }}" referrerpolicy="origin"></script>
 
 
         <style>
@@ -53,7 +54,7 @@
                                     <div class="form-group">
                                         <label for="content" class="form-label">Content <span
                                                 class="text-danger fw-bold">*</span></label>
-                                        <textarea class="form-control @error('content') is-invalid @enderror" name="content" id="content" required
+                                        <textarea class="form-control @error('content') is-invalid @enderror" name="content" id="content"
                                             placeholder="Blog content" rows="5">{{ old('content') }}</textarea>
                                         @error('content')
                                             <div class="invalid-feedback">
@@ -77,7 +78,7 @@
                                     <div class="form-group">
                                         <div class="custom-control custom-switch custom-control-inline">
                                             <input type="checkbox" class="custom-control-input" id="is_archived"
-                                                name="is_archived" value="1">
+                                                name="is_archived" value="1" @checked(old('is_archived'))>
                                             <label class="custom-control-label" for="is_archived">Archive ?</label>
                                             @error('is_archived')
                                                 <div class="invalid-feedback">
@@ -88,7 +89,7 @@
 
                                         <div class="custom-control custom-switch custom-control-inline">
                                             <input type="checkbox" class="custom-control-input" id="is_featured"
-                                                name="is_featured" value="1">
+                                                name="is_featured" value="1" @checked(old('is_featured'))>
                                             <label class="custom-control-label" for="is_featured">Featured ?</label>
                                             @error('is_featured')
                                                 <div class="invalid-feedback">
@@ -148,6 +149,18 @@
                                         @enderror
                                     </div>
 
+                                    <div class="form-group">
+                                        <label for="meta" class="form-label">SEO Tags <span
+                                                class="text-danger fw-bold">*</span></label>
+                                        <textarea name="meta_tags" id="meta" rows="5"
+                                            class="form-control @error('meta_tags') is-invalid @enderror" required>{{ old('meta_tags') }} </textarea>
+                                        @error('meta_tags')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -183,7 +196,46 @@
                     placeholder: 'Select tags',
                     allowClear: true
                 })
+
+                tinymce.init({
+                    selector: 'textarea#content',
+                    menubar: false,
+                    plugins: [
+                        'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'link', 'lists',
+                        'searchreplace', 'visualblocks', 'wordcount', 'code', 'image'
+                    ],
+                    toolbar: 'code | undo redo | blocks fontsize | bold italic underline strikethrough | image link | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+                    image_title: true,
+                    automatic_uploads: true,
+                    file_picker_types: 'image',
+                    images_upload_url: "{{ route('admin.uploadBlogContentImage') }}",
+                    image_prepend_url: "{{ url('storage') }}/",
+                    relative_urls: false,
+                    remove_script_host: false,
+                    document_base_url: "{{ url('/') }}/",
+                    setup: function(editor) {
+                        editor.on('NodeChange', function(e) {
+                            if (e && e.element.nodeName.toLowerCase() === 'img') {
+                                var cls = e.element.getAttribute('class') || '';
+                                if (cls.indexOf('img-fluid') === -1) {
+                                    editor.dom.setAttrib(e.element, 'class', cls + 'img-fluid');
+                                }
+                            }
+                        });
+                    },
+                });
             });
+
+            $('form').submit(function(event) {
+                const content = tinymce.get('content').getContent({
+                    format: 'text'
+                }).trim();
+                if (content === '') {
+                    event.preventDefault();
+                    alert('The content field is required.');
+                    tinymce.get('content').focus();
+                }
+            })
         </script>
     @endsection
 </x-admin>

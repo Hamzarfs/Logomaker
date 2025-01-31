@@ -37,5 +37,6 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'verified', 'role:ad
     });
     Route::resource('blogCategories', BlogCategoryController::class);
     Route::resource('tags', TagController::class);
+    Route::post('blogs/upload-img', [BlogController::class, 'uploadBlogContentImage'])->name('uploadBlogContentImage');
     Route::resource('blogs', BlogController::class);
 });

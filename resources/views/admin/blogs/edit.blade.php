@@ -7,6 +7,8 @@
         <link href="https://cdn.jsdelivr.net/npm/@ttskch/select2-bootstrap4-theme@x.x.x/dist/select2-bootstrap4.min.css"
             rel="stylesheet">
 
+        {{-- Import Tinymce script --}}
+        <script src="{{ asset('admin/plugins/tinymce/tinymce.min.js') }}" referrerpolicy="origin"></script>
 
         <style>
             .select2-container--bootstrap4 .select2-selection__clear {
@@ -52,7 +54,7 @@
                                     <div class="form-group">
                                         <label for="content" class="form-label">Content <span
                                                 class="text-danger fw-bold">*</span></label>
-                                        <textarea class="form-control @error('content') is-invalid @enderror" name="content" id="content" required
+                                        <textarea class="form-control @error('content') is-invalid @enderror" name="content" id="content"
                                             placeholder="Blog content" rows="5">{{ old('content', $blog->content) }}</textarea>
                                         @error('content')
                                             <div class="invalid-feedback">
@@ -134,8 +136,8 @@
                                     <div class="form-group">
                                         <label for="tags" class="form-label">Tags <span
                                                 class="text-danger fw-bold">*</span></label>
-                                        <select class="custom-select @error('tags') is-invalid @enderror"
-                                            name="tags[]" id="tags" required multiple>
+                                        <select class="custom-select @error('tags') is-invalid @enderror" name="tags[]"
+                                            id="tags" required multiple>
                                             <option value="">Select tags</option>
                                             @foreach ($tags as $tag)
                                                 <option value="{{ $tag->id }}" @selected(in_array($tag->id, old('tags', array_column($blog->tags->toArray(), 'id'))))>
@@ -143,6 +145,18 @@
                                             @endforeach
                                         </select>
                                         @error('tags.*')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="meta" class="form-label">SEO Tags <span
+                                                class="text-danger fw-bold">*</span></label>
+                                        <textarea name="meta_tags" id="meta" rows="5"
+                                            class="form-control @error('meta_tags') is-invalid @enderror" required>{{ old('meta_tags', $blog->meta_tags) }} </textarea>
+                                        @error('meta_tags')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
                                             </div>
@@ -202,10 +216,49 @@
                     placeholder: 'Select tags',
                     allowClear: true
                 })
+
+                tinymce.init({
+                    selector: 'textarea#content',
+                    menubar: false,
+                    plugins: [
+                        'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'link', 'lists',
+                        'searchreplace', 'visualblocks', 'wordcount', 'code', 'image'
+                    ],
+                    toolbar: 'code | undo redo | blocks fontsize | bold italic underline strikethrough | image link | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+                    image_title: true,
+                    automatic_uploads: true,
+                    file_picker_types: 'image',
+                    images_upload_url: "{{ route('admin.uploadBlogContentImage') }}",
+                    image_prepend_url: "{{ url('storage') }}/",
+                    relative_urls: false,
+                    remove_script_host: false,
+                    document_base_url: "{{ url('/') }}/",
+                    setup: function(editor) {
+                        editor.on('NodeChange', function(e) {
+                            if (e && e.element.nodeName.toLowerCase() === 'img') {
+                                var cls = e.element.getAttribute('class') || '';
+                                if (cls.indexOf('img-fluid') === -1) {
+                                    editor.dom.setAttrib(e.element, 'class', cls + 'img-fluid');
+                                }
+                            }
+                        });
+                    },
+                });
             })
 
             $('#view-image-modal').on('show.bs.modal', function() {
                 $(this).find('.modal-body img').attr('src', $('.view-image').data('image'))
+            })
+
+            $('form').submit(function(event) {
+                const content = tinymce.get('content').getContent({
+                    format: 'text'
+                }).trim();
+                if (content === '') {
+                    event.preventDefault();
+                    alert('The content field is required.');
+                    tinymce.get('content').focus();
+                }
             })
         </script>
     @endsection

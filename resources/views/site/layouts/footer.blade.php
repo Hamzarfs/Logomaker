@@ -7,20 +7,21 @@
             <div class="col-md-4">
                 <a href="{{ url('/') }}">
                     <img src="{{ asset('images/RFS.svg') }}" alt="Logo" class="footer-logo mb-6"></a>
-                    <p class="footer-description" style="text-align:justify; font-size: 12px;">
+                <p class="footer-description" style="text-align:justify; font-size: 12px;">
                     At RFS Logo Design, we turn logo dreams into reality for clients worldwide.
                     With a knack for creating stunning, sophisticated logos at budget-friendly
                     prices, we cater to every industry. Get in touch with us today!</p>
                 <div class="social-icons">
                     {{-- <a href="#"><i class="bi bi-whatsapp"></i></a> --}}
                     <a href="https://www.facebook.com/rfslogodesign/" target="_blank"><i class="bi bi-facebook"></i></a>
-                    <a href="https://www.instagram.com/rfs_logodesign/" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.instagram.com/rfs_logodesign/" target="_blank"><i
+                            class="bi bi-instagram"></i></a>
                     {{-- <a href="#"><i class="bi bi-twitter"></i></a> --}}
                     {{-- <a href="#"><i class="bi bi-linkedin"></i></a> --}}
                 </div>
             </div>
             {{-- <div class="col-md-2"> --}}
-                <div class="col-12 col-sm-12 col-lg-2 col-xl-2">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-2 col-xl-2">
                 <h5>About Company</h5>
                 <ul class="list-unstyled">
                     <li><a href="{{ url('/about-us') }}">About Us</a></li>
@@ -34,7 +35,7 @@
 
 
             {{-- <div class="col-md-2"> --}}
-                <div class="col-12 col-sm-12 col-lg-2 col-xl-2">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-2 col-xl-2">
                 <h5>Top Locations</h5>
                 <ul class="list-unstyled">
                     <li><a href="{{ url('/logo-design-california') }}">California Logo Design</a></li>
@@ -52,14 +53,15 @@
 
 
             {{-- <div class="col-md-2"> --}}
-                <div class="col-12 col-sm-12 col-lg-2 col-xl-2">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-2 col-xl-2">
                 <h5>Other Services</h5>
                 <ul class="list-unstyled">
                     <li><a href="{{ url('printing') }}">Printing</a></li>
                     <li><a href="{{ url('stationery-designing') }}">Stationery Designing</a></li>
                     <li><a href="{{ url('graphic-designing') }}">Graphic Designing</a></li>
                     <li><a href="{{ url('website-design-development') }}">Website Design Development</a></li>
-                    <li><a href="{{ url('custom-website-design-development') }}">Custom Website Design Development</a></li>
+                    <li><a href="{{ url('custom-website-design-development') }}">Custom Website Design Development</a>
+                    </li>
                     <li><a href="{{ url('wordpress-website-development') }}">Wordpress Website Development</a></li>
                     <li><a href="{{ url('shopify-website-development') }}">Shopify Website Development</a></li>
                     <li><a href="{{ url('e-commerce-website-development') }}">E-commerce Website Development</a></li>
@@ -70,37 +72,38 @@
 
 
 
-<!-- Logo Ideas Section -->
-{{-- <div class="col-md-2"> --}}
-    <div class="col-12 col-sm-12 col-lg-2 col-xl-2">
-    <h5>Logo Ideas</h5>
-    <ul class="list-unstyled">
-        @foreach ($categories as $index => $category)
-            @if ($index < 10)
-                <li><a href="{{ url('/logos/'. $category->slug)}}" class="logo-ideas-link">{{ $category->name }}</a></li>
-            @else
-                @break
-            @endif
-        @endforeach
-    </ul>
-</div>
+            <!-- Logo Ideas Section -->
+            {{-- <div class="col-md-2"> --}}
+            <div class="col-12 col-sm-12 col-md-4 col-lg-2 col-xl-2">
+                <h5>Logo Ideas</h5>
+                <ul class="list-unstyled">
+                    @foreach ($categories as $index => $category)
+                        @if ($index < 10)
+                            <li><a href="{{ url('/logos/' . $category->slug) }}"
+                                    class="logo-ideas-link">{{ $category->name }}</a></li>
+                        @else
+                        @break
+                    @endif
+                @endforeach
+            </ul>
+        </div>
 
 
 
-          </div>
+    </div>
 
-        <!-- Second Row -->
-        <div class="row border-top py-3">
-            <div class="col-md-6">
-                <p>&copy; 2025 RFSLogoDesign</p>
-            </div>
+    <!-- Second Row -->
+    <div class="row border-top py-3">
+        <div class="col-md-6">
+            <p>&copy; {{ date('Y') }} RFSLogoDesign</p>
+        </div>
 
-            <div class="col-md-6 text-md-end">
-                <a href="{{ url('terms-condition') }}" class="footer-link">Terms & Conditions</a> |
-                <a href="{{ url('privacy-policy') }}" class="footer-link">Privacy Policy</a>
-            </div>
+        <div class="col-md-6 text-md-end">
+            <a href="{{ url('terms-condition') }}" class="footer-link">Terms & Conditions</a> |
+            <a href="{{ url('privacy-policy') }}" class="footer-link">Privacy Policy</a>
         </div>
     </div>
+</div>
 </footer>
 
 {{-- @guest

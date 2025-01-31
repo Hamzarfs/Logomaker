@@ -1,6 +1,8 @@
 @extends('site.common')
 
-@section('title', sprintf('%s | %s', $blog->title, env('APP_NAME')))
+@section('seo_meta_tags')
+    {!! $blog->meta_tags !!}
+@endsection
 
 @section('content')
     <style>
@@ -35,7 +37,7 @@
                     </div>
                 </div>
 
-                <p class="mt-4">{{ $blog->content }}</p>
+                <p class="mt-4">{!! $blog->content !!}</p>
             </div>
         </div>
     </section>

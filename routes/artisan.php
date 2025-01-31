@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('artisan')->controller(ArtisanController::class)->group(function () {
     Route::prefix('migrations')->group(function() {
-        Route::get('latest-blogs', 'runLatestMigrations');
+        Route::get('latest', 'runLatestMigrations');
     });
 
     Route::get('symbolic-link', 'symLink');
