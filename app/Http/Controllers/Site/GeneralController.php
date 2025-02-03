@@ -10,6 +10,7 @@ use App\Mail\CustomerMail;
 use App\Mail\CustomLogo;
 use App\Models\Blog;
 use App\Models\Category;
+use App\Rules\BlockDomain;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
@@ -135,11 +136,16 @@ class GeneralController extends \App\Http\Controllers\Controller
 
     public function contactUsSubmit(Request $request)
     {
+        $data = $request->validate([
+            // 'g-recaptcha-response' => ['required', new Recaptcha],
+            'name' => ['required', 'string', new BlockDomain('hideuri.com')],
+            'email' => 'required|email',
+            'phone' => 'required|regex:/^\+?\d{10,15}$/',
+            'comment' => ['required', 'string', new BlockDomain('hideuri.com')]
+        ]);
 
-        // $request->validate([
-        //     'g-recaptcha-response' => ['required', new Recaptcha],
-        // ]);
-        $data = $request->all();
+        // $data = $request->all();
+
         $users = User::role('admin')->pluck('email');
         $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com', 'info@rfslogodesign.com'];
         try {

@@ -1,7 +1,8 @@
 @extends('site.common')
 
 @section('title', 'Contact Us - RFS Logo Design')
-@section('meta_desc', 'Get in touch with RFS Logo Design for all your logo design needs. Contact our team for support,
+@section('meta_desc',
+    'Get in touch with RFS Logo Design for all your logo design needs. Contact our team for support,
     inquiries, or to start creating your custom logo today.')
 
 
@@ -256,29 +257,41 @@
                     <div class="form-group">
                         <label for="name">Name</label>
                         <i class="fas fa-user form-icon"></i>
-                        <input type="text" class="form-control" name="name" id="name"
-                            placeholder="Enter your name" required>
+                        <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}"
+                            id="name" placeholder="Enter your name" required>
+                        @error('name')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
                         <i class="fas fa-envelope form-icon"></i>
-                        <input type="email" class="form-control" name="email" id="email"
-                            placeholder="Enter your email"
+                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email"
+                            id="email" placeholder="Enter your email" value="{{ old('email') }}"
                             title="Please enter a valid email address ending with .com (e.g., example@example.com)"
                             required>
+                        @error('email')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone</label>
                         <i class="fas fa-phone form-icon"></i>
-                        <input type="text" class="form-control" name="phone" id="phone" placeholder="+1 2345678901"
-                            required pattern="^\+1\s\d{10}$"
+                        <input type="text" class="form-control @error('phone') is-invalid @enderror" name="phone"
+                            id="phone" placeholder="+1 2345678901" required value="{{ old('phone') }}"
                             title="Please enter a valid phone number in the format +1 2345678901">
-
+                        @error('phone')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="comment">Comment</label>
                         <i class="fas fa-comment form-icon"></i>
-                        <textarea class="form-control" name="comment" id="comment" rows="1" placeholder="Enter your comment" required></textarea>
+                        <textarea class="form-control @error('comment') is-invalid @enderror" name="comment" id="comment" rows="1"
+                            placeholder="Enter your comment" required>{{ old('comment') }}</textarea>
+                        @error('comment')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
                     <!--<div class="g-recaptcha" data-sitekey=""></div>-->
                     <button type="submit" class="contact-button-online mt-3">Submit</button>

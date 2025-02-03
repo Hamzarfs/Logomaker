@@ -30,6 +30,9 @@ use App\Http\Controllers\ImageController;
 //     ]);
 // });
 
+// Auth routes
+require __DIR__ . '/auth.php';
+
 // web
 Route::get('/', [MainController::class, 'index'])->name('homepage');
 Route::get('images/{image}', [ImageController::class, 'show'])->name('image.show');
@@ -169,8 +172,7 @@ Route::prefix('oauth/')->group(function () {
 // Route::get('public/{any1?}/{any2?}', fn(...$paths) => redirect()->to(implode('/', $paths)));
 // Route::get('public/{any1?}/{any2?}/{any3?}', fn(...$paths) => redirect()->to(implode('/', $paths)));
 
-// Auth routes
-require __DIR__ . '/auth.php';
+
 
 // Admin Routes
 require('admin.php');
