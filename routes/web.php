@@ -31,7 +31,15 @@ use App\Http\Controllers\ImageController;
 // });
 
 // web
-Route::get('/', [MainController::class, 'index'])->name('homepage');
+//Route::get('/', [MainController::class, 'index'])->name('homepage');
+Route::get('/', [GeneralController::class, 'lppage']);
+Route::get('/contact-us', [GeneralController::class, 'contactUs']);
+Route::get('/terms-condition', [GeneralController::class, 'termsCondition'])->name('termsCondition');
+Route::get('/privacy-policy', [GeneralController::class, 'PrivacyPolicy']);
+
+
+
+
 Route::get('images/{image}', [ImageController::class, 'show'])->name('image.show');
 
 
@@ -104,9 +112,6 @@ Route::get('/logo-design-arizona', [GeneralController::class, 'logoDesignArizona
 Route::get('/logo-design-new-york', [GeneralController::class, 'logoDesignNewYork']);
 Route::get('/logo-design-virginia', [GeneralController::class, 'logoDesignVirginia']);
 Route::get('/frequently-asked-question', [GeneralController::class, 'FrequentlyAskedQuestion']);
-Route::get('/contact-us', [GeneralController::class, 'contactUs']);
-Route::get('/terms-condition', [GeneralController::class, 'termsCondition'])->name('termsCondition');
-Route::get('/privacy-policy', [GeneralController::class, 'PrivacyPolicy']);
 Route::get('/custom-logo', [GeneralController::class, 'customLogo']);
 Route::post('contact-us', [GeneralController::class, 'contactUsSubmit'])->name('contactUs');
 Route::post('contact-us-lp', [GeneralController::class, 'contactUsSubmitLP'])->name('contactUsLP');
@@ -119,7 +124,6 @@ Route::get('custom-website-design-development', [GeneralController::class, 'cust
 Route::get('wordpress-website-development', [GeneralController::class, 'wordpressWebsiteDevelopment']);
 Route::get('shopify-website-development', [GeneralController::class, 'shopifyWebsiteDevelopment']);
 Route::get('e-commerce-website-development', [GeneralController::class, 'eCommerceWebsiteDevelopment']);
-Route::get('/custom-logo-design', [GeneralController::class, 'lppage']);
 
 
 

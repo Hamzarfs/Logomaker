@@ -61,10 +61,6 @@
         */
 
 
-
-
-
-
         /* Custom scrollbar styles */
         ::-webkit-scrollbar {
             width: 8px;
@@ -104,37 +100,24 @@
     {{-- @yield('styles') --}}
 
 
+ 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11548374576"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-11548374576');
+</script>
+ 
 
-    <meta name="google-site-verification" content="PCblVwSUWCzACg0raNR0v7VHp7F1haeuavWupNiKPhk" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8EQZ5SK5PS"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+<meta name="google-site-verification" content="X27Ow2RgaQKJjuU2nqW1wgyxzyCGJJZuAg-HejtvlXs" />
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-8EQZ5SK5PS');
-    </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16744151824"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'AW-16744151824');
-    </script>
-
-    <!-- Brevo Conversations {literal} -->
+   <!-- Brevo Conversations {literal} -->
     <script>
         (function(d, w, c) {
-            w.BrevoConversationsID = '65eb4c58149bb809250724f4';
+            w.BrevoConversationsID = '679bcdb7de5f065bf40e2ccb';
             w[c] = w[c] || function() {
                 (w[c].q = w[c].q || []).push(arguments);
             };
@@ -146,39 +129,34 @@
     </script>
     <!-- /Brevo Conversations {/literal} -->
 
-    <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "RFS Logo Design",
-        "url": "https://rfslogodesign.com/",
-        "logo": "https://rfslogodesign.com/images/RFS.svg",
-        "sameAs": [
-            "https://www.facebook.com/rfslogodesign/",
-            "https://www.instagram.com/rfs_logodesign/"
-        ]
-        }
-    </script>
-
+    
 </head>
 
 
 <body>
 
+<!--  ClickCease.com tracking-->
+      <script type='text/javascript'>var script = document.createElement('script');
+      script.async = true; script.type = 'text/javascript';
+      var target = 'https://www.clickcease.com/monitor/stat.js';
+      script.src = target;var elem = document.head;elem.appendChild(script);
+      </script>
+      <noscript>
+      <a href='https://www.clickcease.com' rel='nofollow'><img src='https://monitor.clickcease.com' alt='ClickCease'/></a>
+      </noscript>
+      <!--  ClickCease.com tracking-->
 
 
-
-    @includeWhen(!request()->is('custom-logo-design'), 'site.layouts.header')
-
-    @includeWhen(request()->is('custom-logo-design'), 'site.layouts.lp-header')
+    
+    @include('site.layouts.lp-header')
 
     @yield('content')
 
 
 
-    @includeWhen(!request()->is('custom-logo-design'), 'site.layouts.footer')
+    
 
-    @includeWhen(request()->is('custom-logo-design'), 'site.layouts.lp-footer')
+    @include( 'site.layouts.lp-footer')
 
 
 

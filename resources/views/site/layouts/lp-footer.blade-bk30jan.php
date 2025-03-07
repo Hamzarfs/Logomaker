@@ -1,5 +1,7 @@
 <!-- Font Awesome 4.7 -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+
 
 
 <section class="lp-footer-sec text-white d-flex flex-column" style="background-color: #080A2D;">
@@ -12,7 +14,7 @@
                     <img src="{{ asset('images/rfswhitelogolp.svg') }}" alt="RFS Logo Design Logo" width="200px"
                         class="footer-logo mb-4" />
                 </a>
-                <p class="footer-text text-justify">RFS Logo Design, based in Wembley, UK, specializes in bespoke logo creation, branding, graphic design, and website development. As a professional design company, we deliver custom designs that reflect your brand’s identity and vision. From startups to established businesses, we provide visually stunning and memorable solutions to make a lasting impression. Our commitment to creativity, quality, and client satisfaction ensures each project is unique and impactful. Choose RFS Logo Design for innovative, professional, and personalized services that elevate your brand and online presence to the next level.</p>
+                <p>RFS Logo Design, based in Wembley, UK, specializes in bespoke logo creation, branding, graphic design, and website development. As a professional design company, we deliver custom designs that reflect your brand’s identity and vision. From startups to established businesses, we provide visually stunning and memorable solutions to make a lasting impression. Our commitment to creativity, quality, and client satisfaction ensures each project is unique and impactful. Choose RFS Logo Design for innovative, professional, and personalized services that elevate your brand and online presence to the next level.</p>
             </div>
 
             <!-- Second Column for Social Icons -->
@@ -30,7 +32,8 @@
                     <li>
                         <i class="fas fa-map-marker-alt contact-icon"></i>
                         <a href="https://www.google.com/maps?q=Continental+House,+497+Sunleigh+Road,+Wembley,+England,+HA0+4LY"
-                            target="_blank" style="color: inherit; text-decoration: none;"> <span>Continental House, 497 Sunleigh Road, Wembley, England, HA0 4LY</span></a>
+                            target="_blank" style="color: inherit; text-decoration: none;"> <span>Continental House, 497
+                                Sunleigh Road, <br>Wembley, England, HA0 4LY</span></a>
                     </li>
                 </ul>
                 <div class="social-icons d-flex justify-content-center justify-content-md-end">
@@ -51,12 +54,12 @@
 
         <!-- Second Row - Copyright and Links -->
         <div class="row align-items-center pt-3" style="border-top: 1px solid white;">
-            <div class="col-md-6 text-md-start">
+            <div class="col-md-6 text-md-start text-center">
                 <p class="mb-0">
                     &copy; Copyright 2025, <strong>RFS Logo Design</strong>. Powered by RFS
                 </p>
             </div>
-            <div class="col-md-6 text-md-end">
+            <div class="col-md-6 text-md-end text-center">
                 <a href="/terms-condition" target="_blank" class="footer-link me-3">Terms & Conditions</a>
                 <a href="/privacy-policy" target="_blank" class="footer-link">Privacy Policy</a>
             </div>

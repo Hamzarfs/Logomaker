@@ -51,49 +51,8 @@
   background: rgba(0, 0, 0, .08);
   color: rgba(0, 0, 0, .3);
 }
-
-
-/*custom-css*/
-.lp-footer-sec {
-    padding: 20px 0;
-    color: white;
-}
-.contact-icon {
-    background-color: #eaf2fc;
-    border-radius: 50%;
-    color: #007bff;
-    padding: 12px;
-    font-size: 18px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
-}
-.contact-info {
-    list-style: none;
-    padding-left: 0;
-}
-.contact-info li {
-    display: flex
-;
-    align-items: center;
-    margin-bottom: 20px;
-    justify-content: start;
-}
-.contact-info a, .contact-info span {
-    color: #fff;
-    font-size: 15px;
-    font-weight: 400;
-    text-decoration: none;
-    text-align: left;
-}
-
     </style>
 @section('content')
- 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <div class="container mt-5">
         <h1 class="text-center mb-4 terms-title">Privacy Policy</h1>

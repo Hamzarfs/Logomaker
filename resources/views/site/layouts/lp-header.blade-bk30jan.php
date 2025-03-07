@@ -1,36 +1,27 @@
-
-<head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YEHKLNK5KX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YEHKLNK5KX');
-</script>
-</head>
-
 <style>
     .top-head {
         color: white;
         background: #6868D1;
+
+
     }
 
     .top-head-logo {
         color: white;
         background: #080A2D;
         padding: 20px 0;
+
     }
 
+
     .top-head a {
+
         text-decoration: none;
     }
 
     .top-head a {
+
         text-decoration: none;
-    }
-    .topbar-text{
-        text-align: right !important;
     }
 
     @media(max-width: 376px) {
@@ -39,13 +30,14 @@
             padding: 5px 0;
             font-size: 10px;
         }
+
     }
 
     @media only screen and (max-width: 352px) {
-        .top-head {
-            display: none;
-        }
+    .top-head {
+       display: none;
     }
+}
 
     @media only screen and (max-width: 768px) {
         .top-head {
@@ -53,31 +45,59 @@
             padding: 5px 0;
             font-size: 12px;
         }
-        .topbar-text{
-        text-align: center !important;
+        a.toll_icon.text-white.d-flex.align-items-center {
+        font-size: 1.0rem;
+    }
     }
 
-        a.toll_icon.text-white.d-flex.align-items-center {
-            font-size: 1.0rem;
-        }
-    }
+    
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+{{-- <div class="top-head">
+    <div class="container">
+        <div class="row">
+            <div class="top-left col-md-7">
+
+            </div>
+            <div class="top-right col-md-5">
+                <ul class="list-unstyled text-center" style="margin-top: 8px;">
+                    <li class="d-inline-block mr-4">
+                        <a class="toll_icon text-white d-flex align-items-center" href="tel:+02045112009">
+                            <i class="fas fa-phone mr-2"></i>
+                            0204-511-2009
+
+                        </a>
+                    </li>
+                    
+                    <li class="d-inline-block">
+                        <a class="chat_icon chat text-white d-flex align-items-center"
+                        href="{{ url('https://wa.me/+447491860363') }}">
+                            <i class="fas fa-comment mr-2"></i>
+                            Live Chat with Expert
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> --}}
 
 
 <div class="top-head">
     <div class="container">
         <div class="row pb-2">
-            <div class="col-12 topbar-text">
+            <div class="col-12 d-flex justify-content-end align-items-center flex-wrap text-md-right text-center">
                 <ul class="list-unstyled d-inline-flex mb-0" style="margin-top: 8px;">
                     <li class="d-inline-block mr-4">
-                        <a class="toll_icon text-white d-flex align-items-center" href="tel:+442045112009">
+                        <a class="toll_icon text-white d-flex align-items-center" href="tel:+02045112009">
                             <i class="fas fa-phone mr-2"></i>
-                            02045 112 009
+                            0204-511-2009
                         </a>
                     </li>
                     <li class="d-inline-block">
                         <a class="chat_icon chat text-white d-flex align-items-center"
-                            href="{{ url('https://wa.me/+442045112009') }}">
+                           href="{{ url('https://wa.me/+447491860363') }}">
                             <i class="fas fa-comment mr-2"></i>
                             Live Chat with Expert
                         </a>
@@ -93,8 +113,7 @@
     <div class="container">
         <div class="row">
             <div class="top-left col-md-4">
-                <a href="/"> <img src={{ asset('images/rfswhitelogolp.svg') }} alt="logo"
-                        width="200px" /></a>
+                  <a href="/"> <img src={{ asset('images/rfswhitelogolp.svg') }} alt="logo" width="200px"/></a>
             </div>
             <div class="top-rightlp col-md-8">
                 <h5>

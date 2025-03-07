@@ -92,7 +92,7 @@
         <h2>Please check your email for further instructions.</h2>
         <p>Your brief has been successfully received. We’ve received it and one of our representatives will be in touch
             soon to discuss it further and guide you through the next steps.</p>
-        <p>Having trouble? <a href="tel:+15515543283" class="phone-link">Contact us</a></p>
+        <p>Having trouble? <a href="tel:+02045112009" class="phone-link">Contact us</a></p>
         <br>
         <br>
         <div class="action-btns">

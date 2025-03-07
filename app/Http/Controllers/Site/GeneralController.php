@@ -133,8 +133,11 @@ class GeneralController extends \App\Http\Controllers\Controller
     public function contactUsSubmit(Request $request)
     {
         $data = $request->all();
-        $users = User::role('admin')->pluck('email');
-        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com'];
+        // $users = User::role('admin')->pluck('email');
+        $users = ['adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com','zaydrfs@gmail.com','dariancrum@gmail.com','darian.crum@redfeathersolutions.com','muhmmadnumairrao@gmail.com','basirkhanrfs@gmail.com','affanzairfs@gmail.com','info@rfslogodesign.com'];
+    
+    
+        
         try {
             Mail::to($users)->send(new ContactUs($data));
         } catch (\Throwable $th) {
@@ -153,8 +156,9 @@ class GeneralController extends \App\Http\Controllers\Controller
     public function contactUsSubmitLP(Request $request)
     {
         $data = $request->all();
-        $users = User::role('admin')->pluck('email');
-        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com'];
+        // $users = User::role('admin')->pluck('email');
+           $users = ['adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com','zaydrfs@gmail.com','dariancrum@gmail.com','darian.crum@redfeathersolutions.com','muhmmadnumairrao@gmail.com','basirkhanrfs@gmail.com','affanzairfs@gmail.com','info@rfslogodesign.com'];
+     // dd($users);
         try {
             Mail::to($users)->send(new ContactUsLP($data));
             $this->hubspotAPI($data);
@@ -172,8 +176,9 @@ class GeneralController extends \App\Http\Controllers\Controller
     public function customLogoSubmit(Request $request)
     {
         $data = $request->all();
-        $users = User::role('admin')->pluck('email');
-        $users = [...$users, 'adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com'];
+        // $users = User::role('admin')->pluck('email');
+          $users = ['adnankhan125@gmail.com', 'ridaali.rfs@gmail.com', 'javeriahzakir90@gmail.com', 'adil.rfs1@gmail.com', 'nomanrfs@gmail.com','zaydrfs@gmail.com','dariancrum@gmail.com','darian.crum@redfeathersolutions.com','muhmmadnumairrao@gmail.com','basirkhanrfs@gmail.com','affanzairfs@gmail.com','info@rfslogodesign.com'];
+    
         try {
             Mail::to($users)->send(new CustomLogo($data));
             $this->hubspotAPI($data);
@@ -190,7 +195,7 @@ class GeneralController extends \App\Http\Controllers\Controller
 
     private function hubspotAPI(array $data)
     {
-        $hubspot_url = 'https://api.hsforms.com/submissions/v3/integration/submit/47721008/cabd4e2f-166b-47a5-b896-c59224703cdc';
+        $hubspot_url = 'https://api.hsforms.com/submissions/v3/integration/submit/47721008/2015373d-3e93-4c0d-ae38-732daebe1b38';
 
         $postData = [
             'fields' => [
@@ -207,15 +212,21 @@ class GeneralController extends \App\Http\Controllers\Controller
                     'value' => $data['phone'] // Corrected to phone
                 ],
                 [
+                    'name' => 'brand',
+                    'value' => 'RFS Logo Design UK'
+                ],
+                [
                     'name' => 'message',
                     'value' => $data['message']
                 ],
             ],
+            
             'context' => [
                 // Only include hutk if it exists
                 'hutk' => isset($_COOKIE['hubspotutk']) && !empty($_COOKIE['hubspotutk']) ? $_COOKIE['hubspotutk'] : null,
-                'pageUri' => 'https://rfslogodesign.com', // Current page URL
-                'pageName' => $data['title'] ?? 'RFS Inquiry'
+                'pageUri' => 'https://rfslogodesign.co.uk', // Current page URL
+                'pageName' => $data['title'] ?? 'RFS UK Inquiry',
+             
             ]
         ];
 

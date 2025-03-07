@@ -1,6 +1,3 @@
-body{
-    font-family: poppins !important;
-}
 a {
     text-decoration: none;
     color: #ffffff;
@@ -540,6 +537,11 @@ p,
     color: #f8f9fa;
 }
 
+
+
+
+
+
 /* Start Hire Section */
 
 .hire-call-now-btn {
@@ -606,6 +608,10 @@ p,
 }
 
 /* End Hire Section */
+
+
+
+
 
 
 .why-logo-design-section {
@@ -965,7 +971,11 @@ p,
 }
 
 
+
+
 /* 1M Happy Customers Counting */
+
+
 
 
 /* Start Footer Section */
@@ -982,6 +992,7 @@ p,
     font-size: 14px;
     margin-bottom: 15px;
     margin-top: 15px;
+
 }
 
 .social-icons a {
@@ -995,6 +1006,7 @@ p,
     margin-bottom: 15px;
     font-size: 20px;
     font-weight: 700 !important;
+
 }
 
 .footer ul {
@@ -1025,46 +1037,12 @@ p,
     color: white;
     /* Change this to your preferred hover color */
     text-decoration: none;
+
 }
 
 .border-top {
     border-top: 1px solid #fff;
 }
-
-@media only screen and (min-width: 1000px) {
-    p.footer-text {
-        margin-right: 100px !important;
-        line-height: 1.8em;
-    }
-}
-
-@media (max-width: 768px) {
-    .footer ul li {
-        margin-bottom: 5px;
-    }
-
-    .footer ul li a {
-        font-size: 12px;
-    }
-
-    .footer-description {
-        font-size: 12px;
-    }
-
-    .social-icons a {
-        font-size: 16px;
-    }
-
-    .footer .row {
-        text-align: center;
-    }
-
-    .footer .row .col-md-4 {
-        margin-bottom: 20px;
-    }
-}
-
-/* End Footer Section */
 
 
 /*-------------Start About us-------------*/
@@ -1079,6 +1057,10 @@ p,
 
 .about-us-content {
     padding: 20px; /* Optional: Adjust padding for better spacing */
+}
+
+.custom-button-online {
+    /* Add any specific styles for the button here */
 }
 
 
@@ -1139,7 +1121,12 @@ margin-bottom: 50px;
   }
 
 
+
+
+
+
   /* <!---------our work----------> */
+
 
   .our-work-section {
     padding: 40px 20px 10px; /* Remove bottom padding */
@@ -1202,6 +1189,7 @@ margin-bottom: 50px;
     margin-top: 0;
     margin-bottom: 15px;
 }
+
 
 .full-width-section {
     background-color: #152441; /* Background color for the section */
@@ -1266,6 +1254,7 @@ margin-bottom: 50px;
     display: block; /* Show divider when content is active */
 }
 
+
 .custom-section-logo {
     text-align: center; /* Center-align text */
     padding: 40px 20px; /* Adjust padding as needed */
@@ -1321,7 +1310,38 @@ margin-bottom: 50px;
 }
 
 
+
+
+
+
+
+
+
 /* <!---------our work----------> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .services-section {
@@ -1375,9 +1395,30 @@ margin-bottom: 50px;
     background-size: cover;
     background-position: center;
 }
+/* Unique Classes for Each Service Card */
+.business-card-design {}
+.letterhead-design {}
+.envelope-design {}
+.email-signature {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* /------------------------------------------Start California---------------------------------------/ */
+
 
 
 .education-logo-section h2 {
@@ -1387,9 +1428,12 @@ margin-bottom: 50px;
     margin-bottom: 20px;
 }
 
+
 .education-logo-section p {
     margin-bottom: 20px;
 }
+
+
 
 .logo-design-color {
     color: #512f90;
@@ -1446,6 +1490,11 @@ margin-bottom: 50px;
         /* Adjusted for smooth animation */
     }
 }
+
+
+
+
+
 
 
 .unique-section {
@@ -1547,13 +1596,18 @@ margin-bottom: 50px;
     /* background-color: #646BD9; */
     font-weight: 700px;
     border: none;
+
+
 }
+
+
 
 @media (max-width: 480px) {
     .new-card-design-col {
         flex: 1 1 100%;
     }
 }
+
 
 @media (max-width: 768) {
     .unique-content-col{
@@ -1568,6 +1622,7 @@ margin-bottom: 50px;
         flex: 1 1 100%;
     }
 }
+
 
 
 .load-more {
@@ -2087,7 +2142,33 @@ h2 {
 }
 
 
+@media (max-width: 768px) {
+    .footer ul li {
+        margin-bottom: 5px;
+    }
 
+    .footer ul li a {
+        font-size: 12px;
+    }
+
+    .footer-description {
+        font-size: 12px;
+    }
+
+    .social-icons a {
+        font-size: 16px;
+    }
+
+    .footer .row {
+        text-align: center;
+    }
+
+    .footer .row .col-md-4 {
+        margin-bottom: 20px;
+    }
+}
+
+/* End Footer Section */
 
 @media (max-width: 767px) {
     .align-items-center {

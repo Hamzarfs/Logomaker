@@ -30,7 +30,8 @@
                     <li>
                         <i class="fas fa-map-marker-alt contact-icon"></i>
                         <a href="https://www.google.com/maps?q=Continental+House,+497+Sunleigh+Road,+Wembley,+England,+HA0+4LY"
-                            target="_blank" style="color: inherit; text-decoration: none;"> <span>Continental House, 497 Sunleigh Road, Wembley, England, HA0 4LY</span></a>
+                            target="_blank" style="color: inherit; text-decoration: none;"> <span>Continental House, 497
+                                Sunleigh Road, <br>Wembley, England, HA0 4LY</span></a>
                     </li>
                 </ul>
                 <div class="social-icons d-flex justify-content-center justify-content-md-end">
@@ -51,12 +52,12 @@
 
         <!-- Second Row - Copyright and Links -->
         <div class="row align-items-center pt-3" style="border-top: 1px solid white;">
-            <div class="col-md-6 text-md-start">
+            <div class="col-md-6 text-md-start text-center">
                 <p class="mb-0">
                     &copy; Copyright 2025, <strong>RFS Logo Design</strong>. Powered by RFS
                 </p>
             </div>
-            <div class="col-md-6 text-md-end">
+            <div class="col-md-6 text-md-end text-center">
                 <a href="/terms-condition" target="_blank" class="footer-link me-3">Terms & Conditions</a>
                 <a href="/privacy-policy" target="_blank" class="footer-link">Privacy Policy</a>
             </div>

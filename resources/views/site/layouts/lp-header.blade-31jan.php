@@ -1,15 +1,3 @@
-
-<head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YEHKLNK5KX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YEHKLNK5KX');
-</script>
-</head>
-
 <style>
     .top-head {
         color: white;
@@ -28,9 +16,6 @@
 
     .top-head a {
         text-decoration: none;
-    }
-    .topbar-text{
-        text-align: right !important;
     }
 
     @media(max-width: 376px) {
@@ -53,9 +38,6 @@
             padding: 5px 0;
             font-size: 12px;
         }
-        .topbar-text{
-        text-align: center !important;
-    }
 
         a.toll_icon.text-white.d-flex.align-items-center {
             font-size: 1.0rem;
@@ -67,7 +49,7 @@
 <div class="top-head">
     <div class="container">
         <div class="row pb-2">
-            <div class="col-12 topbar-text">
+            <div class="col-12 d-flex justify-content-end align-items-center flex-wrap text-md-right text-center">
                 <ul class="list-unstyled d-inline-flex mb-0" style="margin-top: 8px;">
                     <li class="d-inline-block mr-4">
                         <a class="toll_icon text-white d-flex align-items-center" href="tel:+442045112009">
@@ -77,7 +59,7 @@
                     </li>
                     <li class="d-inline-block">
                         <a class="chat_icon chat text-white d-flex align-items-center"
-                            href="{{ url('https://wa.me/+442045112009') }}">
+                            href="{{ url('https://wa.me/+447309931252') }}">
                             <i class="fas fa-comment mr-2"></i>
                             Live Chat with Expert
                         </a>

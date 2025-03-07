@@ -3,97 +3,7 @@
 @section('title', 'Privacy Policy - RFS Logo Design')
 @section('meta_desc', 'Explore the Privacy Policy of RFS Logo Design. Learn how we handle your data, protect your privacy, and ensure the security of your personal information.')
 
-
-<style>
-    /* CSS */
-.button-18 {
-  align-items: center;
-  background-color: #512F90;
-  border: 0;
-  border-radius: 100px;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  justify-content: center;
-  line-height: 20px;
-  max-width: 480px;
-  min-height: 40px;
-  min-width: 0px;
-  overflow: hidden;
-  padding: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center;
-  touch-action: manipulation;
-  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
-}
-
-.button-18:hover,
-.button-18:focus { 
-  background-color: #512F90;
-  color: #ffffff;
-}
-
-.button-18:active {
-  background: #09223b;
-  color: rgb(255, 255, 255, .7);
-}
-
-.button-18:disabled { 
-  cursor: not-allowed;
-  background: rgba(0, 0, 0, .08);
-  color: rgba(0, 0, 0, .3);
-}
-
-
-/*custom-css*/
-.lp-footer-sec {
-    padding: 20px 0;
-    color: white;
-}
-.contact-icon {
-    background-color: #eaf2fc;
-    border-radius: 50%;
-    color: #007bff;
-    padding: 12px;
-    font-size: 18px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
-}
-.contact-info {
-    list-style: none;
-    padding-left: 0;
-}
-.contact-info li {
-    display: flex
-;
-    align-items: center;
-    margin-bottom: 20px;
-    justify-content: start;
-}
-.contact-info a, .contact-info span {
-    color: #fff;
-    font-size: 15px;
-    font-weight: 400;
-    text-decoration: none;
-    text-align: left;
-}
-
-    </style>
 @section('content')
- 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <div class="container mt-5">
         <h1 class="text-center mb-4 terms-title">Privacy Policy</h1>
@@ -149,19 +59,11 @@
             By using our services, you consent to the collection and use of your information as described in this Privacy Policy.</p>
         </div>
 
-        <div class="mb-3 delivery-policy">
+        <div class="mb-5 delivery-policy">
             <h2>Contact Us</h2>
             <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:support@rfslogodesign.co.uk">support@rfslogodesign.co.uk</a> or by phone at <a href="tel:+442045112009">0204-511-2009</a></div></p>
-            <div class="text-center">
-            <a href="/"><button class="button-18 mb-4 text-center" role="button">Back to Homepage</button></a>
         </div>
-        </div>
-        
     </div>
-    <!-- HTML !-->
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

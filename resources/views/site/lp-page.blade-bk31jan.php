@@ -22,7 +22,8 @@
 
     <style>
         .custom-text-section-v3 h2 {
-            font-weight: 600;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
             font-size: 42px;
             margin-bottom: 20px;
             color: #010935;
@@ -35,6 +36,7 @@
 
         .custom-text-section-v3 p {
             font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
             color: #555;
             margin-bottom: 20px;
         }
@@ -386,8 +388,8 @@
 
 
         .lpbanner-badges img {
-            /*margin-top: 20px;*/
-            width: 130px;
+            margin-top: 20px;
+            width: 120px;
             margin-right: 10px;
         }
 
@@ -416,6 +418,7 @@
             text-align: center;
         }
 
+
         .cta-heading {
             font-size: 2rem;
             font-weight: bold;
@@ -425,12 +428,6 @@
         .cta-text {
             font-size: 1rem;
             margin-bottom: 30px;
-        }
-
-        .heroform-text {
-            font-size: 14px;
-            margin-bottom: 20px;
-            text-align: center;
         }
 
         .cta-buttons .leave-message-btn {
@@ -533,7 +530,7 @@
         }
 
         .feature-list li {
-            padding: 2px 0;
+            padding: 5px 0;
         }
 
         .feature-list::-webkit-scrollbar {
@@ -649,7 +646,7 @@
             background-image: url(/images/lpcta3bg.png);
             background-size: cover;
             background-position: center;
-            padding: 30px 0;
+            padding: 10px 0;
         }
 
         .btn-custom {
@@ -684,7 +681,7 @@
 
         .portfoliogallerylp-gallery {
             /* gap: 3px
-                                             */
+                                         */
         }
 
         .portfoliogallerylp-image {
@@ -755,7 +752,7 @@
             padding: 10px 30px;
             color: white;
             font-size: 18px;
-            margin-top: 5px;
+            margin-top: 15px;
         }
 
         .form-control {
@@ -802,7 +799,6 @@
             display: flex;
             align-items: center;
             margin-bottom: 20px;
-            justify-content: start;
         }
 
         .contact-icon {
@@ -830,10 +826,9 @@
         .contact-info a,
         .contact-info span {
             color: #fff;
-            font-size: 15px;
-            font-weight: 400;
+            font-size: 16px;
+            font-weight: 500;
             text-decoration: none;
-            text-align: left;
         }
 
         .contact-info a:hover {
@@ -857,7 +852,7 @@
         /*****************  Start LP Contact ************/
 
         .lp-contact-sec {
-            padding: 30px 0px 30px 0px;
+            padding: 30px 0;
             color: white;
         }
 
@@ -867,14 +862,14 @@
         }
 
         .lp-contact-sec .contact-link {
-            color: inherit;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            transition: color 0.6s ease-in-out;
-            flex-direction: row;
-            justify-content: center;
-        }
+                color: inherit;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                transition: color 0.6s ease-in-out;
+                flex-direction: row;
+                justify-content: center;
+            }
 
         .lp-contact-sec .contact-link:hover {
             color: #f0f0f0;
@@ -898,7 +893,6 @@
                 align-items: center;
                 flex-direction: row;
                 justify-content: flex-start;
-                margin-bottom: 10px;
             }
         }
 
@@ -919,7 +913,6 @@
         .lp-footer-sec p {
             font-size: 0.9rem;
             margin: 0;
-            font-weight: 400;
         }
 
         .lp-footer-sec .footer-link {
@@ -927,7 +920,6 @@
             color: white;
             text-decoration: none;
             transition: color 0.3s ease;
-            font-weight: 400;
         }
 
         .lp-footer-sec .footer-link:hover {
@@ -979,18 +971,29 @@
                 font-size: 18px;
             }
 
+
+
             .award-arrow-left,
             .award-arrow-right {
                 font-size: 18px;
             }
         }
 
+
+
+
+
+
+
         @media(max-width: 376px) {
+
+
             .top-head {
                 background: #6868D1;
                 padding: 5px 0;
                 font-size: 10px;
             }
+
         }
 
         @media (max-width: 576px) {
@@ -1020,9 +1023,6 @@
 
 
         @media only screen and (max-width: 768px) {
-            .lpbanner-badges {
-    justify-self: center;
-}
             .custom-logo-process h2 {
                 font-weight: 700;
                 color: #010935;
@@ -1030,44 +1030,24 @@
                 text-align-last: center;
             }
 
-            h2.footer-form {
-                text-align: center;
-            }
-
-            .ebook-contact-form .btn-submit {
-                width: -webkit-fill-available;
-            }
-
             .lpbanner-buttons {
                 justify-self: center;
             }
 
-            .col-lg-6.custom-text-section-v3 {
-                text-align: center;
-            }
-
             .custom-text-section-v3 h2 {
-                font-weight: 600;
-                font-size: 24px;
+                font-weight: 800;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 23px;
                 margin-bottom: 20px;
                 color: #010935;
             }
 
-            .custom-text-section-v3 p {
-                font-size: 18px;
-                color: #555;
-                margin-bottom: 20px;
-            }
-
-
             a.toll_icon.text-white.d-flex.align-items-center {
-                font-size: 12px;
-                font-weight: 400;
+                font-size: 1.0rem;
             }
 
             a.chat_icon.chat.text-white.d-flex.align-items-center {
-                font-size: 12px;
-                font-weight: 400;
+                font-size: 1.0rem;
             }
 
             .lpbanner-heading {
@@ -1092,9 +1072,8 @@
             .text-white {
                 --bs-text-opacity: 1;
                 color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
-                font-size: 1.4rem;
+                font-size: 2rem;
                 text-align: center;
-                font-weight: 600;
             }
 
             .portfoliogallerylp-gallery {
@@ -1125,7 +1104,7 @@
             }
 
             .lpbanner-badges img {
-                width: 130px !important;
+                width: 80px !important;
                 margin-top: 20px;
                 margin-right: 0px;
             }
@@ -1139,7 +1118,7 @@
             }
 
             .lpbanner-badges img {
-                width: 120px !important;
+                width: 100px !important;
             }
 
         }
@@ -1217,7 +1196,7 @@
     <!--  ClickCease.com tracking-->
 
 
-    <div class="container mt-4">
+    <div class="container mt-5">
         <div class="row custom-logo-page-section mx-0">
             <div class="col-md-6 lp-left-column">
 
@@ -1246,25 +1225,24 @@
                             data-bs-target="#contact-modal" data-title="Basic Logo Package - £35">Get Started</button>
                         <a href="#pricing" class="btn btn-outline-light lpbanner-btn mb-2">View Pricing</a>
                     </div>
-                     <div class="lpbanner-badges">
-                                    <!--<a href="https://clutch.co/profile/rfs-logo-design" target="_blank">-->
-                                    <!--    <img src="{{ asset('images/clutchicon.png') }}" alt="Clutch" />-->
-                                    <!--</a>-->
-                                    <a href="https://www.trustpilot.com/review/rfslogodesign.co.uk" target="_blank">
-                                        <img src="{{ asset('images/truspiloticon.png') }}" alt="Trustpilot" />
-                                    </a>
-                                    <!--<a href="https://www.bark.com/en/us/company/rfs-logo-design/oRvbN/" target="_blank">-->
-                                    <!--    <img src="{{ asset('images/barkicon.png') }}" alt="Bark" />-->
-                                    <!--</a>-->
+                    <!-- <div class="lpbanner-badges">
+                                <a href="https://clutch.co/profile/rfs-logo-design" target="_blank">
+                                    <img src="{{ asset('images/clutchicon.png') }}" alt="Clutch" />
+                                </a>
+                                <a href="https://www.trustpilot.com/review/rfslogodesign.com" target="_blank">
+                                    <img src="{{ asset('images/truspiloticon.png') }}" alt="Trustpilot" />
+                                </a>
+                                <a href="https://www.bark.com/en/us/company/rfs-logo-design/oRvbN/" target="_blank">
+                                    <img src="{{ asset('images/barkicon.png') }}" alt="Bark" />
+                                </a>
 
-                                </div> 
+                            </div> -->
                 </div>
             </div>
 
             <div class="col-md-6 d-flex justify-content-center align-items-center">
                 <div class="custom-logo-page-form bg-white border p-3 rounded">
                     <h3 class="custom-logo-page-form-heading text-center">Get a Logo Quote</h3>
-                    <p class="heroform-text">Your Brand, Our Creativity – Now at 70% OFF!</p>
                     {{-- <form id="custom-form" method="POST" action="{{ route('customLogoSubmit') }}">
 
                         @csrf
@@ -1414,9 +1392,9 @@
                     </p>
                     <div class="cta-buttons">
 
-                        <a href="{{ url('https://wa.me/+442045112009') }}" class="mb-2"> <button
+                        <a href="{{ url('https://wa.me/+447309931252') }}" class="mb-2"> <button
                                 class="btn btn-primary leave-message-btn ">Message Us</button></a>
-                        <a href="tel:+442045112009" class="mb-2"> <button
+                        <a href="tel:+02045112009" class="mb-2"> <button
                                 class="btn btn-outline-light live-chat-btn">Call
                                 Us</button></a>
                     </div>
@@ -1870,7 +1848,7 @@
                     <div class="cta-buttons">
                         <a href="tel:+02045112009"> <button class="btn btn-primary leave-message-btn">Schedule a
                                 Call</button></a>
-                        <a href="{{ url('https://wa.me/+442045112009') }}"> <button
+                        <a href="{{ url('https://wa.me/+447309931252') }}"> <button
                                 class="btn btn-outline-light live-chat-btn">Chat with
                                 Expert</button></a>
                     </div>
@@ -2032,7 +2010,7 @@
 
 
 
-    <section class="container py-2 contact-section">
+    <section class="container py-5 contact-section">
         <div class="text-center mb-4">
             <h2 class="font-weight-bold">Need help choosing a professional logo design?<br> Consult with our expert!
             </h2>
@@ -2057,9 +2035,9 @@
             <div class="col-md-4 mb-3 text-center">
                 <div class="contact-option">
                     <div class="icon-circle">
-                        <a href="{{ url('https://wa.me/+442045112009') }}"><i class="fas fa-comment-dots fa-2x"></i></a>
+                        <a href="{{ url('https://wa.me/+447309931252') }}"><i class="fas fa-comment-dots fa-2x"></i></a>
                     </div>
-                    <a href="{{ url('https://wa.me/+442045112009') }}">Live Chat</a>
+                    <a href="{{ url('https://wa.me/+447309931252') }}">Live Chat</a>
                 </div>
             </div>
         </div>
@@ -2137,26 +2115,26 @@
     <!-- ------------------Start Testiomonial --------------- -->
 
 
-    <section class="ebook-contact-form container py-4">
+    <section class="ebook-contact-form container py-5">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="footer-form mb-4">Let's Build Your Digital Future</h2>
+                <h2 class="mb-4">Let's Build Your Digital Future</h2>
                 <!-- <ul class="contact-info">
-                            <li>
-                                <i class="fas fa-phone-alt contact-icon"></i>
-                                <a href="tel:+02045112009">0204-511-2009</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-envelope contact-icon"></i>
-                                <a href="mailto:support@rfslogodesign.co.uk">support@rfslogodesign.co.uk</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-map-marker-alt contact-icon"></i>
-                                <a href="https://www.google.com/maps?q=Continental+House,+497+Sunleigh+Road,+Wembley,+England,+HA0+4LY"
-                                    target="_blank" style="color: inherit; text-decoration: none;"> <span>Continental House, 497
-                                        Sunleigh Road, <br>Wembley, England, HA0 4LY</span></a>
-                            </li>
-                        </ul> -->
+                        <li>
+                            <i class="fas fa-phone-alt contact-icon"></i>
+                            <a href="tel:+02045112009">0204-511-2009</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <a href="mailto:support@rfslogodesign.co.uk">support@rfslogodesign.co.uk</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <a href="https://www.google.com/maps?q=Continental+House,+497+Sunleigh+Road,+Wembley,+England,+HA0+4LY"
+                                target="_blank" style="color: inherit; text-decoration: none;"> <span>Continental House, 497
+                                    Sunleigh Road, <br>Wembley, England, HA0 4LY</span></a>
+                        </li>
+                    </ul> -->
 
                 <div id="thank-you" class="alert alert-success d-none">Thank you! Your message has been sent.</div>
                 <form id="contactForm" method="POST" action="{{ route('customLogoSubmit') }}">
@@ -2207,13 +2185,13 @@
     </section>
 
 
-    <section class="lp-contact-sec d-flex align-items-center"
+    <section class="lp-contact-sec d-flex align-items-center pt-4"
         style="background-image: url('{{ asset('images/lpcontactsecbg.png') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="container">
             <div class="row text-center">
                 <!-- Column 1 - Support Team -->
                 <div class="col-md-4">
-                    <a href="{{ url('https://wa.me/+442045112009') }}" class="contact-link">
+                    <a href="{{ url('https://wa.me/+447309931252') }}" class="contact-link mb-2">
                         <img src="{{ asset('images/consuilt.png') }}" alt="Support Team Icon" class="me-3"
                             width="65px" />
                         <div>
@@ -2225,7 +2203,7 @@
 
                 <!-- Column 2 - Phone Number -->
                 <div class="col-md-4">
-                    <a href="tel:+442045112009" class="contact-link">
+                    <a href="tel:+442045112009" class="contact-link mb-2">
                         <img src="{{ asset('images/live.png') }}" alt="Consult Expert Icon" class="me-3"
                             width="65px" />
                         <div>
@@ -2237,7 +2215,7 @@
 
                 <!-- Column 3 - Live Chat -->
                 <div class="col-md-4">
-                    <a href="{{ url('https://wa.me/+442045112009') }}" class="contact-link">
+                    <a href="{{ url('https://wa.me/+447309931252') }}" class="contact-link mb-2">
                         <img src="{{ asset('images/consuilt.png') }}" alt="Live Support Icon" class="me-3"
                             width="65px" />
                         <div>

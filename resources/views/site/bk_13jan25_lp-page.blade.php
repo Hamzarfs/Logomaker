@@ -3,8 +3,7 @@
 @section('title', 'Custom Logo Design Starting from £35 - 0204-511-2009')
 
 @section('meta_desc',
-    'Based in Wembley, RFS is a premier UK graphic design company with top-tier in-house logo
-    designers. Get custom logos and complete branding solutions.')
+    'Based in Wembley, RFS is a premier UK graphic design company with top-tier in-house logo designers. Get custom logos and complete branding solutions.')
 
 @section('content')
 
@@ -17,12 +16,13 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
+      <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
     <style>
         .custom-text-section-v3 h2 {
-            font-weight: 600;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
             font-size: 42px;
             margin-bottom: 20px;
             color: #010935;
@@ -35,6 +35,7 @@
 
         .custom-text-section-v3 p {
             font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
             color: #555;
             margin-bottom: 20px;
         }
@@ -98,7 +99,7 @@
             color: #fff;
             padding: 20px;
             text-align: left;
-            transition: background-color 600ms ease-in-out;
+            transition: background-color 1s ease;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -218,6 +219,10 @@
         }
 
 
+
+
+
+
         .custom-logo-page-section {
             background-color: #6868d1;
             border-radius: 25px;
@@ -301,7 +306,11 @@
             width: -webkit-fill-available;
         }
 
+
+
         /* languagelogos */
+
+
 
         * {
             margin: 0;
@@ -336,6 +345,7 @@
             content: "";
             z-index: 2;
         }
+
 
         .languagelogos:hover .languagelogos-slide {
             animation-play-state: paused;
@@ -386,8 +396,8 @@
 
 
         .lpbanner-badges img {
-            /*margin-top: 20px;*/
-            width: 130px;
+            margin-top: 20px;
+            width: 120px;
             margin-right: 10px;
         }
 
@@ -416,6 +426,7 @@
             text-align: center;
         }
 
+
         .cta-heading {
             font-size: 2rem;
             font-weight: bold;
@@ -427,18 +438,11 @@
             margin-bottom: 30px;
         }
 
-        .heroform-text {
-            font-size: 14px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
         .cta-buttons .leave-message-btn {
             background-color: white;
             color: #4B0082;
             border: none;
             padding: 10px 20px;
-            margin: 9px;
             font-weight: bold;
             margin-right: 15px;
         }
@@ -479,10 +483,10 @@
 
         /* Price Box Styling */
         .price-box {
-            border: 2px solid #512f90;
+            border: 2px solid #fbb040;
             padding: 20px;
             border-radius: 8px;
-            transition: transform 0.5s;
+            transition: transform 0.3s;
             background-color: #fff;
         }
 
@@ -514,7 +518,7 @@
         .price-box .separator {
             width: 80%;
             height: 2px;
-            background-color: #512f90;
+            background-color: #fbb040;
             margin: 15px auto;
         }
 
@@ -533,7 +537,7 @@
         }
 
         .feature-list li {
-            padding: 2px 0;
+            padding: 5px 0;
         }
 
         .feature-list::-webkit-scrollbar {
@@ -649,7 +653,7 @@
             background-image: url(/images/lpcta3bg.png);
             background-size: cover;
             background-position: center;
-            padding: 30px 0;
+            padding: 10px 0;
         }
 
         .btn-custom {
@@ -668,7 +672,7 @@
 
 
         /************************* Start Portfolio Gallery ******************/
-
+       
         .portfoliogallerylp h2 {
             font-size: 24px;
             font-weight: bold;
@@ -684,7 +688,7 @@
 
         .portfoliogallerylp-gallery {
             /* gap: 3px
-                                             */
+                                 */
         }
 
         .portfoliogallerylp-image {
@@ -755,7 +759,7 @@
             padding: 10px 30px;
             color: white;
             font-size: 18px;
-            margin-top: 5px;
+            margin-top: 15px;
         }
 
         .form-control {
@@ -802,7 +806,6 @@
             display: flex;
             align-items: center;
             margin-bottom: 20px;
-            justify-content: start;
         }
 
         .contact-icon {
@@ -829,11 +832,10 @@
 
         .contact-info a,
         .contact-info span {
-            color: #fff;
-            font-size: 15px;
-            font-weight: 400;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
             text-decoration: none;
-            text-align: left;
         }
 
         .contact-info a:hover {
@@ -854,10 +856,14 @@
             background-color: #0056b3;
         }
 
+
+
+
+
         /*****************  Start LP Contact ************/
 
         .lp-contact-sec {
-            padding: 30px 0px 30px 0px;
+            padding: 30px 0;
             color: white;
         }
 
@@ -871,9 +877,7 @@
             text-decoration: none;
             display: flex;
             align-items: center;
-            transition: color 0.6s ease-in-out;
-            flex-direction: row;
-            justify-content: center;
+            transition: color 0.3s ease;
         }
 
         .lp-contact-sec .contact-link:hover {
@@ -890,16 +894,6 @@
             font-size: 1.25rem;
             font-weight: bold;
             margin: 0;
-        }
-
-        @media only screen and (max-width: 768px) {
-            .lp-contact-sec .contact-link {
-                display: flex;
-                align-items: center;
-                flex-direction: row;
-                justify-content: flex-start;
-                margin-bottom: 10px;
-            }
         }
 
 
@@ -919,15 +913,13 @@
         .lp-footer-sec p {
             font-size: 0.9rem;
             margin: 0;
-            font-weight: 400;
         }
 
         .lp-footer-sec .footer-link {
-            font-size: 15px;
+            font-size: 18px;
             color: white;
             text-decoration: none;
             transition: color 0.3s ease;
-            font-weight: 400;
         }
 
         .lp-footer-sec .footer-link:hover {
@@ -936,138 +928,116 @@
         }
 
 
+
+
         /*****************  End LP Footer ************/
 
 
         /*****************  End LP Contact ************/
 
         .awardimgslide {
-            background-color: #f9f9f9;
-        }
+background-color: #f9f9f9;
+}
 
-        .award-heading {
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-        }
+.award-heading {
+font-size: 24px;
+font-weight: bold;
+color: #333;
+}
 
-        .swiper-container {
-            padding: 10px 0;
-            overflow-x: hidden;
-        }
+.swiper-container {
+padding: 10px 0;
+overflow-x: hidden;
+}
 
-        .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+.swiper-slide {
+display: flex;
+justify-content: center;
+align-items: center;
+}
 
-        .swiper-slide img {
-            max-width: 100%;
-            height: auto;
-        }
+.swiper-slide img {
+max-width: 100%; 
+height: auto;
+}
 
-        .award-arrow-left,
-        .award-arrow-right {
-            font-size: 24px;
-            color: #333;
-            cursor: pointer;
-        }
+.award-arrow-left, .award-arrow-right {
+font-size: 24px;
+color: #333;
+cursor: pointer;
+}
 
-        @media (max-width: 576px) {
-            .award-heading {
-                font-size: 18px;
-            }
+@media (max-width: 576px) {
+.award-heading {
+    font-size: 18px;
+}
 
-            .award-arrow-left,
-            .award-arrow-right {
-                font-size: 18px;
-            }
-        }
+
+
+.award-arrow-left, .award-arrow-right {
+    font-size: 18px;
+}
+}
+
+
+
+
+
+
 
         @media(max-width: 376px) {
+
+
             .top-head {
                 background: #6868D1;
                 padding: 5px 0;
                 font-size: 10px;
             }
-        }
 
+        }
         @media (max-width: 576px) {
-            .award-heading {
-                font-size: 18px;
-            }
+.award-heading {
+    font-size: 18px;
+}
 
-            .award-arrow-left,
-            .award-arrow-right {
-                font-size: 18px;
-            }
-        }
+
+
+.award-arrow-left, .award-arrow-right {
+    font-size: 18px;
+}
+}
 
         @media (max-width: 658px) {
             .lp-footer-sec .footer-link {
-                font-size: 12px;
-                color: white;
-                text-decoration: none;
-                transition: color 0.3s ease;
-            }
-
+            font-size: 12px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
             section.ebook-contact-form.container {
-                padding: 20px;
-                /* text-align-last: center; */
+                padding: 30px;
+                text-align-last: center;
             }
         }
 
 
+
         @media only screen and (max-width: 768px) {
-            .lpbanner-badges {
-    justify-self: center;
-}
-            .custom-logo-process h2 {
-                font-weight: 700;
-                color: #010935;
-                font-size: 28px;
-                text-align-last: center;
-            }
-
-            h2.footer-form {
-                text-align: center;
-            }
-
-            .ebook-contact-form .btn-submit {
-                width: -webkit-fill-available;
-            }
-
-            .lpbanner-buttons {
-                justify-self: center;
-            }
-
-            .col-lg-6.custom-text-section-v3 {
-                text-align: center;
-            }
 
             .custom-text-section-v3 h2 {
-                font-weight: 600;
-                font-size: 24px;
+                font-weight: 800;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 23px;
                 margin-bottom: 20px;
                 color: #010935;
             }
 
-            .custom-text-section-v3 p {
-                font-size: 18px;
-                color: #555;
-                margin-bottom: 20px;
-            }
-
-
             a.toll_icon.text-white.d-flex.align-items-center {
-                font-size: 12px;
-                font-weight: 400;
+                font-size: 1.0rem;
             }
 
             a.chat_icon.chat.text-white.d-flex.align-items-center {
-                font-size: 12px;
-                font-weight: 400;
+                font-size: 1.0rem;
             }
 
             .lpbanner-heading {
@@ -1092,9 +1062,8 @@
             .text-white {
                 --bs-text-opacity: 1;
                 color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
-                font-size: 1.4rem;
+                font-size: 2rem;
                 text-align: center;
-                font-weight: 600;
             }
 
             .portfoliogallerylp-gallery {
@@ -1125,7 +1094,7 @@
             }
 
             .lpbanner-badges img {
-                width: 130px !important;
+                width: 80px !important;
                 margin-top: 20px;
                 margin-right: 0px;
             }
@@ -1139,33 +1108,11 @@
             }
 
             .lpbanner-badges img {
-                width: 120px !important;
+                width: 100px !important;
             }
 
         }
 
-        @media (max-width: 1024px) and (min-width: 768px) {
-            .portfoliogallerylp-gallery {
-                flex-direction: row;
-            }
-        }
-
-        @media (max-width: 992px) and (min-width: 769px) {
-            .custom-logo-page-form {
-                width: 98%;
-
-            }
-
-            .lpbanner-heading {
-                font-size: 1.5rem;
-
-            }
-
-            ul.feature-list {
-                padding: 0px;
-            }
-
-        }
 
         @media (max-width: 1198px) and (min-width: 992px) {
             .box-heading-number {
@@ -1200,24 +1147,10 @@
     </style>
 
 
-    <!--  ClickCease.com tracking-->
-    <script type='text/javascript'>
-        var script = document.createElement('script');
-        script.async = true;
-        script.type = 'text/javascript';
-        var target = 'https://www.clickcease.com/monitor/stat.js';
-        script.src = target;
-        var elem = document.head;
-        elem.appendChild(script);
-    </script>
-    <noscript>
-        <a href='https://www.clickcease.com' rel='nofollow'><img src='https://monitor.clickcease.com'
-                alt='ClickCease' /></a>
-    </noscript>
-    <!--  ClickCease.com tracking-->
 
 
-    <div class="container mt-4">
+
+    <div class="container mt-5">
         <div class="row custom-logo-page-section mx-0">
             <div class="col-md-6 lp-left-column">
 
@@ -1229,10 +1162,8 @@
                     </h1>
                 </div>
                 <div class="lp-banner-margin">
-                    <p class="lpbanner-text">Based in Wembley, RFS is a premier UK graphic design company with top-tier
-                        in-house logo designers who specialize in crafting distinctive, impactful brand identities that set
-                        your business apart and leave a lasting impression.</p>
-
+                    <p class="lpbanner-text">Based in Wembley, RFS is a premier UK graphic design company with top-tier in-house logo designers who specialize in crafting distinctive, impactful brand identities that set your business apart and leave a lasting impression.</p>
+                   
                     <ul class="feature-list">
                         <li>UK's #1 Logo Design Agency</li>
                         <li>Award-Winning Logo Designers</li>
@@ -1240,31 +1171,30 @@
                         <li>Tailored, Client-Centered Approach</li>
                         <li>100% Unique & Custom Designs</li>
                     </ul>
-
+                   
                     <div class="lpbanner-buttons">
-                        <button class="btn btn-dark lpbanner-btn mb-2" data-bs-toggle="modal"
-                            data-bs-target="#contact-modal" data-title="Basic Logo Package - £35">Get Started</button>
-                        <a href="#pricing" class="btn btn-outline-light lpbanner-btn mb-2">View Pricing</a>
+                        <button class="btn btn-dark lpbanner-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
+                            data-title="Basic Logo Package - £35">Get Started</button>
+                        <a href="#pricing" class="btn btn-outline-light lpbanner-btn">View Pricing</a>
                     </div>
-                     <div class="lpbanner-badges">
-                                    <!--<a href="https://clutch.co/profile/rfs-logo-design" target="_blank">-->
-                                    <!--    <img src="{{ asset('images/clutchicon.png') }}" alt="Clutch" />-->
-                                    <!--</a>-->
-                                    <a href="https://www.trustpilot.com/review/rfslogodesign.co.uk" target="_blank">
-                                        <img src="{{ asset('images/truspiloticon.png') }}" alt="Trustpilot" />
-                                    </a>
-                                    <!--<a href="https://www.bark.com/en/us/company/rfs-logo-design/oRvbN/" target="_blank">-->
-                                    <!--    <img src="{{ asset('images/barkicon.png') }}" alt="Bark" />-->
-                                    <!--</a>-->
+                    <!-- <div class="lpbanner-badges">
+                        <a href="https://clutch.co/profile/rfs-logo-design" target="_blank">
+                            <img src="{{ asset('images/clutchicon.png') }}" alt="Clutch" />
+                        </a>
+                        <a href="https://www.trustpilot.com/review/rfslogodesign.com" target="_blank">
+                            <img src="{{ asset('images/truspiloticon.png') }}" alt="Trustpilot" />
+                        </a>
+                        <a href="https://www.bark.com/en/us/company/rfs-logo-design/oRvbN/" target="_blank">
+                            <img src="{{ asset('images/barkicon.png') }}" alt="Bark" />
+                        </a>
 
-                                </div> 
+                    </div> -->
                 </div>
             </div>
 
             <div class="col-md-6 d-flex justify-content-center align-items-center">
                 <div class="custom-logo-page-form bg-white border p-3 rounded">
                     <h3 class="custom-logo-page-form-heading text-center">Get a Logo Quote</h3>
-                    <p class="heroform-text">Your Brand, Our Creativity – Now at 70% OFF!</p>
                     {{-- <form id="custom-form" method="POST" action="{{ route('customLogoSubmit') }}">
 
                         @csrf
@@ -1301,7 +1231,7 @@
   pattern="^\+?\d{10,14}$" title="Phone number format: 3334445555"
    maxlength="15">
 
-                            <div class="invalid-feedback">Please enter a valid phone number (10 - 15 digits).</div>
+                            <div class="invalid-feedback">Please enter a valid phone number (max 15 digits).</div>
                             @error('phone')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
@@ -1322,62 +1252,63 @@
                     <form id="custom-form" method="POST" action="{{ route('customLogoSubmit') }}">
 
                         @csrf
-
+                    
                         <div class="form-group mb-2">
-                            <label for="name" class="custom-logo-page-label">Name*</label>
+                            <label for="name" class="custom-logo-page-label">Name:</label>
                             <input type="text"
                                 class="form-control custom-logo-page-input @error('name') is-invalid @enderror"
                                 name="name" id="name" placeholder="Enter your name" required
-                                title="First letter must be alphabetic; name can contain spaces but no special characters or numbers."
+                                pattern="^[A-Za-z][A-Za-z\s]*$" title="First letter must be alphabetic; name can contain spaces but no special characters or numbers."
                                 oninput="validateName(this)">
-                            <div class="invalid-feedback"></div>
-                            <!--<div class="invalid-feedback">Please enter a valid name (letters and spaces only, first letter must be alphabetic).</div>-->
+                            <div class="invalid-feedback">Please enter a valid name (letters and spaces only, first letter must be alphabetic).</div>
                             @error('name')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-
+                    
                         <div class="form-group mb-2">
-                            <label for="email" class="custom-logo-page-label">Email*</label>
+                            <label for="email" class="custom-logo-page-label">Email:</label>
                             <input type="email"
                                 class="form-control custom-logo-page-input @error('email') is-invalid @enderror"
                                 name="email" id="email" placeholder="Enter your email" required
-                                title="Please enter a valid email address." oninput="validateEmail(this)">
-                            <div class="invalid-feedback"></div>
-                            <!--<div class="invalid-feedback">Please enter a valid email address.</div>-->
+                                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address."
+                                oninput="validateEmail(this)">
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
                             @error('email')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-
+                    
                         <div class="form-group mb-2">
-                            <label for="phone" class="custom-logo-page-label">Phone Number*</label>
+                            <label for="phone" class="custom-logo-page-label">Phone Number:</label>
                             <input type="tel"
                                 class="form-control custom-logo-page-input @error('phone') is-invalid @enderror"
-                                name="phone" id="phone" required placeholder="E.g. 07123 456789"
-                                title="Phone number format: +3334445555 (10 to 15 digits, optional '+')" maxlength="15"
-                                oninput="validatePhone(this)">
-                            <div class="invalid-feedback"></div>
-                            <!--<div class="invalid-feedback">Please enter a valid phone number (max 15 digits, optional '+').</div>-->
+                                name="phone" id="phone" required placeholder="Enter your phone number"
+                                pattern="^\+?\d{10,15}$" title="Phone number format: +3334445555 (10 to 15 digits, optional '+')"
+                                maxlength="15" oninput="validatePhone(this)">
+                            <div class="invalid-feedback">Please enter a valid phone number (max 15 digits, optional '+').</div>
                             @error('phone')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-
+                    
                         <div class="form-group mb-2">
-                            <label for="message" class="custom-logo-page-label">Message*</label>
-                            <textarea class="form-control custom-logo-page-textarea @error('message') is-invalid @enderror" name="message"
-                                id="message" rows="2" placeholder="Your message..." required maxlength="2005"
-                                title="Not allowed more than 2000 characters in message text field" oninput="validateMessage(this)"></textarea>
-                            <div class="invalid-feedback"></div>
-                            @error('message')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                            <!--<div class="error-message" style="display:none; color: red;">Not allowed more than 2000 characters in message text field</div>-->
+                            <label for="message" class="custom-logo-page-label">Message:</label>
+                            <textarea
+                                class="form-control custom-logo-page-textarea"
+                                name="message"
+                                id="message"
+                                rows="2"
+                                placeholder="Your message..."
+                                required
+                                maxlength="2010"
+                                title="Not allowed more than 2000 characters in message text field"
+                                oninput="validateMessage(this)"
+                            ></textarea>
+                            <div class="error-message" style="display:none; color: red;">Not allowed more than 2000 characters in message text field</div>
                         </div>
-
-                        <button type="submit"
-                            class="btn btn-secondary custom-logo-page-submit align-left">Submit</button>
+                    
+                        <button type="submit" class="btn btn-secondary custom-logo-page-submit align-left">Submit</button>
                     </form>
 
                 </div>
@@ -1403,6 +1334,11 @@
     </div>
 
 
+
+
+
+
+
     <section class="lp-cta1 d-flex align-items-center justify-content-center text-center"
         style="background-image: url('{{ asset('images/cta1bg.png') }}');">
         <div class="container">
@@ -1410,14 +1346,13 @@
                 <div class="col-12">
                     <h2 class="cta-heading">Are you looking for a logo that truly captures your brand? </h2>
                     <p class="cta-text">
-                        Contact us today, and let our designers bring your vision to life.
+                        Please message us, and let our designers bring your vision to life.
                     </p>
                     <div class="cta-buttons">
 
-                        <a href="{{ url('https://wa.me/+442045112009') }}" class="mb-2"> <button
-                                class="btn btn-primary leave-message-btn ">Message Us</button></a>
-                        <a href="tel:+442045112009" class="mb-2"> <button
-                                class="btn btn-outline-light live-chat-btn">Call
+                        <a href="{{ url('https://wa.me/+447491860363') }}"> <button
+                                class="btn btn-primary leave-message-btn">Message Us</button></a>
+                        <a href="tel:+02045112009"> <button class="btn btn-outline-light live-chat-btn">Call
                                 Us</button></a>
                     </div>
                 </div>
@@ -1431,9 +1366,7 @@
             <div class="row mb-4">
                 <div class="col">
                     <h2>Professional Logo Design Services in UK</h2>
-                    <p>At RFS Logo Design, we provide professional logo design services across the UK, delivering
-                        captivating and timeless custom logos. Our expert designers ensure your brand stands out in a unique
-                        and memorable way in the marketplace</p>
+                    <p>At RFS Logo Design, we provide professional logo design services across the UK, delivering captivating and timeless custom logos. Our expert designers ensure your brand stands out in a unique and memorable way in the marketplace</p>
                     <h2>Logo Design Packages</h2>
                 </div>
             </div>
@@ -1538,7 +1471,7 @@
                         <p>Only</p>
                         <div class="separator"></div>
                         <ul class="feature-list">
-                            <li>1 Logo Design Concepts</li>
+                            <li>1 Logo Design Concept</li>
                             <li>3 Free Revisions</li>
                             <li>Business Card Design</li>
                             <li>Letter head Design</li>
@@ -1569,7 +1502,7 @@
                         <p>Only</p>
                         <div class="separator"></div>
                         <ul class="feature-list">
-                            <li>2 Logo Design Concepts</li>
+                            <li>2 Logo Design Concept</li>
                             <li>5 Free Revisions</li>
                             <li>Business Card Design</li>
                             <li>Letter head Design</li>
@@ -1603,7 +1536,7 @@
                         <p>Only</p>
                         <div class="separator"></div>
                         <ul class="feature-list">
-                            <li>4 Logo Design Concepts</li>
+                            <li>4 Logo Design Concept</li>
                             <li>Unlimited Free Revisions</li>
                             <li>Business Card Design</li>
                             <li>Letter head Design</li>
@@ -1675,7 +1608,7 @@
                         <h3>Elite Website Package</h3>
                         <p>Best Value for Money Guaranteed!</p>
                         <div class="price-section">
-                            <span class="price">£599</span>
+                            <span class="price">£500</span>
                             <span class="original-price">£1660</span>
                         </div>
                         <p>Only</p>
@@ -1688,7 +1621,7 @@
                             <li>12 Stock images</li>
                             <li>8 Banner Designs</li>
                             <li>1 jQuery Slider Banner</li>
-                            <li>Any Three Social Media Integrations</li>
+                            <li>Any Three Social Media Integration</li>
                             <li>FREE Google Friendly Sitemap</li>
                             <li>Mobile Responsive</li>
                             <li>48 to 72 hours TAT</li>
@@ -1746,14 +1679,11 @@
     <div class="container custom-container-margin-v3">
         <div class="row align-items-center">
             <div class="col-lg-6 custom-text-section-v3">
-                <h2>Custom Logo Design Services
-                    for Startups & Small Businesses </h2>
-                <p>Our professional logo design services in the UK cater specifically to startups and small businesses,
-                    offering fast turnaround times without compromising quality. With award-winning designers on our team,
-                    we craft custom logos that capture your brand’s unique essence, helping you stand out in the market.
-                    Experience top-tier logo design with the fastest delivery for impactful branding.</p>
-                <button class="btn btn-primary leave-message-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
-                    data-title="Basic Logo Package - £35">Get Started</button>
+                <h2>Custom Logo Design Services 
+                for Startups & Small Businesses </h2>
+                <p>Our professional logo design services in the UK cater specifically to startups and small businesses, offering fast turnaround times without compromising quality. With award-winning designers on our team, we craft custom logos that capture your brand’s unique essence, helping you stand out in the market. Experience top-tier logo design with the fastest delivery for impactful branding.</p>
+                <button class="btn btn-primary leave-message-btn" data-bs-toggle="modal"
+                    data-bs-target="#contact-modal" data-title="Basic Logo Package - £35">Get Started</button>
             </div>
             <div class="col-lg-6 custom-image-section-v3">
                 <img src="images/Mask group.png" alt="Descriptive Image Text">
@@ -1770,10 +1700,10 @@
                     <h2 class="text-white">Build your brand identity with a perfect logo, premium branding material,
                         and standout stationery design!</h2>
                     <!--<a href="{{ url('https://wa.me/+447491860363') }}" class="btn btn-primary leave-message-btn"> Get Started</a>-->
-
-                    <button class="btn btn-primary leave-message-btn" data-bs-toggle="modal"
-                        data-bs-target="#contact-modal" data-title="Starter Branding Package - £149">Get Started</button>
-
+                    
+                    <button class="btn btn-primary leave-message-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"
+                          data-title="Starter Branding Package - £149">Get Started</button>
+                    
                 </div>
                 <div class="col-md-6">
                     <img src={{ asset('images/lpcta3secimg.png') }} alt="Description" class="img-fluid">
@@ -1793,7 +1723,7 @@
                 <hr class="portfoliogallerylp-separator">
             </div>
         </div>
-        {{--
+
         <div class="row portfoliogallerylp-gallery">
             <!-- Column 1 -->
             <div class="col-md-4 col-sm-12">
@@ -1815,47 +1745,7 @@
                 <img src={{ asset('images/gallery8.png') }} alt="Portfolio Image 8" class="portfoliogallerylp-image">
                 <img src={{ asset('images/gallery9.png') }} alt="Portfolio Image 9" class="portfoliogallerylp-image">
             </div>
-        </div> --}}
-
-
-        <div class="row portfoliogallerylp-gallery">
-            <!-- Column 1 -->
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="portfolio-column">
-                    <img src="{{ asset('images/gallery1.png') }}" alt="Portfolio Image 1"
-                        class="portfoliogallerylp-image img-fluid">
-                    <img src="{{ asset('images/gallery2.png') }}" alt="Portfolio Image 2"
-                        class="portfoliogallerylp-image img-fluid">
-                    <img src="{{ asset('images/gallery3.png') }}" alt="Portfolio Image 3"
-                        class="portfoliogallerylp-image img-fluid">
-                </div>
-            </div>
-
-            <!-- Column 2 -->
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="portfolio-column">
-                    <img src="{{ asset('images/gallery4.png') }}" alt="Portfolio Image 4"
-                        class="portfoliogallerylp-image img-fluid">
-                    <img src="{{ asset('images/gallery5.png') }}" alt="Portfolio Image 5"
-                        class="portfoliogallerylp-image img-fluid">
-                    <img src="{{ asset('images/gallery6.png') }}" alt="Portfolio Image 6"
-                        class="portfoliogallerylp-image img-fluid">
-                </div>
-            </div>
-
-            <!-- Column 3 -->
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="portfolio-column">
-                    <img src="{{ asset('images/gallery7.png') }}" alt="Portfolio Image 7"
-                        class="portfoliogallerylp-image img-fluid">
-                    <img src="{{ asset('images/gallery8.png') }}" alt="Portfolio Image 8"
-                        class="portfoliogallerylp-image img-fluid">
-                    <img src="{{ asset('images/gallery9.png') }}" alt="Portfolio Image 9"
-                        class="portfoliogallerylp-image img-fluid">
-                </div>
-            </div>
         </div>
-
     </section>
 
     <section class="lp-cta1 d-flex align-items-center justify-content-center text-center"
@@ -1868,10 +1758,9 @@
                         Connect with us, and our experts will turn your ideas of business logo designs into reality!
                     </p>
                     <div class="cta-buttons">
-                        <a href="tel:+02045112009"> <button class="btn btn-primary leave-message-btn">Schedule a
-                                Call</button></a>
-                        <a href="{{ url('https://wa.me/+442045112009') }}"> <button
-                                class="btn btn-outline-light live-chat-btn">Chat with
+                        <a href="tel:+02045112009">  <button
+                                class="btn btn-primary leave-message-btn">Schedule a Call</button></a>
+                        <a href="{{ url('https://wa.me/+447491860363') }}"> <button class="btn btn-outline-light live-chat-btn">Chat with
                                 Expert</button></a>
                     </div>
                 </div>
@@ -1943,7 +1832,7 @@
 
         <!----------------------end simple and fast --------------------->
     </div>
-    {{--
+{{-- 
     <section class="awardimgslide py-5">
         <div class="container text-center">
             <h2 class="award-heading">Award-Winning Logo Design Company</h2>
@@ -1980,7 +1869,7 @@
                     <h2>Award-Winning Graphic Design Company</h2>
                 </div>
             </div>
-
+    
             <!-- Swiper with Custom Navigation Buttons -->
             <div class="row position-relative align-items-center">
                 <!-- Custom Previous Button -->
@@ -1989,17 +1878,18 @@
                         <i class="fas fa-arrow-left"></i>
                     </button>
                 </div> --}}
-
+    
                 <!-- Swiper for Logos -->
                 <div class="col-12">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <!-- Slide Items (Repeat for each logo) -->
                             <div class="swiper-slide">
-                                <a target="_blank"
-                                    href="https://www.designrush.com/agency/website-design-development/new-jersey">
-                                    <img src="images/award1.png" alt="Award 1" class="logo-image img-fluid">
-                                </a>
+                                
+                              <a target="_blank"
+                                href="https://www.designrush.com/agency/website-design-development/new-jersey">
+                                <img src="images/award1.png" alt="Award 1" class="logo-image img-fluid">
+                            </a>
                             </div>
                             <div class="swiper-slide">
                                 <img src="images/award2.png" alt="Award 2" class="logo-image img-fluid">
@@ -2016,7 +1906,7 @@
                         </div>
                     </div>
                 </div>
-
+    
                 <!-- Custom Next Button -->
                 {{-- <div class="col-2 text-start">
                     <button class="custom-carousel-control custom-carousel-control-next">
@@ -2032,7 +1922,7 @@
 
 
 
-    <section class="container py-2 contact-section">
+    <section class="container py-5 contact-section">
         <div class="text-center mb-4">
             <h2 class="font-weight-bold">Need help choosing a professional logo design?<br> Consult with our expert!
             </h2>
@@ -2057,9 +1947,10 @@
             <div class="col-md-4 mb-3 text-center">
                 <div class="contact-option">
                     <div class="icon-circle">
-                        <a href="{{ url('https://wa.me/+442045112009') }}"><i class="fas fa-comment-dots fa-2x"></i></a>
+                        <a href="{{ url('https://wa.me/+447491860363') }}"><i
+                                class="fas fa-comment-dots fa-2x"></i></a>
                     </div>
-                    <a href="{{ url('https://wa.me/+442045112009') }}">Live Chat</a>
+                    <a href="{{ url('https://wa.me/+447491860363') }}">Live Chat</a>
                 </div>
             </div>
         </div>
@@ -2071,7 +1962,7 @@
 
     <section class="new-testimonial my-5">
         <div class="container-fluid">
-            <h4 class="text-center">Testimonials</h4>
+            <p class="text-center">Testimonials</p>
             <h2 class="text-center">Chosen by experts, crafted for success</h2>
             <p class="text-center">Let’s turn your vision into a digital marvel. Ready to make waves? Let’s dive in!
             </p>
@@ -2137,68 +2028,47 @@
     <!-- ------------------Start Testiomonial --------------- -->
 
 
-    <section class="ebook-contact-form container py-4">
+    <section class="ebook-contact-form container py-5">
         <div class="row">
-            <div class="col-md-12">
-                <h2 class="footer-form mb-4">Let's Build Your Digital Future</h2>
-                <!-- <ul class="contact-info">
-                            <li>
-                                <i class="fas fa-phone-alt contact-icon"></i>
-                                <a href="tel:+02045112009">0204-511-2009</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-envelope contact-icon"></i>
-                                <a href="mailto:support@rfslogodesign.co.uk">support@rfslogodesign.co.uk</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-map-marker-alt contact-icon"></i>
-                                <a href="https://www.google.com/maps?q=Continental+House,+497+Sunleigh+Road,+Wembley,+England,+HA0+4LY"
-                                    target="_blank" style="color: inherit; text-decoration: none;"> <span>Continental House, 497
-                                        Sunleigh Road, <br>Wembley, England, HA0 4LY</span></a>
-                            </li>
-                        </ul> -->
+            <div class="col-md-5 left-column">
+                <h2>Let's Build Your <br> Digital Future</h2>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-phone-alt contact-icon"></i>
+                        <a href="tel:+02045112009">0204-511-2009</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <a href="mailto:support@rfslogodesign.co.uk">support@rfslogodesign.co.uk</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <span>497 Sunleigh Rd, Wembley HA0 4LY, UK</span>
+                    </li>
+                </ul>
+            </div>
 
+            <div class="col-md-7">
                 <div id="thank-you" class="alert alert-success d-none">Thank you! Your message has been sent.</div>
                 <form id="contactForm" method="POST" action="{{ route('customLogoSubmit') }}">
                     @csrf
                     <div class="row mb-3">
                         <div class="col">
-                            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
-                                placeholder="Your full name*" name="name" required oninput="validateName(this)">
-                            <div class="invalid-feedback">Please enter a valid name (letters and spaces only, no special
-                                characters).</div>
-                            @error('name')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
+                            <input type="text" class="form-control" id="name" placeholder="Your full name"
+                                name="name" required>
                         </div>
                         <div class="col">
-                            <input type="email" class="form-control @error('email') is-invalid @enderror"
-                                id="email" placeholder="Email address*" name="email" required
-                                oninput="validateEmail(this)">
-                            <div class="invalid-feedback">Please enter a valid email address.</div>
-                            @error('email')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
+                            <input type="email" class="form-control" id="email" placeholder="E-mail address"
+                                name="email" required>
                         </div>
                     </div>
                     <div class="mb-3">
-                        <input type="tel" class="form-control @error('phone') is-invalid @enderror" id="phone"
-                            placeholder="Enter your phone number*" title="Phone number format: 3334445555" required
-                            name="phone" oninput="validatePhone(this)">
-                        <div class="invalid-feedback">Please enter a valid phone number (10 to 15 digits, optional '+').
-                        </div>
-                        @error('phone')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
+                        <input type="tel" class="form-control" id="phone"  placeholder="Enter your phone number"
+  pattern="^\+?\d{10,14}$" title="Phone number format: 3334445555"
+                            required name="phone">
                     </div>
                     <div class="mb-3">
-                        <textarea class="form-control @error('message') is-invalid @enderror" id="message" rows="5"
-                            placeholder="Your message*" required name="message" oninput="validateMessage(this)" maxlength="2005"></textarea>
-                        <div class="invalid-feedback">Not allowed more than 2000 characters in the message text field.
-                        </div>
-                        @error('message')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
+                        <textarea class="form-control" id="message" rows="5" placeholder="Your message" required name="message"></textarea>
                     </div>
                     <button type="submit" class="btn btn-submit">Submit Now</button>
                 </form>
@@ -2207,42 +2077,40 @@
     </section>
 
 
-    <section class="lp-contact-sec d-flex align-items-center"
+    <section class="lp-contact-sec d-flex align-items-center pt-4"
         style="background-image: url('{{ asset('images/lpcontactsecbg.png') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="container">
             <div class="row text-center">
                 <!-- Column 1 - Support Team -->
                 <div class="col-md-4">
-                    <a href="{{ url('https://wa.me/+442045112009') }}" class="contact-link">
-                        <img src="{{ asset('images/consuilt.png') }}" alt="Support Team Icon" class="me-3"
-                            width="65px" />
+                    <a href="{{ url('https://wa.me/+447491860363') }}" class="contact-link d-flex align-items-center">
+                        <img src="{{ asset('images/lpcontactsec1.png') }}" alt="Support Team Icon" class="me-3" />
                         <div>
                             <p>Our Support Team</p>
-                            <h5>24/7 Online</h5>
+                            <h4>24/7 Online</h4>
                         </div>
                     </a>
                 </div>
 
                 <!-- Column 2 - Phone Number -->
                 <div class="col-md-4">
-                    <a href="tel:+442045112009" class="contact-link">
-                        <img src="{{ asset('images/live.png') }}" alt="Consult Expert Icon" class="me-3"
-                            width="65px" />
+                    <a href="tel:+02045112009" class="contact-link d-flex align-items-center">
+                        <img src="{{ asset('images/lpcontactsec2.png') }}" alt="Consult Expert Icon"
+                            class="me-3" />
                         <div>
                             <p>Consult Our Expert</p>
-                            <h5>02045 112 009</h5>
+                            <h4>0204-511-2009</h4>
                         </div>
                     </a>
                 </div>
 
                 <!-- Column 3 - Live Chat -->
                 <div class="col-md-4">
-                    <a href="{{ url('https://wa.me/+442045112009') }}" class="contact-link">
-                        <img src="{{ asset('images/consuilt.png') }}" alt="Live Support Icon" class="me-3"
-                            width="65px" />
+                    <a href="{{ url('https://wa.me/+447491860363') }}" class="contact-link d-flex align-items-center">
+                        <img src="{{ asset('images/lpcontactsec3.png') }}" alt="Live Support Icon" class="me-3" />
                         <div>
                             <p>Live Support</p>
-                            <h5>Chat Now</h5>
+                            <h4>Chat Now</h4>
                         </div>
                     </a>
                 </div>
@@ -2262,7 +2130,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body pt-2 px-4">
-                    <form action="{{ route('contactUsLP') }}" method="post" id="contactFormModal">
+                    <form action="{{ route('contactUsLP') }}" method="post" id="contactForm">
                         @csrf
                         <input type="hidden" name="title" value>
                         <div class="mb-3">
@@ -2292,14 +2160,14 @@
                                 pattern="^\+?\d{10,14}$" title="Phone number format: 3334445555" required
                                 title="Phone number should be between 11 and 15 digits and may start with a '+'."
                                 maxlength="15">
-                            <div class="invalid-feedback">Please enter a valid phone number (10 to 15 digits).</div>
+                            <div class="invalid-feedback">Please enter a valid phone number (11 to 15 digits).</div>
                             @error('phone')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label"><b>Message</b></label>
-                            <textarea name="message" id="message" rows="5" class="form-control" placeholder="Your message..." required maxlength="2005"></textarea>
+                            <textarea name="message" id="message" rows="5" class="form-control" placeholder="Your message..." required></textarea>
                         </div>
                         <div class="text-center d-grid">
                             <button type="submit" class="btn btn-lg btn-primary">Submit</button>
@@ -2321,49 +2189,76 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body pt-2 px-4">
-                    <form action="{{ route('contactUsLP') }}" method="post" id="contactFormModal">
+                    <form action="{{ route('contactUsLP') }}" method="post" id="contactForm" onsubmit="handleContactSubmit(event)">
                         @csrf
                         <input type="hidden" name="title" value>
                         <div class="mb-3">
-                            <label for="name" class="form-label"><b>Name*</b></label>
-                            <input type="text" class="form-control @error('name') is-invalid @enderror" name="name"
-                                id="name" placeholder="John Doe" required
+                            <label for="name" class="form-label"><b>Name</b></label>
+                            <input
+                                type="text"
+                                class="form-control @error('name') is-invalid @enderror"
+                                name="name"
+                                id="name"
+                                placeholder="John Doe"
+                                required
+                                pattern="^[A-Za-z][A-Za-z\s]+$"
                                 title="Name cannot contain special characters or numbers, and must start with a letter."
-                                oninput="validateName(this)" />
-                            <div class="invalid-feedback">Please enter a valid name (letters and spaces only, no special
-                                characters).</div>
+                                oninput="validateName(this)"
+                            />
+                            <div class="invalid-feedback">Please enter a valid name (letters and spaces only, no special characters).</div>
                             @error('name')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label"><b>Email address*</b></label>
-                            <input type="email" class="form-control @error('email') is-invalid @enderror"
-                                name="email" id="email" placeholder="name@example.com" required
-                                title="Please enter a valid email address." oninput="validateEmail(this)" />
+                            <label for="email" class="form-label"><b>Email address</b></label>
+                            <input
+                                type="email"
+                                class="form-control @error('email') is-invalid @enderror"
+                                name="email"
+                                id="email"
+                                placeholder="name@example.com"
+                                required
+                                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                                title="Please enter a valid email address."
+                                oninput="validateEmail(this)"
+                            />
                             <div class="invalid-feedback">Please enter a valid email address.</div>
                             @error('email')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="phone" class="form-label"><b>Phone number*</b></label>
-                            <input type="tel" class="form-control @error('phone') is-invalid @enderror"
-                                name="phone" id="phone" placeholder="Enter your phone number" maxlength="15"
+                            <label for="phone" class="form-label"><b>Phone number</b></label>
+                            <input
+                                type="tel"
+                                class="form-control @error('phone') is-invalid @enderror"
+                                name="phone"
+                                id="phone"
+                                placeholder="Enter your phone number"
+                                pattern="^\+?\d{10,15}$"
                                 title="Phone number should be between 10 and 15 digits and may start with a '+' symbol."
-                                required oninput="validatePhone(this)" />
-                            <div class="invalid-feedback">Please enter a valid phone number (10 to 15 digits, optional
-                                '+').</div>
+                                required
+                                oninput="validatePhone(this)"
+                            />
+                            <div class="invalid-feedback">Please enter a valid phone number (10 to 15 digits, optional '+').</div>
                             @error('phone')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="message" class="form-label"><b>Message*</b></label>
-                            <textarea name="message" id="message" rows="5" class="form-control" placeholder="Your message..." required
-                                maxlength="2005" oninput="validateMessage(this)"></textarea>
-                            <div class="invalid-feedback">Not allowed more than 2000 characters in the message text field.
-                            </div>
+                            <label for="message" class="form-label"><b>Message</b></label>
+                            <textarea
+                                name="message"
+                                id="message"
+                                rows="5"
+                                class="form-control"
+                                placeholder="Your message..."
+                                required
+                                maxlength="2005"
+                                oninput="validateMessage(this)"
+                            ></textarea>
+                            <div class="invalid-feedback">Not allowed more than 2000 characters in the message text field.</div>
                         </div>
                         <div class="text-center d-grid">
                             <button type="submit" class="btn btn-lg btn-primary">Submit</button>
@@ -2374,50 +2269,15 @@
         </div>
     </div>
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            loop: true, // Enables infinite looping
-            autoplay: {
-                delay: 2000, // Delay between slides in milliseconds
-                disableOnInteraction: false, // Autoplay continues even after user interaction
-            },
-            spaceBetween: 10, // Space between slides
-            breakpoints: {
-                320: { // For very small screens (mobile)
-                    slidesPerView: 1,
-                    centeredSlides: true,
-                    spaceBetween: 0,
-                },
-                576: { // For small screens (e.g., larger phones)
-                    slidesPerView: 2,
-                    centeredSlides: false,
-                    spaceBetween: 10,
-                },
-                768: { // For medium screens (e.g., tablets)
-                    slidesPerView: 3,
-                    centeredSlides: false,
-                    spaceBetween: 10,
-                },
-                1200: { // For large screens (desktop)
-                    slidesPerView: 4,
-                    centeredSlides: false,
-                    spaceBetween: 10,
-                },
-            }
-        });
-    </script>
-
-
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
+              <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script>
         // Ensure carousel can be scrolled via mouse or touch gestures without a scrollbar
@@ -2433,40 +2293,30 @@
 
 
 
-
+  
     <!-- Custom JS for Swiper Initialization -->
-    <script>
-        const swiper = new Swiper('.swiper-container', {
-            slidesPerView: 5,
-            spaceBetween: 30,
-            loop: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            navigation: {
-                nextEl: '.custom-carousel-control-next',
-                prevEl: '.custom-carousel-control-prev',
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1
-                },
-                576: {
-                    slidesPerView: 2
-                },
-                768: {
-                    slidesPerView: 3
-                },
-                992: {
-                    slidesPerView: 4
-                },
-                1200: {
-                    slidesPerView: 5
-                },
-            }
-        });
-    </script>
+<script>
+const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 5,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: '.custom-carousel-control-next',
+        prevEl: '.custom-carousel-control-prev',
+    },
+    breakpoints: {
+        320: { slidesPerView: 1 },
+        576: { slidesPerView: 2 },
+        768: { slidesPerView: 3 },
+        992: { slidesPerView: 4 },
+        1200: { slidesPerView: 5 },
+    }
+});
+</script>
 
 
 
@@ -2479,21 +2329,21 @@
     </script>
 
     <script>
-        // document.getElementById('email').addEventListener('input', function() {
-        //     var emailInput = this.value;
-        //     var emailError = document.getElementById('emailError');
+        document.getElementById('email').addEventListener('input', function() {
+            var emailInput = this.value;
+            var emailError = document.getElementById('emailError');
 
-        //     // Regular expression to validate email with dot in domain
-        //     var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            // Regular expression to validate email with dot in domain
+            var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-        //     if (!emailPattern.test(emailInput)) {
-        //         emailError.style.display = 'block'; // Show error
-        //         this.classList.add('is-invalid'); // Add invalid class to input
-        //     } else {
-        //         emailError.style.display = 'none'; // Hide error
-        //         this.classList.remove('is-invalid'); // Remove invalid class
-        //     }
-        // });
+            if (!emailPattern.test(emailInput)) {
+                emailError.style.display = 'block'; // Show error
+                this.classList.add('is-invalid'); // Add invalid class to input
+            } else {
+                emailError.style.display = 'none'; // Hide error
+                this.classList.remove('is-invalid'); // Remove invalid class
+            }
+        });
     </script>
 
     <script>
@@ -2522,264 +2372,182 @@
 
     <script>
         document.getElementById('custom-form').addEventListener('submit', function(event) {
-            event.preventDefault()
             let form = event.target;
-            const submitBtn = $(form).find('button[type=submit]')
+            let isValid = true;
 
             // Name validation: no special characters
             let nameField = form.querySelector('#name');
-            if (!validateName(nameField)) {
-                return
+            let nameRegex = /^[A-Za-z\s]+$/;
+            if (!nameRegex.test(nameField.value.trim())) {
+                nameField.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                nameField.classList.remove('is-invalid');
             }
 
             // Email validation: properresources/views/site/layouts/footer.blade.php email format
             let emailField = form.querySelector('#email');
-            if (!validateEmail(emailField)) {
-                return
+            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailField.value.trim())) {
+                emailField.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                emailField.classList.remove('is-invalid');
             }
 
             // Phone validation: only numbers and spaces, and maximum 15 characters
-            let phoneField = form.querySelector('#phone');
-            if (!validatePhone(phoneField)) {
-                return
+            // let phoneField = form.querySelector('#phone');
+            // let phoneRegex = /^(?:\+?1[-.\s]?)?(?:\(?\d{3}\)?[-.\s]?)?\d{3}[-.\s]?\d{4}$/;
+            // // let phoneRegex = /^\+?[0-9\s]{10,15}$/;
+            // if (!phoneRegex.test(phoneField.value.trim())) {
+            //     phoneField.classList.add('is-invalid');
+            //     isValid = false;
+            // } else {
+            //     phoneField.classList.remove('is-invalid');
+            // }
+
+            if (!isValid) {
+                event.preventDefault(); // Prevent form submission if validation fails
             }
-
-            // Message validation
-            let messageField = form.querySelector('#message');
-            if (!validateMessage(messageField)) {
-                return
-            }
-
-            submitBtn.text('Please wait...')
-            submitBtn.attr('disabled', true)
-
-            form.submit()
         });
+        document.getElementById('contact-modal').addEventListener('submit', function(event) {
+            let form = event.target;
+            let isValid = true;
+
+            // Name validation: no special characters
+            let nameField = form.querySelector('#name');
+            let nameRegex = /^[A-Za-z\s]+$/;
+            if (!nameRegex.test(nameField.value.trim())) {
+                nameField.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                nameField.classList.remove('is-invalid');
+            }
+
+            // Email validation: properresources/views/site/layouts/footer.blade.php email format
+            let emailField = form.querySelector('#email');
+            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailField.value.trim())) {
+                emailField.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                emailField.classList.remove('is-invalid');
+            }
+
+            // Phone validation: only numbers and spaces, and maximum 15 characters
+            // let phoneField = form.querySelector('#phone');
+            // let phoneRegex = /^(?:\+?1[-.\s]?)?(?:\(?\d{3}\)?[-.\s]?)?\d{3}[-.\s]?\d{4}$/;
+            // // let phoneRegex = /^\+?[0-9\s]{10,15}$/;
+            // if (!phoneRegex.test(phoneField.value.trim())) {
+            //     phoneField.classList.add('is-invalid');
+            //     isValid = false;
+            // } else {
+            //     phoneField.classList.remove('is-invalid');
+            // }
+
+            if (!isValid) {
+                event.preventDefault(); // Prevent form submission if validation fails
+            }
+        });
+    </script>
+    <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault()
             let form = event.target;
-            const submitBtn = $(form).find('button[type=submit]')
+            let isValid = true;
 
             // Name validation: no special characters
             let nameField = form.querySelector('#name');
-            if (!validateName(nameField)) {
-                return
+            let nameRegex = /^[A-Za-z\s]+$/;
+            if (!nameRegex.test(nameField.value.trim())) {
+                nameField.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                nameField.classList.remove('is-invalid');
             }
 
-            // Email validation: properresources/views/site/layouts/footer.blade.php email format
+            // Email validation: proper email format
             let emailField = form.querySelector('#email');
-            if (!validateEmail(emailField)) {
-                return
+            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailField.value.trim())) {
+                emailField.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                emailField.classList.remove('is-invalid');
             }
 
-            // Phone validation: only numbers and spaces, and maximum 15 characters
-            let phoneField = form.querySelector('#phone');
-            if (!validatePhone(phoneField)) {
-                return
+            // // Phone validation: between 11 to 15 digits
+            // let phoneField = form.querySelector('#phone');
+            // let phoneRegex = /^(?:\+?1[-.\s]?)?(?:\(?\d{3}\)?[-.\s]?)?\d{3}[-.\s]?\d{4}$/;
+            // // let phoneRegex = /^\+?[0-9\s]{11,15}$/;
+            // if (!phoneRegex.test(phoneField.value.trim())) {
+            //     phoneField.classList.add('is-invalid');
+            //     isValid = false;
+            // } else {
+            //     phoneField.classList.remove('is-invalid');
+            // }
+
+            if (!isValid) {
+                event.preventDefault(); // Prevent form submission if validation fails
             }
-
-            // Message validation
-            let messageField = form.querySelector('#message');
-            if (!validateMessage(messageField)) {
-                return
-            }
-
-            submitBtn.text('Please wait...')
-            submitBtn.attr('disabled', true)
-
-            form.submit()
         });
-        // document.getElementById('contact-modal').addEventListener('submit', function(event) {
-        //     event.preventDefault()
-        //     let form = event.target;
-        //     const submitBtn = $(form).find('button[type=submit]')
-
-        //     // Name validation: no special characters
-        //     let nameField = form.querySelector('#name');
-        //     if(!validateName(nameField)) {
-        //         return
-        //     }
-
-        //     // Email validation: properresources/views/site/layouts/footer.blade.php email format
-        //     let emailField = form.querySelector('#email');
-        //     if(!validateEmail(emailField)) {
-        //         return
-        //     }
-
-        //     // Phone validation: only numbers and spaces, and maximum 15 characters
-        //     let phoneField = form.querySelector('#phone');
-        //     if(!validatePhone(phoneField)) {
-        //         return
-        //     }
-
-        //     // Message validation
-        //     let messageField = form.querySelector('#message');
-        //     if(!validateMessage(messageField)) {
-        //         return
-        //     }
-
-        //     submitBtn.text('Please wait...')
-        //     submitBtn.attr('disabled', true)
-
-        //     form.submit()
-        // });
-    </script>
-    <script>
-        document.getElementById('contactFormModal').addEventListener('submit', function(event) {
-            event.preventDefault()
-            let form = event.target;
-            const submitBtn = $(form).find('button[type=submit]')
-
-            // Name validation: no special characters
-            let nameField = form.querySelector('#name');
-            if (!validateName(nameField)) {
-                return
-            }
-
-            // Email validation: properresources/views/site/layouts/footer.blade.php email format
-            let emailField = form.querySelector('#email');
-            if (!validateEmail(emailField)) {
-                return
-            }
-
-            // Phone validation: only numbers and spaces, and maximum 15 characters
-            let phoneField = form.querySelector('#phone');
-            if (!validatePhone(phoneField)) {
-                return
-            }
-
-            // Message validation
-            let messageField = form.querySelector('#message');
-            if (!validateMessage(messageField)) {
-                return
-            }
-
-            submitBtn.text('Please wait...')
-            submitBtn.attr('disabled', true)
-
-            form.submit()
-        });
-        // document.getElementById('contactForm').addEventListener('submit', function(event) {
-        //     let form = event.target;
-        //     let isValid = true;
-
-        //     // Name validation: no special characters
-        //     let nameField = form.querySelector('#name');
-        //     let nameRegex = /^[A-Za-z\s]+$/;
-        //     if (!nameRegex.test(nameField.value.trim())) {
-        //         nameField.classList.add('is-invalid');
-        //         isValid = false;
-        //     } else {
-        //         nameField.classList.remove('is-invalid');
-        //     }
-
-        //     // Email validation: proper email format
-        //     let emailField = form.querySelector('#email');
-        //     let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        //     if (!emailRegex.test(emailField.value.trim())) {
-        //         emailField.classList.add('is-invalid');
-        //         isValid = false;
-        //     } else {
-        //         emailField.classList.remove('is-invalid');
-        //     }
-
-        //     // Phone validation
-        //     let phoneField = form.querySelector('#email');
-        //     let phoneField = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        //     if (!phoneField.test(emailField.value.trim())) {
-        //         phoneField.classList.add('is-invalid');
-        //         isValid = false;
-        //     } else {
-        //         phoneField.classList.remove('is-invalid');
-        //     }
-
-        //     //
-
-        //     // // Phone validation: between 11 to 15 digits
-        //     // let phoneField = form.querySelector('#phone');
-        //     // let phoneRegex = /^(?:\+?1[-.\s]?)?(?:\(?\d{3}\)?[-.\s]?)?\d{3}[-.\s]?\d{4}$/;
-        //     // // let phoneRegex = /^\+?[0-9\s]{11,15}$/;
-        //     // if (!phoneRegex.test(phoneField.value.trim())) {
-        //     //     phoneField.classList.add('is-invalid');
-        //     //     isValid = false;
-        //     // } else {
-        //     //     phoneField.classList.remove('is-invalid');
-        //     // }
-
-        //     if (!isValid) {
-        //         event.preventDefault(); // Prevent form submission if validation fails
-        //     }
-        // });
     </script>
 
 
 
-    {{-- New Validation of banner form --}}
+{{-- New Validation of banner form --}}
 
 
-    <script>
-        // Name Validation
-        function validateName(input) {
-            const namePattern = /^[A-Za-z][A-Za-z\s]*$/;
-            const errorMessage = input.parentElement.querySelector('.invalid-feedback');
-            if (!namePattern.test(input.value)) {
-                errorMessage.textContent =
-                    "Name cannot contain special characters or numbers, and must start with a letter.";
-                input.classList.add('is-invalid');
-                return false;
-            } else {
-                errorMessage.textContent =
-                    "Please enter a valid name (letters and spaces only, first letter must be alphabetic).";
-                input.classList.remove('is-invalid');
-                return true;
-            }
+<script>
+    // Name Validation
+    function validateName(input) {
+        const namePattern = /^[A-Za-z][A-Za-z\s]*$/;
+        const errorMessage = input.parentElement.querySelector('.invalid-feedback');
+        if (!namePattern.test(input.value)) {
+            errorMessage.textContent = "Name cannot contain special characters or numbers, and must start with a letter.";
+            input.classList.add('is-invalid');
+        } else {
+            errorMessage.textContent = "Please enter a valid name (letters and spaces only, first letter must be alphabetic).";
+            input.classList.remove('is-invalid');
         }
+    }
 
-        // Email Validation
-        function validateEmail(input) {
-            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            const errorMessage = input.parentElement.querySelector('.invalid-feedback');
-            if (!emailPattern.test(input.value)) {
-                errorMessage.textContent = "Please enter a valid email address.";
-                input.classList.add('is-invalid');
-                return false;
-            } else {
-                errorMessage.textContent = "";
-                input.classList.remove('is-invalid');
-                return true;
-            }
+    // Email Validation
+    function validateEmail(input) {
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const errorMessage = input.parentElement.querySelector('.invalid-feedback');
+        if (!emailPattern.test(input.value)) {
+            errorMessage.textContent = "Please enter a valid email address.";
+            input.classList.add('is-invalid');
+        } else {
+            errorMessage.textContent = "";
+            input.classList.remove('is-invalid');
         }
+    }
 
-        // Phone Validation
-        function validatePhone(input) {
-            const phonePattern = /^\+?\d{10,15}$/;
-            const errorMessage = input.parentElement.querySelector('.invalid-feedback');
-            if (!phonePattern.test(input.value)) {
-                errorMessage.textContent = "Please enter a valid phone number (10 - 15 digits, optional '+').";
-                input.classList.add('is-invalid');
-                return false;
-            } else {
-                errorMessage.textContent = "";
-                input.classList.remove('is-invalid');
-                return true;
-            }
+    // Phone Validation
+    function validatePhone(input) {
+        const phonePattern = /^\+?\d{10,15}$/;
+        const errorMessage = input.parentElement.querySelector('.invalid-feedback');
+        if (!phonePattern.test(input.value)) {
+            errorMessage.textContent = "Please enter a valid phone number (max 15 digits, optional '+').";
+            input.classList.add('is-invalid');
+        } else {
+            errorMessage.textContent = "";
+            input.classList.remove('is-invalid');
         }
+    }
 
-        function validateMessage(textarea) {
-            const maxLength = 2000;
-            const errorMessage = textarea.parentElement.querySelector('.invalid-feedback');
+    function validateMessage(textarea) {
+        const maxLength = 2000;
+        const errorMessage = textarea.parentElement.querySelector('.error-message');
 
-            if (textarea.value.length > maxLength) {
-                errorMessage.textContent = "Not allowed more than 2000 characters in message text field";
-                textarea.classList.add('is-invalid');
-                return false;
-            } else {
-                errorMessage.textContent = "";
-                textarea.classList.remove('is-invalid');
-                return true
-            }
+        if (textarea.value.length > maxLength) {
+            errorMessage.style.display = "block";  // Show error message
+        } else {
+            errorMessage.style.display = "none";  // Hide error message
         }
-    </script>
+    }
+</script>
 
 
 
